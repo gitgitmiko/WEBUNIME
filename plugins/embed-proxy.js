@@ -336,26 +336,66 @@ function injectClientShim(pageUrl) {
   document.addEventListener("DOMContentLoaded", stripOuterAd);
   setTimeout(stripOuterAd, 500);
 
-  // Hydrax: lewati popup iklan yang menghancurkan player
-  if (IS_ABYSS) {
-    // Fake window.open agar klik overlay tidak dihitung gagal (track.window++)
+  // Blokir popup/iklan tab baru (window.open + <a target=_blank> + .click())
+  (function blockPopups() {
     var fakeWin = {
       closed: false,
       close: function () { this.closed = true; },
       focus: function () {},
       blur: function () {},
-      location: { href: "about:blank", replace: function () {} },
-      document: { write: function () {}, close: function () {} }
+      opener: null,
+      location: { href: "about:blank", replace: function () {}, assign: function () {} },
+      document: { write: function () {}, close: function () {} },
+      postMessage: function () {}
     };
+    function fakeOpen() {
+      try { fakeWin.closed = false; } catch (e) {}
+      setTimeout(function () { try { fakeWin.closed = true; } catch (e) {} }, 1200);
+      return fakeWin;
+    }
+    try { window.open = fakeOpen; } catch (e) {}
     try {
-      window.open = function () {
-        try { fakeWin.closed = false; } catch (e) {}
-        setTimeout(function () { try { fakeWin.closed = true; } catch (e) {} }, 800);
-        return fakeWin;
-      };
+      Object.defineProperty(window, "open", {
+        configurable: true,
+        writable: true,
+        value: fakeOpen
+      });
     } catch (e) {}
 
-    // Matikan fuckAdBlock supaya urls popup tidak dipaksa
+    function isBlankNav(a) {
+      if (!a) return false;
+      var href = a.getAttribute("href") || "";
+      var tgt = (a.getAttribute("target") || "").toLowerCase();
+      if (tgt === "_blank" || tgt === "_new") return true;
+      var mark = (a.id || "") + " " + (a.className || "") + " " + href;
+      return /uyeouyeo|popup|clickunder|decafeligiblyhad|doubleclick|exoclick|propeller|adsterra/i.test(mark);
+    }
+
+    document.addEventListener("click", function (ev) {
+      var t = ev.target;
+      if (!t) return;
+      var a = t.closest ? t.closest("a") : null;
+      if (!isBlankNav(a)) return;
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (ev.stopImmediatePropagation) ev.stopImmediatePropagation();
+      try { fakeOpen(); } catch (e) {}
+    }, true);
+
+    try {
+      var oClick = HTMLAnchorElement.prototype.click;
+      HTMLAnchorElement.prototype.click = function () {
+        if (isBlankNav(this)) {
+          try { fakeOpen(); } catch (e) {}
+          return;
+        }
+        return oClick.apply(this, arguments);
+      };
+    } catch (e) {}
+  })();
+
+  // Hydrax: jaga JWPlayer + klik overlay = play (sbM sudah di-rewrite di HTML)
+  if (IS_ABYSS) {
     try {
       Object.defineProperty(window, "fuckAdBlock", {
         configurable: true,
@@ -371,33 +411,99 @@ function injectClientShim(pageUrl) {
       });
     } catch (e) {}
 
+    // Cegah jwplayer().remove() → "Player has been destroyed"
+    (function guardJwRemove() {
+      var tries = 0;
+      var iv = setInterval(function () {
+        tries++;
+        try {
+          if (typeof window.jwplayer === "function" && !window.jwplayer.__wuGuard) {
+            var orig = window.jwplayer;
+            function wrap() {
+              var p = orig.apply(this, arguments);
+              try {
+                if (p && typeof p.remove === "function") {
+                  p.remove = function () { return p; };
+                }
+              } catch (e) {}
+              return p;
+            }
+            wrap.__wuGuard = true;
+            try {
+              Object.keys(orig).forEach(function (k) {
+                try { wrap[k] = orig[k]; } catch (e) {}
+              });
+            } catch (e) {}
+            window.jwplayer = wrap;
+            clearInterval(iv);
+          }
+        } catch (e) {}
+        if (tries > 40) clearInterval(iv);
+      }, 100);
+    })();
+
     var tries = 0;
     var iv = setInterval(function () {
       tries++;
       try {
         if (window.abyssConfig) window.abyssConfig.popups = [];
         var overlay = document.getElementById("overlay");
-        if (overlay) {
-          overlay.onclick = function (ev) {
-            try { ev.preventDefault(); ev.stopPropagation(); } catch (e) {}
-            try { overlay.remove(); } catch (e) {}
-            try { if (window.jwplayer) window.jwplayer().play(); } catch (e) {}
-          };
-          overlay.ontouchend = overlay.onclick;
+        if (overlay && tries === 6) {
+          try { overlay.click(); } catch (e) {}
         }
-        if (typeof window.jwplayer === "function") {
-          var p = window.jwplayer();
-          if (p && typeof p.getState === "function") {
-            // Jangan auto-play berulang; biarkan user/klik overlay
-            if (overlay && tries > 8) {
-              try { overlay.click(); } catch (e) {}
-            }
-            if (tries > 20) clearInterval(iv);
-          }
+        if (!overlay && typeof window.jwplayer === "function") {
+          try { window.jwplayer().play(); } catch (e) {}
+          clearInterval(iv);
         }
       } catch (e) {}
-      if (tries > 80) clearInterval(iv);
+      if (tries > 40) clearInterval(iv);
     }, 250);
+  }
+
+  // Cast: sembunyikan sandbox dari frameElement + bantu 1-klik play
+  if (IS_CAST) {
+    try {
+      Object.defineProperty(window, "frameElement", {
+        configurable: true,
+        get: function () { return null; }
+      });
+    } catch (e) {}
+
+    var castArmed = false;
+    function castTryPlay() {
+      try {
+        var btn = document.querySelector(
+          "button, .vjs-big-play-button, .jw-icon-display, [class*=play], [aria-label*=Play], [aria-label*=play]"
+        );
+        var vid = document.querySelector("video");
+        try { window.open("about:blank"); } catch (e) {}
+        try { window.open("about:blank"); } catch (e) {}
+        try { if (btn) btn.click(); } catch (e) {}
+        try { if (vid) { vid.muted = true; vid.play(); } } catch (e) {}
+        try { if (typeof jwplayer === "function") jwplayer().play(); } catch (e) {}
+      } catch (e) {}
+    }
+
+    document.addEventListener("pointerdown", function () {
+      if (castArmed) return;
+      castArmed = true;
+      castTryPlay();
+      setTimeout(castTryPlay, 120);
+    }, true);
+
+    var ct = 0;
+    var civ = setInterval(function () {
+      ct++;
+      try {
+        var vid = document.querySelector("video");
+        if (vid && !vid.paused && vid.readyState >= 2) {
+          clearInterval(civ);
+          return;
+        }
+        if (ct === 3 || ct === 8) castTryPlay();
+      } catch (e) {}
+      if (ct > 25) clearInterval(civ);
+    }, 400);
   }
 
   // TurboVIP: gate loadPlayer butuh iframe + referrer playeriframe (sudah di-spoof).
@@ -484,6 +590,35 @@ function rewriteHtmlUrls(html, pageUrl) {
   );
 
   return out;
+}
+
+/** Ganti arrow fn `const name = () => { ... }` (brace-matching). */
+function replaceConstArrowFn(html, name, body) {
+  const re = new RegExp(`const\\s+${name}\\s*=\\s*\\(\\s*\\)\\s*=>\\s*\\{`);
+  const m = re.exec(html);
+  if (!m) return html;
+  let i = m.index + m[0].length;
+  let depth = 1;
+  while (i < html.length && depth > 0) {
+    const c = html[i++];
+    if (c === "{") depth++;
+    else if (c === "}") depth--;
+  }
+  let end = i;
+  if (html[end] === ";") end++;
+  return `${html.slice(0, m.index)}const ${name} = () => {${body}};${html.slice(end)}`;
+}
+
+/**
+ * Hydrax mengacak nama handler overlay (sbM / vSRe / …).
+ * Deteksi lewat pola `urls.shift()` di dalam arrow function.
+ */
+function replaceHydraxOverlayHandler(html, body) {
+  const re =
+    /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*\{\s*const\s+url\s*=\s*urls\.shift\(\)/;
+  const m = re.exec(html);
+  if (!m) return replaceConstArrowFn(html, "sbM", body);
+  return replaceConstArrowFn(html, m[1], body);
 }
 
 function toProxiedMediaUrl(absoluteUrl, _origin = "") {
@@ -800,14 +935,29 @@ function sanitizeHtml(html, pageUrl, origin = "") {
   // Hapus overlay iklan klik-untuk-mulai di wrapper playeriframe
   out = out.replace(/<a\b[^>]*\bid=["']uyeouyeo["'][^>]*>[\s\S]*?<\/a>/gi, "");
 
-  // Hydrax: cegah hukuman adblock yang menghancurkan JWPlayer
+  // Hydrax: matikan deteksi "extension", ganti handler overlay → langsung play
+  out = out.replace(
+    /const\s+isUseExtension\s*=\s*[^;]+;/g,
+    "const isUseExtension = false;"
+  );
+  out = replaceHydraxOverlayHandler(
+    out,
+    `try{if(overlay){overlay.onclick=null;overlay.ontouchend=null;overlay.remove();}}catch(e){}` +
+      `try{if(typeof jwplayer!="undefined"&&typeof jwplayer().play=="function")jwplayer().play();}catch(e){}`
+  );
   out = out.replace(/jwplayer\s*\(\s*\)\s*\.\s*remove\s*\(\s*\)/gi, "void 0");
   out = out.replace(/track\.window\s*>=\s*2/g, "false");
   out = out.replace(/track\.window\s*>\s*1/g, "false");
-  // Kosongkan daftar popup agar overlay click langsung play
-  out = out.replace(/window\.abyssConfig\s*=\s*\{popups:\s*\[[^\]]*\]\}/g, "window.abyssConfig={popups:[]}");
+  out = out.replace(
+    /window\.abyssConfig\s*=\s*\{popups:\s*\[[^\]]*\]\}/g,
+    "window.abyssConfig={popups:[]}"
+  );
   out = out.replace(/urls\s*=\s*\[[^\]]*decafeligiblyhad[^\]]*\]/gi, "urls=[]");
-  out = out.replace(/if\s*\(\s*urls\.length\s*\)\s*return;/g, "/* urls bypass */");
+  // Alert AdBlock/Sandbox (cadangan jika sbM tidak ketemu)
+  out = out.replace(
+    /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,280}?try again\./gi,
+    ""
+  );
 
   // Buang beacon Cloudflare yang nembak /cdn-cgi/rum ke localhost
   out = out.replace(/<script[^>]*cloudflareinsights[^>]*>[\s\S]*?<\/script>/gi, "");

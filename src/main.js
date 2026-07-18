@@ -481,9 +481,9 @@ function toProxyPath(absoluteUrl) {
 
 /**
  * Resolve URL player iframe dalam (skip wrapper playeriframe + iklan dobel).
- * Hydrax/Abyss → URL absolut langsung (GCS media butuh Referer abyssplayer).
+ * Hydrax/Abyss → URL absolut langsung (GCS + hostname check hanya jalan di abyssplayer).
  * Anime Samehadaku (blogger/wibufile/filedon/mega) → embed langsung / proxy.
- * Server LK21 lain → path proxy /__px__/...
+ * Cast/Turbo → path proxy /__px__/...
  */
 async function resolveEmbedPath(sourceUrl) {
   try {
@@ -510,7 +510,7 @@ async function resolveEmbedPath(sourceUrl) {
   const play = data.play || sourceUrl;
   try {
     const host = new URL(play).hostname;
-    // Hydrax: streaming GCS hanya sukses dari origin abyssplayer.com (bukan proxy Node).
+    // Hydrax: wajib origin abyssplayer.com — proxy → "No playable sources found"
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
       return play;
     }
@@ -526,6 +526,22 @@ function clearEmbed() {
   if (!frame) return;
   frame.src = "about:blank";
   frame.classList.add("hidden");
+}
+
+/** Cast/Turbo: sandbox tanpa allow-popups (blokir clickunder). Hydrax: tanpa sandbox. */
+function applyPlayerFramePolicy(embedPath) {
+  const frame = $("#playerFrame");
+  if (!frame) return;
+  const path = String(embedPath || "");
+  const needsSandbox = /gn1r5n|turbo|emturbovid|turbovid|turboviplay/i.test(path);
+  if (needsSandbox) {
+    frame.setAttribute(
+      "sandbox",
+      "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads"
+    );
+  } else {
+    frame.removeAttribute("sandbox");
+  }
 }
 
 async function showEmbed(url) {
@@ -546,6 +562,7 @@ async function showEmbed(url) {
     const embedPath = await resolveEmbedPath(url);
     if (reqId !== embedRequestId || currentServerUrl !== url) return;
 
+    applyPlayerFramePolicy(embedPath);
     frame.src = embedPath;
     frame.classList.remove("hidden");
     $("#playerPoster").classList.add("hidden");
@@ -585,7 +602,7 @@ function setupServers(movie) {
   const preferred =
     isSeries(movie) && (movie?.type === "anime" || movie?.type === "anime-movie")
       ? ["blogspot", "wibufile", "vip-streaming", "vip"]
-      : ["hydrax", "cast", "turbovip"];
+      : ["turbovip", "cast", "hydrax"];
   const initial =
     preferred
       .map((s) =>
