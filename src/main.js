@@ -339,7 +339,18 @@ let embedRequestId = 0;
 
 function serverLabel(url) {
   const p = currentPlayers().find((x) => x.url === url);
-  return p ? p.label || p.server : "server";
+  return p ? formatServerName(p) : "server";
+}
+
+/** Tampilkan hanya nama server (P2P, TURBOVIP, CAST, HYDRAX). */
+function formatServerName(player) {
+  const raw = String(player?.server || player?.label || "Server");
+  const cleaned = raw
+    .replace(/^ganti\s*player\s*/i, "")
+    .replace(/^player\s*/i, "")
+    .trim();
+  const name = cleaned || raw;
+  return name.toUpperCase();
 }
 
 /** Bangun path reverse-proxy /__px__/host/path dari URL absolut. */
@@ -451,7 +462,7 @@ function setupServers(movie) {
     selectedValue: initial.url,
     items: players.map((p) => ({
       value: p.url,
-      label: p.label || p.server || "Server",
+      label: formatServerName(p),
     })),
     onSelect: (url) => selectServer(url),
   });
