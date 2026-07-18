@@ -479,7 +479,13 @@ function injectClientShim(pageUrl) {
         try { window.open("about:blank"); } catch (e) {}
         try { window.open("about:blank"); } catch (e) {}
         try { if (btn) btn.click(); } catch (e) {}
-        try { if (vid) { vid.muted = true; vid.play(); } } catch (e) {}
+        try {
+          if (vid) {
+            vid.muted = false;
+            vid.volume = 1;
+            vid.play();
+          }
+        } catch (e) {}
         try { if (typeof jwplayer === "function") jwplayer().play(); } catch (e) {}
       } catch (e) {}
     }
@@ -489,6 +495,18 @@ function injectClientShim(pageUrl) {
       castArmed = true;
       castTryPlay();
       setTimeout(castTryPlay, 120);
+      // Pastikan tidak tertinggal mute setelah gesture user
+      setTimeout(function () {
+        try {
+          var vid = document.querySelector("video");
+          if (vid) { vid.muted = false; vid.volume = 1; }
+          if (typeof jwplayer === "function") {
+            var jp = jwplayer();
+            if (jp && typeof jp.setMute === "function") jp.setMute(false);
+            if (jp && typeof jp.setVolume === "function") jp.setVolume(100);
+          }
+        } catch (e) {}
+      }, 300);
     }, true);
 
     var ct = 0;
