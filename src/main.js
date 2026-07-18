@@ -838,48 +838,6 @@ function bindActions() {
   });
 }
 
-async function refreshCatalogFromDisk() {
-  await Promise.all([
-    loadMovies(),
-    loadSeries(),
-    loadHorror(),
-    loadAnime(),
-    loadAnimeMovies(),
-    loadAnimeLatest(),
-  ]);
-  catalog = dedupeBySlug([
-    ...movies,
-    ...horror,
-    ...series,
-    ...anime,
-    ...animeMovies,
-  ]);
-  if (activeMovie?.slug) {
-    activeMovie = catalog.find((c) => c.slug === activeMovie.slug) || activeMovie;
-  }
-  renderRows();
-}
-
-/** Sync halaman 1 (film/series/horor) di background; hanya menambah data baru. */
-async function syncCatalogInBackground() {
-  try {
-    const res = await fetch("/api/sync-catalog");
-    if (!res.ok) return;
-    const data = await res.json();
-    if (data.running || data.skipped) return;
-    const changed = (data.added || 0) + (data.updated || 0);
-    if (changed > 0) {
-      await refreshCatalogFromDisk();
-      console.info(
-        `[WEBUNIME] Katalog sync: +${data.added || 0} baru, ${data.updated || 0} diupdate`,
-        data.results
-      );
-    }
-  } catch (err) {
-    console.warn("[WEBUNIME] Sync katalog tidak tersedia:", err.message);
-  }
-}
-
 async function init() {
   try {
     await Promise.all([
@@ -903,8 +861,6 @@ async function init() {
     bindRows();
     bindSearch();
     bindActions();
-    // Jangan blokir tampilan awal — sync jalan di belakang
-    syncCatalogInBackground();
   } catch (err) {
     console.error(err);
     $("#heroTitle").textContent = "Gagal memuat katalog";

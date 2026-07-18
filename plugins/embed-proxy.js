@@ -1306,8 +1306,6 @@ function middleware(req, res, next) {
   if (path.startsWith("/__px__/")) return handleProxy(req, res);
   if (path === "/api/resolve") return handleResolve(req, res);
   if (path === "/api/embed") return handleLegacyEmbed(req, res);
-  // Dibiarkan ke plugin lain (catalog-sync, dll.)
-  if (path === "/api/sync-catalog") return next();
 
   // Beacon CF: jangan ganggu console dengan 404 Vite
   if (path.startsWith("/cdn-cgi/rum")) {
@@ -1320,7 +1318,7 @@ function middleware(req, res, next) {
   if (
     path === "/fingerprint-sw.js" ||
     path.startsWith("/cdn-cgi/") ||
-    (path.startsWith("/api/") && path !== "/api/sync-catalog") ||
+    path.startsWith("/api/") ||
     path.startsWith("/ws/") ||
     path.startsWith("/assets/") ||
     path.startsWith("/player/")
