@@ -21,12 +21,13 @@
       <nav class="nav-links" aria-label="Menu utama">
         <a href="#beranda" class="is-active">Beranda</a>
         <a href="#koleksi">Film</a>
+        <a href="#series">Series</a>
         <a href="#baru">Terbaru</a>
       </nav>
       <div class="nav-actions">
         <label class="search" for="searchInput">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-          <input id="searchInput" type="search" placeholder="Cari film..." autocomplete="off" />
+          <input id="searchInput" type="search" placeholder="Cari film atau series..." autocomplete="off" />
         </label>
       </div>
     </header>
@@ -62,6 +63,17 @@
           </div>
         </div>
 
+        <div class="row" id="rowSeries">
+          <div class="row-head">
+            <h2 id="series">Series Drama Populer</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackSeries" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackSeries"></div>
+            <button class="row-arrow next" data-row="trackSeries" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
         <div class="row">
           <div class="row-head"><h2>Film 2026</h2></div>
           <div class="row-track-wrap">
@@ -77,6 +89,15 @@
             <button class="row-arrow prev" data-row="track2025" aria-label="Geser kiri">‹</button>
             <div class="row-track" id="track2025"></div>
             <button class="row-arrow next" data-row="track2025" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row-head"><h2>Film Horor</h2></div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackHorror" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackHorror"></div>
+            <button class="row-arrow next" data-row="trackHorror" aria-label="Geser kanan">›</button>
           </div>
         </div>
 
@@ -123,16 +144,63 @@
       <div class="modal-backdrop" data-close></div>
       <div class="modal-panel">
         <button class="modal-close" data-close aria-label="Tutup">×</button>
-        <div class="modal-banner" id="modalBanner"></div>
+        <div class="modal-hero">
+          <div class="modal-banner" id="modalBanner"></div>
+          <div class="modal-hero-content">
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <div class="modal-actions">
+              <button type="button" class="btn btn-play" id="modalPlay">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+                Putar
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="modal-body">
-          <h2 id="modalTitle"></h2>
-          <p class="modal-meta" id="modalMeta"></p>
-          <p class="modal-desc" id="modalDesc"></p>
-          <div class="hero-cta">
-            <button type="button" class="btn btn-play" id="modalPlay">
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
-              Putar
-            </button>
+          <div class="modal-meta-row" id="modalMeta">
+            <span class="modal-match" id="modalMatch"></span>
+            <span id="modalYear"></span>
+            <span id="modalDuration"></span>
+            <span class="modal-hd">HD</span>
+          </div>
+          <div class="modal-grid">
+            <div class="modal-col-main">
+              <div class="modal-episodes hidden" id="modalEpisodes">
+                <label class="modal-episode-label" for="modalEpisodeSelect">Episode</label>
+                <select id="modalEpisodeSelect" aria-label="Pilih episode"></select>
+              </div>
+              <p class="modal-desc" id="modalDesc"></p>
+            </div>
+            <aside class="modal-col-side">
+              <p class="modal-fact" id="factCast" hidden>
+                <span class="modal-fact-label">Cast:</span>
+                <span id="modalCast"></span>
+              </p>
+              <p class="modal-fact" id="factGenres">
+                <span class="modal-fact-label">Genre:</span>
+                <span id="modalGenres"></span>
+              </p>
+              <p class="modal-fact" id="factDirector" hidden>
+                <span class="modal-fact-label">Sutradara:</span>
+                <span id="modalDirector"></span>
+              </p>
+              <p class="modal-fact" id="factSubtitle" hidden>
+                <span class="modal-fact-label">Subtitle:</span>
+                <span id="modalSubtitle"></span>
+              </p>
+              <p class="modal-fact" id="factCountry" hidden>
+                <span class="modal-fact-label">Negara:</span>
+                <span id="modalCountry"></span>
+              </p>
+              <p class="modal-fact" id="factGross" hidden>
+                <span class="modal-fact-label">Gross:</span>
+                <span id="modalGross"></span>
+              </p>
+              <p class="modal-fact" id="factRelease" hidden>
+                <span class="modal-fact-label">Rilis:</span>
+                <span id="modalRelease"></span>
+              </p>
+            </aside>
           </div>
         </div>
       </div>
@@ -142,10 +210,40 @@
       <div class="player-top">
         <button type="button" class="btn btn-ghost" id="playerBack">← Kembali</button>
         <p class="player-title" id="playerTitle"></p>
-        <label class="player-server hidden" for="playerSelect">
-          <span>Server</span>
-          <select id="playerSelect" aria-label="Pilih server player"></select>
-        </label>
+        <div class="nf-dropdown player-episode hidden" id="playerEpisodeDropdown">
+          <button
+            type="button"
+            class="nf-dropdown-toggle"
+            id="playerEpisodeBtn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="playerEpisodeMenu"
+          >
+            <span class="nf-dropdown-meta">Episode</span>
+            <span class="nf-dropdown-value" id="playerEpisodeValue">—</span>
+            <svg class="nf-dropdown-caret" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+            </svg>
+          </button>
+          <ul class="nf-dropdown-menu" id="playerEpisodeMenu" role="listbox" hidden></ul>
+        </div>
+        <div class="nf-dropdown player-server hidden" id="playerServerDropdown">
+          <button
+            type="button"
+            class="nf-dropdown-toggle"
+            id="playerServerBtn"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            aria-controls="playerServerMenu"
+          >
+            <span class="nf-dropdown-meta">Audio &amp; Server</span>
+            <span class="nf-dropdown-value" id="playerServerValue">—</span>
+            <svg class="nf-dropdown-caret" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+            </svg>
+          </button>
+          <ul class="nf-dropdown-menu" id="playerServerMenu" role="listbox" hidden></ul>
+        </div>
       </div>
       <div class="player-stage">
         <iframe

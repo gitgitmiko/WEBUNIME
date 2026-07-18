@@ -1,5 +1,9 @@
 let movies = [];
+let series = [];
+let horror = [];
+let catalog = [];
 let activeMovie = null;
+let activeEpisode = null;
 let playerTimer = null;
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -11,13 +15,61 @@ async function loadMovies() {
   movies = await res.json();
 }
 
-function hasGenre(movie, names) {
-  return movie.genre?.some((g) => names.includes(g));
+async function loadSeries() {
+  try {
+    const res = await fetch("/data/series.json");
+    if (!res.ok) {
+      series = [];
+      return;
+    }
+    series = await res.json();
+  } catch {
+    series = [];
+  }
+}
+
+async function loadHorror() {
+  try {
+    const res = await fetch("/data/horror.json");
+    if (!res.ok) {
+      horror = [];
+      return;
+    }
+    horror = await res.json();
+  } catch {
+    horror = [];
+  }
+}
+
+function dedupeBySlug(list) {
+  const seen = new Set();
+  const out = [];
+  for (const item of list) {
+    const key = item?.slug || `${item?.type || "movie"}:${item?.nama}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(item);
+  }
+  return out;
+}
+
+function isSeries(item) {
+  return item?.type === "series" || Array.isArray(item?.episodes);
 }
 
 function metaLine(movie) {
   const genres = (movie.genre || []).join(" · ");
+  if (isSeries(movie)) {
+    const eps = movie.episodes_count || movie.episodes?.length || "";
+    return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun} · ${
+      movie.durasi || (eps ? `${eps} eps` : "")
+    } · ${genres}`.replace(/\s·\s*$/, "");
+  }
   return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun} · ${movie.durasi ?? ""} · ${genres}`;
+}
+
+function hasGenre(movie, names) {
+  return movie.genre?.some((g) => names.includes(g));
 }
 
 function createPoster(movie, index = 0) {
@@ -38,10 +90,13 @@ function fillTrack(id, list) {
   const track = document.getElementById(id);
   if (!track) return;
   track.replaceChildren(...list.map((m, i) => createPoster(m, i)));
+  requestAnimationFrame(() => syncRowArrows(track));
 }
 
 function renderRows() {
   fillTrack("trackFeatured", movies);
+  fillTrack("trackSeries", series);
+  fillTrack("trackHorror", horror);
   fillTrack(
     "track2026",
     movies.filter((m) => m.tahun === "2026")
@@ -64,23 +119,211 @@ function renderRows() {
   );
 }
 
+function shortSinopsis(text) {
+  if (!text) return "";
+  const first = String(text).split(/\n\n+/)[0].trim();
+  return first.length > 360 ? `${first.slice(0, 357)}…` : first;
+}
+
+function parseSinopsisDetail(sinopsis) {
+  const blocks = String(sinopsis || "")
+    .split(/\n\n+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const facts = {};
+  const story = [];
+  for (const block of blocks) {
+    const m = block.match(
+      /^(Subtitle|Sutradara|Bintang Film|Negara|Votes|Release|Updated|Worldwide Gross):\s*([\s\S]+)$/i
+    );
+    if (m) {
+      facts[m[1].toLowerCase()] = m[2].trim();
+    } else {
+      story.push(block);
+    }
+  }
+  return { story: story.join("\n\n"), facts };
+}
+
+function setModalFact(rowId, valueId, value) {
+  const row = $(`#${rowId}`);
+  const valueEl = $(`#${valueId}`);
+  if (!row || !valueEl) return;
+  if (value) {
+    valueEl.textContent = value;
+    row.hidden = false;
+  } else {
+    valueEl.textContent = "";
+    row.hidden = true;
+  }
+}
+
 function setHero(movie) {
   activeMovie = movie;
   const bg = $("#heroBg");
   bg.style.backgroundImage = `url("${movie.thumbnail}")`;
   $("#heroTitle").textContent = movie.nama;
   $("#heroMeta").textContent = metaLine(movie);
-  $("#heroDesc").textContent = movie.sinopsis || "";
+  $("#heroDesc").textContent = shortSinopsis(movie.sinopsis);
+}
+
+function episodeOptions(item) {
+  return (item?.episodes || []).filter((e) => e?.slug);
+}
+
+function episodeLabel(ep) {
+  if (!ep) return "—";
+  return ep.title || `S${ep.season} E${ep.episode}` || `Episode ${ep.episode}`;
+}
+
+function fillEpisodeSelect(selectEl, item, selectedSlug = null) {
+  const eps = episodeOptions(item);
+  selectEl.replaceChildren(
+    ...eps.map((ep) => {
+      const opt = document.createElement("option");
+      opt.value = ep.slug;
+      opt.textContent = episodeLabel(ep);
+      return opt;
+    })
+  );
+  if (!eps.length) return null;
+  const pick =
+    eps.find((e) => e.slug === selectedSlug) ||
+    [...eps].reverse().find((e) => e.players?.length) ||
+    eps[eps.length - 1];
+  selectEl.value = pick.slug;
+  return pick;
+}
+
+function getEpisodeBySlug(item, slug) {
+  return episodeOptions(item).find((e) => e.slug === slug) || null;
+}
+
+function currentPlayers(item = activeMovie) {
+  if (isSeries(item) && activeEpisode?.players?.length) {
+    return activeEpisode.players;
+  }
+  if (isSeries(item)) {
+    const latest = [...episodeOptions(item)]
+      .reverse()
+      .find((e) => e.players?.length);
+    if (latest) return latest.players;
+  }
+  return item?.players || [];
+}
+
+function closeNfDropdowns(except = null) {
+  $$(".nf-dropdown.is-open").forEach((root) => {
+    if (except && root === except) return;
+    root.classList.remove("is-open");
+    const btn = $(".nf-dropdown-toggle", root);
+    const menu = $(".nf-dropdown-menu", root);
+    if (btn) btn.setAttribute("aria-expanded", "false");
+    if (menu) menu.hidden = true;
+  });
+}
+
+function setNfDropdownValue(root, valueId, items, selectedValue) {
+  const valueEl = $(`#${valueId}`);
+  const menu = $(".nf-dropdown-menu", root);
+  if (valueEl) {
+    const selected = items.find((i) => i.value === selectedValue) || items[0];
+    valueEl.textContent = selected?.label || "—";
+  }
+  if (menu) {
+    $$(".nf-dropdown-option", menu).forEach((opt) => {
+      opt.classList.toggle("is-active", opt.dataset.value === selectedValue);
+    });
+  }
+}
+
+function populateNfDropdown(root, { valueId, items, selectedValue, onSelect }) {
+  const menu = $(".nf-dropdown-menu", root);
+  const valueEl = $(`#${valueId}`);
+  if (!menu || !valueEl) return;
+
+  root._nfItems = items;
+  root._nfValueId = valueId;
+  root._nfOnSelect = onSelect;
+
+  menu.replaceChildren(
+    ...items.map((item) => {
+      const li = document.createElement("li");
+      li.setAttribute("role", "none");
+      const option = document.createElement("button");
+      option.type = "button";
+      option.className = "nf-dropdown-option";
+      option.setAttribute("role", "option");
+      option.dataset.value = item.value;
+      if (item.value === selectedValue) option.classList.add("is-active");
+      option.innerHTML = `<span></span><svg class="nf-dropdown-check" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>`;
+      option.querySelector("span").textContent = item.label;
+      option.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeNfDropdowns();
+        setNfDropdownValue(root, valueId, items, item.value);
+        onSelect?.(item.value, item);
+      });
+      li.appendChild(option);
+      return li;
+    })
+  );
+
+  setNfDropdownValue(root, valueId, items, selectedValue);
+}
+
+function bindNfDropdown(root) {
+  if (!root || root.dataset.bound === "1") return;
+  root.dataset.bound = "1";
+  const btn = $(".nf-dropdown-toggle", root);
+  const menu = $(".nf-dropdown-menu", root);
+  if (!btn || !menu) return;
+
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !root.classList.contains("is-open");
+    closeNfDropdowns();
+    if (willOpen) {
+      root.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
+      menu.hidden = false;
+    }
+  });
 }
 
 function openModal(movie) {
   activeMovie = movie;
+  activeEpisode = null;
   const modal = $("#modal");
+  const { story, facts } = parseSinopsisDetail(movie.sinopsis);
+
   $("#modalBanner").style.backgroundImage = `url("${movie.thumbnail}")`;
   $("#modalTitle").textContent = movie.nama;
-  $("#modalMeta").textContent = metaLine(movie);
-  $("#modalDesc").textContent = movie.sinopsis || "";
+  $("#modalMatch").textContent = `${movie.rating ?? "—"} Cocok untukmu`;
+  $("#modalYear").textContent = movie.tahun || "";
+  $("#modalDuration").textContent = movie.durasi || "";
+  $("#modalDesc").textContent = story || shortSinopsis(movie.sinopsis) || "";
+  $("#modalGenres").textContent = (movie.genre || []).join(", ") || "—";
+
+  setModalFact("factCast", "modalCast", facts["bintang film"]);
+  setModalFact("factDirector", "modalDirector", facts.sutradara);
+  setModalFact("factSubtitle", "modalSubtitle", facts.subtitle);
+  setModalFact("factCountry", "modalCountry", facts.negara);
+  setModalFact("factGross", "modalGross", facts["worldwide gross"]);
+  setModalFact("factRelease", "modalRelease", facts.release);
+
+  const epWrap = $("#modalEpisodes");
+  const epSelect = $("#modalEpisodeSelect");
+  if (isSeries(movie) && episodeOptions(movie).length) {
+    activeEpisode = fillEpisodeSelect(epSelect, movie);
+    epWrap.classList.remove("hidden");
+  } else {
+    epSelect.replaceChildren();
+    epWrap.classList.add("hidden");
+  }
+
   modal.classList.remove("hidden");
+  modal.scrollTop = 0;
   document.body.style.overflow = "hidden";
 }
 
@@ -95,7 +338,7 @@ let currentServerUrl = null;
 let embedRequestId = 0;
 
 function serverLabel(url) {
-  const p = (activeMovie?.players || []).find((x) => x.url === url);
+  const p = currentPlayers().find((x) => x.url === url);
   return p ? p.label || p.server : "server";
 }
 
@@ -185,27 +428,15 @@ function selectServer(url) {
 }
 
 function setupServers(movie) {
-  const wrap = $(".player-server");
-  const select = $("#playerSelect");
-  const players = movie.players || [];
+  const wrap = $("#playerServerDropdown");
+  const players = currentPlayers(movie);
 
   if (!players.length) {
     wrap.classList.add("hidden");
-    select.replaceChildren();
     currentServerUrl = null;
     clearEmbed();
     return false;
   }
-
-  select.replaceChildren(
-    ...players.map((p) => {
-      const opt = document.createElement("option");
-      opt.value = p.url;
-      opt.textContent = p.label || p.server;
-      opt.dataset.server = p.server || "";
-      return opt;
-    })
-  );
 
   const preferred = ["hydrax", "cast", "turbovip"];
   const initial =
@@ -214,17 +445,72 @@ function setupServers(movie) {
     players.find((p) => (p.server || "").toLowerCase() !== "p2p") ||
     players.find((p) => p.default) ||
     players[0];
-  select.value = initial.url;
+
+  populateNfDropdown(wrap, {
+    valueId: "playerServerValue",
+    selectedValue: initial.url,
+    items: players.map((p) => ({
+      value: p.url,
+      label: p.label || p.server || "Server",
+    })),
+    onSelect: (url) => selectServer(url),
+  });
+
   wrap.classList.remove("hidden");
   selectServer(initial.url);
   return true;
 }
 
+function setupPlayerEpisodes(movie) {
+  const wrap = $("#playerEpisodeDropdown");
+  const eps = episodeOptions(movie);
+  if (!isSeries(movie) || !eps.length) {
+    wrap.classList.add("hidden");
+    return;
+  }
+
+  const pick =
+    eps.find((e) => e.slug === activeEpisode?.slug) ||
+    [...eps].reverse().find((e) => e.players?.length) ||
+    eps[eps.length - 1];
+  activeEpisode = pick;
+
+  populateNfDropdown(wrap, {
+    valueId: "playerEpisodeValue",
+    selectedValue: pick.slug,
+    items: eps.map((ep) => ({
+      value: ep.slug,
+      label: episodeLabel(ep),
+    })),
+    onSelect: (slug) => {
+      activeEpisode = getEpisodeBySlug(activeMovie, slug);
+      const epLabel = activeEpisode
+        ? ` · S${activeEpisode.season}E${activeEpisode.episode}`
+        : "";
+      $("#playerTitle").textContent = `${activeMovie.nama}${epLabel}`;
+      setupServers(activeMovie);
+    },
+  });
+
+  wrap.classList.remove("hidden");
+}
+
 function openPlayer(movie) {
   activeMovie = movie;
+  if (!isSeries(movie)) {
+    activeEpisode = null;
+  } else if (!activeEpisode) {
+    activeEpisode =
+      [...episodeOptions(movie)].reverse().find((e) => e.players?.length) ||
+      episodeOptions(movie).at(-1) ||
+      null;
+  }
   closeModal();
   const player = $("#player");
-  $("#playerTitle").textContent = movie.nama;
+  const epLabel = activeEpisode
+    ? ` · S${activeEpisode.season}E${activeEpisode.episode}`
+    : "";
+  $("#playerTitle").textContent = `${movie.nama}${epLabel}`;
   $("#playerPoster").style.backgroundImage = `url("${movie.thumbnail}")`;
   $("#playerPoster").classList.remove("hidden");
   $(".player-overlay", player).classList.remove("hidden");
@@ -235,6 +521,7 @@ function openPlayer(movie) {
   $(".icon-pause", player).classList.add("hidden");
   document.body.style.overflow = "hidden";
 
+  setupPlayerEpisodes(movie);
   const hasServers = setupServers(movie);
   if (!hasServers) {
     $("#playerHint").textContent = "Mode demo — preview poster cinematic";
@@ -248,6 +535,7 @@ function closePlayer() {
   currentServerUrl = null;
   clearEmbed();
   clearInterval(playerTimer);
+  closeNfDropdowns();
   document.body.style.overflow = $("#modal").classList.contains("hidden") ? "" : "hidden";
 }
 
@@ -271,15 +559,55 @@ function bindNav() {
   onScroll();
 }
 
+function syncRowArrows(track) {
+  if (!track) return;
+  const wrap = track.closest(".row-track-wrap");
+  if (!wrap) return;
+  const prev = wrap.querySelector(".row-arrow.prev");
+  const next = wrap.querySelector(".row-arrow.next");
+  const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+  const canScroll = maxScroll > 12;
+  const atStart = track.scrollLeft <= 12;
+  const atEnd = track.scrollLeft >= maxScroll - 12;
+
+  if (prev) prev.classList.toggle("is-hidden", !canScroll || atStart);
+  // Tombol kanan: tampilkan jika bisa scroll (atau paksa tampil saat overflow)
+  if (next) next.classList.toggle("is-hidden", !canScroll || atEnd);
+}
+
 function bindRows() {
+  $$(".row-track").forEach((track) => {
+    const update = () => syncRowArrows(track);
+    track.addEventListener("scroll", update, { passive: true });
+    track.addEventListener("load", update, true);
+
+    update();
+    requestAnimationFrame(update);
+    setTimeout(update, 100);
+    setTimeout(update, 500);
+    setTimeout(update, 1500);
+  });
+
   $$(".row-arrow").forEach((btn) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
       const track = document.getElementById(btn.dataset.row);
       if (!track) return;
-      const delta = Math.round(track.clientWidth * 0.8) * (btn.classList.contains("next") ? 1 : -1);
+      const delta =
+        Math.max(240, Math.round(track.clientWidth * 0.85)) *
+        (btn.classList.contains("next") ? 1 : -1);
       track.scrollBy({ left: delta, behavior: "smooth" });
+      requestAnimationFrame(() => syncRowArrows(track));
+      setTimeout(() => syncRowArrows(track), 400);
     });
   });
+
+  window.addEventListener(
+    "resize",
+    () => $$(".row-track").forEach((track) => syncRowArrows(track)),
+    { passive: true }
+  );
 }
 
 function bindSearch() {
@@ -296,7 +624,7 @@ function bindSearch() {
       return;
     }
 
-    const hits = movies.filter(
+    const hits = catalog.filter(
       (m) =>
         m.nama.toLowerCase().includes(q) ||
         m.judul.toLowerCase().includes(q) ||
@@ -312,25 +640,43 @@ function bindSearch() {
 function bindActions() {
   $("#heroPlay").addEventListener("click", () => activeMovie && openPlayer(activeMovie));
   $("#heroInfo").addEventListener("click", () => activeMovie && openModal(activeMovie));
-  $("#modalPlay").addEventListener("click", () => activeMovie && openPlayer(activeMovie));
+  $("#modalPlay").addEventListener("click", () => {
+    if (!activeMovie) return;
+    if (isSeries(activeMovie)) {
+      const slug = $("#modalEpisodeSelect")?.value;
+      activeEpisode = getEpisodeBySlug(activeMovie, slug) || activeEpisode;
+    }
+    openPlayer(activeMovie);
+  });
+  $("#modalEpisodeSelect")?.addEventListener("change", (e) => {
+    if (!activeMovie) return;
+    activeEpisode = getEpisodeBySlug(activeMovie, e.target.value);
+  });
   $("#playerBack").addEventListener("click", closePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
-  $("#playerSelect").addEventListener("change", (e) => selectServer(e.target.value));
+
+  bindNfDropdown($("#playerEpisodeDropdown"));
+  bindNfDropdown($("#playerServerDropdown"));
+  document.addEventListener("click", () => closeNfDropdowns());
 
   $$("[data-close]").forEach((el) => el.addEventListener("click", closeModal));
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      if (!$("#player").classList.contains("hidden")) closePlayer();
-      else closeModal();
+    if (e.key !== "Escape") return;
+    if ($$(".nf-dropdown.is-open").length) {
+      closeNfDropdowns();
+      return;
     }
+    if (!$("#player").classList.contains("hidden")) closePlayer();
+    else closeModal();
   });
 }
 
 async function init() {
   try {
-    await loadMovies();
-    setHero(movies[0]);
+    await Promise.all([loadMovies(), loadSeries(), loadHorror()]);
+    catalog = dedupeBySlug([...movies, ...horror, ...series]);
+    setHero(movies[0] || horror[0] || series[0]);
     renderRows();
     bindNav();
     bindRows();

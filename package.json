@@ -7,9 +7,15 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "scrape": "node scripts/scrape-players.js"
+    "scrape": "node scripts/scrape-players.js",
+    "scrape:latest": "node scripts/scrape-latest.js",
+    "scrape:desc": "node scripts/scrape-latest.js --refresh-desc",
+    "scrape:series": "node scripts/scrape-series.js",
+    "scrape:horror": "node scripts/scrape-genre.js --genre horror",
+    "scrape:genre": "node scripts/scrape-genre.js"
   },
   "devDependencies": {
+    "playwright": "^1.61.1",
     "vite": "^6.3.5"
   }
 }
