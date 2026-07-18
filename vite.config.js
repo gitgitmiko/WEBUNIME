@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite';
 import { embedProxyPlugin } from './plugins/embed-proxy.js';
+import { catalogSyncPlugin } from './plugins/catalog-sync.js';
 
 export default defineConfig({
-  plugins: [embedProxyPlugin()],
+  plugins: [catalogSyncPlugin(), embedProxyPlugin()],
   server: {
     port: 5173,
     open: true,

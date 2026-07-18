@@ -12,7 +12,8 @@
     "scrape:desc": "node scripts/scrape-latest.js --refresh-desc",
     "scrape:series": "node scripts/scrape-series.js",
     "scrape:horror": "node scripts/scrape-genre.js --genre horror",
-    "scrape:genre": "node scripts/scrape-genre.js"
+    "scrape:genre": "node scripts/scrape-genre.js",
+    "sync:catalog": "node scripts/sync-catalog.js --force"
   },
   "devDependencies": {
     "playwright": "^1.61.1",
