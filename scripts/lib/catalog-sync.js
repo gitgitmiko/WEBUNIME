@@ -464,9 +464,14 @@ async function syncMoviesCatalog(dataDir) {
   const playersFile = join(dataDir, "players.json");
   const existing = await readJsonArray(file);
   const bySlug = new Map(existing.map((m) => [m.slug, m]));
+  process.stdout.write("[lk21-sync] film /latest ... ");
   const { html } = await fetchHtml(`${LIST_BASE}/latest`);
   const listings = extractListings(html);
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
+  console.log(
+    `${listings.length} kartu, ${newcomers.length} baru` +
+      (newcomers.length ? ` → scrape detail` : " (sudah up-to-date)")
+  );
   const added = [];
 
   for (let i = 0; i < newcomers.length; i++) {
@@ -477,8 +482,9 @@ async function syncMoviesCatalog(dataDir) {
       movie.id = nextId([...existing, ...added]);
       added.push(movie);
       bySlug.set(movie.slug, movie);
+      console.log(`[lk21-sync] +film ${movie.slug}`);
     } catch (err) {
-      console.warn(`[sync] movie ${item.slug}:`, err.message);
+      console.warn(`[lk21-sync] movie ${item.slug}:`, err.message);
     }
     if (i < newcomers.length - 1) await sleep(DETAIL_DELAY_MS);
   }
@@ -508,9 +514,14 @@ async function syncHorrorCatalog(dataDir) {
   const globalPlayersFile = join(dataDir, "players.json");
   const existing = await readJsonArray(file);
   const bySlug = new Map(existing.map((m) => [m.slug, m]));
+  process.stdout.write("[lk21-sync] horror /genre/horror ... ");
   const { html } = await fetchHtml(`${LIST_BASE}/genre/horror`);
   const listings = extractListings(html);
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
+  console.log(
+    `${listings.length} kartu, ${newcomers.length} baru` +
+      (newcomers.length ? ` → scrape detail` : " (sudah up-to-date)")
+  );
   const added = [];
 
   for (let i = 0; i < newcomers.length; i++) {
@@ -520,8 +531,9 @@ async function syncHorrorCatalog(dataDir) {
       if (!movie) continue;
       movie.id = nextId([...existing, ...added]);
       added.push(movie);
+      console.log(`[lk21-sync] +horror ${movie.slug}`);
     } catch (err) {
-      console.warn(`[sync] horror ${item.slug}:`, err.message);
+      console.warn(`[lk21-sync] horror ${item.slug}:`, err.message);
     }
     if (i < newcomers.length - 1) await sleep(DETAIL_DELAY_MS);
   }
@@ -556,6 +568,7 @@ async function syncSeriesCatalog(dataDir) {
   const existing = await readJsonArray(file);
   const bySlug = new Map(existing.map((m) => [m.slug, m]));
   const currentYear = String(new Date().getFullYear());
+  process.stdout.write(`[lk21-sync] series /top-series-today (${currentYear}) ... `);
   const { html } = await fetchHtml(`${LIST_BASE}/top-series-today`);
   const listingsAll = extractListings(html, { seriesMode: true });
 
@@ -567,6 +580,9 @@ async function syncSeriesCatalog(dataDir) {
       "";
     return year === currentYear;
   });
+  console.log(
+    `${listingsAll.length} kartu, ${listings.length} tahun ${currentYear}`
+  );
 
   let addedCount = 0;
   let updatedCount = 0;
@@ -595,8 +611,9 @@ async function syncSeriesCatalog(dataDir) {
         addedCount += 1;
         addedSlugs.push(series.slug);
         changed = true;
+        console.log(`[lk21-sync] +series ${series.slug}`);
       } catch (err) {
-        console.warn(`[sync] series new ${item.slug}:`, err.message);
+        console.warn(`[lk21-sync] series new ${item.slug}:`, err.message);
       }
       if (i < listings.length - 1) await sleep(DETAIL_DELAY_MS);
       continue;
@@ -627,9 +644,12 @@ async function syncSeriesCatalog(dataDir) {
           updatedCount += 1;
           updatedSlugs.push(item.slug);
           changed = true;
+          console.log(
+            `[lk21-sync] +ep ${item.slug} (+${missing.length} episode)`
+          );
         }
       } catch (err) {
-        console.warn(`[sync] series update ${item.slug}:`, err.message);
+        console.warn(`[lk21-sync] series update ${item.slug}:`, err.message);
       }
       if (i < listings.length - 1) await sleep(DETAIL_DELAY_MS);
     }
@@ -701,6 +721,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
 
   syncInFlight = (async () => {
     const started = Date.now();
+    console.log("[catalog-sync] mulai (LK21 → Samehadaku)…");
     const results = {
       movies: await syncMoviesCatalog(dataDir),
       series: await syncSeriesCatalog(dataDir),
@@ -751,6 +772,9 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     };
     lastSyncAt = Date.now();
     lastSyncResult = payload;
+    console.log(
+      `[catalog-sync] selesai +${added} / ~${updated} dalam ${payload.duration_ms}ms`
+    );
     return payload;
   })();
 
