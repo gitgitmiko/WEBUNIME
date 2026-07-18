@@ -92,6 +92,20 @@ function pickReferer(target) {
   ) {
     return "https://turbovidhls.com/";
   }
+  // Anime Samehadaku embeds (+ CDN Filedon R2)
+  if (
+    host.includes("filedon") ||
+    host.includes("wibufile") ||
+    host.includes("r2.cloudflarestorage")
+  ) {
+    if (host.includes("r2.cloudflarestorage") || host.includes("filedon")) {
+      return "https://filedon.co/";
+    }
+    if (host.includes("wibufile")) {
+      return "https://api.wibufile.com/";
+    }
+    return "https://v2.samehadaku.how/";
+  }
   return "https://playeriframe.sbs/";
 }
 
@@ -129,6 +143,16 @@ function buildUpstreamHeaders(target, req) {
   if (/abyss|iamcdn|short\.icu/i.test(target.hostname)) {
     headers.Origin = "https://abyssplayer.com";
     headers.Referer = "https://abyssplayer.com/";
+  }
+
+  if (/wibufile/i.test(target.hostname)) {
+    headers.Origin = "https://api.wibufile.com";
+    headers.Referer = "https://api.wibufile.com/";
+  }
+
+  if (/filedon|r2\.cloudflarestorage/i.test(target.hostname)) {
+    headers.Origin = "https://filedon.co";
+    headers.Referer = "https://filedon.co/";
   }
 
   // GCS Hydrax: sering menolak Referer asing — coba tanpa Referer / Origin browser
@@ -462,14 +486,61 @@ function rewriteHtmlUrls(html, pageUrl) {
   return out;
 }
 
-function buildHlsPlayerPage(m3u8Url, title = "WEBUNIME Player", origin = "") {
-  let playUrl = m3u8Url;
+function toProxiedMediaUrl(absoluteUrl, _origin = "") {
   try {
-    const u = new URL(m3u8Url);
-    playUrl = `${origin}/__px__/${u.host}${u.pathname}${u.search}`;
+    const u = new URL(absoluteUrl);
+    // Relatif agar cocok dengan origin browser (localhost vs 127.0.0.1)
+    return `/__px__/${u.host}${u.pathname}${u.search}`;
   } catch {
-    /* keep */
+    return absoluteUrl;
   }
+}
+
+function buildHtml5VideoPage(mediaUrl, title = "WEBUNIME Player", origin = "") {
+  const playUrl = toProxiedMediaUrl(mediaUrl, origin);
+  return `<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${title}</title>
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; }
+    video { width: 100%; height: 100%; object-fit: contain; background: #000; }
+    .err { color: #fff; font-family: system-ui, sans-serif; padding: 1.5rem; text-align: center; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <video id="v" controls autoplay playsinline preload="metadata"></video>
+  <script>
+    (function () {
+      var video = document.getElementById("v");
+      var src = ${JSON.stringify(playUrl)};
+      video.src = src;
+      var shown = false;
+      function fail(msg) {
+        if (shown) return;
+        shown = true;
+        document.body.innerHTML = '<p class="err">' + msg + '</p>';
+      }
+      video.addEventListener("error", function () {
+        fail("Gagal memutar video. Coba ganti server (Blogspot / Mega / resolusi lain).");
+      });
+      video.addEventListener("loadeddata", function () { shown = true; });
+      // Timeout: kalau 25s masih buffering tanpa frame, beri petunjuk
+      setTimeout(function () {
+        if (!shown && video.readyState < 2) {
+          fail("Loading terlalu lama. Coba Blogspot / Mega, atau resolusi Wibufile lain.");
+        }
+      }, 25000);
+    })();
+  </script>
+</body>
+</html>`;
+}
+
+function buildHlsPlayerPage(m3u8Url, title = "WEBUNIME Player", origin = "") {
+  const playUrl = toProxiedMediaUrl(m3u8Url, origin);
 
   return `<!DOCTYPE html>
 <html lang="id">
@@ -509,6 +580,108 @@ function buildHlsPlayerPage(m3u8Url, title = "WEBUNIME Player", origin = "") {
   </script>
 </body>
 </html>`;
+}
+
+/** Ambil URL .mp4 dari halaman JWPlayer Wibufile. */
+function extractMp4(html) {
+  const patterns = [
+    /"file"\s*:\s*"((?:https?:)?\\\/\\\/[^"]+\.mp4[^"]*)"/i,
+    /"file"\s*:\s*"((?:https?:\/\/)[^"]+\.mp4[^"]*)"/i,
+    /file\s*:\s*["'](https?:\/\/[^"']+\.mp4[^"']*)["']/i,
+    /(https?:\/\/[^\s"'<>]+\.mp4[^\s"'<>]*)/i,
+  ];
+  for (const re of patterns) {
+    const m = html.match(re);
+    if (!m?.[1]) continue;
+    let url = m[1].replace(/\\\//g, "/");
+    if (url.startsWith("//")) url = `https:${url}`;
+    try {
+      return new URL(url).href;
+    } catch {
+      /* next */
+    }
+  }
+  return null;
+}
+
+/**
+ * Filedon membatasi embed ke domain Samehadaku.
+ * Nonaktifkan whitelist di props Inertia agar player bisa jalan di WEBUNIME.
+ */
+function patchFiledonEmbed(html) {
+  // Hanya matikan whitelist — jangan sisipkan domain (bisa rusak JSON bila array kosong)
+  return html
+    .replace(
+      /(&quot;|")domain_whitelist_enabled\1\s*:\s*true/g,
+      "$1domain_whitelist_enabled$1:false"
+    )
+    .replace(
+      /"domain_whitelist_enabled"\s*:\s*true/g,
+      '"domain_whitelist_enabled":false'
+    );
+}
+
+function decodeInertiaDataPage(html) {
+  const m = html.match(/data-page=(["'])([\s\S]*?)\1/i);
+  if (!m) return null;
+  try {
+    const raw = m[2]
+      .replace(/&quot;/g, '"')
+      .replace(/&#039;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">");
+    return JSON.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
+/** Ambil URL media Filedon (R2 signed / HLS). */
+function extractFiledonMedia(html) {
+  const page = decodeInertiaDataPage(html);
+  if (page?.props) {
+    const direct =
+      (typeof page.props.url === "string" &&
+      /r2\.cloudflarestorage|\.mp4|\.mkv|\.webm/i.test(page.props.url)
+        ? page.props.url
+        : null) || null;
+    return {
+      hlsUrl: page.props.media?.hls_url || null,
+      directUrl: direct,
+      extension: String(page.props.files?.extension || "").toLowerCase(),
+      mime: String(page.props.files?.mime_type || "").toLowerCase(),
+    };
+  }
+
+  const ext =
+    html.match(/&quot;extension&quot;:&quot;([^&]+)&quot;/)?.[1]?.toLowerCase() ||
+    html.match(/"extension"\s*:\s*"([^"]+)"/)?.[1]?.toLowerCase() ||
+    "";
+
+  // Cari signed URL R2 (bukan ziggy.url)
+  const r2 =
+    html.match(
+      /https?:\\?\/\\?\/[a-z0-9]+\.r2\.cloudflarestorage\.com[^"&\s]*|(?:https?:\/\/)[a-z0-9]+\.r2\.cloudflarestorage\.com[^"&\s]*/i
+    )?.[0] ||
+    html.match(
+      /&quot;(https?:\/\/[^&]*r2\.cloudflarestorage\.com[^&]*)&quot;/i
+    )?.[1];
+
+  let directUrl = null;
+  if (r2) {
+    directUrl = r2
+      .replace(/\\\//g, "/")
+      .replace(/&amp;/g, "&")
+      .replace(/\\u0026/g, "&");
+  }
+
+  return {
+    hlsUrl: null,
+    directUrl,
+    extension: ext,
+    mime: "",
+  };
 }
 
 /** Jika halaman provider menyimpan URL .m3u8, putar langsung (lebih stabil dari JWPlayer mereka). */
@@ -559,6 +732,37 @@ function sanitizeHtml(html, pageUrl, origin = "") {
       "Server P2P maintenance",
       "Server ini sedang tidak tersedia. Ganti ke Hydrax, TurboVIP, atau Cast lewat dropdown Server."
     );
+  }
+
+  // Wibufile embed (JWPlayer) → putar MP4 langsung (lebih stabil di iframe proxy)
+  if (/wibufile/i.test(pageUrl.hostname)) {
+    const mp4 = extractMp4(html);
+    if (mp4) return buildHtml5VideoPage(mp4, pageUrl.hostname, origin);
+  }
+
+  // Filedon / VIP / Pucuk: bypass whitelist + putar MP4/HLS langsung
+  if (/filedon\.co/i.test(pageUrl.hostname)) {
+    const patched = patchFiledonEmbed(html);
+    const media = extractFiledonMedia(patched);
+    if (media.hlsUrl) {
+      return buildHlsPlayerPage(media.hlsUrl, "VIP STREAMING", origin);
+    }
+    const ext = media.extension;
+    const isMp4 =
+      ext === "mp4" ||
+      ext === "webm" ||
+      /mp4|webm/i.test(media.mime) ||
+      (media.directUrl && /\.mp4(\?|$)/i.test(media.directUrl.split("?")[0]));
+    if (media.directUrl && isMp4) {
+      return buildHtml5VideoPage(media.directUrl, "VIP STREAMING", origin);
+    }
+    if (ext === "mkv" || /matroska/i.test(media.mime)) {
+      return buildMessagePage(
+        "VIP STREAMING belum siap diputar",
+        "File di server ini masih MKV tanpa HLS (belum di-transcode). Browser tidak bisa memutar MKV. Pilih Blogspot, Wibufile, atau Mega."
+      );
+    }
+    html = patched;
   }
 
   // Jangan pakai HLS shortcut untuk Turbo — playlist mereka memakai segmen non-standar (bukan TS/fMP4).
@@ -663,6 +867,7 @@ function copySafeHeaders(upstream, res) {
   for (const [key, value] of upstream.headers) {
     if (STRIP_HEADERS.has(key.toLowerCase())) continue;
     if (key.toLowerCase() === "set-cookie") continue;
+    if (key.toLowerCase() === "content-disposition") continue;
     try {
       res.setHeader(key, value);
     } catch {
@@ -692,6 +897,7 @@ async function handleProxy(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "*");
+    res.setHeader("Access-Control-Expose-Headers", "Content-Length, Content-Range, Accept-Ranges");
     res.end();
     return;
   }
@@ -719,10 +925,54 @@ async function handleProxy(req, res) {
 
     const finalUrl = target;
     const contentType = upstream.headers.get("content-type") || "application/octet-stream";
+    const pathLower = finalUrl.pathname.toLowerCase();
+    const isHtml = /text\/html/i.test(contentType);
+    const isM3u8 =
+      /mpegurl|m3u8/i.test(contentType) || pathLower.endsWith(".m3u8");
+    const isMedia =
+      !isHtml &&
+      !isM3u8 &&
+      (/video\/|audio\//i.test(contentType) ||
+        /application\/octet-stream/i.test(contentType) ||
+        /\.(mp4|webm|mkv|m4v|ts|m4s|aac|mp3)(\?|$)/i.test(pathLower) ||
+        /\.mp4/i.test(finalUrl.search) ||
+        /r2\.cloudflarestorage|wibufile/i.test(finalUrl.hostname));
+
+    // Stream media (jangan buffer full file — penyebab loading abadi di Wibufile/VIP)
+    if (isMedia && method !== "HEAD") {
+      res.statusCode = upstream.status;
+      copySafeHeaders(upstream, res);
+      if (/\.mp4/i.test(pathLower) || /\.mp4/i.test(finalUrl.search) || /video\/mp4/i.test(contentType)) {
+        res.setHeader("Content-Type", "video/mp4");
+      } else if (/\.webm/i.test(pathLower)) {
+        res.setHeader("Content-Type", "video/webm");
+      } else {
+        res.setHeader("Content-Type", contentType);
+      }
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Access-Control-Expose-Headers", "Content-Length, Content-Range, Accept-Ranges");
+      res.setHeader("Accept-Ranges", "bytes");
+      if (!upstream.body) {
+        res.end();
+        return;
+      }
+      const { Readable } = await import("node:stream");
+      const nodeStream = Readable.fromWeb(upstream.body);
+      nodeStream.on("error", () => {
+        try {
+          res.destroy();
+        } catch {
+          /* ignore */
+        }
+      });
+      nodeStream.pipe(res);
+      return;
+    }
+
     const buf = Buffer.from(await upstream.arrayBuffer());
 
     // Provider down / Cloudflare 5xx → jangan tampilkan halaman kosong
-    if (upstream.status >= 500 && /text\/html/i.test(contentType)) {
+    if (upstream.status >= 500 && isHtml) {
       res.statusCode = 200;
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       res.setHeader("Cache-Control", "no-store");
@@ -739,16 +989,12 @@ async function handleProxy(req, res) {
     copySafeHeaders(upstream, res);
     res.setHeader("Access-Control-Allow-Origin", "*");
 
-    if (/text\/html/i.test(contentType)) {
+    if (isHtml) {
       const html = sanitizeHtml(buf.toString("utf8"), finalUrl, origin);
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       res.end(html);
       return;
     }
-
-    const isM3u8 =
-      /mpegurl|m3u8/i.test(contentType) ||
-      finalUrl.pathname.toLowerCase().endsWith(".m3u8");
 
     if (isM3u8) {
       let text = buf.toString("utf8");
@@ -756,7 +1002,7 @@ async function handleProxy(req, res) {
         try {
           const abs = new URL(url);
           if (isPrivateHost(abs.hostname)) return url;
-          return `${origin}/__px__/${abs.host}${abs.pathname}${abs.search}`;
+          return `/__px__/${abs.host}${abs.pathname}${abs.search}`;
         } catch {
           return url;
         }
@@ -860,6 +1106,22 @@ self.addEventListener("fetch", function (event) {
 });
 `;
 
+function handleVid(req, res) {
+  const incoming = new URL(req.url, "http://127.0.0.1");
+  const target = parseHttpUrl(incoming.searchParams.get("u"));
+  if (!target) {
+    res.statusCode = 400;
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.end(buildMessagePage("URL tidak valid", "Tidak bisa memuat video."));
+    return;
+  }
+  const origin = requestOrigin(req);
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("Cache-Control", "no-store");
+  res.end(buildHtml5VideoPage(target.href, target.hostname, origin));
+}
+
 function middleware(req, res, next) {
   const path = req.url?.split("?")[0] || "";
 
@@ -872,6 +1134,7 @@ function middleware(req, res, next) {
     return;
   }
 
+  if (path === "/__vid__") return handleVid(req, res);
   if (path.startsWith("/__px__/")) return handleProxy(req, res);
   if (path === "/api/resolve") return handleResolve(req, res);
   if (path === "/api/embed") return handleLegacyEmbed(req, res);

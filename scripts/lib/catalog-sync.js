@@ -1,10 +1,12 @@
 /**
- * Sync inkremental katalog LK21 (halaman 1 saja).
- * Data lama tetap; hanya menambah slug baru (+ episode baru untuk series di page 1).
+ * Sync inkremental katalog:
+ * - LK21: film / series / horor (halaman 1)
+ * - Samehadaku: anime-terbaru (5 hlm, episode baru) + anime-movie (judul baru)
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
+import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
 
 const LIST_BASE = "https://tv12.lk21official.cc";
 const DRAMA_BASE = "https://tv5.nontondrama.my";
@@ -704,9 +706,40 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       series: await syncSeriesCatalog(dataDir),
       horror: await syncHorrorCatalog(dataDir),
     };
+
+    try {
+      const sameha = await syncSamehadakuCatalog(dataDir);
+      results.anime = sameha.anime;
+      results.animeMovies = sameha.animeMovies;
+    } catch (err) {
+      console.warn("[sync] samehadaku:", err.message);
+      results.anime = {
+        checked: 0,
+        added: 0,
+        updated: 0,
+        episodes_added: 0,
+        error: err.message,
+      };
+      results.animeMovies = {
+        checked: 0,
+        added: 0,
+        updated: 0,
+        error: err.message,
+      };
+    }
+
     const added =
-      results.movies.added + results.series.added + results.horror.added;
-    const updated = results.movies.updated + results.series.updated + results.horror.updated;
+      results.movies.added +
+      results.series.added +
+      results.horror.added +
+      (results.anime?.added || 0) +
+      (results.animeMovies?.added || 0);
+    const updated =
+      results.movies.updated +
+      results.series.updated +
+      results.horror.updated +
+      (results.anime?.updated || 0) +
+      (results.animeMovies?.updated || 0);
     const payload = {
       ok: true,
       skipped: false,

@@ -1,6 +1,8 @@
 /**
  * Vite plugin: GET/POST /api/sync-catalog
- * Sync inkremental halaman 1 (latest, series, horror) tanpa menghapus data lama.
+ * Sync inkremental:
+ * - LK21: latest / series / horror
+ * - Samehadaku: anime-terbaru (episode baru) + anime-movie (judul baru)
  */
 
 import { fileURLToPath } from "node:url";

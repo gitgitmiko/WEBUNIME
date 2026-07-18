@@ -1,6 +1,9 @@
 let movies = [];
 let series = [];
 let horror = [];
+let anime = [];
+let animeMovies = [];
+let animeLatest = [];
 let catalog = [];
 let activeMovie = null;
 let activeEpisode = null;
@@ -41,6 +44,45 @@ async function loadHorror() {
   }
 }
 
+async function loadAnime() {
+  try {
+    const res = await fetch("/data/anime.json");
+    if (!res.ok) {
+      anime = [];
+      return;
+    }
+    anime = await res.json();
+  } catch {
+    anime = [];
+  }
+}
+
+async function loadAnimeMovies() {
+  try {
+    const res = await fetch("/data/anime-movies.json");
+    if (!res.ok) {
+      animeMovies = [];
+      return;
+    }
+    animeMovies = await res.json();
+  } catch {
+    animeMovies = [];
+  }
+}
+
+async function loadAnimeLatest() {
+  try {
+    const res = await fetch("/data/anime-latest.json");
+    if (!res.ok) {
+      animeLatest = [];
+      return;
+    }
+    animeLatest = await res.json();
+  } catch {
+    animeLatest = [];
+  }
+}
+
 function dedupeBySlug(list) {
   const seen = new Set();
   const out = [];
@@ -54,7 +96,12 @@ function dedupeBySlug(list) {
 }
 
 function isSeries(item) {
-  return item?.type === "series" || Array.isArray(item?.episodes);
+  return (
+    item?.type === "series" ||
+    item?.type === "anime" ||
+    item?.type === "anime-movie" ||
+    Array.isArray(item?.episodes)
+  );
 }
 
 function metaLine(movie) {
@@ -79,10 +126,47 @@ function createPoster(movie, index = 0) {
   btn.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
   btn.setAttribute("aria-label", `Detail ${movie.nama}`);
   btn.innerHTML = `
-    <img src="${movie.thumbnail}" alt="${movie.judul}" loading="lazy" width="200" height="300" />
+    <img src="${movie.thumbnail}" alt="${movie.judul || movie.nama}" loading="lazy" width="200" height="300" />
     <p class="poster-label">${movie.nama}</p>
   `;
   btn.addEventListener("click", () => openModal(movie));
+  return btn;
+}
+
+/** Poster episode rilis terbaru (Anime Terbaru). */
+function createLatestEpisodePoster(item, index = 0) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "poster poster--episode";
+  btn.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
+  const epLabel =
+    item.episode != null ? `Episode ${item.episode}` : "Episode baru";
+  btn.setAttribute("aria-label", `${item.nama} ${epLabel}`);
+  btn.innerHTML = `
+    <img src="${item.thumbnail}" alt="${item.nama}" loading="lazy" width="200" height="300" />
+    <span class="poster-ep">${epLabel}</span>
+    <p class="poster-label">${item.nama}</p>
+  `;
+  btn.addEventListener("click", () => {
+    const show = anime.find((a) => a.slug === item.anime_slug);
+    if (!show) {
+      openModal({
+        type: "anime",
+        nama: item.nama,
+        judul: item.judul || item.nama,
+        thumbnail: item.thumbnail,
+        slug: item.anime_slug,
+        source: item.source,
+        episodes: [],
+        sinopsis: "Data anime belum lengkap. Tunggu sync katalog.",
+      });
+      return;
+    }
+    const epSlug =
+      item.episode_slug ||
+      `${item.anime_slug}-episode-${item.episode}`;
+    openModal(show, { episodeSlug: epSlug });
+  });
   return btn;
 }
 
@@ -93,9 +177,19 @@ function fillTrack(id, list) {
   requestAnimationFrame(() => syncRowArrows(track));
 }
 
+function fillLatestTrack(id, list) {
+  const track = document.getElementById(id);
+  if (!track) return;
+  track.replaceChildren(...list.map((m, i) => createLatestEpisodePoster(m, i)));
+  requestAnimationFrame(() => syncRowArrows(track));
+}
+
 function renderRows() {
   fillTrack("trackFeatured", movies);
   fillTrack("trackSeries", series);
+  fillLatestTrack("trackAnimeLatest", animeLatest);
+  fillTrack("trackAnime", anime);
+  fillTrack("trackAnimeMovie", animeMovies);
   fillTrack("trackHorror", horror);
   fillTrack(
     "track2026",
@@ -173,7 +267,25 @@ function episodeOptions(item) {
 
 function episodeLabel(ep) {
   if (!ep) return "—";
-  return ep.title || `S${ep.season} E${ep.episode}` || `Episode ${ep.episode}`;
+  if (ep.title) return ep.title;
+  if (ep.season != null && ep.season !== "") {
+    return `S${ep.season} E${ep.episode}`;
+  }
+  return ep.episode != null ? `Episode ${ep.episode}` : "—";
+}
+
+/** Suffix judul player: series LK21 pakai SxEy; anime tanpa season. */
+function playerEpisodeSuffix(ep, item = activeMovie) {
+  if (!ep) return "";
+  if (item?.type === "anime-movie") return "";
+  if (item?.type === "anime") {
+    return ep.episode != null ? ` · E${ep.episode}` : "";
+  }
+  if (ep.season != null && ep.season !== "" && ep.episode != null) {
+    return ` · S${ep.season}E${ep.episode}`;
+  }
+  if (ep.episode != null) return ` · E${ep.episode}`;
+  return ep.title ? ` · ${ep.title}` : "";
 }
 
 function fillEpisodeSelect(selectEl, item, selectedSlug = null) {
@@ -291,7 +403,7 @@ function bindNfDropdown(root) {
   });
 }
 
-function openModal(movie) {
+function openModal(movie, opts = {}) {
   activeMovie = movie;
   activeEpisode = null;
   const modal = $("#modal");
@@ -315,7 +427,7 @@ function openModal(movie) {
   const epWrap = $("#modalEpisodes");
   const epSelect = $("#modalEpisodeSelect");
   if (isSeries(movie) && episodeOptions(movie).length) {
-    activeEpisode = fillEpisodeSelect(epSelect, movie);
+    activeEpisode = fillEpisodeSelect(epSelect, movie, opts.episodeSlug || null);
     epWrap.classList.remove("hidden");
   } else {
     epSelect.replaceChildren();
@@ -342,9 +454,13 @@ function serverLabel(url) {
   return p ? formatServerName(p) : "server";
 }
 
-/** Tampilkan hanya nama server (P2P, TURBOVIP, CAST, HYDRAX). */
+/** Label server untuk dropdown (LK21: tanpa GANTI PLAYER; anime: label asli). */
 function formatServerName(player) {
-  const raw = String(player?.server || player?.label || "Server");
+  const label = String(player?.label || "").trim();
+  if (label && !/^ganti\s*player/i.test(label)) {
+    return label.replace(/\s+/g, " ").trim();
+  }
+  const raw = String(player?.server || label || "Server");
   const cleaned = raw
     .replace(/^ganti\s*player\s*/i, "")
     .replace(/^player\s*/i, "")
@@ -366,9 +482,26 @@ function toProxyPath(absoluteUrl) {
 /**
  * Resolve URL player iframe dalam (skip wrapper playeriframe + iklan dobel).
  * Hydrax/Abyss → URL absolut langsung (GCS media butuh Referer abyssplayer).
- * Server lain → path proxy /__px__/...
+ * Anime Samehadaku (blogger/wibufile/filedon/mega) → embed langsung / proxy.
+ * Server LK21 lain → path proxy /__px__/...
  */
 async function resolveEmbedPath(sourceUrl) {
+  try {
+    const u = new URL(sourceUrl);
+    const host = u.hostname;
+    // Embed anime Samehadaku — sudah URL player akhir
+    if (/blogger\.com|wibufile\.com|filedon\.co|mega\.nz/i.test(host)) {
+      if (/mega\.nz|blogger\.com/i.test(host)) return sourceUrl;
+      // MP4 langsung (Wibufile 720/1080) → halaman <video>, bukan iframe ke file mentah
+      if (/\.(mp4|webm)(\?|$)/i.test(u.pathname)) {
+        return `/__vid__?u=${encodeURIComponent(u.href)}`;
+      }
+      return toProxyPath(sourceUrl) || sourceUrl;
+    }
+  } catch {
+    /* lanjut resolve */
+  }
+
   const res = await fetch(`/api/resolve?url=${encodeURIComponent(sourceUrl)}`);
   if (!res.ok) throw new Error(`Resolve gagal (${res.status})`);
   const data = await res.json();
@@ -449,9 +582,20 @@ function setupServers(movie) {
     return false;
   }
 
-  const preferred = ["hydrax", "cast", "turbovip"];
+  const preferred =
+    isSeries(movie) && (movie?.type === "anime" || movie?.type === "anime-movie")
+      ? ["blogspot", "wibufile", "vip-streaming", "vip"]
+      : ["hydrax", "cast", "turbovip"];
   const initial =
-    preferred.map((s) => players.find((p) => (p.server || "").toLowerCase() === s)).find(Boolean) ||
+    preferred
+      .map((s) =>
+        players.find(
+          (p) =>
+            (p.server || "").toLowerCase().includes(s) ||
+            (p.label || "").toLowerCase().includes(s)
+        )
+      )
+      .find(Boolean) ||
     players.find((p) => p.default && (p.server || "").toLowerCase() !== "p2p") ||
     players.find((p) => (p.server || "").toLowerCase() !== "p2p") ||
     players.find((p) => p.default) ||
@@ -495,10 +639,7 @@ function setupPlayerEpisodes(movie) {
     })),
     onSelect: (slug) => {
       activeEpisode = getEpisodeBySlug(activeMovie, slug);
-      const epLabel = activeEpisode
-        ? ` · S${activeEpisode.season}E${activeEpisode.episode}`
-        : "";
-      $("#playerTitle").textContent = `${activeMovie.nama}${epLabel}`;
+      $("#playerTitle").textContent = `${activeMovie.nama}${playerEpisodeSuffix(activeEpisode)}`;
       setupServers(activeMovie);
     },
   });
@@ -518,10 +659,7 @@ function openPlayer(movie) {
   }
   closeModal();
   const player = $("#player");
-  const epLabel = activeEpisode
-    ? ` · S${activeEpisode.season}E${activeEpisode.episode}`
-    : "";
-  $("#playerTitle").textContent = `${movie.nama}${epLabel}`;
+  $("#playerTitle").textContent = `${movie.nama}${playerEpisodeSuffix(activeEpisode, movie)}`;
   $("#playerPoster").style.backgroundImage = `url("${movie.thumbnail}")`;
   $("#playerPoster").classList.remove("hidden");
   $(".player-overlay", player).classList.remove("hidden");
@@ -684,8 +822,21 @@ function bindActions() {
 }
 
 async function refreshCatalogFromDisk() {
-  await Promise.all([loadMovies(), loadSeries(), loadHorror()]);
-  catalog = dedupeBySlug([...movies, ...horror, ...series]);
+  await Promise.all([
+    loadMovies(),
+    loadSeries(),
+    loadHorror(),
+    loadAnime(),
+    loadAnimeMovies(),
+    loadAnimeLatest(),
+  ]);
+  catalog = dedupeBySlug([
+    ...movies,
+    ...horror,
+    ...series,
+    ...anime,
+    ...animeMovies,
+  ]);
   if (activeMovie?.slug) {
     activeMovie = catalog.find((c) => c.slug === activeMovie.slug) || activeMovie;
   }
@@ -714,9 +865,22 @@ async function syncCatalogInBackground() {
 
 async function init() {
   try {
-    await Promise.all([loadMovies(), loadSeries(), loadHorror()]);
-    catalog = dedupeBySlug([...movies, ...horror, ...series]);
-    setHero(movies[0] || horror[0] || series[0]);
+    await Promise.all([
+      loadMovies(),
+      loadSeries(),
+      loadHorror(),
+      loadAnime(),
+      loadAnimeMovies(),
+      loadAnimeLatest(),
+    ]);
+    catalog = dedupeBySlug([
+      ...movies,
+      ...horror,
+      ...series,
+      ...anime,
+      ...animeMovies,
+    ]);
+    setHero(movies[0] || anime[0] || animeMovies[0] || horror[0] || series[0]);
     renderRows();
     bindNav();
     bindRows();

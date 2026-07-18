@@ -443,6 +443,21 @@ input {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.poster-ep {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.45rem;
+  z-index: 1;
+  padding: 0.2rem 0.45rem;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
 .poster:hover,
 .poster:focus-visible {
   transform: scale(1.12);
