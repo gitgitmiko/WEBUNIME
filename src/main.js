@@ -191,13 +191,20 @@ function renderRows() {
   fillTrack("trackAnime", anime);
   fillTrack("trackAnimeMovie", animeMovies);
   fillTrack("trackHorror", horror);
+  // Tahun berjalan (mengikuti jam perangkat), bukan angka hardcode.
+  const currentYear = new Date().getFullYear();
+  const prevYear = currentYear - 1;
+  const title2026 = document.getElementById("title2026");
+  const title2025 = document.getElementById("title2025");
+  if (title2026) title2026.textContent = `Film ${currentYear}`;
+  if (title2025) title2025.textContent = `Film ${prevYear}`;
   fillTrack(
     "track2026",
-    movies.filter((m) => m.tahun === "2026")
+    movies.filter((m) => Number(m.tahun) === currentYear)
   );
   fillTrack(
     "track2025",
-    movies.filter((m) => m.tahun === "2025")
+    movies.filter((m) => Number(m.tahun) === prevYear)
   );
   fillTrack(
     "trackAction",
