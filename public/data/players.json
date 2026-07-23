@@ -10692,35 +10692,34 @@
     "slug": "return-silent-hill-2026",
     "film": "Return to Silent Hill (2026)",
     "source": "https://tv12.lk21official.cc/return-silent-hill-2026",
-    "catalog": "horror",
-    "scraped_at": "2026-07-18T05:01:35.654Z",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
     "players": [
       {
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/MB09OzcXWjIrPRIiNx0-MS4UZHx1S0FsFRQ1CA9vDgdyS30ocBpGdA",
+        "url": "https://playeriframe.sbs/iframe/p2p/MB09OzcXWjIrPRIiNx0-MS4UZHx1S0FsAD0CHiJJCQAdSn13Jh0TJXs",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/698aaf4c6a4be",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a619c5689c7c",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/37qo4h8x5z65",
+        "url": "https://playeriframe.sbs/iframe/cast/fmnnqjl9w2c3",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/bjZ9R0Cp0s",
+        "url": "https://playeriframe.sbs/iframe/hydrax/bhrRwf5Mz",
         "default": false
       }
     ]
@@ -12928,35 +12927,34 @@
     "slug": "whistle-2025",
     "film": "Whistle (2025)",
     "source": "https://tv12.lk21official.cc/whistle-2025",
-    "catalog": "horror",
-    "scraped_at": "2026-07-18T05:01:59.770Z",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
     "players": [
       {
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/NRAgPTEVEmxwYUV5bmcTGgY0FhYaGE4jdWVDKSU",
+        "url": "https://playeriframe.sbs/iframe/p2p/NRAgPTEVEmxwYUV5bnI6LRAZMBEdJhQkcmhFdHMJ",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/69aa4c42216bc",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a61a1ea2e145",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/5r9wh92avzbu",
+        "url": "https://playeriframe.sbs/iframe/cast/pgbbbmn2c1ta",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/raNh1hMfS",
+        "url": "https://playeriframe.sbs/iframe/hydrax/8EidLQG7K",
         "default": false
       }
     ]
@@ -18067,6 +18065,369 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://playeriframe.sbs/iframe/hydrax/jKlAOUCkX",
+        "default": false
+      }
+    ]
+  },
+  "shelter-2026": {
+    "slug": "shelter-2026",
+    "film": "Shelter (2026)",
+    "source": "https://tv12.lk21official.cc/shelter-2026",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/MRAsIjEcBWxwYUV6bnI6LRAZMBEdJhZ2dWJGL3MF",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a62517dd3141",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/px3f3pxriyhq",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/x8L_y-iod",
+        "default": false
+      }
+    ]
+  },
+  "memory-keeper-2025": {
+    "slug": "memory-keeper-2025",
+    "film": "The Memory Keeper (2025)",
+    "source": "https://tv12.lk21official.cc/memory-keeper-2025",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/Lx0kITcAWionNAcpMR1kaHBNZBkAOzMNHQkofSUCZ2gnGig",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a624bc2d49a8",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/9k4e7gflv0y1",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/Gjx0kMjTr",
+        "default": false
+      }
+    ]
+  },
+  "goon-lagoon-2025": {
+    "slug": "goon-lagoon-2025",
+    "film": "Goon of the Lagoon (2025)",
+    "source": "https://tv12.lk21official.cc/goon-lagoon-2025",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/JRcmIGgVFiYtPhlhcQBkbW8vDAwBNSgZHTcRKHsCMz53",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a624cd8825cf",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/m73xefcwg3li",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/UFajQboo7",
+        "default": false
+      }
+    ]
+  },
+  "mind-chaos-2026": {
+    "slug": "mind-chaos-2026",
+    "film": "A Mind in Chaos (2026)",
+    "source": "https://tv12.lk21official.cc/mind-chaos-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-23T18:17:36.684Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/LxEnKmgaHyAtIlp-cwJgdRU9CwoJJi8eIGdFeHpUbmo",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a623f66c8e80",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/4jxjnvqaoshv",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/XxytZmIZw",
+        "default": false
+      }
+    ]
+  },
+  "colony-2026": {
+    "slug": "colony-2026",
+    "film": "Colony (2026)",
+    "source": "https://tv12.lk21official.cc/colony-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-23T18:17:36.684Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/IRclISsAWnNyY0FhFHUUHA4nERFzTBR1dzBEeA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a623ea6a3067",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/92wn4qd7cb95",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/1yQvIDAR3",
+        "default": false
+      }
+    ]
+  },
+  "girlfriends-2025": {
+    "slug": "girlfriends-2025",
+    "film": "Girlfriends (2025)",
+    "source": "https://tv12.lk21official.cc/girlfriends-2025",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/JRE7IiMLHiQsNQRhcQBkbW8vDAwBNSgZHWUULnVVND4g",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a623819e77ac",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/ktizvxtwbv0o",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/2rqssJmrF",
+        "default": false
+      }
+    ]
+  },
+  "unmarry-2025": {
+    "slug": "unmarry-2025",
+    "film": "Unmarry (2025)",
+    "source": "https://tv12.lk21official.cc/unmarry-2025",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/NxYkLzcLDmxwYUV5bmcTGgY0FhYaQE4lcWQWKCY",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a61b00d6db2f",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/phlhmuw9cobv",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/H6tKVguwf",
+        "default": false
+      }
+    ]
+  },
+  "elize-sombras-de-uma-mulher-2026": {
+    "slug": "elize-sombras-de-uma-mulher-2026",
+    "film": "Elize: Sombras de uma Mulher (2026)",
+    "source": "https://tv12.lk21official.cc/elize-sombras-de-uma-mulher-2026",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/JxQgNCBUBC4vMwUtMB0yPW8NJC9oFAItKjQFYXEAZG5vLwwMATUoGR0wRSlwAW45dA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a61ac2b2afe6",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/8kiepvvtbry3",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/4BN_Zf5pt",
+        "default": false
+      }
+    ]
+  },
+  "roofman-2025": {
+    "slug": "roofman-2025",
+    "film": "Roofman (2025)",
+    "source": "https://tv12.lk21official.cc/roofman-2025",
+    "scraped_at": "2026-07-23T18:17:34.214Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/MBcmKCgYGWxwYUV5bnI6LRAZMBEdJhMkIWdDfCFV",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/698ea3f22acc8",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/au4l5cgkep53",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/8HYk6KZkx",
+        "default": false
+      }
+    ]
+  },
+  "mimics-2025": {
+    "slug": "mimics-2025",
+    "film": "Mimics (2025)",
+    "source": "https://tv12.lk21official.cc/mimics-2025",
+    "catalog": "horror",
+    "scraped_at": "2026-07-23T18:17:36.684Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/LxEkJyYKWnNyY0JhFHUUHA4nEREhHUUkdWgTLw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a61804dbf190",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/kqkv5f1tkr8l",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/-CO3HXkrgG",
         "default": false
       }
     ]

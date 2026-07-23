@@ -8949,5 +8949,116 @@
         "default": false
       }
     ]
+  },
+  "mind-chaos-2026": {
+    "slug": "mind-chaos-2026",
+    "film": "A Mind in Chaos (2026)",
+    "source": "https://tv12.lk21official.cc/mind-chaos-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-23T18:17:36.684Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/LxEnKmgaHyAtIlp-cwJgdRU9CwoJJi8eIGdFeHpUbmo",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a623f66c8e80",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/4jxjnvqaoshv",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/XxytZmIZw",
+        "default": false
+      }
+    ]
+  },
+  "colony-2026": {
+    "slug": "colony-2026",
+    "film": "Colony (2026)",
+    "source": "https://tv12.lk21official.cc/colony-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-23T18:17:36.684Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/IRclISsAWnNyY0FhFHUUHA4nERFzTBR1dzBEeA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a623ea6a3067",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/92wn4qd7cb95",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/1yQvIDAR3",
+        "default": false
+      }
+    ]
+  },
+  "mimics-2025": {
+    "slug": "mimics-2025",
+    "film": "Mimics (2025)",
+    "source": "https://tv12.lk21official.cc/mimics-2025",
+    "catalog": "horror",
+    "scraped_at": "2026-07-23T18:17:36.684Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/LxEkJyYKWnNyY0JhFHUUHA4nEREhHUUkdWgTLw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a61804dbf190",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/kqkv5f1tkr8l",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/-CO3HXkrgG",
+        "default": false
+      }
+    ]
   }
 }
