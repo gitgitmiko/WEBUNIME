@@ -4,7 +4,7 @@
     "film": "Agent Kim Reactivated (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/agent-kim-reactivated-2026",
-    "scraped_at": "2026-07-18T16:57:28.861Z",
+    "scraped_at": "2026-07-24T18:23:54.304Z",
     "episodes": [
       {
         "season": 1,
@@ -282,6 +282,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/Ye0sYds8S",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "slug": "agent-kim-reactivated-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Ix8sIDFUHCgvfAUpIlMiMTQZPSshVAQkIyIYIm4Bez0yETohIRxaeG9jR351HQEdADwFER0mFnV3YkN7IgA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a6381f80c7e6",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/lrnssq5dtb61",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/uZ9bDaxes",
             "default": false
           }
         ]
@@ -9980,7 +10015,7 @@
     "film": "Blossoms of Power (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/blossoms-power-2026",
-    "scraped_at": "2026-07-22T18:13:56.105Z",
+    "scraped_at": "2026-07-24T18:23:54.304Z",
     "episodes": [
       {
         "season": 1,
@@ -10856,6 +10891,76 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "slug": "blossoms-power-season-1-episode-26-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VwTmR8dUtBbBUUNQgPbw4HJxp9fyFOQHQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a628ef79d110",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/b3bppsjv2xbh",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/VirKLFV5V",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "slug": "blossoms-power-season-1-episode-27-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VwT2R8dUtBbBUUNQgPbw4Hch0qfXdIRnM",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a6291296a373",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/4vl6djufownr",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/Xg5wkLfTY",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -11568,7 +11673,7 @@
     "film": "Love for You (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/love-you-2026",
-    "scraped_at": "2026-07-23T18:17:36.063Z",
+    "scraped_at": "2026-07-24T18:23:54.304Z",
     "episodes": [
       {
         "season": 1,
@@ -12581,6 +12686,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/pOF0zk48D",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "slug": "love-you-season-1-episode-30-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gAGDRvIhItMF84dXNVLD4sChglJ3xEfG4CZmp0VR4LBz07HhoOEnx3AmFuJk8",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a634445ef610",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/8ob90n9r5ipp",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/TfzG0kmcv",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "slug": "love-you-season-1-episode-31-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gAGDRvIhItMF84dXNVLD4sChglJ3xEfW4CZmp0VR4LBz07HhoOQ3olVGQ-JEg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a6344da3187e",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/he26crgdutqb",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/K98XVMR4D",
             "default": false
           }
         ]
@@ -286077,7 +286252,7 @@
     "film": "Overdo (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/overdo-2026",
-    "scraped_at": "2026-07-23T18:17:36.063Z",
+    "scraped_at": "2026-07-24T18:23:54.304Z",
     "episodes": [
       {
         "season": 1,
@@ -286530,6 +286705,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/BCOxEUFJH",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "slug": "overdo-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2VafnMCYHUVPQsKCSYvHnNpRHlyUm9t",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a635eb359e66",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/o7wzymjx8ifa",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/3wIJj-xrJX",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "slug": "overdo-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2RafnMCYHUVPQsKCSYvHiFmEX9wADM-",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a635f33e6494",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/opz70xe9plmg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/GbJfOrLcX",
             "default": false
           }
         ]

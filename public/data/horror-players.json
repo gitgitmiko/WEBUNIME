@@ -9060,5 +9060,153 @@
         "default": false
       }
     ]
+  },
+  "secret-kalinga-2026": {
+    "slug": "secret-kalinga-2026",
+    "film": "Secret of Kalinga (2026)",
+    "source": "https://tv12.lk21official.cc/secret-kalinga-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-24T18:23:55.115Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/MR0qPCANWiojPR4iJFF7anJKf2MSPDUFDg4vEyUJYWF2Tnkv",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a637b0adc977",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/844xusjw9pak",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/0Fx2fRpTd",
+        "default": false
+      }
+    ]
+  },
+  "convenience-store-2026": {
+    "slug": "convenience-store-2026",
+    "film": "The Convenience Store (2026)",
+    "source": "https://tv12.lk21official.cc/convenience-store-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-24T18:23:55.115Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/IRcnOCAXHiQsMhJhMEQ5KidVe353T1oWBxMzABxoCWFwHnwvIUAW",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a63552384dc9",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/yjek38rwh59h",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/gKToCP-Rp",
+        "default": false
+      }
+    ]
+  },
+  "grizzly-attack-2026": {
+    "slug": "grizzly-attack-2026",
+    "film": "Grizzly Attack (2026)",
+    "source": "https://tv12.lk21official.cc/grizzly-attack-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-24T18:23:55.115Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/JQogND8VDmwjJQMtIFt7anJKf2MSPDUFDg4vEyUBYW0nSSgs",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a6330543f4c8",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/wekf3y8wqo8k",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/70dkGE3nj",
+        "default": false
+      }
+    ]
+  },
+  "hanged-woman-2026": {
+    "slug": "hanged-woman-2026",
+    "film": "The Hanged Woman (2026)",
+    "source": "https://tv12.lk21official.cc/hanged-woman-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-24T18:23:55.115Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/KhknKSAdWjYtPBYibgJmanRVHgsHPTseGg4WdHYBY25wSg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a6317310bc52",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/cbzc5wum0oqi",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/yYLZ124Ox",
+        "default": false
+      }
+    ]
   }
 }
