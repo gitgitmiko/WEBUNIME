@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-chilling-romance-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -94,6 +94,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Chilling Romance - Season 1 Episode 3 (2026)",
+        "slug": "chilling-romance-season-1-episode-3-2026",
+        "source": "https://tv6.nontondrama.my/chilling-romance-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IRAgIikQGSZvIxghIl41PW8LLC82Fhlsc3wSPCpDOTwnVXpjd0lFd28GMg4HfAkAHUwqenxMTnAg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64ed46efa66",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/yl1pw5dngzs1",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/Pvh_pjng4",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -101,28 +138,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/IRAgIikQGSZvIxghIl41PW8LLC82Fhlsc3wSPCpDOTwnVXtjd0lFd28GMg4HfAkAHU19eSRJEyIm",
+        "url": "https://playeriframe.sbs/iframe/p2p/IRAgIikQGSZvIxghIl41PW8LLC82Fhlsc3wSPCpDOTwnVXpjd0lFd28GMg4HfAkAHUwqenxMTnAg",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a5ce21132017",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a64ed46efa66",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/w0270o2820f3",
+        "url": "https://playeriframe.sbs/iframe/cast/yl1pw5dngzs1",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/fdBq5e4qM",
+        "url": "https://playeriframe.sbs/iframe/hydrax/Pvh_pjng4",
         "default": false
       }
     ],
@@ -135,8 +172,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-overdo-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "15 eps · S.1",
-    "episodes_count": 15,
+    "durasi": "17 eps · S.1",
+    "episodes_count": 17,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -701,6 +738,80 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "Overdo - Season 1 Episode 16 (2026)",
+        "slug": "overdo-season-1-episode-16-2026",
+        "source": "https://tv6.nontondrama.my/overdo-season-1-episode-16-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2dafnMCYHUVPQsKCSYvHnBiQ3R6BWJq",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a649edca97cf",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/ts8s3rah6x7l",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/GYg4RYs4h",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "title": "Overdo - Season 1 Episode 17 (2026)",
+        "slug": "overdo-season-1-episode-17-2026",
+        "source": "https://tv6.nontondrama.my/overdo-season-1-episode-17-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2ZafnMCYHUVPQsKCSYvHndiTy50AG9o",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64a17670b96",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/mefub0rcytoe",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/wnTnCjaca",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -708,28 +819,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2RafnMCYHUVPQsKCSYvHiFmEX9wADM-",
+        "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2ZafnMCYHUVPQsKCSYvHndiTy50AG9o",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a635f33e6494",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a64a17670b96",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/opz70xe9plmg",
+        "url": "https://playeriframe.sbs/iframe/cast/mefub0rcytoe",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/GbJfOrLcX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/wnTnCjaca",
         "default": false
       }
     ],
@@ -743,8 +854,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/06/film-agent-kim-reactivated-2026-lk21.jpg",
     "rating": "8.5",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -1088,6 +1199,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Agent Kim Reactivated - Season 1 Episode 10 (2026)",
+        "slug": "agent-kim-reactivated-season-1-episode-10-2026",
+        "source": "https://tv6.nontondrama.my/agent-kim-reactivated-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Ix8sIDFUHCgvfAUpIlMiMTQZPSshVAQkIyIYIm4Bez0yETohIRxacHJ8RXxxBnsPBzoNAhohKHEnZkB5JwNl",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64d1a7ac35f",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/k8jyj9tqhepk",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/Ob8Wgz7F0",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1095,28 +1243,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/Ix8sIDFUHCgvfAUpIlMiMTQZPSshVAQkIyIYIm4Bez0yETohIRxaeG9jR351HQEdADwFER0mFnV3YkN7IgA",
+        "url": "https://playeriframe.sbs/iframe/p2p/Ix8sIDFUHCgvfAUpIlMiMTQZPSshVAQkIyIYIm4Bez0yETohIRxacHJ8RXxxBnsPBzoNAhohKHEnZkB5JwNl",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a6381f80c7e6",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a64d1a7ac35f",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/lrnssq5dtb61",
+        "url": "https://playeriframe.sbs/iframe/cast/k8jyj9tqhepk",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/uZ9bDaxes",
+        "url": "https://playeriframe.sbs/iframe/hydrax/Ob8Wgz7F0",
         "default": false
       }
     ]
@@ -11826,8 +11974,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-blossoms-power-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "27 eps · S.1",
-    "episodes_count": 27,
+    "durasi": "31 eps · S.1",
+    "episodes_count": 31,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -12836,6 +12984,154 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "title": "Blossoms of Power - Season 1 Episode 28 (2026)",
+        "slug": "blossoms-power-season-1-episode-28-2026",
+        "source": "https://tv6.nontondrama.my/blossoms-power-season-1-episode-28-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VwQGR8dUtBbBUUNQgPbw4HJEAsLXQdFCM",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a63ad013d911",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/h316xocrjgfx",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/XOv_nunWX",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 29,
+        "title": "Blossoms of Power - Season 1 Episode 29 (2026)",
+        "slug": "blossoms-power-season-1-episode-29-2026",
+        "source": "https://tv6.nontondrama.my/blossoms-power-season-1-episode-29-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VwQWR8dUtBbBUUNQgPbw4Heh58e3xNQ3g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a63af572b67d",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/wohjm2wax9g6",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/-g0YSBgiJy",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "title": "Blossoms of Power - Season 1 Episode 30 (2026)",
+        "slug": "blossoms-power-season-1-episode-30-2026",
+        "source": "https://tv6.nontondrama.my/blossoms-power-season-1-episode-30-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VxSGR8dUtBbBUUNQgPbw4HIUp6eSRBE3Y",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64e6cd58501",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/el2bc8l7p3eb",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/WXzAD0lPb",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "title": "Blossoms of Power - Season 1 Episode 31 (2026)",
+        "slug": "blossoms-power-season-1-episode-31-2026",
+        "source": "https://tv6.nontondrama.my/blossoms-power-season-1-episode-31-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VxSWR8dUtBbBUUNQgPbw4Hc08veCNNRXM",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64e92b3dca5",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/fng0g4xvbqsp",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/G8JPkR9rn",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -12843,28 +13139,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VwT2R8dUtBbBUUNQgPbw4Hch0qfXdIRnM",
+        "url": "https://playeriframe.sbs/iframe/p2p/IBQmPTYWGjJvIRg7JkJ7KycZOiErVEZsJyEePyxUM3VxSWR8dUtBbBUUNQgPbw4Hc08veCNNRXM",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a6291296a373",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a64e92b3dca5",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/4vl6djufownr",
+        "url": "https://playeriframe.sbs/iframe/cast/fng0g4xvbqsp",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/Xg5wkLfTY",
+        "url": "https://playeriframe.sbs/iframe/hydrax/G8JPkR9rn",
         "default": false
       }
     ]
@@ -13708,8 +14004,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-love-you-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "31 eps · S.1",
-    "episodes_count": 31,
+    "durasi": "32 eps · S.1",
+    "episodes_count": 32,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -14865,6 +15161,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 32,
+        "title": "Love for You - Season 1 Episode 32 (2026)",
+        "slug": "love-you-season-1-episode-32-2026",
+        "source": "https://tv6.nontondrama.my/love-you-season-1-episode-32-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gAGDRvIhItMF84dXNVLD4sChglJ3xEfm4CZmp0VR4LBz07HhoOEy9yVGNtch4",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a646c940b008",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/q0wxw2hq12nh",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/H4k_ggkcD",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -14872,28 +15205,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gAGDRvIhItMF84dXNVLD4sChglJ3xEfW4CZmp0VR4LBz07HhoOQ3olVGQ-JEg",
+        "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gAGDRvIhItMF84dXNVLD4sChglJ3xEfm4CZmp0VR4LBz07HhoOEy9yVGNtch4",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a6344da3187e",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a646c940b008",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/he26crgdutqb",
+        "url": "https://playeriframe.sbs/iframe/cast/q0wxw2hq12nh",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/K98XVMR4D",
+        "url": "https://playeriframe.sbs/iframe/hydrax/H4k_ggkcD",
         "default": false
       }
     ]
@@ -29220,8 +29553,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-apartment-job-2026-lk21.jpg",
     "rating": "10.0",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -29381,6 +29714,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "The Apartment Job - Season 1 Episode 5 (2026)",
+        "slug": "apartment-job-season-1-episode-5-2026",
+        "source": "https://tv6.nontondrama.my/apartment-job-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IwgoPDEUEi82fB0jIR0lPSMLJiBoSFokMjgEIydVe21vSnl8c1QgBAAVOxMbbzc7e098fXFI",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64d9c7aeee0",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/degb83y7n8ib",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/-lP6md9dG",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -29388,28 +29758,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/IwgoPDEUEi82fB0jIR0lPSMLJiBoSFokMjgEIydVe2xvSnl8c1QgBAAVOxMbbzRtdElwLyMb",
+        "url": "https://playeriframe.sbs/iframe/p2p/IwgoPDEUEi82fB0jIR0lPSMLJiBoSFokMjgEIydVe21vSnl8c1QgBAAVOxMbbzc7e098fXFI",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a5cf940edf65",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a64d9c7aeee0",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/y02pxkut7d04",
+        "url": "https://playeriframe.sbs/iframe/cast/degb83y7n8ib",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/JENVgX_Pv",
+        "url": "https://playeriframe.sbs/iframe/hydrax/-lP6md9dG",
         "default": false
       }
     ]
@@ -72160,8 +72530,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-love-sync-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -72395,6 +72765,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Love in Sync - Season 1 Episode 7 (2026)",
+        "slug": "love-sync-season-1-episode-7-2026",
+        "source": "https://tv6.nontondrama.my/love-sync-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gKDi8hfAQpIkM5Nm9JZCs1EAQuJjRae24CZmp0VR4LBz07HhoOQXsnA2Y6IBk",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a64dd070dcf1",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/1cpp1i5d9yo2",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/nYqDfwOp3",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -72402,28 +72809,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gKDi8hfAQpIkM5Nm9JZCs1EAQuJjRaem4CZmp0VR4LBz07HhoOTnh7UmZhIEg",
+        "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gKDi8hfAQpIkM5Nm9JZCs1EAQuJjRae24CZmp0VR4LBz07HhoOQXsnA2Y6IBk",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://playeriframe.sbs/iframe/turbovip/6a5cf5a509fbf",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a64dd070dcf1",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://playeriframe.sbs/iframe/cast/k6an8h40v7wk",
+        "url": "https://playeriframe.sbs/iframe/cast/1cpp1i5d9yo2",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://playeriframe.sbs/iframe/hydrax/guphUz_Jm",
+        "url": "https://playeriframe.sbs/iframe/hydrax/nYqDfwOp3",
         "default": false
       }
     ]
