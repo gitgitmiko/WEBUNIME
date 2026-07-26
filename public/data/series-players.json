@@ -26108,7 +26108,7 @@
     "film": "The Apartment Job (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/apartment-job-2026",
-    "scraped_at": "2026-07-25T18:02:13.204Z",
+    "scraped_at": "2026-07-26T18:05:59.056Z",
     "episodes": [
       {
         "season": 1,
@@ -26281,6 +26281,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/-lP6md9dG",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "apartment-job-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IwgoPDEUEi82fB0jIR0lPSMLJiBoSFokMjgEIydVe25vSnl8c1QgBAAVOxMbb2NqIxp_fiNL",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a662b4a29128",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/f7ie3dy055vp",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/qD74uIHUV",
             "default": false
           }
         ]
@@ -65332,7 +65367,7 @@
     "film": "Love in Sync (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/love-sync-2026",
-    "scraped_at": "2026-07-25T18:02:13.204Z",
+    "scraped_at": "2026-07-26T18:05:59.056Z",
     "episodes": [
       {
         "season": 1,
@@ -65575,6 +65610,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/nYqDfwOp3",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "love-sync-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/Lhc_K2gKDi8hfAQpIkM5Nm9JZCs1EAQuJjRadG4CZmp0VR4LBz07HhoORntzCGFuJ0w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a662a1879283",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/vow5aipp8x2d",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/UZcv8c9fk",
             "default": false
           }
         ]
@@ -286532,7 +286602,7 @@
     "film": "Overdo (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/overdo-2026",
-    "scraped_at": "2026-07-25T18:02:13.204Z",
+    "scraped_at": "2026-07-26T18:05:59.056Z",
     "episodes": [
       {
         "season": 1,
@@ -287128,6 +287198,41 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 18,
+        "slug": "overdo-season-1-episode-18-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJsc2lafnMCYHUVPQsKCSYvHnBlR3t7BGU6",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a66422d7017b",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/fer5lg3l3mpj",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/Xx4PD4ywx",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -287136,7 +287241,7 @@
     "film": "Chilling Romance (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/chilling-romance-2026",
-    "scraped_at": "2026-07-25T18:02:13.204Z",
+    "scraped_at": "2026-07-26T18:05:59.056Z",
     "episodes": [
       {
         "season": 1,
@@ -287239,6 +287344,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/Pvh_pjng4",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "chilling-romance-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://playeriframe.sbs/iframe/p2p/IRAgIikQGSZvIxghIl41PW8LLC82Fhlsc3wSPCpDOTwnVX1jd0lFd28GMg4HfAkAHU8sL3BIQSV0",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://playeriframe.sbs/iframe/turbovip/6a66184d8afc9",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://playeriframe.sbs/iframe/cast/6qurh7jntzul",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://playeriframe.sbs/iframe/hydrax/vfpdDrtJL",
             "default": false
           }
         ]
