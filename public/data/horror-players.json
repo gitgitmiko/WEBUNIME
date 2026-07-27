@@ -9208,5 +9208,79 @@
         "default": false
       }
     ]
+  },
+  "gator-face-2026": {
+    "slug": "gator-face-2026",
+    "film": "Gator Face (2026)",
+    "source": "https://tv12.lk21official.cc/gator-face-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-27T18:27:29.825Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/JRk9ITdUESAhNFp-cwJgdRU9CwoJJi8edzJOKHUHZGw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a6778c5dcab5",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/ffcjhu4k8gyu",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/3PI9soETT",
+        "default": false
+      }
+    ]
+  },
+  "goblin-ii-2026": {
+    "slug": "goblin-ii-2026",
+    "film": "Goblin II (2026)",
+    "source": "https://tv12.lk21official.cc/goblin-ii-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-07-27T18:27:29.825Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://playeriframe.sbs/iframe/p2p/JRcrIiwXWigrfEV8cQZ7Dwc6DQIaISgndmRAdHcFMg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://playeriframe.sbs/iframe/turbovip/6a673a1f0d413",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://playeriframe.sbs/iframe/cast/xl4h9k4ym48j",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://playeriframe.sbs/iframe/hydrax/luYvP_-zJ",
+        "default": false
+      }
+    ]
   }
 }
