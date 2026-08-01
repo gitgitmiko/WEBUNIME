@@ -408,7 +408,7 @@ async function scrapeDetails(listings, opts) {
         tahun: tahun || item.tahun || "",
         thumbnail: detail.thumbnail || item.thumbnail,
         rating: item.rating || null,
-        quality: extractLk21Quality(html, item.quality) || null,
+        quality: item.quality || null,
         durasi: detail.durasi || item.durasi || "",
         genre: ensureGenre(item.genre, files.label),
         sinopsis: detail.sinopsis,

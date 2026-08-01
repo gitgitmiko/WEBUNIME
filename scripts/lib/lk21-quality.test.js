@@ -5,7 +5,7 @@ import {
   shouldRefreshLk21Quality,
 } from "./lk21-quality.js";
 
-test("mengambil badge kualitas dari listing", () => {
+test("mengambil badge kualitas dari kartu listing", () => {
   assert.equal(
     extractLk21Quality('<span class="label label-CAM">CAM</span>'),
     "CAM"
@@ -16,14 +16,19 @@ test("mengambil badge kualitas dari listing", () => {
   );
 });
 
-test("memprioritaskan sumber detail di atas badge umum", () => {
-  const html =
-    '<span class="label label-HD">HD</span><a href="/quality/bluray">BLURAY</a>';
-  assert.equal(extractLk21Quality(html), "BluRay");
+test("mengabaikan link menu /quality/ milik navigasi situs", () => {
+  const navOnly = '<li><a href="/quality/bluray">BLURAY</a></li>';
+  assert.equal(extractLk21Quality(navOnly), "");
+
+  const card =
+    '<li><a href="/quality/bluray">BLURAY</a></li>' +
+    '<span class="label label-CAM">CAM</span>';
+  assert.equal(extractLk21Quality(card), "CAM");
 });
 
-test("tidak menurunkan BluRay menjadi badge HD", () => {
-  assert.equal(shouldRefreshLk21Quality("BluRay", "HD"), false);
+test("memperbarui kualitas saat badge listing berubah", () => {
   assert.equal(shouldRefreshLk21Quality("CAM", "HD"), true);
   assert.equal(shouldRefreshLk21Quality("", "HD"), true);
+  assert.equal(shouldRefreshLk21Quality("HD", "HD"), false);
+  assert.equal(shouldRefreshLk21Quality("HD", ""), false);
 });

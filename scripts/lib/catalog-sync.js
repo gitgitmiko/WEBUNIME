@@ -19,7 +19,7 @@ const USER_AGENT =
 
 const THROTTLE_MS = 5 * 60 * 1000;
 const DETAIL_DELAY_MS = 200;
-const QUALITY_BACKFILL_PER_RUN = 25;
+const QUALITY_BACKFILL_PAGES = 5;
 
 let syncInFlight = null;
 let lastSyncAt = 0;
@@ -389,7 +389,7 @@ async function scrapeMovieDetail(item, { genreLabel = null, catalog = null } = {
     tahun: tahun || item.tahun || "",
     thumbnail: detail.thumbnail || item.thumbnail,
     rating: item.rating || null,
-    quality: extractLk21Quality(html, item.quality) || null,
+    quality: item.quality || null,
     durasi: detail.durasi || item.durasi || "",
     genre: ensureGenre(item.genre, genreLabel),
     sinopsis: detail.sinopsis,
@@ -400,49 +400,48 @@ async function scrapeMovieDetail(item, { genreLabel = null, catalog = null } = {
   };
 }
 
-async function refreshMovieQualities(listings, bySlug, label) {
-  const updated = [];
-  const candidates = listings.filter((item) => {
-    const current = bySlug.get(item.slug);
-    return current && shouldRefreshLk21Quality(current.quality, item.quality);
-  });
-  const queuedSlugs = new Set(candidates.map((item) => item.slug));
-  const backfill = [...bySlug.values()]
-    .filter(
-      (item) =>
-        !item.quality &&
-        !queuedSlugs.has(item.slug) &&
-        (item.source || item.slug)
-    )
-    .slice(0, QUALITY_BACKFILL_PER_RUN)
-    .map((item) => ({
-      slug: item.slug,
-      source: item.source || `${LIST_BASE}/${item.slug}`,
-      quality: "",
-    }));
-  candidates.push(...backfill);
-
-  for (let i = 0; i < candidates.length; i++) {
-    const item = candidates[i];
+function applyListedQualities(listings, bySlug, label, updated) {
+  for (const item of listings) {
     const current = bySlug.get(item.slug);
     if (!current) continue;
-
-    let quality = item.quality || "";
-    try {
-      const { html } = await fetchHtml(item.source);
-      quality = extractLk21Quality(html, quality);
-    } catch (err) {
-      console.warn(`[lk21-sync] ${label} quality ${item.slug}:`, err.message);
-    }
-
-    if (quality && quality !== current.quality) {
-      current.quality = quality;
-      updated.push(item.slug);
-      console.log(`[lk21-sync] ~${label} ${item.slug} quality=${quality}`);
-    }
-    if (i < candidates.length - 1) await sleep(DETAIL_DELAY_MS);
+    if (!shouldRefreshLk21Quality(current.quality, item.quality)) continue;
+    current.quality = item.quality;
+    updated.push(item.slug);
+    console.log(`[lk21-sync] ~${label} ${item.slug} quality=${item.quality}`);
   }
-  return updated;
+}
+
+/**
+ * Judul lama tidak lagi ada di halaman 1, jadi kualitasnya dilengkapi dengan
+ * menelusuri halaman listing berikutnya beberapa per sinkronisasi.
+ */
+async function backfillQualities(pageUrlFor, bySlug, label, updated) {
+  const pending = new Set(
+    [...bySlug.values()].filter((item) => !item.quality).map((item) => item.slug)
+  );
+  if (!pending.size) return;
+
+  for (let page = 2; page <= QUALITY_BACKFILL_PAGES + 1; page++) {
+    if (!pending.size) break;
+    try {
+      const { html } = await fetchHtml(pageUrlFor(page));
+      for (const item of extractListings(html)) {
+        if (!pending.has(item.slug)) continue;
+        const current = bySlug.get(item.slug);
+        if (!current || !item.quality) continue;
+        current.quality = item.quality;
+        pending.delete(item.slug);
+        updated.push(item.slug);
+        console.log(
+          `[lk21-sync] ~${label} ${item.slug} quality=${item.quality} (hlm ${page})`
+        );
+      }
+    } catch (err) {
+      console.warn(`[lk21-sync] ${label} quality hlm ${page}:`, err.message);
+      break;
+    }
+    await sleep(DETAIL_DELAY_MS);
+  }
 }
 
 async function scrapeEpisodePlayers(episodes, { delay = DETAIL_DELAY_MS } = {}) {
@@ -520,7 +519,14 @@ async function syncMoviesCatalog(dataDir) {
   const { html } = await fetchHtml(`${LIST_BASE}/latest`);
   const listings = extractListings(html);
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
-  const qualityUpdated = await refreshMovieQualities(listings, bySlug, "film");
+  const qualityUpdated = [];
+  applyListedQualities(listings, bySlug, "film", qualityUpdated);
+  await backfillQualities(
+    (page) => `${LIST_BASE}/latest/page/${page}`,
+    bySlug,
+    "film",
+    qualityUpdated
+  );
   console.log(
     `${listings.length} kartu, ${newcomers.length} baru` +
       (newcomers.length ? ` → scrape detail` : " (sudah up-to-date)")
@@ -579,7 +585,14 @@ async function syncHorrorCatalog(dataDir) {
   const { html } = await fetchHtml(`${LIST_BASE}/genre/horror`);
   const listings = extractListings(html);
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
-  const qualityUpdated = await refreshMovieQualities(listings, bySlug, "horror");
+  const qualityUpdated = [];
+  applyListedQualities(listings, bySlug, "horror", qualityUpdated);
+  await backfillQualities(
+    (page) => `${LIST_BASE}/genre/horror/page/${page}`,
+    bySlug,
+    "horror",
+    qualityUpdated
+  );
   console.log(
     `${listings.length} kartu, ${newcomers.length} baru` +
       (newcomers.length ? ` → scrape detail` : " (sudah up-to-date)")

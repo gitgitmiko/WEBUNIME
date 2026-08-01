@@ -1,20 +1,20 @@
 const QUALITY_NAMES = new Map([
+  ["hd", "HD"],
+  ["hdtv", "HDTV"],
+  ["fullhd", "FHD"],
+  ["full-hd", "FHD"],
+  ["fhd", "FHD"],
+  ["cam", "CAM"],
+  ["hdcam", "HDCAM"],
+  ["ts", "TS"],
+  ["telesync", "TS"],
+  ["sd", "SD"],
   ["bluray", "BluRay"],
   ["blu-ray", "BluRay"],
   ["webdl", "WEB-DL"],
   ["web-dl", "WEB-DL"],
   ["webrip", "WEBRip"],
   ["web-rip", "WEBRip"],
-  ["fullhd", "FHD"],
-  ["full-hd", "FHD"],
-  ["fhd", "FHD"],
-  ["hd", "HD"],
-  ["hdtv", "HDTV"],
-  ["cam", "CAM"],
-  ["hdcam", "HDCAM"],
-  ["ts", "TS"],
-  ["telesync", "TS"],
-  ["sd", "SD"],
   ["dvd", "DVD"],
   ["dvdrip", "DVDRip"],
 ]);
@@ -29,41 +29,28 @@ function normalizeQuality(raw) {
 }
 
 /**
- * Halaman detail memiliki link /quality/bluray yang lebih spesifik daripada
- * badge listing (biasanya hanya HD), jadi link selalu diprioritaskan.
+ * Kualitas hanya ada sebagai badge di kartu listing. Halaman detail tidak
+ * memuatnya: link /quality/... di sana adalah menu navigasi global dan badge
+ * lain milik kartu film terkait, sehingga keduanya bukan sumber yang sahih.
+ *
+ * @param {string} block satu blok <article> dari halaman listing
  */
-export function extractLk21Quality(html, fallback = "") {
-  const source = String(html || "");
-  const detailQuality = source.match(
-    /href=["'][^"']*\/quality\/([^"'/?#]+)[^"']*["']/i
-  )?.[1];
-  if (detailQuality) return normalizeQuality(detailQuality);
-
+export function extractLk21Quality(block) {
+  const source = String(block || "");
   const badgeClass = source.match(
-    /class=["'][^"']*\blabel-([a-z0-9_-]+)\b[^"']*["']/i
+    /class=["'][^"']*\blabel-([a-z0-9-]+)\b[^"']*["']/i
   )?.[1];
   if (badgeClass) return normalizeQuality(badgeClass);
 
   const badgeText = source.match(
-    /class=["'][^"']*\blabel\b[^"']*["'][^>]*>\s*([^<]+)\s*</i
+    /class=["'][^"']*\blabel\b[^"']*["'][^>]*>\s*([^<]+?)\s*</i
   )?.[1];
-  return normalizeQuality(badgeText) || normalizeQuality(fallback);
+  return normalizeQuality(badgeText);
 }
 
-/**
- * Badge HD tidak boleh menurunkan sumber yang lebih spesifik seperti BluRay.
- */
+/** Badge listing selalu mencerminkan kualitas rilis terbaru di LK21. */
 export function shouldRefreshLk21Quality(current, listed) {
-  const oldValue = normalizeQuality(current);
   const newValue = normalizeQuality(listed);
   if (!newValue) return false;
-  if (!oldValue) return true;
-  if (oldValue === newValue) return false;
-  if (
-    newValue === "HD" &&
-    ["BluRay", "WEB-DL", "WEBRip", "FHD", "HDTV"].includes(oldValue)
-  ) {
-    return false;
-  }
-  return true;
+  return normalizeQuality(current) !== newValue;
 }
