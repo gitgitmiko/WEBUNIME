@@ -9319,5 +9319,42 @@
         "default": false
       }
     ]
+  },
+  "rao-bahadur-2026": {
+    "slug": "rao-bahadur-2026",
+    "film": "Rao Bahadur (2026)",
+    "source": "https://tv12.lk21official.cc/rao-bahadur-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-01T09:46:38.015Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/MBkmYycYHyAmJAVhcQBkbm8vDAwBNSgZHWVAdSJTZjkn",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a6cecbacbb1c",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/wotv3314lc6f",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/qQhpyNrU_",
+        "default": false
+      }
+    ]
   }
 }

@@ -16,6 +16,7 @@
 import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
+import { extractLk21Quality } from "./lib/lk21-quality.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -205,6 +206,7 @@ function extractListings(html) {
       title: cleanTitle(title),
       tahun: year,
       rating: rating || null,
+      quality: extractLk21Quality(block) || null,
       durasi,
       genre: genreRaw
         .split(",")
@@ -366,6 +368,7 @@ async function scrapeDetails(listings, { delay }) {
         tahun: tahun || item.tahun || "",
         thumbnail: detail.thumbnail || item.thumbnail,
         rating: item.rating || null,
+        quality: extractLk21Quality(html, item.quality) || null,
         durasi: detail.durasi || item.durasi || "",
         genre: item.genre?.length ? item.genre : [],
         sinopsis: detail.sinopsis,
@@ -396,6 +399,7 @@ async function scrapeDetails(listings, { delay }) {
         tahun: tahun || item.tahun || "",
         thumbnail: item.thumbnail,
         rating: item.rating,
+        quality: item.quality || null,
         durasi: item.durasi,
         genre: item.genre,
         sinopsis: `Film ${item.title}.`,

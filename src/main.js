@@ -106,13 +106,14 @@ function isSeries(item) {
 
 function metaLine(movie) {
   const genres = (movie.genre || []).join(" · ");
+  const quality = movie.quality ? ` · ${movie.quality}` : "";
   if (isSeries(movie)) {
     const eps = movie.episodes_count || movie.episodes?.length || "";
-    return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun} · ${
+    return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun}${quality} · ${
       movie.durasi || (eps ? `${eps} eps` : "")
     } · ${genres}`.replace(/\s·\s*$/, "");
   }
-  return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun} · ${movie.durasi ?? ""} · ${genres}`;
+  return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun}${quality} · ${movie.durasi ?? ""} · ${genres}`;
 }
 
 function hasGenre(movie, names) {

@@ -7,6 +7,10 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
+import {
+  extractLk21Quality,
+  shouldRefreshLk21Quality,
+} from "./lk21-quality.js";
 
 const LIST_BASE = "https://tv12.lk21official.cc";
 const DRAMA_BASE = "https://tv5.nontondrama.my";
@@ -15,6 +19,7 @@ const USER_AGENT =
 
 const THROTTLE_MS = 5 * 60 * 1000;
 const DETAIL_DELAY_MS = 200;
+const QUALITY_BACKFILL_PER_RUN = 25;
 
 let syncInFlight = null;
 let lastSyncAt = 0;
@@ -191,6 +196,7 @@ function extractListings(html, { seriesMode = false } = {}) {
       title: cleanTitle(title),
       tahun: year,
       rating: rating || null,
+      quality: extractLk21Quality(block) || null,
       durasi: seriesMode
         ? [eps ? `${eps} eps` : "", seasonLabel].filter(Boolean).join(" · ")
         : formatDuration(durationText) || formatDuration(durationIso),
@@ -383,6 +389,7 @@ async function scrapeMovieDetail(item, { genreLabel = null, catalog = null } = {
     tahun: tahun || item.tahun || "",
     thumbnail: detail.thumbnail || item.thumbnail,
     rating: item.rating || null,
+    quality: extractLk21Quality(html, item.quality) || null,
     durasi: detail.durasi || item.durasi || "",
     genre: ensureGenre(item.genre, genreLabel),
     sinopsis: detail.sinopsis,
@@ -391,6 +398,51 @@ async function scrapeMovieDetail(item, { genreLabel = null, catalog = null } = {
     ...(catalog ? { catalog } : {}),
     players,
   };
+}
+
+async function refreshMovieQualities(listings, bySlug, label) {
+  const updated = [];
+  const candidates = listings.filter((item) => {
+    const current = bySlug.get(item.slug);
+    return current && shouldRefreshLk21Quality(current.quality, item.quality);
+  });
+  const queuedSlugs = new Set(candidates.map((item) => item.slug));
+  const backfill = [...bySlug.values()]
+    .filter(
+      (item) =>
+        !item.quality &&
+        !queuedSlugs.has(item.slug) &&
+        (item.source || item.slug)
+    )
+    .slice(0, QUALITY_BACKFILL_PER_RUN)
+    .map((item) => ({
+      slug: item.slug,
+      source: item.source || `${LIST_BASE}/${item.slug}`,
+      quality: "",
+    }));
+  candidates.push(...backfill);
+
+  for (let i = 0; i < candidates.length; i++) {
+    const item = candidates[i];
+    const current = bySlug.get(item.slug);
+    if (!current) continue;
+
+    let quality = item.quality || "";
+    try {
+      const { html } = await fetchHtml(item.source);
+      quality = extractLk21Quality(html, quality);
+    } catch (err) {
+      console.warn(`[lk21-sync] ${label} quality ${item.slug}:`, err.message);
+    }
+
+    if (quality && quality !== current.quality) {
+      current.quality = quality;
+      updated.push(item.slug);
+      console.log(`[lk21-sync] ~${label} ${item.slug} quality=${quality}`);
+    }
+    if (i < candidates.length - 1) await sleep(DETAIL_DELAY_MS);
+  }
+  return updated;
 }
 
 async function scrapeEpisodePlayers(episodes, { delay = DETAIL_DELAY_MS } = {}) {
@@ -468,6 +520,7 @@ async function syncMoviesCatalog(dataDir) {
   const { html } = await fetchHtml(`${LIST_BASE}/latest`);
   const listings = extractListings(html);
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
+  const qualityUpdated = await refreshMovieQualities(listings, bySlug, "film");
   console.log(
     `${listings.length} kartu, ${newcomers.length} baru` +
       (newcomers.length ? ` → scrape detail` : " (sudah up-to-date)")
@@ -489,9 +542,11 @@ async function syncMoviesCatalog(dataDir) {
     if (i < newcomers.length - 1) await sleep(DETAIL_DELAY_MS);
   }
 
-  if (added.length) {
+  if (added.length || qualityUpdated.length) {
     const merged = [...added, ...existing];
     await writeFile(file, JSON.stringify(merged, null, 2) + "\n", "utf8");
+  }
+  if (added.length) {
     const playersMap = await readJsonObject(playersFile);
     for (const movie of added) {
       playersMap[movie.slug] = {
@@ -505,7 +560,13 @@ async function syncMoviesCatalog(dataDir) {
     await writeFile(playersFile, JSON.stringify(playersMap, null, 2) + "\n", "utf8");
   }
 
-  return { checked: listings.length, added: added.length, updated: 0, slugs: added.map((m) => m.slug) };
+  return {
+    checked: listings.length,
+    added: added.length,
+    updated: qualityUpdated.length,
+    slugs: added.map((m) => m.slug),
+    updatedSlugs: qualityUpdated,
+  };
 }
 
 async function syncHorrorCatalog(dataDir) {
@@ -518,6 +579,7 @@ async function syncHorrorCatalog(dataDir) {
   const { html } = await fetchHtml(`${LIST_BASE}/genre/horror`);
   const listings = extractListings(html);
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
+  const qualityUpdated = await refreshMovieQualities(listings, bySlug, "horror");
   console.log(
     `${listings.length} kartu, ${newcomers.length} baru` +
       (newcomers.length ? ` → scrape detail` : " (sudah up-to-date)")
@@ -538,9 +600,11 @@ async function syncHorrorCatalog(dataDir) {
     if (i < newcomers.length - 1) await sleep(DETAIL_DELAY_MS);
   }
 
-  if (added.length) {
+  if (added.length || qualityUpdated.length) {
     const merged = [...added, ...existing];
     await writeFile(file, JSON.stringify(merged, null, 2) + "\n", "utf8");
+  }
+  if (added.length) {
     const horrorPlayers = await readJsonObject(playersFile);
     const globalPlayers = await readJsonObject(globalPlayersFile);
     for (const movie of added) {
@@ -559,7 +623,13 @@ async function syncHorrorCatalog(dataDir) {
     await writeFile(globalPlayersFile, JSON.stringify(globalPlayers, null, 2) + "\n", "utf8");
   }
 
-  return { checked: listings.length, added: added.length, updated: 0, slugs: added.map((m) => m.slug) };
+  return {
+    checked: listings.length,
+    added: added.length,
+    updated: qualityUpdated.length,
+    slugs: added.map((m) => m.slug),
+    updatedSlugs: qualityUpdated,
+  };
 }
 
 async function syncSeriesCatalog(dataDir) {
