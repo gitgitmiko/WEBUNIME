@@ -9356,5 +9356,42 @@
         "default": false
       }
     ]
+  },
+  "rose-nevada-2026": {
+    "slug": "rose-nevada-2026",
+    "film": "Rose of Nevada (2026)",
+    "source": "https://tv12.lk21official.cc/rose-nevada-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-01T18:04:04.586Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/MBc6K2gXEjcjNRZhcQBkbm8vDAwBNSgZHWJEeCcHYm50",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a6d88dfb2717",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/09shrhnb8klg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/ms8lOA_2U",
+        "default": false
+      }
+    ]
   }
 }
