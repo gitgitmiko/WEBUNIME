@@ -162,7 +162,11 @@ export async function enrichLandscapeCatalog(rootDir, options = {}) {
     const pending = [];
     for (const item of list) {
       if (slugFilter && item.slug !== slugFilter) continue;
-      if (!force && hasValidLandscape(item)) {
+      const existing = hasValidLandscape(item);
+      const isTmdb = existing && /image\.tmdb\.org/i.test(item.thumbnail_landscape);
+      // Upgrade gambar situs → TMDB bila key ada (kecuali sudah backdrop TMDB)
+      const upgrade = Boolean(apiKey) && existing && !isTmdb;
+      if (!force && existing && !upgrade) {
         skippedFile += 1;
         continue;
       }
@@ -198,7 +202,11 @@ export async function enrichLandscapeCatalog(rootDir, options = {}) {
             url = null;
           }
         }
-        if (url) {
+        // Jangan turun kualitas: kalau upgrade gagal, pertahankan yang lama
+        if (!url && hasValidLandscape(item)) {
+          skippedFile += 1;
+          if (!quiet) console.log("keep existing");
+        } else if (url) {
           item.thumbnail_landscape = url;
           filledFile += 1;
           summary.filled += 1;
