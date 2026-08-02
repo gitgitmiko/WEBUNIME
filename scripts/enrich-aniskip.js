@@ -3,15 +3,16 @@
  * (MAL id di-resolve lewat AniList GraphQL).
  *
  * Hasil disimpan di tiap episode:
- *   "skip": { "op": { "start": 3.2, "end": 93.2 }, "ed": { "start": 1417, "end": 1507 } }
- * dan di root anime: "mal_id": 52991
+ *   "skip": { "op": {...}, "ed": {...}, "source": "aniskip" }
+ * atau setelah dicek tapi AniSkip kosong (supaya tidak di-retry tiap sync):
+ *   "skip": { "source": "none" }
  *
  * Cara pakai:
  *   node scripts/enrich-aniskip.js
- *   node scripts/enrich-aniskip.js --limit 5
+ *   node scripts/enrich-aniskip.js --limit 15
  *   node scripts/enrich-aniskip.js --slug solo-leveling-season-2-arise-from-the-shadow
  *   node scripts/enrich-aniskip.js --force   # tulis ulang yang sudah ada
- *   node scripts/enrich-aniskip.js --max-eps 24
+ *   node scripts/enrich-aniskip.js --max-eps 6
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -35,6 +36,7 @@ function parseArgs(argv) {
     maxEps: 0,
     delayMal: 750,
     delaySkip: 250,
+    pendingOnly: true,
   };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -45,6 +47,7 @@ function parseArgs(argv) {
     else if (a === "--delay-mal" && argv[i + 1]) out.delayMal = Math.max(200, Number(argv[++i]) || 750);
     else if (a === "--delay-skip" && argv[i + 1])
       out.delaySkip = Math.max(50, Number(argv[++i]) || 250);
+    else if (a === "--all") out.pendingOnly = false;
   }
   return out;
 }
@@ -101,6 +104,11 @@ async function resolveMalId(title) {
     },
     body: JSON.stringify(body),
   });
+  if (res.status === 429 || res.status === 403) {
+    // Rate limit AniList — jangan gagalkan seluruh run; coba lagi di sync berikutnya.
+    await sleep(2000);
+    throw new Error(`AniList HTTP ${res.status} (rate-limit, skip dulu)`);
+  }
   if (!res.ok) throw new Error(`AniList HTTP ${res.status}`);
   const json = await res.json();
   const media = json?.data?.Page?.media || [];
@@ -124,13 +132,23 @@ async function resolveMalId(title) {
   return bestScore >= 40 ? best : media[0]?.idMal ? Number(media[0].idMal) : null;
 }
 
+/**
+ * @returns {{ skip: object|null, permanent: boolean }}
+ * permanent=true → boleh tandai source:none (404 / tidak ada data)
+ * permanent=false → error sementara (5xx), jangan tandai none
+ */
 async function fetchSkipTimes(malId, episode) {
   const url = `${ANISKIP}/${malId}/${episode}?types=op&types=ed&types=mixed-op&types=mixed-ed&episodeLength=0`;
   const res = await fetch(url, { headers: { "User-Agent": UA, Accept: "application/json" } });
-  if (res.status === 404) return null;
+  if (res.status === 404) return { skip: null, permanent: true };
+  if (res.status >= 500) {
+    throw Object.assign(new Error(`AniSkip HTTP ${res.status}`), { transient: true });
+  }
   if (!res.ok) throw new Error(`AniSkip HTTP ${res.status}`);
   const json = await res.json();
-  if (!json?.found || !Array.isArray(json.results) || !json.results.length) return null;
+  if (!json?.found || !Array.isArray(json.results) || !json.results.length) {
+    return { skip: null, permanent: true };
+  }
   let op = null;
   let ed = null;
   for (const row of json.results) {
@@ -144,15 +162,31 @@ async function fetchSkipTimes(malId, episode) {
     if ((row.skipType === "op" || row.skipType === "mixed-op") && !op) op = seg;
     if ((row.skipType === "ed" || row.skipType === "mixed-ed") && !ed) ed = seg;
   }
-  if (!op && !ed) return null;
-  return { op: op || undefined, ed: ed || undefined, source: "aniskip" };
+  if (!op && !ed) return { skip: null, permanent: true };
+  return {
+    skip: { op: op || undefined, ed: ed || undefined, source: "aniskip" },
+    permanent: true,
+  };
+}
+
+function hasSkipIntervals(s) {
+  return Boolean(s?.op?.end || s?.ed?.start);
 }
 
 function episodeNeedsSkip(ep, force) {
   if (force) return true;
   const s = ep?.skip;
   if (!s) return true;
-  return !(s.op?.end || s.ed?.start);
+  // Sudah dicek AniSkip tapi tidak ada data — jangan retry tiap sync
+  if (s.source === "none") return false;
+  return !hasSkipIntervals(s);
+}
+
+function animeHasPendingSkip(anime, force) {
+  if (force) return true;
+  const eps = anime.episodes || [];
+  if (!eps.length) return false;
+  return eps.some((ep) => episodeNeedsSkip(ep, false));
 }
 
 async function enrichAnime(anime, opts) {
@@ -163,19 +197,20 @@ async function enrichAnime(anime, opts) {
     await sleep(opts.delayMal);
   }
   if (!malId) {
-    return { anime, mal: false, filled: 0, skipped: 0, miss: 0 };
+    return { anime, mal: false, filled: 0, skipped: 0, miss: 0, transient: 0 };
   }
 
   const episodes = Array.isArray(anime.episodes) ? [...anime.episodes] : [];
-  let list = episodes;
+  let list = episodes.filter((ep) => episodeNeedsSkip(ep, opts.force));
   if (opts.maxEps > 0 && list.length > opts.maxEps) {
-    // prioritaskan episode terbaru (biasanya di akhir array Samehadaku)
-    list = list.slice(-opts.maxEps);
+    // prioritaskan episode terbaru
+    list = [...list].sort((a, b) => Number(a.episode) - Number(b.episode)).slice(-opts.maxEps);
   }
 
   let filled = 0;
-  let skipped = 0;
+  let skipped = (anime.episodes || []).length - list.length;
   let miss = 0;
+  let transient = 0;
   const byKey = new Map(
     episodes.map((ep, idx) => [`${ep.season || 0}:${ep.episode || idx}`, { ep, idx }]),
   );
@@ -186,12 +221,8 @@ async function enrichAnime(anime, opts) {
       skipped += 1;
       continue;
     }
-    if (!episodeNeedsSkip(ep, opts.force)) {
-      skipped += 1;
-      continue;
-    }
     try {
-      const skip = await fetchSkipTimes(malId, epNum);
+      const { skip, permanent } = await fetchSkipTimes(malId, epNum);
       await sleep(opts.delaySkip);
       const key = `${ep.season || 0}:${ep.episode || 0}`;
       const slot = byKey.get(key);
@@ -199,10 +230,20 @@ async function enrichAnime(anime, opts) {
       if (skip) {
         episodes[slot.idx] = { ...slot.ep, skip };
         filled += 1;
-      } else {
+      } else if (permanent) {
+        episodes[slot.idx] = { ...slot.ep, skip: { source: "none" } };
         miss += 1;
+      } else {
+        transient += 1;
       }
     } catch (err) {
+      if (err?.transient || /HTTP 5\d\d/.test(err.message)) {
+        transient += 1;
+        process.stdout.write(`  ! ep ${epNum}: ${err.message}\n`);
+        await sleep(Math.max(opts.delaySkip, 400));
+        // Jangan bomb AniSkip: hentikan sisa episode anime ini di run ini
+        break;
+      }
       miss += 1;
       process.stdout.write(`  ! ep ${epNum}: ${err.message}\n`);
       await sleep(opts.delaySkip);
@@ -215,9 +256,14 @@ async function enrichAnime(anime, opts) {
     filled,
     skipped,
     miss,
+    transient,
   };
 }
 
+/**
+ * @param {string} rootDir
+ * @param {{ limit?: number, slug?: string, force?: boolean, maxEps?: number, delayMal?: number, delaySkip?: number, quiet?: boolean, pendingOnly?: boolean }} [opts]
+ */
 async function enrichAnimeCatalog(rootDir, opts = {}) {
   const options = {
     limit: 0,
@@ -227,6 +273,7 @@ async function enrichAnimeCatalog(rootDir, opts = {}) {
     delayMal: 750,
     delaySkip: 250,
     quiet: false,
+    pendingOnly: true,
     ...opts,
   };
   const dataDir = join(rootDir, "public", "data");
@@ -238,17 +285,24 @@ async function enrichAnimeCatalog(rootDir, opts = {}) {
 
   let list = full;
   if (options.slug) list = list.filter((a) => a.slug === options.slug);
+
+  const pendingOnly = options.pendingOnly !== false && !options.force;
+  if (pendingOnly) {
+    list = list.filter((a) => animeHasPendingSkip(a, false));
+  }
   if (options.limit > 0) list = list.slice(0, options.limit);
 
   if (!options.quiet) {
     console.log(
-      `Enrich AniSkip: ${list.length} anime (force=${options.force}, maxEps=${options.maxEps || "all"})\n`,
+      `Enrich AniSkip: ${list.length} anime pending` +
+        ` (force=${options.force}, maxEps=${options.maxEps || "all"}, pendingOnly=${pendingOnly})\n`,
     );
   }
 
   const bySlug = new Map(full.map((a) => [a.slug, a]));
   let totalFilled = 0;
   let totalMiss = 0;
+  let totalTransient = 0;
   let noMal = 0;
 
   const persist = async () => {
@@ -269,16 +323,26 @@ async function enrichAnimeCatalog(rootDir, opts = {}) {
       bySlug.set(result.anime.slug, result.anime);
       totalFilled += result.filled;
       totalMiss += result.miss;
+      totalTransient += result.transient || 0;
       if (!result.mal) {
         noMal += 1;
         if (!options.quiet) console.log("MAL tidak ketemu");
       } else if (!options.quiet) {
         console.log(
-          `MAL ${result.anime.mal_id} · +${result.filled} skip · skip-ada ${result.skipped} · kosong ${result.miss}`,
+          `MAL ${result.anime.mal_id} · +${result.filled} skip · skip-ada ${result.skipped}` +
+            ` · none ${result.miss}` +
+            (result.transient ? ` · retry-later ${result.transient}` : ""),
         );
       }
     } catch (err) {
       if (!options.quiet) console.log(`GAGAL: ${err.message}`);
+      // Rate-limit AniList: hentikan sisa batch agar tidak buang menit Actions
+      if (/AniList HTTP (403|429)/.test(err.message)) {
+        if (!options.quiet) {
+          console.log("  → stop batch AniSkip (AniList rate-limit), lanjut sync lain.");
+        }
+        break;
+      }
     }
 
     if ((i + 1) % 5 === 0 || i === list.length - 1) {
@@ -288,7 +352,7 @@ async function enrichAnimeCatalog(rootDir, opts = {}) {
 
   if (!options.quiet) {
     console.log(
-      `\nSelesai. Episode terisi skip: ${totalFilled}, tanpa data AniSkip: ${totalMiss}, tanpa MAL: ${noMal}`,
+      `\nSelesai. +skip: ${totalFilled}, none: ${totalMiss}, transient: ${totalTransient}, tanpa MAL: ${noMal}`,
     );
     console.log(`File: ${animeFile}`);
   }
@@ -297,6 +361,7 @@ async function enrichAnimeCatalog(rootDir, opts = {}) {
     anime: list.length,
     filled: totalFilled,
     miss: totalMiss,
+    transient: totalTransient,
     no_mal: noMal,
   };
 }

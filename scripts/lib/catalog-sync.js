@@ -851,12 +851,21 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     }
 
     // Isi field skip OP/ED untuk episode yang belum punya (AniSkip).
-    // Incremental: tidak --force, jadi anime baru / episode baru ikut terisi.
+    // Batch kecil + hanya pending — jangan scan 200+ anime tiap sync.
     try {
-      console.log("[catalog-sync] enrich AniSkip (episode tanpa skip)…");
+      const aniskipLimit = Number(process.env.ANISKIP_ENRICH_LIMIT || 15);
+      const aniskipMaxEps = Number(process.env.ANISKIP_MAX_EPS || 6);
+      console.log(
+        `[catalog-sync] enrich AniSkip (pending, limit ${aniskipLimit}, maxEps ${aniskipMaxEps})…`
+      );
       results.aniskip = await enrichAnimeCatalog(rootDir, {
         force: false,
         quiet: false,
+        pendingOnly: true,
+        limit: aniskipLimit,
+        maxEps: aniskipMaxEps,
+        delayMal: 500,
+        delaySkip: 120,
       });
     } catch (err) {
       console.warn("[sync] aniskip:", err.message);
