@@ -11,6 +11,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { chromium } from "playwright";
+import { extractSiteLandscape } from "./landscape-utils.js";
 
 const BASE = "https://v2.samehadaku.how";
 const TERBARU_URL = `${BASE}/anime-terbaru/`;
@@ -259,6 +260,7 @@ function extractAnimeDetailMeta(html, fallback = {}) {
     html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1] ||
     fallback.thumbnail ||
     "";
+  const thumbAbs = absUrl(thumb);
   const rating =
     html.match(/itemprop=["']ratingValue["'][^>]*>([^<]+)/i)?.[1]?.trim() || null;
   const votes =
@@ -289,9 +291,14 @@ function extractAnimeDetailMeta(html, fallback = {}) {
     });
   }
   episodes.sort((a, b) => a.episode - b.episode);
+  const siteLandscape = extractSiteLandscape(html, {
+    portraitUrl: thumbAbs || fallback.thumbnail,
+    base: BASE,
+  });
   return {
     judul: h1 || fallback.title || fallback.slug,
-    thumbnail: absUrl(thumb),
+    thumbnail: thumbAbs,
+    thumbnail_landscape: siteLandscape || fallback.thumbnail_landscape || null,
     rating: rating ? String(rating).replace(",", ".") : null,
     votes: votes ? Number(String(votes).replace(/,/g, "")) : null,
     sinopsis: decodeEntities(stripTags(sinopsisRaw)) || `Anime ${h1 || fallback.title}.`,
@@ -546,6 +553,9 @@ async function syncAnimeTerbaru(page, dataDir) {
           players: preferPlayers(detail.episodes),
           id: nextId(existing),
         };
+        if (detail.thumbnail_landscape) {
+          entry.thumbnail_landscape = detail.thumbnail_landscape;
+        }
 
         if (!entry.episodes.some((e) => e.players?.length)) {
           console.warn(`[samehadaku-sync] skip ${item.slug}: tidak ada server`);
@@ -686,6 +696,9 @@ async function syncAnimeMovies(page, dataDir) {
         players: preferPlayers(detail.episodes),
         id: nextId([...existing, ...added]),
       };
+      if (detail.thumbnail_landscape) {
+        entry.thumbnail_landscape = detail.thumbnail_landscape;
+      }
       added.push(entry);
       bySlug.set(entry.slug, entry);
     } catch (err) {

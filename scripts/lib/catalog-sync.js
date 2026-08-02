@@ -12,6 +12,8 @@ import {
   shouldRefreshLk21Quality,
 } from "./lk21-quality.js";
 import { enrichAnimeCatalog } from "../enrich-aniskip.js";
+import { enrichLandscapeCatalog } from "../enrich-landscape.js";
+import { extractSiteLandscape } from "./landscape-utils.js";
 
 const LIST_BASE = "https://tv12.lk21official.cc";
 const DRAMA_BASE = "https://tv5.nontondrama.my";
@@ -282,10 +284,15 @@ function extractDetailMeta(html, fallback = {}) {
     html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1] ||
     fallback.thumbnail ||
     "";
+  const siteLandscape = extractSiteLandscape(html, {
+    portraitUrl: poster || fallback.thumbnail,
+    base: LIST_BASE,
+  });
   return {
     judul,
     sinopsis: buildFullDescription(html, judul),
     thumbnail: poster,
+    thumbnail_landscape: siteLandscape || fallback.thumbnail_landscape || null,
     durasi: fallback.durasi || "",
   };
 }
@@ -382,7 +389,7 @@ async function scrapeMovieDetail(item, { genreLabel = null, catalog = null } = {
   const players = extractPlayers(html);
   const detail = extractDetailMeta(html, item);
   const { nama, tahun } = splitNamaTahun(detail.judul);
-  return {
+  const out = {
     nama: nama || item.title || item.slug,
     judul: detail.judul.includes("(")
       ? detail.judul
@@ -399,6 +406,10 @@ async function scrapeMovieDetail(item, { genreLabel = null, catalog = null } = {
     ...(catalog ? { catalog } : {}),
     players,
   };
+  if (detail.thumbnail_landscape) {
+    out.thumbnail_landscape = detail.thumbnail_landscape;
+  }
+  return out;
 }
 
 function applyListedQualities(listings, bySlug, label, updated) {
@@ -480,7 +491,11 @@ async function scrapeSeriesDetail(item) {
   }
   const { nama, tahun } = splitNamaTahun(cleanTitle(judul));
   const latestWithPlayers = [...episodes].reverse().find((e) => e.players?.length);
-  return {
+  const thumb = watch.poster || detailBase.thumbnail || item.thumbnail;
+  const siteLandscape =
+    detailBase.thumbnail_landscape ||
+    extractSiteLandscape(html, { portraitUrl: thumb, base: DRAMA_BASE });
+  const out = {
     type: "series",
     nama: nama || item.title || item.slug,
     judul: cleanTitle(judul).includes("(")
@@ -489,7 +504,7 @@ async function scrapeSeriesDetail(item) {
           .replace(/\(\s*\)/, "")
           .trim(),
     tahun: String(watch.year || tahun || item.tahun || ""),
-    thumbnail: watch.poster || detailBase.thumbnail || item.thumbnail,
+    thumbnail: thumb,
     rating: watch.rating || item.rating || null,
     durasi:
       item.durasi ||
@@ -509,6 +524,8 @@ async function scrapeSeriesDetail(item) {
     episodes,
     players: latestWithPlayers?.players || [],
   };
+  if (siteLandscape) out.thumbnail_landscape = siteLandscape;
+  return out;
 }
 
 async function syncMoviesCatalog(dataDir) {
@@ -844,6 +861,23 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     } catch (err) {
       console.warn("[sync] aniskip:", err.message);
       results.aniskip = { error: err.message };
+    }
+
+    // Thumbnail landscape (TMDB backdrop → situs). Batch terbatas agar CI tidak timeout.
+    try {
+      const landLimit = Number(process.env.LANDSCAPE_ENRICH_LIMIT || 80);
+      console.log(
+        `[catalog-sync] enrich landscape (tanpa field, limit ${landLimit})…`
+      );
+      results.landscape = await enrichLandscapeCatalog(rootDir, {
+        force: false,
+        limit: landLimit,
+        quiet: false,
+        refetchSite: true,
+      });
+    } catch (err) {
+      console.warn("[sync] landscape:", err.message);
+      results.landscape = { error: err.message };
     }
 
     const added =
