@@ -69,7 +69,7 @@ function metaContent(html, names) {
 /**
  * Ambil URL gambar lebar dari HTML detail (bukan poster potret).
  * @param {string} html
- * @param {{ portraitUrl?: string, base?: string }} [opts]
+ * @param {{ portraitUrl?: string, base?: string, slug?: string, nama?: string, judul?: string }} [opts]
  * @returns {string|null}
  */
 export function extractSiteLandscape(html, opts = {}) {
@@ -83,6 +83,17 @@ export function extractSiteLandscape(html, opts = {}) {
     if (!url || !/^https?:\/\//i.test(url)) return;
     if (portraitKey && pathKey(url) === portraitKey) return;
     if (isLikelyPortraitUrl(url) && !isLikelyLandscapeUrl(url)) return;
+    // Tolak cover film lain di halaman (meta/twitter sering salah)
+    if (
+      opts.slug &&
+      !siteLandscapeMatchesItem(url, {
+        slug: opts.slug,
+        nama: opts.nama,
+        judul: opts.judul,
+      })
+    ) {
+      return;
+    }
     scored.push({ url, score: score + (isLikelyLandscapeUrl(url) ? 20 : 0) });
   };
 
@@ -141,4 +152,34 @@ export function extractYear(item) {
 export function hasValidLandscape(item) {
   const u = item?.thumbnail_landscape;
   return typeof u === "string" && /^https?:\/\//i.test(u.trim());
+}
+
+export function isTmdbLandscapeUrl(url) {
+  return /image\.tmdb\.org/i.test(String(url || ""));
+}
+
+/**
+ * Cover situs sering salah (twitter:image film lain di halaman yang sama).
+ * Hanya terima bila nama file/path memuat token dari slug judul.
+ */
+export function siteLandscapeMatchesItem(url, item) {
+  const u = String(url || "").toLowerCase();
+  if (!u) return false;
+  if (isTmdbLandscapeUrl(u)) return true;
+  const slug = String(item?.slug || "")
+    .toLowerCase()
+    .replace(/^\d+-/, "");
+  const tokens = slug
+    .split("-")
+    .filter((t) => t.length >= 4 && !/^\d{4}$/.test(t) && !/^(film|movie|series|the|and)$/.test(t));
+  if (!tokens.length) {
+    // Slug terlalu pendek — bandingkan nama file vs nama judul
+    const name = cleanSearchTitle(item?.nama || item?.judul || "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "");
+    if (name.length < 4) return false;
+    const pathOnly = u.replace(/^https?:\/\/[^/]+/i, "").replace(/[^a-z0-9]+/g, "");
+    return pathOnly.includes(name.slice(0, Math.min(8, name.length)));
+  }
+  return tokens.some((t) => u.includes(t));
 }

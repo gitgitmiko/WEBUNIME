@@ -287,6 +287,9 @@ function extractDetailMeta(html, fallback = {}) {
   const siteLandscape = extractSiteLandscape(html, {
     portraitUrl: poster || fallback.thumbnail,
     base: LIST_BASE,
+    slug: fallback.slug,
+    nama: fallback.title || fallback.nama,
+    judul: judul,
   });
   return {
     judul,
@@ -494,7 +497,13 @@ async function scrapeSeriesDetail(item) {
   const thumb = watch.poster || detailBase.thumbnail || item.thumbnail;
   const siteLandscape =
     detailBase.thumbnail_landscape ||
-    extractSiteLandscape(html, { portraitUrl: thumb, base: DRAMA_BASE });
+    extractSiteLandscape(html, {
+      portraitUrl: thumb,
+      base: DRAMA_BASE,
+      slug: item.slug,
+      nama: item.title || item.nama,
+      judul,
+    });
   const out = {
     type: "series",
     nama: nama || item.title || item.slug,

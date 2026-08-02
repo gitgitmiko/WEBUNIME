@@ -15,7 +15,9 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import {
   extractSiteLandscape,
   hasValidLandscape,
+  isTmdbLandscapeUrl,
   rewriteDeadPosterHost,
+  siteLandscapeMatchesItem,
 } from "./lib/landscape-utils.js";
 import { resolveTmdbLandscape } from "./lib/tmdb-landscape.js";
 
@@ -115,6 +117,9 @@ async function resolveSiteFromSource(item) {
     return extractSiteLandscape(html, {
       portraitUrl: item.thumbnail,
       base: src,
+      slug: item.slug,
+      nama: item.nama,
+      judul: item.judul,
     });
   } catch {
     return null;
@@ -163,12 +168,20 @@ export async function enrichLandscapeCatalog(rootDir, options = {}) {
     for (const item of list) {
       if (slugFilter && item.slug !== slugFilter) continue;
       const existing = hasValidLandscape(item);
-      const isTmdb = existing && /image\.tmdb\.org/i.test(item.thumbnail_landscape);
-      // Upgrade gambar situs → TMDB bila key ada (kecuali sudah backdrop TMDB)
+      const isTmdb = existing && isTmdbLandscapeUrl(item.thumbnail_landscape);
+      const siteMismatch =
+        existing &&
+        !isTmdb &&
+        !siteLandscapeMatchesItem(item.thumbnail_landscape, item);
+      // Upgrade gambar situs → TMDB, atau buang cover situs yang salah judul
       const upgrade = Boolean(apiKey) && existing && !isTmdb;
-      if (!force && existing && !upgrade) {
+      if (!force && existing && !upgrade && !siteMismatch) {
         skippedFile += 1;
         continue;
+      }
+      if (siteMismatch) {
+        delete item.thumbnail_landscape;
+        changed = true;
       }
       pending.push(item);
     }
@@ -197,9 +210,10 @@ export async function enrichLandscapeCatalog(rootDir, options = {}) {
         }
         if (url) {
           url = rewriteDeadPosterHost(url);
-          // Validasi non-TMDB (CDN situs sering 404)
-          if (!/image\.tmdb\.org/i.test(url) && !(await urlLooksAlive(url))) {
-            url = null;
+          // Validasi non-TMDB (CDN situs sering 404 / salah judul)
+          if (!isTmdbLandscapeUrl(url)) {
+            if (!(await urlLooksAlive(url))) url = null;
+            else if (!siteLandscapeMatchesItem(url, item)) url = null;
           }
         }
         // Jangan turun kualitas: kalau upgrade gagal, pertahankan yang lama

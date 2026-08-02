@@ -294,6 +294,9 @@ function extractAnimeDetailMeta(html, fallback = {}) {
   const siteLandscape = extractSiteLandscape(html, {
     portraitUrl: thumbAbs || fallback.thumbnail,
     base: BASE,
+    slug: fallback.slug,
+    nama: fallback.title || fallback.nama,
+    judul: h1 || fallback.title,
   });
   return {
     judul: h1 || fallback.title || fallback.slug,
