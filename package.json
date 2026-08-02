@@ -15,6 +15,7 @@
     "scrape:genre": "node scripts/scrape-genre.js",
     "scrape:anime": "node scripts/scrape-anime.js",
     "scrape:anime-movie": "node scripts/scrape-anime-movie.js",
+    "enrich:aniskip": "node scripts/enrich-aniskip.js",
     "sync:catalog": "node scripts/sync-catalog.js --force"
   },
   "devDependencies": {

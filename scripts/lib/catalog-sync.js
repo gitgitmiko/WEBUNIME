@@ -11,6 +11,7 @@ import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
 } from "./lk21-quality.js";
+import { enrichAnimeCatalog } from "../enrich-aniskip.js";
 
 const LIST_BASE = "https://tv12.lk21official.cc";
 const DRAMA_BASE = "https://tv5.nontondrama.my";
@@ -830,6 +831,19 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
         updated: 0,
         error: err.message,
       };
+    }
+
+    // Isi field skip OP/ED untuk episode yang belum punya (AniSkip).
+    // Incremental: tidak --force, jadi anime baru / episode baru ikut terisi.
+    try {
+      console.log("[catalog-sync] enrich AniSkip (episode tanpa skip)…");
+      results.aniskip = await enrichAnimeCatalog(rootDir, {
+        force: false,
+        quiet: false,
+      });
+    } catch (err) {
+      console.warn("[sync] aniskip:", err.message);
+      results.aniskip = { error: err.message };
     }
 
     const added =
