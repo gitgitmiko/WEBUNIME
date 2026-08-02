@@ -11,8 +11,8 @@ export function rewriteDeadPosterHost(url) {
   if (!url || typeof url !== "string") return url || "";
   return url
     .replace(/https?:\/\/poster\.showcdnx\.com/gi, "https://poster.lk21official.cc")
-    .replace(/https?:\/\/image\.showcdnx\.com/gi, "https://poster.lk21official.cc")
-    .replace(/https?:\/\/cover\.showcdnx\.com/gi, "https://cover.lk21official.cc");
+    .replace(/https?:\/\/image\.showcdnx\.com/gi, "https://poster.lk21official.cc");
+  // cover.showcdnx.com masih valid — jangan rewrite ke cover.lk21 (sering 404)
 }
 
 export function absUrl(href, base = "https://tv12.lk21official.cc") {
