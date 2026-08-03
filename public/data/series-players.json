@@ -4486,7 +4486,7 @@
     "film": "Dream to You (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/dream-you-2026",
-    "scraped_at": "2026-07-28T18:19:56.061Z",
+    "scraped_at": "2026-08-03T18:53:58.352Z",
     "episodes": [
       {
         "season": 1,
@@ -4694,6 +4694,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://playeriframe.sbs/iframe/hydrax/PI8-KFcFm",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "dream-you-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JgosLyhUDi43fAQpIkM5Nm9JZCs1EAQuJjRae24CZmp0VR4LBz07HhoORHl7AWVoJx0",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a70b31039f80",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/gbgk2pg9z37u",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/nycKQal6b",
             "default": false
           }
         ]
@@ -54141,7 +54176,7 @@
     "film": "The Husband (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/husband-2026",
-    "scraped_at": "2026-08-02T17:55:04.729Z",
+    "scraped_at": "2026-08-03T18:53:58.352Z",
     "episodes": [
       {
         "season": 1,
@@ -54454,6 +54489,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/tseW1zWXY",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "slug": "husband-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Kg06LCQXE2wxNBY_LF57aW8dOSc2FhMkb2BHYXEAZG5vLwwMATUoGR1oQn4lCWdpdg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7034ae9e7d6",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/6h7bzhvg8byz",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/--xjr7dSZ_",
             "default": false
           }
         ]
@@ -287127,7 +287197,7 @@
     "film": "Overdo (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/overdo-2026",
-    "scraped_at": "2026-08-02T17:55:04.729Z",
+    "scraped_at": "2026-08-03T18:53:58.352Z",
     "episodes": [
       {
         "season": 1,
@@ -288000,6 +288070,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/2GTh1e_3s",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "slug": "overdo-season-1-episode-26-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJscGdafnMCYHUVPQsKCSYvHnFlRXt6ATBo",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7086a9be256",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/hozprosrnyoc",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/g6jMXPyJE",
             "default": false
           }
         ]
