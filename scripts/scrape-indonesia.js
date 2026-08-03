@@ -25,6 +25,7 @@ import {
   scrapeIndonesiaDetails,
   extractKconazDetail,
   sortIndonesiaNewestFirst,
+  dedupeIndonesiaMovies,
 } from "./lib/kconaz-indonesia.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -103,10 +104,7 @@ async function refreshDescriptions(opts) {
     }
   }
 
-  const sorted = sortIndonesiaNewestFirst(movies);
-  sorted.forEach((m, idx) => {
-    m.id = idx + 1;
-  });
+  const sorted = dedupeIndonesiaMovies(sortIndonesiaNewestFirst(movies));
   await writeFile(MOVIES_FILE, JSON.stringify(sorted, null, 2) + "\n", "utf8");
   console.log(`\nSelesai refresh: ${ok} OK, ${failed} gagal, ${sorted.length} total.`);
 }

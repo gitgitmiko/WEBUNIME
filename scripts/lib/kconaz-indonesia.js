@@ -197,6 +197,65 @@ export function sortIndonesiaNewestFirst(movies) {
   });
 }
 
+function normalizeTitleKey(nama) {
+  return String(nama || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function slugRepostPenalty(slug) {
+  const s = String(slug || "").toLowerCase();
+  let score = 0;
+  if (/-(19|20)\d{2}$/.test(s)) score += 2;
+  if (/-\d+$/.test(s.replace(/-(19|20)\d{2}$/, ""))) score += 1;
+  return score;
+}
+
+function pickBestIndonesiaDuplicate(list) {
+  if (list.length === 1) return list[0];
+  return [...list].sort((a, b) => {
+    const ra = parseRilisSortKey(a.rilis_iso || a.rilis || "");
+    const rb = parseRilisSortKey(b.rilis_iso || b.rilis || "");
+    if (rb !== ra) return rb.localeCompare(ra);
+    const pa = Array.isArray(a.players) ? a.players.length : 0;
+    const pb = Array.isArray(b.players) ? b.players.length : 0;
+    if (pb !== pa) return pb - pa;
+    const sa = String(a.sinopsis || "").length;
+    const sb = String(b.sinopsis || "").length;
+    if (sb !== sa) return sb - sa;
+    const pena = slugRepostPenalty(a.slug);
+    const penb = slugRepostPenalty(b.slug);
+    if (pena !== penb) return pena - penb;
+    return String(a.slug || "").localeCompare(String(b.slug || ""));
+  })[0];
+}
+
+/**
+ * Kconaz sering re-upload judul sama (slug -2 / -2025).
+ * Dedup berdasarkan nama+tahun, simpan entri terbaik.
+ */
+export function dedupeIndonesiaMovies(movies) {
+  const groups = new Map();
+  for (const m of movies) {
+    const key = `${normalizeTitleKey(m.nama || m.judul)}|${String(m.tahun || "").trim()}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(m);
+  }
+  const unique = [];
+  for (const list of groups.values()) {
+    unique.push(pickBestIndonesiaDuplicate(list));
+  }
+  const sorted = sortIndonesiaNewestFirst(unique);
+  sorted.forEach((m, idx) => {
+    m.id = idx + 1;
+  });
+  return sorted;
+}
+
 export function extractKconazListings(html) {
   const items = [];
   const re =
@@ -585,12 +644,7 @@ export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
     if (i < listings.length - 1 && delay) await sleep(delay);
   }
 
-  const sorted = sortIndonesiaNewestFirst(movies);
-  sorted.forEach((m, idx) => {
-    m.id = idx + 1;
-  });
-
-  return { movies: sorted, playersMap, withPlayers };
+  return { movies: dedupeIndonesiaMovies(movies), playersMap, withPlayers };
 }
 
 async function readJsonArray(file) {
@@ -658,10 +712,7 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
   }
 
   if (added.length) {
-    const merged = sortIndonesiaNewestFirst([...added, ...existing]);
-    merged.forEach((m, idx) => {
-      m.id = idx + 1;
-    });
+    const merged = dedupeIndonesiaMovies([...added, ...existing]);
     await writeFile(file, JSON.stringify(merged, null, 2) + "\n", "utf8");
 
     const indonesiaPlayers = await readJsonObject(playersFile);
