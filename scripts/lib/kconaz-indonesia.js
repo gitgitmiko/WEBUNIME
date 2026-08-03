@@ -207,12 +207,28 @@ function normalizeTitleKey(nama) {
     .trim();
 }
 
+/** Kunci dedup: nama normalisasi + tahun. */
+export function indonesiaDedupeKey(namaOrTitle, tahun = "") {
+  return `${normalizeTitleKey(namaOrTitle)}|${String(tahun || "").trim()}`;
+}
+
 function slugRepostPenalty(slug) {
   const s = String(slug || "").toLowerCase();
   let score = 0;
   if (/-(19|20)\d{2}$/.test(s)) score += 2;
   if (/-\d+$/.test(s.replace(/-(19|20)\d{2}$/, ""))) score += 1;
   return score;
+}
+
+/** Pilih listing lebih baik (slug bersih > tanggal rilis lebih baru). */
+function preferListing(a, b) {
+  const pa = slugRepostPenalty(a.slug);
+  const pb = slugRepostPenalty(b.slug);
+  if (pa !== pb) return pa < pb ? a : b;
+  const ra = parseRilisSortKey(a.rilis_iso || a.rilis || "");
+  const rb = parseRilisSortKey(b.rilis_iso || b.rilis || "");
+  if (ra !== rb) return ra >= rb ? a : b;
+  return a;
 }
 
 function pickBestIndonesiaDuplicate(list) {
@@ -235,13 +251,12 @@ function pickBestIndonesiaDuplicate(list) {
 }
 
 /**
- * Kconaz sering re-upload judul sama (slug -2 / -2025).
- * Dedup berdasarkan nama+tahun, simpan entri terbaik.
+ * Cadangan akhir: dedup nama+tahun (jika ada yang lolos skip saat scrape).
  */
 export function dedupeIndonesiaMovies(movies) {
   const groups = new Map();
   for (const m of movies) {
-    const key = `${normalizeTitleKey(m.nama || m.judul)}|${String(m.tahun || "").trim()}`;
+    const key = indonesiaDedupeKey(m.nama || m.judul, m.tahun);
     if (!groups.has(key)) groups.set(key, []);
     groups.get(key).push(m);
   }
@@ -254,6 +269,28 @@ export function dedupeIndonesiaMovies(movies) {
     m.id = idx + 1;
   });
   return sorted;
+}
+
+/**
+ * Masukkan listing dengan skip judul ganda (nama+tahun).
+ * @returns {{ added: boolean, skipped: boolean, replaced: boolean }}
+ */
+function upsertListingUnique(bySlug, byTitle, item) {
+  const key = indonesiaDedupeKey(item.title, item.tahun);
+  const prev = byTitle.get(key);
+  if (!prev) {
+    byTitle.set(key, item);
+    bySlug.set(item.slug, item);
+    return { added: true, skipped: false, replaced: false };
+  }
+  const best = preferListing(prev, item);
+  if (best.slug === prev.slug) {
+    return { added: false, skipped: true, replaced: false };
+  }
+  bySlug.delete(prev.slug);
+  bySlug.set(best.slug, best);
+  byTitle.set(key, best);
+  return { added: false, skipped: false, replaced: true };
 }
 
 export function extractKconazListings(html) {
@@ -574,6 +611,8 @@ export async function scrapeIndonesiaListings({
   log = console.log,
 } = {}) {
   const bySlug = new Map();
+  const byTitle = new Map();
+  let skippedDup = 0;
   let end = start;
 
   const firstUrl = indonesiaPageUrl(start);
@@ -581,12 +620,15 @@ export async function scrapeIndonesiaListings({
   const firstHtml = await fetchKconazHtml(firstUrl);
   const firstItems = extractKconazListings(firstHtml);
   for (const item of firstItems) {
-    if (!bySlug.has(item.slug)) bySlug.set(item.slug, item);
+    const r = upsertListingUnique(bySlug, byTitle, item);
+    if (r.skipped || r.replaced) skippedDup += 1;
   }
   const detectedLast = detectLastIndonesiaPage(firstHtml);
   end = pages > 0 ? start + pages - 1 : detectedLast;
   log(
-    `  ${firstItems.length} kartu, total ${bySlug.size} (halaman terakhir terdeteksi: ${detectedLast}, scrape s/d ${end})`
+    `  ${firstItems.length} kartu → ${bySlug.size} unik` +
+      (skippedDup ? ` (skip/ganti dup ${skippedDup})` : "") +
+      ` · halaman terakhir ${detectedLast}, scrape s/d ${end}`
   );
 
   for (let page = start + 1; page <= end; page++) {
@@ -596,35 +638,59 @@ export async function scrapeIndonesiaListings({
       const html = await fetchKconazHtml(url);
       const items = extractKconazListings(html);
       let added = 0;
+      let pageSkip = 0;
       for (const item of items) {
-        if (!bySlug.has(item.slug)) {
-          bySlug.set(item.slug, item);
-          added += 1;
+        const r = upsertListingUnique(bySlug, byTitle, item);
+        if (r.added) added += 1;
+        if (r.skipped || r.replaced) {
+          pageSkip += 1;
+          skippedDup += 1;
         }
       }
-      console.log(`${items.length} kartu, +${added} unik (total ${bySlug.size})`);
+      console.log(
+        `${items.length} kartu, +${added} unik` +
+          (pageSkip ? `, skip dup ${pageSkip}` : "") +
+          ` (total ${bySlug.size})`
+      );
     } catch (err) {
       console.log(`GAGAL: ${err.message}`);
     }
     if (page < end && delay) await sleep(delay);
   }
 
+  log(`\nListing siap: ${bySlug.size} film unik` + (skippedDup ? `, ${skippedDup} duplikat di-skip` : ""));
   return [...bySlug.values()];
 }
 
 export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
   const movies = [];
   const playersMap = {};
+  const seenTitle = new Set();
   let withPlayers = 0;
+  let skippedDup = 0;
 
   for (let i = 0; i < listings.length; i++) {
     const item = listings[i];
     const n = i + 1;
+    const listKey = indonesiaDedupeKey(item.title, item.tahun);
+    if (listKey !== "|" && seenTitle.has(listKey)) {
+      skippedDup += 1;
+      console.log(`→ [${n}/${listings.length}] ${item.slug} ... SKIP dup (${item.title})`);
+      continue;
+    }
     process.stdout.write(`→ [${n}/${listings.length}] ${item.slug} ... `);
     try {
       const html = await fetchKconazHtml(item.source, `${KCONAZ_BASE}/country/indonesia/`);
       const detail = extractKconazDetail(html, item);
-      const movie = buildIndonesiaMovie(item, detail, n);
+      const movie = buildIndonesiaMovie(item, detail, movies.length + 1);
+      const detailKey = indonesiaDedupeKey(movie.nama, movie.tahun);
+      if (detailKey !== "|" && seenTitle.has(detailKey)) {
+        skippedDup += 1;
+        console.log(`SKIP dup setelah detail (${movie.nama} ${movie.tahun})`);
+        continue;
+      }
+      if (detailKey !== "|") seenTitle.add(detailKey);
+      if (listKey !== "|") seenTitle.add(listKey);
       movies.push(movie);
       playersMap[item.slug] = {
         slug: item.slug,
@@ -639,11 +705,23 @@ export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
     } catch (err) {
       console.log(`GAGAL: ${err.message}`);
       const detail = extractKconazDetail("", item);
-      movies.push(buildIndonesiaMovie(item, detail, n));
+      const movie = buildIndonesiaMovie(item, detail, movies.length + 1);
+      const detailKey = indonesiaDedupeKey(movie.nama, movie.tahun);
+      if (detailKey !== "|" && seenTitle.has(detailKey)) {
+        skippedDup += 1;
+        continue;
+      }
+      if (detailKey !== "|") seenTitle.add(detailKey);
+      movies.push(movie);
     }
     if (i < listings.length - 1 && delay) await sleep(delay);
   }
 
+  if (skippedDup) {
+    console.log(`\nDetail: ${skippedDup} duplikat di-skip (tidak di-scrape ulang).`);
+  }
+
+  // Cadangan jika tahun baru terisi di detail dan bentrok
   return { movies: dedupeIndonesiaMovies(movies), playersMap, withPlayers };
 }
 
@@ -683,19 +761,33 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
   const globalPlayersFile = join(dataDir, "players.json");
   const existing = await readJsonArray(file);
   const bySlug = new Map(existing.map((m) => [m.slug, m]));
+  const existingTitles = new Set(
+    existing.map((m) => indonesiaDedupeKey(m.nama || m.judul, m.tahun)).filter((k) => k !== "|")
+  );
 
   process.stdout.write("[kconaz-sync] indonesia /country/indonesia ... ");
   const html = await fetchKconazHtml(indonesiaPageUrl(1));
   const listings = extractKconazListings(html);
-  const newcomers = listings.filter((l) => !bySlug.has(l.slug));
+  const newcomers = listings.filter((l) => {
+    if (bySlug.has(l.slug)) return false;
+    const key = indonesiaDedupeKey(l.title, l.tahun);
+    if (key !== "|" && existingTitles.has(key)) return false;
+    return true;
+  });
   console.log(
     `${listings.length} kartu, ${newcomers.length} baru` +
       (newcomers.length ? " → scrape detail" : " (sudah up-to-date)")
   );
 
   const added = [];
+  const addedTitles = new Set();
   for (let i = 0; i < newcomers.length; i++) {
     const item = newcomers[i];
+    const listKey = indonesiaDedupeKey(item.title, item.tahun);
+    if (listKey !== "|" && (existingTitles.has(listKey) || addedTitles.has(listKey))) {
+      console.log(`[kconaz-sync] skip dup ${item.slug}`);
+      continue;
+    }
     try {
       const detailHtml = await fetchKconazHtml(
         item.source,
@@ -703,6 +795,13 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
       );
       const detail = extractKconazDetail(detailHtml, item);
       const movie = buildIndonesiaMovie(item, detail, nextId([...existing, ...added]));
+      const detailKey = indonesiaDedupeKey(movie.nama, movie.tahun);
+      if (detailKey !== "|" && (existingTitles.has(detailKey) || addedTitles.has(detailKey))) {
+        console.log(`[kconaz-sync] skip dup ${movie.slug} (${movie.nama})`);
+        continue;
+      }
+      if (detailKey !== "|") addedTitles.add(detailKey);
+      if (listKey !== "|") addedTitles.add(listKey);
       added.push(movie);
       console.log(`[kconaz-sync] +indonesia ${movie.slug} (${movie.tahun || "?"})`);
     } catch (err) {
@@ -713,11 +812,13 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
 
   if (added.length) {
     const merged = dedupeIndonesiaMovies([...added, ...existing]);
+    const keptSlugs = new Set(merged.map((m) => m.slug));
     await writeFile(file, JSON.stringify(merged, null, 2) + "\n", "utf8");
 
     const indonesiaPlayers = await readJsonObject(playersFile);
     const globalPlayers = await readJsonObject(globalPlayersFile);
     for (const movie of added) {
+      if (!keptSlugs.has(movie.slug)) continue;
       const entry = {
         slug: movie.slug,
         film: movie.judul,
