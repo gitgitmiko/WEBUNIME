@@ -264,6 +264,113 @@ export function dedupeIndonesiaMovies(movies) {
   for (const list of groups.values()) {
     unique.push(pickBestIndonesiaDuplicate(list));
   }
+  // Pasangan judul ID ↔ EN film yang sama (sutradara+pemain+rilis)
+  return dedupeIndonesiaAltTitles(unique);
+}
+
+const EN_TITLE_WORDS = new Set(
+  `
+  the of and a an to in for with on at from by or is are was were be been
+  black blood tears faith ultimate actor family frugal super business risky
+  smothered massacre witches wedding wait believe battle normal woman letter
+  youth house haunted dead village bride demon darkness mediterranean sea
+  start up never give comedy buddy comic revolution nightborn soulmate voidance
+  `.trim().split(/\s+/)
+);
+
+const ID_TITLE_WORDS = new Set(
+  `
+  yang dari untuk dan di ke tak tidak ada ini itu pada dengan sebagai
+  cinta hati rumah malam air mata mualaf legenda kelam paling aktor getih ireng
+  jodoh bujang keluarga irit pembantaian dukun santet modal nekad takdir mimpi
+  keberanian antara mertua menantu sebelum sesudah setelah selepas tahlil
+  ibu ayah anak suami istri menantu mertua kafir gerbang sukma esok tanpa
+  catatan harian menantu sinting rambut kafan sakaratul maut dilan sumala
+  bolehkah sekali saja kumenangis mertua ngeri kali musuh dalam selimut
+  pengantin iblis semusim setelah kemarau ambyar mak byar kutukan calon arang
+  berebut jenazah dilarang masuk perayaan mati rasa telepon yang tak pernah
+  berdering cinta tak pernah tepat waktu vina sebelum hari petaka gunung gede
+  pengepungan bukit duri qodrat tujuh hari untuk keshia cinta subuh gowok
+  penjagal iblis dosa turunan rego nyowo cocote tonggo rahasia rasa
+  patah hati yang kupilih godaan setan yang terkutuk angel pol
+  si paling aktor keluarga super irit pembantaian dukun santet
+  air mata mualaf legenda kelam malin kundang
+  `.trim().split(/\s+/)
+);
+
+/** Skor lebih tinggi = judul lebih “berbahasa Indonesia”. */
+export function indonesianTitleScore(nama) {
+  const words = normalizeTitleKey(nama).split(/\s+/).filter(Boolean);
+  if (!words.length) return 0;
+  let score = 0;
+  for (const w of words) {
+    if (ID_TITLE_WORDS.has(w)) score += 4;
+    if (EN_TITLE_WORDS.has(w)) score -= 3;
+    if (/^(me|di|ter|ber|pe|se)[a-z]{3,}/.test(w)) score += 1;
+    if (/(nya|kan|lah|pun|kah)$/.test(w)) score += 2;
+    // Kata Inggris tipikal judul film
+    if (/^(the|of|and|with|from|into)$/.test(w)) score -= 2;
+  }
+  return score;
+}
+
+function filmIdentityKey(m) {
+  const tahun = String(m.tahun || "").trim();
+  const direksi = String(m.direksi || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+  const pemain = String(m.pemain || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9,]+/g, " ")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .slice(0, 3)
+    .join("|");
+  const rilis = String(m.rilis_iso || m.rilis || "")
+    .trim()
+    .slice(0, 10);
+  if (!tahun || !direksi || !pemain) return "";
+  return `${tahun}::${direksi}::${pemain}::${rilis}`;
+}
+
+function pickPreferredAltTitle(list) {
+  if (list.length === 1) return list[0];
+  return [...list].sort((a, b) => {
+    const sa = indonesianTitleScore(a.nama || a.judul);
+    const sb = indonesianTitleScore(b.nama || b.judul);
+    if (sb !== sa) return sb - sa;
+    // Jika sama-sama ID/EN, pakai aturan dup slug
+    return (
+      slugRepostPenalty(a.slug) - slugRepostPenalty(b.slug) ||
+      String(b.sinopsis || "").length - String(a.sinopsis || "").length ||
+      String(a.slug || "").localeCompare(String(b.slug || ""))
+    );
+  })[0];
+}
+
+/**
+ * Film yang sama sering diunggah 2x: judul Indonesia + Inggris
+ * (Getih Ireng / Black Blood). Simpan yang skor judul ID-nya lebih tinggi.
+ * Judul yang memang hanya Inggris (Wed or Wait) tetap.
+ */
+export function dedupeIndonesiaAltTitles(movies) {
+  const groups = new Map();
+  const orphans = [];
+  for (const m of movies) {
+    const key = filmIdentityKey(m);
+    if (!key) {
+      orphans.push(m);
+      continue;
+    }
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(m);
+  }
+  const unique = [...orphans];
+  for (const list of groups.values()) {
+    unique.push(pickPreferredAltTitle(list));
+  }
   const sorted = sortIndonesiaNewestFirst(unique);
   sorted.forEach((m, idx) => {
     m.id = idx + 1;
@@ -666,6 +773,7 @@ export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
   const movies = [];
   const playersMap = {};
   const seenTitle = new Set();
+  const seenIdentity = new Set();
   let withPlayers = 0;
   let skippedDup = 0;
 
@@ -689,8 +797,41 @@ export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
         console.log(`SKIP dup setelah detail (${movie.nama} ${movie.tahun})`);
         continue;
       }
+      const idKey = filmIdentityKey(movie);
+      if (idKey && seenIdentity.has(idKey)) {
+        // Sudah punya versi lain (biasanya judul ID) — skip judul EN alternatif
+        const existing = movies.find((m) => filmIdentityKey(m) === idKey);
+        const keep = pickPreferredAltTitle([existing, movie].filter(Boolean));
+        if (keep.slug !== movie.slug) {
+          skippedDup += 1;
+          console.log(
+            `SKIP alt-title EN (${movie.nama}) → kepakai ${keep?.nama || "?"}`
+          );
+          continue;
+        }
+        // Versi baru lebih ID: ganti entri lama
+        const idx = movies.findIndex((m) => m.slug === existing.slug);
+        if (idx >= 0) {
+          delete playersMap[existing.slug];
+          movies[idx] = movie;
+          playersMap[item.slug] = {
+            slug: item.slug,
+            film: movie.judul,
+            source: movie.source,
+            catalog: "indonesia",
+            scraped_at: new Date().toISOString(),
+            players: movie.players,
+          };
+          if (movie.players.length) withPlayers += 1;
+          console.log(`GANTI alt-title → ${movie.nama} (${movie.tahun || "?"})`);
+          if (detailKey !== "|") seenTitle.add(detailKey);
+          if (listKey !== "|") seenTitle.add(listKey);
+          continue;
+        }
+      }
       if (detailKey !== "|") seenTitle.add(detailKey);
       if (listKey !== "|") seenTitle.add(listKey);
+      if (idKey) seenIdentity.add(idKey);
       movies.push(movie);
       playersMap[item.slug] = {
         slug: item.slug,
@@ -718,7 +859,7 @@ export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
   }
 
   if (skippedDup) {
-    console.log(`\nDetail: ${skippedDup} duplikat di-skip (tidak di-scrape ulang).`);
+    console.log(`\nDetail: ${skippedDup} duplikat/alt-title di-skip.`);
   }
 
   // Cadangan jika tahun baru terisi di detail dan bentrok
@@ -764,6 +905,9 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
   const existingTitles = new Set(
     existing.map((m) => indonesiaDedupeKey(m.nama || m.judul, m.tahun)).filter((k) => k !== "|")
   );
+  const existingIdentities = new Set(
+    existing.map((m) => filmIdentityKey(m)).filter(Boolean)
+  );
 
   process.stdout.write("[kconaz-sync] indonesia /country/indonesia ... ");
   const html = await fetchKconazHtml(indonesiaPageUrl(1));
@@ -781,6 +925,7 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
 
   const added = [];
   const addedTitles = new Set();
+  const addedIdentities = new Set();
   for (let i = 0; i < newcomers.length; i++) {
     const item = newcomers[i];
     const listKey = indonesiaDedupeKey(item.title, item.tahun);
@@ -800,8 +945,21 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
         console.log(`[kconaz-sync] skip dup ${movie.slug} (${movie.nama})`);
         continue;
       }
+      const idKey = filmIdentityKey(movie);
+      if (idKey && (existingIdentities.has(idKey) || addedIdentities.has(idKey))) {
+        // Sudah ada versi judul lain (ID/EN) — pilih yang lebih Indonesia
+        const rival =
+          existing.find((m) => filmIdentityKey(m) === idKey) ||
+          added.find((m) => filmIdentityKey(m) === idKey);
+        const keep = pickPreferredAltTitle([rival, movie].filter(Boolean));
+        if (keep.slug !== movie.slug) {
+          console.log(`[kconaz-sync] skip alt-title ${movie.slug} (kepakai ${keep.nama})`);
+          continue;
+        }
+      }
       if (detailKey !== "|") addedTitles.add(detailKey);
       if (listKey !== "|") addedTitles.add(listKey);
+      if (idKey) addedIdentities.add(idKey);
       added.push(movie);
       console.log(`[kconaz-sync] +indonesia ${movie.slug} (${movie.tahun || "?"})`);
     } catch (err) {
