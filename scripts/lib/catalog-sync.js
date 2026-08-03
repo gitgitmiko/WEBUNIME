@@ -7,6 +7,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
+import { syncIndonesiaCatalog } from "./kconaz-indonesia.js";
 import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
@@ -831,12 +832,27 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
 
   syncInFlight = (async () => {
     const started = Date.now();
-    console.log("[catalog-sync] mulai (LK21 → Samehadaku)…");
+    console.log("[catalog-sync] mulai (LK21 → kconaz Indonesia → Samehadaku)…");
     const results = {
       movies: await syncMoviesCatalog(dataDir),
       series: await syncSeriesCatalog(dataDir),
       horror: await syncHorrorCatalog(dataDir),
+      indonesia: { checked: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
     };
+
+    try {
+      results.indonesia = await syncIndonesiaCatalog(dataDir);
+    } catch (err) {
+      console.warn("[sync] kconaz indonesia:", err.message);
+      results.indonesia = {
+        checked: 0,
+        added: 0,
+        updated: 0,
+        slugs: [],
+        updatedSlugs: [],
+        error: err.message,
+      };
+    }
 
     try {
       const sameha = await syncSamehadakuCatalog(dataDir);
@@ -902,12 +918,14 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       results.movies.added +
       results.series.added +
       results.horror.added +
+      (results.indonesia?.added || 0) +
       (results.anime?.added || 0) +
       (results.animeMovies?.added || 0);
     const updated =
       results.movies.updated +
       results.series.updated +
       results.horror.updated +
+      (results.indonesia?.updated || 0) +
       (results.anime?.updated || 0) +
       (results.animeMovies?.updated || 0);
     const payload = {

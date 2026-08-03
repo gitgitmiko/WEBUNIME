@@ -24,6 +24,20 @@ npm run build
 npm run preview
 ```
 
+## Scrape film Indonesia (kconaz)
+
+Ambil daftar + detail film negara Indonesia dari [kconaz.com/country/indonesia](https://kconaz.com/country/indonesia/):
+
+```bash
+npm run scrape:indonesia              # semua halaman (~17)
+npm run scrape:indonesia -- --pages 3 # uji 3 halaman
+npm run scrape:indonesia -- --refresh-desc
+```
+
+Hasil: `public/data/indonesia.json` (urut tahun/rilis terbaru dulu) + `indonesia-players.json`.
+
+Sync harian (`npm run sync:catalog`) juga menambah film Indonesia baru dari halaman 1.
+
 ## Scrape daftar player
 
 Ambil daftar server player (P2P, TurboVIP, Cast, Hydrax, dll) dari halaman film LK21:

@@ -85,7 +85,8 @@ export async function resolveTmdbLandscape(opts = {}) {
   const year = opts.year || "";
   const media = String(opts.mediaType || "movie").toLowerCase();
 
-  const tryMovie = media === "movie" || media === "horror" || media === "anime-movie";
+  const tryMovie =
+    media === "movie" || media === "horror" || media === "indonesia" || media === "anime-movie";
   const tryTv =
     media === "tv" ||
     media === "series" ||

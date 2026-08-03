@@ -1,6 +1,7 @@
 let movies = [];
 let series = [];
 let horror = [];
+let indonesia = [];
 let anime = [];
 let animeMovies = [];
 let animeLatest = [];
@@ -41,6 +42,19 @@ async function loadHorror() {
     horror = await res.json();
   } catch {
     horror = [];
+  }
+}
+
+async function loadIndonesia() {
+  try {
+    const res = await fetch("/data/indonesia.json");
+    if (!res.ok) {
+      indonesia = [];
+      return;
+    }
+    indonesia = await res.json();
+  } catch {
+    indonesia = [];
   }
 }
 
@@ -192,6 +206,20 @@ function renderRows() {
   fillTrack("trackAnime", anime);
   fillTrack("trackAnimeMovie", animeMovies);
   fillTrack("trackHorror", horror);
+  fillTrack(
+    "trackIndonesia",
+    [...indonesia].sort((a, b) => {
+      const key = (m) => {
+        const iso = String(m.rilis_iso || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (iso) return `${iso[1]}${iso[2]}${iso[3]}`;
+        const y = Number(m.tahun) || 0;
+        return String(y * 10000).padStart(8, "0");
+      };
+      const d = key(b).localeCompare(key(a));
+      if (d) return d;
+      return String(a.nama || "").localeCompare(String(b.nama || ""), "id");
+    })
+  );
   // Tahun berjalan (mengikuti jam perangkat), bukan angka hardcode.
   const currentYear = new Date().getFullYear();
   const prevYear = currentYear - 1;
@@ -852,6 +880,7 @@ async function init() {
       loadMovies(),
       loadSeries(),
       loadHorror(),
+      loadIndonesia(),
       loadAnime(),
       loadAnimeMovies(),
       loadAnimeLatest(),
@@ -859,11 +888,19 @@ async function init() {
     catalog = dedupeBySlug([
       ...movies,
       ...horror,
+      ...indonesia,
       ...series,
       ...anime,
       ...animeMovies,
     ]);
-    setHero(movies[0] || anime[0] || animeMovies[0] || horror[0] || series[0]);
+    setHero(
+      movies[0] ||
+        indonesia[0] ||
+        anime[0] ||
+        animeMovies[0] ||
+        horror[0] ||
+        series[0]
+    );
     renderRows();
     bindNav();
     bindRows();

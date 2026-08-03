@@ -28,6 +28,7 @@ const DATA_DIR = join(ROOT, "public", "data");
 const CATALOGS = [
   { file: "movies.json", mediaType: "movie" },
   { file: "horror.json", mediaType: "movie" },
+  { file: "indonesia.json", mediaType: "movie" },
   { file: "series.json", mediaType: "tv" },
   { file: "anime.json", mediaType: "anime" },
   { file: "anime-movies.json", mediaType: "anime-movie" },
