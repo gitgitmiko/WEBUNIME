@@ -4486,7 +4486,7 @@
     "film": "Dream to You (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/dream-you-2026",
-    "scraped_at": "2026-08-03T18:53:58.352Z",
+    "scraped_at": "2026-08-04T18:42:52.178Z",
     "episodes": [
       {
         "season": 1,
@@ -4729,6 +4729,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/nycKQal6b",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "dream-you-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JgosLyhUDi43fAQpIkM5Nm9JZCs1EAQuJjRadG4CZmp0VR4LBz07HhoOQi0hB25pJks",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7208851d12a",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/s10niy0lkdv1",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/qlAt4EfoF",
             "default": false
           }
         ]
@@ -288475,6 +288510,85 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/eHwj54JPQ",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  "my-bias-my-boss-2026": {
+    "slug": "my-bias-my-boss-2026",
+    "film": "My Bias, My Boss (2026)",
+    "type": "series",
+    "source": "https://tv6.nontondrama.my/my-bias-my-boss-2026",
+    "scraped_at": "2026-08-04T18:42:52.178Z",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "slug": "my-bias-my-boss-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/LwFkLCwYBGwvKFouLEMldTEdKD0qF1pwbzQHJTBfMj1vSWR8dUtBbBUUNQgPbw4HexsofCRME3g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a714fb5d703f",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/962eh6bwl8r0",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/ns_C5FHxv",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "slug": "my-bias-my-boss-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/LwFkLCwYBGwvKFouLEMldTEdKD0qF1pwbzQHJTBfMj1vSmR8dUtBbBUUNQgPbw4Hcx1_e3RKFiU",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a71f0f67b998",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/a6zdxbk3rnww",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/ta1nhtas9",
             "default": false
           }
         ]
