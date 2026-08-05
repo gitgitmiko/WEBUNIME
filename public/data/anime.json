@@ -386,8 +386,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Otome-Game-Sekai-wa-Mob-Seasaon-2-v2.jpg",
     "rating": "6.79",
     "votes": 3465,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Fantasy",
       "Isekai",
@@ -679,6 +679,73 @@
         "skip": {
           "source": "none"
         }
+      },
+      {
+        "episode": 5,
+        "title": "Otome Game Sekai wa Mob Season 2 Episode 5",
+        "slug": "otome-game-sekai-wa-mob-season-2-episode-5",
+        "source": "https://v2.samehadaku.how/otome-game-sekai-wa-mob-season-2-episode-5/",
+        "date": "39 minutes yang lalu",
+        "released_at": "2026-08-05T18:28:06.598Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxF0yPIAt26mIM9lhNb6YprArIwxg37MRcnpcs942vmGbvkwX5U7Dx47K4mjG_n9hUAtjsbTdaUcBbZh8gZOokgXLj6AzegBQab8Mc5k_Jcye6f0O-lPa6jVrOrOaxUNSh5L8k7",
+            "default": true,
+            "post": "51820",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/Hqx4Q7NI5t",
+            "default": false,
+            "post": "51820",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/40c8203f-8bb4-4a63-bae2-af61f6364e7a",
+            "default": false,
+            "post": "51820",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/Mobseka-05-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "51820",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/mxBDjICQ#6xCC4-C5tXMLaC-wxnGm8jTKwrinB7YhFFxu9Qq0UXc",
+            "default": false,
+            "post": "51820",
+            "nume": "6"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/axIVUKAa#zJa2hSizxRrn2iIcZtFl_P9Rr2M2mIM4RSFH_dsyZQM",
+            "default": false,
+            "post": "51820",
+            "nume": "7"
+          }
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -686,46 +753,55 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyEcFcykiCLk4F4G2AZY6_0p8smmGiPc8mqgrm8Mfg29AQ0aSN2aZUAbiMgsV8e2kLpyc_hhimnezgP6Ib6dugxL2pcilBJgS3hVVPFsXJZFG-cV4EIJdunqDqEwfk4-ry8KSuR",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxF0yPIAt26mIM9lhNb6YprArIwxg37MRcnpcs942vmGbvkwX5U7Dx47K4mjG_n9hUAtjsbTdaUcBbZh8gZOokgXLj6AzegBQab8Mc5k_Jcye6f0O-lPa6jVrOrOaxUNSh5L8k7",
         "default": true,
-        "post": "51683",
+        "post": "51820",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "vip-streaming",
         "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/4XkcmDmWiz",
+        "url": "https://filedon.co/embed/Hqx4Q7NI5t",
         "default": false,
-        "post": "51683",
+        "post": "51820",
         "nume": "2"
       },
       {
         "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/g7ABSAzQ#XMDRk0MjSt0m0rHKG26QCNcpyYSQet7aqXMPiDxLMv8",
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/40c8203f-8bb4-4a63-bae2-af61f6364e7a",
         "default": false,
-        "post": "51683",
-        "nume": "6"
+        "post": "51820",
+        "nume": "3"
       },
       {
         "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/Mqp3STQD#WXKr4SzWtAOkIad-I5L-tpsCfBWQCdTFwvoSEeerRfE",
+        "server": "wibufile",
+        "label": "Wibufile 720p",
+        "url": "https://s0.wibufile.com/video01/Mobseka-05-MP4HD-SAMEHADAKU.CARE.mp4",
         "default": false,
-        "post": "51683",
-        "nume": "7"
+        "post": "51820",
+        "nume": "4"
       },
       {
         "no": 5,
         "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/HC5lRbbK#l-u4QQZUxJRXqkdmuZ4z2RTEC1WKn1FPgghUKN7OadY",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/mxBDjICQ#6xCC4-C5tXMLaC-wxnGm8jTKwrinB7YhFFxu9Qq0UXc",
         "default": false,
-        "post": "51683",
-        "nume": "8"
+        "post": "51820",
+        "nume": "6"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/axIVUKAa#zJa2hSizxRrn2iIcZtFl_P9Rr2M2mIM4RSFH_dsyZQM",
+        "default": false,
+        "post": "51820",
+        "nume": "7"
       }
     ],
     "id": 3,
@@ -3485,7 +3561,10 @@
             "post": "49585",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 3,
@@ -3566,7 +3645,10 @@
             "post": "49728",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 4,
@@ -3665,7 +3747,10 @@
             "post": "49852",
             "nume": "10"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -3764,7 +3849,10 @@
             "post": "49970",
             "nume": "10"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 6,
@@ -3872,7 +3960,10 @@
             "post": "50105",
             "nume": "11"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 7,
@@ -6465,7 +6556,10 @@
             "post": "49613",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 2,
@@ -10824,7 +10918,10 @@
             "post": "49618",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 3,
@@ -13687,7 +13784,10 @@
             "post": "49409",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 2,
@@ -13768,7 +13868,10 @@
             "post": "49573",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 3,
@@ -13849,7 +13952,10 @@
             "post": "49720",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 4,
@@ -19074,7 +19180,10 @@
             "post": "51293",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 3,
@@ -19156,7 +19265,10 @@
             "post": "51370",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 4,
@@ -19238,7 +19350,10 @@
             "post": "51604",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -19275,7 +19390,10 @@
             "post": "51762",
             "nume": "6"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -20431,7 +20549,10 @@
             "post": "51008",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 13,
@@ -20512,7 +20633,10 @@
             "post": "51155",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 14,
@@ -20593,7 +20717,10 @@
             "post": "51298",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 15,
@@ -20675,7 +20802,10 @@
             "post": "51378",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 16,
@@ -20757,7 +20887,10 @@
             "post": "51613",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 17,
@@ -20794,7 +20927,10 @@
             "post": "51769",
             "nume": "6"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -68767,7 +68903,10 @@
             "post": "49625",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 1158,
@@ -68875,7 +69014,10 @@
             "post": "49762",
             "nume": "11"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 1159,
@@ -68983,7 +69125,10 @@
             "post": "49885",
             "nume": "11"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 1160,
@@ -70144,7 +70289,10 @@
             "post": "51367",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 1171,
@@ -70226,7 +70374,10 @@
             "post": "51618",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 1172,
@@ -70308,7 +70459,14 @@
             "post": "51773",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 1.186,
+            "end": 100.57
+          },
+          "source": "aniskip"
+        }
       }
     ],
     "players": [
@@ -70864,7 +71022,10 @@
             "post": "51112",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 2,
@@ -71122,7 +71283,10 @@
             "post": "51389",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -71204,7 +71368,10 @@
             "post": "51610",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 6,
@@ -71286,7 +71453,10 @@
             "post": "51767",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -71560,7 +71730,10 @@
             "post": "51312",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 3,
@@ -71704,7 +71877,10 @@
             "post": "51624",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -71786,7 +71962,10 @@
             "post": "51781",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -72152,7 +72331,10 @@
             "post": "51451",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 4,
@@ -72207,7 +72389,10 @@
             "post": "51622",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -72216,7 +72401,14 @@
         "source": "https://v2.samehadaku.how/degarashi-ouji-episode-5/",
         "date": "2 seconds yang lalu",
         "released_at": "2026-08-03T18:54:18.292Z",
-        "players": []
+        "players": [],
+        "skip": {
+          "op": {
+            "start": 18.258,
+            "end": 116.268
+          },
+          "source": "aniskip"
+        }
       }
     ],
     "players": [
@@ -75953,8 +76145,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158138.jpg",
     "rating": "6.57",
     "votes": 193,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Adventure",
@@ -76286,6 +76478,88 @@
             "nume": "8"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Sora wa Akai Kawa no Hotori Episode 5",
+        "slug": "sora-wa-akai-kawa-no-hotori-episode-5",
+        "source": "https://v2.samehadaku.how/sora-wa-akai-kawa-no-hotori-episode-5/",
+        "date": "22 hours yang lalu",
+        "released_at": "2026-08-05T18:28:16.367Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxt4rvcBFaDBcymrrMgLN3hH9ciU3N45LUl8mPAI9bDmJqAYJ9QSb-agtu94EOHK5SJwvw-kQStA8bq97GocfZmJJ3S6FOqUNgbmSK5SSutb8XTJXvHd-GZEhZiQXs4ROBwWhY&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "51807",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/LiMJJh6klV",
+            "default": false,
+            "post": "51807",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/3730fd1a-bbbb-4cef-8e7a-acef27b306dd",
+            "default": false,
+            "post": "51807",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/SwAKnH-5-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "51807",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "wibufile",
+            "label": "Wibufile 1080p",
+            "url": "https://s0.wibufile.com/video01/SwAKnH-5-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "51807",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/2GJjxTbD#qQxl4fxhEwoew44XGOE4fSnrDjp11jwEsRRVSURNYiE",
+            "default": false,
+            "post": "51807",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/THYygZbC#snS_HAjwDeIXCG-jwTzSkFfxix9IUKKfgaSkJOwgVss",
+            "default": false,
+            "post": "51807",
+            "nume": "7"
+          },
+          {
+            "no": 8,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/SwAKnH-5-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "51807",
+            "nume": "8"
+          }
+        ]
       }
     ],
     "players": [
@@ -76293,63 +76567,72 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dy2rAA5Le5xTUv8nhZ1PSl__GLQtnq3g4rKl0d-qRp1xoKhU2Ya4or8ZvnIHkMElkh3bWFVuMHJI5IdLMLIk_61HBlXbssCd_G3-7yGEbk2Za8M3SfViPFUtdDPvapet0Wk2ZQ",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxt4rvcBFaDBcymrrMgLN3hH9ciU3N45LUl8mPAI9bDmJqAYJ9QSb-agtu94EOHK5SJwvw-kQStA8bq97GocfZmJJ3S6FOqUNgbmSK5SSutb8XTJXvHd-GZEhZiQXs4ROBwWhY&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "51665",
+        "post": "51807",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "vip-streaming",
         "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/zbi9146SzO",
+        "url": "https://filedon.co/embed/LiMJJh6klV",
         "default": false,
-        "post": "51665",
+        "post": "51807",
         "nume": "2"
       },
       {
         "no": 3,
         "server": "wibufile",
-        "label": "Wibufile 720p",
-        "url": "https://s0.wibufile.com/video01/SwAKnH-4-MP4HD-SAMEHADAKU.CARE.mp4",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/3730fd1a-bbbb-4cef-8e7a-acef27b306dd",
         "default": false,
-        "post": "51665",
-        "nume": "4"
+        "post": "51807",
+        "nume": "3"
       },
       {
         "no": 4,
         "server": "wibufile",
-        "label": "Wibufile 1080p",
-        "url": "https://s0.wibufile.com/video01/SwAKnH-4-FULLHD-SAMEHADAKU.CARE.mp4",
+        "label": "Wibufile 720p",
+        "url": "https://s0.wibufile.com/video01/SwAKnH-5-MP4HD-SAMEHADAKU.CARE.mp4",
         "default": false,
-        "post": "51665",
-        "nume": "5"
+        "post": "51807",
+        "nume": "4"
       },
       {
         "no": 5,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/IqoxAIzI#lIM_ucL_aX4dsRQbImvok7S69V1LdhJuQvKiXs8asiU",
+        "server": "wibufile",
+        "label": "Wibufile 1080p",
+        "url": "https://s0.wibufile.com/video01/SwAKnH-5-FULLHD-SAMEHADAKU.CARE.mp4",
         "default": false,
-        "post": "51665",
-        "nume": "6"
+        "post": "51807",
+        "nume": "5"
       },
       {
         "no": 6,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/4uBnlI5A#O_ADiT8jYWKNM0fyDLsQxIucwUnNq7wJqkL18oU39ek",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/2GJjxTbD#qQxl4fxhEwoew44XGOE4fSnrDjp11jwEsRRVSURNYiE",
         "default": false,
-        "post": "51665",
-        "nume": "7"
+        "post": "51807",
+        "nume": "6"
       },
       {
         "no": 7,
         "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/FnZg3K4C#QPS1zj-mGTxz4HFtYASYUO6SQ_L9XRxnLsNq8_j2M_c",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/THYygZbC#snS_HAjwDeIXCG-jwTzSkFfxix9IUKKfgaSkJOwgVss",
         "default": false,
-        "post": "51665",
+        "post": "51807",
+        "nume": "7"
+      },
+      {
+        "no": 8,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/SwAKnH-5-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "51807",
         "nume": "8"
       }
     ],
@@ -76365,8 +76648,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/157105.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Fantasy"
@@ -76565,6 +76848,15 @@
         "date": "3 hours yang lalu",
         "released_at": "2026-07-29T18:12:53.195Z",
         "players": []
+      },
+      {
+        "episode": 5,
+        "title": "Clevatess Season 2 Episode 5",
+        "slug": "clevatess-season-2-episode-5",
+        "source": "https://v2.samehadaku.how/clevatess-season-2-episode-5/",
+        "date": "3 hours yang lalu",
+        "released_at": "2026-08-05T18:28:14.017Z",
+        "players": []
       }
     ],
     "players": [
@@ -76644,8 +76936,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/06/Heroine-Seijo-Iie-All-Works-Maid-desu-Hokori.jpg",
     "rating": "7.12",
     "votes": 2992,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Fantasy",
       "Isekai",
@@ -77117,6 +77409,88 @@
             "nume": "8"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Heroine? Seijo? Iie, All Works Maid desu (Hokori)! Episode 7",
+        "slug": "heroine-seijo-iie-all-works-maid-desu-hokori-episode-7",
+        "source": "https://v2.samehadaku.how/heroine-seijo-iie-all-works-maid-desu-hokori-episode-7/",
+        "date": "2 hours yang lalu",
+        "released_at": "2026-08-05T18:28:10.010Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dymmx2MNHqLy5qGMUFAEheWC3SYvRtsjFxmSafCvYLk-1JlmdhaNq9__9c1K8EqVAO1LFSDig1Qz1dQ3krZWvuakstSY8xFJLqOAi63RxnJKA7xiRG831y_FJi3A_nxF1vwfoE",
+            "default": true,
+            "post": "51813",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/HtyzUJUGa1",
+            "default": false,
+            "post": "51813",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/ed1badea-4998-47e4-98d2-e323dbbf99d0",
+            "default": false,
+            "post": "51813",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/HSI-07-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "51813",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "wibufile",
+            "label": "Wibufile 1080p",
+            "url": "https://s0.wibufile.com/video01/HSI-07-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "51813",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ilYCEIQY#KHXdI_vxFlZRcQBs_BSlOoYCgbwYhgdsMsziMxmYPZo",
+            "default": false,
+            "post": "51813",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/vkIXWBhZ#b3gjSjWT17l7LizWwACqAEYzJVAx0ifE7iH6DCD77yk",
+            "default": false,
+            "post": "51813",
+            "nume": "7"
+          },
+          {
+            "no": 8,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/FmokERzY#GkUrs4zKoknkWdqz0B8Y51GrzF9KVlPoKQ8LbOdByo4",
+            "default": false,
+            "post": "51813",
+            "nume": "8"
+          }
+        ]
       }
     ],
     "players": [
@@ -77124,45 +77498,72 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwod68WgnM573y9s557i0cRh24ZXvU3s3eGYHxY4V-930elz_ftA_BcROqUOTLpgovlvk8ceIcIb00lx_DBagBRADFzmUZYhF9Mz08xxBfk5nFUL14y-cynkoLypJyn7lqNdiU",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dymmx2MNHqLy5qGMUFAEheWC3SYvRtsjFxmSafCvYLk-1JlmdhaNq9__9c1K8EqVAO1LFSDig1Qz1dQ3krZWvuakstSY8xFJLqOAi63RxnJKA7xiRG831y_FJi3A_nxF1vwfoE",
         "default": true,
-        "post": "51671",
+        "post": "51813",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "vip-streaming",
         "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/sjtyVHy4p1",
+        "url": "https://filedon.co/embed/HtyzUJUGa1",
         "default": false,
-        "post": "51671",
+        "post": "51813",
         "nume": "2"
       },
       {
         "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/4643AJJC#UNdb2NCNcUw8T79EmPaM2TpI-5BwzhU_sqbi5LYSu_0",
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/ed1badea-4998-47e4-98d2-e323dbbf99d0",
         "default": false,
-        "post": "51671",
-        "nume": "6"
+        "post": "51813",
+        "nume": "3"
       },
       {
         "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/dipynS4I#K0zULKP3vx7DGIQh-nJbnNQPF6oAngfyp8AlQoJPWzo",
+        "server": "wibufile",
+        "label": "Wibufile 720p",
+        "url": "https://s0.wibufile.com/video01/HSI-07-MP4HD-SAMEHADAKU.CARE.mp4",
         "default": false,
-        "post": "51671",
-        "nume": "7"
+        "post": "51813",
+        "nume": "4"
       },
       {
         "no": 5,
+        "server": "wibufile",
+        "label": "Wibufile 1080p",
+        "url": "https://s0.wibufile.com/video01/HSI-07-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "51813",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/ilYCEIQY#KHXdI_vxFlZRcQBs_BSlOoYCgbwYhgdsMsziMxmYPZo",
+        "default": false,
+        "post": "51813",
+        "nume": "6"
+      },
+      {
+        "no": 7,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/vkIXWBhZ#b3gjSjWT17l7LizWwACqAEYzJVAx0ifE7iH6DCD77yk",
+        "default": false,
+        "post": "51813",
+        "nume": "7"
+      },
+      {
+        "no": 8,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/3PAUlSrD#_fyGsaBMLI0N65q-sXGkZSLjuQCAw5vEUgUNx25KA4M",
+        "url": "https://mega.nz/embed/FmokERzY#GkUrs4zKoknkWdqz0B8Y51GrzF9KVlPoKQ8LbOdByo4",
         "default": false,
-        "post": "51671",
+        "post": "51813",
         "nume": "8"
       }
     ],
@@ -77177,8 +77578,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Lv999-no-Murabito.jpg",
     "rating": "6.58",
     "votes": 4218,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Fantasy"
     ],
@@ -77641,53 +78042,54 @@
           },
           "source": "aniskip"
         }
+      },
+      {
+        "episode": 7,
+        "title": "Lv999 no Murabito Episode 7",
+        "slug": "lv999-no-murabito-episode-7",
+        "source": "https://v2.samehadaku.how/lv999-no-murabito-episode-7/",
+        "date": "1 second yang lalu",
+        "released_at": "2026-08-05T18:28:04.237Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/09eae3dc-88ff-4309-826e-41869c5c8dc9",
+            "default": true,
+            "post": "51824",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/vgYGTLQI#87_QHgiFCn_6BZxKEUyc9yEEpuNIBOd4Ps42uV_5k6s",
+            "default": false,
+            "post": "51824",
+            "nume": "6"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dw30gZuUmcsAnHlzIBW_zLzhdPL08SjqjCKnD4YAkDR4VBK4A4gyJbGbzeG7yFIu7G48XLooWjfj3O72FgL841qabIgkO114C4Ju1LKjfTKmO-sraHq0ZwBdR9zFAYYm34onQh5",
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/09eae3dc-88ff-4309-826e-41869c5c8dc9",
         "default": true,
-        "post": "51686",
+        "post": "51824",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/W4j8phW1uN",
-        "default": false,
-        "post": "51686",
-        "nume": "2"
-      },
-      {
-        "no": 3,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/4uABUTBI#A3-Qu4KT_Wp9_1pc4Oyf50UmEi3nE7EfZmX4-41yMRQ",
+        "url": "https://mega.nz/embed/vgYGTLQI#87_QHgiFCn_6BZxKEUyc9yEEpuNIBOd4Ps42uV_5k6s",
         "default": false,
-        "post": "51686",
+        "post": "51824",
         "nume": "6"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/kzpwSa6R#jXf4bYY5vjuTRwVbybbbX2jqxiVSdJJL5e_FvgHM3sU",
-        "default": false,
-        "post": "51686",
-        "nume": "7"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/XbpkxSAA#Eo4mCursZb7u1XrlIOAPiecoFkk414SuugMDWyANfBI",
-        "default": false,
-        "post": "51686",
-        "nume": "8"
       }
     ],
     "id": 37,

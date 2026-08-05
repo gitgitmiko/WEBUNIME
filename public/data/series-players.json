@@ -287232,7 +287232,7 @@
     "film": "Overdo (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/overdo-2026",
-    "scraped_at": "2026-08-03T18:53:58.352Z",
+    "scraped_at": "2026-08-05T18:27:51.318Z",
     "episodes": [
       {
         "season": 1,
@@ -288140,6 +288140,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/g6jMXPyJE",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "slug": "overdo-season-1-episode-27-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJscGZafnMCYHUVPQsKCSYvHnFnTilwAGVq",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a730faf412e3",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/gozft6tsw2q0",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Jrshpxbrp",
             "default": false
           }
         ]

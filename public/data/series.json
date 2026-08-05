@@ -658,8 +658,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.showcdnx.com/wp-content/uploads/2026/07/film-overdo-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "26 eps · S.1",
-    "episodes_count": 26,
+    "durasi": "27 eps · S.1",
+    "episodes_count": 27,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -1631,6 +1631,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "title": "Overdo - Season 1 Episode 27 (2026)",
+        "slug": "overdo-season-1-episode-27-2026",
+        "source": "https://tv6.nontondrama.my/overdo-season-1-episode-27-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJscGZafnMCYHUVPQsKCSYvHnFnTilwAGVq",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a730faf412e3",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/gozft6tsw2q0",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Jrshpxbrp",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1638,28 +1675,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJscGdafnMCYHUVPQsKCSYvHnFlRXt6ATBo",
+        "url": "https://videonode.de/iframe/p2p/LQ4sPCEWWjInMAQjLR1ndScIID0qHRJscGZafnMCYHUVPQsKCSYvHnFnTilwAGVq",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a7086a9be256",
+        "url": "https://videonode.de/iframe/turbovip/6a730faf412e3",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/hozprosrnyoc",
+        "url": "https://videonode.de/iframe/cast/gozft6tsw2q0",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/g6jMXPyJE",
+        "url": "https://videonode.de/iframe/hydrax/Jrshpxbrp",
         "default": false
       }
     ],
