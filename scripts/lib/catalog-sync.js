@@ -217,6 +217,13 @@ function extractListings(html, { seriesMode = false } = {}) {
   return items;
 }
 
+function normalizePlayerUrl(url) {
+  return String(url || "").replace(
+    /https?:\/\/playeriframe\.sbs/gi,
+    "https://videonode.de"
+  );
+}
+
 function extractPlayers(html) {
   const selectMatch = html.match(
     /<select[^>]*id=["']player-select["'][^>]*>([\s\S]*?)<\/select>/i
@@ -233,7 +240,7 @@ function extractPlayers(html) {
       no,
       server: m.groups.server,
       label: stripTags(m.groups.label),
-      url: m.groups.url,
+      url: normalizePlayerUrl(m.groups.url),
       default: /\bselected\b/i.test(m.groups.rest),
     });
   }
