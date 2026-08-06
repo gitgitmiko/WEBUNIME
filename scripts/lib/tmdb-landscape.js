@@ -52,12 +52,13 @@ async function tmdbGet(path, params, apiKey) {
   return res.json();
 }
 
-function pickBackdrop(results, query, year) {
+function pickBestResult(results, query, year, kind, { requireBackdrop = true } = {}) {
   if (!Array.isArray(results) || !results.length) return null;
   let best = null;
   let bestScore = -1;
   for (const row of results) {
-    if (!row?.backdrop_path) continue;
+    if (!row?.id) continue;
+    if (requireBackdrop && !row?.backdrop_path) continue;
     const title = row.title || row.name || row.original_title || row.original_name || "";
     let s = scoreTitle(query, title);
     const date = String(row.release_date || row.first_air_date || "");
@@ -69,14 +70,28 @@ function pickBackdrop(results, query, year) {
     }
   }
   if (!best || bestScore < 40) return null;
-  return `${IMG_BASE}${best.backdrop_path}`;
+  return {
+    id: best.id,
+    backdrop_path: best.backdrop_path || null,
+    mediaType: kind,
+  };
 }
 
 /**
  * @param {{ title?: string, year?: string, mediaType?: string, apiKey?: string }} opts
- * mediaType: movie | tv | anime | anime-movie | horror | series
+ * @returns {Promise<string|null>} URL backdrop
  */
 export async function resolveTmdbLandscape(opts = {}) {
+  const meta = await resolveTmdbMatch(opts);
+  if (!meta?.backdrop_path) return null;
+  return `${IMG_BASE}${meta.backdrop_path}`;
+}
+
+/**
+ * Cari match TMDB (id + backdrop) untuk movie/tv.
+ * @returns {Promise<{ id: number, backdrop_path: string, mediaType: string }|null>}
+ */
+export async function resolveTmdbMatch(opts = {}) {
   const apiKey = opts.apiKey || process.env.TMDB_API_KEY || "";
   if (!apiKey) return null;
 
@@ -84,6 +99,7 @@ export async function resolveTmdbLandscape(opts = {}) {
   if (!query) return null;
   const year = opts.year || "";
   const media = String(opts.mediaType || "movie").toLowerCase();
+  const requireBackdrop = opts.requireBackdrop !== false;
 
   const tryMovie =
     media === "movie" || media === "horror" || media === "indonesia" || media === "anime-movie";
@@ -106,14 +122,13 @@ export async function resolveTmdbLandscape(opts = {}) {
     }
     try {
       const data = await tmdbGet(`/search/${kind}`, params, apiKey);
-      const url = pickBackdrop(data.results, query, year);
-      if (url) return url;
+      const hit = pickBestResult(data.results, query, year, kind, { requireBackdrop });
+      if (hit) return hit;
     } catch (err) {
       console.warn(`[tmdb] search ${kind}:`, err.message);
     }
   }
 
-  // Tanpa filter tahun jika miss
   if (year) {
     for (const kind of endpoints) {
       try {
@@ -122,8 +137,8 @@ export async function resolveTmdbLandscape(opts = {}) {
           { query, include_adult: "false", language: "en-US" },
           apiKey
         );
-        const url = pickBackdrop(data.results, query, "");
-        if (url) return url;
+        const hit = pickBestResult(data.results, query, "", kind, { requireBackdrop });
+        if (hit) return hit;
       } catch {
         /* ignore */
       }
@@ -131,6 +146,40 @@ export async function resolveTmdbLandscape(opts = {}) {
   }
 
   return null;
+}
+
+/**
+ * Ambil YouTube key trailer/teaser dari TMDB videos.
+ * @returns {Promise<string|null>}
+ */
+export async function resolveTmdbTrailerKey(opts = {}) {
+  const apiKey = opts.apiKey || process.env.TMDB_API_KEY || "";
+  if (!apiKey) return null;
+
+  let match = opts.match || null;
+  if (!match?.id) {
+    match = await resolveTmdbMatch({
+      ...opts,
+      requireBackdrop: opts.requireBackdrop === true,
+    });
+  }
+  if (!match?.id) return null;
+
+  const kind = match.mediaType === "tv" ? "tv" : "movie";
+  try {
+    const data = await tmdbGet(`/${kind}/${match.id}/videos`, { language: "en-US" }, apiKey);
+    const results = Array.isArray(data?.results) ? data.results : [];
+    const yt = results.filter((v) => v?.site === "YouTube" && v?.key);
+    const order = ["Trailer", "Teaser", "Clip", "Featurette"];
+    for (const type of order) {
+      const hit = yt.find((v) => v.type === type);
+      if (hit?.key) return String(hit.key);
+    }
+    return yt[0]?.key ? String(yt[0].key) : null;
+  } catch (err) {
+    console.warn(`[tmdb] videos ${kind}/${match.id}:`, err.message);
+    return null;
+  }
 }
 
 /**
