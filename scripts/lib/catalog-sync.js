@@ -15,6 +15,10 @@ import {
 import { enrichAnimeCatalog } from "../enrich-aniskip.js";
 import { enrichLandscapeCatalog } from "../enrich-landscape.js";
 import { extractSiteLandscape } from "./landscape-utils.js";
+import {
+  rewritePlayerUrl,
+  rewritePlayerHostsInCatalog,
+} from "./player-host-aliases.js";
 
 const LIST_BASE = "https://tv12.lk21official.cc";
 const DRAMA_BASE = "https://tv5.nontondrama.my";
@@ -218,10 +222,7 @@ function extractListings(html, { seriesMode = false } = {}) {
 }
 
 function normalizePlayerUrl(url) {
-  return String(url || "").replace(
-    /https?:\/\/playeriframe\.sbs/gi,
-    "https://videonode.de"
-  );
+  return rewritePlayerUrl(url);
 }
 
 function extractPlayers(html) {
@@ -919,6 +920,23 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     } catch (err) {
       console.warn("[sync] landscape:", err.message);
       results.landscape = { error: err.message };
+    }
+
+    // Rewrite host player lama → baru di seluruh JSON (alias map).
+    try {
+      console.log("[catalog-sync] fix player host aliases…");
+      results.playerHosts = await rewritePlayerHostsInCatalog(dataDir, {
+        readFile,
+        writeFile,
+      });
+      if (results.playerHosts.total) {
+        console.log(
+          `[catalog-sync] player hosts rewritten: ${results.playerHosts.total}`
+        );
+      }
+    } catch (err) {
+      console.warn("[sync] player-hosts:", err.message);
+      results.playerHosts = { error: err.message };
     }
 
     const added =
