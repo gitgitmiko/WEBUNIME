@@ -288615,7 +288615,7 @@
     "film": "A Bona Fide Killer (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/bona-fide-killer-2026",
-    "scraped_at": "2026-08-02T17:55:04.729Z",
+    "scraped_at": "2026-08-07T17:53:29.592Z",
     "episodes": [
       {
         "season": 1,
@@ -288683,6 +288683,34 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/oJ6OFoOh5x",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "slug": "bona-fide-killer-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IBcnL2gfHiUnfBwlL1wzKm8LLC82Fhlsc3wSPCpDOTwnVXpjd0lFd28GMg4HfAkAHU15KCcaEXEh",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a75f6f76a740",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/7LURTLcYge",
             "default": false
           }
         ]
