@@ -2,7 +2,7 @@
  * Sync inkremental Samehadaku (Playwright — Cloudflare).
  *
  * Anime series: https://v2.samehadaku.how/anime-terbaru/ (halaman 1–5)
- *   → hanya tambah episode yang belum ada di anime.json
+ *   → tambah episode baru + refresh player yang masih sparse (<6 / hanya 480p)
  *
  * Anime movie: https://v2.samehadaku.how/anime-movie/
  *   → hanya tambah judul baru ke anime-movies.json
@@ -19,6 +19,14 @@ const MOVIE_URL = `${BASE}/anime-movie/`;
 const TERBARU_PAGES = 5;
 const MOVIE_PAGES = 2;
 const DETAIL_DELAY_MS = 350;
+/** Di bawah ini dianggap belum lengkap → scrape ulang. */
+const PLAYER_MIN_COMPLETE = 6;
+/** Batas refresh sparse per sync (env: ANIME_PLAYER_REFRESH_LIMIT). */
+const PLAYER_REFRESH_LIMIT = Math.max(
+  0,
+  Number(process.env.ANIME_PLAYER_REFRESH_LIMIT || 30) || 30
+);
+const PLAYER_AJAX_DELAY_MS = 120;
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -348,15 +356,21 @@ function extractMovieDetail(html, fallback = {}) {
 
 function extractPlayerOptions(html) {
   const options = [];
-  const re =
-    /class=["'][^"']*east_player_option[^"']*["'][^>]*data-post=["'](\d+)["'][^>]*data-nume=["'](\d+)["'][^>]*data-type=["']([^"']+)["'][^>]*>[\s\S]*?<span>([\s\S]*?)<\/span>/gi;
+  // Cocokkan blok option; atribut data-* boleh urutan bebas.
+  const blockRe =
+    /<[^>]*class=["'][^"']*east_player_option[^"']*["'][^>]*>[\s\S]*?<span>([\s\S]*?)<\/span>/gi;
   let m;
-  while ((m = re.exec(html)) !== null) {
-    const label = stripTags(m[4]);
+  while ((m = blockRe.exec(html)) !== null) {
+    const tag = m[0];
+    const post = tag.match(/data-post=["'](\d+)["']/i)?.[1];
+    const nume = tag.match(/data-nume=["'](\d+)["']/i)?.[1];
+    const type = tag.match(/data-type=["']([^"']+)["']/i)?.[1];
+    if (!post || !nume || !type) continue;
+    const label = stripTags(m[1]);
     options.push({
-      post: m[1],
-      nume: m[2],
-      type: m[3],
+      post,
+      nume,
+      type,
       label,
       server:
         label.replace(/\s+\d+p$/i, "").trim().toLowerCase().replace(/\s+/g, "-") || "server",
@@ -376,7 +390,8 @@ function iframeSrcFromAjax(html) {
 async function resolvePlayers(page, episodeHtml) {
   const options = extractPlayerOptions(episodeHtml);
   const players = [];
-  for (const opt of options) {
+  for (let i = 0; i < options.length; i++) {
+    const opt = options[i];
     try {
       const body = await page.evaluate(
         async ({ post, nume, type }) => {
@@ -399,7 +414,10 @@ async function resolvePlayers(page, episodeHtml) {
         { post: opt.post, nume: opt.nume, type: opt.type }
       );
       const url = iframeSrcFromAjax(body);
-      if (!url || /just a moment|tunggu sebentar/i.test(body)) continue;
+      if (!url || /just a moment|tunggu sebentar/i.test(body)) {
+        console.warn(`[samehadaku-sync] skip player ${opt.label}: ajax kosong/CF`);
+        continue;
+      }
       players.push({
         no: players.length + 1,
         server: opt.server,
@@ -412,8 +430,42 @@ async function resolvePlayers(page, episodeHtml) {
     } catch (err) {
       console.warn(`[samehadaku-sync] player ${opt.label}:`, err.message);
     }
+    if (i < options.length - 1) await sleep(PLAYER_AJAX_DELAY_MS);
   }
   return players;
+}
+
+function playerCount(ep) {
+  return Array.isArray(ep?.players) ? ep.players.length : 0;
+}
+
+function hasHighQuality(players) {
+  return (players || []).some((p) => /(720|1080)\s*p/i.test(String(p.label || "")));
+}
+
+/** Episode belum lengkap: sedikit server, kosong, atau hanya 480p. */
+function isSparsePlayers(ep) {
+  const n = playerCount(ep);
+  if (n <= 0) return true;
+  if (n < PLAYER_MIN_COMPLETE) return true;
+  const labels = (ep.players || []).map((p) => String(p.label || p.server || ""));
+  if (labels.length && labels.every((l) => /480\s*p/i.test(l))) return true;
+  return false;
+}
+
+function shouldKeepNewPlayers(oldPlayers, newPlayers) {
+  if (!newPlayers?.length) return false;
+  if (!oldPlayers?.length) return true;
+  if (newPlayers.length > oldPlayers.length) return true;
+  if (!hasHighQuality(oldPlayers) && hasHighQuality(newPlayers)) return true;
+  return false;
+}
+
+function ensureEpisodeSource(anime, ep) {
+  if (ep.source) return ep.source;
+  if (!anime?.slug || ep.episode == null || ep.episode === "") return "";
+  ep.source = episodeWatchUrl(anime.slug, ep.episode);
+  return ep.source;
 }
 
 async function scrapeEpisodePlayers(page, ep) {
@@ -486,6 +538,7 @@ async function syncAnimeTerbaru(page, dataDir) {
   let addedAnime = 0;
   let updatedAnime = 0;
   let addedEps = 0;
+  let refreshedPlayers = 0;
   const touched = [];
   let changed = false;
 
@@ -571,14 +624,45 @@ async function syncAnimeTerbaru(page, dataDir) {
           changed = true;
         }
       } else {
-        // Anime lama: hanya episode yang belum ada
-        const known = new Set(
-          (current.episodes || []).map((e) => `${e.episode}:${e.slug || ""}`)
-        );
+        // Anime lama: episode baru ATAU refresh player yang masih sparse
         const knownNums = new Set((current.episodes || []).map((e) => Number(e.episode)));
         const feedEp = Number(item.episode);
         if (knownNums.has(feedEp)) {
-          // sudah punya
+          const existingEp = (current.episodes || []).find(
+            (e) => Number(e.episode) === feedEp
+          );
+          if (
+            existingEp &&
+            isSparsePlayers(existingEp) &&
+            (existingEp.source || item.episode_source)
+          ) {
+            if (!existingEp.source) existingEp.source = item.episode_source;
+            const before = playerCount(existingEp);
+            const oldPlayers = [...(existingEp.players || [])];
+            console.log(
+              `[samehadaku-sync] refresh players ${item.slug} #${feedEp} (${before} → ?)`
+            );
+            try {
+              await scrapeEpisodePlayers(page, existingEp);
+              if (shouldKeepNewPlayers(oldPlayers, existingEp.players)) {
+                current.players = preferPlayers(current.episodes);
+                refreshedPlayers += 1;
+                touched.push(item.slug);
+                changed = true;
+                console.log(
+                  `[samehadaku-sync] ~players ${item.slug} #${feedEp}: ${before} → ${playerCount(existingEp)}`
+                );
+              } else {
+                existingEp.players = oldPlayers;
+              }
+            } catch (err) {
+              existingEp.players = oldPlayers;
+              console.warn(
+                `[samehadaku-sync] refresh ${item.slug} #${feedEp}:`,
+                err.message
+              );
+            }
+          }
         } else {
           console.log(`[samehadaku-sync] +ep ${item.slug} #${feedEp}`);
           const ep = {
@@ -605,7 +689,6 @@ async function syncAnimeTerbaru(page, dataDir) {
           addedEps += 1;
           touched.push(item.slug);
           changed = true;
-          void known;
         }
       }
     } catch (err) {
@@ -615,6 +698,19 @@ async function syncAnimeTerbaru(page, dataDir) {
     if (i < jobs.length - 1) await sleep(DETAIL_DELAY_MS);
   }
 
+  // Backfill: episode sparse di luar feed hari ini (mirror Samehadaku sudah lengkap belakangan).
+  const backfillBudget = Math.max(0, PLAYER_REFRESH_LIMIT - refreshedPlayers);
+  if (backfillBudget > 0) {
+    const bf = await backfillSparsePlayers(page, existing, {
+      limit: backfillBudget,
+    });
+    refreshedPlayers += bf.refreshed;
+    if (bf.refreshed > 0) {
+      changed = true;
+      touched.push(...bf.slugs);
+    }
+  }
+
   if (changed) {
     const reindexed = existing.map((row, idx) => ({ ...row, id: idx + 1 }));
     await writeFile(file, JSON.stringify(reindexed, null, 2) + "\n", "utf8");
@@ -622,12 +718,82 @@ async function syncAnimeTerbaru(page, dataDir) {
 
   return {
     checked: listings.length,
-    anime_touched: touched.length,
+    anime_touched: [...new Set(touched)].length,
     added: addedAnime,
     updated: updatedAnime,
     episodes_added: addedEps,
-    slugs: touched,
+    players_refreshed: refreshedPlayers,
+    slugs: [...new Set(touched)],
   };
+}
+
+/**
+ * Scrape ulang episode dengan player sparse (batas [limit] per sync).
+ * Prioritas: released_at terbaru, lalu episode tertinggi, lalu paling sedikit player.
+ */
+async function backfillSparsePlayers(page, existing, { limit = 30 } = {}) {
+  if (limit <= 0) return { refreshed: 0, slugs: [] };
+
+  const candidates = [];
+  for (const anime of existing) {
+    for (const ep of anime.episodes || []) {
+      if (!isSparsePlayers(ep)) continue;
+      if (!ensureEpisodeSource(anime, ep)) continue;
+      candidates.push({ anime, ep });
+    }
+  }
+
+  candidates.sort((a, b) => {
+    const ra = Date.parse(a.ep.released_at || "") || 0;
+    const rb = Date.parse(b.ep.released_at || "") || 0;
+    if (rb !== ra) return rb - ra;
+    const ea = Number(a.ep.episode) || 0;
+    const eb = Number(b.ep.episode) || 0;
+    if (eb !== ea) return eb - ea;
+    return playerCount(a.ep) - playerCount(b.ep);
+  });
+
+  const batch = candidates.slice(0, limit);
+  let refreshed = 0;
+  const slugs = [];
+
+  console.log(
+    `[samehadaku-sync] backfill sparse players: ${batch.length}/${candidates.length} kandidat (limit ${limit})`
+  );
+
+  for (let i = 0; i < batch.length; i++) {
+    const { anime, ep } = batch[i];
+    const before = playerCount(ep);
+    const oldPlayers = [...(ep.players || [])];
+    try {
+      console.log(
+        `[samehadaku-sync] backfill ${anime.slug} #${ep.episode} (${before} players)`
+      );
+      await scrapeEpisodePlayers(page, ep);
+      if (shouldKeepNewPlayers(oldPlayers, ep.players)) {
+        anime.players = preferPlayers(anime.episodes);
+        refreshed += 1;
+        slugs.push(anime.slug);
+        console.log(
+          `[samehadaku-sync] ~backfill ${anime.slug} #${ep.episode}: ${before} → ${playerCount(ep)}`
+        );
+      } else {
+        ep.players = oldPlayers;
+        console.log(
+          `[samehadaku-sync] backfill keep old ${anime.slug} #${ep.episode} (${before})`
+        );
+      }
+    } catch (err) {
+      ep.players = oldPlayers;
+      console.warn(
+        `[samehadaku-sync] backfill ${anime.slug} #${ep.episode}:`,
+        err.message
+      );
+    }
+    if (i < batch.length - 1) await sleep(DETAIL_DELAY_MS);
+  }
+
+  return { refreshed, slugs: [...new Set(slugs)] };
 }
 
 async function syncAnimeMovies(page, dataDir) {
@@ -748,6 +914,46 @@ export async function syncSamehadakuCatalog(dataDir) {
     const anime = await syncAnimeTerbaru(page, dataDir);
     const animeMovies = await syncAnimeMovies(page, dataDir);
     return { anime, animeMovies };
+  } finally {
+    await browser.close();
+  }
+}
+
+/**
+ * Hanya refresh player episode sparse (tanpa sync feed penuh).
+ * @param {string} dataDir
+ * @param {{ limit?: number }} [opts]
+ */
+export async function refreshSparseAnimePlayers(dataDir, opts = {}) {
+  await mkdir(dataDir, { recursive: true });
+  const file = join(dataDir, "anime.json");
+  const existing = await readJsonArray(file);
+  const limit = Math.max(0, Number(opts.limit ?? PLAYER_REFRESH_LIMIT) || 0);
+  if (!existing.length || limit <= 0) {
+    return { refreshed: 0, slugs: [], checked: existing.length };
+  }
+
+  const browser = await launchBrowser();
+  const context = await browser.newContext({
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    viewport: { width: 1365, height: 900 },
+    locale: "id-ID",
+  });
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+  });
+  const page = await context.newPage();
+
+  try {
+    await page.goto(TERBARU_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
+    await waitReady(page);
+    const bf = await backfillSparsePlayers(page, existing, { limit });
+    if (bf.refreshed > 0) {
+      const reindexed = existing.map((row, idx) => ({ ...row, id: idx + 1 }));
+      await writeFile(file, JSON.stringify(reindexed, null, 2) + "\n", "utf8");
+    }
+    return { ...bf, checked: existing.length };
   } finally {
     await browser.close();
   }
