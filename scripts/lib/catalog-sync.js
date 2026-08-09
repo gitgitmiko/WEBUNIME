@@ -30,7 +30,10 @@ const THROTTLE_MS = 5 * 60 * 1000;
 const DETAIL_DELAY_MS = 200;
 const SERIES_LATEST_PAGES = 2;
 const SERIES_LATEST_FEED_CAP = 80;
-const SERIES_LATEST_DETAIL_BUDGET = 12;
+/** Budget scrape judul baru dari /latest-series per sync. */
+const SERIES_LATEST_ADD_BUDGET = 8;
+/** Budget backfill episode yang belum ada (prioritas di atas judul baru). */
+const SERIES_LATEST_UPDATE_BUDGET = 24;
 const QUALITY_BACKFILL_PAGES = 5;
 
 let syncInFlight = null;
@@ -539,12 +542,18 @@ async function scrapeSeriesDetail(item) {
     durasi:
       item.durasi ||
       [
-        watch.total_eps ? `${watch.total_eps} eps` : "",
+        Math.max(watch.total_eps || 0, episodes.length)
+          ? `${Math.max(watch.total_eps || 0, episodes.length)} eps`
+          : "",
         watch.total_season ? `S.${watch.total_season}` : item.season_label,
       ]
         .filter(Boolean)
         .join(" · "),
-    episodes_count: watch.total_eps || item.episodes_count || episodes.length,
+    episodes_count: Math.max(
+      Number(watch.total_eps) || 0,
+      Number(item.episodes_count) || 0,
+      episodes.length
+    ) || null,
     seasons_count: watch.total_season || null,
     genre: item.genre || [],
     sinopsis: buildFullDescription(html, judul),
@@ -897,7 +906,8 @@ async function mergeSeriesLatestFeed(dataDir, listings) {
 }
 
 /**
- * Pastikan parent series di series.json punya episode dari feed latest (budget terbatas).
+ * Pastikan parent series di series.json punya episode dari feed latest.
+ * Prioritas: backfill episode yang kurang dulu, baru scrape judul baru.
  */
 async function ensureSeriesFromLatestListings(dataDir, listings) {
   const file = join(dataDir, "series.json");
@@ -913,76 +923,132 @@ async function ensureSeriesFromLatestListings(dataDir, listings) {
     unique.push(item);
   }
 
-  let budget = SERIES_LATEST_DETAIL_BUDGET;
+  const needsBackfill = (current, item) => {
+    const targetEp = Number(item.episode) || 0;
+    const targetSeason = item.season || 1;
+    if (!targetEp) return false;
+    const maxKnown = Math.max(
+      0,
+      ...(current.episodes || [])
+        .filter(
+          (e) =>
+            e.season == null || Number(e.season) === Number(targetSeason)
+        )
+        .map((e) => Number(e.episode) || 0)
+    );
+    // Feed bilang eps N, katalog masih < N → backfill.
+    if (maxKnown < targetEp) return true;
+    // Atau episodes_count/badge tertinggal dari jumlah scraped.
+    const knownCount =
+      Number(current.episodes_count) || current.episodes?.length || 0;
+    return knownCount < targetEp;
+  };
+
+  async function appendMissingEpisodes(current, item) {
+    const { html: detailHtml } = await resolveDramaHtml(item.slug);
+    const remoteEps = extractSeasonEpisodes(detailHtml);
+    const knownSlugs = new Set((current.episodes || []).map((e) => e.slug));
+    const missing = remoteEps.filter((e) => e.slug && !knownSlugs.has(e.slug));
+    const watch = extractWatchMeta(detailHtml);
+    if (missing.length) {
+      const scraped = await scrapeEpisodePlayers(missing);
+      current.episodes = [...(current.episodes || []), ...scraped].sort(
+        (a, b) => a.season - b.season || a.episode - b.episode
+      );
+    }
+    current.episodes_count = Math.max(
+      current.episodes?.length || 0,
+      Number(watch.total_eps) || 0
+    );
+    const seasonLabel =
+      item.season_label ||
+      (watch.total_season ? `S.${watch.total_season}` : null);
+    current.durasi = [
+      current.episodes_count ? `${current.episodes_count} eps` : "",
+      seasonLabel,
+    ]
+      .filter(Boolean)
+      .join(" · ");
+    const latest = [...(current.episodes || [])]
+      .reverse()
+      .find((e) => e.players?.length);
+    if (latest?.players?.length) current.players = latest.players;
+    return missing.length;
+  }
+
   let addedCount = 0;
   let updatedCount = 0;
   const addedSlugs = [];
   const updatedSlugs = [];
   let changed = false;
+  let updateBudget = SERIES_LATEST_UPDATE_BUDGET;
+  let addBudget = SERIES_LATEST_ADD_BUDGET;
 
-  for (let i = 0; i < unique.length && budget > 0; i++) {
+  // Pass 1 — backfill episode (prioritas, agar feed "EPS 11" tidak buka detail kosong).
+  for (let i = 0; i < unique.length && updateBudget > 0; i++) {
     const item = unique[i];
     const current = bySlug.get(item.slug);
+    if (!current || !needsBackfill(current, item)) continue;
 
-    if (!current) {
-      budget -= 1;
-      try {
-        const series = await scrapeSeriesDetail(item);
-        series.id = nextId(existing);
-        existing.unshift(series);
-        bySlug.set(series.slug, series);
-        addedCount += 1;
-        addedSlugs.push(series.slug);
-        changed = true;
-        console.log(`[lk21-sync] +series (latest) ${series.slug}`);
-      } catch (err) {
-        console.warn(`[lk21-sync] series-latest new ${item.slug}:`, err.message);
-      }
-      if (i < unique.length - 1) await sleep(DETAIL_DELAY_MS);
-      continue;
-    }
-
-    const targetEp = item.episode;
-    const targetSeason = item.season || 1;
-    const hasEp = (current.episodes || []).some(
-      (e) =>
-        Number(e.episode) === Number(targetEp) &&
-        (e.season == null || Number(e.season) === Number(targetSeason))
-    );
-    if (hasEp) continue;
-
-    budget -= 1;
+    updateBudget -= 1;
     try {
-      const { html: detailHtml } = await resolveDramaHtml(item.slug);
-      const remoteEps = extractSeasonEpisodes(detailHtml);
-      const knownSlugs = new Set((current.episodes || []).map((e) => e.slug));
-      const missing = remoteEps.filter((e) => e.slug && !knownSlugs.has(e.slug));
-      if (missing.length) {
-        const scraped = await scrapeEpisodePlayers(missing);
-        current.episodes = [...(current.episodes || []), ...scraped].sort(
-          (a, b) => a.season - b.season || a.episode - b.episode
-        );
-        current.episodes_count = Math.max(
-          Number(current.episodes_count) || 0,
-          current.episodes.length,
-          Number(extractWatchMeta(detailHtml).total_eps) || 0
-        );
-        const latest = [...current.episodes]
-          .reverse()
-          .find((e) => e.players?.length);
-        if (latest?.players?.length) current.players = latest.players;
-        if (item.durasi) current.durasi = item.durasi;
+      const added = await appendMissingEpisodes(current, item);
+      if (added > 0 || needsBackfill(current, item) === false) {
         updatedCount += 1;
         updatedSlugs.push(item.slug);
         changed = true;
         console.log(
-          `[lk21-sync] +ep (latest) ${item.slug} (+${missing.length} episode)`
+          `[lk21-sync] +ep (latest) ${item.slug} (+${added} episode → ${current.episodes_count})`
+        );
+      } else if (added === 0) {
+        // Site belum punya eps yang dijanjikan feed — tetap update badge dari yang ada.
+        console.warn(
+          `[lk21-sync] series-latest gap ${item.slug}: feed eps ${item.episode}, site ${current.episodes?.length || 0}`
         );
       }
     } catch (err) {
       console.warn(`[lk21-sync] series-latest update ${item.slug}:`, err.message);
     }
-    if (i < unique.length - 1) await sleep(DETAIL_DELAY_MS);
+    await sleep(DETAIL_DELAY_MS);
+  }
+
+  // Pass 2 — judul baru.
+  for (let i = 0; i < unique.length && addBudget > 0; i++) {
+    const item = unique[i];
+    if (bySlug.has(item.slug)) continue;
+
+    addBudget -= 1;
+    try {
+      const series = await scrapeSeriesDetail(item);
+      series.id = nextId(existing);
+      existing.unshift(series);
+      bySlug.set(series.slug, series);
+      addedCount += 1;
+      addedSlugs.push(series.slug);
+      changed = true;
+      console.log(
+        `[lk21-sync] +series (latest) ${series.slug} (${series.episodes?.length || 0}/${series.episodes_count || "?"} eps)`
+      );
+      // Listing lebih maju dari halaman detail → coba backfill sekali lagi.
+      if (needsBackfill(series, item)) {
+        try {
+          const added = await appendMissingEpisodes(series, item);
+          if (added > 0) {
+            console.log(
+              `[lk21-sync] +ep (latest-immediate) ${series.slug} (+${added})`
+            );
+          }
+        } catch (err) {
+          console.warn(
+            `[lk21-sync] series-latest immediate ${series.slug}:`,
+            err.message
+          );
+        }
+      }
+    } catch (err) {
+      console.warn(`[lk21-sync] series-latest new ${item.slug}:`, err.message);
+    }
+    await sleep(DETAIL_DELAY_MS);
   }
 
   if (changed) {
@@ -1013,7 +1079,8 @@ async function ensureSeriesFromLatestListings(dataDir, listings) {
     updated: updatedCount,
     slugs: addedSlugs,
     updatedSlugs,
-    detail_budget_left: budget,
+    update_budget_left: updateBudget,
+    add_budget_left: addBudget,
   };
 }
 
