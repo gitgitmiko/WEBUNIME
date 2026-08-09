@@ -79800,26 +79800,65 @@
         "players": [
           {
             "no": 1,
-            "server": "wibufile",
-            "label": "Wibufile 480p",
-            "url": "https://api.wibufile.com/embed/cc05d769-6db9-4182-ba1c-4179366c45f4",
-            "default": true,
-            "post": "51517",
-            "nume": "1"
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyaP86Z3qpe6QyLOvedxveS-RaGtu5zWQsaqj_8RPeSP-C2T8EgawlBlg3VLPBH8uvAeD3rOgZeaxv6wYZtHBgOISJ3GoL4GdFL1HIHkj8e6Ix_vv2ZO4qFdOChZ969lSOQhL0",
+            "default": true
           },
           {
             "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/2pfJP1nWPu",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/cc05d769-6db9-4182-ba1c-4179366c45f4",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/Lv999nM-05-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false
+          },
+          {
+            "no": 5,
+            "server": "wibufile",
+            "label": "Wibufile 1080p",
+            "url": "https://s0.wibufile.com/video01/Lv999nM-05-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false
+          },
+          {
+            "no": 6,
             "server": "mega",
             "label": "Mega 480p",
             "url": "https://mega.nz/embed/17RwGTAb#XEX5lUOr9Zei5u6CKG4zOsVZ9JoJZ7z1rfk6xPvPoj4",
-            "default": false,
-            "post": "51517",
-            "nume": "6"
+            "default": false
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/cmwhzTJI#Sq5SV4x418CdYlsl0Gxxi8KNY1Os9pCjGZD4MTF-3z4",
+            "default": false
+          },
+          {
+            "no": 8,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/Yr9xzA4Y#YneSfBIORXcr46wOLIhubm6c09dN-OS1AQOqTzu-nbI",
+            "default": false
           }
         ],
         "skip": {
           "source": "none"
-        }
+        },
+        "has_players": true
       },
       {
         "episode": 6,
