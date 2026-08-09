@@ -1253,6 +1253,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       const sameha = await syncSamehadakuCatalog(dataDir);
       results.anime = sameha.anime;
       results.animeMovies = sameha.animeMovies;
+      results.animeSchedule = sameha.schedule;
     } catch (err) {
       console.warn("[sync] samehadaku:", err.message);
       results.anime = {

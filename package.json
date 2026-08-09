@@ -16,6 +16,7 @@
     "scrape:indonesia": "node scripts/scrape-indonesia.js",
     "scrape:anime": "node scripts/scrape-anime.js",
     "scrape:anime-movie": "node scripts/scrape-anime-movie.js",
+    "scrape:anime-schedule": "node scripts/scrape-anime-schedule.js",
     "enrich:aniskip": "node scripts/enrich-aniskip.js",
     "enrich:landscape": "node scripts/enrich-landscape.js",
     "fix:player-hosts": "node scripts/fix-player-hosts.js",

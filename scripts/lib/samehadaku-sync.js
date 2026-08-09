@@ -6,6 +6,9 @@
  *
  * Anime movie: https://v2.samehadaku.how/anime-movie/
  *   → hanya tambah judul baru ke anime-movies.json
+ *
+ * Jadwal rilis: https://v2.samehadaku.how/jadwal-rilis/
+ *   → public/data/anime-schedule.json (overwrite tiap sync)
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -16,9 +19,22 @@ import { extractSiteLandscape } from "./landscape-utils.js";
 const BASE = "https://v2.samehadaku.how";
 const TERBARU_URL = `${BASE}/anime-terbaru/`;
 const MOVIE_URL = `${BASE}/anime-movie/`;
+const SCHEDULE_URL = `${BASE}/jadwal-rilis/`;
 const TERBARU_PAGES = 5;
 const MOVIE_PAGES = 2;
 const DETAIL_DELAY_MS = 350;
+const SCHEDULE_DAY_DELAY_MS = 500;
+
+/** Urutan tab di halaman jadwal-rilis (data-day + label UI). */
+const SCHEDULE_DAYS = [
+  { day: "monday", label: "Senin" },
+  { day: "tuesday", label: "Selasa" },
+  { day: "wednesday", label: "Rabu" },
+  { day: "thursday", label: "Kamis" },
+  { day: "friday", label: "Jumaat" },
+  { day: "saturday", label: "Sabtu" },
+  { day: "sunday", label: "Minggu" },
+];
 /** Di bawah ini dianggap belum lengkap → scrape ulang. */
 const PLAYER_MIN_COMPLETE = 6;
 /** Batas refresh sparse per sync (env: ANIME_PLAYER_REFRESH_LIMIT). */
@@ -893,6 +909,176 @@ async function syncAnimeMovies(page, dataDir) {
 }
 
 /**
+ * Parse kartu jadwal di tab hari yang sedang aktif.
+ * @param {import('playwright').Page} page
+ */
+async function extractScheduleDayItems(page) {
+  return page.evaluate(() => {
+    const root = document.querySelector(".result-schedule") || document;
+    const posts = [...root.querySelectorAll(".animepost")];
+    return posts
+      .map((post) => {
+        const link =
+          post.querySelector("a[href*='/anime/']") ||
+          post.querySelector("a[href]");
+        const href = link?.href || "";
+        const slugMatch = href.match(/\/anime\/([^/?#]+)/i);
+        const slug = slugMatch ? slugMatch[1] : "";
+        const title =
+          post.querySelector(".data .title")?.textContent?.trim() ||
+          post.querySelector("img[alt]")?.getAttribute("alt")?.trim() ||
+          "";
+        const genreText =
+          post.querySelector(".data .type")?.textContent?.trim() || "";
+        const thumb =
+          post.querySelector("img.anmsa")?.getAttribute("src") ||
+          post.querySelector("img")?.getAttribute("src") ||
+          "";
+        const scoreRaw = post.querySelector(".score")?.textContent || "";
+        const rating = scoreRaw.replace(/[^\d.]/g, "").trim();
+        const type =
+          post.querySelector(".content-thumb .type")?.textContent?.trim() ||
+          "";
+        const timeRaw =
+          post.querySelector(".ltseps")?.textContent ||
+          post.querySelector(".data_tw")?.textContent ||
+          "";
+        const timeMatch = String(timeRaw).match(/(\d{1,2}:\d{2})/);
+        return {
+          slug,
+          judul: title,
+          nama: title,
+          thumbnail: thumb,
+          rating,
+          type,
+          genre: genreText
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean),
+          time: timeMatch ? timeMatch[1] : "",
+          source: href,
+        };
+      })
+      .filter((row) => row.slug);
+  });
+}
+
+/**
+ * Scrape jadwal rilis mingguan → anime-schedule.json
+ * @param {import('playwright').Page} page
+ * @param {string} dataDir
+ */
+export async function syncAnimeSchedule(page, dataDir) {
+  process.stdout.write(`[samehadaku-sync] jadwal-rilis ... `);
+  await page.goto(SCHEDULE_URL, {
+    waitUntil: "domcontentloaded",
+    timeout: 120000,
+  });
+  if (!(await waitReady(page))) {
+    throw new Error("Cloudflare timeout (jadwal-rilis)");
+  }
+  await page.waitForSelector(".east_days_option[data-day]", { timeout: 30000 });
+  await page.waitForTimeout(600);
+
+  const days = [];
+  let totalItems = 0;
+
+  for (const meta of SCHEDULE_DAYS) {
+    const tab = page.locator(`.east_days_option[data-day="${meta.day}"]`).first();
+    if ((await tab.count()) === 0) {
+      console.warn(`[samehadaku-sync] tab ${meta.day} tidak ditemukan`);
+      days.push({ day: meta.day, label: meta.label, items: [] });
+      continue;
+    }
+
+    await tab.click();
+    await page.waitForTimeout(SCHEDULE_DAY_DELAY_MS);
+    await page
+      .waitForFunction(
+        (day) => {
+          const on = document.querySelector(
+            `.east_days_option.on[data-day="${day}"]`
+          );
+          const box = document.querySelector(".result-schedule");
+          if (!on || !box) return false;
+          return (
+            box.querySelector(".animepost") != null ||
+            box.querySelector(".noschedule") != null ||
+            /tidak ada|no schedule/i.test(box.textContent || "")
+          );
+        },
+        meta.day,
+        { timeout: 20000 }
+      )
+      .catch(() => {});
+
+    const rawItems = await extractScheduleDayItems(page);
+    const seen = new Set();
+    const items = [];
+    for (const row of rawItems) {
+      if (seen.has(row.slug)) continue;
+      seen.add(row.slug);
+      items.push({
+        slug: row.slug,
+        judul: cleanTitle(row.judul || row.nama || row.slug),
+        nama: cleanTitle(row.nama || row.judul || row.slug),
+        thumbnail: absUrl(row.thumbnail),
+        rating: row.rating || "",
+        type: row.type || "",
+        genre: Array.isArray(row.genre) ? row.genre : [],
+        time: row.time || "",
+        source: absUrl(row.source || `${BASE}/anime/${row.slug}/`),
+      });
+    }
+
+    days.push({ day: meta.day, label: meta.label, items });
+    totalItems += items.length;
+    process.stdout.write(`${meta.label}:${items.length} `);
+  }
+
+  const payload = {
+    source: SCHEDULE_URL,
+    scraped_at: new Date().toISOString(),
+    timezone: "Asia/Jakarta",
+    days,
+  };
+
+  const file = join(dataDir, "anime-schedule.json");
+  await writeFile(file, JSON.stringify(payload, null, 2) + "\n", "utf8");
+  console.log(`→ ${totalItems} item → anime-schedule.json`);
+
+  return {
+    days: days.length,
+    items: totalItems,
+    file: "anime-schedule.json",
+  };
+}
+
+/**
+ * Hanya scrape jadwal (browser sendiri). Untuk `npm run scrape:anime-schedule`.
+ * @param {string} dataDir
+ */
+export async function scrapeAnimeScheduleOnly(dataDir) {
+  await mkdir(dataDir, { recursive: true });
+  const browser = await launchBrowser();
+  const context = await browser.newContext({
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    viewport: { width: 1365, height: 900 },
+    locale: "id-ID",
+  });
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+  });
+  const page = await context.newPage();
+  try {
+    return await syncAnimeSchedule(page, dataDir);
+  } finally {
+    await browser.close();
+  }
+}
+
+/**
  * @param {string} dataDir public/data
  */
 export async function syncSamehadakuCatalog(dataDir) {
@@ -916,7 +1102,14 @@ export async function syncSamehadakuCatalog(dataDir) {
 
     const anime = await syncAnimeTerbaru(page, dataDir);
     const animeMovies = await syncAnimeMovies(page, dataDir);
-    return { anime, animeMovies };
+    let schedule = { days: 0, items: 0, error: null };
+    try {
+      schedule = await syncAnimeSchedule(page, dataDir);
+    } catch (err) {
+      console.warn("[samehadaku-sync] jadwal-rilis:", err.message);
+      schedule = { days: 0, items: 0, error: err.message };
+    }
+    return { anime, animeMovies, schedule };
   } finally {
     await browser.close();
   }
