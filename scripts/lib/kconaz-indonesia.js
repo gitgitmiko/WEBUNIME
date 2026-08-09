@@ -960,6 +960,7 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
       if (detailKey !== "|") addedTitles.add(detailKey);
       if (listKey !== "|") addedTitles.add(listKey);
       if (idKey) addedIdentities.add(idKey);
+      movie.is_new = true;
       added.push(movie);
       console.log(`[kconaz-sync] +indonesia ${movie.slug} (${movie.tahun || "?"})`);
     } catch (err) {

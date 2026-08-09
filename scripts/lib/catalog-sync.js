@@ -391,6 +391,43 @@ async function readJsonArray(filePath) {
   }
 }
 
+/** File katalog yang punya badge NEW di app TV. */
+const IS_NEW_FILES = [
+  "movies.json",
+  "series.json",
+  "series-latest.json",
+  "horror.json",
+  "indonesia.json",
+  "anime.json",
+  "anime-movies.json",
+  "anime-latest.json",
+];
+
+/**
+ * Hapus flag is_new dari sync sebelumnya.
+ * Judul/feed yang baru di-scrape pada run ini akan di-set is_new lagi.
+ */
+async function clearIsNewFlags(dataDir) {
+  let cleared = 0;
+  for (const name of IS_NEW_FILES) {
+    const file = join(dataDir, name);
+    const items = await readJsonArray(file);
+    let changed = false;
+    for (const item of items) {
+      if (item && Object.prototype.hasOwnProperty.call(item, "is_new")) {
+        delete item.is_new;
+        changed = true;
+        cleared += 1;
+      }
+    }
+    if (changed) {
+      await writeFile(file, JSON.stringify(items, null, 2) + "\n", "utf8");
+    }
+  }
+  console.log(`[catalog-sync] reset is_new (${cleared} flag dihapus)`);
+  return cleared;
+}
+
 async function readJsonObject(filePath) {
   try {
     const data = JSON.parse(await readFile(filePath, "utf8"));
@@ -595,6 +632,7 @@ async function syncMoviesCatalog(dataDir) {
       const movie = await scrapeMovieDetail(item);
       if (!movie) continue;
       movie.id = nextId([...existing, ...added]);
+      movie.is_new = true;
       added.push(movie);
       bySlug.set(movie.slug, movie);
       console.log(`[lk21-sync] +film ${movie.slug}`);
@@ -661,6 +699,7 @@ async function syncHorrorCatalog(dataDir) {
       const movie = await scrapeMovieDetail(item, { genreLabel: "Horror", catalog: "horror" });
       if (!movie) continue;
       movie.id = nextId([...existing, ...added]);
+      movie.is_new = true;
       added.push(movie);
       console.log(`[lk21-sync] +horror ${movie.slug}`);
     } catch (err) {
@@ -745,6 +784,7 @@ async function syncSeriesCatalog(dataDir) {
           continue;
         }
         series.id = nextId(existing);
+        series.is_new = true;
         existing.unshift(series);
         bySlug.set(series.slug, series);
         addedCount += 1;
@@ -879,6 +919,7 @@ async function mergeSeriesLatestFeed(dataDir, listings) {
         source: item.source,
         released_at: now,
         feed_rank: rank.get(key) ?? 9999,
+        is_new: true,
       });
     }
   }
@@ -1020,6 +1061,7 @@ async function ensureSeriesFromLatestListings(dataDir, listings) {
     try {
       const series = await scrapeSeriesDetail(item);
       series.id = nextId(existing);
+      series.is_new = true;
       existing.unshift(series);
       bySlug.set(series.slug, series);
       addedCount += 1;
@@ -1169,6 +1211,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
   syncInFlight = (async () => {
     const started = Date.now();
     console.log("[catalog-sync] mulai (LK21 → kconaz Indonesia → Samehadaku)…");
+    await clearIsNewFlags(dataDir);
     const results = {
       movies: await syncMoviesCatalog(dataDir),
       series: await syncSeriesCatalog(dataDir),

@@ -196,6 +196,7 @@ async function mergeAnimeLatestFeed(dataDir, listings) {
         released_on: item.released_on || "",
         released_at: now,
         feed_rank: rank.get(key) ?? 9999,
+        is_new: true,
       });
     }
   }
@@ -608,6 +609,7 @@ async function syncAnimeTerbaru(page, dataDir) {
           episodes: detail.episodes,
           players: preferPlayers(detail.episodes),
           id: nextId(existing),
+          is_new: true,
         };
         if (detail.thumbnail_landscape) {
           entry.thumbnail_landscape = detail.thumbnail_landscape;
@@ -864,6 +866,7 @@ async function syncAnimeMovies(page, dataDir) {
         episodes: detail.episodes,
         players: preferPlayers(detail.episodes),
         id: nextId([...existing, ...added]),
+        is_new: true,
       };
       if (detail.thumbnail_landscape) {
         entry.thumbnail_landscape = detail.thumbnail_landscape;
