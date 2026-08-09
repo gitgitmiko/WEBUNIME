@@ -28,6 +28,9 @@ const USER_AGENT =
 
 const THROTTLE_MS = 5 * 60 * 1000;
 const DETAIL_DELAY_MS = 200;
+const SERIES_LATEST_PAGES = 2;
+const SERIES_LATEST_FEED_CAP = 80;
+const SERIES_LATEST_DETAIL_BUDGET = 12;
 const QUALITY_BACKFILL_PAGES = 5;
 
 let syncInFlight = null;
@@ -164,7 +167,12 @@ function extractListings(html, { seriesMode = false } = {}) {
       continue;
     }
     const slug = slugFromPath(path);
-    if (!slug || /^(latest|search|genre|year|page|top-series|nontondrama)/i.test(slug)) continue;
+    if (
+      !slug ||
+      /^(latest|search|genre|year|page|top-series|nontondrama)/i.test(slug)
+    ) {
+      continue;
+    }
 
     const genreRaw =
       block.match(/itemprop=["']genre["'][^>]*content=["']([^"']+)["']/i)?.[1] || "";
@@ -812,6 +820,256 @@ async function syncSeriesCatalog(dataDir) {
   };
 }
 
+function parseSeasonNumber(label) {
+  const m = String(label || "").match(/S\.?\s*(\d+)/i);
+  return m ? Number(m[1]) : 1;
+}
+
+/**
+ * Feed Series Terbaru (per update episode) dari /latest-series — pola anime-latest.
+ */
+async function mergeSeriesLatestFeed(dataDir, listings) {
+  const file = join(dataDir, "series-latest.json");
+  const existing = await readJsonArray(file);
+  const byKey = new Map(
+    existing.map((row) => [
+      `${row.series_slug}#${row.season || 1}#${row.episode}`,
+      row,
+    ])
+  );
+  const now = new Date().toISOString();
+  const rank = new Map();
+  listings.forEach((item, idx) => {
+    if (!item.slug || !item.episode) return;
+    const key = `${item.slug}#${item.season || 1}#${item.episode}`;
+    if (!rank.has(key)) rank.set(key, idx);
+  });
+
+  for (const item of listings) {
+    if (!item.slug || !item.episode) continue;
+    const season = item.season || 1;
+    const key = `${item.slug}#${season}#${item.episode}`;
+    const prev = byKey.get(key);
+    if (prev) {
+      byKey.set(key, {
+        ...prev,
+        nama: item.title || prev.nama,
+        judul: item.title || prev.judul,
+        thumbnail: item.thumbnail || prev.thumbnail,
+        source: item.source || prev.source,
+        season_label: item.season_label || prev.season_label,
+      });
+    } else {
+      byKey.set(key, {
+        series_slug: item.slug,
+        nama: item.title,
+        judul: item.title,
+        episode: item.episode,
+        season,
+        season_label: item.season_label || `S.${season}`,
+        thumbnail: item.thumbnail,
+        source: item.source,
+        released_at: now,
+        feed_rank: rank.get(key) ?? 9999,
+      });
+    }
+  }
+
+  const merged = [...byKey.values()]
+    .map((row) => {
+      const key = `${row.series_slug}#${row.season || 1}#${row.episode}`;
+      return {
+        ...row,
+        feed_rank: rank.has(key) ? rank.get(key) : (row.feed_rank ?? 9999),
+      };
+    })
+    .sort((a, b) => {
+      const ra = a.feed_rank ?? 9999;
+      const rb = b.feed_rank ?? 9999;
+      if (ra !== rb && (ra < 9000 || rb < 9000)) return ra - rb;
+      return String(b.released_at || "").localeCompare(String(a.released_at || ""));
+    })
+    .slice(0, SERIES_LATEST_FEED_CAP)
+    .map((row, idx) => ({ ...row, id: idx + 1 }));
+
+  await writeFile(file, JSON.stringify(merged, null, 2) + "\n", "utf8");
+  return merged;
+}
+
+/**
+ * Pastikan parent series di series.json punya episode dari feed latest (budget terbatas).
+ */
+async function ensureSeriesFromLatestListings(dataDir, listings) {
+  const file = join(dataDir, "series.json");
+  const playersFile = join(dataDir, "series-players.json");
+  const existing = await readJsonArray(file);
+  const bySlug = new Map(existing.map((m) => [m.slug, m]));
+
+  const seen = new Set();
+  const unique = [];
+  for (const item of listings) {
+    if (!item.slug || seen.has(item.slug)) continue;
+    seen.add(item.slug);
+    unique.push(item);
+  }
+
+  let budget = SERIES_LATEST_DETAIL_BUDGET;
+  let addedCount = 0;
+  let updatedCount = 0;
+  const addedSlugs = [];
+  const updatedSlugs = [];
+  let changed = false;
+
+  for (let i = 0; i < unique.length && budget > 0; i++) {
+    const item = unique[i];
+    const current = bySlug.get(item.slug);
+
+    if (!current) {
+      budget -= 1;
+      try {
+        const series = await scrapeSeriesDetail(item);
+        series.id = nextId(existing);
+        existing.unshift(series);
+        bySlug.set(series.slug, series);
+        addedCount += 1;
+        addedSlugs.push(series.slug);
+        changed = true;
+        console.log(`[lk21-sync] +series (latest) ${series.slug}`);
+      } catch (err) {
+        console.warn(`[lk21-sync] series-latest new ${item.slug}:`, err.message);
+      }
+      if (i < unique.length - 1) await sleep(DETAIL_DELAY_MS);
+      continue;
+    }
+
+    const targetEp = item.episode;
+    const targetSeason = item.season || 1;
+    const hasEp = (current.episodes || []).some(
+      (e) =>
+        Number(e.episode) === Number(targetEp) &&
+        (e.season == null || Number(e.season) === Number(targetSeason))
+    );
+    if (hasEp) continue;
+
+    budget -= 1;
+    try {
+      const { html: detailHtml } = await resolveDramaHtml(item.slug);
+      const remoteEps = extractSeasonEpisodes(detailHtml);
+      const knownSlugs = new Set((current.episodes || []).map((e) => e.slug));
+      const missing = remoteEps.filter((e) => e.slug && !knownSlugs.has(e.slug));
+      if (missing.length) {
+        const scraped = await scrapeEpisodePlayers(missing);
+        current.episodes = [...(current.episodes || []), ...scraped].sort(
+          (a, b) => a.season - b.season || a.episode - b.episode
+        );
+        current.episodes_count = Math.max(
+          Number(current.episodes_count) || 0,
+          current.episodes.length,
+          Number(extractWatchMeta(detailHtml).total_eps) || 0
+        );
+        const latest = [...current.episodes]
+          .reverse()
+          .find((e) => e.players?.length);
+        if (latest?.players?.length) current.players = latest.players;
+        if (item.durasi) current.durasi = item.durasi;
+        updatedCount += 1;
+        updatedSlugs.push(item.slug);
+        changed = true;
+        console.log(
+          `[lk21-sync] +ep (latest) ${item.slug} (+${missing.length} episode)`
+        );
+      }
+    } catch (err) {
+      console.warn(`[lk21-sync] series-latest update ${item.slug}:`, err.message);
+    }
+    if (i < unique.length - 1) await sleep(DETAIL_DELAY_MS);
+  }
+
+  if (changed) {
+    await writeFile(file, JSON.stringify(existing, null, 2) + "\n", "utf8");
+    const playersMap = await readJsonObject(playersFile);
+    for (const slug of [...addedSlugs, ...updatedSlugs]) {
+      const series = bySlug.get(slug);
+      if (!series) continue;
+      playersMap[slug] = {
+        slug,
+        film: series.judul,
+        type: "series",
+        source: series.source,
+        scraped_at: new Date().toISOString(),
+        episodes: (series.episodes || []).map((e) => ({
+          season: e.season,
+          episode: e.episode,
+          slug: e.slug,
+          players: e.players,
+        })),
+      };
+    }
+    await writeFile(playersFile, JSON.stringify(playersMap, null, 2) + "\n", "utf8");
+  }
+
+  return {
+    added: addedCount,
+    updated: updatedCount,
+    slugs: addedSlugs,
+    updatedSlugs,
+    detail_budget_left: budget,
+  };
+}
+
+export async function syncSeriesLatestCatalog(dataDir) {
+  const allListings = [];
+  for (let page = 1; page <= SERIES_LATEST_PAGES; page++) {
+    const url =
+      page === 1
+        ? `${LIST_BASE}/latest-series`
+        : `${LIST_BASE}/latest-series/page/${page}`;
+    process.stdout.write(`[lk21-sync] series-latest ${url} ... `);
+    try {
+      const { html } = await fetchHtml(url);
+      const pageItems = extractListings(html, { seriesMode: true });
+      console.log(`${pageItems.length} kartu`);
+      allListings.push(...pageItems);
+    } catch (err) {
+      console.warn(`gagal: ${err.message}`);
+    }
+    if (page < SERIES_LATEST_PAGES) await sleep(DETAIL_DELAY_MS);
+  }
+
+  const feedListings = allListings
+    .map((item) => {
+      const episode = item.episodes_count || null;
+      if (!item.slug || !episode) return null;
+      const season = parseSeasonNumber(item.season_label);
+      return {
+        slug: item.slug,
+        title: item.title,
+        thumbnail: item.thumbnail,
+        source: item.source,
+        episode,
+        season,
+        season_label: item.season_label || `S.${season}`,
+        episodes_count: episode,
+        durasi: item.durasi,
+        tahun: item.tahun,
+        rating: item.rating,
+        genre: item.genre,
+      };
+    })
+    .filter(Boolean);
+
+  const feed = await mergeSeriesLatestFeed(dataDir, feedListings);
+  console.log(
+    `[lk21-sync] series-latest feed: ${feedListings.length} scrape → ${feed.length} tersimpan`
+  );
+  const ensure = await ensureSeriesFromLatestListings(dataDir, feedListings);
+  return {
+    checked: feedListings.length,
+    feed: feed.length,
+    ...ensure,
+  };
+}
+
 /**
  * @param {string} rootDir project root
  * @param {{ force?: boolean }} [opts]
@@ -848,9 +1106,25 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     const results = {
       movies: await syncMoviesCatalog(dataDir),
       series: await syncSeriesCatalog(dataDir),
+      seriesLatest: { checked: 0, feed: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
       horror: await syncHorrorCatalog(dataDir),
       indonesia: { checked: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
     };
+
+    try {
+      results.seriesLatest = await syncSeriesLatestCatalog(dataDir);
+    } catch (err) {
+      console.warn("[sync] series-latest:", err.message);
+      results.seriesLatest = {
+        checked: 0,
+        feed: 0,
+        added: 0,
+        updated: 0,
+        slugs: [],
+        updatedSlugs: [],
+        error: err.message,
+      };
+    }
 
     try {
       results.indonesia = await syncIndonesiaCatalog(dataDir);
@@ -963,6 +1237,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     const added =
       results.movies.added +
       results.series.added +
+      (results.seriesLatest?.added || 0) +
       results.horror.added +
       (results.indonesia?.added || 0) +
       (results.anime?.added || 0) +
@@ -970,6 +1245,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     const updated =
       results.movies.updated +
       results.series.updated +
+      (results.seriesLatest?.updated || 0) +
       results.horror.updated +
       (results.indonesia?.updated || 0) +
       (results.anime?.updated || 0) +
