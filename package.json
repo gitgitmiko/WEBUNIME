@@ -18,7 +18,6 @@
     "scrape:anime-movie": "node scripts/scrape-anime-movie.js",
     "enrich:aniskip": "node scripts/enrich-aniskip.js",
     "enrich:landscape": "node scripts/enrich-landscape.js",
-    "enrich:trailer": "node scripts/enrich-trailer.js",
     "fix:player-hosts": "node scripts/fix-player-hosts.js",
     "sync:anime-players": "node scripts/refresh-anime-players.js",
     "sync:catalog": "node scripts/sync-catalog.js --force"

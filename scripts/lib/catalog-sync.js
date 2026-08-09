@@ -14,7 +14,6 @@ import {
 } from "./lk21-quality.js";
 import { enrichAnimeCatalog } from "../enrich-aniskip.js";
 import { enrichLandscapeCatalog } from "../enrich-landscape.js";
-import { enrichTrailerCatalog } from "../enrich-trailer.js";
 import { extractSiteLandscape } from "./landscape-utils.js";
 import {
   rewritePlayerUrl,
@@ -1265,23 +1264,6 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     } catch (err) {
       console.warn("[sync] landscape:", err.message);
       results.landscape = { error: err.message };
-    }
-
-    // Trailer YouTube key (TMDB) — batch kecil, prioritas rating tinggi.
-    try {
-      const trailerLimit = Number(process.env.TRAILER_ENRICH_LIMIT || 40);
-      console.log(
-        `[catalog-sync] enrich trailer (rating≥7, limit ${trailerLimit})…`
-      );
-      results.trailer = await enrichTrailerCatalog(rootDir, {
-        force: false,
-        limit: trailerLimit,
-        ratingMin: 7,
-        quiet: false,
-      });
-    } catch (err) {
-      console.warn("[sync] trailer:", err.message);
-      results.trailer = { error: err.message };
     }
 
     // Rewrite host player lama → baru di seluruh JSON (alias map).
