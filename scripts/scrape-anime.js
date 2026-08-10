@@ -8,7 +8,8 @@
  *   node scripts/scrape-anime.js --pages 1 --headed
  *   node scripts/scrape-anime.js --limit 3
  *
- * Hasil: public/data/anime.json
+ * Hasil default: public/data/mobile/anime.json (app HP)
+ * Flag --tv → public/data/anime.json (app TV)
  */
 
 import { writeFile, mkdir, readFile } from "node:fs/promises";
@@ -19,13 +20,13 @@ import { chromium } from "playwright";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const DATA_DIR = join(ROOT, "public", "data");
-const ANIME_FILE = join(DATA_DIR, "anime.json");
+const MOBILE_DIR = join(DATA_DIR, "mobile");
 
 const BASE = "https://v2.samehadaku.how";
 const LIST_URL = `${BASE}/daftar-anime-2/?title&status&type&order=update`;
 
 function parseArgs(argv) {
-  const out = { pages: 1, delay: 400, slug: "", limit: 0, headed: false };
+  const out = { pages: 1, delay: 400, slug: "", limit: 0, headed: false, tv: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--pages" && argv[i + 1]) out.pages = Math.max(1, Number(argv[++i]) || 1);
@@ -33,6 +34,7 @@ function parseArgs(argv) {
     else if (a === "--slug" && argv[i + 1]) out.slug = String(argv[++i]).trim();
     else if (a === "--limit" && argv[i + 1]) out.limit = Math.max(0, Number(argv[++i]) || 0);
     else if (a === "--headed") out.headed = true;
+    else if (a === "--tv") out.tv = true;
   }
   return out;
 }
@@ -231,6 +233,20 @@ function extractDetail(html, fallback = {}) {
     (fallback.genre?.length && fallback.genre) ||
     [];
 
+  // Status dari spek/infoanime Samehadaku
+  const statusRaw =
+    html.match(/Status\s*:?\s*<\/[^>]+>\s*<[^>]+>([^<]+)/i)?.[1] ||
+    html.match(/>\s*Status\s*<[\s\S]{0,80}?>(Ongoing|Completed|Finished|Hiatus|Upcoming)/i)?.[1] ||
+    html.match(/\b(Ongoing|Completed|Finished Airing|Currently Airing)\b/i)?.[1] ||
+    "";
+  const statusNorm = String(statusRaw || "").trim().toLowerCase();
+  let status = "";
+  if (/complete|finish|selesai|ended/i.test(statusNorm)) status = "Completed";
+  else if (/ongoing|airing|berlangsung/i.test(statusNorm)) status = "Ongoing";
+  else if (/hiatus/i.test(statusNorm)) status = "Hiatus";
+  else if (/upcom/i.test(statusNorm)) status = "Upcoming";
+  else if (statusNorm) status = statusRaw.trim();
+
   return {
     judul: h1 || fallback.title || fallback.slug,
     thumbnail: absUrl(thumb),
@@ -238,6 +254,7 @@ function extractDetail(html, fallback = {}) {
     votes: votes ? Number(String(votes).replace(/,/g, "")) : null,
     sinopsis: sinopsis || `Anime ${h1 || fallback.title}.`,
     genre,
+    status,
     related,
     episodes,
   };
@@ -358,6 +375,7 @@ async function scrapeAnimeDetail(page, item, { delay }) {
     durasi: detail.episodes.length ? `${detail.episodes.length} eps` : "",
     episodes_count: detail.episodes.length,
     genre: detail.genre?.length ? detail.genre : item.genre || [],
+    status: detail.status || "",
     sinopsis: [
       detail.sinopsis,
       detail.related?.length
@@ -382,10 +400,12 @@ function isBadAnimeEntry(a) {
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
-  await mkdir(DATA_DIR, { recursive: true });
+  const outDir = opts.tv ? DATA_DIR : MOBILE_DIR;
+  const ANIME_FILE = join(outDir, "anime.json");
+  await mkdir(outDir, { recursive: true });
 
   console.log(
-    `Scrape Samehadaku daftar-anime (pages=${opts.pages}` +
+    `Scrape Samehadaku daftar-anime → ${opts.tv ? "TV" : "mobile"} (pages=${opts.pages}` +
       `${opts.slug ? `, slug=${opts.slug}` : ""}` +
       `${opts.limit ? `, limit=${opts.limit}` : ""})\n`
   );
