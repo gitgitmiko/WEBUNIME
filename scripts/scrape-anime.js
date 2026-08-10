@@ -375,6 +375,11 @@ async function scrapeAnimeDetail(page, item, { delay }) {
   };
 }
 
+function isBadAnimeEntry(a) {
+  const t = String(a?.judul || a?.nama || a?.title || "");
+  return /error\s*1015|just a moment|cloudflare|attention required|checking your browser/i.test(t);
+}
+
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
   await mkdir(DATA_DIR, { recursive: true });
@@ -404,11 +409,22 @@ async function main() {
       const url =
         p <= 1 ? LIST_URL : `${BASE}/daftar-anime-2/page/${p}/?title&status&type&order=update`;
       process.stdout.write(`→ List ${p}/${opts.pages} ... `);
-      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
-      await waitReady(page);
-      await page.waitForTimeout(1000);
-      const html = await page.content();
-      const items = extractListings(html);
+      let items = [];
+      for (let attempt = 1; attempt <= 4; attempt++) {
+        await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
+        await waitReady(page);
+        await page.waitForTimeout(1200 + attempt * 800);
+        const html = await page.content();
+        items = extractListings(html);
+        if (items.length > 0) break;
+        // Soft-block / CF kosong: balik ke daftar page 1 lalu retry
+        process.stdout.write(`(retry ${attempt}) `);
+        if (p > 1) {
+          await page.goto(LIST_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
+          await waitReady(page);
+          await page.waitForTimeout(1500);
+        }
+      }
       let added = 0;
       for (const item of items) {
         if (!bySlug.has(item.slug)) {
@@ -467,17 +483,39 @@ async function main() {
       existing = [];
     }
     const map = new Map(existing.map((a) => [a.slug, a]));
-    for (const a of anime) map.set(a.slug, a);
+    let skippedBad = 0;
+    for (const a of anime) {
+      if (!a?.slug) continue;
+      if (isBadAnimeEntry(a)) {
+        skippedBad += 1;
+        // Jangan timpa data bagus dengan halaman CF / Error 1015
+        if (!map.has(a.slug)) {
+          // skip entirely
+        }
+        continue;
+      }
+      const prev = map.get(a.slug);
+      // Jangan ganti entri lama yang punya episode dengan hasil kosong
+      if (
+        prev &&
+        Array.isArray(prev.episodes) &&
+        prev.episodes.length > 0 &&
+        (!Array.isArray(a.episodes) || a.episodes.length === 0)
+      ) {
+        skippedBad += 1;
+        continue;
+      }
+      map.set(a.slug, a);
+    }
     const merged = [...anime.map((a) => a.slug), ...existing.map((a) => a.slug)]
       .filter((s, idx, arr) => arr.indexOf(s) === idx)
-      .map((slug, idx) => {
-        const row = map.get(slug);
-        return { ...row, id: idx + 1 };
-      });
+      .map((slug) => map.get(slug))
+      .filter(Boolean)
+      .map((row, idx) => ({ ...row, id: idx + 1 }));
 
     await writeFile(ANIME_FILE, JSON.stringify(merged, null, 2) + "\n", "utf8");
     console.log(
-      `\nSelesai. anime.json: ${merged.length} total (baru/diupdate: ${anime.length})`
+      `\nSelesai. anime.json: ${merged.length} total (baru/diupdate: ${anime.length - skippedBad}, skip bad: ${skippedBad})`
     );
   } finally {
     await browser.close();
