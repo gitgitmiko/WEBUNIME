@@ -2,6 +2,7 @@
  * Sync inkremental katalog:
  * - LK21: film / series / horor (halaman 1)
  * - Samehadaku: anime-terbaru (5 hlm, episode baru) + anime-movie (judul baru)
+ *   ditulis ke public/data (TV) dan public/data/mobile (HP)
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -12,8 +13,6 @@ import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
 } from "./lk21-quality.js";
-import { enrichAnimeCatalog } from "../enrich-aniskip.js";
-import { enrichLandscapeCatalog } from "../enrich-landscape.js";
 import { extractSiteLandscape } from "./landscape-utils.js";
 import {
   rewritePlayerUrl,
@@ -1206,7 +1205,9 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
   }
 
   const dataDir = join(rootDir, "public", "data");
+  const mobileDir = join(dataDir, "mobile");
   await mkdir(dataDir, { recursive: true });
+  await mkdir(mobileDir, { recursive: true });
 
   syncInFlight = (async () => {
     const started = Date.now();
@@ -1250,9 +1251,11 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     }
 
     try {
-      const sameha = await syncSamehadakuCatalog(dataDir);
+      const sameha = await syncSamehadakuCatalog(dataDir, [mobileDir]);
       results.anime = sameha.anime;
+      results.animeMobile = sameha.animeMobile;
       results.animeMovies = sameha.animeMovies;
+      results.animeMoviesMobile = sameha.animeMoviesMobile;
       results.animeSchedule = sameha.schedule;
     } catch (err) {
       console.warn("[sync] samehadaku:", err.message);
@@ -1269,45 +1272,6 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
         updated: 0,
         error: err.message,
       };
-    }
-
-    // Isi field skip OP/ED untuk episode yang belum punya (AniSkip).
-    // Batch kecil + hanya pending — jangan scan 200+ anime tiap sync.
-    try {
-      const aniskipLimit = Number(process.env.ANISKIP_ENRICH_LIMIT || 15);
-      const aniskipMaxEps = Number(process.env.ANISKIP_MAX_EPS || 6);
-      console.log(
-        `[catalog-sync] enrich AniSkip (pending, limit ${aniskipLimit}, maxEps ${aniskipMaxEps})…`
-      );
-      results.aniskip = await enrichAnimeCatalog(rootDir, {
-        force: false,
-        quiet: false,
-        pendingOnly: true,
-        limit: aniskipLimit,
-        maxEps: aniskipMaxEps,
-        delayMal: 500,
-        delaySkip: 120,
-      });
-    } catch (err) {
-      console.warn("[sync] aniskip:", err.message);
-      results.aniskip = { error: err.message };
-    }
-
-    // Thumbnail landscape (TMDB backdrop → situs). Batch terbatas agar CI tidak timeout.
-    try {
-      const landLimit = Number(process.env.LANDSCAPE_ENRICH_LIMIT || 80);
-      console.log(
-        `[catalog-sync] enrich landscape (tanpa field, limit ${landLimit})…`
-      );
-      results.landscape = await enrichLandscapeCatalog(rootDir, {
-        force: false,
-        limit: landLimit,
-        quiet: false,
-        refetchSite: true,
-      });
-    } catch (err) {
-      console.warn("[sync] landscape:", err.message);
-      results.landscape = { error: err.message };
     }
 
     // Rewrite host player lama → baru di seluruh JSON (alias map).
@@ -1334,7 +1298,9 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       results.horror.added +
       (results.indonesia?.added || 0) +
       (results.anime?.added || 0) +
-      (results.animeMovies?.added || 0);
+      (results.animeMobile?.added || 0) +
+      (results.animeMovies?.added || 0) +
+      (results.animeMoviesMobile?.added || 0);
     const updated =
       results.movies.updated +
       results.series.updated +
@@ -1342,7 +1308,9 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       results.horror.updated +
       (results.indonesia?.updated || 0) +
       (results.anime?.updated || 0) +
-      (results.animeMovies?.updated || 0);
+      (results.animeMobile?.updated || 0) +
+      (results.animeMovies?.updated || 0) +
+      (results.animeMoviesMobile?.updated || 0);
     const payload = {
       ok: true,
       skipped: false,

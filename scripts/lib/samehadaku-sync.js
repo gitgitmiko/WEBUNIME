@@ -9,6 +9,7 @@
  *
  * Jadwal rilis: https://v2.samehadaku.how/jadwal-rilis/
  *   → public/data/anime-schedule.json (overwrite tiap sync)
+ *     + salinan yang sama ke extraDirs (public/data/mobile)
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
@@ -485,7 +486,19 @@ function ensureEpisodeSource(anime, ep) {
   return ep.source;
 }
 
+/** Cache player per URL episode agar TV + mobile tidak scrape server dua kali. */
+const scrapedPlayersBySource = new Map();
+
+function clonePlayers(players) {
+  return JSON.parse(JSON.stringify(players || []));
+}
+
 async function scrapeEpisodePlayers(page, ep) {
+  const cacheKey = String(ep.source || "").trim();
+  if (!ep.inline && cacheKey && scrapedPlayersBySource.has(cacheKey)) {
+    ep.players = clonePlayers(scrapedPlayersBySource.get(cacheKey));
+    return ep;
+  }
   if (!ep.inline) {
     await page.goto(ep.source, { waitUntil: "domcontentloaded", timeout: 120000 });
     if (!(await waitReady(page))) throw new Error("Cloudflare timeout");
@@ -493,7 +506,21 @@ async function scrapeEpisodePlayers(page, ep) {
   }
   const html = await page.content();
   ep.players = await resolvePlayers(page, html);
+  if (cacheKey && ep.players?.length) {
+    scrapedPlayersBySource.set(cacheKey, clonePlayers(ep.players));
+  }
   return ep;
+}
+
+function asDataDirs(dataDirs) {
+  const dirs = Array.isArray(dataDirs) ? dataDirs : [dataDirs];
+  return [...new Set(dirs.filter(Boolean))];
+}
+
+function dirLabel(dataDir) {
+  return /[/\\]mobile$/i.test(String(dataDir).replace(/[/\\]+$/, ""))
+    ? "mobile"
+    : "tv";
 }
 
 function preferPlayers(episodes) {
@@ -508,11 +535,7 @@ function preferPlayers(episodes) {
     : latest.players;
 }
 
-async function syncAnimeTerbaru(page, dataDir) {
-  const file = join(dataDir, "anime.json");
-  const existing = await readJsonArray(file);
-  const bySlug = new Map(existing.map((a) => [a.slug, a]));
-
+async function collectTerbaruListings(page) {
   const listings = [];
   const seenKey = new Set();
   for (let p = 1; p <= TERBARU_PAGES; p++) {
@@ -535,6 +558,15 @@ async function syncAnimeTerbaru(page, dataDir) {
     if (!batch.length && p > 1) break;
     if (p < TERBARU_PAGES) await sleep(DETAIL_DELAY_MS);
   }
+  return listings;
+}
+
+async function applyTerbaruToCatalog(page, dataDir, listings) {
+  const file = join(dataDir, "anime.json");
+  const existing = await readJsonArray(file);
+  const bySlug = new Map(existing.map((a) => [a.slug, a]));
+  const label = dirLabel(dataDir);
+  console.log(`[samehadaku-sync] terbaru apply → ${label} (${existing.length} judul)`);
 
   // Simpan feed "Anime Terbaru" (episode rilis, descending)
   await mergeAnimeLatestFeed(dataDir, listings);
@@ -735,6 +767,7 @@ async function syncAnimeTerbaru(page, dataDir) {
   }
 
   return {
+    target: dirLabel(dataDir),
     checked: listings.length,
     anime_touched: [...new Set(touched)].length,
     added: addedAnime,
@@ -743,6 +776,16 @@ async function syncAnimeTerbaru(page, dataDir) {
     players_refreshed: refreshedPlayers,
     slugs: [...new Set(touched)],
   };
+}
+
+async function syncAnimeTerbaru(page, dataDirs) {
+  const dirs = asDataDirs(dataDirs);
+  const listings = await collectTerbaruListings(page);
+  const results = [];
+  for (const dataDir of dirs) {
+    results.push(await applyTerbaruToCatalog(page, dataDir, listings));
+  }
+  return results.length === 1 ? results[0] : results;
 }
 
 /**
@@ -814,11 +857,7 @@ async function backfillSparsePlayers(page, existing, { limit = 30 } = {}) {
   return { refreshed, slugs: [...new Set(slugs)] };
 }
 
-async function syncAnimeMovies(page, dataDir) {
-  const file = join(dataDir, "anime-movies.json");
-  const existing = await readJsonArray(file);
-  const bySlug = new Map(existing.map((a) => [a.slug, a]));
-
+async function collectMovieListings(page) {
   const listings = [];
   for (let p = 1; p <= MOVIE_PAGES; p++) {
     const url = p <= 1 ? MOVIE_URL : `${BASE}/anime-movie/page/${p}/`;
@@ -835,6 +874,16 @@ async function syncAnimeMovies(page, dataDir) {
     if (!batch.length && p > 1) break;
     if (p < MOVIE_PAGES) await sleep(DETAIL_DELAY_MS);
   }
+  return listings;
+}
+
+async function applyMoviesToCatalog(page, dataDir, listings) {
+  const file = join(dataDir, "anime-movies.json");
+  const existing = await readJsonArray(file);
+  const bySlug = new Map(existing.map((a) => [a.slug, a]));
+  console.log(
+    `[samehadaku-sync] movie apply → ${dirLabel(dataDir)} (${existing.length} judul)`
+  );
 
   const newcomers = listings.filter((l) => !bySlug.has(l.slug));
   const added = [];
@@ -901,11 +950,22 @@ async function syncAnimeMovies(page, dataDir) {
   }
 
   return {
+    target: dirLabel(dataDir),
     checked: listings.length,
     added: added.length,
     updated: 0,
     slugs: added.map((m) => m.slug),
   };
+}
+
+async function syncAnimeMovies(page, dataDirs) {
+  const dirs = asDataDirs(dataDirs);
+  const listings = await collectMovieListings(page);
+  const results = [];
+  for (const dataDir of dirs) {
+    results.push(await applyMoviesToCatalog(page, dataDir, listings));
+  }
+  return results.length === 1 ? results[0] : results;
 }
 
 /**
@@ -966,9 +1026,10 @@ async function extractScheduleDayItems(page) {
 /**
  * Scrape jadwal rilis mingguan → anime-schedule.json
  * @param {import('playwright').Page} page
- * @param {string} dataDir
+ * @param {string|string[]} dataDirs
  */
-export async function syncAnimeSchedule(page, dataDir) {
+export async function syncAnimeSchedule(page, dataDirs) {
+  const dirs = asDataDirs(dataDirs);
   process.stdout.write(`[samehadaku-sync] jadwal-rilis ... `);
   await page.goto(SCHEDULE_URL, {
     waitUntil: "domcontentloaded",
@@ -1043,9 +1104,13 @@ export async function syncAnimeSchedule(page, dataDir) {
     days,
   };
 
-  const file = join(dataDir, "anime-schedule.json");
-  await writeFile(file, JSON.stringify(payload, null, 2) + "\n", "utf8");
-  console.log(`→ ${totalItems} item → anime-schedule.json`);
+  for (const dataDir of dirs) {
+    const file = join(dataDir, "anime-schedule.json");
+    await writeFile(file, JSON.stringify(payload, null, 2) + "\n", "utf8");
+  }
+  console.log(
+    `→ ${totalItems} item → anime-schedule.json (${dirs.map(dirLabel).join(", ")})`
+  );
 
   return {
     days: days.length,
@@ -1079,10 +1144,12 @@ export async function scrapeAnimeScheduleOnly(dataDir) {
 }
 
 /**
- * @param {string} dataDir public/data
+ * @param {string} dataDir public/data (TV)
+ * @param {string[]} [extraDirs] mis. public/data/mobile
  */
-export async function syncSamehadakuCatalog(dataDir) {
-  await mkdir(dataDir, { recursive: true });
+export async function syncSamehadakuCatalog(dataDir, extraDirs = []) {
+  const dirs = asDataDirs([dataDir, ...extraDirs]);
+  for (const dir of dirs) await mkdir(dir, { recursive: true });
   const browser = await launchBrowser();
   const context = await browser.newContext({
     userAgent:
@@ -1100,16 +1167,24 @@ export async function syncSamehadakuCatalog(dataDir) {
     await page.goto(TERBARU_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
     await waitReady(page);
 
-    const anime = await syncAnimeTerbaru(page, dataDir);
-    const animeMovies = await syncAnimeMovies(page, dataDir);
+    const animeAll = await syncAnimeTerbaru(page, dirs);
+    const moviesAll = await syncAnimeMovies(page, dirs);
+    const animeRows = Array.isArray(animeAll) ? animeAll : [animeAll];
+    const movieRows = Array.isArray(moviesAll) ? moviesAll : [moviesAll];
     let schedule = { days: 0, items: 0, error: null };
     try {
-      schedule = await syncAnimeSchedule(page, dataDir);
+      schedule = await syncAnimeSchedule(page, dirs);
     } catch (err) {
       console.warn("[samehadaku-sync] jadwal-rilis:", err.message);
       schedule = { days: 0, items: 0, error: err.message };
     }
-    return { anime, animeMovies, schedule };
+    return {
+      anime: animeRows[0],
+      animeMobile: animeRows[1] || null,
+      animeMovies: movieRows[0],
+      animeMoviesMobile: movieRows[1] || null,
+      schedule,
+    };
   } finally {
     await browser.close();
   }
