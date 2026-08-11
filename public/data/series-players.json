@@ -313087,7 +313087,7 @@
     "film": "The Legend of Zu (2015)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/legend-zu-2015",
-    "scraped_at": "2026-08-11T08:21:55.568Z",
+    "scraped_at": "2026-08-11T08:49:58.957Z",
     "episodes": [
       {
         "season": 1,
@@ -313330,6 +313330,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/5HX9u4Mfu",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "legend-zu-season-1-episode-8-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWjs3fAQpIkM5Nm9JZCs1EAQuJjRadG4CZml3VR4LBz07HhoORnRxAjBhdEE",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7addb9d4faa",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/drzf905l06wz",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/ollBYgP6xM",
             "default": false
           }
         ]
