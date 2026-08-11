@@ -1229,3 +1229,215 @@ export async function refreshSparseAnimePlayers(dataDir, opts = {}) {
     await browser.close();
   }
 }
+
+function sameEpisode(a, b) {
+  const na = Number(a);
+  const nb = Number(b);
+  if (Number.isFinite(na) && Number.isFinite(nb)) return Math.abs(na - nb) < 1e-9;
+  return String(a) === String(b);
+}
+
+async function loadAnimeCatalogs(dataDirs) {
+  const dirs = asDataDirs(dataDirs);
+  const catalogs = [];
+  for (const dir of dirs) {
+    await mkdir(dir, { recursive: true });
+    const file = join(dir, "anime.json");
+    catalogs.push({
+      dir,
+      file,
+      label: dirLabel(dir),
+      list: await readJsonArray(file),
+    });
+  }
+  return catalogs;
+}
+
+async function repairOneOnPage(page, catalogs, slug, epNum) {
+  let found = catalogs.some((cat) => cat.list.some((a) => a.slug === slug));
+  if (!found) {
+    const detailUrl = `${BASE}/anime/${slug}/`;
+    console.log(`[repair] anime belum di katalog, ambil ${detailUrl}`);
+    await page.goto(detailUrl, { waitUntil: "domcontentloaded", timeout: 120000 });
+    if (!(await waitReady(page))) throw new Error("Cloudflare timeout (detail)");
+    await page.waitForTimeout(600);
+    const detail = extractAnimeDetailMeta(await page.content(), { slug, source: detailUrl });
+    const nama = (detail.judul || slug).replace(/\s*\(\d{4}\)\s*$/, "").trim();
+    for (const cat of catalogs) {
+      if (cat.list.some((a) => a.slug === slug)) continue;
+      cat.list.unshift({
+        type: "anime",
+        source_site: "samehadaku",
+        nama,
+        judul: detail.judul,
+        tahun: detail.judul?.match(/\b(20\d{2})\b/)?.[1] || "",
+        thumbnail: detail.thumbnail || "",
+        rating: detail.rating,
+        votes: detail.votes,
+        durasi: detail.episodes.length ? `${detail.episodes.length} eps` : "",
+        episodes_count: detail.episodes.length,
+        genre: detail.genre,
+        sinopsis: detail.sinopsis,
+        related: [],
+        slug,
+        source: detailUrl,
+        season_label: "",
+        episodes: JSON.parse(JSON.stringify(detail.episodes)),
+        players: [],
+        id: nextId(cat.list),
+        is_new: false,
+      });
+    }
+  }
+
+  for (const cat of catalogs) {
+    const row = cat.list.find((a) => a.slug === slug);
+    if (!row) continue;
+    row.episodes = Array.isArray(row.episodes) ? row.episodes : [];
+    let ep = row.episodes.find((e) => sameEpisode(e.episode, epNum));
+    if (!ep) {
+      ep = {
+        episode: epNum,
+        title: `${row.judul || row.nama || slug} Episode ${epNum}`,
+        slug: `${slug}-episode-${epNum}`,
+        source: episodeWatchUrl(slug, epNum),
+        date: "",
+        released_at: new Date().toISOString(),
+        players: [],
+      };
+      row.episodes.push(ep);
+      row.episodes.sort((a, b) => Number(a.episode) - Number(b.episode));
+      row.episodes_count = row.episodes.length;
+    } else {
+      ensureEpisodeSource(row, ep);
+    }
+  }
+
+  const primary = catalogs[0].list.find((a) => a.slug === slug);
+  const primaryEp = primary?.episodes?.find((e) => sameEpisode(e.episode, epNum));
+  if (!primaryEp) throw new Error(`episode ${epNum} tidak ditemukan`);
+
+  const before = playerCount(primaryEp);
+  console.log(`[repair] ${slug} #${epNum} (${before} players) → scrape`);
+  await scrapeEpisodePlayers(page, primaryEp);
+  const players = clonePlayers(primaryEp.players);
+  const after = players.length;
+
+  if (!after) {
+    console.warn(`[repair] ${slug} #${epNum}: kosong, katalog tidak diubah`);
+    return { slug, episode: epNum, before, after, updated: false };
+  }
+
+  for (const cat of catalogs) {
+    const row = cat.list.find((a) => a.slug === slug);
+    const ep = row?.episodes?.find((e) => sameEpisode(e.episode, epNum));
+    if (!row || !ep) continue;
+    ep.players = clonePlayers(players);
+    ep.source = primaryEp.source || ep.source;
+    row.players = preferPlayers(row.episodes);
+    row.episodes_count = row.episodes.length;
+    const reindexed = cat.list.map((item, idx) => ({ ...item, id: idx + 1 }));
+    await writeFile(cat.file, JSON.stringify(reindexed, null, 2) + "\n", "utf8");
+    console.log(`[repair] tulis ${cat.label} ${slug} #${epNum}: ${before} → ${after}`);
+  }
+
+  return { slug, episode: epNum, before, after, updated: true };
+}
+
+async function withRepairBrowser(fn) {
+  const browser = await launchBrowser();
+  const context = await browser.newContext({
+    userAgent:
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    viewport: { width: 1365, height: 900 },
+    locale: "id-ID",
+  });
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+  });
+  const page = await context.newPage();
+  try {
+    await page.goto(TERBARU_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
+    await waitReady(page);
+    return await fn(page);
+  } finally {
+    await browser.close();
+  }
+}
+
+/**
+ * Scrape ulang 1 episode (TV + mobile) dari laporan player HP.
+ * Tidak menjalankan sync katalog penuh.
+ *
+ * @param {string|string[]} dataDirs
+ * @param {{ slug: string, episode: number|string }} opts
+ */
+export async function repairAnimeEpisode(dataDirs, opts = {}) {
+  const slug = String(opts.slug || "")
+    .trim()
+    .toLowerCase();
+  const epNum = Number(opts.episode);
+  if (!slug || !Number.isFinite(epNum) || epNum <= 0) {
+    throw new Error("slug/episode tidak valid");
+  }
+  const catalogs = await loadAnimeCatalogs(dataDirs);
+  return withRepairBrowser((page) => repairOneOnPage(page, catalogs, slug, epNum));
+}
+
+/**
+ * Proses antrean laporan harian (satu browser).
+ * @param {string|string[]} dataDirs
+ * @param {{ slug: string, episode: number|string }[]} items
+ * @param {{ delayMs?: number, limit?: number }} [opts]
+ */
+export async function repairAnimeEpisodeBatch(dataDirs, items, opts = {}) {
+  const delayMs = Math.max(0, Number(opts.delayMs ?? DETAIL_DELAY_MS) || 0);
+  const limit = Math.max(1, Number(opts.limit ?? 40) || 40);
+  const jobs = [];
+  const seen = new Set();
+  for (const raw of items || []) {
+    const slug = String(raw?.slug || "")
+      .trim()
+      .toLowerCase();
+    const epNum = Number(raw?.episode);
+    if (!slug || !Number.isFinite(epNum) || epNum <= 0) continue;
+    const key = `${slug}#${epNum}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    jobs.push({ slug, episode: epNum, reports: Number(raw.reports) || 1 });
+  }
+  jobs.sort((a, b) => b.reports - a.reports);
+  const batch = jobs.slice(0, limit);
+  if (!batch.length) {
+    return { processed: 0, updated: 0, failed: [], skipped: jobs.length };
+  }
+
+  const catalogs = await loadAnimeCatalogs(dataDirs);
+  const results = [];
+  await withRepairBrowser(async (page) => {
+    for (let i = 0; i < batch.length; i++) {
+      const job = batch[i];
+      try {
+        const row = await repairOneOnPage(page, catalogs, job.slug, job.episode);
+        results.push(row);
+      } catch (err) {
+        console.warn(`[repair] ${job.slug} #${job.episode}:`, err.message);
+        results.push({
+          slug: job.slug,
+          episode: job.episode,
+          updated: false,
+          error: err.message,
+        });
+      }
+      if (i < batch.length - 1) await sleep(delayMs);
+    }
+  });
+
+  return {
+    processed: results.length,
+    updated: results.filter((r) => r.updated).length,
+    failed: results.filter((r) => !r.updated),
+    leftover: jobs.slice(limit),
+    results,
+  };
+}
