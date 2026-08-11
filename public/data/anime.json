@@ -19686,7 +19686,10 @@
             "post": "7009",
             "nume": "2"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 609,
@@ -19815,7 +19818,10 @@
             "post": "7018",
             "nume": "2"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 613,
@@ -19842,7 +19848,10 @@
             "post": "7020",
             "nume": "2"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 614,
@@ -19903,7 +19912,10 @@
             "post": "7024",
             "nume": "2"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 616,
@@ -70619,7 +70631,18 @@
             "post": "51810",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 95.255,
+            "end": 180.981
+          },
+          "ed": {
+            "start": 1331.085,
+            "end": 1419.761
+          },
+          "source": "aniskip"
+        }
       }
     ],
     "players": [
@@ -71314,7 +71337,18 @@
             "post": "51039",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 80.671,
+            "end": 170.714
+          },
+          "ed": {
+            "start": 1360.622,
+            "end": 1447.668
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 2,
@@ -71395,7 +71429,18 @@
             "post": "51194",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 93.686,
+            "end": 180.577
+          },
+          "ed": {
+            "start": 1357.367,
+            "end": 1406.544
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 3,
@@ -71476,7 +71521,18 @@
             "post": "51329",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 23.281,
+            "end": 110.957
+          },
+          "ed": {
+            "start": 1390.486,
+            "end": 1480.064
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 4,
@@ -71557,7 +71613,18 @@
             "post": "51480",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 97.989,
+            "end": 186.905
+          },
+          "ed": {
+            "start": 1421.312,
+            "end": 1509.973
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 5,
@@ -71611,7 +71678,14 @@
             "post": "51654",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 84.103,
+            "end": 173.288
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 6,
@@ -71692,7 +71766,18 @@
             "post": "51804",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 100.45,
+            "end": 190.45
+          },
+          "ed": {
+            "start": 1405.629,
+            "end": 1495
+          },
+          "source": "aniskip"
+        }
       }
     ],
     "players": [
@@ -71769,7 +71854,8 @@
         "nume": "8"
       }
     ],
-    "id": 31
+    "id": 31,
+    "mal_id": 62080
   },
   {
     "type": "anime",
@@ -71872,7 +71958,18 @@
             "post": "51187",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 0.308,
+            "end": 89.398
+          },
+          "ed": {
+            "start": 1330.683,
+            "end": 1420.096
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 2,
@@ -71953,7 +72050,18 @@
             "post": "51310",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 120.955,
+            "end": 208.499
+          },
+          "ed": {
+            "start": 1330.695,
+            "end": 1420.01
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 3,
@@ -72034,7 +72142,18 @@
             "post": "51451",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 0,
+            "end": 90.583
+          },
+          "ed": {
+            "start": 1330,
+            "end": 1420
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 4,
@@ -72088,7 +72207,18 @@
             "post": "51622",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 0,
+            "end": 90.208
+          },
+          "ed": {
+            "start": 1329.833,
+            "end": 1420
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 5,
@@ -72160,7 +72290,18 @@
             "post": "51801",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 18.258,
+            "end": 116.268
+          },
+          "ed": {
+            "start": 1332.511,
+            "end": 1420
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 6,
@@ -72237,7 +72378,8 @@
         "nume": "8"
       }
     ],
-    "id": 32
+    "id": 32,
+    "mal_id": 56736
   },
   {
     "type": "anime",
@@ -72356,7 +72498,18 @@
             "post": "51182",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 10.178,
+            "end": 100.178
+          },
+          "ed": {
+            "start": 2416.247,
+            "end": 2811
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 2,
@@ -72446,7 +72599,18 @@
             "post": "51323",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 0,
+            "end": 95.04
+          },
+          "ed": {
+            "start": 1335,
+            "end": 1440.06
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 3,
@@ -72536,7 +72700,18 @@
             "post": "51469",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 4.601,
+            "end": 94.881
+          },
+          "ed": {
+            "start": 1335.421,
+            "end": 1424.07
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 4,
@@ -72599,7 +72774,10 @@
             "post": "51636",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -72689,7 +72867,10 @@
             "post": "51797",
             "nume": "9"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 6,
@@ -72762,7 +72943,10 @@
             "post": "51920",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -72830,7 +73014,8 @@
         "nume": "8"
       }
     ],
-    "id": 33
+    "id": 33,
+    "mal_id": 62542
   },
   {
     "type": "anime",
@@ -72932,7 +73117,10 @@
             "post": "51179",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 2,
@@ -73013,7 +73201,10 @@
             "post": "51320",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 3,
@@ -73094,7 +73285,10 @@
             "post": "51466",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 4,
@@ -73148,7 +73342,10 @@
             "post": "51633",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       },
       {
         "episode": 5,
@@ -73229,7 +73426,18 @@
             "post": "51793",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 74.357,
+            "end": 164.357
+          },
+          "ed": {
+            "start": 1335.415,
+            "end": 1424
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 6,
@@ -73302,7 +73510,10 @@
             "post": "51913",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -73370,7 +73581,8 @@
         "nume": "8"
       }
     ],
-    "id": 34
+    "id": 34,
+    "mal_id": 62289
   },
   {
     "type": "anime",
@@ -73472,7 +73684,18 @@
             "post": "51176",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 16.421,
+            "end": 107.554
+          },
+          "ed": {
+            "start": 1350.26,
+            "end": 1440.042
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 2,
@@ -73553,7 +73776,18 @@
             "post": "51316",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 41.448,
+            "end": 130.628
+          },
+          "ed": {
+            "start": 1350.618,
+            "end": 1440.106
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 3,
@@ -73634,7 +73868,18 @@
             "post": "51462",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 51.736,
+            "end": 141.603
+          },
+          "ed": {
+            "start": 1351.236,
+            "end": 1440.043
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 4,
@@ -73706,7 +73951,14 @@
             "post": "51629",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 124.315,
+            "end": 214.315
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 5,
@@ -73787,7 +74039,14 @@
             "post": "51788",
             "nume": "8"
           }
-        ]
+        ],
+        "skip": {
+          "op": {
+            "start": 36.378,
+            "end": 126.378
+          },
+          "source": "aniskip"
+        }
       },
       {
         "episode": 6,
@@ -73796,7 +74055,10 @@
         "source": "https://v2.samehadaku.how/toumei-na-yoru-ni-kakeru-episode-6/",
         "date": "32 minutes yang lalu",
         "released_at": "2026-08-10T19:06:01.910Z",
-        "players": []
+        "players": [],
+        "skip": {
+          "source": "none"
+        }
       }
     ],
     "players": [
@@ -73873,7 +74135,8 @@
         "nume": "8"
       }
     ],
-    "id": 35
+    "id": 35,
+    "mal_id": 62936
   },
   {
     "type": "anime",
