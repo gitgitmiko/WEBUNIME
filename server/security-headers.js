@@ -1,37 +1,43 @@
 /**
- * Header keamanan dasar untuk aplikasi (bukan untuk response proxy player).
+ * Header keamanan dasar untuk aplikasi.
+ * Permukaan proxy player (/__px__, /__vid__, dll) dikecualikan dari
+ * XFO/CSP ketat agar iframe embed tetap bisa dimuat.
  */
 export function securityHeadersMiddleware(req, res, next) {
-  res.setHeader("X-Content-Type-Options", "nosniff");
-  res.setHeader("X-Frame-Options", "DENY");
-  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-  res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()");
-  res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
-  res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
-
   const path = (req.url || "").split("?")[0] || "/";
   const isProxySurface =
     path.startsWith("/__px__/") ||
     path.startsWith("/__vid__") ||
     path === "/api/resolve" ||
-    path === "/api/embed";
+    path === "/api/embed" ||
+    path === "/__wu_sw.js";
 
-  // CSP ketat untuk app; proxy player memang membuang CSP sendiri.
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()");
+
   if (!isProxySurface) {
+    // Cegah situs lain meng-embed WEBUNIME; jangan pakai di /__px__
+    // karena player kita sendiri di-iframe dari halaman yang sama.
+    res.setHeader("X-Frame-Options", "SAMEORIGIN");
+    res.setHeader("Cross-Origin-Opener-Policy", "same-origin");
+    res.setHeader("Cross-Origin-Resource-Policy", "same-origin");
+
+    // frame-src harus mengizinkan embed eksternal (mega/blogger) + proxy same-origin.
     res.setHeader(
       "Content-Security-Policy",
       [
         "default-src 'self'",
         "base-uri 'self'",
         "form-action 'self'",
-        "frame-ancestors 'none'",
+        "frame-ancestors 'self'",
         "object-src 'none'",
         "script-src 'self'",
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
         "font-src 'self' https://fonts.gstatic.com data:",
         "img-src 'self' data: blob: https:",
         "media-src 'self' blob: https:",
-        "frame-src 'self'",
+        "frame-src 'self' https:",
         "connect-src 'self' https:",
         "upgrade-insecure-requests",
       ].join("; ")
