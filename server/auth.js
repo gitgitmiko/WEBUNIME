@@ -46,6 +46,11 @@ function publicUser(row) {
 }
 
 function readSid(req) {
+  const auth = String(req.headers.authorization || "");
+  if (auth.toLowerCase().startsWith("bearer ")) {
+    const token = auth.slice(7).trim();
+    if (/^[a-f0-9]{64}$/i.test(token)) return token.toLowerCase();
+  }
   const raw = req.cookies?.[COOKIE];
   if (!raw || typeof raw !== "string") return null;
   if (!/^[a-f0-9]{64}$/i.test(raw)) return null;
@@ -115,6 +120,7 @@ export async function getSessionUser(req) {
 export function isPublicPath(pathname) {
   const path = pathname.split("?")[0] || "/";
   if (path.startsWith("/api/auth")) return true;
+  if (path.startsWith("/api/admin/")) return true; // diverifikasi secret di router admin
   if (path === "/" || path === "/index.html") return true;
   if (path.startsWith("/assets/")) return true;
   if (/\.(css|js|map|ico|png|jpe?g|webp|svg|woff2?|ttf|txt)$/i.test(path)) return true;
@@ -233,7 +239,7 @@ export function createAuthRouter() {
       const { sid, expires } = await createSession(userId);
       setSessionCookie(res, sid, expires.getTime() - Date.now());
       const user = await loadUserFromSession(sid);
-      return res.status(201).json({ user });
+      return res.status(201).json({ user, token: sid });
     } catch (err) {
       if (err && err.code === "ER_DUP_ENTRY") {
         return res.status(409).json({ error: "Email atau username sudah terpakai." });
@@ -283,7 +289,7 @@ export function createAuthRouter() {
 
       const { sid, expires } = await createSession(row.id);
       setSessionCookie(res, sid, expires.getTime() - Date.now());
-      return res.json({ user: publicUser(row) });
+      return res.json({ user: publicUser(row), token: sid });
     } catch (err) {
       console.error("[auth/login]", err);
       return res.status(500).json({ error: "Gagal masuk." });

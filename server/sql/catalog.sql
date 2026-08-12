@@ -1,0 +1,22 @@
+-- Katalog WEBUNIME (item per baris + dokumen blob)
+
+CREATE TABLE IF NOT EXISTS catalog_items (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  collection VARCHAR(32) NOT NULL,
+  slug VARCHAR(191) NOT NULL,
+  title VARCHAR(512) NULL,
+  year VARCHAR(32) NULL,
+  thumbnail TEXT NULL,
+  rating VARCHAR(64) NULL,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_collection_slug (collection, slug),
+  KEY idx_collection_title (collection, title(191))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS catalog_docs (
+  name VARCHAR(64) PRIMARY KEY,
+  payload JSON NOT NULL,
+  updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

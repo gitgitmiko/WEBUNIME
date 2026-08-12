@@ -14,14 +14,14 @@ const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
 async function loadMovies() {
-  const res = await fetch("/data/movies.json");
+  const res = await fetch("/api/v1/catalog/movies/all", { credentials: "include" });
   if (!res.ok) throw new Error("Gagal memuat data film");
   movies = await res.json();
 }
 
 async function loadSeries() {
   try {
-    const res = await fetch("/data/series.json");
+    const res = await fetch("/api/v1/catalog/series/all", { credentials: "include" });
     if (!res.ok) {
       series = [];
       return;
@@ -34,7 +34,7 @@ async function loadSeries() {
 
 async function loadHorror() {
   try {
-    const res = await fetch("/data/horror.json");
+    const res = await fetch("/api/v1/catalog/horror/all", { credentials: "include" });
     if (!res.ok) {
       horror = [];
       return;
@@ -47,7 +47,7 @@ async function loadHorror() {
 
 async function loadIndonesia() {
   try {
-    const res = await fetch("/data/indonesia.json");
+    const res = await fetch("/api/v1/catalog/indonesia/all", { credentials: "include" });
     if (!res.ok) {
       indonesia = [];
       return;
@@ -60,7 +60,7 @@ async function loadIndonesia() {
 
 async function loadAnime() {
   try {
-    const res = await fetch("/data/anime.json");
+    const res = await fetch("/api/v1/catalog/anime/all", { credentials: "include" });
     if (!res.ok) {
       anime = [];
       return;
@@ -73,7 +73,7 @@ async function loadAnime() {
 
 async function loadAnimeMovies() {
   try {
-    const res = await fetch("/data/anime-movies.json");
+    const res = await fetch("/api/v1/catalog/anime-movies/all", { credentials: "include" });
     if (!res.ok) {
       animeMovies = [];
       return;
@@ -86,7 +86,7 @@ async function loadAnimeMovies() {
 
 async function loadAnimeLatest() {
   try {
-    const res = await fetch("/data/anime-latest.json");
+    const res = await fetch("/api/v1/catalog/anime-latest/all", { credentials: "include" });
     if (!res.ok) {
       animeLatest = [];
       return;

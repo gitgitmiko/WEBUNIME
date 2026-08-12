@@ -5,6 +5,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { embedProxyMiddleware } from "../plugins/embed-proxy.js";
 import { createAuthRouter, createLoginGuard } from "./auth.js";
+import { createCatalogAdminRouter } from "./catalog-admin.js";
+import { createCatalogReadRouter } from "./catalog-api.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -24,10 +26,20 @@ app.use((req, res, next) => {
 });
 
 app.use(cookieParser());
-app.use(express.json({ limit: "32kb" }));
 
-app.use("/api/auth", createAuthRouter());
+// Auth JSON kecil
+app.use("/api/auth", express.json({ limit: "32kb" }), createAuthRouter());
+
+// Sync katalog dari GitHub Actions (payload besar)
+app.use(
+  "/api/admin/catalog",
+  express.json({ limit: "120mb" }),
+  createCatalogAdminRouter()
+);
+
+app.use(express.json({ limit: "32kb" }));
 app.use(createLoginGuard());
+app.use("/api/v1", createCatalogReadRouter());
 app.use(embedProxyMiddleware);
 
 app.use(
