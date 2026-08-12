@@ -217,16 +217,15 @@ function injectClientShim(pageUrl) {
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Pertahankan hash iframe (p2pplay dll) — fragment tidak pernah sampai server.
-  // PENTING Hydrax: JANGAN buang prefix /__px__/host — itu merusak origin proxy
-  // (App TV memakai URL asli abyssplayer.com; di web prefix wajib dipertahankan).
+  // Hydrax: replaceState ke /{slug} saja — player baca location.pathname sebagai slug.
+  // Aset relatif tetap aman lewat <base href="/__px__/abyssplayer.com/"> (bukan lewat prefix di URL bar).
   try {
     var pathOnly = String(REAL_PATH).split("#")[0];
     var hashFromReal = String(REAL_PATH).indexOf("#") >= 0
       ? String(REAL_PATH).slice(String(REAL_PATH).indexOf("#"))
       : "";
     var hash = hashFromReal || location.hash || "";
-    var nextPath = IS_ABYSS ? (PREFIX + pathOnly + hash) : (pathOnly + hash);
-    history.replaceState(null, "", nextPath);
+    history.replaceState(null, "", pathOnly + hash);
   } catch (e) {}
 
   // Cast / Turbo / Hydrax: tipu deteksi parent / referrer (wajib playeriframe.sbs)
@@ -1439,6 +1438,7 @@ function middleware(req, res, next) {
 
   // Setelah replaceState, request relatif player mengarah ke origin app (bukan /__px__/...).
   // Jangan ambil alih /assets/ Vite sendiri — hanya remap bila referer masih konteks embed.
+  // Hydrax: setelah replaceState ke /{slug}, referer = https://app/{slug} (tanpa /__px__/).
   if (
     path === "/fingerprint-sw.js" ||
     path.startsWith("/cdn-cgi/") ||
@@ -1455,7 +1455,11 @@ function middleware(req, res, next) {
       else if (path.startsWith("/player/") || /\/e\//.test(ref) || /gn1r5n/i.test(ref))
         host = "gn1r5n.org";
       else if (/turbo/i.test(ref)) host = "turbovidhls.com";
-      else if (path.startsWith("/cdn-cgi/")) host = "abyssplayer.com";
+      else if (
+        path.startsWith("/cdn-cgi/") ||
+        /^https?:\/\/[^/]+\/[a-zA-Z0-9_-]{7,17}(?:\?.*)?\/?$/i.test(ref)
+      )
+        host = "abyssplayer.com";
       // Tanpa referer embed: biarkan Vite/static serve (CSS/JS app).
     } catch {
       /* keep null */
