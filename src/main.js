@@ -865,6 +865,10 @@ function bindActions() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
+    if (!$("#authModal")?.classList.contains("hidden")) {
+      closeAuthModal();
+      return;
+    }
     if ($$(".nf-dropdown.is-open").length) {
       closeNfDropdowns();
       return;
@@ -873,6 +877,189 @@ function bindActions() {
     else closeModal();
   });
 }
+
+let currentUser = null;
+
+async function authFetch(path, options = {}) {
+  const res = await fetch(`/api/auth${path}`, {
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
+    ...options,
+  });
+  let data = null;
+  try {
+    data = await res.json();
+  } catch {
+    data = null;
+  }
+  return { res, data };
+}
+
+function setAuthError(msg) {
+  const el = $("#authError");
+  if (!msg) {
+    el.classList.add("hidden");
+    el.textContent = "";
+    return;
+  }
+  el.textContent = msg;
+  el.classList.remove("hidden");
+}
+
+function renderAuthChrome() {
+  const openBtn = $("#authOpenBtn");
+  const chip = $("#authChip");
+  const name = $("#authChipName");
+  const avatar = $("#authAvatar");
+  const tabProfile = $("#authTabProfile");
+
+  if (currentUser) {
+    openBtn.classList.add("hidden");
+    chip.classList.remove("hidden");
+    name.textContent = currentUser.displayName || currentUser.username;
+    avatar.textContent = (currentUser.displayName || currentUser.username || "?").slice(0, 1).toUpperCase();
+    tabProfile.classList.remove("hidden");
+  } else {
+    openBtn.classList.remove("hidden");
+    chip.classList.add("hidden");
+    tabProfile.classList.add("hidden");
+  }
+}
+
+function showAuthPane(mode) {
+  const login = $("#authLoginForm");
+  const register = $("#authRegisterForm");
+  const profile = $("#authProfileForm");
+  const title = $("#authModalTitle");
+  const tabs = {
+    login: $("#authTabLogin"),
+    register: $("#authTabRegister"),
+    profile: $("#authTabProfile"),
+  };
+
+  login.classList.toggle("hidden", mode !== "login");
+  register.classList.toggle("hidden", mode !== "register");
+  profile.classList.toggle("hidden", mode !== "profile");
+
+  Object.entries(tabs).forEach(([key, el]) => {
+    el.classList.toggle("is-active", key === mode);
+    el.setAttribute("aria-selected", key === mode ? "true" : "false");
+  });
+
+  if (mode === "login") title.textContent = "Masuk ke WEBUNIME";
+  else if (mode === "register") title.textContent = "Daftar akun";
+  else title.textContent = "Profil saya";
+
+  if (mode === "profile" && currentUser) {
+    $("#authProfileMeta").textContent = `@${currentUser.username} · ${currentUser.email}`;
+    const input = $("#authProfileForm")?.querySelector('[name="displayName"]');
+    if (input) input.value = currentUser.displayName || "";
+  }
+  setAuthError("");
+}
+
+function openAuthModal(mode = currentUser ? "profile" : "login") {
+  showAuthPane(mode);
+  $("#authModal").classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+}
+
+function closeAuthModal() {
+  $("#authModal").classList.add("hidden");
+  setAuthError("");
+  if ($("#modal").classList.contains("hidden") && $("#player").classList.contains("hidden")) {
+    document.body.style.overflow = "";
+  }
+}
+
+async function refreshAuthSession() {
+  try {
+    const { res, data } = await authFetch("/me");
+    currentUser = res.ok ? data?.user || null : null;
+  } catch {
+    currentUser = null;
+  }
+  renderAuthChrome();
+}
+
+function bindAuth() {
+  $("#authOpenBtn")?.addEventListener("click", () => openAuthModal("login"));
+  $("#authAccountBtn")?.addEventListener("click", () => openAuthModal("profile"));
+  $$("[data-auth-close]").forEach((el) => el.addEventListener("click", closeAuthModal));
+  $("#authTabLogin")?.addEventListener("click", () => showAuthPane("login"));
+  $("#authTabRegister")?.addEventListener("click", () => showAuthPane("register"));
+  $("#authTabProfile")?.addEventListener("click", () => {
+    if (currentUser) showAuthPane("profile");
+  });
+
+  $("#authLoginForm")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const { res, data } = await authFetch("/login", {
+      method: "POST",
+      body: JSON.stringify({
+        login: String(fd.get("login") || ""),
+        password: String(fd.get("password") || ""),
+      }),
+    });
+    if (!res.ok) {
+      setAuthError(data?.error || "Gagal masuk.");
+      return;
+    }
+    currentUser = data.user;
+    renderAuthChrome();
+    closeAuthModal();
+  });
+
+  $("#authRegisterForm")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const { res, data } = await authFetch("/register", {
+      method: "POST",
+      body: JSON.stringify({
+        displayName: String(fd.get("displayName") || ""),
+        username: String(fd.get("username") || "").toLowerCase(),
+        email: String(fd.get("email") || "").toLowerCase(),
+        password: String(fd.get("password") || ""),
+      }),
+    });
+    if (!res.ok) {
+      setAuthError(data?.error || "Gagal mendaftar.");
+      return;
+    }
+    currentUser = data.user;
+    renderAuthChrome();
+    closeAuthModal();
+  });
+
+  $("#authProfileForm")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const { res, data } = await authFetch("/profile", {
+      method: "PATCH",
+      body: JSON.stringify({ displayName: String(fd.get("displayName") || "") }),
+    });
+    if (!res.ok) {
+      setAuthError(data?.error || "Gagal menyimpan profil.");
+      return;
+    }
+    currentUser = data.user;
+    renderAuthChrome();
+    setAuthError("");
+    showAuthPane("profile");
+  });
+
+  $("#authLogoutBtn")?.addEventListener("click", async () => {
+    await authFetch("/logout", { method: "POST", body: "{}" });
+    currentUser = null;
+    renderAuthChrome();
+    closeAuthModal();
+  });
+}
+
 
 async function init() {
   try {
@@ -906,6 +1093,8 @@ async function init() {
     bindRows();
     bindSearch();
     bindActions();
+    bindAuth();
+    await refreshAuthSession();
   } catch (err) {
     console.error(err);
     $("#heroTitle").textContent = "Gagal memuat katalog";

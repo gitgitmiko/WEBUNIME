@@ -1293,6 +1293,9 @@ function handleVid(req, res) {
 function middleware(req, res, next) {
   const path = req.url?.split("?")[0] || "";
 
+  // Auth API dilayani router terpisah (Vite plugin / Express)
+  if (path.startsWith("/api/auth")) return next();
+
   if (path === "/__wu_sw.js") {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/javascript; charset=utf-8");
@@ -1345,6 +1348,8 @@ function middleware(req, res, next) {
 
   return next();
 }
+
+export { middleware as embedProxyMiddleware };
 
 export function embedProxyPlugin() {
   return {

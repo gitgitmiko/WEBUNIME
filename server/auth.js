@@ -1,0 +1,287 @@
+import { randomBytes } from "node:crypto";
+import bcrypt from "bcryptjs";
+import { Router } from "express";
+import { getPool } from "./db.js";
+
+const COOKIE = "webunime_sid";
+const SESSION_DAYS = 30;
+const BCRYPT_ROUNDS = 12;
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const USERNAME_RE = /^[a-z0-9_]{3,32}$/;
+
+const rateBuckets = new Map();
+
+function clientIp(req) {
+  const xf = String(req.headers["x-forwarded-for"] || "")
+    .split(",")[0]
+    .trim();
+  return xf || req.socket?.remoteAddress || "unknown";
+}
+
+function rateLimit(key, limit = 10, windowMs = 60_000) {
+  const now = Date.now();
+  let bucket = rateBuckets.get(key);
+  if (!bucket || now - bucket.start > windowMs) {
+    bucket = { start: now, count: 0 };
+    rateBuckets.set(key, bucket);
+  }
+  bucket.count += 1;
+  return bucket.count <= limit;
+}
+
+function cookieSecure() {
+  if (process.env.COOKIE_SECURE === "1") return true;
+  if (process.env.COOKIE_SECURE === "0") return false;
+  return process.env.NODE_ENV === "production";
+}
+
+function publicUser(row) {
+  return {
+    id: Number(row.id),
+    email: row.email,
+    username: row.username,
+    displayName: row.display_name,
+    createdAt: row.created_at,
+  };
+}
+
+function readSid(req) {
+  const raw = req.cookies?.[COOKIE];
+  if (!raw || typeof raw !== "string") return null;
+  if (!/^[a-f0-9]{64}$/i.test(raw)) return null;
+  return raw.toLowerCase();
+}
+
+function setSessionCookie(res, sid, maxAgeMs) {
+  res.cookie(COOKIE, sid, {
+    httpOnly: true,
+    secure: cookieSecure(),
+    sameSite: "lax",
+    path: "/",
+    maxAge: maxAgeMs,
+  });
+}
+
+function clearSessionCookie(res) {
+  res.clearCookie(COOKIE, {
+    httpOnly: true,
+    secure: cookieSecure(),
+    sameSite: "lax",
+    path: "/",
+  });
+}
+
+async function createSession(userId) {
+  const pool = getPool();
+  const sid = randomBytes(32).toString("hex");
+  const expires = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000);
+  await pool.execute(
+    `INSERT INTO sessions (id, user_id, expires_at) VALUES (:id, :userId, :expires)`,
+    { id: sid, userId, expires }
+  );
+  return { sid, expires };
+}
+
+async function destroySession(sid) {
+  if (!sid) return;
+  const pool = getPool();
+  await pool.execute(`DELETE FROM sessions WHERE id = :id`, { id: sid });
+}
+
+async function loadUserFromSession(sid) {
+  if (!sid) return null;
+  const pool = getPool();
+  const [rows] = await pool.execute(
+    `SELECT u.id, u.email, u.username, u.display_name, u.created_at, s.expires_at
+     FROM sessions s
+     JOIN users u ON u.id = s.user_id
+     WHERE s.id = :id
+     LIMIT 1`,
+    { id: sid }
+  );
+  const row = rows[0];
+  if (!row) return null;
+  if (new Date(row.expires_at).getTime() <= Date.now()) {
+    await destroySession(sid);
+    return null;
+  }
+  return publicUser(row);
+}
+
+function parseBody(req) {
+  return req.body && typeof req.body === "object" ? req.body : {};
+}
+
+function validateRegister(body) {
+  const email = String(body.email || "")
+    .trim()
+    .toLowerCase();
+  const username = String(body.username || "")
+    .trim()
+    .toLowerCase();
+  const password = String(body.password || "");
+  const displayName = String(body.displayName || body.display_name || "")
+    .trim()
+    .slice(0, 64);
+
+  if (!EMAIL_RE.test(email) || email.length > 191) {
+    return { error: "Email tidak valid." };
+  }
+  if (!USERNAME_RE.test(username)) {
+    return { error: "Username 3–32 karakter: a-z, 0-9, underscore." };
+  }
+  if (password.length < 8 || password.length > 128) {
+    return { error: "Password minimal 8 karakter." };
+  }
+  if (!displayName) {
+    return { error: "Nama tampilan wajib diisi." };
+  }
+  return { email, username, password, displayName };
+}
+
+export function createAuthRouter() {
+  const router = Router();
+
+  router.get("/me", async (req, res) => {
+    try {
+      const sid = readSid(req);
+      const user = await loadUserFromSession(sid);
+      if (!user) {
+        clearSessionCookie(res);
+        return res.status(401).json({ user: null });
+      }
+      return res.json({ user });
+    } catch (err) {
+      console.error("[auth/me]", err);
+      return res.status(500).json({ error: "Gagal memuat sesi." });
+    }
+  });
+
+  router.post("/register", async (req, res) => {
+    const ip = clientIp(req);
+    if (!rateLimit(`reg:${ip}`, 10)) {
+      return res.status(429).json({ error: "Terlalu banyak percobaan. Coba lagi nanti." });
+    }
+
+    const parsed = validateRegister(parseBody(req));
+    if (parsed.error) return res.status(400).json({ error: parsed.error });
+
+    try {
+      const pool = getPool();
+      const passwordHash = await bcrypt.hash(parsed.password, BCRYPT_ROUNDS);
+      const [result] = await pool.execute(
+        `INSERT INTO users (email, username, password_hash, display_name)
+         VALUES (:email, :username, :passwordHash, :displayName)`,
+        {
+          email: parsed.email,
+          username: parsed.username,
+          passwordHash,
+          displayName: parsed.displayName,
+        }
+      );
+      const userId = result.insertId;
+      const { sid, expires } = await createSession(userId);
+      setSessionCookie(res, sid, expires.getTime() - Date.now());
+      const user = await loadUserFromSession(sid);
+      return res.status(201).json({ user });
+    } catch (err) {
+      if (err && err.code === "ER_DUP_ENTRY") {
+        return res.status(409).json({ error: "Email atau username sudah terpakai." });
+      }
+      console.error("[auth/register]", err);
+      return res.status(500).json({ error: "Gagal mendaftar." });
+    }
+  });
+
+  router.post("/login", async (req, res) => {
+    const ip = clientIp(req);
+    if (!rateLimit(`login:${ip}`, 10)) {
+      return res.status(429).json({ error: "Terlalu banyak percobaan. Coba lagi nanti." });
+    }
+
+    const body = parseBody(req);
+    const login = String(body.login || body.email || body.username || "")
+      .trim()
+      .toLowerCase();
+    const password = String(body.password || "");
+
+    if (!login || password.length < 8) {
+      return res.status(400).json({ error: "Login dan password wajib diisi." });
+    }
+
+    try {
+      const pool = getPool();
+      const [rows] = await pool.execute(
+        `SELECT id, email, username, password_hash, display_name, created_at
+         FROM users
+         WHERE email = :login OR username = :login
+         LIMIT 1`,
+        { login }
+      );
+      const row = rows[0];
+      const fakeHash = "$2a$12$invalidinvalidinvalidinvalidinvalidinval";
+      const ok = row
+        ? await bcrypt.compare(password, row.password_hash)
+        : await bcrypt.compare(password, fakeHash).catch(() => false);
+
+      if (!row || !ok) {
+        return res.status(401).json({ error: "Email/username atau password salah." });
+      }
+
+      const oldSid = readSid(req);
+      if (oldSid) await destroySession(oldSid);
+
+      const { sid, expires } = await createSession(row.id);
+      setSessionCookie(res, sid, expires.getTime() - Date.now());
+      return res.json({ user: publicUser(row) });
+    } catch (err) {
+      console.error("[auth/login]", err);
+      return res.status(500).json({ error: "Gagal masuk." });
+    }
+  });
+
+  router.post("/logout", async (req, res) => {
+    try {
+      const sid = readSid(req);
+      await destroySession(sid);
+      clearSessionCookie(res);
+      return res.json({ ok: true });
+    } catch (err) {
+      console.error("[auth/logout]", err);
+      clearSessionCookie(res);
+      return res.status(500).json({ error: "Gagal keluar." });
+    }
+  });
+
+  router.patch("/profile", async (req, res) => {
+    try {
+      const sid = readSid(req);
+      const user = await loadUserFromSession(sid);
+      if (!user) {
+        clearSessionCookie(res);
+        return res.status(401).json({ error: "Belum masuk." });
+      }
+
+      const displayName = String(parseBody(req).displayName || parseBody(req).display_name || "")
+        .trim()
+        .slice(0, 64);
+      if (!displayName) {
+        return res.status(400).json({ error: "Nama tampilan wajib diisi." });
+      }
+
+      const pool = getPool();
+      await pool.execute(`UPDATE users SET display_name = :displayName WHERE id = :id`, {
+        displayName,
+        id: user.id,
+      });
+      return res.json({
+        user: { ...user, displayName },
+      });
+    } catch (err) {
+      console.error("[auth/profile]", err);
+      return res.status(500).json({ error: "Gagal memperbarui profil." });
+    }
+  });
+
+  return router;
+}

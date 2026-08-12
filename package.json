@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "node server/app.js",
     "scrape": "node scripts/scrape-players.js",
     "scrape:latest": "node scripts/scrape-latest.js",
     "scrape:desc": "node scripts/scrape-latest.js --refresh-desc",
@@ -22,6 +23,13 @@
     "sync:catalog": "node scripts/sync-catalog.js --force",
     "repair:episode": "node scripts/repair-reported-episode.js",
     "repair:queue": "node scripts/repair-reported-episode.js --queue"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
   },
   "devDependencies": {
     "playwright": "^1.61.1",
