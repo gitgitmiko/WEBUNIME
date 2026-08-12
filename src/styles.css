@@ -532,33 +532,43 @@ body.is-auth-checking .auth-boot,
 
 .hero-dots {
   position: absolute;
-  right: clamp(1rem, 4vw, 3rem);
-  bottom: 1.6rem;
-  z-index: 2;
+  left: 50%;
+  right: auto;
+  bottom: 5.5rem;
+  z-index: 6;
   display: flex;
-  gap: 0.45rem;
+  gap: 0.55rem;
   align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  pointer-events: auto;
 }
 
 .hero-dot {
-  width: 0.55rem;
-  height: 0.55rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  min-width: 0.7rem;
   padding: 0;
   border: 0;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease, width 0.2s ease;
 }
 
 .hero-dot.is-active {
-  width: 1.35rem;
+  width: 1.6rem;
   background: #fff;
 }
 
 .hero-dot:hover,
 .hero-dot:focus-visible {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.12);
   outline: none;
 }
 
@@ -678,19 +688,20 @@ body.is-auth-checking .auth-boot,
   width: 100%;
   max-width: 100%;
   min-width: 0;
+  overflow: visible;
 }
 
 .row-track {
   display: flex;
   flex-wrap: nowrap;
-  gap: 0.65rem;
+  gap: 0.75rem;
   width: 100%;
   max-width: 100%;
   min-width: 0;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  padding: 0.35rem clamp(1rem, 4vw, 3rem) 1rem;
+  padding: 1.35rem clamp(1rem, 4vw, 3rem) 1.75rem;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
@@ -754,9 +765,10 @@ body.is-auth-checking .auth-boot,
   cursor: pointer;
   background: var(--bg-elevated);
   position: relative;
-  transform-origin: center bottom;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center center;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s ease;
   animation: fadeUp 0.55s ease both;
+  will-change: transform;
 }
 
 .poster img {
@@ -793,6 +805,9 @@ body.is-auth-checking .auth-boot,
 }
 
 .poster-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
   padding: 0.18rem 0.4rem;
   border-radius: 3px;
   font-size: 0.68rem;
@@ -808,6 +823,13 @@ body.is-auth-checking .auth-boot,
   color: #04140a;
 }
 
+.poster-star {
+  font-size: 0.72rem;
+  line-height: 1;
+  color: #ffd166;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
 .poster-badge--quality {
   margin-left: auto;
   background: rgba(229, 9, 20, 0.92);
@@ -817,6 +839,25 @@ body.is-auth-checking .auth-boot,
   background: rgba(180, 120, 20, 0.95);
 }
 
+.poster-duration {
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  z-index: 2;
+  max-width: 48%;
+  padding: 0.16rem 0.38rem;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #f4f4f5;
+  font-size: 0.66rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
 .poster-foot {
   position: absolute;
   left: 0.4rem;
@@ -824,8 +865,9 @@ body.is-auth-checking .auth-boot,
   bottom: 0.4rem;
   z-index: 1;
   display: grid;
-  gap: 0.15rem;
+  gap: 0.12rem;
   text-align: left;
+  padding-right: 3.1rem;
 }
 
 .poster-label {
@@ -842,15 +884,12 @@ body.is-auth-checking .auth-boot,
   overflow: hidden;
 }
 
-.poster-facts {
+.poster-year {
   margin: 0;
   color: #d4d4d8;
   font-size: 0.68rem;
   font-weight: 500;
   line-height: 1.25;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .poster-ep {
@@ -870,9 +909,9 @@ body.is-auth-checking .auth-boot,
 
 .poster:hover,
 .poster:focus-visible {
-  transform: scale(1.08);
-  z-index: 2;
-  box-shadow: var(--shadow);
+  transform: scale(1.18);
+  z-index: 4;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
   outline: none;
 }
 
@@ -1464,6 +1503,10 @@ body.is-auth-checking .auth-boot,
     min-height: 78vh;
     align-items: flex-end;
     padding-bottom: 4rem;
+  }
+
+  .hero-dots {
+    bottom: 4.25rem;
   }
 
   .brand-wordmark {

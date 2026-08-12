@@ -219,9 +219,10 @@ function createLibraryPoster(entry, index = 0) {
     ${ep}
     <img src="${entry.thumbnail || ""}" alt="${title}" loading="lazy" width="200" height="300" />
     ${posterBadgesHtml(movie || { rating: null, quality: null })}
+    ${posterDurationHtml(movie || {})}
     <div class="poster-foot">
       <p class="poster-label">${title}</p>
-      ${posterFactsHtml(movie || {})}
+      ${posterYearHtml(movie || {})}
     </div>
   `;
   btn.addEventListener("click", () => {
@@ -323,7 +324,7 @@ function posterBadgesHtml(movie) {
   const quality = formatQuality(movie?.quality);
   const ratingHtml =
     rating != null
-      ? `<span class="poster-badge poster-badge--rating" title="Rating">${rating}</span>`
+      ? `<span class="poster-badge poster-badge--rating" title="Rating"><span class="poster-star" aria-hidden="true">★</span>${rating}</span>`
       : "";
   const qualityHtml = quality
     ? `<span class="poster-badge poster-badge--quality${
@@ -334,12 +335,14 @@ function posterBadgesHtml(movie) {
   return `<div class="poster-badges">${ratingHtml}${qualityHtml}</div>`;
 }
 
-function posterFactsHtml(movie) {
-  const parts = [];
-  if (movie?.tahun) parts.push(String(movie.tahun));
-  if (movie?.durasi) parts.push(String(movie.durasi));
-  if (!parts.length) return "";
-  return `<p class="poster-facts">${parts.join(" · ")}</p>`;
+function posterYearHtml(movie) {
+  if (!movie?.tahun) return "";
+  return `<p class="poster-year">${movie.tahun}</p>`;
+}
+
+function posterDurationHtml(movie) {
+  if (!movie?.durasi) return "";
+  return `<span class="poster-duration" title="Durasi">${movie.durasi}</span>`;
 }
 
 function metaLine(movie) {
@@ -367,9 +370,10 @@ function createPoster(movie, index = 0) {
   btn.innerHTML = `
     <img src="${movie.thumbnail}" alt="${movie.judul || movie.nama}" loading="lazy" width="200" height="300" />
     ${posterBadgesHtml(movie)}
+    ${posterDurationHtml(movie)}
     <div class="poster-foot">
       <p class="poster-label">${movie.nama}</p>
-      ${posterFactsHtml(movie)}
+      ${posterYearHtml(movie)}
     </div>
   `;
   btn.addEventListener("click", () => openModal(movie));
@@ -403,9 +407,10 @@ function createLatestEpisodePoster(item, index = 0) {
     <img src="${item.thumbnail}" alt="${item.nama}" loading="lazy" width="200" height="300" />
     <span class="poster-ep">${epLabel}</span>
     ${posterBadgesHtml(metaSource)}
+    ${posterDurationHtml(metaSource)}
     <div class="poster-foot">
       <p class="poster-label">${item.nama}</p>
-      ${posterFactsHtml(metaSource)}
+      ${posterYearHtml(metaSource)}
     </div>
   `;
   btn.addEventListener("click", () => {
