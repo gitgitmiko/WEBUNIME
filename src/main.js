@@ -1231,11 +1231,95 @@ function togglePlay() {
     : "Dijeda — ketuk lagi untuk lanjut";
 }
 
+function clearSearchUi() {
+  const input = $("#searchInput");
+  const section = $("#searchResults");
+  const rows = $("#koleksi");
+  if (input) input.value = "";
+  section?.classList.add("hidden");
+  rows?.classList.remove("hidden");
+}
+
+function setActiveNavLink(hash) {
+  const target = hash || "#hero";
+  $$(".nav-links a").forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    link.classList.toggle("is-active", href === target);
+  });
+}
+
+function scrollToNavTarget(hash) {
+  const id = String(hash || "").replace(/^#/, "");
+  if (!id || id === "beranda" || id === "hero") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setActiveNavLink("#hero");
+    return true;
+  }
+  const el = document.getElementById(id);
+  if (!el) return false;
+  clearSearchUi();
+  const nav = $("#nav");
+  const navH = nav ? nav.getBoundingClientRect().height : 84;
+  const top = window.scrollY + el.getBoundingClientRect().top - navH - 12;
+  window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+  setActiveNavLink(`#${id}`);
+  return true;
+}
+
 function bindNav() {
   const nav = $("#nav");
   const onScroll = () => nav.classList.toggle("is-solid", window.scrollY > 40);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  $$(".nav-links a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href") || "";
+      if (!href.startsWith("#")) return;
+      e.preventDefault();
+      scrollToNavTarget(href);
+      history.replaceState(null, "", href === "#hero" ? location.pathname : href);
+    });
+  });
+
+  const sectionIds = [
+    "series-anime",
+    "anime",
+    "anime-movie",
+    "film-terbaru",
+    "horor",
+    "aksi",
+    "drama",
+    "series",
+    "indonesia",
+  ];
+  const sections = sectionIds
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  if (sections.length && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        if (!visible.length) {
+          if (window.scrollY < 180) setActiveNavLink("#hero");
+          return;
+        }
+        setActiveNavLink(`#${visible[0].target.id}`);
+      },
+      {
+        rootMargin: "-20% 0px -55% 0px",
+        threshold: [0.15, 0.35, 0.55],
+      }
+    );
+    sections.forEach((section) => observer.observe(section));
+  }
+
+  if (location.hash) {
+    requestAnimationFrame(() => scrollToNavTarget(location.hash));
+  }
 }
 
 function syncRowArrows(track) {

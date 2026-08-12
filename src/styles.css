@@ -825,6 +825,7 @@ body.is-auth-checking .auth-boot,
   width: 100%;
   max-width: 100%;
   min-width: 0;
+  scroll-margin-top: calc(var(--nav-h) + 12px);
 }
 
 .row-head {
