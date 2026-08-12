@@ -736,10 +736,10 @@ async function resolveEmbedPath(sourceUrl) {
   const play = data.play || sourceUrl;
   try {
     const host = new URL(play).hostname;
-    // Hydrax lewat proxy + sanitasi iklan (embed langsung → AdBlock/Sandbox destroy).
-    // Shim restore path /{slug}?v= + patch fetch seperti pre-security.
+    // Hydrax: proxy HTML (sanitasi iklan) lewat /__hydrax__ → /__px__/...
+    // SW siap dulu; di dalam player jangan patch fetch (biar sources jalan).
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
-      return toProxyPath(play) || play;
+      return `/__hydrax__?u=${encodeURIComponent(play)}`;
     }
   } catch {
     /* fallback proxy */

@@ -296,6 +296,11 @@ function injectClientShim(pageUrl) {
     return ofetch(input, init);
   }
   patchedFetch.toString = function(){ return "function fetch() { [native code] }"; };
+
+  // Hydrax: JANGAN patch fetch/XHR/setAttribute — App TV juga tidak;
+  // patch native memicu proteksi → "No playable sources found".
+  // Media GCS diurus Service Worker (transparan).
+  if (!IS_ABYSS) {
   window.fetch = patchedFetch;
 
   var oopen = XMLHttpRequest.prototype.open;
@@ -341,7 +346,6 @@ function injectClientShim(pageUrl) {
     if (typeof HTMLMediaElement !== "undefined") patchAttr(HTMLMediaElement.prototype, "src");
   } catch (e) {}
 
-  // setAttribute bypass property setters ÔÇö wajib untuk JWPlayer/Hydrax
   try {
     var osa = Element.prototype.setAttribute;
     Element.prototype.setAttribute = function (name, value) {
@@ -351,14 +355,24 @@ function injectClientShim(pageUrl) {
       return osa.call(this, name, value);
     };
   } catch (e) {}
+  } // !IS_ABYSS
 
-  // SW: proxy CDN same-origin (Hydrax GCS / TurboVIP tiktokcdn segments)
-  if ((IS_ABYSS || IS_TURBO) && "serviceWorker" in navigator) {
+  // SW: proxy CDN (Hydrax GCS / TurboVIP). Hydrax: jangan reload (merusak setup).
+  if (IS_ABYSS && navigator.serviceWorker && navigator.serviceWorker.register) {
+    try {
+      var __wuReg = navigator.serviceWorker.register.bind(navigator.serviceWorker);
+      navigator.serviceWorker.register = function (url, opts) {
+        var u = String(url || "");
+        if (u.indexOf("__wu_sw") >= 0) return __wuReg(url, opts);
+        return __wuReg("/__wu_sw.js", { scope: "/" });
+      };
+      navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).catch(function () {});
+    } catch (e) {}
+  } else if (IS_TURBO && "serviceWorker" in navigator) {
     try {
       navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).then(function () {
         if (!navigator.serviceWorker.controller && !sessionStorage.getItem("__wu_sw_ready")) {
           sessionStorage.setItem("__wu_sw_ready", "1");
-          // Reload ke URL proxy (bukan path slug hasil replaceState)
           location.replace(location.origin + PREFIX + REAL_PATH);
         }
       }).catch(function () {});
@@ -422,14 +436,16 @@ function injectClientShim(pageUrl) {
     }, true);
 
     try {
-      var oClick = HTMLAnchorElement.prototype.click;
-      HTMLAnchorElement.prototype.click = function () {
-        if (isBlankNav(this)) {
-          try { fakeOpen(); } catch (e) {}
-          return;
-        }
-        return oClick.apply(this, arguments);
-      };
+      if (!IS_ABYSS) {
+        var oClick = HTMLAnchorElement.prototype.click;
+        HTMLAnchorElement.prototype.click = function () {
+          if (isBlankNav(this)) {
+            try { fakeOpen(); } catch (e) {}
+            return;
+          }
+          return oClick.apply(this, arguments);
+        };
+      }
     } catch (e) {}
   })();
 
@@ -1030,9 +1046,7 @@ function sanitizeHtml(html, pageUrl, origin = "") {
       /window\.SoTrym\s*\(\s*JSON\.parse\s*\(\s*atob\s*\(\s*datas\s*\)\s*\)\s*\)/g,
       '(function(d){try{if(d&&d.slug)history.replaceState(null,"","/"+d.slug+"?v="+encodeURIComponent(d.slug))}catch(e){}return window.SoTrym(d)})(JSON.parse(atob(datas)))'
     );
-    // Paksa core/lite/jwplayer lewat proxy supaya bisa di-patch (jangan load langsung iamcdn)
-    out = out.replace(/https?:\/\/iamcdn\.net\//gi, "/__px__/iamcdn.net/");
-    out = out.replace(/https?:\/\/(?:www\.)?abysscdn\.com\//gi, "/__px__/abysscdn.com/");
+    // Script iamcdn biarkan langsung (native) — rewrite proxy memicu "No playable sources found"
   }
   // Alert AdBlock/Sandbox / security gate Hydrax
   out = out.replace(
@@ -1340,7 +1354,7 @@ async function handleLegacyEmbed(req, res) {
 const PROXY_SW = `/* webunime media proxy SW */
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => e.waitUntil(self.clients.claim()));
-var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com)/i;
+var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place)/i;
 self.addEventListener("fetch", function (event) {
   try {
     var url = new URL(event.request.url);
