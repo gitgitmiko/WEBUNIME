@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { embedProxyMiddleware } from "../plugins/embed-proxy.js";
-import { createAuthRouter } from "./auth.js";
+import { createAuthRouter, createLoginGuard } from "./auth.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -27,6 +27,7 @@ app.use(cookieParser());
 app.use(express.json({ limit: "32kb" }));
 
 app.use("/api/auth", createAuthRouter());
+app.use(createLoginGuard());
 app.use(embedProxyMiddleware);
 
 app.use(

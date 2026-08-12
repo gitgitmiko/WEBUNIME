@@ -108,6 +108,56 @@ async function loadUserFromSession(sid) {
   return publicUser(row);
 }
 
+export async function getSessionUser(req) {
+  return loadUserFromSession(readSid(req));
+}
+
+export function isPublicPath(pathname) {
+  const path = pathname.split("?")[0] || "/";
+  if (path.startsWith("/api/auth")) return true;
+  if (path === "/" || path === "/index.html") return true;
+  if (path.startsWith("/assets/")) return true;
+  if (/\.(css|js|map|ico|png|jpe?g|webp|svg|woff2?|ttf|txt)$/i.test(path)) return true;
+  return false;
+}
+
+/** Blokir katalog & player API tanpa sesi login. */
+export function createLoginGuard() {
+  return async (req, res, next) => {
+    try {
+      const path = (req.url || "").split("?")[0] || "/";
+      if (isPublicPath(path)) return next();
+
+      const user = await getSessionUser(req);
+      if (user) {
+        req.user = user;
+        return next();
+      }
+
+      const needsAuth =
+        path.startsWith("/data/") ||
+        path.startsWith("/api/") ||
+        path.startsWith("/__px__/") ||
+        path.startsWith("/__vid__") ||
+        path === "/__wu_sw.js";
+
+      if (needsAuth) {
+        res.statusCode = 401;
+        res.setHeader("Content-Type", "application/json; charset=utf-8");
+        res.setHeader("Cache-Control", "no-store");
+        res.end(JSON.stringify({ error: "Login wajib untuk menonton." }));
+        return;
+      }
+      return next();
+    } catch (err) {
+      console.error("[login-guard]", err);
+      res.statusCode = 500;
+      res.setHeader("Content-Type", "application/json; charset=utf-8");
+      res.end(JSON.stringify({ error: "Gagal memverifikasi sesi." }));
+    }
+  };
+}
+
 function parseBody(req) {
   return req.body && typeof req.body === "object" ? req.body : {};
 }

@@ -194,10 +194,49 @@ input {
   display: none;
 }
 
+.auth-modal.is-gate {
+  z-index: 100;
+}
+
 .auth-modal-backdrop {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.72);
+}
+
+.auth-modal.is-gate .auth-modal-backdrop {
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(229, 9, 20, 0.28), transparent 45%),
+    radial-gradient(ellipse at 80% 90%, rgba(80, 20, 40, 0.35), transparent 40%),
+    linear-gradient(160deg, #0b0b0b 0%, #141414 45%, #090909 100%);
+  pointer-events: none;
+}
+
+.auth-brand {
+  margin: 0 0 0.25rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 2.4rem;
+  color: var(--text);
+}
+
+.auth-lead {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+body.is-auth-locked #nav,
+body.is-auth-locked main,
+body.is-auth-locked #modal,
+body.is-auth-locked #player,
+body.is-auth-locked #searchResults {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+body.is-auth-locked {
+  overflow: hidden;
 }
 
 .auth-modal-panel {

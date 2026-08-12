@@ -440,6 +440,10 @@ function bindNfDropdown(root) {
 }
 
 function openModal(movie, opts = {}) {
+  if (!currentUser) {
+    enterAuthGate("login");
+    return;
+  }
   activeMovie = movie;
   activeEpisode = null;
   const modal = $("#modal");
@@ -701,6 +705,10 @@ function setupPlayerEpisodes(movie) {
 }
 
 function openPlayer(movie) {
+  if (!currentUser) {
+    enterAuthGate("login");
+    return;
+  }
   activeMovie = movie;
   if (!isSeries(movie)) {
     activeEpisode = null;
@@ -879,6 +887,8 @@ function bindActions() {
 }
 
 let currentUser = null;
+let appBooted = false;
+let authBindingsReady = false;
 
 async function authFetch(path, options = {}) {
   const res = await fetch(`/api/auth${path}`, {
@@ -909,6 +919,21 @@ function setAuthError(msg) {
   el.classList.remove("hidden");
 }
 
+function syncAuthGateChrome() {
+  const modal = $("#authModal");
+  const closeBtn = $("#authCloseBtn");
+  const lead = $("#authLead");
+  const locked = !currentUser;
+
+  document.body.classList.toggle("is-auth-locked", locked);
+  modal?.classList.toggle("is-gate", locked && !modal.classList.contains("hidden"));
+  closeBtn?.classList.toggle("hidden", locked);
+  if (lead && locked) {
+    lead.classList.remove("hidden");
+    lead.textContent = "Masuk atau daftar untuk mulai menonton";
+  }
+}
+
 function renderAuthChrome() {
   const openBtn = $("#authOpenBtn");
   const chip = $("#authChip");
@@ -927,6 +952,7 @@ function renderAuthChrome() {
     chip.classList.add("hidden");
     tabProfile.classList.add("hidden");
   }
+  syncAuthGateChrome();
 }
 
 function showAuthPane(mode) {
@@ -934,6 +960,7 @@ function showAuthPane(mode) {
   const register = $("#authRegisterForm");
   const profile = $("#authProfileForm");
   const title = $("#authModalTitle");
+  const lead = $("#authLead");
   const tabs = {
     login: $("#authTabLogin"),
     register: $("#authTabRegister"),
@@ -953,6 +980,18 @@ function showAuthPane(mode) {
   else if (mode === "register") title.textContent = "Daftar akun";
   else title.textContent = "Profil saya";
 
+  if (lead) {
+    if (!currentUser) {
+      lead.classList.remove("hidden");
+      lead.textContent = "Masuk atau daftar untuk mulai menonton";
+    } else if (mode === "profile") {
+      lead.classList.remove("hidden");
+      lead.textContent = "Kelola profil akun Anda";
+    } else {
+      lead.classList.add("hidden");
+    }
+  }
+
   if (mode === "profile" && currentUser) {
     $("#authProfileMeta").textContent = `@${currentUser.username} · ${currentUser.email}`;
     const input = $("#authProfileForm")?.querySelector('[name="displayName"]');
@@ -961,14 +1000,41 @@ function showAuthPane(mode) {
   setAuthError("");
 }
 
+function enterAuthGate(mode = "login") {
+  closePlayer();
+  closeModal();
+  showAuthPane(mode);
+  const modal = $("#authModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("is-gate");
+  document.body.classList.add("is-auth-locked");
+  document.body.style.overflow = "hidden";
+  $("#authCloseBtn")?.classList.add("hidden");
+  syncAuthGateChrome();
+}
+
+function leaveAuthGate() {
+  document.body.classList.remove("is-auth-locked");
+  $("#authModal").classList.remove("is-gate");
+  $("#authCloseBtn")?.classList.remove("hidden");
+}
+
 function openAuthModal(mode = currentUser ? "profile" : "login") {
+  if (!currentUser) {
+    enterAuthGate(mode === "profile" ? "login" : mode);
+    return;
+  }
   showAuthPane(mode);
   $("#authModal").classList.remove("hidden");
+  $("#authModal").classList.remove("is-gate");
+  $("#authCloseBtn")?.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 }
 
 function closeAuthModal() {
+  if (!currentUser) return;
   $("#authModal").classList.add("hidden");
+  $("#authModal").classList.remove("is-gate");
   setAuthError("");
   if ($("#modal").classList.contains("hidden") && $("#player").classList.contains("hidden")) {
     document.body.style.overflow = "";
@@ -985,10 +1051,71 @@ async function refreshAuthSession() {
   renderAuthChrome();
 }
 
+async function bootApp() {
+  if (appBooted) {
+    leaveAuthGate();
+    closeAuthModal();
+    return;
+  }
+  await Promise.all([
+    loadMovies(),
+    loadSeries(),
+    loadHorror(),
+    loadIndonesia(),
+    loadAnime(),
+    loadAnimeMovies(),
+    loadAnimeLatest(),
+  ]);
+  catalog = dedupeBySlug([
+    ...movies,
+    ...horror,
+    ...indonesia,
+    ...series,
+    ...anime,
+    ...animeMovies,
+  ]);
+  setHero(
+    movies[0] ||
+      indonesia[0] ||
+      anime[0] ||
+      animeMovies[0] ||
+      horror[0] ||
+      series[0]
+  );
+  renderRows();
+  bindNav();
+  bindRows();
+  bindSearch();
+  bindActions();
+  appBooted = true;
+  leaveAuthGate();
+  closeAuthModal();
+}
+
+async function onAuthSuccess(user) {
+  currentUser = user;
+  renderAuthChrome();
+  try {
+    await bootApp();
+  } catch (err) {
+    console.error(err);
+    setAuthError("Login berhasil, tetapi katalog gagal dimuat. Muat ulang halaman.");
+    enterAuthGate("login");
+  }
+}
+
 function bindAuth() {
+  if (authBindingsReady) return;
+  authBindingsReady = true;
+
   $("#authOpenBtn")?.addEventListener("click", () => openAuthModal("login"));
   $("#authAccountBtn")?.addEventListener("click", () => openAuthModal("profile"));
-  $$("[data-auth-close]").forEach((el) => el.addEventListener("click", closeAuthModal));
+  $$("[data-auth-close]").forEach((el) =>
+    el.addEventListener("click", () => {
+      if (!currentUser) return;
+      closeAuthModal();
+    })
+  );
   $("#authTabLogin")?.addEventListener("click", () => showAuthPane("login"));
   $("#authTabRegister")?.addEventListener("click", () => showAuthPane("register"));
   $("#authTabProfile")?.addEventListener("click", () => {
@@ -1009,9 +1136,7 @@ function bindAuth() {
       setAuthError(data?.error || "Gagal masuk.");
       return;
     }
-    currentUser = data.user;
-    renderAuthChrome();
-    closeAuthModal();
+    await onAuthSuccess(data.user);
   });
 
   $("#authRegisterForm")?.addEventListener("submit", async (e) => {
@@ -1030,9 +1155,7 @@ function bindAuth() {
       setAuthError(data?.error || "Gagal mendaftar.");
       return;
     }
-    currentUser = data.user;
-    renderAuthChrome();
-    closeAuthModal();
+    await onAuthSuccess(data.user);
   });
 
   $("#authProfileForm")?.addEventListener("submit", async (e) => {
@@ -1056,49 +1179,23 @@ function bindAuth() {
     await authFetch("/logout", { method: "POST", body: "{}" });
     currentUser = null;
     renderAuthChrome();
-    closeAuthModal();
+    enterAuthGate("login");
   });
 }
 
-
 async function init() {
   try {
-    await Promise.all([
-      loadMovies(),
-      loadSeries(),
-      loadHorror(),
-      loadIndonesia(),
-      loadAnime(),
-      loadAnimeMovies(),
-      loadAnimeLatest(),
-    ]);
-    catalog = dedupeBySlug([
-      ...movies,
-      ...horror,
-      ...indonesia,
-      ...series,
-      ...anime,
-      ...animeMovies,
-    ]);
-    setHero(
-      movies[0] ||
-        indonesia[0] ||
-        anime[0] ||
-        animeMovies[0] ||
-        horror[0] ||
-        series[0]
-    );
-    renderRows();
-    bindNav();
-    bindRows();
-    bindSearch();
-    bindActions();
     bindAuth();
     await refreshAuthSession();
+    if (!currentUser) {
+      enterAuthGate("login");
+      return;
+    }
+    await bootApp();
   } catch (err) {
     console.error(err);
-    $("#heroTitle").textContent = "Gagal memuat katalog";
-    $("#heroDesc").textContent = "Pastikan server berjalan dan file /data/movies.json tersedia.";
+    enterAuthGate("login");
+    setAuthError("Gagal memuat aplikasi. Coba masuk lagi.");
   }
 }
 
