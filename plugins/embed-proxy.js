@@ -103,6 +103,16 @@ function pickReferer(target) {
   if (host.includes("abyss") || host.includes("iamcdn") || host.includes("short.icu")) {
     return "https://abyssplayer.com/";
   }
+  // CDN media Hydrax (sora / GCS / gambar)
+  if (
+    host.includes("sssrr.org") ||
+    host.includes("googleapis") ||
+    host.includes("freeimagecdn") ||
+    host.includes("morphify") ||
+    host.includes("abysscdn")
+  ) {
+    return "https://abyssplayer.com/";
+  }
   if (
     host.includes("turbovid") ||
     host.includes("emturbo") ||
@@ -169,7 +179,7 @@ function buildUpstreamHeaders(target, req) {
     headers["X-Embed-Parent"] = "https://playeriframe.sbs/";
   }
 
-  if (/abyss|iamcdn|short\.icu/i.test(target.hostname)) {
+  if (/abyss|iamcdn|short\.icu|sssrr\.org|freeimagecdn|morphify|abysscdn/i.test(target.hostname)) {
     headers.Origin = "https://abyssplayer.com";
     headers.Referer = "https://abyssplayer.com/";
   }
@@ -213,7 +223,7 @@ function injectClientShim(pageUrl) {
   var IS_ABYSS=${isAbyss ? "true" : "false"};
   var IS_CAST=${isCast ? "true" : "false"};
   var IS_TURBO=${isTurbo ? "true" : "false"};
-  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n)/i;
+  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|freeimagecdn)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Hydrax: /{slug}?v={slug} — cocok untuk query v DAN regex href di core.bundle.
@@ -356,6 +366,41 @@ function injectClientShim(pageUrl) {
     };
   } catch (e) {}
   } // !IS_ABYSS
+
+  // Hydrax: rewrite HANYA media src → proxy (bukan fetch). Host sora/sssrr butuh Referer abyss.
+  if (IS_ABYSS) {
+    (function patchAbyssMediaSrc() {
+      function toPx(url) {
+        try {
+          var abs = new URL(String(url), location.href);
+          if (abs.protocol !== "http:" && abs.protocol !== "https:") return url;
+          if (abs.origin === location.origin) return url;
+          if (CDN_RE.test(abs.hostname) || /sssrr\\.org|googleapis|freeimagecdn|morphify|abysscdn/i.test(abs.hostname)) {
+            return location.origin + "/__px__/" + abs.host + abs.pathname + abs.search + abs.hash;
+          }
+        } catch (e) {}
+        return url;
+      }
+      function patchProto(proto, attr) {
+        try {
+          var desc = Object.getOwnPropertyDescriptor(proto, attr);
+          if (!desc || !desc.set) return;
+          Object.defineProperty(proto, attr, {
+            configurable: true,
+            enumerable: desc.enumerable,
+            get: desc.get,
+            set: function (v) { return desc.set.call(this, toPx(v)); }
+          });
+        } catch (e) {}
+      }
+      try {
+        patchProto(HTMLVideoElement.prototype, "src");
+        patchProto(HTMLAudioElement.prototype, "src");
+        patchProto(HTMLSourceElement.prototype, "src");
+        if (typeof HTMLMediaElement !== "undefined") patchProto(HTMLMediaElement.prototype, "src");
+      } catch (e) {}
+    })();
+  }
 
   // SW: proxy CDN (Hydrax GCS / TurboVIP). Hydrax: jangan reload (merusak setup).
   if (IS_ABYSS && navigator.serviceWorker && navigator.serviceWorker.register) {
@@ -1189,7 +1234,8 @@ async function handleProxy(req, res) {
         /application\/octet-stream/i.test(contentType) ||
         /\.(mp4|webm|mkv|m4v|ts|m4s|aac|mp3)(\?|$)/i.test(pathLower) ||
         /\.mp4/i.test(finalUrl.search) ||
-        /r2\.cloudflarestorage|wibufile/i.test(finalUrl.hostname));
+        /\/sora\//i.test(finalUrl.pathname) ||
+        /r2\.cloudflarestorage|wibufile|sssrr\.org/i.test(finalUrl.hostname));
 
     // Stream media (jangan buffer full file — penyebab loading abadi di Wibufile/VIP)
     if (isMedia && method !== "HEAD") {
@@ -1354,7 +1400,7 @@ async function handleLegacyEmbed(req, res) {
 const PROXY_SW = `/* webunime media proxy SW */
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => e.waitUntil(self.clients.claim()));
-var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place)/i;
+var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place|sssrr\\.org|freeimagecdn\\.net)/i;
 self.addEventListener("fetch", function (event) {
   try {
     var url = new URL(event.request.url);
