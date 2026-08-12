@@ -16,13 +16,19 @@ export async function replaceCollection(collection, items) {
   const pool = getPool();
   const conn = await pool.getConnection();
   let upserted = 0;
+  // Dedup by slug (entry terakhir menang) — feed latest kadang dobel
+  const bySlug = new Map();
+  for (const item of items) {
+    const slug = itemSlug(item, collection);
+    if (!slug) continue;
+    bySlug.set(slug, item);
+  }
+
   try {
     await conn.beginTransaction();
     await conn.execute(`DELETE FROM catalog_items WHERE collection = ?`, [collection]);
 
-    for (const item of items) {
-      const slug = itemSlug(item, collection);
-      if (!slug) continue;
+    for (const [slug, item] of bySlug) {
       const meta = itemMeta(item);
       await conn.execute(
         `INSERT INTO catalog_items
