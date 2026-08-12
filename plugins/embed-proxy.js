@@ -216,45 +216,18 @@ function injectClientShim(pageUrl) {
   var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
-  // Pertahankan hash iframe (p2pplay dll) — fragment tidak pernah sampai server.
-  // Hydrax/Abyss core.bundle: slug dari query ?v= ATAU href /^https?:\\/\\/host\\/(slug)$/
-  // (path /__px__/host/slug DAN hash #... membuat regex gagal → "Slug is not found").
-  function abyssSlugFromPath(p) {
-    var m = String(p || "").match(/\\/([a-zA-Z0-9_-]{7,17})(?:[/?#]|$)/);
-    return m ? m[1] : "";
-  }
-  function forceAbyssSlugUrl(slug) {
-    if (!slug) return;
-    // Jangan pakai hash: document.location.href + # mematahkan regex slug.
-    history.replaceState(null, "", "/" + slug + "?v=" + encodeURIComponent(slug));
-  }
+  // Hydrax: /{slug}?v={slug} — cocok untuk query v DAN regex href di core.bundle.
   try {
-    var pathOnly = String(REAL_PATH).split("#")[0];
-    var hashFromReal = String(REAL_PATH).indexOf("#") >= 0
-      ? String(REAL_PATH).slice(String(REAL_PATH).indexOf("#"))
-      : "";
-    var hash = hashFromReal || location.hash || "";
     if (IS_ABYSS) {
-      forceAbyssSlugUrl(abyssSlugFromPath(REAL_PATH));
+      var __slug = String(REAL_PATH).match(/\\/([a-zA-Z0-9_-]{7,17})(?:[/?#]|$)/);
+      if (__slug) history.replaceState(null, "", "/" + __slug[1] + "?v=" + encodeURIComponent(__slug[1]));
+      else history.replaceState(null, "", REAL_PATH);
     } else {
-      history.replaceState(null, "", pathOnly + hash);
+      history.replaceState(null, "", REAL_PATH);
     }
   } catch (e) {}
 
-  // Hydrax: core.bundle mendaftarkan /sw.import.js di origin app → SW asing merusak
-  // player ("Player has been destroyed"). Paksa hanya SW proxy WEBUNIME.
-  if (IS_ABYSS && navigator.serviceWorker && navigator.serviceWorker.register) {
-    try {
-      var __wuReg = navigator.serviceWorker.register.bind(navigator.serviceWorker);
-      navigator.serviceWorker.register = function (url, opts) {
-        var u = String(url || "");
-        if (u.indexOf("__wu_sw") >= 0) return __wuReg(url, opts);
-        return __wuReg("/__wu_sw.js", { scope: "/" });
-      };
-    } catch (e) {}
-  }
-
-  // Cast / Turbo saja: tipu deteksi parent / referrer (App TV tidak spoof referrer Hydrax)
+  // Cast + TurboVIP: tipu deteksi parent / referrer (wajib playeriframe.sbs)
   if (IS_CAST || IS_TURBO) {
     try {
       Object.defineProperty(Document.prototype, "referrer", {
@@ -268,15 +241,6 @@ function injectClientShim(pageUrl) {
         get: function () {
           return { length: 1, 0: "https://playeriframe.sbs/", item: function(){ return "https://playeriframe.sbs/"; } };
         }
-      });
-    } catch (e) {}
-  }
-  // Cast/Turbo: sembunyikan sandbox frameElement. Hydrax biarkan iframe asli.
-  if (IS_CAST || IS_TURBO) {
-    try {
-      Object.defineProperty(window, "frameElement", {
-        configurable: true,
-        get: function () { return null; }
       });
     } catch (e) {}
   }
@@ -332,10 +296,6 @@ function injectClientShim(pageUrl) {
     return ofetch(input, init);
   }
   patchedFetch.toString = function(){ return "function fetch() { [native code] }"; };
-
-  // Hydrax: jangan patch native API (fetch/XHR/open/setAttribute) — memicu security alert F12.
-  // Media GCS tetap lewat Service Worker.
-  if (!IS_ABYSS) {
   window.fetch = patchedFetch;
 
   var oopen = XMLHttpRequest.prototype.open;
@@ -381,7 +341,7 @@ function injectClientShim(pageUrl) {
     if (typeof HTMLMediaElement !== "undefined") patchAttr(HTMLMediaElement.prototype, "src");
   } catch (e) {}
 
-  // setAttribute bypass property setters
+  // setAttribute bypass property setters ÔÇö wajib untuk JWPlayer/Hydrax
   try {
     var osa = Element.prototype.setAttribute;
     Element.prototype.setAttribute = function (name, value) {
@@ -391,22 +351,18 @@ function injectClientShim(pageUrl) {
       return osa.call(this, name, value);
     };
   } catch (e) {}
-  } // !IS_ABYSS
 
   // SW: proxy CDN same-origin (Hydrax GCS / TurboVIP tiktokcdn segments)
-  // Hydrax: JANGAN location.replace — reload di tengah setup JWPlayer → "Player has been destroyed".
-  // SW di-register dari halaman /__hydrax__ sebelum iframe dimuat.
-  if (IS_TURBO && "serviceWorker" in navigator) {
+  if ((IS_ABYSS || IS_TURBO) && "serviceWorker" in navigator) {
     try {
       navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).then(function () {
         if (!navigator.serviceWorker.controller && !sessionStorage.getItem("__wu_sw_ready")) {
           sessionStorage.setItem("__wu_sw_ready", "1");
-          location.replace(location.origin + PREFIX + String(REAL_PATH).split("#")[0]);
+          // Reload ke URL proxy (bukan path slug hasil replaceState)
+          location.replace(location.origin + PREFIX + REAL_PATH);
         }
       }).catch(function () {});
     } catch (e) {}
-  } else if (IS_ABYSS && "serviceWorker" in navigator) {
-    try { navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).catch(function () {}); } catch (e) {}
   }
 
   function stripOuterAd() {
@@ -418,7 +374,7 @@ function injectClientShim(pageUrl) {
   document.addEventListener("DOMContentLoaded", stripOuterAd);
   setTimeout(stripOuterAd, 500);
 
-  // Blokir popup/iklan (App TV juga mem-patch open; toString harus native-like)
+  // Blokir popup/iklan tab baru (window.open + <a target=_blank> + .click())
   (function blockPopups() {
     var fakeWin = {
       closed: false,
@@ -465,34 +421,20 @@ function injectClientShim(pageUrl) {
       try { fakeOpen(); } catch (e) {}
     }, true);
 
-    // Hydrax: jangan patch HTMLAnchorElement.click (App TV juga tidak untuk abyss khusus —
-    // patch click memicu deteksi extension di beberapa build core.bundle).
-    if (!IS_ABYSS) {
-      try {
-        var oClick = HTMLAnchorElement.prototype.click;
-        HTMLAnchorElement.prototype.click = function () {
-          if (isBlankNav(this)) {
-            try { fakeOpen(); } catch (e) {}
-            return;
-          }
-          return oClick.apply(this, arguments);
-        };
-      } catch (e) {}
-    }
-  })();
-
-  // Hydrax: jaga JWPlayer + blokir security document.write + klik overlay
-  if (IS_ABYSS) {
     try {
-      var _dw = document.write.bind(document);
-      document.write = function (html) {
-        var s = String(html || "");
-        if (/security concerns|AdBlock\s*\/\s*Sandbox|developer tools|access request has been denied|Kindly close|refrain from opening/i.test(s)) {
+      var oClick = HTMLAnchorElement.prototype.click;
+      HTMLAnchorElement.prototype.click = function () {
+        if (isBlankNav(this)) {
+          try { fakeOpen(); } catch (e) {}
           return;
         }
-        return _dw(html);
+        return oClick.apply(this, arguments);
       };
     } catch (e) {}
+  })();
+
+  // Hydrax: jaga JWPlayer + klik overlay = play (sbM sudah di-rewrite di HTML)
+  if (IS_ABYSS) {
     try {
       Object.defineProperty(window, "fuckAdBlock", {
         configurable: true,
@@ -508,110 +450,48 @@ function injectClientShim(pageUrl) {
       });
     } catch (e) {}
 
-    // Patch media src → proxy CDN (tanpa patch fetch — deteksi extension Hydrax)
-    (function patchAbyssMedia() {
-      function toPx(url) {
+    // Cegah jwplayer().remove() ÔåÆ "Player has been destroyed"
+    (function guardJwRemove() {
+      var tries = 0;
+      var iv = setInterval(function () {
+        tries++;
         try {
-          var abs = new URL(String(url), location.href);
-          if (abs.protocol !== "http:" && abs.protocol !== "https:") return url;
-          if (abs.origin === location.origin) return url;
-          if (CDN_RE.test(abs.hostname) || /googleapis|abysscdn|short\\.icu|iamcdn|morphify/i.test(abs.hostname)) {
-            return location.origin + "/__px__/" + abs.host + abs.pathname + abs.search + abs.hash;
+          if (typeof window.jwplayer === "function" && !window.jwplayer.__wuGuard) {
+            var orig = window.jwplayer;
+            function wrap() {
+              var p = orig.apply(this, arguments);
+              try {
+                if (p && typeof p.remove === "function") {
+                  p.remove = function () { return p; };
+                }
+              } catch (e) {}
+              return p;
+            }
+            wrap.__wuGuard = true;
+            try {
+              Object.keys(orig).forEach(function (k) {
+                try { wrap[k] = orig[k]; } catch (e) {}
+              });
+            } catch (e) {}
+            window.jwplayer = wrap;
+            clearInterval(iv);
           }
         } catch (e) {}
-        return url;
-      }
-      function patchProto(proto, attr) {
-        try {
-          var desc = Object.getOwnPropertyDescriptor(proto, attr);
-          if (!desc || !desc.set) return;
-          Object.defineProperty(proto, attr, {
-            configurable: true,
-            enumerable: desc.enumerable,
-            get: desc.get,
-            set: function (v) { return desc.set.call(this, toPx(v)); }
-          });
-        } catch (e) {}
-      }
-      try {
-        patchProto(HTMLVideoElement.prototype, "src");
-        patchProto(HTMLAudioElement.prototype, "src");
-        patchProto(HTMLSourceElement.prototype, "src");
-        if (typeof HTMLMediaElement !== "undefined") patchProto(HTMLMediaElement.prototype, "src");
-      } catch (e) {}
+        if (tries > 40) clearInterval(iv);
+      }, 100);
     })();
-
-    // Cegah jwplayer().remove() → "Player has been destroyed" (pasang sebelum setup)
-    (function guardJwRemove() {
-      function wrapJw(orig) {
-        if (!orig || orig.__wuGuard) return orig;
-        function wrap() {
-          var p = orig.apply(this, arguments);
-          try {
-            if (p && typeof p.remove === "function" && !p.__wuNoRemove) {
-              p.remove = function () { return p; };
-              p.__wuNoRemove = true;
-            }
-          } catch (e) {}
-          return p;
-        }
-        wrap.__wuGuard = true;
-        try {
-          Object.keys(orig).forEach(function (k) {
-            try { wrap[k] = orig[k]; } catch (e) {}
-          });
-        } catch (e) {}
-        return wrap;
-      }
-      try {
-        var cur = typeof window.jwplayer === "function" ? wrapJw(window.jwplayer) : window.jwplayer;
-        Object.defineProperty(window, "jwplayer", {
-          configurable: true,
-          enumerable: true,
-          get: function () { return cur; },
-          set: function (fn) { cur = wrapJw(fn); }
-        });
-      } catch (e) {
-        var tries = 0;
-        var iv = setInterval(function () {
-          tries++;
-          try {
-            if (typeof window.jwplayer === "function" && !window.jwplayer.__wuGuard) {
-              window.jwplayer = wrapJw(window.jwplayer);
-              clearInterval(iv);
-            }
-          } catch (err) {}
-          if (tries > 40) clearInterval(iv);
-        }, 100);
-      }
-    })();
-
-    // Sembunyikan notifikasi "Player has been destroyed" sisa race
-    try {
-      var st = document.createElement("style");
-      st.textContent = ".jwpl-notif,.jwpl-notification{display:none!important}";
-      (document.head || document.documentElement).appendChild(st);
-    } catch (e) {}
 
     var tries = 0;
     var iv = setInterval(function () {
       tries++;
       try {
         if (window.abyssConfig) window.abyssConfig.popups = [];
-        try { if (typeof urls !== "undefined") urls.length = 0; } catch (e) {}
         var overlay = document.getElementById("overlay");
-        // Tiru App TV: klik overlay sekali (handler sudah di-patch ke play), jangan spam remove+play
         if (overlay && tries === 6) {
           try { overlay.click(); } catch (e) {}
         }
         if (!overlay && typeof window.jwplayer === "function") {
-          try {
-            var jp = window.jwplayer();
-            var stt = jp && typeof jp.getState === "function" ? jp.getState() : "";
-            if (stt && stt !== "error" && stt !== "complete") {
-              try { jp.play(); } catch (e) {}
-            }
-          } catch (e) {}
+          try { window.jwplayer().play(); } catch (e) {}
           clearInterval(iv);
         }
       } catch (e) {}
@@ -619,8 +499,15 @@ function injectClientShim(pageUrl) {
     }, 250);
   }
 
-  // Cast: bantu 1-klik play (parent spoof sudah di atas)
+  // Cast: sembunyikan sandbox dari frameElement + bantu 1-klik play
   if (IS_CAST) {
+    try {
+      Object.defineProperty(window, "frameElement", {
+        configurable: true,
+        get: function () { return null; }
+      });
+    } catch (e) {}
+
     var castArmed = false;
     function castTryPlay() {
       try {

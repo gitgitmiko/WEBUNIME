@@ -736,10 +736,10 @@ async function resolveEmbedPath(sourceUrl) {
   const play = data.play || sourceUrl;
   try {
     const host = new URL(play).hostname;
-    // Hydrax: wajib origin abyssplayer.com — proxy/__hydrax__ merusak slug/GCS/hostname check
-    // (pola pre-security yang stabil).
+    // Hydrax lewat proxy + sanitasi iklan (embed langsung → AdBlock/Sandbox destroy).
+    // Shim restore path /{slug}?v= + patch fetch seperti pre-security.
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
-      return play;
+      return toProxyPath(play) || play;
     }
   } catch {
     /* fallback proxy */
