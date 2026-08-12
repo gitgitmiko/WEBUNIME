@@ -27,11 +27,13 @@
       </a>
       <nav class="nav-links" aria-label="Menu utama">
         <a href="#beranda" class="is-active">Beranda</a>
-        <a href="#koleksi">Film</a>
-        <a href="#series">Series</a>
-        <a href="#anime-terbaru">Anime</a>
+        <a href="#series-anime">Series Anime</a>
+        <a href="#anime">Anime</a>
         <a href="#anime-movie">Anime Movie</a>
-        <a href="#baru">Terbaru</a>
+        <a href="#film-terbaru">Film Terbaru</a>
+        <a href="#horor">Horor</a>
+        <a href="#series">Series Drama</a>
+        <a href="#indonesia">Indonesia</a>
       </nav>
       <div class="nav-actions">
         <label class="search" for="searchInput">
@@ -64,6 +66,7 @@
             <button type="button" class="btn btn-info" id="heroInfo">Info Selengkapnya</button>
           </div>
         </div>
+        <div class="hero-dots" id="heroDots" role="tablist" aria-label="Carousel unggulan"></div>
       </section>
 
       <section class="rows" id="koleksi">
@@ -89,47 +92,25 @@
           </div>
         </div>
 
-        <div class="row" id="rowFeatured">
-          <div class="row-head">
-            <h2 id="baru">Baru di WEBUNIME</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackFeatured" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackFeatured"></div>
-            <button class="row-arrow next" data-row="trackFeatured" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="rowSeries">
-          <div class="row-head">
-            <h2 id="series">Series Drama Populer</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackSeries" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackSeries"></div>
-            <button class="row-arrow next" data-row="trackSeries" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="rowAnimeLatest">
-          <div class="row-head">
-            <h2 id="anime-terbaru">Anime Terbaru</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackAnimeLatest" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackAnimeLatest"></div>
-            <button class="row-arrow next" data-row="trackAnimeLatest" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
         <div class="row" id="rowAnime">
           <div class="row-head">
-            <h2 id="anime">Anime Populer</h2>
+            <h2 id="series-anime">Series Anime</h2>
           </div>
           <div class="row-track-wrap">
             <button class="row-arrow prev" data-row="trackAnime" aria-label="Geser kiri">‹</button>
             <div class="row-track" id="trackAnime"></div>
             <button class="row-arrow next" data-row="trackAnime" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="rowAnimeLatest">
+          <div class="row-head">
+            <h2 id="anime">Anime</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackAnimeLatest" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackAnimeLatest"></div>
+            <button class="row-arrow next" data-row="trackAnimeLatest" aria-label="Geser kanan">›</button>
           </div>
         </div>
 
@@ -144,35 +125,19 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="row-head"><h2>Film Indonesia</h2></div>
+        <div class="row" id="rowFeatured">
+          <div class="row-head">
+            <h2 id="film-terbaru">Film Terbaru</h2>
+          </div>
           <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackIndonesia" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackIndonesia"></div>
-            <button class="row-arrow next" data-row="trackIndonesia" aria-label="Geser kanan">›</button>
+            <button class="row-arrow prev" data-row="trackFeatured" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackFeatured"></div>
+            <button class="row-arrow next" data-row="trackFeatured" aria-label="Geser kanan">›</button>
           </div>
         </div>
 
         <div class="row">
-          <div class="row-head"><h2 id="title2026">Film 2026</h2></div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="track2026" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="track2026"></div>
-            <button class="row-arrow next" data-row="track2026" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="row-head"><h2 id="title2025">Film 2025</h2></div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="track2025" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="track2025"></div>
-            <button class="row-arrow next" data-row="track2025" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="row-head"><h2>Film Horor</h2></div>
+          <div class="row-head"><h2 id="horor">Horor</h2></div>
           <div class="row-track-wrap">
             <button class="row-arrow prev" data-row="trackHorror" aria-label="Geser kiri">‹</button>
             <div class="row-track" id="trackHorror"></div>
@@ -181,7 +146,7 @@
         </div>
 
         <div class="row">
-          <div class="row-head"><h2>Aksi & Petualangan</h2></div>
+          <div class="row-head"><h2 id="aksi">Aksi & Petualangan</h2></div>
           <div class="row-track-wrap">
             <button class="row-arrow prev" data-row="trackAction" aria-label="Geser kiri">‹</button>
             <div class="row-track" id="trackAction"></div>
@@ -190,7 +155,7 @@
         </div>
 
         <div class="row">
-          <div class="row-head"><h2>Drama & Romance</h2></div>
+          <div class="row-head"><h2 id="drama">Drama & Romance</h2></div>
           <div class="row-track-wrap">
             <button class="row-arrow prev" data-row="trackDrama" aria-label="Geser kiri">‹</button>
             <div class="row-track" id="trackDrama"></div>
@@ -198,12 +163,23 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="row-head"><h2>Koleksi Klasik</h2></div>
+        <div class="row" id="rowSeries">
+          <div class="row-head">
+            <h2 id="series">Series Drama Populer</h2>
+          </div>
           <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackClassic" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackClassic"></div>
-            <button class="row-arrow next" data-row="trackClassic" aria-label="Geser kanan">›</button>
+            <button class="row-arrow prev" data-row="trackSeries" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackSeries"></div>
+            <button class="row-arrow next" data-row="trackSeries" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row-head"><h2 id="indonesia">Film Indonesia</h2></div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackIndonesia" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackIndonesia"></div>
+            <button class="row-arrow next" data-row="trackIndonesia" aria-label="Geser kanan">›</button>
           </div>
         </div>
       </section>
@@ -216,7 +192,14 @@
 
     <footer class="footer">
       <img class="footer-brand-img" src="/brand/weeboonime.png?v=3" alt="WEBUNIME" width="220" height="43" decoding="async" />
-      <p>Katalog film ringan bergaya Netflix. Data demo dari scrape lokal.</p>
+      <div class="footer-disclaimer">
+        <h2 class="footer-disclaimer-title">DISCLAIMER</h2>
+        <p>
+          Weeboonime only provides movie link information available on the internet.
+          We do not store video files on our own server. All content belongs to the original providers.
+        </p>
+      </div>
+      <p class="footer-copy">© 2026 Weeboonime. All Right Reserved</p>
     </footer>
 
     <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">

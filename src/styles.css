@@ -107,6 +107,14 @@ input {
   display: flex;
   gap: 1.25rem;
   margin-left: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  max-width: min(58vw, 720px);
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-links a {
@@ -114,6 +122,7 @@ input {
   font-size: 0.92rem;
   font-weight: 500;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -521,6 +530,38 @@ body.is-auth-checking .auth-boot,
   gap: 0.75rem;
 }
 
+.hero-dots {
+  position: absolute;
+  right: clamp(1rem, 4vw, 3rem);
+  bottom: 1.6rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.hero-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, width 0.2s ease;
+}
+
+.hero-dot.is-active {
+  width: 1.35rem;
+  background: #fff;
+}
+
+.hero-dot:hover,
+.hero-dot:focus-visible {
+  background: rgba(255, 255, 255, 0.85);
+  outline: none;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -591,15 +632,15 @@ body.is-auth-checking .auth-boot,
 
 .poster-ep-continue {
   position: absolute;
-  left: 0.45rem;
-  top: 0.45rem;
-  z-index: 1;
-  padding: 0.2rem 0.45rem;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.72);
+  left: 0.4rem;
+  top: 2.05rem;
+  z-index: 2;
+  padding: 0.18rem 0.4rem;
+  border-radius: 3px;
+  background: rgba(229, 9, 20, 0.9);
   color: #fff;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.68rem;
+  font-weight: 700;
 }
 
 /* ROWS */
@@ -732,47 +773,96 @@ body.is-auth-checking .auth-boot,
     to top,
     rgba(0, 0, 0, 0.92) 0%,
     rgba(0, 0, 0, 0.55) 38%,
-    transparent 68%
+    transparent 62%
   );
-  opacity: 0;
-  transition: opacity 0.2s ease;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.poster-badges {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  right: 0.4rem;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.35rem;
+  pointer-events: none;
+}
+
+.poster-badge {
+  padding: 0.18rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.poster-badge--rating {
+  background: rgba(70, 211, 105, 0.92);
+  color: #04140a;
+}
+
+.poster-badge--quality {
+  margin-left: auto;
+  background: rgba(229, 9, 20, 0.92);
+}
+
+.poster-badge--quality.is-cam {
+  background: rgba(180, 120, 20, 0.95);
+}
+
+.poster-foot {
+  position: absolute;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.4rem;
+  z-index: 1;
+  display: grid;
+  gap: 0.15rem;
+  text-align: left;
 }
 
 .poster-label {
-  position: absolute;
-  left: 0.45rem;
-  right: 0.45rem;
-  bottom: 0.45rem;
-  z-index: 1;
   margin: 0;
-  padding: 0.35rem 0.4rem;
-  border-radius: 3px;
-  background: rgba(0, 0, 0, 0.55);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   letter-spacing: 0.01em;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.poster-facts {
+  margin: 0;
+  color: #d4d4d8;
+  font-size: 0.68rem;
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .poster-ep {
   position: absolute;
-  top: 0.45rem;
-  left: 0.45rem;
-  z-index: 1;
-  padding: 0.2rem 0.45rem;
+  top: 2.05rem;
+  left: 0.4rem;
+  z-index: 2;
+  padding: 0.18rem 0.4rem;
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.72);
   color: #fff;
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.2;
@@ -780,18 +870,15 @@ body.is-auth-checking .auth-boot,
 
 .poster:hover,
 .poster:focus-visible {
-  transform: scale(1.12);
+  transform: scale(1.08);
   z-index: 2;
   box-shadow: var(--shadow);
   outline: none;
 }
 
-.poster:hover::after,
-.poster:focus-visible::after,
 .poster:hover .poster-label,
 .poster:focus-visible .poster-label {
-  opacity: 1;
-  transform: none;
+  -webkit-line-clamp: 3;
 }
 
 /* SEARCH GRID */
@@ -819,14 +906,35 @@ body.is-auth-checking .auth-boot,
 
 .footer-brand-img {
   display: block;
-  margin: 0 0 0.55rem;
+  margin: 0 0 1rem;
   width: 240px;
   height: auto;
   object-fit: contain;
 }
 
-.footer p:last-child {
+.footer-disclaimer {
+  max-width: 42rem;
+  margin: 0 0 1.25rem;
+}
+
+.footer-disclaimer-title {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+.footer-disclaimer p {
   margin: 0;
+  line-height: 1.55;
+  font-size: 0.86rem;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.86rem;
 }
 
 /* MODAL — gaya detail Netflix */

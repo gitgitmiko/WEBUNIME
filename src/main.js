@@ -12,6 +12,9 @@ let activeMovie = null;
 let activeEpisode = null;
 let playerTimer = null;
 let modalIsFavorite = false;
+let heroSlides = [];
+let heroSlideIndex = 0;
+let heroTimer = null;
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -211,13 +214,17 @@ function createLibraryPoster(entry, index = 0) {
     entry.episodeSlug != null
       ? `<span class="poster-ep-continue">Lanjut</span>`
       : "";
+  const movie = findInCatalog(entry.collection, entry.slug);
   btn.innerHTML = `
     ${ep}
     <img src="${entry.thumbnail || ""}" alt="${title}" loading="lazy" width="200" height="300" />
-    <p class="poster-label">${title}</p>
+    ${posterBadgesHtml(movie || { rating: null, quality: null })}
+    <div class="poster-foot">
+      <p class="poster-label">${title}</p>
+      ${posterFactsHtml(movie || {})}
+    </div>
   `;
   btn.addEventListener("click", () => {
-    const movie = findInCatalog(entry.collection, entry.slug);
     if (!movie) {
       openModal({
         nama: title,
@@ -284,9 +291,60 @@ async function recordWatchHistory(movie) {
   }
 }
 
+function parseRating(value) {
+  const n = Number(String(value ?? "").replace(",", "."));
+  return Number.isFinite(n) ? n : null;
+}
+
+function formatQuality(raw) {
+  const value = String(raw || "").trim();
+  if (!value) return "";
+  const key = value.toLowerCase().replace(/_/g, "-");
+  const map = {
+    hd: "HD",
+    hdtv: "HDTV",
+    fullhd: "FHD",
+    "full-hd": "FHD",
+    fhd: "FHD",
+    cam: "CAM",
+    hdcam: "HDCAM",
+    ts: "TS",
+    sd: "SD",
+    bluray: "BluRay",
+    "blu-ray": "BluRay",
+    webdl: "WEB-DL",
+    "web-dl": "WEB-DL",
+  };
+  return map[key] || value.toUpperCase();
+}
+
+function posterBadgesHtml(movie) {
+  const rating = parseRating(movie?.rating);
+  const quality = formatQuality(movie?.quality);
+  const ratingHtml =
+    rating != null
+      ? `<span class="poster-badge poster-badge--rating" title="Rating">${rating}</span>`
+      : "";
+  const qualityHtml = quality
+    ? `<span class="poster-badge poster-badge--quality${
+        /cam/i.test(quality) ? " is-cam" : ""
+      }" title="Kualitas">${quality}</span>`
+    : "";
+  if (!ratingHtml && !qualityHtml) return "";
+  return `<div class="poster-badges">${ratingHtml}${qualityHtml}</div>`;
+}
+
+function posterFactsHtml(movie) {
+  const parts = [];
+  if (movie?.tahun) parts.push(String(movie.tahun));
+  if (movie?.durasi) parts.push(String(movie.durasi));
+  if (!parts.length) return "";
+  return `<p class="poster-facts">${parts.join(" · ")}</p>`;
+}
+
 function metaLine(movie) {
   const genres = (movie.genre || []).join(" · ");
-  const quality = movie.quality ? ` · ${movie.quality}` : "";
+  const quality = movie.quality ? ` · ${formatQuality(movie.quality)}` : "";
   if (isSeries(movie)) {
     const eps = movie.episodes_count || movie.episodes?.length || "";
     return `${movie.rating ?? "—"} Cocok untukmu · ${movie.tahun}${quality} · ${
@@ -308,13 +366,17 @@ function createPoster(movie, index = 0) {
   btn.setAttribute("aria-label", `Detail ${movie.nama}`);
   btn.innerHTML = `
     <img src="${movie.thumbnail}" alt="${movie.judul || movie.nama}" loading="lazy" width="200" height="300" />
-    <p class="poster-label">${movie.nama}</p>
+    ${posterBadgesHtml(movie)}
+    <div class="poster-foot">
+      <p class="poster-label">${movie.nama}</p>
+      ${posterFactsHtml(movie)}
+    </div>
   `;
   btn.addEventListener("click", () => openModal(movie));
   return btn;
 }
 
-/** Poster episode rilis terbaru (Anime Terbaru). */
+/** Poster episode rilis terbaru (Anime). */
 function createLatestEpisodePoster(item, index = 0) {
   const btn = document.createElement("button");
   btn.type = "button";
@@ -323,13 +385,30 @@ function createLatestEpisodePoster(item, index = 0) {
   const epLabel =
     item.episode != null ? `Episode ${item.episode}` : "Episode baru";
   btn.setAttribute("aria-label", `${item.nama} ${epLabel}`);
+  const show = anime.find((a) => a.slug === item.anime_slug);
+  const metaSource = show
+    ? {
+        rating: show.rating,
+        quality: show.quality || item.quality,
+        tahun: show.tahun || item.tahun,
+        durasi: item.episode != null ? `E${item.episode}` : show.durasi,
+      }
+    : {
+        rating: item.rating,
+        quality: item.quality,
+        tahun: item.tahun,
+        durasi: item.episode != null ? `E${item.episode}` : item.durasi,
+      };
   btn.innerHTML = `
     <img src="${item.thumbnail}" alt="${item.nama}" loading="lazy" width="200" height="300" />
     <span class="poster-ep">${epLabel}</span>
-    <p class="poster-label">${item.nama}</p>
+    ${posterBadgesHtml(metaSource)}
+    <div class="poster-foot">
+      <p class="poster-label">${item.nama}</p>
+      ${posterFactsHtml(metaSource)}
+    </div>
   `;
   btn.addEventListener("click", () => {
-    const show = anime.find((a) => a.slug === item.anime_slug);
     if (!show) {
       openModal({
         type: "anime",
@@ -367,12 +446,20 @@ function fillLatestTrack(id, list) {
 
 function renderRows() {
   renderLibraryRows();
-  fillTrack("trackFeatured", movies);
-  fillTrack("trackSeries", series);
-  fillLatestTrack("trackAnimeLatest", animeLatest);
   fillTrack("trackAnime", anime);
+  fillLatestTrack("trackAnimeLatest", animeLatest);
   fillTrack("trackAnimeMovie", animeMovies);
+  fillTrack("trackFeatured", movies);
   fillTrack("trackHorror", horror);
+  fillTrack(
+    "trackAction",
+    movies.filter((m) => hasGenre(m, ["Action", "Adventure", "Thriller"]))
+  );
+  fillTrack(
+    "trackDrama",
+    movies.filter((m) => hasGenre(m, ["Drama", "Romance"]))
+  );
+  fillTrack("trackSeries", series);
   fillTrack(
     "trackIndonesia",
     [...indonesia].sort((a, b) => {
@@ -386,33 +473,6 @@ function renderRows() {
       if (d) return d;
       return String(a.nama || "").localeCompare(String(b.nama || ""), "id");
     })
-  );
-  // Tahun berjalan (mengikuti jam perangkat), bukan angka hardcode.
-  const currentYear = new Date().getFullYear();
-  const prevYear = currentYear - 1;
-  const title2026 = document.getElementById("title2026");
-  const title2025 = document.getElementById("title2025");
-  if (title2026) title2026.textContent = `Film ${currentYear}`;
-  if (title2025) title2025.textContent = `Film ${prevYear}`;
-  fillTrack(
-    "track2026",
-    movies.filter((m) => Number(m.tahun) === currentYear)
-  );
-  fillTrack(
-    "track2025",
-    movies.filter((m) => Number(m.tahun) === prevYear)
-  );
-  fillTrack(
-    "trackAction",
-    movies.filter((m) => hasGenre(m, ["Action", "Adventure", "Thriller", "Horror"]))
-  );
-  fillTrack(
-    "trackDrama",
-    movies.filter((m) => hasGenre(m, ["Drama", "Romance", "Comedy"]))
-  );
-  fillTrack(
-    "trackClassic",
-    movies.filter((m) => Number(m.tahun) <= 2022)
   );
 }
 
@@ -456,12 +516,106 @@ function setModalFact(rowId, valueId, value) {
 }
 
 function setHero(movie) {
+  if (!movie) return;
   activeMovie = movie;
   const bg = $("#heroBg");
-  bg.style.backgroundImage = `url("${movie.thumbnail}")`;
+  const art = movie.thumbnail_landscape || movie.thumbnail;
+  bg.style.backgroundImage = art ? `url("${art}")` : "";
   $("#heroTitle").textContent = movie.nama;
   $("#heroMeta").textContent = metaLine(movie);
   $("#heroDesc").textContent = shortSinopsis(movie.sinopsis);
+}
+
+function shuffleCopy(list) {
+  const arr = [...list];
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function pickHeroSlides(pool, limit = 10) {
+  const eligible = pool.filter((item) => {
+    const rating = parseRating(item?.rating);
+    return rating != null && rating >= 7 && (item.thumbnail || item.thumbnail_landscape);
+  });
+  const preferred = eligible.filter((item) => item.thumbnail_landscape);
+  const source = preferred.length >= limit ? preferred : eligible;
+  return shuffleCopy(source).slice(0, limit);
+}
+
+function renderHeroDots() {
+  const dots = $("#heroDots");
+  if (!dots) return;
+  dots.replaceChildren(
+    ...heroSlides.map((_, i) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = `hero-dot${i === heroSlideIndex ? " is-active" : ""}`;
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-label", `Slide ${i + 1}`);
+      btn.setAttribute("aria-selected", i === heroSlideIndex ? "true" : "false");
+      btn.addEventListener("click", () => showHeroSlide(i, true));
+      return btn;
+    })
+  );
+}
+
+function showHeroSlide(index, userTriggered = false) {
+  if (!heroSlides.length) return;
+  heroSlideIndex = ((index % heroSlides.length) + heroSlides.length) % heroSlides.length;
+  setHero(heroSlides[heroSlideIndex]);
+  renderHeroDots();
+  if (userTriggered) startHeroCarousel();
+}
+
+function stopHeroCarousel() {
+  if (heroTimer) {
+    clearInterval(heroTimer);
+    heroTimer = null;
+  }
+}
+
+function startHeroCarousel() {
+  stopHeroCarousel();
+  if (heroSlides.length < 2) return;
+  heroTimer = setInterval(() => {
+    showHeroSlide(heroSlideIndex + 1);
+  }, 7000);
+}
+
+function initHeroCarousel() {
+  heroSlides = pickHeroSlides(catalog, 10);
+  if (!heroSlides.length) {
+    heroSlides = pickHeroSlides(
+      catalog.filter((item) => item.thumbnail || item.thumbnail_landscape),
+      10
+    );
+  }
+  if (!heroSlides.length) {
+    const fallback =
+      movies[0] ||
+      anime[0] ||
+      animeMovies[0] ||
+      indonesia[0] ||
+      horror[0] ||
+      series[0];
+    if (fallback) heroSlides = [fallback];
+  }
+  heroSlideIndex = 0;
+  showHeroSlide(0);
+  startHeroCarousel();
+  const hero = $("#hero");
+  if (hero && !hero.dataset.carouselBound) {
+    hero.dataset.carouselBound = "1";
+    hero.addEventListener("mouseenter", stopHeroCarousel);
+    hero.addEventListener("mouseleave", startHeroCarousel);
+    hero.addEventListener("focusin", stopHeroCarousel);
+    hero.addEventListener("focusout", (e) => {
+      if (!hero.contains(e.relatedTarget)) startHeroCarousel();
+    });
+  }
 }
 
 function episodeOptions(item) {
@@ -1340,14 +1494,7 @@ async function bootApp() {
     ...anime,
     ...animeMovies,
   ]);
-  setHero(
-    movies[0] ||
-      indonesia[0] ||
-      anime[0] ||
-      animeMovies[0] ||
-      horror[0] ||
-      series[0]
-  );
+  initHeroCarousel();
   bindNav();
   bindRows();
   bindSearch();
