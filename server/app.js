@@ -7,6 +7,8 @@ import { embedProxyMiddleware } from "../plugins/embed-proxy.js";
 import { createAuthRouter, createLoginGuard } from "./auth.js";
 import { createCatalogAdminRouter } from "./catalog-admin.js";
 import { createCatalogReadRouter } from "./catalog-api.js";
+import { createUserLibraryRouter } from "./user-library-api.js";
+import { ensureUserLibrarySchema } from "./user-library.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -40,6 +42,7 @@ app.use(
 app.use(express.json({ limit: "32kb" }));
 app.use(createLoginGuard());
 app.use("/api/v1", createCatalogReadRouter());
+app.use("/api/v1", createUserLibraryRouter());
 app.use(embedProxyMiddleware);
 
 app.use(
@@ -68,6 +71,12 @@ app.use((err, _req, res, _next) => {
   }
 });
 
-app.listen(port, host, () => {
+app.listen(port, host, async () => {
+  try {
+    await ensureUserLibrarySchema();
+    console.log("User library schema ready");
+  } catch (err) {
+    console.error("User library schema failed:", err.message);
+  }
   console.log(`WEBUNIME listening on http://${host}:${port}`);
 });

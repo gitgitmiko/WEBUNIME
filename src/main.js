@@ -6,9 +6,12 @@ let anime = [];
 let animeMovies = [];
 let animeLatest = [];
 let catalog = [];
+let favorites = [];
+let watchHistory = [];
 let activeMovie = null;
 let activeEpisode = null;
 let playerTimer = null;
+let modalIsFavorite = false;
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -118,6 +121,169 @@ function isSeries(item) {
   );
 }
 
+function resolveCollection(movie) {
+  if (!movie) return "movies";
+  if (movie.type === "series") return "series";
+  if (movie.type === "anime") return "anime";
+  if (movie.type === "anime-movie") return "anime-movies";
+  const cat = String(movie.catalog || "").toLowerCase();
+  if (cat.includes("horror") || cat === "horor") return "horror";
+  if (cat.includes("indonesia")) return "indonesia";
+  const slug = movie.slug;
+  if (slug && horror.some((h) => h.slug === slug)) return "horror";
+  if (slug && indonesia.some((i) => i.slug === slug)) return "indonesia";
+  if (slug && series.some((s) => s.slug === slug)) return "series";
+  if (slug && anime.some((a) => a.slug === slug)) return "anime";
+  if (slug && animeMovies.some((a) => a.slug === slug)) return "anime-movies";
+  return "movies";
+}
+
+function findInCatalog(collection, slug) {
+  const lists = {
+    movies,
+    series,
+    horror,
+    indonesia,
+    anime,
+    "anime-movies": animeMovies,
+  };
+  const list = lists[collection] || [];
+  return list.find((x) => x.slug === slug) || null;
+}
+
+async function libraryFetch(path, options = {}) {
+  const res = await fetch(`/api/v1/me${path}`, {
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      ...(options.headers || {}),
+    },
+    ...options,
+  });
+  let data = null;
+  try {
+    data = await res.json();
+  } catch {
+    data = null;
+  }
+  return { res, data };
+}
+
+async function loadUserLibrary() {
+  if (!currentUser) {
+    favorites = [];
+    watchHistory = [];
+    return;
+  }
+  try {
+    const [fav, hist] = await Promise.all([
+      libraryFetch("/favorites"),
+      libraryFetch("/history"),
+    ]);
+    favorites = fav.res.ok ? fav.data?.items || [] : [];
+    watchHistory = hist.res.ok ? hist.data?.items || [] : [];
+  } catch {
+    favorites = [];
+    watchHistory = [];
+  }
+}
+
+function setFavButtonState(on) {
+  modalIsFavorite = Boolean(on);
+  const btn = $("#modalFav");
+  if (!btn) return;
+  btn.classList.toggle("is-on", modalIsFavorite);
+  btn.setAttribute("aria-pressed", modalIsFavorite ? "true" : "false");
+  const icon = $(".btn-fav-icon", btn);
+  const text = $(".btn-fav-text", btn);
+  if (icon) icon.textContent = modalIsFavorite ? "♥" : "♡";
+  if (text) text.textContent = modalIsFavorite ? "Dalam Favorit" : "Favorit";
+}
+
+function createLibraryPoster(entry, index = 0) {
+  const btn = document.createElement("button");
+  btn.type = "button";
+  btn.className = "poster";
+  btn.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
+  const title = entry.title || entry.slug;
+  btn.setAttribute("aria-label", `Buka ${title}`);
+  const ep =
+    entry.episodeSlug != null
+      ? `<span class="poster-ep-continue">Lanjut</span>`
+      : "";
+  btn.innerHTML = `
+    ${ep}
+    <img src="${entry.thumbnail || ""}" alt="${title}" loading="lazy" width="200" height="300" />
+    <p class="poster-label">${title}</p>
+  `;
+  btn.addEventListener("click", () => {
+    const movie = findInCatalog(entry.collection, entry.slug);
+    if (!movie) {
+      openModal({
+        nama: title,
+        judul: title,
+        slug: entry.slug,
+        thumbnail: entry.thumbnail,
+        type:
+          entry.collection === "series"
+            ? "series"
+            : entry.collection === "anime"
+              ? "anime"
+              : entry.collection === "anime-movies"
+                ? "anime-movie"
+                : undefined,
+        catalog: entry.collection,
+        sinopsis: "Item tidak ada di katalog lokal. Coba sync ulang.",
+        episodes: [],
+      });
+      return;
+    }
+    openModal(movie, { episodeSlug: entry.episodeSlug || null });
+  });
+  return btn;
+}
+
+function renderLibraryRows() {
+  const continueRow = $("#rowContinue");
+  const favRow = $("#rowFavorites");
+  const continueTrack = $("#trackContinue");
+  const favTrack = $("#trackFavorites");
+
+  if (continueTrack) {
+    continueTrack.replaceChildren(
+      ...watchHistory.map((e, i) => createLibraryPoster(e, i))
+    );
+    requestAnimationFrame(() => syncRowArrows(continueTrack));
+  }
+  if (favTrack) {
+    favTrack.replaceChildren(...favorites.map((e, i) => createLibraryPoster(e, i)));
+    requestAnimationFrame(() => syncRowArrows(favTrack));
+  }
+  continueRow?.classList.toggle("hidden", !watchHistory.length);
+  favRow?.classList.toggle("hidden", !favorites.length);
+}
+
+async function recordWatchHistory(movie) {
+  if (!currentUser || !movie?.slug) return;
+  const collection = resolveCollection(movie);
+  try {
+    await libraryFetch("/history", {
+      method: "POST",
+      body: JSON.stringify({
+        collection,
+        slug: movie.slug,
+        episodeSlug: activeEpisode?.slug || null,
+        title: movie.nama || movie.judul || movie.slug,
+        thumbnail: movie.thumbnail || null,
+      }),
+    });
+    await loadUserLibrary();
+    renderLibraryRows();
+  } catch (err) {
+    console.warn("history save failed", err);
+  }
+}
+
 function metaLine(movie) {
   const genres = (movie.genre || []).join(" · ");
   const quality = movie.quality ? ` · ${movie.quality}` : "";
@@ -200,6 +366,7 @@ function fillLatestTrack(id, list) {
 }
 
 function renderRows() {
+  renderLibraryRows();
   fillTrack("trackFeatured", movies);
   fillTrack("trackSeries", series);
   fillLatestTrack("trackAnimeLatest", animeLatest);
@@ -474,6 +641,20 @@ function openModal(movie, opts = {}) {
     epWrap.classList.add("hidden");
   }
 
+  const collection = resolveCollection(movie);
+  const favored = favorites.some(
+    (f) => f.collection === collection && f.slug === movie.slug
+  );
+  setFavButtonState(favored);
+  // refresh from server in background
+  libraryFetch(
+    `/favorites/check?collection=${encodeURIComponent(collection)}&slug=${encodeURIComponent(movie.slug || "")}`
+  ).then(({ res, data }) => {
+    if (res.ok && activeMovie?.slug === movie.slug) {
+      setFavButtonState(Boolean(data?.favorite));
+    }
+  });
+
   modal.classList.remove("hidden");
   modal.scrollTop = 0;
   document.body.style.overflow = "hidden";
@@ -736,6 +917,7 @@ function openPlayer(movie) {
   if (!hasServers) {
     $("#playerHint").textContent = "Mode demo — preview poster cinematic";
   }
+  recordWatchHistory(movie);
 }
 
 function closePlayer() {
@@ -857,6 +1039,37 @@ function bindActions() {
       activeEpisode = getEpisodeBySlug(activeMovie, slug) || activeEpisode;
     }
     openPlayer(activeMovie);
+  });
+  $("#modalFav")?.addEventListener("click", async () => {
+    if (!currentUser || !activeMovie?.slug) return;
+    const collection = resolveCollection(activeMovie);
+    const slug = activeMovie.slug;
+    const btn = $("#modalFav");
+    if (btn) btn.disabled = true;
+    try {
+      if (modalIsFavorite) {
+        const { res } = await libraryFetch(
+          `/favorites/${encodeURIComponent(collection)}/${encodeURIComponent(slug)}`,
+          { method: "DELETE" }
+        );
+        if (res.ok) setFavButtonState(false);
+      } else {
+        const { res } = await libraryFetch("/favorites", {
+          method: "POST",
+          body: JSON.stringify({
+            collection,
+            slug,
+            title: activeMovie.nama || activeMovie.judul || slug,
+            thumbnail: activeMovie.thumbnail || null,
+          }),
+        });
+        if (res.ok) setFavButtonState(true);
+      }
+      await loadUserLibrary();
+      renderLibraryRows();
+    } finally {
+      if (btn) btn.disabled = false;
+    }
   });
   $("#modalEpisodeSelect")?.addEventListener("change", (e) => {
     if (!activeMovie) return;
@@ -1059,6 +1272,8 @@ async function refreshAuthSession() {
 
 async function bootApp() {
   if (appBooted) {
+    await loadUserLibrary();
+    renderLibraryRows();
     leaveAuthGate();
     closeAuthModal();
     return;
@@ -1088,11 +1303,12 @@ async function bootApp() {
       horror[0] ||
       series[0]
   );
-  renderRows();
   bindNav();
   bindRows();
   bindSearch();
   bindActions();
+  await loadUserLibrary();
+  renderRows();
   appBooted = true;
   leaveAuthGate();
   closeAuthModal();
@@ -1184,6 +1400,9 @@ function bindAuth() {
   $("#authLogoutBtn")?.addEventListener("click", async () => {
     await authFetch("/logout", { method: "POST", body: "{}" });
     currentUser = null;
+    favorites = [];
+    watchHistory = [];
+    renderLibraryRows();
     renderAuthChrome();
     enterAuthGate("login");
   });

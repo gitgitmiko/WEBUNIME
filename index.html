@@ -61,6 +61,28 @@
       </section>
 
       <section class="rows" id="koleksi">
+        <div class="row hidden" id="rowContinue">
+          <div class="row-head">
+            <h2 id="lanjut">Lanjut Menonton</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackContinue" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackContinue"></div>
+            <button class="row-arrow next" data-row="trackContinue" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row hidden" id="rowFavorites">
+          <div class="row-head">
+            <h2 id="favorit">Favorit Saya</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackFavorites" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackFavorites"></div>
+            <button class="row-arrow next" data-row="trackFavorites" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
         <div class="row" id="rowFeatured">
           <div class="row-head">
             <h2 id="baru">Baru di WEBUNIME</h2>
@@ -203,6 +225,10 @@
               <button type="button" class="btn btn-play" id="modalPlay">
                 <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
                 Putar
+              </button>
+              <button type="button" class="btn btn-fav" id="modalFav" aria-pressed="false">
+                <span class="btn-fav-icon" aria-hidden="true">♡</span>
+                <span class="btn-fav-text">Favorit</span>
               </button>
             </div>
           </div>

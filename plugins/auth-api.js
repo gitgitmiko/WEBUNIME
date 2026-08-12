@@ -1,6 +1,7 @@
 import { createAuthRouter, createLoginGuard } from "../server/auth.js";
 import { createCatalogAdminRouter } from "../server/catalog-admin.js";
 import { createCatalogReadRouter } from "../server/catalog-api.js";
+import { createUserLibraryRouter } from "../server/user-library-api.js";
 import cookieParser from "cookie-parser";
 import express from "express";
 
@@ -25,7 +26,9 @@ function mountApi(middlewares) {
   const jsonLarge = express.json({ limit: "120mb" });
   const auth = createAuthRouter();
   const admin = createCatalogAdminRouter();
-  const v1 = createCatalogReadRouter();
+  const v1 = express.Router();
+  v1.use(createCatalogReadRouter());
+  v1.use(createUserLibraryRouter());
   const guard = createLoginGuard();
 
   middlewares.use((req, res, next) => {
