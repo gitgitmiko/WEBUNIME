@@ -736,10 +736,10 @@ async function resolveEmbedPath(sourceUrl) {
   const play = data.play || sourceUrl;
   try {
     const host = new URL(play).hostname;
-    // Hydrax/Abyss: tiru App TV — bungkus di iframe dalam (/__hydrax__)
-    // supaya top !== self (anti direct-access) + proxy path tetap utuh.
+    // Hydrax: wajib origin abyssplayer.com — proxy/__hydrax__ merusak slug/GCS/hostname check
+    // (pola pre-security yang stabil).
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
-      return `/__hydrax__?u=${encodeURIComponent(play)}`;
+      return play;
     }
   } catch {
     /* fallback proxy */
