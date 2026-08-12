@@ -569,6 +569,78 @@ function setModalFact(rowId, valueId, value) {
   }
 }
 
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function genreTone(genre) {
+  const g = String(genre || "").toLowerCase();
+  if (/horror|horor|slasher/.test(g)) return "horror";
+  if (/romance|romantic|romantis/.test(g)) return "romance";
+  if (/action|aksi/.test(g)) return "action";
+  if (/adventure|petualangan/.test(g)) return "adventure";
+  if (/comedy|komedi/.test(g)) return "comedy";
+  if (/thriller|suspense/.test(g)) return "thriller";
+  if (/drama/.test(g)) return "drama";
+  if (/sci-?fi|science fiction|fiksi ilmiah/.test(g)) return "scifi";
+  if (/fantasy|fantasi/.test(g)) return "fantasy";
+  if (/animation|anime|animasi/.test(g)) return "animation";
+  if (/crime|kriminal/.test(g)) return "crime";
+  if (/mystery|misteri/.test(g)) return "mystery";
+  if (/family|keluarga/.test(g)) return "family";
+  if (/music|musik|musical/.test(g)) return "music";
+  if (/war|perang/.test(g)) return "war";
+  if (/documentary|dokumenter/.test(g)) return "documentary";
+  if (/sport|olahraga/.test(g)) return "sport";
+  if (/western/.test(g)) return "western";
+  return "default";
+}
+
+function qualityTone(quality) {
+  if (/cam|ts|sd/i.test(quality)) return "cam";
+  if (/blu|web|fhd|hd|uhd|4k/i.test(quality)) return "hd";
+  return "default";
+}
+
+function heroMetaHtml(movie) {
+  if (!movie) return "";
+  const chips = [];
+  const rating = parseRating(movie.rating);
+  if (rating != null) {
+    chips.push(
+      `<span class="hero-chip hero-chip--rating"><span class="poster-star" aria-hidden="true">★</span>${escapeHtml(rating)}</span>`
+    );
+  }
+  const quality = formatQuality(movie.quality);
+  if (quality) {
+    chips.push(
+      `<span class="hero-chip hero-chip--quality is-${qualityTone(quality)}">${escapeHtml(quality)}</span>`
+    );
+  }
+  if (movie.tahun) {
+    chips.push(
+      `<span class="hero-chip hero-chip--year">${escapeHtml(movie.tahun)}</span>`
+    );
+  }
+  if (movie.durasi) {
+    chips.push(
+      `<span class="hero-chip hero-chip--duration">${escapeHtml(movie.durasi)}</span>`
+    );
+  }
+  for (const genre of movie.genre || []) {
+    if (!genre) continue;
+    chips.push(
+      `<span class="hero-chip hero-chip--genre is-${genreTone(genre)}">${escapeHtml(genre)}</span>`
+    );
+  }
+  return chips.join("");
+}
+
 function setHero(movie) {
   if (!movie) return;
   activeMovie = movie;
@@ -576,7 +648,8 @@ function setHero(movie) {
   const art = movie.thumbnail_landscape || movie.thumbnail;
   bg.style.backgroundImage = art ? `url("${art}")` : "";
   $("#heroTitle").textContent = movie.nama;
-  $("#heroMeta").textContent = metaLine(movie);
+  const meta = $("#heroMeta");
+  if (meta) meta.innerHTML = heroMetaHtml(movie);
   $("#heroDesc").textContent = shortSinopsis(movie.sinopsis);
 }
 
@@ -668,6 +741,15 @@ function initHeroCarousel() {
     hero.addEventListener("focusin", stopHeroCarousel);
     hero.addEventListener("focusout", (e) => {
       if (!hero.contains(e.relatedTarget)) startHeroCarousel();
+    });
+    $("#heroPrev")?.addEventListener("click", () => showHeroSlide(heroSlideIndex - 1, true));
+    $("#heroNext")?.addEventListener("click", () => showHeroSlide(heroSlideIndex + 1, true));
+    document.addEventListener("keydown", (e) => {
+      if (!$("#hero") || document.body.classList.contains("is-modal-open")) return;
+      const tag = String(e.target?.tagName || "").toLowerCase();
+      if (tag === "input" || tag === "textarea" || tag === "select") return;
+      if (e.key === "ArrowLeft") showHeroSlide(heroSlideIndex - 1, true);
+      if (e.key === "ArrowRight") showHeroSlide(heroSlideIndex + 1, true);
     });
   }
 }

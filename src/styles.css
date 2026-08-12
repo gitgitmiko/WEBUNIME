@@ -505,12 +505,70 @@ body.is-auth-checking .auth-boot,
 }
 
 .hero-meta {
-  margin: 0 0 0.85rem;
-  color: #46d369;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  margin: 0 0 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
 }
+
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.hero-chip--rating {
+  background: rgba(70, 211, 105, 0.92);
+  color: #04140a;
+}
+
+.hero-chip--quality.is-hd {
+  background: rgba(229, 9, 20, 0.92);
+}
+
+.hero-chip--quality.is-cam {
+  background: rgba(196, 140, 20, 0.95);
+  color: #1a1200;
+}
+
+.hero-chip--quality.is-default {
+  background: rgba(99, 102, 241, 0.9);
+}
+
+.hero-chip--year,
+.hero-chip--duration {
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 600;
+}
+
+.hero-chip--genre.is-horror { background: #b91c1c; }
+.hero-chip--genre.is-romance { background: #db2777; }
+.hero-chip--genre.is-action { background: #ea580c; }
+.hero-chip--genre.is-adventure { background: #0d9488; }
+.hero-chip--genre.is-comedy { background: #ca8a04; color: #1a1400; }
+.hero-chip--genre.is-thriller { background: #7f1d1d; }
+.hero-chip--genre.is-drama { background: #7c3aed; }
+.hero-chip--genre.is-scifi { background: #2563eb; }
+.hero-chip--genre.is-fantasy { background: #4f46e5; }
+.hero-chip--genre.is-animation { background: #0891b2; }
+.hero-chip--genre.is-crime { background: #475569; }
+.hero-chip--genre.is-mystery { background: #6d28d9; }
+.hero-chip--genre.is-family { background: #16a34a; }
+.hero-chip--genre.is-music { background: #c026d3; }
+.hero-chip--genre.is-war { background: #4d7c0f; }
+.hero-chip--genre.is-documentary { background: #0369a1; }
+.hero-chip--genre.is-sport { background: #059669; }
+.hero-chip--genre.is-western { background: #a16207; }
+.hero-chip--genre.is-default { background: rgba(255, 255, 255, 0.2); }
 
 .hero-desc {
   margin: 0 0 1.4rem;
@@ -528,6 +586,43 @@ body.is-auth-checking .auth-boot,
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.hero-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 7;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.85;
+}
+
+.hero-nav.prev {
+  left: clamp(0.55rem, 2vw, 1.25rem);
+}
+
+.hero-nav.next {
+  right: clamp(0.55rem, 2vw, 1.25rem);
+}
+
+.hero-nav:hover,
+.hero-nav:focus-visible {
+  background: rgba(229, 9, 20, 0.9);
+  opacity: 1;
+  transform: scale(1.06);
+  outline: none;
 }
 
 .hero-dots {
@@ -1567,6 +1662,13 @@ body.is-auth-checking .auth-boot,
 
   .hero-dots {
     bottom: 4.25rem;
+  }
+
+  .hero-nav {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: -1.25rem;
+    font-size: 1.7rem;
   }
 
   .brand-wordmark {
