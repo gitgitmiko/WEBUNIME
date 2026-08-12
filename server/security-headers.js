@@ -8,6 +8,8 @@ export function securityHeadersMiddleware(req, res, next) {
   const isProxySurface =
     path.startsWith("/__px__/") ||
     path.startsWith("/__vid__") ||
+    path === "/__hydrax__" ||
+    path.startsWith("/__hydrax__") ||
     path === "/api/resolve" ||
     path === "/api/embed" ||
     path === "/__wu_sw.js";

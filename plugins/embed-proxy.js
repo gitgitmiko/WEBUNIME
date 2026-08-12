@@ -217,13 +217,16 @@ function injectClientShim(pageUrl) {
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Pertahankan hash iframe (p2pplay dll) — fragment tidak pernah sampai server.
+  // PENTING Hydrax: JANGAN buang prefix /__px__/host — itu merusak origin proxy
+  // (App TV memakai URL asli abyssplayer.com; di web prefix wajib dipertahankan).
   try {
     var pathOnly = String(REAL_PATH).split("#")[0];
     var hashFromReal = String(REAL_PATH).indexOf("#") >= 0
       ? String(REAL_PATH).slice(String(REAL_PATH).indexOf("#"))
       : "";
     var hash = hashFromReal || location.hash || "";
-    history.replaceState(null, "", pathOnly + hash);
+    var nextPath = IS_ABYSS ? (PREFIX + pathOnly + hash) : (pathOnly + hash);
+    history.replaceState(null, "", nextPath);
   } catch (e) {}
 
   // Cast / Turbo / Hydrax: tipu deteksi parent / referrer (wajib playeriframe.sbs)
@@ -387,8 +390,7 @@ function injectClientShim(pageUrl) {
   document.addEventListener("DOMContentLoaded", stripOuterAd);
   setTimeout(stripOuterAd, 500);
 
-  // Blokir popup/iklan — skip Abyss (deteksi security/F12)
-  if (!IS_ABYSS) {
+  // Blokir popup/iklan (App TV juga mem-patch open; toString harus native-like)
   (function blockPopups() {
     var fakeWin = {
       closed: false,
@@ -435,18 +437,21 @@ function injectClientShim(pageUrl) {
       try { fakeOpen(); } catch (e) {}
     }, true);
 
-    try {
-      var oClick = HTMLAnchorElement.prototype.click;
-      HTMLAnchorElement.prototype.click = function () {
-        if (isBlankNav(this)) {
-          try { fakeOpen(); } catch (e) {}
-          return;
-        }
-        return oClick.apply(this, arguments);
-      };
-    } catch (e) {}
+    // Hydrax: jangan patch HTMLAnchorElement.click (App TV juga tidak untuk abyss khusus —
+    // patch click memicu deteksi extension di beberapa build core.bundle).
+    if (!IS_ABYSS) {
+      try {
+        var oClick = HTMLAnchorElement.prototype.click;
+        HTMLAnchorElement.prototype.click = function () {
+          if (isBlankNav(this)) {
+            try { fakeOpen(); } catch (e) {}
+            return;
+          }
+          return oClick.apply(this, arguments);
+        };
+      } catch (e) {}
+    }
   })();
-  }
 
   // Hydrax: jaga JWPlayer + blokir security document.write + klik overlay
   if (IS_ABYSS) {
@@ -1363,6 +1368,47 @@ function handleVid(req, res) {
   res.end(buildHtml5VideoPage(target.href, target.hostname, origin));
 }
 
+/**
+ * Wrapper ala App TV (WebPlayerProxy.abyssWrapperHtml):
+ * Hydrax harus jalan di dalam iframe (top !== self), bukan dokumen top proxy.
+ */
+function buildHydraxWrapperPage(abyssEmbedPath) {
+  const src = String(abyssEmbedPath || "").replace(/"/g, "&quot;");
+  return `<!DOCTYPE html>
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Hydrax</title>
+<style>
+html,body{margin:0;padding:0;height:100%;width:100%;background:#000;overflow:hidden}
+iframe#wuEmbed{
+  border:0!important;outline:0!important;box-shadow:none!important;
+  margin:0!important;padding:0!important;
+  width:100vw!important;height:100vh!important;display:block;background:#000!important;
+}
+</style></head>
+<body>
+<iframe id="wuEmbed" src="${src}" allow="autoplay; fullscreen; encrypted-media"
+  allowfullscreen scrolling="no" referrerpolicy="origin"></iframe>
+</body></html>`;
+}
+
+function handleHydraxWrap(req, res) {
+  const incoming = new URL(req.url, "http://127.0.0.1");
+  const target = parseHttpUrl(incoming.searchParams.get("u"));
+  if (!target || !/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(target.hostname)) {
+    res.statusCode = 400;
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.end(buildMessagePage("URL Hydrax tidak valid", "Coba ganti server."));
+    return;
+  }
+  const embed = toProxyPath(target.href);
+  res.statusCode = 200;
+  res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("Cache-Control", "no-store");
+  res.end(buildHydraxWrapperPage(embed));
+}
+
 function middleware(req, res, next) {
   const path = req.url?.split("?")[0] || "";
 
@@ -1379,6 +1425,7 @@ function middleware(req, res, next) {
   }
 
   if (path === "/__vid__") return handleVid(req, res);
+  if (path === "/__hydrax__" || path.startsWith("/__hydrax__?")) return handleHydraxWrap(req, res);
   if (path.startsWith("/__px__/")) return handleProxy(req, res);
   if (path === "/api/resolve") return handleResolve(req, res);
   if (path === "/api/embed") return handleLegacyEmbed(req, res);

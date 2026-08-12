@@ -152,6 +152,7 @@ export function createLoginGuard() {
         if (
           path.startsWith("/__px__/") ||
           path.startsWith("/__vid__") ||
+          path.startsWith("/__hydrax__") ||
           path === "/api/resolve" ||
           path === "/api/embed"
         ) {
@@ -172,6 +173,7 @@ export function createLoginGuard() {
         path.startsWith("/api/") ||
         path.startsWith("/__px__/") ||
         path.startsWith("/__vid__") ||
+        path.startsWith("/__hydrax__") ||
         path === "/__wu_sw.js";
 
       if (needsAuth) {

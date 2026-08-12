@@ -734,8 +734,16 @@ async function resolveEmbedPath(sourceUrl) {
   if (data.error) throw new Error(data.error);
 
   const play = data.play || sourceUrl;
-  // Semua server film (termasuk Hydrax/Abyss) lewat proxy agar parent/referrer
-  // bisa di-spoof — embed langsung ke abyssplayer memicu security alert.
+  try {
+    const host = new URL(play).hostname;
+    // Hydrax/Abyss: tiru App TV — bungkus di iframe dalam (/__hydrax__)
+    // supaya top !== self (anti direct-access) + proxy path tetap utuh.
+    if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
+      return `/__hydrax__?u=${encodeURIComponent(play)}`;
+    }
+  } catch {
+    /* fallback proxy */
+  }
   return data.embed || toProxyPath(play);
 }
 
