@@ -8,7 +8,7 @@
   --line: rgba(255, 255, 255, 0.08);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
   --radius: 6px;
-  --nav-h: 72px;
+  --nav-h: 84px;
   --font-display: "Bebas Neue", Impact, sans-serif;
   --font-body: "Outfit", system-ui, sans-serif;
 }
@@ -38,6 +38,14 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+.brand-logo,
+.brand-wordmark,
+.hero-brand-img,
+.auth-brand-img,
+.footer-brand-img {
+  max-width: none;
 }
 
 a {
@@ -91,17 +99,16 @@ input {
 }
 
 .brand-logo {
-  width: 42px;
-  height: 42px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .brand-wordmark {
-  height: clamp(1.95rem, 2.8vw, 2.45rem);
-  width: auto;
-  max-width: min(42vw, 220px);
+  width: clamp(200px, 24vw, 280px);
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -209,10 +216,9 @@ input {
 
 .auth-brand-img {
   display: block;
-  margin: 0 auto 0.45rem;
-  height: clamp(2.6rem, 8vw, 3.4rem);
-  width: auto;
-  max-width: min(78vw, 280px);
+  margin: 0 auto 0.55rem;
+  width: clamp(240px, 55vw, 360px);
+  height: auto;
   object-fit: contain;
 }
 
@@ -482,10 +488,9 @@ body.is-auth-checking .auth-boot,
 
 .hero-brand-img {
   display: block;
-  margin: 0 0 0.65rem;
-  height: clamp(3.4rem, 9vw, 5.25rem);
-  width: auto;
-  max-width: min(86vw, 420px);
+  margin: 0 0 0.85rem;
+  width: clamp(300px, 48vw, 560px);
+  height: auto;
   object-fit: contain;
   filter: drop-shadow(0 10px 28px rgba(229, 9, 20, 0.35));
 }
@@ -821,10 +826,9 @@ body.is-auth-checking .auth-boot,
 
 .footer-brand-img {
   display: block;
-  margin: 0 0 0.5rem;
-  height: 2.6rem;
-  width: auto;
-  max-width: 220px;
+  margin: 0 0 0.55rem;
+  width: 240px;
+  height: auto;
   object-fit: contain;
 }
 
@@ -1362,17 +1366,16 @@ body.is-auth-checking .auth-boot,
   }
 
   .hero-brand-img {
-    height: 3.1rem;
-    max-width: 260px;
+    width: min(88vw, 340px);
   }
 
   .brand-logo {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
   }
 
   .brand-wordmark {
-    height: 1.85rem;
+    width: 180px;
   }
 
   .row-arrow {
