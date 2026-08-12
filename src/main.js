@@ -734,16 +734,8 @@ async function resolveEmbedPath(sourceUrl) {
   if (data.error) throw new Error(data.error);
 
   const play = data.play || sourceUrl;
-  try {
-    const host = new URL(play).hostname;
-    // Hydrax: wajib origin abyssplayer.com — proxy → "No playable sources found"
-    if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
-      return play;
-    }
-  } catch {
-    /* fallback proxy */
-  }
-
+  // Semua server film (termasuk Hydrax/Abyss) lewat proxy agar parent/referrer
+  // bisa di-spoof — embed langsung ke abyssplayer memicu security alert.
   return data.embed || toProxyPath(play);
 }
 
@@ -754,20 +746,12 @@ function clearEmbed() {
   frame.classList.add("hidden");
 }
 
-/** Cast/Turbo: sandbox tanpa allow-popups (blokir clickunder). Hydrax: tanpa sandbox. */
+/** Sandbox iframe dimatikan: memicu error TurboVIP/Cast/P2P (klik play & kode 233429).
+ *  Clickunder tetap diblokir oleh shim window.open di dalam proxy. */
 function applyPlayerFramePolicy(embedPath) {
   const frame = $("#playerFrame");
   if (!frame) return;
-  const path = String(embedPath || "");
-  const needsSandbox = /gn1r5n|turbo|emturbovid|turbovid|turboviplay/i.test(path);
-  if (needsSandbox) {
-    frame.setAttribute(
-      "sandbox",
-      "allow-scripts allow-same-origin allow-forms allow-presentation allow-downloads"
-    );
-  } else {
-    frame.removeAttribute("sandbox");
-  }
+  frame.removeAttribute("sandbox");
 }
 
 async function showEmbed(url) {

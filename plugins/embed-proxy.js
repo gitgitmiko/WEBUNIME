@@ -112,7 +112,11 @@ function pickReferer(target) {
     host.includes("sptvp") ||
     host.includes("googleusercontent")
   ) {
-    return "https://turbovidhls.com/";
+    // Halaman player butuh parent playeriframe; segmen CDN tetap turbovidhls.
+    if (/tiktokcdn|sptvp|googleusercontent|turboviplay|turbosplayer/i.test(host)) {
+      return "https://turbovidhls.com/";
+    }
+    return "https://playeriframe.sbs/";
   }
   // Anime Samehadaku embeds (+ CDN Filedon R2)
   if (
@@ -127,6 +131,9 @@ function pickReferer(target) {
       return "https://api.wibufile.com/";
     }
     return "https://v2.samehadaku.how/";
+  }
+  if (host.includes("playcdn") || host.includes("videonode")) {
+    return "https://playeriframe.sbs/";
   }
   return "https://playeriframe.sbs/";
 }
@@ -219,8 +226,8 @@ function injectClientShim(pageUrl) {
     history.replaceState(null, "", pathOnly + hash);
   } catch (e) {}
 
-  // Cast + TurboVIP: tipu deteksi parent / referrer (wajib playeriframe.sbs)
-  if (IS_CAST || IS_TURBO) {
+  // Cast / Turbo / Hydrax: tipu deteksi parent / referrer (wajib playeriframe.sbs)
+  if (IS_CAST || IS_TURBO || IS_ABYSS) {
     try {
       Object.defineProperty(Document.prototype, "referrer", {
         configurable: true,
@@ -233,6 +240,12 @@ function injectClientShim(pageUrl) {
         get: function () {
           return { length: 1, 0: "https://playeriframe.sbs/", item: function(){ return "https://playeriframe.sbs/"; } };
         }
+      });
+    } catch (e) {}
+    try {
+      Object.defineProperty(window, "frameElement", {
+        configurable: true,
+        get: function () { return null; }
       });
     } catch (e) {}
   }
@@ -490,15 +503,8 @@ function injectClientShim(pageUrl) {
     }, 250);
   }
 
-  // Cast: sembunyikan sandbox dari frameElement + bantu 1-klik play
+  // Cast: bantu 1-klik play (parent spoof sudah di atas)
   if (IS_CAST) {
-    try {
-      Object.defineProperty(window, "frameElement", {
-        configurable: true,
-        get: function () { return null; }
-      });
-    } catch (e) {}
-
     var castArmed = false;
     function castTryPlay() {
       try {
@@ -1001,9 +1007,17 @@ function sanitizeHtml(html, pageUrl, origin = "") {
     "window.abyssConfig={popups:[]}"
   );
   out = out.replace(/urls\s*=\s*\[[^\]]*decafeligiblyhad[^\]]*\]/gi, "urls=[]");
-  // Alert AdBlock/Sandbox (cadangan jika sbM tidak ketemu)
+  // Alert AdBlock/Sandbox / security gate Hydrax
   out = out.replace(
     /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,280}?try again\./gi,
+    ""
+  );
+  out = out.replace(
+    /Due to security concerns[\s\S]{0,320}?developer tools[\s\S]{0,120}?\)\./gi,
+    ""
+  );
+  out = out.replace(
+    /your access request has been denied[\s\S]{0,280}?try again\./gi,
     ""
   );
 
@@ -1219,7 +1233,7 @@ async function handleProxy(req, res) {
   }
 }
 
-/** Ambil URL iframe dalam dari halaman playeriframe (skip iklan wrapper). */
+/** Ambil URL iframe dalam dari halaman playeriframe/videonode (skip iklan wrapper). */
 async function handleResolve(req, res) {
   const incoming = new URL(req.url, "http://127.0.0.1");
   const target = parseHttpUrl(incoming.searchParams.get("url"));
@@ -1232,10 +1246,14 @@ async function handleResolve(req, res) {
 
   try {
     let playUrl = target.href;
-    if (/playeriframe\./i.test(target.hostname)) {
+    // Wrapper LK21 (playeriframe / videonode) → ambil iframe player asli
+    if (/playeriframe\.|videonode\.de/i.test(target.hostname)) {
       const upstream = await fetchUpstream(target);
       const html = await upstream.text();
-      const m = html.match(/<iframe[^>]+src=["']([^"']+)["']/i);
+      const m =
+        html.match(
+          /<div[^>]*embed-container[^>]*>[\s\S]*?<iframe[^>]+src=["']([^"']+)["']/i
+        ) || html.match(/<iframe[^>]+src=["'](https?:\/\/[^"']+)["']/i);
       if (m?.[1]) {
         playUrl = new URL(m[1], upstream.url).href;
       }
