@@ -939,6 +939,8 @@ function renderAuthChrome() {
   const chip = $("#authChip");
   const name = $("#authChipName");
   const avatar = $("#authAvatar");
+  const tabLogin = $("#authTabLogin");
+  const tabRegister = $("#authTabRegister");
   const tabProfile = $("#authTabProfile");
 
   if (currentUser) {
@@ -946,10 +948,14 @@ function renderAuthChrome() {
     chip.classList.remove("hidden");
     name.textContent = currentUser.displayName || currentUser.username;
     avatar.textContent = (currentUser.displayName || currentUser.username || "?").slice(0, 1).toUpperCase();
+    tabLogin?.classList.add("hidden");
+    tabRegister?.classList.add("hidden");
     tabProfile.classList.remove("hidden");
   } else {
     openBtn.classList.remove("hidden");
     chip.classList.add("hidden");
+    tabLogin?.classList.remove("hidden");
+    tabRegister?.classList.remove("hidden");
     tabProfile.classList.add("hidden");
   }
   syncAuthGateChrome();
