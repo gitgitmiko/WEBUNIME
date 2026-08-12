@@ -381,21 +381,19 @@ function injectClientShim(pageUrl) {
   } // !IS_ABYSS
 
   // SW: proxy CDN same-origin (Hydrax GCS / TurboVIP tiktokcdn segments)
-  if ((IS_ABYSS || IS_TURBO) && "serviceWorker" in navigator) {
+  // Hydrax: JANGAN location.replace — reload di tengah setup JWPlayer → "Player has been destroyed".
+  // SW di-register dari halaman /__hydrax__ sebelum iframe dimuat.
+  if (IS_TURBO && "serviceWorker" in navigator) {
     try {
       navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).then(function () {
         if (!navigator.serviceWorker.controller && !sessionStorage.getItem("__wu_sw_ready")) {
           sessionStorage.setItem("__wu_sw_ready", "1");
-          // Reload ke URL proxy (bukan path slug hasil replaceState)
-          var reloadPath = PREFIX + String(REAL_PATH).split("#")[0];
-          if (IS_ABYSS) {
-            var s = abyssSlugFromPath(REAL_PATH);
-            if (s) reloadPath += (reloadPath.indexOf("?") >= 0 ? "&" : "?") + "v=" + encodeURIComponent(s);
-          }
-          location.replace(location.origin + reloadPath);
+          location.replace(location.origin + PREFIX + String(REAL_PATH).split("#")[0]);
         }
       }).catch(function () {});
     } catch (e) {}
+  } else if (IS_ABYSS && "serviceWorker" in navigator) {
+    try { navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).catch(function () {}); } catch (e) {}
   }
 
   function stripOuterAd() {
@@ -535,19 +533,23 @@ function injectClientShim(pageUrl) {
         if (window.abyssConfig) window.abyssConfig.popups = [];
         try { if (typeof urls !== "undefined") urls.length = 0; } catch (e) {}
         var overlay = document.getElementById("overlay");
-        if (overlay) {
-          try { overlay.onclick = null; overlay.ontouchend = null; } catch (e) {}
-          if (tries === 3 || tries === 6 || tries === 10) {
-            try { overlay.remove(); } catch (e) {}
-          }
+        // Tiru App TV: klik overlay sekali (handler sudah di-patch ke play), jangan spam remove+play
+        if (overlay && tries === 6) {
+          try { overlay.click(); } catch (e) {}
         }
-        if (typeof window.jwplayer === "function") {
-          try { window.jwplayer().play(); } catch (e) {}
-          if (!document.getElementById("overlay") && tries > 8) clearInterval(iv);
+        if (!overlay && typeof window.jwplayer === "function") {
+          try {
+            var jp = window.jwplayer();
+            var st = jp && typeof jp.getState === "function" ? jp.getState() : "";
+            if (st && st !== "error" && st !== "complete") {
+              try { jp.play(); } catch (e) {}
+            }
+          } catch (e) {}
+          clearInterval(iv);
         }
       } catch (e) {}
-      if (tries > 50) clearInterval(iv);
-    }, 200);
+      if (tries > 40) clearInterval(iv);
+    }, 250);
   }
 
   // Cast: bantu 1-klik play (parent spoof sudah di atas)
@@ -1397,7 +1399,6 @@ function handleVid(req, res) {
  * Hydrax harus jalan di dalam iframe (top !== self), bukan dokumen top proxy.
  */
 function buildHydraxWrapperPage(abyssEmbedPath) {
-  const src = String(abyssEmbedPath || "").replace(/"/g, "&quot;");
   return `<!DOCTYPE html>
 <html lang="id"><head>
 <meta charset="utf-8"/>
@@ -1412,8 +1413,32 @@ iframe#wuEmbed{
 }
 </style></head>
 <body>
-<iframe id="wuEmbed" src="${src}" allow="autoplay; fullscreen; encrypted-media"
+<iframe id="wuEmbed" src="about:blank" allow="autoplay; fullscreen; encrypted-media"
   allowfullscreen scrolling="no" referrerpolicy="origin"></iframe>
+<script>
+(function () {
+  var EMBED = ${JSON.stringify(String(abyssEmbedPath || ""))};
+  var frame = document.getElementById("wuEmbed");
+  var loaded = false;
+  function go() {
+    if (loaded || !frame) return;
+    loaded = true;
+    frame.src = EMBED;
+  }
+  // Pastikan Service Worker aktif dulu supaya GCS/CDN ter-proxy tanpa reload di dalam player
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).then(function () {
+      if (navigator.serviceWorker.controller) go();
+      else {
+        navigator.serviceWorker.addEventListener("controllerchange", go);
+        setTimeout(go, 2500);
+      }
+    }).catch(go);
+  } else {
+    go();
+  }
+})();
+</script>
 </body></html>`;
 }
 
