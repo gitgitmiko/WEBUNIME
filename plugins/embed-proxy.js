@@ -24,14 +24,36 @@ const STRIP_HEADERS = new Set([
 ]);
 
 function isPrivateHost(hostname) {
-  const h = hostname.toLowerCase();
-  if (h === "localhost" || h.endsWith(".local") || h.endsWith(".internal")) return true;
+  const h = String(hostname || "")
+    .toLowerCase()
+    .replace(/^\[|\]$/g, "");
+
+  if (!h) return true;
+  if (h === "localhost" || h === "::1" || h === "0.0.0.0") return true;
+  if (h.endsWith(".local") || h.endsWith(".internal") || h.endsWith(".localhost")) return true;
+  if (h === "metadata" || h.endsWith(".metadata.google.internal")) return true;
+
+  // IPv6 unique-local / link-local
+  if (h.includes(":")) {
+    if (h.startsWith("fc") || h.startsWith("fd") || h.startsWith("fe80")) return true;
+    if (h === "::" || h.startsWith("::ffff:")) {
+      const mapped = h.replace(/^::ffff:/, "");
+      if (/^\d+\.\d+\.\d+\.\d+$/.test(mapped)) return isPrivateHost(mapped);
+    }
+    return false;
+  }
+
   if (/^\d+\.\d+\.\d+\.\d+$/.test(h)) {
-    const [a, b] = h.split(".").map(Number);
+    const parts = h.split(".").map(Number);
+    const [a, b] = parts;
     if (a === 10 || a === 127 || a === 0) return true;
     if (a === 172 && b >= 16 && b <= 31) return true;
     if (a === 192 && b === 168) return true;
+    if (a === 169 && b === 254) return true; // link-local / cloud metadata
+    if (a === 100 && b >= 64 && b <= 127) return true; // CGNAT
+    return false;
   }
+
   return false;
 }
 

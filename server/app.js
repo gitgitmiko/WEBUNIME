@@ -5,10 +5,14 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { embedProxyMiddleware } from "../plugins/embed-proxy.js";
 import { createAuthRouter, createLoginGuard } from "./auth.js";
-import { createCatalogAdminRouter } from "./catalog-admin.js";
+import {
+  catalogSyncAuthMiddleware,
+  createCatalogAdminRouter,
+} from "./catalog-admin.js";
 import { createCatalogReadRouter } from "./catalog-api.js";
 import { createUserLibraryRouter } from "./user-library-api.js";
 import { ensureUserLibrarySchema } from "./user-library.js";
+import { securityHeadersMiddleware } from "./security-headers.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -21,21 +25,17 @@ const app = express();
 app.disable("x-powered-by");
 app.set("trust proxy", 1);
 
-app.use((req, res, next) => {
-  res.setHeader("X-Content-Type-Options", "nosniff");
-  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-  next();
-});
-
+app.use(securityHeadersMiddleware);
 app.use(cookieParser());
 
 // Auth JSON kecil
 app.use("/api/auth", express.json({ limit: "32kb" }), createAuthRouter());
 
-// Sync katalog dari GitHub Actions (payload besar)
+// Sync katalog: auth header dulu, baru parse body besar
 app.use(
   "/api/admin/catalog",
-  express.json({ limit: "120mb" }),
+  catalogSyncAuthMiddleware,
+  express.json({ limit: "80mb" }),
   createCatalogAdminRouter()
 );
 

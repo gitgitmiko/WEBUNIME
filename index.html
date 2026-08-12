@@ -392,8 +392,8 @@
             <input name="email" type="email" required maxlength="191" autocomplete="email" />
           </label>
           <label>
-            <span>Password</span>
-            <input name="password" type="password" required minlength="8" maxlength="128" autocomplete="new-password" />
+            <span>Password (min. 10, huruf + angka)</span>
+            <input name="password" type="password" required minlength="10" maxlength="128" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{10,}" title="Minimal 10 karakter, harus ada huruf dan angka" autocomplete="new-password" />
           </label>
           <button type="submit" class="btn btn-play auth-submit" id="authRegisterSubmit">
             <span class="auth-submit-label">Buat akun</span>

@@ -17,7 +17,7 @@ function readSyncSecret(req) {
   return String(req.headers["x-catalog-sync-token"] || "").trim();
 }
 
-function requireSyncSecret(req, res) {
+export function requireSyncSecret(req, res) {
   const expected = process.env.CATALOG_SYNC_SECRET || "";
   if (!expected || expected.length < 16) {
     res.status(503).json({ error: "CATALOG_SYNC_SECRET belum dikonfigurasi." });
@@ -28,6 +28,12 @@ function requireSyncSecret(req, res) {
     return false;
   }
   return true;
+}
+
+/** Cek secret dari header SEBELUM body JSON besar diparse (mitigasi DoS). */
+export function catalogSyncAuthMiddleware(req, res, next) {
+  if (!requireSyncSecret(req, res)) return;
+  next();
 }
 
 /**

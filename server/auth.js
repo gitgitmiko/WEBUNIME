@@ -4,25 +4,36 @@ import { Router } from "express";
 import { getPool } from "./db.js";
 
 const COOKIE = "webunime_sid";
-const SESSION_DAYS = 30;
+const SESSION_DAYS = 14;
 const BCRYPT_ROUNDS = 12;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const USERNAME_RE = /^[a-z0-9_]{3,32}$/;
+/** Hash valid untuk samakan timing login saat user tidak ada. */
+const DUMMY_PASSWORD_HASH =
+  "$2b$12$hWkaAYtaJ20nTH/6dnuJguBI3qUcXrOMFw/WCHu/y/VHLbw4Fe2aK";
 
 const rateBuckets = new Map();
+let lastRateCleanup = Date.now();
 
-function clientIp(req) {
+export function clientIp(req) {
   const xf = String(req.headers["x-forwarded-for"] || "")
     .split(",")[0]
     .trim();
   return xf || req.socket?.remoteAddress || "unknown";
 }
 
-function rateLimit(key, limit = 10, windowMs = 60_000) {
+export function rateLimit(key, limit = 10, windowMs = 60_000) {
   const now = Date.now();
+  if (now - lastRateCleanup > 5 * 60_000) {
+    lastRateCleanup = now;
+    for (const [k, bucket] of rateBuckets) {
+      if (now - bucket.start > bucket.windowMs) rateBuckets.delete(k);
+    }
+  }
+
   let bucket = rateBuckets.get(key);
   if (!bucket || now - bucket.start > windowMs) {
-    bucket = { start: now, count: 0 };
+    bucket = { start: now, count: 0, windowMs };
     rateBuckets.set(key, bucket);
   }
   bucket.count += 1;
@@ -137,6 +148,22 @@ export function createLoginGuard() {
       const user = await getSessionUser(req);
       if (user) {
         req.user = user;
+        // Batasi abuse open-proxy setelah login.
+        if (
+          path.startsWith("/__px__/") ||
+          path.startsWith("/__vid__") ||
+          path === "/api/resolve" ||
+          path === "/api/embed"
+        ) {
+          const ip = clientIp(req);
+          if (!rateLimit(`proxy:${user.id}:${ip}`, 180, 60_000)) {
+            res.statusCode = 429;
+            res.setHeader("Content-Type", "application/json; charset=utf-8");
+            res.setHeader("Cache-Control", "no-store");
+            res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
+            return;
+          }
+        }
         return next();
       }
 
@@ -186,8 +213,11 @@ function validateRegister(body) {
   if (!USERNAME_RE.test(username)) {
     return { error: "Username 3–32 karakter: a-z, 0-9, underscore." };
   }
-  if (password.length < 8 || password.length > 128) {
-    return { error: "Password minimal 8 karakter." };
+  if (password.length < 10 || password.length > 128) {
+    return { error: "Password minimal 10 karakter." };
+  }
+  if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+    return { error: "Password harus mengandung huruf dan angka." };
   }
   if (!displayName) {
     return { error: "Nama tampilan wajib diisi." };
@@ -215,7 +245,7 @@ export function createAuthRouter() {
 
   router.post("/register", async (req, res) => {
     const ip = clientIp(req);
-    if (!rateLimit(`reg:${ip}`, 10)) {
+    if (!rateLimit(`reg:${ip}`, 5, 60 * 60_000)) {
       return res.status(429).json({ error: "Terlalu banyak percobaan. Coba lagi nanti." });
     }
 
@@ -239,7 +269,7 @@ export function createAuthRouter() {
       const { sid, expires } = await createSession(userId);
       setSessionCookie(res, sid, expires.getTime() - Date.now());
       const user = await loadUserFromSession(sid);
-      return res.status(201).json({ user, token: sid });
+      return res.status(201).json({ user });
     } catch (err) {
       if (err && err.code === "ER_DUP_ENTRY") {
         return res.status(409).json({ error: "Email atau username sudah terpakai." });
@@ -251,7 +281,7 @@ export function createAuthRouter() {
 
   router.post("/login", async (req, res) => {
     const ip = clientIp(req);
-    if (!rateLimit(`login:${ip}`, 10)) {
+    if (!rateLimit(`login:${ip}`, 8, 15 * 60_000)) {
       return res.status(429).json({ error: "Terlalu banyak percobaan. Coba lagi nanti." });
     }
 
@@ -261,7 +291,7 @@ export function createAuthRouter() {
       .toLowerCase();
     const password = String(body.password || "");
 
-    if (!login || password.length < 8) {
+    if (!login || !password) {
       return res.status(400).json({ error: "Login dan password wajib diisi." });
     }
 
@@ -275,10 +305,7 @@ export function createAuthRouter() {
         { login }
       );
       const row = rows[0];
-      const fakeHash = "$2a$12$invalidinvalidinvalidinvalidinvalidinval";
-      const ok = row
-        ? await bcrypt.compare(password, row.password_hash)
-        : await bcrypt.compare(password, fakeHash).catch(() => false);
+      const ok = await bcrypt.compare(password, row?.password_hash || DUMMY_PASSWORD_HASH);
 
       if (!row || !ok) {
         return res.status(401).json({ error: "Email/username atau password salah." });
@@ -289,7 +316,7 @@ export function createAuthRouter() {
 
       const { sid, expires } = await createSession(row.id);
       setSessionCookie(res, sid, expires.getTime() - Date.now());
-      return res.json({ user: publicUser(row), token: sid });
+      return res.json({ user: publicUser(row) });
     } catch (err) {
       console.error("[auth/login]", err);
       return res.status(500).json({ error: "Gagal masuk." });
@@ -311,6 +338,11 @@ export function createAuthRouter() {
 
   router.patch("/profile", async (req, res) => {
     try {
+      const ip = clientIp(req);
+      if (!rateLimit(`profile:${ip}`, 30, 60_000)) {
+        return res.status(429).json({ error: "Terlalu banyak permintaan. Coba lagi nanti." });
+      }
+
       const sid = readSid(req);
       const user = await loadUserFromSession(sid);
       if (!user) {
