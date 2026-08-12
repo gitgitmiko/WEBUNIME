@@ -223,6 +223,7 @@ function injectClientShim(pageUrl) {
   const isAbyss = /abyss/i.test(host);
   const isCast = /gn1r5n/i.test(host);
   const isTurbo = /turbo/i.test(host);
+  const isP2p = /playcdn|hownetwork|videonode/i.test(host);
 
   return `<script data-webunime-shim>
 (function(){
@@ -233,7 +234,8 @@ function injectClientShim(pageUrl) {
   var IS_ABYSS=${isAbyss ? "true" : "false"};
   var IS_CAST=${isCast ? "true" : "false"};
   var IS_TURBO=${isTurbo ? "true" : "false"};
-  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn)/i;
+  var IS_P2P=${isP2p ? "true" : "false"};
+  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn|showcdnx)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Hydrax: /{slug}?v={slug} — cocok untuk query v DAN regex href di core.bundle.
@@ -272,8 +274,13 @@ function injectClientShim(pageUrl) {
 
       if (abs.origin === location.origin) {
         var p = abs.pathname || "";
+        if (p.startsWith("/__px__/")) return abs.pathname + abs.search + abs.hash;
+        // P2P playcdn: HLS absolute path /zzz/... harus ke host asli (bukan origin app).
         if (
           p.startsWith("/api/") ||
+          p.startsWith("/api2.php") ||
+          p.startsWith("/zzz/") ||
+          p.startsWith("/xxx/") ||
           p.startsWith("/ws/") ||
           p.startsWith("/assets/") ||
           p.startsWith("/e/") ||
@@ -281,7 +288,8 @@ function injectClientShim(pageUrl) {
           p.startsWith("/static/") ||
           p.startsWith("/player/") ||
           p.startsWith("/cdn-cgi/") ||
-          p.startsWith("/fingerprint-sw")
+          p.startsWith("/fingerprint-sw") ||
+          (IS_P2P && /\\.(m3u8|ts|m4s|key)(\\?|$)/i.test(p))
         ) {
           return location.origin + PREFIX + p + abs.search + abs.hash;
         }
@@ -438,10 +446,20 @@ function injectClientShim(pageUrl) {
     try {
       var a = document.getElementById("uyeouyeo");
       if (a) a.remove();
+      // P2P playcdn: #overlay iklan menutup tombol play
+      var ov = document.getElementById("overlay");
+      if (ov) ov.remove();
+      if (IS_P2P) {
+        document.querySelectorAll("h1").forEach(function (h) {
+          if (/P2P Maintenance/i.test(h.textContent || "")) h.remove();
+        });
+      }
     } catch (e) {}
   }
   document.addEventListener("DOMContentLoaded", stripOuterAd);
-  setTimeout(stripOuterAd, 500);
+  setTimeout(stripOuterAd, 200);
+  setTimeout(stripOuterAd, 800);
+  setTimeout(stripOuterAd, 2000);
 
   // Blokir popup/iklan tab baru (window.open + <a target=_blank> + .click())
   (function blockPopups() {
@@ -567,6 +585,25 @@ function injectClientShim(pageUrl) {
         }
       } catch (e) {}
       if (tries > 40) clearInterval(iv);
+    }, 250);
+  }
+
+  // P2P playcdn: setelah overlay dibuang, klik tombol play (.faplbu) sekali
+  if (IS_P2P) {
+    var p2pTries = 0;
+    var p2pIv = setInterval(function () {
+      p2pTries++;
+      try {
+        var ov = document.getElementById("overlay");
+        if (ov) ov.remove();
+        var btn = document.querySelector(".faplbu");
+        if (btn && !btn.getAttribute("data-wu-clicked")) {
+          btn.setAttribute("data-wu-clicked", "1");
+          btn.click();
+          clearInterval(p2pIv);
+        }
+      } catch (e) {}
+      if (p2pTries > 40) clearInterval(p2pIv);
     }, 250);
   }
 
@@ -1074,8 +1111,16 @@ function sanitizeHtml(html, pageUrl, origin = "") {
     "path.indexOf('/e/') < 0"
   );
 
-  // Hapus overlay iklan klik-untuk-mulai di wrapper playeriframe
+  // Hapus overlay iklan klik-untuk-mulai di wrapper playeriframe / P2P playcdn
   out = out.replace(/<a\b[^>]*\bid=["']uyeouyeo["'][^>]*>[\s\S]*?<\/a>/gi, "");
+  if (/playcdn|hownetwork/i.test(pageUrl.hostname)) {
+    out = out.replace(/<a\b[^>]*\bid=["']overlay["'][^>]*>[\s\S]*?<\/a>/gi, "");
+    // Teks maintenance statis selalu ada di HTML meski stream OK — buang agar tidak menyesatkan
+    out = out.replace(
+      /<h1[^>]*>\s*Player P2P Maintenance[\s\S]*?<\/h1>/gi,
+      ""
+    );
+  }
 
   // Hydrax: matikan deteksi "extension", ganti handler overlay → langsung play
   out = out.replace(
@@ -1346,6 +1391,13 @@ async function handleProxy(req, res) {
           return url;
         }
       });
+      // playcdn: URI root-relative (/zzz/.../seg.ts) harus tetap di prefix proxy
+      if (/playcdn|hownetwork/i.test(finalUrl.hostname)) {
+        text = text.replace(/^(?!#)(\/[^\r\n]*)$/gm, (line) => {
+          if (line.startsWith("/__px__/")) return line;
+          return `/__px__/${finalUrl.host}${line}`;
+        });
+      }
       res.setHeader("Content-Type", "application/vnd.apple.mpegurl; charset=utf-8");
       res.end(text);
       return;
@@ -1570,10 +1622,14 @@ function middleware(req, res, next) {
   // Setelah replaceState, request relatif player mengarah ke origin app (bukan /__px__/...).
   // Jangan ambil alih /assets/ Vite sendiri — hanya remap bila referer masih konteks embed.
   // Hydrax: setelah replaceState ke /{slug}, referer = https://app/{slug} (tanpa /__px__/).
+  // P2P playcdn: HLS /zzz/... dan api2.php setelah replaceState ke /video.php?id=...
   if (
     path === "/fingerprint-sw.js" ||
     path.startsWith("/cdn-cgi/") ||
     path.startsWith("/api/") ||
+    path === "/api2.php" ||
+    path.startsWith("/zzz/") ||
+    path.startsWith("/xxx/") ||
     path.startsWith("/ws/") ||
     path.startsWith("/assets/") ||
     path.startsWith("/player/")
@@ -1586,6 +1642,14 @@ function middleware(req, res, next) {
       else if (path.startsWith("/player/") || /\/e\//.test(ref) || /gn1r5n/i.test(ref))
         host = "gn1r5n.org";
       else if (/turbo/i.test(ref)) host = "turbovidhls.com";
+      else if (
+        path.startsWith("/zzz/") ||
+        path.startsWith("/xxx/") ||
+        path === "/api2.php" ||
+        /video\.php/i.test(ref) ||
+        /playcdn|hownetwork/i.test(ref)
+      )
+        host = "playcdn.de";
       else if (
         path.startsWith("/cdn-cgi/") ||
         /^https?:\/\/[^/]+\/[a-zA-Z0-9_-]{7,17}(?:\?.*)?\/?$/i.test(ref)
