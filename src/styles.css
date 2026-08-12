@@ -91,16 +91,17 @@ input {
 }
 
 .brand-logo {
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
   flex-shrink: 0;
   border-radius: 8px;
 }
 
 .brand-wordmark {
-  height: clamp(1.55rem, 2.2vw, 1.9rem);
+  height: clamp(1.95rem, 2.8vw, 2.45rem);
   width: auto;
+  max-width: min(42vw, 220px);
   object-fit: contain;
   display: block;
 }
@@ -208,10 +209,10 @@ input {
 
 .auth-brand-img {
   display: block;
-  margin: 0 auto 0.35rem;
-  height: clamp(3.2rem, 10vw, 4.5rem);
+  margin: 0 auto 0.45rem;
+  height: clamp(2.6rem, 8vw, 3.4rem);
   width: auto;
-  max-width: min(72vw, 220px);
+  max-width: min(78vw, 280px);
   object-fit: contain;
 }
 
@@ -481,10 +482,10 @@ body.is-auth-checking .auth-boot,
 
 .hero-brand-img {
   display: block;
-  margin: 0 0 0.5rem;
-  height: clamp(4.5rem, 14vw, 7.5rem);
+  margin: 0 0 0.65rem;
+  height: clamp(3.4rem, 9vw, 5.25rem);
   width: auto;
-  max-width: min(72vw, 280px);
+  max-width: min(86vw, 420px);
   object-fit: contain;
   filter: drop-shadow(0 10px 28px rgba(229, 9, 20, 0.35));
 }
@@ -821,9 +822,9 @@ body.is-auth-checking .auth-boot,
 .footer-brand-img {
   display: block;
   margin: 0 0 0.5rem;
-  height: 2.4rem;
+  height: 2.6rem;
   width: auto;
-  max-width: 140px;
+  max-width: 220px;
   object-fit: contain;
 }
 
@@ -1361,8 +1362,17 @@ body.is-auth-checking .auth-boot,
   }
 
   .hero-brand-img {
-    height: 4.25rem;
-    max-width: 200px;
+    height: 3.1rem;
+    max-width: 260px;
+  }
+
+  .brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand-wordmark {
+    height: 1.85rem;
   }
 
   .row-arrow {
