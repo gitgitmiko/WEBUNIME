@@ -1193,6 +1193,21 @@ function sanitizeHtml(html, pageUrl, origin = "") {
 async function readRequestBody(req) {
   const method = (req.method || "GET").toUpperCase();
   if (method === "GET" || method === "HEAD") return null;
+
+  // Jika Express sudah parse JSON (req.body), kirim ulang ke upstream.
+  if (
+    req.body !== undefined &&
+    req.body !== null &&
+    typeof req.body === "object" &&
+    !Buffer.isBuffer(req.body) &&
+    !(req.body instanceof Uint8Array)
+  ) {
+    const keys = Object.keys(req.body);
+    if (keys.length > 0 || /json/i.test(String(req.headers["content-type"] || ""))) {
+      return Buffer.from(JSON.stringify(req.body));
+    }
+  }
+
   const chunks = [];
   for await (const chunk of req) chunks.push(chunk);
   return Buffer.concat(chunks);

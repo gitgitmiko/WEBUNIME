@@ -39,7 +39,20 @@ app.use(
   createCatalogAdminRouter()
 );
 
-app.use(express.json({ limit: "32kb" }));
+// Jangan parse JSON untuk /__px__ dll — body harus tetap mentah ke upstream (Cast captcha).
+const jsonApi = express.json({ limit: "32kb" });
+app.use((req, res, next) => {
+  const path = (req.url || "").split("?")[0] || "";
+  if (
+    path.startsWith("/__px__/") ||
+    path.startsWith("/__vid__") ||
+    path.startsWith("/__hydrax__") ||
+    path === "/__wu_sw.js"
+  ) {
+    return next();
+  }
+  return jsonApi(req, res, next);
+});
 app.use(createLoginGuard());
 app.use("/api/v1", createCatalogReadRouter());
 app.use("/api/v1", createUserLibraryRouter());
