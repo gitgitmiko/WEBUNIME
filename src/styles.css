@@ -150,6 +150,19 @@ input {
   background: #f40612;
 }
 
+.btn-invite {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.88rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.btn-invite:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .auth-chip-btn {
   display: inline-flex;
   align-items: center;
@@ -384,6 +397,16 @@ body.is-auth-checking .auth-boot,
   background: rgba(229, 9, 20, 0.15);
   border: 1px solid rgba(229, 9, 20, 0.35);
   color: #ffb4b4;
+  font-size: 0.88rem;
+}
+
+.auth-success {
+  margin: 0 0 0.85rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(70, 211, 105, 0.14);
+  border: 1px solid rgba(70, 211, 105, 0.35);
+  color: #9dffb5;
   font-size: 0.88rem;
 }
 

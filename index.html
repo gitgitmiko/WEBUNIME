@@ -47,6 +47,7 @@
             <span class="auth-chip-name" id="authChipName">Akun</span>
           </button>
         </div>
+        <button type="button" class="btn btn-invite hidden" id="authInviteBtn">Daftar</button>
       </div>
     </header>
 
@@ -339,14 +340,15 @@
       <div class="auth-modal-panel">
         <button type="button" class="modal-close hidden" id="authCloseBtn" data-auth-close aria-label="Tutup">×</button>
         <img class="auth-brand-img" src="/brand/weeboonime.png?v=3" alt="WEBUNIME" width="280" height="55" decoding="async" />
-        <p class="auth-lead" id="authLead">Login atau daftar untuk mulai menonton</p>
+        <p class="auth-lead" id="authLead">Login untuk mulai menonton</p>
         <div class="auth-tabs" role="tablist">
           <button type="button" class="auth-tab is-active" id="authTabLogin" role="tab" aria-selected="true">Login</button>
-          <button type="button" class="auth-tab" id="authTabRegister" role="tab" aria-selected="false">Daftar</button>
+          <button type="button" class="auth-tab hidden" id="authTabRegister" role="tab" aria-selected="false">Daftar</button>
           <button type="button" class="auth-tab hidden" id="authTabProfile" role="tab" aria-selected="false">Profil</button>
         </div>
         <h2 class="auth-title" id="authModalTitle">Login ke WEBUNIME</h2>
         <p class="auth-error hidden" id="authError" role="alert"></p>
+        <p class="auth-success hidden" id="authSuccess" role="status"></p>
 
         <form class="auth-form" id="authLoginForm" autocomplete="on">
           <label>

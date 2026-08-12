@@ -12,6 +12,21 @@ const USERNAME_RE = /^[a-z0-9_]{3,32}$/;
 const DUMMY_PASSWORD_HASH =
   "$2b$12$hWkaAYtaJ20nTH/6dnuJguBI3qUcXrOMFw/WCHu/y/VHLbw4Fe2aK";
 
+const ADMIN_USERNAMES = new Set(
+  String(process.env.ADMIN_USERNAMES || "gitgitmiko")
+    .split(",")
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean)
+);
+
+function isAdminUser(userOrUsername) {
+  const username =
+    typeof userOrUsername === "string"
+      ? userOrUsername
+      : userOrUsername?.username;
+  return Boolean(username && ADMIN_USERNAMES.has(String(username).toLowerCase()));
+}
+
 const rateBuckets = new Map();
 let lastRateCleanup = Date.now();
 
@@ -53,6 +68,7 @@ function publicUser(row) {
     username: row.username,
     displayName: row.display_name,
     createdAt: row.created_at,
+    canInvite: isAdminUser(row.username),
   };
 }
 
@@ -260,10 +276,22 @@ export function createAuthRouter() {
       return res.status(429).json({ error: "Terlalu banyak percobaan. Coba lagi nanti." });
     }
 
-    const parsed = validateRegister(parseBody(req));
-    if (parsed.error) return res.status(400).json({ error: parsed.error });
-
     try {
+      const sid = readSid(req);
+      const actor = await loadUserFromSession(sid);
+      if (!actor || !isAdminUser(actor)) {
+        return res.status(403).json({ error: "Pendaftaran hanya oleh admin." });
+      }
+      if (!rateLimit(`reg-admin:${actor.id}`, 20, 60 * 60_000)) {
+        return res.status(429).json({ error: "Batas undangan admin tercapai. Coba lagi nanti." });
+      }
+
+      const parsed = validateRegister(parseBody(req));
+      if (parsed.error) return res.status(400).json({ error: parsed.error });
+      if (isAdminUser(parsed.username)) {
+        return res.status(400).json({ error: "Username admin tidak bisa didaftarkan ulang." });
+      }
+
       const pool = getPool();
       const passwordHash = await bcrypt.hash(parsed.password, BCRYPT_ROUNDS);
       const [result] = await pool.execute(
@@ -277,10 +305,16 @@ export function createAuthRouter() {
         }
       );
       const userId = result.insertId;
-      const { sid, expires } = await createSession(userId);
-      setSessionCookie(res, sid, expires.getTime() - Date.now());
-      const user = await loadUserFromSession(sid);
-      return res.status(201).json({ user });
+      const [rows] = await pool.execute(
+        `SELECT id, email, username, display_name, created_at
+         FROM users WHERE id = :id LIMIT 1`,
+        { id: userId }
+      );
+      // Jangan ganti sesi admin — akun baru dibuat tanpa auto-login.
+      return res.status(201).json({
+        ok: true,
+        invited: publicUser(rows[0]),
+      });
     } catch (err) {
       if (err && err.code === "ER_DUP_ENTRY") {
         return res.status(409).json({ error: "Email atau username sudah terpakai." });

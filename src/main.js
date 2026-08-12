@@ -1523,6 +1523,9 @@ async function authFetch(path, options = {}) {
 
 function setAuthError(msg) {
   const el = $("#authError");
+  const ok = $("#authSuccess");
+  ok?.classList.add("hidden");
+  if (ok) ok.textContent = "";
   if (!msg) {
     el.classList.add("hidden");
     el.textContent = "";
@@ -1530,6 +1533,25 @@ function setAuthError(msg) {
   }
   el.textContent = msg;
   el.classList.remove("hidden");
+}
+
+function setAuthSuccess(msg) {
+  const el = $("#authSuccess");
+  const err = $("#authError");
+  err?.classList.add("hidden");
+  if (err) err.textContent = "";
+  if (!el) return;
+  if (!msg) {
+    el.classList.add("hidden");
+    el.textContent = "";
+    return;
+  }
+  el.textContent = msg;
+  el.classList.remove("hidden");
+}
+
+function canInviteUsers() {
+  return Boolean(currentUser?.canInvite);
 }
 
 function syncAuthGateChrome() {
@@ -1544,7 +1566,7 @@ function syncAuthGateChrome() {
   closeBtn?.classList.toggle("hidden", locked || checking);
   if (lead && locked) {
     lead.classList.remove("hidden");
-    lead.textContent = "Login atau daftar untuk mulai menonton";
+    lead.textContent = "Login untuk mulai menonton";
   }
 }
 
@@ -1597,7 +1619,7 @@ function enterAuthGate(mode = "login") {
   closeModal();
   endAuthBoot();
   resetAuthForms();
-  showAuthPane(mode);
+  showAuthPane(mode === "register" ? "login" : mode);
   const modal = $("#authModal");
   modal.classList.remove("hidden");
   modal.classList.add("is-gate");
@@ -1616,6 +1638,7 @@ function leaveAuthGate() {
 
 function renderAuthChrome() {
   const openBtn = $("#authOpenBtn");
+  const inviteBtn = $("#authInviteBtn");
   const chip = $("#authChip");
   const name = $("#authChipName");
   const avatar = $("#authAvatar");
@@ -1631,17 +1654,22 @@ function renderAuthChrome() {
     tabLogin?.classList.add("hidden");
     tabRegister?.classList.add("hidden");
     tabProfile.classList.remove("hidden");
+    inviteBtn?.classList.toggle("hidden", !canInviteUsers());
   } else {
     openBtn.classList.remove("hidden");
     chip.classList.add("hidden");
+    inviteBtn?.classList.add("hidden");
     tabLogin?.classList.remove("hidden");
-    tabRegister?.classList.remove("hidden");
+    tabRegister?.classList.add("hidden");
     tabProfile.classList.add("hidden");
   }
   syncAuthGateChrome();
 }
 
 function showAuthPane(mode) {
+  let nextMode = mode;
+  if (nextMode === "register" && !canInviteUsers()) nextMode = currentUser ? "profile" : "login";
+
   const login = $("#authLoginForm");
   const register = $("#authRegisterForm");
   const profile = $("#authProfileForm");
@@ -1653,24 +1681,33 @@ function showAuthPane(mode) {
     profile: $("#authTabProfile"),
   };
 
-  login.classList.toggle("hidden", mode !== "login");
-  register.classList.toggle("hidden", mode !== "register");
-  profile.classList.toggle("hidden", mode !== "profile");
+  login.classList.toggle("hidden", nextMode !== "login");
+  register.classList.toggle("hidden", nextMode !== "register");
+  profile.classList.toggle("hidden", nextMode !== "profile");
 
   Object.entries(tabs).forEach(([key, el]) => {
-    el.classList.toggle("is-active", key === mode);
-    el.setAttribute("aria-selected", key === mode ? "true" : "false");
+    if (!el) return;
+    const visible =
+      (key === "login" && !currentUser) ||
+      (key === "register" && canInviteUsers() && Boolean(currentUser)) ||
+      (key === "profile" && Boolean(currentUser));
+    el.classList.toggle("hidden", !visible);
+    el.classList.toggle("is-active", key === nextMode);
+    el.setAttribute("aria-selected", key === nextMode ? "true" : "false");
   });
 
-  if (mode === "login") title.textContent = "Login ke WEBUNIME";
-  else if (mode === "register") title.textContent = "Daftar akun";
+  if (nextMode === "login") title.textContent = "Login ke WEBUNIME";
+  else if (nextMode === "register") title.textContent = "Daftarkan akun baru";
   else title.textContent = "Profil saya";
 
   if (lead) {
     if (!currentUser) {
       lead.classList.remove("hidden");
-      lead.textContent = "Login atau daftar untuk mulai menonton";
-    } else if (mode === "profile") {
+      lead.textContent = "Login untuk mulai menonton";
+    } else if (nextMode === "register") {
+      lead.classList.remove("hidden");
+      lead.textContent = "Buat akun pengguna baru (khusus admin)";
+    } else if (nextMode === "profile") {
       lead.classList.remove("hidden");
       lead.textContent = "Kelola profil akun Anda";
     } else {
@@ -1678,12 +1715,13 @@ function showAuthPane(mode) {
     }
   }
 
-  if (mode === "profile" && currentUser) {
+  if (nextMode === "profile" && currentUser) {
     $("#authProfileMeta").textContent = `@${currentUser.username} · ${currentUser.email}`;
     const input = $("#authProfileForm")?.querySelector('[name="displayName"]');
     if (input) input.value = currentUser.displayName || "";
   }
   setAuthError("");
+  if (nextMode !== "register") setAuthSuccess("");
 }
 
 function openAuthModal(mode = currentUser ? "profile" : "login") {
@@ -1782,15 +1820,22 @@ function bindAuth() {
     })
   );
   $("#authTabLogin")?.addEventListener("click", () => showAuthPane("login"));
-  $("#authTabRegister")?.addEventListener("click", () => showAuthPane("register"));
+  $("#authTabRegister")?.addEventListener("click", () => {
+    if (canInviteUsers()) showAuthPane("register");
+  });
   $("#authTabProfile")?.addEventListener("click", () => {
     if (currentUser) showAuthPane("profile");
+  });
+  $("#authInviteBtn")?.addEventListener("click", () => {
+    if (!canInviteUsers()) return;
+    openAuthModal("register");
   });
 
   $("#authLoginForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const form = e.target;
     setAuthError("");
+    setAuthSuccess("");
     setAuthFormLoading(form, true, "Login");
     try {
       const fd = new FormData(form);
@@ -1818,14 +1863,20 @@ function bindAuth() {
     e.preventDefault();
     const form = e.target;
     setAuthError("");
+    setAuthSuccess("");
+    if (!canInviteUsers()) {
+      setAuthError("Pendaftaran hanya oleh admin.");
+      return;
+    }
     setAuthFormLoading(form, true, "Buat akun");
     try {
       const fd = new FormData(form);
+      const username = String(fd.get("username") || "").toLowerCase();
       const { res, data } = await authFetch("/register", {
         method: "POST",
         body: JSON.stringify({
           displayName: String(fd.get("displayName") || ""),
-          username: String(fd.get("username") || "").toLowerCase(),
+          username,
           email: String(fd.get("email") || "").toLowerCase(),
           password: String(fd.get("password") || ""),
         }),
@@ -1834,7 +1885,10 @@ function bindAuth() {
         setAuthError(data?.error || "Gagal mendaftar.");
         return;
       }
-      await onAuthSuccess(data.user, "Akun dibuat, memuat katalog…");
+      form.reset();
+      const invited = data?.invited?.username || username;
+      setAuthSuccess(`Akun @${invited} berhasil dibuat. Pengguna bisa login sendiri.`);
+      showAuthPane("register");
     } catch (err) {
       console.error(err);
       setAuthError("Gagal mendaftar. Coba lagi.");
