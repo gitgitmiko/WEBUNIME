@@ -1096,6 +1096,52 @@ function selectServer(url) {
   showEmbed(url);
 }
 
+function playerMatchText(player) {
+  return `${player?.server || ""} ${player?.label || ""} ${player?.url || ""}`.toLowerCase();
+}
+
+/** Pilih server awal: film→Hydrax; anime→Wibufile 1080p. */
+function pickPreferredPlayer(movie, players) {
+  if (!players?.length) return null;
+  const isAnimeType =
+    movie?.type === "anime" || movie?.type === "anime-movie";
+  const prefer = (preds) => {
+    for (const pred of preds) {
+      const hit = players.find(pred);
+      if (hit) return hit;
+    }
+    return null;
+  };
+
+  let picked = null;
+  if (isAnimeType) {
+    picked = prefer([
+      (p) => /wibufile/.test(playerMatchText(p)) && /1080/.test(playerMatchText(p)),
+      (p) => /wibufile/.test(playerMatchText(p)) && /720/.test(playerMatchText(p)),
+      (p) => /wibufile/.test(playerMatchText(p)),
+      (p) => /1080/.test(String(p.label || "")),
+      (p) => /blogspot|blogger/.test(playerMatchText(p)),
+      (p) => /vip/.test(playerMatchText(p)),
+    ]);
+  } else {
+    picked = prefer([
+      (p) => /hydrax|abyss/.test(playerMatchText(p)),
+      (p) => /turbovip/.test(playerMatchText(p)),
+      (p) => /cast/.test(playerMatchText(p)),
+    ]);
+  }
+
+  return (
+    picked ||
+    players.find(
+      (p) => p.default && (p.server || "").toLowerCase() !== "p2p"
+    ) ||
+    players.find((p) => (p.server || "").toLowerCase() !== "p2p") ||
+    players.find((p) => p.default) ||
+    players[0]
+  );
+}
+
 function setupServers(movie) {
   const wrap = $("#playerServerDropdown");
   const players = currentPlayers(movie);
@@ -1107,24 +1153,7 @@ function setupServers(movie) {
     return false;
   }
 
-  const preferred =
-    isSeries(movie) && (movie?.type === "anime" || movie?.type === "anime-movie")
-      ? ["blogspot", "wibufile", "vip-streaming", "vip"]
-      : ["turbovip", "cast", "hydrax"];
-  const initial =
-    preferred
-      .map((s) =>
-        players.find(
-          (p) =>
-            (p.server || "").toLowerCase().includes(s) ||
-            (p.label || "").toLowerCase().includes(s)
-        )
-      )
-      .find(Boolean) ||
-    players.find((p) => p.default && (p.server || "").toLowerCase() !== "p2p") ||
-    players.find((p) => (p.server || "").toLowerCase() !== "p2p") ||
-    players.find((p) => p.default) ||
-    players[0];
+  const initial = pickPreferredPlayer(movie, players);
 
   populateNfDropdown(wrap, {
     valueId: "playerServerValue",

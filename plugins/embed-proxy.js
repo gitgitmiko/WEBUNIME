@@ -574,6 +574,46 @@ function injectClientShim(pageUrl) {
       }, 100);
     })();
 
+    // Prefer kualitas ~1080p bila JWPlayer menyediakan quality levels.
+    function preferHydrax1080() {
+      try {
+        if (typeof window.jwplayer !== "function") return false;
+        var jw = window.jwplayer();
+        if (!jw || typeof jw.getQualityLevels !== "function") return false;
+        var levels = jw.getQualityLevels() || [];
+        if (!levels.length) return false;
+        var idx = -1;
+        var best = -1;
+        for (var qi = 0; qi < levels.length; qi++) {
+          var lvl = levels[qi] || {};
+          var label = String(lvl.label || "");
+          var h = Number(lvl.height) || 0;
+          if (/1080|full\\s*hd|\\bfhd\\b/i.test(label) || h === 1080) {
+            idx = qi;
+            break;
+          }
+          if (h > best && h <= 1080) {
+            best = h;
+            idx = qi;
+          }
+        }
+        if (idx < 0) {
+          for (var qj = 0; qj < levels.length; qj++) {
+            var h2 = Number((levels[qj] || {}).height) || 0;
+            if (h2 > best) {
+              best = h2;
+              idx = qj;
+            }
+          }
+        }
+        if (idx >= 0 && typeof jw.setCurrentQuality === "function") {
+          jw.setCurrentQuality(idx);
+          return true;
+        }
+      } catch (e) {}
+      return false;
+    }
+
     var tries = 0;
     var iv = setInterval(function () {
       tries++;
@@ -585,7 +625,8 @@ function injectClientShim(pageUrl) {
         }
         if (!overlay && typeof window.jwplayer === "function") {
           try { window.jwplayer().play(); } catch (e) {}
-          clearInterval(iv);
+          preferHydrax1080();
+          if (tries > 12) clearInterval(iv);
         }
       } catch (e) {}
       if (tries > 40) clearInterval(iv);
