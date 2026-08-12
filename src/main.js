@@ -1136,15 +1136,46 @@ function syncAuthGateChrome() {
   const modal = $("#authModal");
   const closeBtn = $("#authCloseBtn");
   const lead = $("#authLead");
-  const locked = !currentUser;
+  const checking = document.body.classList.contains("is-auth-checking");
+  const locked = !currentUser && !checking;
 
   document.body.classList.toggle("is-auth-locked", locked);
   modal?.classList.toggle("is-gate", locked && !modal.classList.contains("hidden"));
-  closeBtn?.classList.toggle("hidden", locked);
+  closeBtn?.classList.toggle("hidden", locked || checking);
   if (lead && locked) {
     lead.classList.remove("hidden");
     lead.textContent = "Masuk atau daftar untuk mulai menonton";
   }
+}
+
+function endAuthBoot() {
+  document.body.classList.remove("is-auth-checking");
+  const boot = $("#authBoot");
+  if (boot) {
+    boot.setAttribute("aria-busy", "false");
+    boot.classList.add("hidden");
+  }
+}
+
+function enterAuthGate(mode = "login") {
+  closePlayer();
+  closeModal();
+  endAuthBoot();
+  showAuthPane(mode);
+  const modal = $("#authModal");
+  modal.classList.remove("hidden");
+  modal.classList.add("is-gate");
+  document.body.classList.add("is-auth-locked");
+  document.body.style.overflow = "hidden";
+  $("#authCloseBtn")?.classList.add("hidden");
+  syncAuthGateChrome();
+}
+
+function leaveAuthGate() {
+  endAuthBoot();
+  document.body.classList.remove("is-auth-locked");
+  $("#authModal").classList.remove("is-gate");
+  $("#authCloseBtn")?.classList.remove("hidden");
 }
 
 function renderAuthChrome() {
@@ -1217,25 +1248,6 @@ function showAuthPane(mode) {
     if (input) input.value = currentUser.displayName || "";
   }
   setAuthError("");
-}
-
-function enterAuthGate(mode = "login") {
-  closePlayer();
-  closeModal();
-  showAuthPane(mode);
-  const modal = $("#authModal");
-  modal.classList.remove("hidden");
-  modal.classList.add("is-gate");
-  document.body.classList.add("is-auth-locked");
-  document.body.style.overflow = "hidden";
-  $("#authCloseBtn")?.classList.add("hidden");
-  syncAuthGateChrome();
-}
-
-function leaveAuthGate() {
-  document.body.classList.remove("is-auth-locked");
-  $("#authModal").classList.remove("is-gate");
-  $("#authCloseBtn")?.classList.remove("hidden");
 }
 
 function openAuthModal(mode = currentUser ? "profile" : "login") {

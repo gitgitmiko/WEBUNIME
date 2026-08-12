@@ -10,8 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
-  <body class="is-auth-locked">
+  <body class="is-auth-checking">
     <div class="noise" aria-hidden="true"></div>
+
+    <div class="auth-boot" id="authBoot" aria-live="polite" aria-busy="true">
+      <p class="auth-brand">WEBUNIME</p>
+      <p class="auth-boot-msg">Memuat…</p>
+    </div>
 
     <header class="nav" id="nav">
       <a class="brand" href="/" aria-label="WEBUNIME beranda">
@@ -343,7 +348,7 @@
       </div>
     </div>
 
-    <div class="auth-modal is-gate" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="auth-modal hidden" id="authModal" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
       <div class="auth-modal-backdrop" data-auth-close></div>
       <div class="auth-modal-panel">
         <button type="button" class="modal-close hidden" id="authCloseBtn" data-auth-close aria-label="Tutup">×</button>

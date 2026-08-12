@@ -230,13 +230,46 @@ body.is-auth-locked #nav,
 body.is-auth-locked main,
 body.is-auth-locked #modal,
 body.is-auth-locked #player,
-body.is-auth-locked #searchResults {
+body.is-auth-locked #searchResults,
+body.is-auth-checking #nav,
+body.is-auth-checking main,
+body.is-auth-checking #modal,
+body.is-auth-checking #player,
+body.is-auth-checking #searchResults,
+body.is-auth-checking #authModal {
   visibility: hidden;
   pointer-events: none;
 }
 
-body.is-auth-locked {
+body.is-auth-locked,
+body.is-auth-checking {
   overflow: hidden;
+}
+
+.auth-boot {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  place-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 0.35rem;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(229, 9, 20, 0.22), transparent 45%),
+    linear-gradient(160deg, #0b0b0b 0%, #141414 50%, #090909 100%);
+}
+
+body.is-auth-checking .auth-boot {
+  display: grid;
+}
+
+.auth-boot.hidden {
+  display: none !important;
+}
+
+.auth-boot .auth-brand {
+  margin-bottom: 0.15rem;
 }
 
 .auth-modal-panel {
