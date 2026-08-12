@@ -103,9 +103,10 @@ function pickReferer(target) {
   if (host.includes("abyss") || host.includes("iamcdn") || host.includes("short.icu")) {
     return "https://abyssplayer.com/";
   }
-  // CDN media Hydrax (sora / GCS / gambar)
+  // CDN media Hydrax (sora / GCS / gambar / tunnel)
   if (
     host.includes("sssrr.org") ||
+    host.includes("trycloudflare.com") ||
     host.includes("googleapis") ||
     host.includes("freeimagecdn") ||
     host.includes("morphify") ||
@@ -179,9 +180,18 @@ function buildUpstreamHeaders(target, req) {
     headers["X-Embed-Parent"] = "https://playeriframe.sbs/";
   }
 
-  if (/abyss|iamcdn|short\.icu|sssrr\.org|freeimagecdn|morphify|abysscdn/i.test(target.hostname)) {
-    headers.Origin = "https://abyssplayer.com";
+  if (
+    /abyss|iamcdn|short\.icu|sssrr\.org|trycloudflare\.com|freeimagecdn|morphify|abysscdn/i.test(
+      target.hostname
+    )
+  ) {
     headers.Referer = "https://abyssplayer.com/";
+    // Media Hydrax (sssrr / trycloudflare): Origin → 404. Browser <video> juga tanpa Origin.
+    if (/sssrr\.org|trycloudflare\.com/i.test(target.hostname)) {
+      delete headers.Origin;
+    } else {
+      headers.Origin = "https://abyssplayer.com";
+    }
   }
 
   if (/wibufile/i.test(target.hostname)) {
@@ -223,7 +233,7 @@ function injectClientShim(pageUrl) {
   var IS_ABYSS=${isAbyss ? "true" : "false"};
   var IS_CAST=${isCast ? "true" : "false"};
   var IS_TURBO=${isTurbo ? "true" : "false"};
-  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|freeimagecdn)/i;
+  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Hydrax: /{slug}?v={slug} — cocok untuk query v DAN regex href di core.bundle.
@@ -375,7 +385,7 @@ function injectClientShim(pageUrl) {
           var abs = new URL(String(url), location.href);
           if (abs.protocol !== "http:" && abs.protocol !== "https:") return url;
           if (abs.origin === location.origin) return url;
-          if (CDN_RE.test(abs.hostname) || /sssrr\\.org|googleapis|freeimagecdn|morphify|abysscdn/i.test(abs.hostname)) {
+          if (CDN_RE.test(abs.hostname) || /sssrr\\.org|trycloudflare\\.com|googleapis|freeimagecdn|morphify|abysscdn/i.test(abs.hostname)) {
             return location.origin + "/__px__/" + abs.host + abs.pathname + abs.search + abs.hash;
           }
         } catch (e) {}
@@ -1202,17 +1212,48 @@ async function handleProxy(req, res) {
 
   try {
     const body = await readRequestBody(req);
-    const upstream = await fetchUpstream(target, {
+    let finalUrl = target;
+    let upstream = await fetchUpstream(finalUrl, {
       redirect: "manual",
       req,
       method,
       body,
     });
 
+    // Hydrax sora: ikuti redirect di server (sssrr → trycloudflare).
+    // 302 ke browser sering gagal untuk <video> Range; Origin di hop akhir juga 404.
+    const looksMediaHop =
+      /\/sora\//i.test(finalUrl.pathname) ||
+      /sssrr\.org|trycloudflare\.com/i.test(finalUrl.hostname) ||
+      /\.(mp4|webm|m4v)(\?|$)/i.test(finalUrl.pathname);
+    let redirects = 0;
+    while (
+      looksMediaHop &&
+      upstream.status >= 300 &&
+      upstream.status < 400 &&
+      redirects < 5
+    ) {
+      const loc = upstream.headers.get("location");
+      if (!loc) break;
+      try {
+        await upstream.arrayBuffer();
+      } catch {
+        /* drain */
+      }
+      finalUrl = new URL(loc, finalUrl);
+      redirects += 1;
+      upstream = await fetchUpstream(finalUrl, {
+        redirect: "manual",
+        req,
+        method,
+        body: null,
+      });
+    }
+
     if (upstream.status >= 300 && upstream.status < 400) {
       const loc = upstream.headers.get("location");
       if (loc) {
-        const next = new URL(loc, target);
+        const next = new URL(loc, finalUrl);
         res.statusCode = 302;
         res.setHeader("Location", toProxyPath(next.href));
         res.setHeader("Cache-Control", "no-store");
@@ -1221,7 +1262,6 @@ async function handleProxy(req, res) {
       }
     }
 
-    const finalUrl = target;
     const contentType = upstream.headers.get("content-type") || "application/octet-stream";
     const pathLower = finalUrl.pathname.toLowerCase();
     const isHtml = /text\/html/i.test(contentType);
@@ -1235,7 +1275,7 @@ async function handleProxy(req, res) {
         /\.(mp4|webm|mkv|m4v|ts|m4s|aac|mp3)(\?|$)/i.test(pathLower) ||
         /\.mp4/i.test(finalUrl.search) ||
         /\/sora\//i.test(finalUrl.pathname) ||
-        /r2\.cloudflarestorage|wibufile|sssrr\.org/i.test(finalUrl.hostname));
+        /r2\.cloudflarestorage|wibufile|sssrr\.org|trycloudflare\.com/i.test(finalUrl.hostname));
 
     // Stream media (jangan buffer full file — penyebab loading abadi di Wibufile/VIP)
     if (isMedia && method !== "HEAD") {
@@ -1400,7 +1440,7 @@ async function handleLegacyEmbed(req, res) {
 const PROXY_SW = `/* webunime media proxy SW */
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => e.waitUntil(self.clients.claim()));
-var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place|sssrr\\.org|freeimagecdn\\.net)/i;
+var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place|sssrr\\.org|trycloudflare\\.com|freeimagecdn\\.net)/i;
 self.addEventListener("fetch", function (event) {
   try {
     var url = new URL(event.request.url);

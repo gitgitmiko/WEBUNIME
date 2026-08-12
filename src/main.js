@@ -736,11 +736,10 @@ async function resolveEmbedPath(sourceUrl) {
   const play = data.play || sourceUrl;
   try {
     const host = new URL(play).hostname;
-    // Hydrax: WAJIB iframe langsung ke abyssplayer.com.
-    // Proxy/__px__ gagal memutar media sssrr/GCS (Referer harus abyssplayer;
-    // Node fetch juga di-blok Cloudflare). Terbukti di test lokal.
+    // Hydrax: wrapper nested iframe + /__px__ (sanitasi AdBlock/Sandbox).
+    // Media sssrr butuh Referer abyss tanpa Origin (Origin → 404).
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
-      return play;
+      return `/__hydrax__?u=${encodeURIComponent(play)}`;
     }
   } catch {
     /* fallback proxy */
