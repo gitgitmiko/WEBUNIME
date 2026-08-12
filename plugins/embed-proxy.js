@@ -241,8 +241,21 @@ function injectClientShim(pageUrl) {
     }
   } catch (e) {}
 
-  // Cast / Turbo / Hydrax: tipu deteksi parent / referrer (wajib playeriframe.sbs)
-  if (IS_CAST || IS_TURBO || IS_ABYSS) {
+  // Hydrax: core.bundle mendaftarkan /sw.import.js di origin app → SW asing merusak
+  // player ("Player has been destroyed"). Paksa hanya SW proxy WEBUNIME.
+  if (IS_ABYSS && navigator.serviceWorker && navigator.serviceWorker.register) {
+    try {
+      var __wuReg = navigator.serviceWorker.register.bind(navigator.serviceWorker);
+      navigator.serviceWorker.register = function (url, opts) {
+        var u = String(url || "");
+        if (u.indexOf("__wu_sw") >= 0) return __wuReg(url, opts);
+        return __wuReg("/__wu_sw.js", { scope: "/" });
+      };
+    } catch (e) {}
+  }
+
+  // Cast / Turbo saja: tipu deteksi parent / referrer (App TV tidak spoof referrer Hydrax)
+  if (IS_CAST || IS_TURBO) {
     try {
       Object.defineProperty(Document.prototype, "referrer", {
         configurable: true,
@@ -495,36 +508,90 @@ function injectClientShim(pageUrl) {
       });
     } catch (e) {}
 
-    // Cegah jwplayer().remove() → "Player has been destroyed"
-    (function guardJwRemove() {
-      var tries = 0;
-      var iv = setInterval(function () {
-        tries++;
+    // Patch media src → proxy CDN (tanpa patch fetch — deteksi extension Hydrax)
+    (function patchAbyssMedia() {
+      function toPx(url) {
         try {
-          if (typeof window.jwplayer === "function" && !window.jwplayer.__wuGuard) {
-            var orig = window.jwplayer;
-            function wrap() {
-              var p = orig.apply(this, arguments);
-              try {
-                if (p && typeof p.remove === "function") {
-                  p.remove = function () { return p; };
-                }
-              } catch (e) {}
-              return p;
-            }
-            wrap.__wuGuard = true;
-            try {
-              Object.keys(orig).forEach(function (k) {
-                try { wrap[k] = orig[k]; } catch (e) {}
-              });
-            } catch (e) {}
-            window.jwplayer = wrap;
-            clearInterval(iv);
+          var abs = new URL(String(url), location.href);
+          if (abs.protocol !== "http:" && abs.protocol !== "https:") return url;
+          if (abs.origin === location.origin) return url;
+          if (CDN_RE.test(abs.hostname) || /googleapis|abysscdn|short\\.icu|iamcdn|morphify/i.test(abs.hostname)) {
+            return location.origin + "/__px__/" + abs.host + abs.pathname + abs.search + abs.hash;
           }
         } catch (e) {}
-        if (tries > 40) clearInterval(iv);
-      }, 100);
+        return url;
+      }
+      function patchProto(proto, attr) {
+        try {
+          var desc = Object.getOwnPropertyDescriptor(proto, attr);
+          if (!desc || !desc.set) return;
+          Object.defineProperty(proto, attr, {
+            configurable: true,
+            enumerable: desc.enumerable,
+            get: desc.get,
+            set: function (v) { return desc.set.call(this, toPx(v)); }
+          });
+        } catch (e) {}
+      }
+      try {
+        patchProto(HTMLVideoElement.prototype, "src");
+        patchProto(HTMLAudioElement.prototype, "src");
+        patchProto(HTMLSourceElement.prototype, "src");
+        if (typeof HTMLMediaElement !== "undefined") patchProto(HTMLMediaElement.prototype, "src");
+      } catch (e) {}
     })();
+
+    // Cegah jwplayer().remove() → "Player has been destroyed" (pasang sebelum setup)
+    (function guardJwRemove() {
+      function wrapJw(orig) {
+        if (!orig || orig.__wuGuard) return orig;
+        function wrap() {
+          var p = orig.apply(this, arguments);
+          try {
+            if (p && typeof p.remove === "function" && !p.__wuNoRemove) {
+              p.remove = function () { return p; };
+              p.__wuNoRemove = true;
+            }
+          } catch (e) {}
+          return p;
+        }
+        wrap.__wuGuard = true;
+        try {
+          Object.keys(orig).forEach(function (k) {
+            try { wrap[k] = orig[k]; } catch (e) {}
+          });
+        } catch (e) {}
+        return wrap;
+      }
+      try {
+        var cur = typeof window.jwplayer === "function" ? wrapJw(window.jwplayer) : window.jwplayer;
+        Object.defineProperty(window, "jwplayer", {
+          configurable: true,
+          enumerable: true,
+          get: function () { return cur; },
+          set: function (fn) { cur = wrapJw(fn); }
+        });
+      } catch (e) {
+        var tries = 0;
+        var iv = setInterval(function () {
+          tries++;
+          try {
+            if (typeof window.jwplayer === "function" && !window.jwplayer.__wuGuard) {
+              window.jwplayer = wrapJw(window.jwplayer);
+              clearInterval(iv);
+            }
+          } catch (err) {}
+          if (tries > 40) clearInterval(iv);
+        }, 100);
+      }
+    })();
+
+    // Sembunyikan notifikasi "Player has been destroyed" sisa race
+    try {
+      var st = document.createElement("style");
+      st.textContent = ".jwpl-notif,.jwpl-notification{display:none!important}";
+      (document.head || document.documentElement).appendChild(st);
+    } catch (e) {}
 
     var tries = 0;
     var iv = setInterval(function () {
@@ -540,8 +607,8 @@ function injectClientShim(pageUrl) {
         if (!overlay && typeof window.jwplayer === "function") {
           try {
             var jp = window.jwplayer();
-            var st = jp && typeof jp.getState === "function" ? jp.getState() : "";
-            if (st && st !== "error" && st !== "complete") {
+            var stt = jp && typeof jp.getState === "function" ? jp.getState() : "";
+            if (stt && stt !== "error" && stt !== "complete") {
               try { jp.play(); } catch (e) {}
             }
           } catch (e) {}
@@ -1464,7 +1531,7 @@ function middleware(req, res, next) {
   // Auth API dilayani router terpisah (Vite plugin / Express)
   if (path.startsWith("/api/auth")) return next();
 
-  if (path === "/__wu_sw.js") {
+  if (path === "/__wu_sw.js" || path === "/sw.import.js" || path.startsWith("/sw.import")) {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/javascript; charset=utf-8");
     res.setHeader("Service-Worker-Allowed", "/");
