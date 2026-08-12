@@ -1314,7 +1314,8 @@ function middleware(req, res, next) {
     return;
   }
 
-  // Setelah replaceState, request relatif mengarah ke localhost (bukan /__px__/...)
+  // Setelah replaceState, request relatif player mengarah ke origin app (bukan /__px__/...).
+  // Jangan ambil alih /assets/ Vite sendiri — hanya remap bila referer masih konteks embed.
   if (
     path === "/fingerprint-sw.js" ||
     path.startsWith("/cdn-cgi/") ||
@@ -1328,17 +1329,11 @@ function middleware(req, res, next) {
       const ref = String(req.headers.referer || "");
       const px = ref.match(/\/__px__\/([^/]+)/);
       if (px) host = decodeURIComponent(px[1]);
-      else if (/\/e\//.test(ref) || /gn1r5n/i.test(ref) || path.startsWith("/player/")) host = "gn1r5n.org";
+      else if (path.startsWith("/player/") || /\/e\//.test(ref) || /gn1r5n/i.test(ref))
+        host = "gn1r5n.org";
       else if (/turbo/i.test(ref)) host = "turbovidhls.com";
       else if (path.startsWith("/cdn-cgi/")) host = "abyssplayer.com";
-      else if (
-        path === "/fingerprint-sw.js" ||
-        path.startsWith("/api/") ||
-        path.startsWith("/ws/") ||
-        path.startsWith("/assets/")
-      ) {
-        host = "gn1r5n.org";
-      }
+      // Tanpa referer embed: biarkan Vite/static serve (CSS/JS app).
     } catch {
       /* keep null */
     }
