@@ -88,28 +88,46 @@ export async function listCollection(collection, { page = 1, limit = 50, q = "" 
       [collection, like, like]
     );
     total = Number(countRows[0].c);
-    const [data] = await pool.query(
-      `SELECT payload FROM catalog_items
+    const [idRows] = await pool.query(
+      `SELECT id FROM catalog_items
        WHERE collection = ? AND (title LIKE ? OR slug LIKE ?)
        ORDER BY id ASC
        LIMIT ? OFFSET ?`,
       [collection, like, like, safeLimit, offset]
     );
-    rows = data;
+    const ids = idRows.map((r) => r.id);
+    if (!ids.length) {
+      rows = [];
+    } else {
+      const [data] = await pool.query(`SELECT id, payload FROM catalog_items WHERE id IN (?)`, [
+        ids,
+      ]);
+      const byId = new Map(data.map((r) => [r.id, r]));
+      rows = ids.map((id) => byId.get(id)).filter(Boolean);
+    }
   } else {
     const [countRows] = await pool.execute(
       `SELECT COUNT(*) AS c FROM catalog_items WHERE collection = ?`,
       [collection]
     );
     total = Number(countRows[0].c);
-    const [data] = await pool.query(
-      `SELECT payload FROM catalog_items
+    const [idRows] = await pool.query(
+      `SELECT id FROM catalog_items
        WHERE collection = ?
        ORDER BY id ASC
        LIMIT ? OFFSET ?`,
       [collection, safeLimit, offset]
     );
-    rows = data;
+    const ids = idRows.map((r) => r.id);
+    if (!ids.length) {
+      rows = [];
+    } else {
+      const [data] = await pool.query(`SELECT id, payload FROM catalog_items WHERE id IN (?)`, [
+        ids,
+      ]);
+      const byId = new Map(data.map((r) => [r.id, r]));
+      rows = ids.map((id) => byId.get(id)).filter(Boolean);
+    }
   }
 
   return {
@@ -125,11 +143,24 @@ export async function listCollection(collection, { page = 1, limit = 50, q = "" 
 export async function listCollectionAll(collection) {
   if (!isItemCollection(collection)) return null;
   const pool = getPool();
-  const [rows] = await pool.execute(
-    `SELECT payload FROM catalog_items WHERE collection = ? ORDER BY id ASC`,
+  // Ambil id dulu (sort ringan), lalu payload tanpa ORDER BY blob/JSON
+  const [idRows] = await pool.execute(
+    `SELECT id FROM catalog_items WHERE collection = ? ORDER BY id ASC`,
     [collection]
   );
-  return rows.map((r) => (typeof r.payload === "string" ? JSON.parse(r.payload) : r.payload));
+  if (!idRows.length) return [];
+  const ids = idRows.map((r) => r.id);
+  const [rows] = await pool.query(
+    `SELECT id, payload FROM catalog_items WHERE id IN (?)`,
+    [ids]
+  );
+  const byId = new Map(
+    rows.map((r) => [
+      r.id,
+      typeof r.payload === "string" ? JSON.parse(r.payload) : r.payload,
+    ])
+  );
+  return ids.map((id) => byId.get(id)).filter(Boolean);
 }
 
 export async function getItem(collection, slug) {
