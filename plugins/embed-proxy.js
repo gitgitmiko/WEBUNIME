@@ -801,6 +801,20 @@ function toProxiedMediaUrl(absoluteUrl, _origin = "") {
   }
 }
 
+/**
+ * Patch core/lite.bundle Hydrax: logika iklan memanggil jwplayer().remove()
+ * saat popup diblokir → "Player has been destroyed".
+ */
+function patchAbyssPlayerJs(text) {
+  let out = String(text || "");
+  out = out.replace(/\['window'\]\s*>=\s*0x2/g, "['window']>=0x7f");
+  out = out.replace(/\['window'\]\s*>\s*0x1/g, "['window']>0x7f");
+  out = out.replace(/track\.window\s*>=\s*2/g, "false");
+  out = out.replace(/track\.window\s*>\s*1/g, "false");
+  out = out.replace(/jwplayer\s*\(\s*\)\s*\.\s*remove\s*\(\s*\)/gi, "void 0");
+  return out;
+}
+
 function buildHtml5VideoPage(mediaUrl, title = "WEBUNIME Player", origin = "") {
   const playUrl = toProxiedMediaUrl(mediaUrl, origin);
   return `<!DOCTYPE html>
@@ -1129,6 +1143,9 @@ function sanitizeHtml(html, pageUrl, origin = "") {
       /window\.SoTrym\s*\(\s*JSON\.parse\s*\(\s*atob\s*\(\s*datas\s*\)\s*\)\s*\)/g,
       '(function(d){try{if(d&&d.slug)history.replaceState(null,"","/"+d.slug+"?v="+encodeURIComponent(d.slug))}catch(e){}return window.SoTrym(d)})(JSON.parse(atob(datas)))'
     );
+    // Paksa core/lite/jwplayer lewat proxy supaya bisa di-patch (jangan load langsung iamcdn)
+    out = out.replace(/https?:\/\/iamcdn\.net\//gi, "/__px__/iamcdn.net/");
+    out = out.replace(/https?:\/\/(?:www\.)?abysscdn\.com\//gi, "/__px__/abysscdn.com/");
   }
   // Alert AdBlock/Sandbox / security gate Hydrax
   out = out.replace(
@@ -1344,6 +1361,16 @@ async function handleProxy(req, res) {
       });
       res.setHeader("Content-Type", "application/vnd.apple.mpegurl; charset=utf-8");
       res.end(text);
+      return;
+    }
+
+    const isJs =
+      /javascript|ecmascript/i.test(contentType) || pathLower.endsWith(".js");
+    if (isJs && /iamcdn|abysscdn|abyssplayer|short\.icu/i.test(finalUrl.hostname)) {
+      const patched = patchAbyssPlayerJs(buf.toString("utf8"));
+      res.setHeader("Content-Type", "application/javascript; charset=utf-8");
+      res.setHeader("Cache-Control", "no-store");
+      res.end(patched);
       return;
     }
 
