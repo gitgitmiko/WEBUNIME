@@ -1183,10 +1183,20 @@ function setAuthFormLoading(form, loading, labelWhenIdle) {
   if (label && !loading && labelWhenIdle) label.textContent = labelWhenIdle;
 }
 
+function resetAuthForms() {
+  const login = $("#authLoginForm");
+  const register = $("#authRegisterForm");
+  login?.reset();
+  register?.reset();
+  setAuthFormLoading(login, false, "Login");
+  setAuthFormLoading(register, false, "Buat akun");
+}
+
 function enterAuthGate(mode = "login") {
   closePlayer();
   closeModal();
   endAuthBoot();
+  resetAuthForms();
   showAuthPane(mode);
   const modal = $("#authModal");
   modal.classList.remove("hidden");
@@ -1400,13 +1410,13 @@ function bindAuth() {
       });
       if (!res.ok) {
         setAuthError(data?.error || "Gagal login.");
-        setAuthFormLoading(form, false, "Login");
         return;
       }
       await onAuthSuccess(data.user, "Login berhasil, memuat katalog…");
     } catch (err) {
       console.error(err);
       setAuthError("Gagal login. Coba lagi.");
+    } finally {
       setAuthFormLoading(form, false, "Login");
     }
   });
@@ -1429,13 +1439,13 @@ function bindAuth() {
       });
       if (!res.ok) {
         setAuthError(data?.error || "Gagal mendaftar.");
-        setAuthFormLoading(form, false, "Buat akun");
         return;
       }
       await onAuthSuccess(data.user, "Akun dibuat, memuat katalog…");
     } catch (err) {
       console.error(err);
       setAuthError("Gagal mendaftar. Coba lagi.");
+    } finally {
       setAuthFormLoading(form, false, "Buat akun");
     }
   });
