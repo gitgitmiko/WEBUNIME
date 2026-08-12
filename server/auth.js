@@ -138,6 +138,13 @@ export function isPublicPath(pathname) {
   return false;
 }
 
+/** Segmen HLS/P2P sangat chatty — jangan ikut kuota anti-abuse HTML/API. */
+export function isProxyMediaPath(pathname) {
+  const path = pathname.split("?")[0] || "/";
+  if (!path.startsWith("/__px__/")) return false;
+  return /(\/zzz\/|\/xxx\/|\/docs\/|\.m3u8$|\.ts$|\.m4s$|\.pict$|\.mp4$|\.m4v$)/i.test(path);
+}
+
 /** Blokir katalog & player API tanpa sesi login. */
 export function createLoginGuard() {
   return async (req, res, next) => {
@@ -148,7 +155,7 @@ export function createLoginGuard() {
       const user = await getSessionUser(req);
       if (user) {
         req.user = user;
-        // Batasi abuse open-proxy setelah login.
+        // Batasi abuse open-proxy setelah login (HTML/API saja; media HLS exempt).
         if (
           path.startsWith("/__px__/") ||
           path.startsWith("/__vid__") ||
@@ -156,13 +163,15 @@ export function createLoginGuard() {
           path === "/api/resolve" ||
           path === "/api/embed"
         ) {
-          const ip = clientIp(req);
-          if (!rateLimit(`proxy:${user.id}:${ip}`, 180, 60_000)) {
-            res.statusCode = 429;
-            res.setHeader("Content-Type", "application/json; charset=utf-8");
-            res.setHeader("Cache-Control", "no-store");
-            res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
-            return;
+          if (!isProxyMediaPath(path)) {
+            const ip = clientIp(req);
+            if (!rateLimit(`proxy:${user.id}:${ip}`, 400, 60_000)) {
+              res.statusCode = 429;
+              res.setHeader("Content-Type", "application/json; charset=utf-8");
+              res.setHeader("Cache-Control", "no-store");
+              res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
+              return;
+            }
           }
         }
         return next();

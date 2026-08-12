@@ -114,6 +114,10 @@ function pickReferer(target) {
   ) {
     return "https://abyssplayer.com/";
   }
+  // Segmen P2P (.pict di host acak) butuh Referer playcdn
+  if (/\/docs\/drv|\.pict$/i.test(target.pathname) || host.includes("playcdn")) {
+    return "https://playcdn.de/";
+  }
   if (
     host.includes("turbovid") ||
     host.includes("emturbo") ||
@@ -588,7 +592,7 @@ function injectClientShim(pageUrl) {
     }, 250);
   }
 
-  // P2P playcdn: setelah overlay dibuang, klik tombol play (.faplbu) sekali
+  // P2P playcdn: setelah overlay dibuang + api2 siap, klik tombol play (.faplbu) sekali
   if (IS_P2P) {
     var p2pTries = 0;
     var p2pIv = setInterval(function () {
@@ -596,14 +600,15 @@ function injectClientShim(pageUrl) {
       try {
         var ov = document.getElementById("overlay");
         if (ov) ov.remove();
+        var ready = window.p2p && p2p.pc && (p2p.pc.file || p2p.pl && p2p.pl.sources);
         var btn = document.querySelector(".faplbu");
-        if (btn && !btn.getAttribute("data-wu-clicked")) {
+        if (ready && btn && !btn.getAttribute("data-wu-clicked")) {
           btn.setAttribute("data-wu-clicked", "1");
           btn.click();
           clearInterval(p2pIv);
         }
       } catch (e) {}
-      if (p2pTries > 40) clearInterval(p2pIv);
+      if (p2pTries > 60) clearInterval(p2pIv);
     }, 250);
   }
 
@@ -1317,9 +1322,11 @@ async function handleProxy(req, res) {
       !isM3u8 &&
       (/video\/|audio\//i.test(contentType) ||
         /application\/octet-stream/i.test(contentType) ||
-        /\.(mp4|webm|mkv|m4v|ts|m4s|aac|mp3)(\?|$)/i.test(pathLower) ||
+        /image\/x-pict/i.test(contentType) ||
+        /\.(mp4|webm|mkv|m4v|ts|m4s|aac|mp3|pict)(\?|$)/i.test(pathLower) ||
         /\.mp4/i.test(finalUrl.search) ||
         /\/sora\//i.test(finalUrl.pathname) ||
+        /\/docs\/drv/i.test(finalUrl.pathname) ||
         /r2\.cloudflarestorage|wibufile|sssrr\.org|trycloudflare\.com/i.test(finalUrl.hostname));
 
     // Stream media (jangan buffer full file — penyebab loading abadi di Wibufile/VIP)
@@ -1330,6 +1337,9 @@ async function handleProxy(req, res) {
         res.setHeader("Content-Type", "video/mp4");
       } else if (/\.webm/i.test(pathLower)) {
         res.setHeader("Content-Type", "video/webm");
+      } else if (/\.pict$/i.test(pathLower) || /image\/x-pict/i.test(contentType)) {
+        // Segmen P2P = MPEG-TS tersamar
+        res.setHeader("Content-Type", "video/mp2t");
       } else {
         res.setHeader("Content-Type", contentType);
       }
