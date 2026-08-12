@@ -719,6 +719,11 @@ async function resolveEmbedPath(sourceUrl) {
       }
       return toProxyPath(sourceUrl) || sourceUrl;
     }
+    // Film Indonesia (p2pplay/barplay): SPA baca video id dari hash (#...).
+    // Hash tidak dikirim ke server, jadi /__px__/ menghapus id → "no videoid found".
+    if (/p2pplay\.|barplay\.|p2pstream\./i.test(host)) {
+      return sourceUrl;
+    }
   } catch {
     /* lanjut resolve */
   }

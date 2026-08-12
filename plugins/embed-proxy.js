@@ -209,7 +209,15 @@ function injectClientShim(pageUrl) {
   var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
-  try { history.replaceState(null, "", REAL_PATH); } catch (e) {}
+  // Pertahankan hash iframe (p2pplay dll) — fragment tidak pernah sampai server.
+  try {
+    var pathOnly = String(REAL_PATH).split("#")[0];
+    var hashFromReal = String(REAL_PATH).indexOf("#") >= 0
+      ? String(REAL_PATH).slice(String(REAL_PATH).indexOf("#"))
+      : "";
+    var hash = hashFromReal || location.hash || "";
+    history.replaceState(null, "", pathOnly + hash);
+  } catch (e) {}
 
   // Cast + TurboVIP: tipu deteksi parent / referrer (wajib playeriframe.sbs)
   if (IS_CAST || IS_TURBO) {
