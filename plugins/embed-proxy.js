@@ -242,6 +242,9 @@ function injectClientShim(pageUrl) {
         }
       });
     } catch (e) {}
+  }
+  // Cast/Turbo: sembunyikan sandbox frameElement. Hydrax biarkan iframe asli.
+  if (IS_CAST || IS_TURBO) {
     try {
       Object.defineProperty(window, "frameElement", {
         configurable: true,
@@ -301,6 +304,10 @@ function injectClientShim(pageUrl) {
     return ofetch(input, init);
   }
   patchedFetch.toString = function(){ return "function fetch() { [native code] }"; };
+
+  // Hydrax: jangan patch native API (fetch/XHR/open/setAttribute) — memicu security alert F12.
+  // Media GCS tetap lewat Service Worker.
+  if (!IS_ABYSS) {
   window.fetch = patchedFetch;
 
   var oopen = XMLHttpRequest.prototype.open;
@@ -346,7 +353,7 @@ function injectClientShim(pageUrl) {
     if (typeof HTMLMediaElement !== "undefined") patchAttr(HTMLMediaElement.prototype, "src");
   } catch (e) {}
 
-  // setAttribute bypass property setters — wajib untuk JWPlayer/Hydrax
+  // setAttribute bypass property setters
   try {
     var osa = Element.prototype.setAttribute;
     Element.prototype.setAttribute = function (name, value) {
@@ -356,6 +363,7 @@ function injectClientShim(pageUrl) {
       return osa.call(this, name, value);
     };
   } catch (e) {}
+  } // !IS_ABYSS
 
   // SW: proxy CDN same-origin (Hydrax GCS / TurboVIP tiktokcdn segments)
   if ((IS_ABYSS || IS_TURBO) && "serviceWorker" in navigator) {
@@ -379,7 +387,8 @@ function injectClientShim(pageUrl) {
   document.addEventListener("DOMContentLoaded", stripOuterAd);
   setTimeout(stripOuterAd, 500);
 
-  // Blokir popup/iklan tab baru (window.open + <a target=_blank> + .click())
+  // Blokir popup/iklan — skip Abyss (deteksi security/F12)
+  if (!IS_ABYSS) {
   (function blockPopups() {
     var fakeWin = {
       closed: false,
@@ -396,6 +405,7 @@ function injectClientShim(pageUrl) {
       setTimeout(function () { try { fakeWin.closed = true; } catch (e) {} }, 1200);
       return fakeWin;
     }
+    fakeOpen.toString = function () { return "function open() { [native code] }"; };
     try { window.open = fakeOpen; } catch (e) {}
     try {
       Object.defineProperty(window, "open", {
@@ -436,9 +446,20 @@ function injectClientShim(pageUrl) {
       };
     } catch (e) {}
   })();
+  }
 
-  // Hydrax: jaga JWPlayer + klik overlay = play (sbM sudah di-rewrite di HTML)
+  // Hydrax: jaga JWPlayer + blokir security document.write + klik overlay
   if (IS_ABYSS) {
+    try {
+      var _dw = document.write.bind(document);
+      document.write = function (html) {
+        var s = String(html || "");
+        if (/security concerns|AdBlock\s*\/\s*Sandbox|developer tools|access request has been denied|Kindly close|refrain from opening/i.test(s)) {
+          return;
+        }
+        return _dw(html);
+      };
+    } catch (e) {}
     try {
       Object.defineProperty(window, "fuckAdBlock", {
         configurable: true,
@@ -490,17 +511,21 @@ function injectClientShim(pageUrl) {
       tries++;
       try {
         if (window.abyssConfig) window.abyssConfig.popups = [];
+        try { if (typeof urls !== "undefined") urls.length = 0; } catch (e) {}
         var overlay = document.getElementById("overlay");
-        if (overlay && tries === 6) {
-          try { overlay.click(); } catch (e) {}
+        if (overlay) {
+          try { overlay.onclick = null; overlay.ontouchend = null; } catch (e) {}
+          if (tries === 3 || tries === 6 || tries === 10) {
+            try { overlay.remove(); } catch (e) {}
+          }
         }
-        if (!overlay && typeof window.jwplayer === "function") {
+        if (typeof window.jwplayer === "function") {
           try { window.jwplayer().play(); } catch (e) {}
-          clearInterval(iv);
+          if (!document.getElementById("overlay") && tries > 8) clearInterval(iv);
         }
       } catch (e) {}
-      if (tries > 40) clearInterval(iv);
-    }, 250);
+      if (tries > 50) clearInterval(iv);
+    }, 200);
   }
 
   // Cast: bantu 1-klik play (parent spoof sudah di atas)
