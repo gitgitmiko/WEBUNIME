@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEBUNIME — Nonton Film Terbaru</title>
     <meta name="description" content="WEBUNIME — platform nonton film bergaya Netflix. Ringan, cepat, dan nyaman." />
+    <link rel="icon" href="/brand/logo_app.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/brand/logo_app.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -14,15 +16,15 @@
     <div class="noise" aria-hidden="true"></div>
 
     <div class="auth-boot" id="authBoot" aria-live="polite" aria-busy="true">
-      <p class="auth-brand">WEBUNIME</p>
+      <img class="auth-brand-img" src="/brand/weeboonime.png" alt="WEBUNIME" width="180" height="180" decoding="async" />
       <div class="auth-spinner" aria-hidden="true"></div>
       <p class="auth-boot-msg" id="authBootMsg">Memuat…</p>
     </div>
 
     <header class="nav" id="nav">
       <a class="brand" href="/" aria-label="WEBUNIME beranda">
-        <span class="brand-mark">W</span>
-        <span class="brand-text">WEBUNIME</span>
+        <img class="brand-logo" src="/brand/logo_app.png" alt="" width="34" height="34" decoding="async" />
+        <img class="brand-wordmark" src="/brand/weeboonime.png" alt="WEBUNIME" width="140" height="140" decoding="async" />
       </a>
       <nav class="nav-links" aria-label="Menu utama">
         <a href="#beranda" class="is-active">Beranda</a>
@@ -52,7 +54,7 @@
         <div class="hero-bg" id="heroBg"></div>
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="hero-brand">WEBUNIME</p>
+          <img class="hero-brand-img" src="/brand/weeboonime.png" alt="WEBUNIME" width="280" height="280" decoding="async" />
           <h1 class="hero-title" id="heroTitle">—</h1>
           <p class="hero-meta" id="heroMeta"></p>
           <p class="hero-desc" id="heroDesc"></p>
@@ -215,7 +217,7 @@
     </main>
 
     <footer class="footer">
-      <p class="footer-brand">WEBUNIME</p>
+      <img class="footer-brand-img" src="/brand/weeboonime.png" alt="WEBUNIME" width="140" height="140" decoding="async" />
       <p>Katalog film ringan bergaya Netflix. Data demo dari scrape lokal.</p>
     </footer>
 
@@ -353,7 +355,7 @@
       <div class="auth-modal-backdrop" data-auth-close></div>
       <div class="auth-modal-panel">
         <button type="button" class="modal-close hidden" id="authCloseBtn" data-auth-close aria-label="Tutup">×</button>
-        <p class="auth-brand">WEBUNIME</p>
+        <img class="auth-brand-img" src="/brand/weeboonime.png" alt="WEBUNIME" width="180" height="180" decoding="async" />
         <p class="auth-lead" id="authLead">Login atau daftar untuk mulai menonton</p>
         <div class="auth-tabs" role="tablist">
           <button type="button" class="auth-tab is-active" id="authTabLogin" role="tab" aria-selected="true">Login</button>
