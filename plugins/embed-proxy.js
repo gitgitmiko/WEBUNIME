@@ -217,15 +217,28 @@ function injectClientShim(pageUrl) {
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Pertahankan hash iframe (p2pplay dll) — fragment tidak pernah sampai server.
-  // Hydrax: replaceState ke /{slug} saja — player baca location.pathname sebagai slug.
-  // Aset relatif tetap aman lewat <base href="/__px__/abyssplayer.com/"> (bukan lewat prefix di URL bar).
+  // Hydrax/Abyss core.bundle: slug dari query ?v= ATAU href /^https?:\\/\\/host\\/(slug)$/
+  // (path /__px__/host/slug DAN hash #... membuat regex gagal → "Slug is not found").
+  function abyssSlugFromPath(p) {
+    var m = String(p || "").match(/\\/([a-zA-Z0-9_-]{7,17})(?:[/?#]|$)/);
+    return m ? m[1] : "";
+  }
+  function forceAbyssSlugUrl(slug) {
+    if (!slug) return;
+    // Jangan pakai hash: document.location.href + # mematahkan regex slug.
+    history.replaceState(null, "", "/" + slug + "?v=" + encodeURIComponent(slug));
+  }
   try {
     var pathOnly = String(REAL_PATH).split("#")[0];
     var hashFromReal = String(REAL_PATH).indexOf("#") >= 0
       ? String(REAL_PATH).slice(String(REAL_PATH).indexOf("#"))
       : "";
     var hash = hashFromReal || location.hash || "";
-    history.replaceState(null, "", pathOnly + hash);
+    if (IS_ABYSS) {
+      forceAbyssSlugUrl(abyssSlugFromPath(REAL_PATH));
+    } else {
+      history.replaceState(null, "", pathOnly + hash);
+    }
   } catch (e) {}
 
   // Cast / Turbo / Hydrax: tipu deteksi parent / referrer (wajib playeriframe.sbs)
@@ -374,7 +387,12 @@ function injectClientShim(pageUrl) {
         if (!navigator.serviceWorker.controller && !sessionStorage.getItem("__wu_sw_ready")) {
           sessionStorage.setItem("__wu_sw_ready", "1");
           // Reload ke URL proxy (bukan path slug hasil replaceState)
-          location.replace(location.origin + PREFIX + REAL_PATH);
+          var reloadPath = PREFIX + String(REAL_PATH).split("#")[0];
+          if (IS_ABYSS) {
+            var s = abyssSlugFromPath(REAL_PATH);
+            if (s) reloadPath += (reloadPath.indexOf("?") >= 0 ? "&" : "?") + "v=" + encodeURIComponent(s);
+          }
+          location.replace(location.origin + reloadPath);
         }
       }).catch(function () {});
     } catch (e) {}
@@ -1036,6 +1054,13 @@ function sanitizeHtml(html, pageUrl, origin = "") {
     "window.abyssConfig={popups:[]}"
   );
   out = out.replace(/urls\s*=\s*\[[^\]]*decafeligiblyhad[^\]]*\]/gi, "urls=[]");
+  // Hydrax: sebelum SoTrym, paksa URL /{slug}?v={slug} agar core.bundle tidak "Slug is not found"
+  if (/abyss/i.test(pageUrl.hostname)) {
+    out = out.replace(
+      /window\.SoTrym\s*\(\s*JSON\.parse\s*\(\s*atob\s*\(\s*datas\s*\)\s*\)\s*\)/g,
+      '(function(d){try{if(d&&d.slug)history.replaceState(null,"","/"+d.slug+"?v="+encodeURIComponent(d.slug))}catch(e){}return window.SoTrym(d)})(JSON.parse(atob(datas)))'
+    );
+  }
   // Alert AdBlock/Sandbox / security gate Hydrax
   out = out.replace(
     /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,280}?try again\./gi,
