@@ -1144,7 +1144,7 @@ function syncAuthGateChrome() {
   closeBtn?.classList.toggle("hidden", locked || checking);
   if (lead && locked) {
     lead.classList.remove("hidden");
-    lead.textContent = "Masuk atau daftar untuk mulai menonton";
+    lead.textContent = "Login atau daftar untuk mulai menonton";
   }
 }
 
@@ -1153,8 +1153,34 @@ function endAuthBoot() {
   const boot = $("#authBoot");
   if (boot) {
     boot.setAttribute("aria-busy", "false");
+    boot.classList.remove("is-visible");
     boot.classList.add("hidden");
   }
+}
+
+function showAuthBoot(message = "Memuat…") {
+  const boot = $("#authBoot");
+  const msg = $("#authBootMsg");
+  if (msg) msg.textContent = message;
+  if (boot) {
+    boot.classList.remove("hidden");
+    boot.classList.add("is-visible");
+    boot.setAttribute("aria-busy", "true");
+  }
+  document.body.classList.add("is-auth-checking");
+}
+
+function setAuthFormLoading(form, loading, labelWhenIdle) {
+  if (!form) return;
+  const btn = form.querySelector(".auth-submit");
+  const label = btn?.querySelector(".auth-submit-label");
+  const spin = btn?.querySelector(".auth-submit-spinner");
+  form.classList.toggle("is-loading", loading);
+  btn?.classList.toggle("is-loading", loading);
+  if (btn) btn.disabled = Boolean(loading);
+  spin?.classList.toggle("hidden", !loading);
+  if (label && loading) label.textContent = "Memuat…";
+  if (label && !loading && labelWhenIdle) label.textContent = labelWhenIdle;
 }
 
 function enterAuthGate(mode = "login") {
@@ -1226,14 +1252,14 @@ function showAuthPane(mode) {
     el.setAttribute("aria-selected", key === mode ? "true" : "false");
   });
 
-  if (mode === "login") title.textContent = "Masuk ke WEBUNIME";
+  if (mode === "login") title.textContent = "Login ke WEBUNIME";
   else if (mode === "register") title.textContent = "Daftar akun";
   else title.textContent = "Profil saya";
 
   if (lead) {
     if (!currentUser) {
       lead.classList.remove("hidden");
-      lead.textContent = "Masuk atau daftar untuk mulai menonton";
+      lead.textContent = "Login atau daftar untuk mulai menonton";
     } else if (mode === "profile") {
       lead.classList.remove("hidden");
       lead.textContent = "Kelola profil akun Anda";
@@ -1326,9 +1352,11 @@ async function bootApp() {
   closeAuthModal();
 }
 
-async function onAuthSuccess(user) {
+async function onAuthSuccess(user, bootMessage = "Menyiapkan beranda…") {
   currentUser = user;
   renderAuthChrome();
+  showAuthBoot(bootMessage);
+  $("#authModal")?.classList.add("hidden");
   try {
     await bootApp();
   } catch (err) {
@@ -1358,38 +1386,58 @@ function bindAuth() {
 
   $("#authLoginForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const fd = new FormData(e.target);
-    const { res, data } = await authFetch("/login", {
-      method: "POST",
-      body: JSON.stringify({
-        login: String(fd.get("login") || ""),
-        password: String(fd.get("password") || ""),
-      }),
-    });
-    if (!res.ok) {
-      setAuthError(data?.error || "Gagal masuk.");
-      return;
+    const form = e.target;
+    setAuthError("");
+    setAuthFormLoading(form, true, "Login");
+    try {
+      const fd = new FormData(form);
+      const { res, data } = await authFetch("/login", {
+        method: "POST",
+        body: JSON.stringify({
+          login: String(fd.get("login") || ""),
+          password: String(fd.get("password") || ""),
+        }),
+      });
+      if (!res.ok) {
+        setAuthError(data?.error || "Gagal login.");
+        setAuthFormLoading(form, false, "Login");
+        return;
+      }
+      await onAuthSuccess(data.user, "Login berhasil, memuat katalog…");
+    } catch (err) {
+      console.error(err);
+      setAuthError("Gagal login. Coba lagi.");
+      setAuthFormLoading(form, false, "Login");
     }
-    await onAuthSuccess(data.user);
   });
 
   $("#authRegisterForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const fd = new FormData(e.target);
-    const { res, data } = await authFetch("/register", {
-      method: "POST",
-      body: JSON.stringify({
-        displayName: String(fd.get("displayName") || ""),
-        username: String(fd.get("username") || "").toLowerCase(),
-        email: String(fd.get("email") || "").toLowerCase(),
-        password: String(fd.get("password") || ""),
-      }),
-    });
-    if (!res.ok) {
-      setAuthError(data?.error || "Gagal mendaftar.");
-      return;
+    const form = e.target;
+    setAuthError("");
+    setAuthFormLoading(form, true, "Buat akun");
+    try {
+      const fd = new FormData(form);
+      const { res, data } = await authFetch("/register", {
+        method: "POST",
+        body: JSON.stringify({
+          displayName: String(fd.get("displayName") || ""),
+          username: String(fd.get("username") || "").toLowerCase(),
+          email: String(fd.get("email") || "").toLowerCase(),
+          password: String(fd.get("password") || ""),
+        }),
+      });
+      if (!res.ok) {
+        setAuthError(data?.error || "Gagal mendaftar.");
+        setAuthFormLoading(form, false, "Buat akun");
+        return;
+      }
+      await onAuthSuccess(data.user, "Akun dibuat, memuat katalog…");
+    } catch (err) {
+      console.error(err);
+      setAuthError("Gagal mendaftar. Coba lagi.");
+      setAuthFormLoading(form, false, "Buat akun");
     }
-    await onAuthSuccess(data.user);
   });
 
   $("#authProfileForm")?.addEventListener("submit", async (e) => {
