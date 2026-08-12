@@ -653,6 +653,66 @@ body.is-auth-checking .auth-boot,
   font-weight: 700;
 }
 
+.poster-wrap {
+  position: relative;
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  width: clamp(120px, 14vw, 180px);
+  animation: fadeUp 0.55s ease both;
+}
+
+.poster-wrap .poster {
+  width: 100%;
+  animation: none;
+}
+
+.poster-wrap:hover .poster,
+.poster-wrap:focus-within .poster {
+  transform: scale(1.18);
+  z-index: 4;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.poster-remove {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  z-index: 6;
+  width: 1.55rem;
+  height: 1.55rem;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.78);
+  color: #fff;
+  font-size: 1.15rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.92;
+  transform: scale(1);
+  transition: opacity 0.18s ease, transform 0.18s ease, background 0.18s ease;
+}
+
+.poster-wrap:hover .poster-remove,
+.poster-wrap:focus-within .poster-remove,
+.poster-remove:focus-visible {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.poster-remove:hover,
+.poster-remove:focus-visible {
+  background: rgba(229, 9, 20, 0.95);
+  outline: none;
+}
+
+.poster-wrap.is-removing {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
 /* ROWS */
 .rows {
   position: relative;

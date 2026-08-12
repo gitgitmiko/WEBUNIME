@@ -203,11 +203,15 @@ function setFavButtonState(on) {
   if (text) text.textContent = modalIsFavorite ? "Dalam Favorit" : "Favorit";
 }
 
-function createLibraryPoster(entry, index = 0) {
+function createLibraryPoster(entry, index = 0, options = {}) {
+  const removable = Boolean(options.removable);
+  const wrap = document.createElement("div");
+  wrap.className = `poster-wrap${removable ? " poster-wrap--continue" : ""}`;
+  wrap.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
+
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "poster";
-  btn.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
   const title = entry.title || entry.slug;
   btn.setAttribute("aria-label", `Buka ${title}`);
   const ep =
@@ -248,7 +252,52 @@ function createLibraryPoster(entry, index = 0) {
     }
     openModal(movie, { episodeSlug: entry.episodeSlug || null });
   });
-  return btn;
+
+  wrap.appendChild(btn);
+
+  if (removable) {
+    const removeBtn = document.createElement("button");
+    removeBtn.type = "button";
+    removeBtn.className = "poster-remove";
+    removeBtn.setAttribute("aria-label", `Hapus ${title} dari Lanjut Menonton`);
+    removeBtn.title = "Hapus dari Lanjut Menonton";
+    removeBtn.innerHTML = `<span aria-hidden="true">×</span>`;
+    removeBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (removeBtn.disabled) return;
+      removeBtn.disabled = true;
+      wrap.classList.add("is-removing");
+      try {
+        const ok = await removeWatchHistory(entry);
+        if (!ok) {
+          wrap.classList.remove("is-removing");
+          removeBtn.disabled = false;
+        }
+      } catch {
+        wrap.classList.remove("is-removing");
+        removeBtn.disabled = false;
+      }
+    });
+    wrap.appendChild(removeBtn);
+  }
+
+  return wrap;
+}
+
+async function removeWatchHistory(entry) {
+  if (!currentUser || !entry?.collection || !entry?.slug) return false;
+  const { res } = await libraryFetch(
+    `/history/${encodeURIComponent(entry.collection)}/${encodeURIComponent(entry.slug)}`,
+    { method: "DELETE" }
+  );
+  if (!res.ok) return false;
+  watchHistory = watchHistory.filter(
+    (item) =>
+      !(item.collection === entry.collection && item.slug === entry.slug)
+  );
+  renderLibraryRows();
+  return true;
 }
 
 function renderLibraryRows() {
@@ -259,7 +308,7 @@ function renderLibraryRows() {
 
   if (continueTrack) {
     continueTrack.replaceChildren(
-      ...watchHistory.map((e, i) => createLibraryPoster(e, i))
+      ...watchHistory.map((e, i) => createLibraryPoster(e, i, { removable: true }))
     );
     requestAnimationFrame(() => syncRowArrows(continueTrack));
   }
