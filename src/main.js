@@ -9,6 +9,8 @@ let catalog = [];
 let favorites = [];
 let watchHistory = [];
 let activeMovie = null;
+/** Slide hero terpisah — jangan timpa activeMovie saat carousel berputar (bisa buka player/modal). */
+let heroMovie = null;
 let activeEpisode = null;
 let playerTimer = null;
 let modalIsFavorite = false;
@@ -643,7 +645,7 @@ function heroMetaHtml(movie) {
 
 function setHero(movie) {
   if (!movie) return;
-  activeMovie = movie;
+  heroMovie = movie;
   const bg = $("#heroBg");
   const art = movie.thumbnail_landscape || movie.thumbnail;
   bg.style.backgroundImage = art ? `url("${art}")` : "";
@@ -1192,9 +1194,12 @@ function setupPlayerEpisodes(movie) {
       label: episodeLabel(ep),
     })),
     onSelect: (slug) => {
-      activeEpisode = getEpisodeBySlug(activeMovie, slug);
-      $("#playerTitle").textContent = `${activeMovie.nama}${playerEpisodeSuffix(activeEpisode)}`;
-      setupServers(activeMovie);
+      // Pakai `movie` dari closure, bukan activeMovie global (hero carousel bisa menimpa).
+      const show = movie || activeMovie;
+      activeEpisode = getEpisodeBySlug(show, slug);
+      if (!activeEpisode) return;
+      $("#playerTitle").textContent = `${show.nama}${playerEpisodeSuffix(activeEpisode, show)}`;
+      setupServers(show);
     },
   });
 
@@ -1233,6 +1238,7 @@ function openPlayer(movie) {
   if (!hasServers) {
     $("#playerHint").textContent = "Mode demo — preview poster cinematic";
   }
+  stopHeroCarousel();
   recordWatchHistory(movie);
 }
 
@@ -1245,6 +1251,7 @@ function closePlayer() {
   clearInterval(playerTimer);
   closeNfDropdowns();
   document.body.style.overflow = $("#modal").classList.contains("hidden") ? "" : "hidden";
+  startHeroCarousel();
 }
 
 function togglePlay() {
@@ -1430,8 +1437,8 @@ function bindSearch() {
 }
 
 function bindActions() {
-  $("#heroPlay").addEventListener("click", () => activeMovie && openPlayer(activeMovie));
-  $("#heroInfo").addEventListener("click", () => activeMovie && openModal(activeMovie));
+  $("#heroPlay").addEventListener("click", () => heroMovie && openPlayer(heroMovie));
+  $("#heroInfo").addEventListener("click", () => heroMovie && openModal(heroMovie));
   $("#modalPlay").addEventListener("click", () => {
     if (!activeMovie) return;
     if (isSeries(activeMovie)) {
