@@ -9956,5 +9956,77 @@
         "default": true
       }
     ]
+  },
+  "this-that-everything-between-2026": {
+    "slug": "this-that-everything-between-2026",
+    "film": "This, That and Everything in Between (2026)",
+    "source": "https://tv12.lk21official.cc/this-that-everything-between-2026",
+    "scraped_at": "2026-08-13T17:58:29.178Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/NhAgPWgNHyA2fBI6JkIvLCoRJyloGxI1NTQSIm4CZmp0VR4LBz07HhoOEnkiCTI7dxs",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a7de0bb023da",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/pbldtfpic5u5",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/y9BKcd1Km",
+        "default": false
+      }
+    ]
+  },
+  "higher-learning-1995": {
+    "slug": "higher-learning-1995",
+    "film": "Higher Learning (1995)",
+    "source": "https://tv12.lk21official.cc/higher-learning-1995",
+    "scraped_at": "2026-08-13T17:58:29.178Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/KhEuJiALWi0nMAUiKl4xdXNBcHtoOxs0EDAOExtvMj1wG39_cBs",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a7dd704d83e8",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/pfk5ap737lr2",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/Fl393-5kS2",
+        "default": false
+      }
+    ]
   }
 }
