@@ -776,6 +776,7 @@ body.is-auth-checking .auth-boot,
   flex: 0 0 auto;
   flex-shrink: 0;
   width: clamp(120px, 14vw, 180px);
+  z-index: 0;
   animation: fadeUp 0.55s ease both;
 }
 
@@ -784,10 +785,15 @@ body.is-auth-checking .auth-boot,
   animation: none;
 }
 
+/* z-index di wrap (flex item), bukan di poster dalam — supaya tidak tertimpa tetangga kanan */
+.poster-wrap:hover,
+.poster-wrap:focus-within {
+  z-index: 4;
+}
+
 .poster-wrap:hover .poster,
 .poster-wrap:focus-within .poster {
   transform: scale(1.18);
-  z-index: 4;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
 }
 
