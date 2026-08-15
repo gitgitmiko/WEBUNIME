@@ -9578,5 +9578,42 @@
         "default": false
       }
     ]
+  },
+  "ghabadkund-2026": {
+    "slug": "ghabadkund-2026",
+    "film": "Ghabadkund (2026)",
+    "source": "https://tv12.lk21official.cc/ghabadkund-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-15T17:21:31.971Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/JRAoLCQdHDQsNVp-cwJgdRU9CwoJJi8eJzBGeXcJMDk",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a80496c4c203",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/2wsutgil1lbx",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/0QrBlkGMyc",
+        "default": false
+      }
+    ]
   }
 }

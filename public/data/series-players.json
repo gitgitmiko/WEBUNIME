@@ -27011,7 +27011,7 @@
     "film": "The Apartment Job (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/apartment-job-2026",
-    "scraped_at": "2026-08-10T19:04:55.870Z",
+    "scraped_at": "2026-08-15T17:21:29.694Z",
     "episodes": [
       {
         "season": 1,
@@ -27359,6 +27359,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/w7ccbHNXp",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "slug": "apartment-job-season-1-episode-11-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IwgoPDEUEi82fB0jIR0lPSMLJiBoSFokMjgEIydVe2lzVXt-d09aFgcTMwAcaAk7ehotKnQcQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80948f9207b",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/gn0ep0n4zffo",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/7TxJj9zUg",
             "default": false
           }
         ]
@@ -93361,7 +93396,7 @@
     "film": "FlexxCop (2024)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/flexxcop-2024",
-    "scraped_at": "2026-08-14T17:55:23.192Z",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
     "episodes": [
       {
         "season": 1,
@@ -93996,6 +94031,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/cUuBi7PPu",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 4,
+        "slug": "flexxcop-season-2-episode-4-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQsNj0aGDFvIhItMF84dXBVLD4sChglJ3xDYXEAZGxvLwwMATUoGR1jRCl7VjI7cg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80935bb05ca",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/2dy9prgzu8li",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/z2mgXvEo8",
             "default": false
           }
         ]
@@ -289852,7 +289922,7 @@
     "film": "Chilling Romance (2026)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/chilling-romance-2026",
-    "scraped_at": "2026-08-10T19:04:55.870Z",
+    "scraped_at": "2026-08-15T17:21:29.694Z",
     "episodes": [
       {
         "season": 1,
@@ -290133,6 +290203,41 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "slug": "chilling-romance-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IRAgIikQGSZvIxghIl41PW8LLC82Fhlsc3wSPCpDOTwnVXBjd0lFd28GMg4HfAkAHU55KyFAFXkk",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a807a5918662",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/g44qnurg6ibj",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/4fIeWuAmU",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -290141,7 +290246,7 @@
     "film": "A Bona Fide Killer (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/bona-fide-killer-2026",
-    "scraped_at": "2026-08-14T17:54:41.099Z",
+    "scraped_at": "2026-08-15T17:21:29.694Z",
     "episodes": [
       {
         "season": 1,
@@ -290307,6 +290412,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/_pTsNJUTj",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "bona-fide-killer-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IBcnL2gfHiUnfBwlL1wzKm8LLC82Fhlsc3wSPCpDOTwnVX9jd0lFd28GMg4HfAkAHRp4fHVKE3Em",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a808cd3c5eb7",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/wef92539eedp",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/lxRgJ-TwV",
             "default": false
           }
         ]
@@ -296078,7 +296218,7 @@
     "film": "Pearl in Red (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/pearl-red-2026",
-    "scraped_at": "2026-08-14T17:55:23.192Z",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
     "episodes": [
       {
         "season": 1,
@@ -299579,6 +299719,41 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 101,
+        "slug": "pearl-red-season-1-episode-101-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Mh0oPClUBSQmfAQpIkM5Nm9JZCs1EAQuJjRafXMBe2pySn9jEjw1BQ4OLxN0BWc6Jk17fw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7ff44451657",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/s9fvsd62gue9",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/1bdTWYHXx",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -300874,7 +301049,7 @@
     "film": "Family Register (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/family-register-2026",
-    "scraped_at": "2026-08-14T17:55:23.192Z",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
     "episodes": [
       {
         "season": 1,
@@ -301663,6 +301838,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/jsZ-Bfi3p",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "slug": "family-register-season-1-episode-24-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBkkJykAWjMnNh4_N1UkdTEdKD0qF1pwbzQHJTBfMj1vSn1jd0lFd28GMg4HfAkAHU16eydLQyMh",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a804aa9d1d5a",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/26e5bak4o81w",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Wetsgix5J",
             "default": false
           }
         ]
@@ -313175,7 +313385,7 @@
     "film": "The Road to Splendor (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/road-splendor-2026",
-    "scraped_at": "2026-08-13T17:58:53.415Z",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
     "episodes": [
       {
         "season": 1,
@@ -313593,6 +313803,111 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/r-DJA0yb6",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "slug": "road-splendor-season-1-episode-13-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/MBcoKmgKBy0nPxMjMR0lPSMLJiBoSFokMjgEIydVe2lxVXt-d09aFgcTMwAcaAlpd0B9dnQcQg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80259f830e2",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/b4wh9e8f2mcj",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/__BVDkBel",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "slug": "road-splendor-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/MBcoKmgKBy0nPxMjMR0lPSMLJiBoSFokMjgEIydVe2l2VXt-d09aFgcTMwAcaAk9IUgrfiYfEQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8027f05e5e9",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/mak5p0y02g9o",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/qXY5hui8j",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "slug": "road-splendor-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/MBcoKmgKBy0nPxMjMR0lPSMLJiBoSFokMjgEIydVe2l3VXt-d09aFgcTMwAcaAluIU5wKCBBRA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a805697caf8a",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/9e3lesr3y678",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/QDj2UD3y_",
             "default": false
           }
         ]
@@ -324699,7 +325014,7 @@
     "film": "The Legend of Chusen (2016)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/legend-chusen-2016",
-    "scraped_at": "2026-08-14T17:55:23.191Z",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
     "episodes": [
       {
         "season": 1,
@@ -325253,6 +325568,1084 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "slug": "legend-chusen-season-1-episode-17-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2l1VXt-dE9aFgcTMwAcaAk9JB58eiQcFg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f56d41eb80",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/3z6rh9ke9eh1",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/xIMH_xRxM",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 18,
+        "slug": "legend-chusen-season-1-episode-18-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2l6VXt-dE9aFgcTMwAcaAlqJEx7enBNEg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f604da07f6",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/f4rwfv3d95qy",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/NC8V7kpf0",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "slug": "legend-chusen-season-1-episode-19-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2l7VXt-dE9aFgcTMwAcaAlodB4rLSFJFQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f6b7245ec5",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/7psz8z8tmjph",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/1H2t76IDo",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "slug": "legend-chusen-season-1-episode-20-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2pyVXt-dE9aFgcTMwAcaAlqcU0vfSccTw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f75a02bafb",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/c1e2a77jyhxf",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/L-JiGHZuZa",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "slug": "legend-chusen-season-1-episode-21-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2pzVXt-dE9aFgcTMwAcaAk-JxooLScaFQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f884002fa4",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/qitslsb0lkii",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/_UCs6ICjQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "slug": "legend-chusen-season-1-episode-22-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2pwVXt-dE9aFgcTMwAcaAk9dUp8dnYaRA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f898ff3b08",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/hhdt7fzqv7aa",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/nXUpuiYER",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "slug": "legend-chusen-season-1-episode-23-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2pxVXt-dE9aFgcTMwAcaAlvJ0t7enQbQg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f92b966605",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/4yd58s1sfq6u",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/YnboUiVJW",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "slug": "legend-chusen-season-1-episode-24-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2p2VXt-dE9aFgcTMwAcaAludEt9LH1BRQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f9c12a6d46",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/4otndf1oxxdo",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/5Q-6vfed9",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "slug": "legend-chusen-season-1-episode-25-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2p3VXt-dE9aFgcTMwAcaAlpext6LH0fFA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fa62328909",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/6rf1o7q4g1m1",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/jEnbBcEFE",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "slug": "legend-chusen-season-1-episode-26-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2p0VXt-dE9aFgcTMwAcaAlqIEEseCRNEQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7faf3877351",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/m5311yfcen1f",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/LkuhLYMGR",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "slug": "legend-chusen-season-1-episode-27-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2p1VXt-dE9aFgcTMwAcaAk6dEh_LHdPQA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fb8dd74644",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/t9jenstc9lji",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/b4kJw8ate",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "slug": "legend-chusen-season-1-episode-28-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2p6VXt-dE9aFgcTMwAcaAluI0x4KnNKRw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fc2bc9fa15",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/xt8xpk9ds3nn",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/ljrnyhm0Z",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 29,
+        "slug": "legend-chusen-season-1-episode-29-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2p7VXt-dE9aFgcTMwAcaAk8chx7dnVKEw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fccde5838c",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/yfvyz9s8zt31",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/3VgJQ58le",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "slug": "legend-chusen-season-1-episode-30-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2tyVXt-dE9aFgcTMwAcaAlrc0wsKydAQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fd68840383",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/1nz125ckqjj2",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Cg3UFbuQG",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "slug": "legend-chusen-season-1-episode-31-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2tzVXt-dE9aFgcTMwAcaAk6cxtxenBNQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fdf85d4fd3",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/ptu9j66a63by",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/aPTfLPrtKB",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 32,
+        "slug": "legend-chusen-season-1-episode-32-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2twVXt-dE9aFgcTMwAcaAk7I0ktfnZOQQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7fe875d26b5",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/591itjqz35pd",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/2LpDlmNW5",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 33,
+        "slug": "legend-chusen-season-1-episode-33-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2txVXt-dE9aFgcTMwAcaAlrdxp-KnxOQA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7ff18d1db6f",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/waej4puztazu",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/YGxxCuWt1",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 34,
+        "slug": "legend-chusen-season-1-episode-34-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2t2VXt-dE9aFgcTMwAcaAltI017eHUYQQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7ffc56078d3",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/l9miqvs2turb",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/ue1ovkWQ-",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 35,
+        "slug": "legend-chusen-season-1-episode-35-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2t3VXt-dE9aFgcTMwAcaAlvcR1_diRORg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8005e11f208",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/09tm9vgq6akb",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/f6nju8Ae4",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 36,
+        "slug": "legend-chusen-season-1-episode-36-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2t0VXt-dE9aFgcTMwAcaAlhc04qKnMaQg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80107a66b82",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/kn250zkksfwr",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/_Cs9onNb1",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 37,
+        "slug": "legend-chusen-season-1-episode-37-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2t1VXt-dE9aFgcTMwAcaAlhcEB8dyAdFg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8019b0c17ab",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/98bd5rk5fg39",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/0v33bOHak",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 38,
+        "slug": "legend-chusen-season-1-episode-38-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2t6VXt-dE9aFgcTMwAcaAlrcEx7LXQfEQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80237bf367f",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/fjve1w95t5av",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/FroeHPcpi",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 39,
+        "slug": "legend-chusen-season-1-episode-39-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2t7VXt-dE9aFgcTMwAcaAlrcRktfXZOQQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8031c22f369",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/9mxqkz82yo01",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/gXYww2A7l",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 40,
+        "slug": "legend-chusen-season-1-episode-40-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2xyVXt-dE9aFgcTMwAcaAlqI099KiQcRQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a803c00f103e",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/dryaws7nawwx",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/LIr9Xe4Na",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 41,
+        "slug": "legend-chusen-season-1-episode-41-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2xzVXt-dE9aFgcTMwAcaAk7ch5xfHBJRQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8047325a372",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/6eokhwumrxgt",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/6ZvM6HIIG",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 42,
+        "slug": "legend-chusen-season-1-episode-42-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2xwVXt-dE9aFgcTMwAcaAlockl6LX1BRA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a805232171d9",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/uk07ew9ee280",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/LTEhY4ca6",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 43,
+        "slug": "legend-chusen-season-1-episode-43-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2xxVXt-dE9aFgcTMwAcaAlgI0x_LHIdRQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a805da0be631",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/thqbc3vd9stk",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/6XAbxJFxl",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 44,
+        "slug": "legend-chusen-season-1-episode-44-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2x2VXt-dE9aFgcTMwAcaAlscUktfXEYFA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8067a14e6be",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/bvjq16fwym00",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/MOJE2CYJO",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 45,
+        "slug": "legend-chusen-season-1-episode-45-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2x3VXt-dE9aFgcTMwAcaAlqd0x8eCcfRw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8074e034bcb",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/cm746d79jvb9",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/9jWN0aJuu",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 46,
+        "slug": "legend-chusen-season-1-episode-46-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2x0VXt-dE9aFgcTMwAcaAlpJx56LXJJEw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8088c1e7d01",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/JlR6vdx2m",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 47,
+        "slug": "legend-chusen-season-1-episode-47-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Lh0uKysdWiIqJAQpLR0lPSMLJiBoSFokMjgEIydVe2x1VXt-dE9aFgcTMwAcaAlhcUt6K3FBRw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a809d8c43e2c",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/vr9pxmtsfwm3",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/nKe8It897",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -325746,7 +327139,7 @@
     "film": "The Chelsea Detective (2022)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/chelsea-detective-2022",
-    "scraped_at": "2026-08-14T17:55:23.192Z",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
     "episodes": [
       {
         "season": 1,
@@ -326017,6 +327410,181 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/H-w3bvxNE",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 1,
+        "slug": "chelsea-detective-season-3-episode-1-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IRAsIjYcFmwmNAMpIEQ_LidVOiskChgvb2JaKTNZJTcmHWR_aEtHc3B8IAkBdBoHGid6diFAQCUnMg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f827ab50e2",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/l46ie5con9pq",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/VxxsJop-f",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 2,
+        "slug": "chelsea-detective-season-3-episode-2-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IRAsIjYcFmwmNAMpIEQ_LidVOiskChgvb2JaKTNZJTcmHWR8aEtHc3B8IAkBdBoHGid_LHFPRHMjYw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f88b8929c1",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/wgb0nw0iugte",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/eC2QtmcEBc",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 3,
+        "slug": "chelsea-detective-season-3-episode-3-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IRAsIjYcFmwmNAMpIEQ_LidVOiskChgvb2JaKTNZJTcmHWR9aEtHc3B8IAkBdBoHGid5fH1PRyQmZw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f908c06457",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/oz7wap9mfa9z",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/iTMlxcn0V",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 4,
+        "slug": "chelsea-detective-season-3-episode-4-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IRAsIjYcFmwmNAMpIEQ_LidVOiskChgvb2JaKTNZJTcmHWR6aEtHc3B8IAkBdBoHGid9eSZOEXZ3Mw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f94cfb3786",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/88evjoa1ns05",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Fbu3Qz1XC2",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 4,
+        "episode": 1,
+        "slug": "chelsea-detective-season-4-episode-1-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/IRAsIjYcFmwmNAMpIEQ_LidVOiskChgvb2VaKTNZJTcmHWR_aEtHc3B8IAkBdBoHGid7dnZKE3ByYQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a7f9ee1b4047",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/l3xmwi9eynii",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/DKMw-FlOz",
             "default": false
           }
         ]
@@ -327378,6 +328946,864 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/yhkA0FzAM",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  "flashpoint-2008": {
+    "slug": "flashpoint-2008",
+    "film": "Flashpoint (2008)",
+    "type": "series",
+    "source": "https://tv7.nontondrama.my/flashpoint-2008",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "slug": "flashpoint-season-1-episode-1-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXIdZGhyQGQZADszDR0JKH8hCGE-cEtx",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a805fbc244b0",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/rwm81oa834v7",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/5iKW0jsPw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "slug": "flashpoint-season-1-episode-2-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXEdZGhyQGQZADszDR0JKHgmAGE6cxkv",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80631a74839",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/8s3kzmacu16z",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/0D4aeWLVd",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "slug": "flashpoint-season-1-episode-3-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXAdZGhyQGQZADszDR0JKClxVW5sdBl-",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a80673b458b9",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/95j1r6lt1aiv",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Ilwn-JR1Zc",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "flashpoint-season-1-episode-4-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXcdZGhyQGQMKQwlIDsOLxN0BGJhdEF5ew",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a806bcb274ec",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/k7zqnfme2n8g",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/k-oeber1t",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "slug": "flashpoint-season-1-episode-5-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXYdZGhyQGQZADszDR0JKC50AjI6IRst",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a806f1e4b7b2",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/3jby9u0jtrpy",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/VxujjXFbf",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "flashpoint-season-1-episode-6-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXUdZGhyQGQZADszDR0JKConAmRuJkx5",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8072ac870b1",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/lhr1j6sduea6",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/CXg-TBOtt",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "flashpoint-season-1-episode-7-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXQdZGhyQGQZADszDR0JKHx2BTc9J05-",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8075fa680f2",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/qs9llgwup460",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/BtBjUDKyw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "flashpoint-season-1-episode-8-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXsdZGhyQGQZADszDR0JKC0hVTBsdUl8",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8079a0aadad",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/s9e3n4g5hmtg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/KOJq05_rs",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "slug": "flashpoint-season-1-episode-9-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/JBQoPS0JGCgsJVo_JlElNyxVeGMgCR4yLTUSYXodZGhyQGQZADszDR0JKHUlUm9ocR0r",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a807d3a1c624",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/u1tnho1tv7li",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/SFHrkmffP",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  "the-walking-dead-dead-city-2023": {
+    "slug": "the-walking-dead-dead-city-2023",
+    "film": "The Walking Dead: Dead City (2023)",
+    "type": "series",
+    "source": "https://tv7.nontondrama.my/the-walking-dead-dead-city-2023",
+    "scraped_at": "2026-08-15T17:22:01.334Z",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "slug": "the-walking-dead-dead-city-season-1-episode-1-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/7bdc8fd276970ec10f888f69cba557c4",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/8JPEaZx7UVzquHVbsLHU",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/YGaJE0Op8l",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "slug": "the-walking-dead-dead-city-season-1-episode-2-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/1ac63cbaa54c7fe11b2a1f40ddd3dd01",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/aOZIkCTVMvRbtAydu0CM",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/hxfq3nivq5x9",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/rpUlh4jg64",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "slug": "the-walking-dead-dead-city-season-1-episode-3-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/6726f535b54e71d4f7ece898acd533a3",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/xN4wEjVpLozZ9J6oYoCK",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/IrAnM2t2R",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "the-walking-dead-dead-city-season-1-episode-4-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/0612b89ae452d7e46240510ac4cce369",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/3MwJUGx87EXPC7xvHS6E",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/jewupozi6gqs",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/uxJVzSBfP",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "slug": "the-walking-dead-dead-city-season-1-episode-5-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/d19d03afe940b50a82f759afd1071f8b",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/jAMqXO91W4jUoIb3mkPc",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/VNny4588r",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "the-walking-dead-dead-city-season-1-episode-6-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/aae35f0dc04b7f3aec5b46f377126114",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/WHUWpxcCh21ubJUH7BR9",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/JCOEr76rN",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "slug": "the-walking-dead-dead-city-season-2-episode-1-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmFyHWRocEtkOSAbEy0dCSh6IVFhbHUaKw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6818346c90513",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/c0a6296x7dlx",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/4TubGX4Ew",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 2,
+        "slug": "the-walking-dead-dead-city-season-2-episode-2-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmFxHWRocEtkOSAbEy0dCSgoIQkwa3AdKw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6821690f763d3",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/58rffrypq4fl",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/OTOPaq0oQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 3,
+        "slug": "the-walking-dead-dead-city-season-2-episode-3-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmFwHWRocEtkOSAbEy0dCSgvIgFlPXQZLw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/682ac6c5293f6",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/3mj60lz8w6ji",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/IPX2lwMh9",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 4,
+        "slug": "the-walking-dead-dead-city-season-2-episode-4-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmF3HWRocEtkOSAbEy0dCSh0IlJnOSNNLw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6836961c8422e",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/FC3lgC-lQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 5,
+        "slug": "the-walking-dead-dead-city-season-2-episode-5-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmF2HWRocEtkGQA7Mw1vZU98HGgJKicNOSIqGBM",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/683e5296b09a1",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/pGwrcYy3C",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "slug": "the-walking-dead-dead-city-season-2-episode-6-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmF1HWRocEtkOSAbEy0dCSgocgBmbSFNfQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/68518bc6853d4",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/zKsHJwa0uQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 7,
+        "slug": "the-walking-dead-dead-city-season-2-episode-7-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NhAsYzIYGyorPxBhJ1U3PG8cLC8hVBQoNihaPyZRJTcsVXtjIAkeMi01EmF0HWRocEtkOSAbEy0dCSh7JggyaiNAeA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/685191ab47eee",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/2uwazVhNp",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 8,
+        "slug": "walking-dead-dead-city-season-2-episode-8-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NRklJSwXEGwmNBYoblQzOSZVKicxAFoyJzAEIy0dZHUnCCA9Kh0SbHp8RXxxA3sPBzoNAhohKHQjYRQvclJm",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/68b11ee5bd922",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/oQHdlfkhl",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 1,
+        "slug": "walking-dead-dead-city-season-3-episode-1-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NRklJSwXEGwmNBYoblQzOSZVKicxAFoyJzAEIy0dZXUnCCA9Kh0SbHN8RXxxA3sPBzoNAhohKHJxZkV5c1Rl",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a68d520282c8",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/r60a7d1cx5l4",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/SvcV8fEf2",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 2,
+        "slug": "walking-dead-dead-city-season-3-episode-2-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NRklJSwXEGwmNBYoblQzOSZVKicxAFoyJzAEIy0dZXUnCCA9Kh0SbHB8RXxxA3sPBzoNAhohKCcgYEEoIlFv",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a723a458b68b",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/2DOXOmWTp",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 3,
+        "slug": "walking-dead-dead-city-season-3-episode-3-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/NRklJSwXEGwmNBYoblQzOSZVKicxAFoyJzAEIy0dZXUnCCA9Kh0SbHF8RXxxA3sPBzoNAhohKHZxNxMvcwJh",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8019ceb4dd4",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/oipyxbqosn5z",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/dX4bG91N5",
             "default": false
           }
         ]
