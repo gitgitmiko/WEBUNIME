@@ -9615,5 +9615,42 @@
         "default": false
       }
     ]
+  },
+  "feed-2026": {
+    "slug": "feed-2026",
+    "film": "Feed (2026)",
+    "source": "https://tv12.lk21official.cc/feed-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-16T17:20:49.760Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/JB0sKmhLR3N0fCAJAXQaBxoneS8hSUElemQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a80a81b0cdab",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/nm0bhf62gyrv",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/muKjNEYc9",
+        "default": false
+      }
+    ]
   }
 }

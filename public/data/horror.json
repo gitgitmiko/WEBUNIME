@@ -1,5 +1,53 @@
 [
   {
+    "nama": "Feed",
+    "judul": "Feed (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-feed-2026-lk21.jpg",
+    "rating": "5.5",
+    "quality": "HD",
+    "durasi": "1j 23m",
+    "genre": [
+      "Horror"
+    ],
+    "sinopsis": "Di movie \"Feed\" (2026), lima influencer media sosial menghabiskan akhir pekan di sebuah retret hutan. Namun, mereka tanpa sengaja membangkitkan dan menghadapi vampir pertama di dunia. Ketakutan dan keputusasaan melanda ketika mereka harus bertahan hidup dari keganasan makhluk abadi tersebut. Apakah mereka bisa selamat?\n\nWorldwide Gross: USD 57,804\n\nSubtitle: workkeerr\n\nSutradara: Marco van Belle\n\nBintang Film: Grace Collender, Clinton Liberty, Molly McCann, Flynn Gray, Charlotte Bradley\n\nNegara: United Kingdom\n\nVotes: 6\n\nRelease: 25 Jun 2026\n\nUpdated: 15 Aug 2026 17:55:28",
+    "slug": "feed-2026",
+    "source": "https://tv12.lk21official.cc/feed-2026",
+    "catalog": "horror",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/JB0sKmhLR3N0fCAJAXQaBxoneS8hSUElemQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a80a81b0cdab",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/nm0bhf62gyrv",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/muKjNEYc9",
+        "default": false
+      }
+    ],
+    "id": 263,
+    "is_new": true
+  },
+  {
     "nama": "Ghabadkund",
     "judul": "Ghabadkund (2026)",
     "tahun": "2026",
@@ -45,8 +93,7 @@
         "default": false
       }
     ],
-    "id": 262,
-    "is_new": true
+    "id": 262
   },
   {
     "nama": "Dark Giant",
