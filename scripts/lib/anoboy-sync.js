@@ -444,7 +444,7 @@ async function scrapeLatestPage(page, n) {
 async function scrapeHub(page, hubUrl) {
   await page.goto(hubUrl, { waitUntil: "domcontentloaded", timeout: 90000 });
   await page.waitForTimeout(1800);
-  const hubSlug = slugFromUrl(hubUrl);
+  const hubSlug = decodeURIComponent(slugFromUrl(hubUrl));
   return page.evaluate(
     ({ hubSlug, hubUrl }) => {
       const h1 = (document.querySelector("h1")?.textContent || "")
@@ -471,18 +471,29 @@ async function scrapeHub(page, hubUrl) {
         }
       }
       const iframe =
+        document.querySelector("#mediaplayer")?.src ||
         document.querySelector("#tontonin")?.src ||
         document.querySelector("iframe")?.src ||
         "";
       const links = [];
       const seen = new Set();
-      for (const a of document.querySelectorAll(".sisi.entry-content a, .entry-content a")) {
+      const candidates = [
+        ...document.querySelectorAll("ul.lcp_catlist a"),
+        ...document.querySelectorAll("a"),
+      ];
+      for (const a of candidates) {
         const href = a.href || "";
-        if (!/anoboy\.xyz\/\d{4}\/\d{2}\//.test(href)) continue;
+        if (!/anoboy\.xyz\/\d{4}\/\d{2}\//i.test(href)) continue;
+        if (!/-episode-\d+/i.test(href)) continue;
+        try {
+          const path = decodeURIComponent(
+            new URL(href).pathname.split("/").filter(Boolean).pop() || "",
+          );
+          if (!path.includes(hubSlug)) continue;
+        } catch {
+          continue;
+        }
         if (seen.has(href)) continue;
-        const path = href.split("/").filter(Boolean).pop() || "";
-        if (!path.includes(hubSlug)) continue;
-        if (href.replace(/\/+$/, "") === hubUrl.replace(/\/+$/, "")) continue;
         seen.add(href);
         links.push({
           href,
@@ -525,6 +536,29 @@ function playersFromIframe(iframeSrc, episode, sourcePage) {
   return byEp;
 }
 
+/** Mirror kualitas di halaman 1 episode (Btube / 360 / PC 720), bukan daftar EP. */
+function playersFromMirrors(mirrors, episode, sourcePage) {
+  const byEp = new Map();
+  if (!episode) return byEp;
+  const list = [];
+  const seen = new Set();
+  for (const row of mirrors) {
+    if (/zipy|zippyshare|yupbatch/i.test(row.video || "")) continue;
+    const url = bloggerFromAnoboyPath(row.video);
+    if (!url || seen.has(url)) continue;
+    seen.add(url);
+    const text = String(row.text || "").replace(/\s+/g, " ").trim() || "B-Tube";
+    if (/^btube$/i.test(text)) continue;
+    list.push({
+      url,
+      label: `Anoboy ${text}`,
+      source_page: sourcePage,
+    });
+  }
+  if (list.length) byEp.set(episode, list);
+  return byEp;
+}
+
 async function scrapeEpisodePlayers(page, epUrl) {
   await page.goto(epUrl, { waitUntil: "domcontentloaded", timeout: 90000 });
   await page.waitForTimeout(1200);
@@ -545,17 +579,30 @@ async function scrapeEpisodePlayers(page, epUrl) {
         });
       }
     }
-    const iframe =
-      document.querySelector("#tontonin")?.src ||
-      document.querySelector("iframe")?.src ||
-      "";
+    const mirrors = [
+      ...document.querySelectorAll("a[data-video], a#allmiror"),
+    ].map((a) => ({
+      text: (a.textContent || "").replace(/\s+/g, " ").trim(),
+      video: a.getAttribute("data-video") || "",
+    }));
+    const iframeEl =
+      document.querySelector("#mediaplayer") ||
+      document.querySelector("#tontonin") ||
+      document.querySelector("iframe");
+    const iframe = iframeEl?.src || iframeEl?.getAttribute("src") || "";
     const title = (document.querySelector("h1")?.textContent || "").trim();
-    return { batch, iframe, title };
+    return { batch, mirrors, iframe, title };
   });
   const parsed = parseEpisodeFromUrl(epUrl, data.title);
-  let byEp = playersFromBatch(data.batch, epUrl);
+  let byEp = new Map();
+  if (data.batch.length) {
+    mergeMaps(byEp, playersFromBatch(data.batch, epUrl));
+  }
+  if (parsed.episode) {
+    mergeMaps(byEp, playersFromMirrors(data.mirrors, parsed.episode, epUrl));
+  }
   if (!byEp.size && data.iframe && parsed.episode) {
-    byEp = playersFromIframe(data.iframe, parsed.episode, epUrl);
+    mergeMaps(byEp, playersFromIframe(data.iframe, parsed.episode, epUrl));
   }
   return { byEp, parsed, title: data.title };
 }
@@ -706,6 +753,9 @@ export async function scrapeAnoboyFull(rootDir, opts = {}) {
           }
 
           const epLinks = hub.links.slice(0, opts.maxEpsPerHub || 80);
+          console.log(
+            `[anoboy-full] ${seriesSlug}: ${epLinks.length} episode di hub`,
+          );
           for (let i = 0; i < epLinks.length; i++) {
             try {
               const scraped = await scrapeEpisodePlayers(page, epLinks[i].href);
@@ -725,7 +775,12 @@ export async function scrapeAnoboyFull(rootDir, opts = {}) {
           }
 
           if (!playersByEp.size) {
-            console.warn(`[anoboy-full] skip ${seriesSlug}: tidak ada player`);
+            console.warn(
+              `[anoboy-full] skip ${seriesSlug}: tidak ada player (ep links=${epLinks.length})`,
+            );
+            if (!epLinks.length && !hub.batch.length) {
+              done.add(item.href);
+            }
           } else {
             const stats = applyToAll(loaded, {
               candidate: { slug: seriesSlug, title },
@@ -740,12 +795,12 @@ export async function scrapeAnoboyFull(rootDir, opts = {}) {
             totals.addedPlayers += stats.addedPlayers;
             logMerge("full", stats, title);
             await saveAll(loaded);
+            done.add(item.href);
           }
         } catch (err) {
           console.warn(`[anoboy-full] hub ${item.href}:`, err.message);
         }
 
-        done.add(item.href);
         state.doneHubs = [...done];
         state.page = n;
         await writeFile(stateFile, JSON.stringify(state, null, 2), "utf8");
