@@ -1,13 +1,15 @@
 /**
  * Sync inkremental katalog:
  * - LK21: film / series / horor (halaman 1)
- * - Samehadaku: anime-terbaru (5 hlm, episode baru) + anime-movie (judul baru)
+ * - Samehadaku: anime-terbaru (5 hlm) + anime-movie + jadwal
+ * - Anoboy: homepage terbaru (merge server; judul baru jika belum ada)
  *   ditulis ke public/data (TV) dan public/data/mobile (HP)
  */
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
+import { syncAnoboyLatest } from "./anoboy-sync.js";
 import { syncIndonesiaCatalog } from "./kconaz-indonesia.js";
 import {
   extractLk21Quality,
@@ -1211,7 +1213,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
 
   syncInFlight = (async () => {
     const started = Date.now();
-    console.log("[catalog-sync] mulai (LK21 → kconaz Indonesia → Samehadaku)…");
+    console.log("[catalog-sync] mulai (LK21 → kconaz Indonesia → Samehadaku → Anoboy)…");
     await clearIsNewFlags(dataDir);
     const results = {
       movies: await syncMoviesCatalog(dataDir),
@@ -1274,6 +1276,20 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       };
     }
 
+    try {
+      results.anoboy = await syncAnoboyLatest(dataDir, [mobileDir]);
+    } catch (err) {
+      console.warn("[sync] anoboy:", err.message);
+      results.anoboy = {
+        checked: 0,
+        matched: 0,
+        added: 0,
+        addedEps: 0,
+        addedPlayers: 0,
+        error: err.message,
+      };
+    }
+
     // Rewrite host player lama → baru di seluruh JSON (alias map).
     try {
       console.log("[catalog-sync] fix player host aliases…");
@@ -1300,7 +1316,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       (results.anime?.added || 0) +
       (results.animeMobile?.added || 0) +
       (results.animeMovies?.added || 0) +
-      (results.animeMoviesMobile?.added || 0);
+      (results.animeMoviesMobile?.added || 0) +
+      (results.anoboy?.added || 0);
     const updated =
       results.movies.updated +
       results.series.updated +
@@ -1310,7 +1327,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       (results.anime?.updated || 0) +
       (results.animeMobile?.updated || 0) +
       (results.animeMovies?.updated || 0) +
-      (results.animeMoviesMobile?.updated || 0);
+      (results.animeMoviesMobile?.updated || 0) +
+      (results.anoboy?.matched || 0);
     const payload = {
       ok: true,
       skipped: false,

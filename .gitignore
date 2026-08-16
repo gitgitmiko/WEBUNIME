@@ -6,3 +6,6 @@ dist
 .env
 .env.*
 !.env.example
+scripts/_anoboy-scrape/
+scripts/_anoboy-probe/
+

@@ -23,6 +23,8 @@
     "fix:player-hosts": "node scripts/fix-player-hosts.js",
     "sync:anime-players": "node scripts/refresh-anime-players.js",
     "sync:catalog": "node scripts/sync-catalog.js --force",
+    "scrape:anoboy": "node scripts/scrape-anoboy.js",
+    "sync:anoboy": "node scripts/scrape-anoboy.js --latest",
     "repair:episode": "node scripts/repair-reported-episode.js",
     "repair:queue": "node scripts/repair-reported-episode.js --queue"
   },
