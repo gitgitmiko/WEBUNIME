@@ -590,6 +590,15 @@ function shortSinopsis(text) {
   return first.length > 360 ? `${first.slice(0, 357)}…` : first;
 }
 
+function cleanFactValue(value) {
+  return String(value || "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+,/g, ",")
+    .replace(/,(\s*,)+/g, ",")
+    .replace(/^[,\s]+|[,\s]+$/g, "")
+    .trim();
+}
+
 function parseSinopsisDetail(sinopsis) {
   const blocks = String(sinopsis || "")
     .split(/\n\n+/)
@@ -597,15 +606,44 @@ function parseSinopsisDetail(sinopsis) {
     .filter(Boolean);
   const facts = {};
   const story = [];
+  const canonical = {
+    subtitle: "subtitle",
+    sutradara: "sutradara",
+    direksi: "sutradara",
+    "bintang film": "bintang film",
+    pemain: "bintang film",
+    negara: "negara",
+    votes: "votes",
+    release: "release",
+    rilis: "release",
+    updated: "updated",
+    "worldwide gross": "worldwide gross",
+    pendapatan: "worldwide gross",
+    bahasa: "bahasa",
+  };
+  const stripOnly = new Set([
+    "oleh",
+    "diposting pada",
+    "genre",
+    "tahun",
+    "durasi",
+    "rating",
+    "anggaran",
+  ]);
+  const labelRe =
+    /^(Subtitle|Sutradara|Direksi|Bintang Film|Pemain|Negara|Votes|Release|Rilis|Updated|Worldwide Gross|Pendapatan|Bahasa|Oleh|Diposting pada|Genre|Tahun|Durasi|Rating|Anggaran):\s*([\s\S]+)$/i;
+
   for (const block of blocks) {
-    const m = block.match(
-      /^(Subtitle|Sutradara|Bintang Film|Negara|Votes|Release|Updated|Worldwide Gross):\s*([\s\S]+)$/i
-    );
-    if (m) {
-      facts[m[1].toLowerCase()] = m[2].trim();
-    } else {
+    const m = block.match(labelRe);
+    if (!m) {
       story.push(block);
+      continue;
     }
+    const rawKey = m[1].toLowerCase();
+    if (stripOnly.has(rawKey)) continue;
+    const key = canonical[rawKey];
+    const value = cleanFactValue(m[2]);
+    if (key && value) facts[key] = value;
   }
   return { story: story.join("\n\n"), facts };
 }
@@ -985,14 +1023,15 @@ async function openModal(movie, opts = {}) {
   $("#modalDesc").textContent = story || shortSinopsis(movie.sinopsis) || "";
   $("#modalGenres").textContent = (movie.genre || []).join(", ") || "—";
 
-  setModalFact("factCast", "modalCast", facts["bintang film"]);
-  setModalFact("factDirector", "modalDirector", facts.sutradara);
+  setModalFact("factCast", "modalCast", movie.pemain || facts["bintang film"]);
+  setModalFact("factDirector", "modalDirector", movie.direksi || facts.sutradara);
   setModalFact("factStudio", "modalStudio", movie.studio);
   setModalFact("factSumber", "modalSumber", movie.sumber);
   setModalFact("factSubtitle", "modalSubtitle", facts.subtitle);
-  setModalFact("factCountry", "modalCountry", facts.negara);
-  setModalFact("factGross", "modalGross", facts["worldwide gross"]);
-  setModalFact("factRelease", "modalRelease", facts.release);
+  setModalFact("factCountry", "modalCountry", movie.negara || facts.negara);
+  setModalFact("factLanguage", "modalLanguage", cleanFactValue(movie.bahasa || facts.bahasa));
+  setModalFact("factGross", "modalGross", movie.pendapatan || facts["worldwide gross"]);
+  setModalFact("factRelease", "modalRelease", movie.rilis || facts.release);
 
   const epWrap = $("#modalEpisodes");
   const epSelect = $("#modalEpisodeSelect");
