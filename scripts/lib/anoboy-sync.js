@@ -609,39 +609,76 @@ function metaFromHub(hub, hubUrl) {
   };
 }
 
+function isWeakSinopsis(s) {
+  const t = String(s || "").replace(/\s+/g, " ").trim();
+  if (!t) return true;
+  if (t.length < 80) return true;
+  if (/^judul lengkap:?$/i.test(t)) return true;
+  return false;
+}
+
+function rowHasAnoboyPlayer(row) {
+  return (row?.episodes || []).some((ep) =>
+    (ep.players || []).some(isAnoboyPlayer),
+  );
+}
+
+function needsAnoboyMeta(row) {
+  if (!row) return false;
+  if (isAnoboyOnly(row)) {
+    return isWeakSinopsis(row.sinopsis) || !row.studio || !row.sumber;
+  }
+  if (!rowHasAnoboyPlayer(row)) return false;
+  return (
+    isWeakSinopsis(row.sinopsis) ||
+    !row.studio ||
+    !row.sumber ||
+    !row.tahun ||
+    /^\d+\s*eps$/i.test(String(row.durasi || ""))
+  );
+}
+
 function applyAnoboyMeta(row, meta) {
-  if (!row || !meta || !isAnoboyOnly(row)) return false;
+  if (!row || !meta) return false;
+  const only = isAnoboyOnly(row);
   let changed = false;
-  if (meta.title && meta.title !== row.nama) {
+  if (only && meta.title && meta.title !== row.nama) {
     row.nama = meta.title;
     row.judul = meta.title;
     changed = true;
   }
-  if (meta.sinopsis && meta.sinopsis !== row.sinopsis) {
-    row.sinopsis = meta.sinopsis;
-    changed = true;
+  if (meta.sinopsis && (only || isWeakSinopsis(row.sinopsis))) {
+    if (row.sinopsis !== meta.sinopsis) {
+      row.sinopsis = meta.sinopsis;
+      changed = true;
+    }
   }
-  if (meta.genre?.length) {
+  if (meta.genre?.length && (only || !Array.isArray(row.genre) || !row.genre.length)) {
     row.genre = [...meta.genre];
     changed = true;
   }
-  if (meta.rating && String(row.rating || "") !== String(meta.rating)) {
+  if (meta.rating && (only || !row.rating)) {
     row.rating = meta.rating;
     changed = true;
   }
-  if (meta.durasi) {
-    row.durasi = meta.durasi;
-    changed = true;
+  if (
+    meta.durasi &&
+    (only || !row.durasi || /^\d+\s*eps$/i.test(String(row.durasi || "")))
+  ) {
+    if (row.durasi !== meta.durasi) {
+      row.durasi = meta.durasi;
+      changed = true;
+    }
   }
   if (meta.tahun && !row.tahun) {
     row.tahun = String(meta.tahun);
     changed = true;
   }
-  if (meta.studio) {
+  if (meta.studio && !row.studio) {
     row.studio = meta.studio;
     changed = true;
   }
-  if (meta.sumber) {
+  if (meta.sumber && !row.sumber) {
     row.sumber = meta.sumber;
     changed = true;
   }
@@ -834,31 +871,34 @@ function logMerge(label, stats, title) {
 function collectAnoboyMetaJobs(loaded) {
   const jobs = [];
   const seen = new Set();
+  const add = (hubUrl, slug, title) => {
+    if (!/anoboy\.xyz\/\d{4}\/\d{2}\//i.test(hubUrl || "")) return;
+    const key = hubUrl.replace(/\/+$/, "").toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    jobs.push({
+      hubUrl,
+      slug: slug || slugFromUrl(hubUrl),
+      title: title || "",
+    });
+  };
   for (const pack of loaded) {
     for (const row of pack.items) {
-      if (!isAnoboyOnly(row)) continue;
-      const hubUrl = resolveHubUrl(row.source || "");
-      if (!/anoboy\.xyz\/\d{4}\/\d{2}\//i.test(hubUrl)) continue;
-      const key = hubUrl.replace(/\/+$/, "").toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      jobs.push({
-        hubUrl,
-        slug: slugFromUrl(hubUrl) || row.slug,
-        title: row.nama || row.judul || "",
-      });
+      if (isAnoboyOnly(row) && needsAnoboyMeta(row)) {
+        add(resolveHubUrl(row.source || ""), row.slug, row.nama || row.judul);
+      }
     }
   }
-  return jobs;
+  return { jobs, seen };
 }
 
 function applyMetaToAnoboyCatalogs(loaded, candidate, meta, hubUrl) {
   let updated = 0;
   for (const pack of loaded) {
     const row = findExistingAnime(pack.items, candidate);
-    if (!row || !isAnoboyOnly(row)) continue;
+    if (!row) continue;
     if (applyAnoboyMeta(row, meta)) updated += 1;
-    if (hubUrl && /-episode-\d+/i.test(String(row.source || ""))) {
+    if (isAnoboyOnly(row) && hubUrl && /-episode-\d+/i.test(String(row.source || ""))) {
       row.source = hubUrl;
     }
   }
@@ -866,7 +906,8 @@ function applyMetaToAnoboyCatalogs(loaded, candidate, meta, hubUrl) {
 }
 
 /**
- * Isi sinopsis/genre/skor/studio ke judul Anoboy saja (bukan Samehadaku).
+ * Isi sinopsis/studio/source dari hub Anoboy.
+ * Judul Samehadaku hanya field yang masih kosong / sinopsis rusak ("Judul Lengkap:").
  * Hanya kunjungi halaman hub, tanpa scrape player episode.
  */
 export async function enrichAnoboyMeta(rootDir, opts = {}) {
@@ -887,7 +928,9 @@ export async function enrichAnoboyMeta(rootDir, opts = {}) {
   }
 
   const loaded = await loadBothCatalogs(dataDir, [mobileDir]);
-  let jobs = collectAnoboyMetaJobs(loaded);
+  const collected = collectAnoboyMetaJobs(loaded);
+  let jobs = collected.jobs;
+  const seen = collected.seen;
   if (onlyHub) {
     const resolved = resolveHubUrl(onlyHub);
     jobs = jobs.filter(
@@ -903,23 +946,54 @@ export async function enrichAnoboyMeta(rootDir, opts = {}) {
       ];
     }
   }
-  const done = new Set(state.doneHubs || []);
-  const pending = jobs.filter((j) => !done.has(j.hubUrl));
-  const slice = hubLimit ? pending.slice(0, hubLimit) : pending;
 
   const totals = {
-    jobs: jobs.length,
+    jobs: 0,
     visited: 0,
     updated: 0,
     skipped: 0,
   };
-  console.log(
-    `[anoboy-meta] ${slice.length} hub (dari ${jobs.length} judul Anoboy, skip ${done.size})`,
-  );
 
+  const done = new Set(state.doneHubs || []);
   const browser = await launchBrowser();
   const page = await makePage(browser);
   try {
+    if (!onlyHub) {
+      const first = await scrapeListingPage(page, 1);
+      const maxPages = first.maxPages || 118;
+      console.log(`[anoboy-meta] cari hub Samehadaku yang meta-nya kosong (hlm 1–${maxPages})`);
+      for (let n = 1; n <= maxPages; n++) {
+        const listing = n === 1 ? first : await scrapeListingPage(page, n);
+        for (const item of listing.items || []) {
+          const candidate = {
+            slug: slugFromUrl(item.href),
+            title: item.title || "",
+          };
+          const hit = loaded.some((pack) => {
+            const row = findExistingAnime(pack.items, candidate);
+            return row && needsAnoboyMeta(row);
+          });
+          if (!hit) continue;
+          const key = item.href.replace(/\/+$/, "").toLowerCase();
+          if (seen.has(key)) continue;
+          seen.add(key);
+          jobs.push({
+            hubUrl: item.href,
+            slug: candidate.slug,
+            title: candidate.title,
+          });
+        }
+        if (n < maxPages) await sleep(DETAIL_DELAY_MS);
+      }
+    }
+
+    const pending = jobs.filter((j) => !done.has(j.hubUrl));
+    const slice = hubLimit ? pending.slice(0, hubLimit) : pending;
+    totals.jobs = jobs.length;
+    console.log(
+      `[anoboy-meta] ${slice.length} hub (dari ${jobs.length}, skip ${done.size})`,
+    );
+
     for (let i = 0; i < slice.length; i++) {
       const job = slice[i];
       try {
@@ -933,7 +1007,7 @@ export async function enrichAnoboyMeta(rootDir, opts = {}) {
         const n = applyMetaToAnoboyCatalogs(loaded, candidate, meta, job.hubUrl);
         if (!n) {
           totals.skipped += 1;
-          console.warn(`[anoboy-meta] skip ${candidate.slug}: bukan judul Anoboy baru`);
+          console.warn(`[anoboy-meta] skip ${candidate.slug}: meta tidak berubah`);
         } else {
           totals.updated += n;
           console.log(
