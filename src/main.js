@@ -817,11 +817,9 @@ function shuffleCopy(list) {
 function pickHeroSlides(pool, limit = 10) {
   const eligible = pool.filter((item) => {
     const rating = parseRating(item?.rating);
-    return rating != null && rating >= 7 && (item.thumbnail || item.thumbnail_landscape);
+    return rating != null && rating > 8 && (item.thumbnail || item.thumbnail_landscape);
   });
-  const preferred = eligible.filter((item) => item.thumbnail_landscape);
-  const source = preferred.length >= limit ? preferred : eligible;
-  return shuffleCopy(source).slice(0, limit);
+  return shuffleCopy(eligible).slice(0, limit);
 }
 
 function renderHeroDots() {
@@ -876,26 +874,27 @@ function startHeroCarousel() {
 }
 
 async function initHeroCarousel() {
-  let pool = catalog;
+  let items = [];
   try {
-    const res = await fetch("/api/v1/hero?limit=12", { credentials: "include" });
+    const res = await fetch("/api/v1/hero?limit=10", { credentials: "include" });
     if (res.ok) {
       const data = await res.json();
-      const items = Array.isArray(data?.items) ? data.items : [];
-      if (items.length) {
-        for (const item of items) {
-          rememberItems(item.catalog || resolveCollection(item), [item]);
-        }
-        pool = items;
-      }
+      items = Array.isArray(data?.items) ? data.items : [];
     }
   } catch {
     /* pakai katalog halaman 1 */
   }
-  heroSlides = pickHeroSlides(pool, 10);
+  if (items.length) {
+    for (const item of items) {
+      rememberItems(item.catalog || resolveCollection(item), [item]);
+    }
+    heroSlides = items.slice(0, 10);
+  } else {
+    heroSlides = pickHeroSlides(catalog, 10);
+  }
   if (!heroSlides.length) {
     heroSlides = pickHeroSlides(
-      pool.filter((item) => item.thumbnail || item.thumbnail_landscape),
+      (catalog || []).filter((item) => item.thumbnail || item.thumbnail_landscape),
       10
     );
   }

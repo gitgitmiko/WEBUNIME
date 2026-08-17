@@ -24,7 +24,7 @@ export function createCatalogReadRouter() {
         all: "/api/v1/catalog/:collection/all",
         item: "/api/v1/catalog/:collection/:slug",
         search: "/api/v1/search?q=&limit=",
-        hero: "/api/v1/hero?limit=",
+        hero: "/api/v1/hero?limit=10",
         doc: "/api/v1/docs/:name",
       },
     });
@@ -33,7 +33,7 @@ export function createCatalogReadRouter() {
   router.get("/hero", async (req, res) => {
     try {
       const data = await listHero({ limit: req.query.limit });
-      res.setHeader("Cache-Control", "private, max-age=60");
+      res.setHeader("Cache-Control", "private, no-store");
       return res.json(data);
     } catch (err) {
       console.error("[catalog/hero]", err);

@@ -285,20 +285,37 @@ export async function searchCatalog({ q = "", limit = 40 } = {}) {
   };
 }
 
-export async function listHero({ limit = 12 } = {}) {
+export async function listHero({ limit = 10 } = {}) {
   const pool = getPool();
-  const safeLimit = Math.min(Math.max(Number(limit) || 12, 1), 24);
-  const [rows] = await pool.query(
-    `SELECT collection, payload FROM catalog_items
+  const safeLimit = Math.min(Math.max(Number(limit) || 10, 1), 24);
+  const [idRows] = await pool.query(
+    `SELECT id, collection FROM catalog_items
      WHERE collection IN ('movies', 'series', 'horror', 'indonesia', 'anime', 'anime-movies')
        AND thumbnail IS NOT NULL AND thumbnail <> ''
        AND rating REGEXP '^[0-9]'
-       AND CAST(REPLACE(rating, ',', '.') AS DECIMAL(6,2)) >= 7
-     ORDER BY id ASC
+       AND CAST(REPLACE(rating, ',', '.') AS DECIMAL(6,2)) > 8
+     ORDER BY RAND()
      LIMIT ?`,
-    [Math.max(safeLimit * 3, 24)]
+    [Math.min(safeLimit * 3, 40)]
   );
-  const items = rows.map((r) => toCard(parsePayload(r.payload), r.collection));
+  const rows = await payloadsByIds(
+    pool,
+    idRows.map((r) => r.id)
+  );
+  const colById = new Map(idRows.map((r) => [r.id, r.collection]));
+  const seen = new Set();
+  const items = [];
+  for (const row of rows) {
+    const collection = colById.get(row.id) || "";
+    const item = toCard(parsePayload(row.payload), collection);
+    const key = String(item.slug || item.nama || "")
+      .trim()
+      .toLowerCase();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    items.push(item);
+    if (items.length >= safeLimit) break;
+  }
   return { items };
 }
 
