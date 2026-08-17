@@ -918,6 +918,8 @@ function openModal(movie, opts = {}) {
 
   setModalFact("factCast", "modalCast", facts["bintang film"]);
   setModalFact("factDirector", "modalDirector", facts.sutradara);
+  setModalFact("factStudio", "modalStudio", movie.studio);
+  setModalFact("factSumber", "modalSumber", movie.sumber);
   setModalFact("factSubtitle", "modalSubtitle", facts.subtitle);
   setModalFact("factCountry", "modalCountry", facts.negara);
   setModalFact("factGross", "modalGross", facts["worldwide gross"]);
