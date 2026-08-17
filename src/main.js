@@ -21,6 +21,7 @@ let modalIsFavorite = false;
 let heroSlides = [];
 let heroSlideIndex = 0;
 let heroTimer = null;
+let heroBgActive = "a";
 
 const PAGE_SIZE = 10;
 const itemCache = new Map();
@@ -748,16 +749,60 @@ function heroMetaHtml(movie) {
   return chips.join("");
 }
 
-function setHero(movie) {
+function prefersReducedMotion() {
+  return Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches);
+}
+
+function setHero(movie, { animate = false, direction = 1 } = {}) {
   if (!movie) return;
   heroMovie = movie;
-  const bg = $("#heroBg");
+  const hero = $("#hero");
+  const layerA = $("#heroBgA");
+  const layerB = $("#heroBgB");
+  const content = $(".hero-content");
   const art = movie.thumbnail_landscape || movie.thumbnail;
-  bg.style.backgroundImage = art ? `url("${art}")` : "";
+  const url = art ? `url("${String(art).replace(/"/g, "%22")}")` : "";
+
+  hero?.classList.toggle("is-dir-next", direction >= 0);
+  hero?.classList.toggle("is-dir-prev", direction < 0);
+
+  const current = heroBgActive === "a" ? layerA : layerB;
+  const incoming = heroBgActive === "a" ? layerB : layerA;
+  const canAnimate =
+    animate &&
+    !prefersReducedMotion() &&
+    current?.classList.contains("is-show") &&
+    incoming;
+
+  if (canAnimate) {
+    incoming.style.backgroundImage = url;
+    incoming.classList.remove("is-show", "is-leave");
+    incoming.style.transition = "none";
+    void incoming.offsetWidth;
+    incoming.style.transition = "";
+    incoming.classList.add("is-show");
+    current.classList.add("is-leave");
+    current.classList.remove("is-show");
+    heroBgActive = heroBgActive === "a" ? "b" : "a";
+  } else if (layerA) {
+    layerA.style.backgroundImage = url;
+    layerA.classList.add("is-show");
+    layerA.classList.remove("is-leave");
+    layerB?.classList.remove("is-show", "is-leave");
+    if (layerB) layerB.style.backgroundImage = "";
+    heroBgActive = "a";
+  }
+
   $("#heroTitle").textContent = movie.nama;
   const meta = $("#heroMeta");
   if (meta) meta.innerHTML = heroMetaHtml(movie);
   $("#heroDesc").textContent = shortSinopsis(movie.sinopsis);
+
+  if (content && !prefersReducedMotion()) {
+    content.classList.remove("is-swap");
+    void content.offsetWidth;
+    content.classList.add("is-swap");
+  }
 }
 
 function shuffleCopy(list) {
@@ -798,8 +843,19 @@ function renderHeroDots() {
 
 function showHeroSlide(index, userTriggered = false) {
   if (!heroSlides.length) return;
-  heroSlideIndex = ((index % heroSlides.length) + heroSlides.length) % heroSlides.length;
-  setHero(heroSlides[heroSlideIndex]);
+  const next = ((index % heroSlides.length) + heroSlides.length) % heroSlides.length;
+  const prev = heroSlideIndex;
+  let direction = 1;
+  if (heroSlides.length > 1) {
+    if (next === (prev + 1) % heroSlides.length) direction = 1;
+    else if (next === (prev - 1 + heroSlides.length) % heroSlides.length) direction = -1;
+    else direction = next > prev ? 1 : -1;
+  }
+  heroSlideIndex = next;
+  setHero(heroSlides[heroSlideIndex], {
+    animate: Boolean(heroMovie) && next !== prev,
+    direction,
+  });
   renderHeroDots();
   if (userTriggered) startHeroCarousel();
 }

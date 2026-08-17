@@ -903,13 +903,45 @@ body.is-auth-checking .auth-boot,
   overflow: hidden;
 }
 
+.hero-bg-stack {
+  position: absolute;
+  inset: 0;
+}
+
 .hero-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center top;
-  transform: scale(1.05);
-  animation: heroZoom 18s ease-in-out infinite alternate;
+  opacity: 0;
+  transform: scale(1.08) translateX(var(--hero-from, 4%));
+  transition: opacity 0.85s ease, transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+  z-index: 0;
+}
+
+.hero-bg.is-show {
+  opacity: 1;
+  transform: scale(1.05) translateX(0);
+  z-index: 1;
+  animation: heroZoom 18s ease-in-out 0.9s infinite alternate;
+}
+
+.hero-bg.is-leave {
+  opacity: 0;
+  transform: scale(1.03) translateX(var(--hero-to, -4%));
+  z-index: 0;
+  animation: none;
+}
+
+.hero.is-dir-next {
+  --hero-from: 5%;
+  --hero-to: -5%;
+}
+
+.hero.is-dir-prev {
+  --hero-from: -5%;
+  --hero-to: 5%;
 }
 
 .hero-shade {
@@ -924,7 +956,10 @@ body.is-auth-checking .auth-boot,
   position: relative;
   z-index: 1;
   max-width: 640px;
-  animation: riseIn 0.9s ease both;
+}
+
+.hero-content.is-swap {
+  animation: heroCopyIn 0.7s ease both;
 }
 
 .hero-title {
@@ -1095,6 +1130,20 @@ body.is-auth-checking .auth-boot,
   background: rgba(255, 255, 255, 0.9);
   transform: scale(1.12);
   outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg,
+  .hero-bg.is-show,
+  .hero-bg.is-leave {
+    transition: none;
+    animation: none;
+    transform: scale(1.05);
+  }
+
+  .hero-content.is-swap {
+    animation: none;
+  }
 }
 
 .btn {
@@ -2153,6 +2202,11 @@ body.is-auth-checking .auth-boot,
 }
 
 /* ANIMATIONS */
+@keyframes heroCopyIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+
 @keyframes heroZoom {
   from { transform: scale(1.05); }
   to { transform: scale(1.12); }
