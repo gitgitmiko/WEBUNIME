@@ -15,7 +15,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { chromium } from "playwright";
-import { extractSiteLandscape } from "./landscape-utils.js";
+import { extractSiteLandscape, plausibleReleaseYear } from "./landscape-utils.js";
 
 const BASE = "https://v2.samehadaku.how";
 const TERBARU_URL = `${BASE}/anime-terbaru/`;
@@ -642,7 +642,7 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
           source_site: "samehadaku",
           nama,
           judul: detail.judul,
-          tahun: detail.judul.match(/\b(20\d{2})\b/)?.[1] || "",
+          tahun: plausibleReleaseYear(detail.judul),
           thumbnail: detail.thumbnail || item.thumbnail,
           rating: detail.rating,
           votes: detail.votes,
@@ -916,7 +916,7 @@ async function applyMoviesToCatalog(page, dataDir, listings) {
         source_site: "samehadaku",
         nama,
         judul: detail.judul,
-        tahun: detail.judul.match(/\b(20\d{2})\b/)?.[1] || "",
+        tahun: plausibleReleaseYear(detail.judul),
         thumbnail: detail.thumbnail || item.thumbnail,
         rating: detail.rating,
         votes: detail.votes,
@@ -1270,7 +1270,7 @@ async function repairOneOnPage(page, catalogs, slug, epNum) {
         source_site: "samehadaku",
         nama,
         judul: detail.judul,
-        tahun: detail.judul?.match(/\b(20\d{2})\b/)?.[1] || "",
+        tahun: plausibleReleaseYear(detail.judul),
         thumbnail: detail.thumbnail || "",
         rating: detail.rating,
         votes: detail.votes,

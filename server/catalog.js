@@ -183,6 +183,7 @@ export async function listCollection(
   if (sortKey === "hot") {
     where.push("year REGEXP '^[0-9]{4}'");
     where.push("rating REGEXP '^[0-9]'");
+    where.push("CAST(year AS UNSIGNED) BETWEEN 1970 AND (YEAR(CURDATE()) + 1)");
   }
   const whereSql = where.join(" AND ");
   const orderSql = collectionOrderSql(sortKey);

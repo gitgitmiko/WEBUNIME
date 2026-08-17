@@ -142,11 +142,19 @@ export function cleanSearchTitle(raw) {
     .trim();
 }
 
+export function plausibleReleaseYear(raw) {
+  const y = String(raw || "").match(/\b((?:19|20)\d{2})\b/)?.[1] || "";
+  const n = Number(y);
+  const max = new Date().getFullYear() + 1;
+  if (!n || n < 1970 || n > max) return "";
+  return y;
+}
+
 export function extractYear(item) {
-  const y = String(item?.tahun || "").match(/\b(19|20)\d{2}\b/)?.[0];
+  const y = plausibleReleaseYear(item?.tahun);
   if (y) return y;
   const fromTitle = String(item?.judul || item?.nama || "").match(/\((\d{4})\)\s*$/);
-  return fromTitle?.[1] || "";
+  return plausibleReleaseYear(fromTitle?.[1] || "");
 }
 
 export function hasValidLandscape(item) {

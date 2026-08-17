@@ -16,6 +16,7 @@ import { writeFile, mkdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { chromium } from "playwright";
+import { plausibleReleaseYear } from "./lib/landscape-utils.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -368,7 +369,7 @@ async function scrapeAnimeDetail(page, item, { delay }) {
     source_site: "samehadaku",
     nama: nama || item.title,
     judul: detail.judul,
-    tahun: item.tahun || detail.judul.match(/\b(20\d{2})\b/)?.[1] || "",
+    tahun: plausibleReleaseYear(item.tahun || detail.judul),
     thumbnail: detail.thumbnail || item.thumbnail,
     rating: detail.rating,
     votes: detail.votes,
