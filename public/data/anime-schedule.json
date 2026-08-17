@@ -1,6 +1,6 @@
 {
   "source": "https://v2.samehadaku.how/jadwal-rilis/",
-  "scraped_at": "2026-08-16T17:25:39.539Z",
+  "scraped_at": "2026-08-17T17:33:32.958Z",
   "timezone": "Asia/Jakarta",
   "days": [
     {
@@ -82,7 +82,7 @@
           "judul": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu Season 2",
           "nama": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu Season 2",
           "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/157046.jpg",
-          "rating": "6.68",
+          "rating": "6.64",
           "type": "TV",
           "genre": [
             "Action",
@@ -98,60 +98,88 @@
       "label": "Selasa",
       "items": [
         {
-          "slug": "buchigire-reijou-wa-houfuku",
-          "judul": "Buchigire Reijou wa Houfuku",
-          "nama": "Buchigire Reijou wa Houfuku",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Buchigire-Reijou-wa-Houfuku.jpg",
-          "rating": "6.96",
+          "slug": "one-piece",
+          "judul": "One Piece",
+          "nama": "One Piece",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2020/04/E5RxYkWX0AAwdGH.png.jpg",
+          "rating": "8.73",
           "type": "TV",
           "genre": [
-            "Drama",
+            "Action",
+            "Adventure"
+          ],
+          "time": "00:00",
+          "source": "https://v2.samehadaku.how/anime/one-piece/"
+        },
+        {
+          "slug": "kuroneko-to-majo-no-kyoushitsu",
+          "judul": "Kuroneko to Majo no Kyoushitsu",
+          "nama": "Kuroneko to Majo no Kyoushitsu",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/153989.jpg",
+          "rating": "6.8",
+          "type": "TV",
+          "genre": [
+            "Comedy",
             "Fantasy"
           ],
-          "time": "00:30",
-          "source": "https://v2.samehadaku.how/anime/buchigire-reijou-wa-houfuku/"
-        },
-        {
-          "slug": "liar-game",
-          "judul": "Liar Game",
-          "nama": "Liar Game",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/156078.jpg",
-          "rating": "6.92",
-          "type": "TV",
-          "genre": [
-            "Drama",
-            "Suspense"
-          ],
           "time": "01:00",
-          "source": "https://v2.samehadaku.how/anime/liar-game/"
+          "source": "https://v2.samehadaku.how/anime/kuroneko-to-majo-no-kyoushitsu/"
         },
         {
-          "slug": "grand-blue-season-3",
-          "judul": "Grand Blue Season 3",
-          "nama": "Grand Blue Season 3",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Grand-Blue-Season-3.jpg",
-          "rating": "8.39",
-          "type": "TV",
-          "genre": [
-            "Adult Cast",
-            "Comedy"
-          ],
-          "time": "01:30",
-          "source": "https://v2.samehadaku.how/anime/grand-blue-season-3/"
-        },
-        {
-          "slug": "mujikaku-seijo",
-          "judul": "Mujikaku Seijo",
-          "nama": "Mujikaku Seijo",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/M.jpg",
-          "rating": "6.49",
+          "slug": "futsutsuka-na-akujo-dewa-gozaimasu",
+          "judul": "Futsutsuka na Akujo dewa Gozaimasu",
+          "nama": "Futsutsuka na Akujo dewa Gozaimasu",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Futsutsuka-na-Akujo-dewa-Gozaimasu-v2.jpg",
+          "rating": "8.09",
           "type": "TV",
           "genre": [
             "Fantasy",
             "Romance"
           ],
-          "time": "23:45",
-          "source": "https://v2.samehadaku.how/anime/mujikaku-seijo/"
+          "time": "01:45",
+          "source": "https://v2.samehadaku.how/anime/futsutsuka-na-akujo-dewa-gozaimasu/"
+        },
+        {
+          "slug": "toumei-na-yoru-ni-kakeru",
+          "judul": "Toumei na Yoru ni Kakeru",
+          "nama": "Toumei na Yoru ni Kakeru",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158339.jpg",
+          "rating": "7.32",
+          "type": "TV",
+          "genre": [
+            "Drama",
+            "Romance"
+          ],
+          "time": "22:00",
+          "source": "https://v2.samehadaku.how/anime/toumei-na-yoru-ni-kakeru/"
+        },
+        {
+          "slug": "degarashi-ouji",
+          "judul": "Degarashi Ouji",
+          "nama": "Degarashi Ouji",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx169582-quL8VMg45fcu.png",
+          "rating": "6.56",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Adventure"
+          ],
+          "time": "23:30",
+          "source": "https://v2.samehadaku.how/anime/degarashi-ouji/"
+        },
+        {
+          "slug": "gaikotsu-kishi-sama-tadaima-isekai-e-odekakechuu-season-2",
+          "judul": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu Season 2",
+          "nama": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu Season 2",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/157046.jpg",
+          "rating": "6.64",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Adventure"
+          ],
+          "time": "23:30",
+          "source": "https://v2.samehadaku.how/anime/gaikotsu-kishi-sama-tadaima-isekai-e-odekakechuu-season-2/"
         }
       ]
     },

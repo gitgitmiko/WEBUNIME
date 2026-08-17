@@ -9652,5 +9652,42 @@
         "default": false
       }
     ]
+  },
+  "tumbadchi-manjula-2026": {
+    "slug": "tumbadchi-manjula-2026",
+    "film": "Tumbadchi Manjula (2026)",
+    "source": "https://tv12.lk21official.cc/tumbadchi-manjula-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-17T17:28:11.609Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/Ng0kLCQdFCkrfBotLVojNCNVe353T1oWBxMzABxoCWh0Tyx3cEtO",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a82e553188f2",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/d026xklhbj47",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/Ncnis-5d-",
+        "default": false
+      }
+    ]
   }
 }
