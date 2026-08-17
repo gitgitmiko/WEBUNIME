@@ -1,4 +1,4 @@
-import { createAuthRouter, createLoginGuard } from "../server/auth.js";
+import { createAuthRouter, createLoginGuard, ensureUsersSchema } from "../server/auth.js";
 import { createCatalogAdminRouter } from "../server/catalog-admin.js";
 import { createCatalogReadRouter } from "../server/catalog-api.js";
 import { createUserLibraryRouter } from "../server/user-library-api.js";
@@ -31,7 +31,12 @@ function mountApi(middlewares) {
   v1.use(createUserLibraryRouter());
   const guard = createLoginGuard();
 
-  middlewares.use((req, res, next) => {
+  middlewares.use(async (req, res, next) => {
+    try {
+      await ensureUsersSchema();
+    } catch (err) {
+      return next(err);
+    }
     cookies(req, res, (err) => {
       if (err) return next(err);
       const path = req.url?.split("?")[0] || "";

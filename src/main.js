@@ -2027,7 +2027,10 @@ function renderUsersTable(users) {
       tr.dataset.email = user.email || "";
       tr.dataset.displayName = user.displayName || "";
       const locked = Boolean(user.isAdmin);
+      const active = user.isActive !== false;
       tr.dataset.locked = locked ? "1" : "";
+      tr.dataset.active = active ? "1" : "0";
+      if (!active) tr.classList.add("is-inactive");
       tr.innerHTML = `
         <td>
           <span class="users-name"></span>
@@ -2043,27 +2046,38 @@ function renderUsersTable(users) {
         badge.textContent = "Admin";
         $(".users-name", tr).append(badge);
       }
+      if (!active) {
+        const off = document.createElement("span");
+        off.className = "users-badge is-off";
+        off.textContent = "Nonaktif";
+        $(".users-name", tr).append(off);
+      }
       $(".users-handle", tr).textContent = `@${user.username} · ${formatUserDate(user.createdAt)}`;
       tr.children[1].textContent = user.email || "";
       const actions = $(".users-row-actions", tr);
+      const edit = document.createElement("button");
+      edit.type = "button";
+      edit.className = "btn-user";
+      edit.dataset.userAction = "edit";
+      edit.textContent = "Ubah";
+      actions.append(edit);
       if (locked) {
-        const hint = document.createElement("span");
-        hint.className = "users-locked";
-        hint.textContent = "Terkunci";
-        hint.title = "Akun admin tidak bisa diubah atau dihapus";
-        actions.append(hint);
+        const slot = document.createElement("span");
+        slot.className = "btn-user-slot";
+        slot.setAttribute("aria-hidden", "true");
+        actions.append(slot, slot.cloneNode(true));
       } else {
-        const edit = document.createElement("button");
-        edit.type = "button";
-        edit.className = "btn-user";
-        edit.dataset.userAction = "edit";
-        edit.textContent = "Ubah";
+        const toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = active ? "btn-user is-off" : "btn-user";
+        toggle.dataset.userAction = "toggle-active";
+        toggle.textContent = active ? "Nonaktifkan" : "Aktifkan";
         const del = document.createElement("button");
         del.type = "button";
         del.className = "btn-user is-danger";
         del.dataset.userAction = "delete";
         del.textContent = "Hapus";
-        actions.append(edit, del);
+        actions.append(toggle, del);
       }
       return tr;
     })
@@ -2456,8 +2470,8 @@ function bindAuth() {
     const row = btn.closest("tr");
     const id = row?.dataset.id;
     if (!id || !canInviteUsers()) return;
-    if (row.dataset.locked === "1") return;
     const action = btn.dataset.userAction;
+    if (action === "delete" && row.dataset.locked === "1") return;
     if (action === "edit") {
       fillUsersForm({
         id,
@@ -2489,6 +2503,33 @@ function bindAuth() {
       } catch (err) {
         console.error(err);
         setUsersError("Gagal menghapus pengguna.");
+      }
+      return;
+    }
+    if (action === "toggle-active") {
+      if (row.dataset.locked === "1") return;
+      const handle = row.dataset.username || "";
+      const nextActive = row.dataset.active !== "1";
+      const promptMsg = nextActive
+        ? `Aktifkan akun @${handle}?`
+        : `Nonaktifkan akun @${handle}? Pengguna itu tidak bisa login sampai diaktifkan lagi.`;
+      if (!window.confirm(promptMsg)) return;
+      setUsersError("");
+      setUsersSuccess("");
+      try {
+        const { res, data } = await authFetch(`/users/${encodeURIComponent(id)}/active`, {
+          method: "PATCH",
+          body: JSON.stringify({ isActive: nextActive }),
+        });
+        if (!res.ok) {
+          setUsersError(data?.error || "Gagal mengubah status pengguna.");
+          return;
+        }
+        setUsersSuccess(nextActive ? `Akun @${handle} diaktifkan.` : `Akun @${handle} dinonaktifkan.`);
+        await loadAdminUsers();
+      } catch (err) {
+        console.error(err);
+        setUsersError("Gagal mengubah status pengguna.");
       }
     }
   });

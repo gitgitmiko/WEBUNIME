@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { embedProxyMiddleware } from "../plugins/embed-proxy.js";
-import { createAuthRouter, createLoginGuard } from "./auth.js";
+import { createAuthRouter, createLoginGuard, ensureUsersSchema } from "./auth.js";
 import {
   catalogSyncAuthMiddleware,
   createCatalogAdminRouter,
@@ -84,12 +84,23 @@ app.use((err, _req, res, _next) => {
   }
 });
 
-app.listen(port, host, async () => {
+async function start() {
+  try {
+    await ensureUsersSchema();
+    console.log("Users schema ready");
+  } catch (err) {
+    console.error("Users schema failed:", err.message);
+    process.exit(1);
+  }
   try {
     await ensureUserLibrarySchema();
     console.log("User library schema ready");
   } catch (err) {
     console.error("User library schema failed:", err.message);
   }
-  console.log(`WEBUNIME listening on http://${host}:${port}`);
-});
+  app.listen(port, host, () => {
+    console.log(`WEBUNIME listening on http://${host}:${port}`);
+  });
+}
+
+start();

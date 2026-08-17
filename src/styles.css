@@ -574,7 +574,7 @@ body.is-auth-checking .auth-boot,
 
 .users-table {
   width: 100%;
-  min-width: 560px;
+  min-width: 640px;
   border-collapse: collapse;
   table-layout: fixed;
   font-size: 0.88rem;
@@ -603,8 +603,8 @@ body.is-auth-checking .auth-boot,
 
 .users-col-actions,
 .users-table td.users-row-actions {
-  width: 11.5rem;
-  min-width: 11.5rem;
+  width: 16.5rem;
+  min-width: 16.5rem;
   text-align: right;
 }
 
@@ -642,21 +642,30 @@ body.is-auth-checking .auth-boot,
   letter-spacing: 0.04em;
 }
 
+.users-table tr.is-inactive td {
+  opacity: 0.72;
+}
+
+.users-badge.is-off {
+  background: rgba(255, 255, 255, 0.12);
+  color: #cfcfcf;
+}
+
 .users-row-actions {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 4.6rem 7.4rem 4.6rem;
+  justify-content: end;
   align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
 }
 
-.users-locked {
-  color: var(--muted);
-  font-size: 0.78rem;
-  line-height: 1.9;
+.btn-user-slot {
+  visibility: hidden;
 }
 
 .btn-user {
+  width: 100%;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
@@ -674,6 +683,11 @@ body.is-auth-checking .auth-boot,
 .btn-user.is-danger {
   color: #ffb4b4;
   border-color: rgba(229, 9, 20, 0.4);
+}
+
+.btn-user.is-off {
+  color: #ffd7a8;
+  border-color: rgba(255, 176, 80, 0.4);
 }
 
 @media (max-width: 720px) {

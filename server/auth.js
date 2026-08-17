@@ -27,6 +27,29 @@ function isAdminUser(userOrUsername) {
   return Boolean(username && ADMIN_USERNAMES.has(String(username).toLowerCase()));
 }
 
+let usersSchemaReady = false;
+
+export async function ensureUsersSchema() {
+  if (usersSchemaReady) return;
+  const pool = getPool();
+  try {
+    await pool.query(`
+      ALTER TABLE users
+      ADD COLUMN is_active TINYINT(1) NOT NULL DEFAULT 1
+      AFTER display_name
+    `);
+  } catch (err) {
+    if (err?.errno !== 1060 && err?.code !== "ER_DUP_FIELDNAME") throw err;
+  }
+  usersSchemaReady = true;
+}
+
+async function destroyUserSessions(userId) {
+  if (!userId) return;
+  const pool = getPool();
+  await pool.execute(`DELETE FROM sessions WHERE user_id = :userId`, { userId });
+}
+
 function adminUsernameParams() {
   const names = [...ADMIN_USERNAMES];
   const placeholders = names.map((_, i) => `:admin${i}`).join(", ");
@@ -71,6 +94,16 @@ function cookieSecure() {
   return process.env.NODE_ENV === "production";
 }
 
+function isUserActive(row) {
+  const value = row?.is_active ?? row?.isActive;
+  if (value === undefined || value === null) return true;
+  if (typeof value === "boolean") return value;
+  if (typeof value === "number") return value !== 0;
+  if (typeof value === "string") return value !== "0" && value.toLowerCase() !== "false";
+  if (Buffer.isBuffer(value)) return value.length > 0 && value[0] !== 0;
+  return Boolean(value);
+}
+
 function publicUser(row) {
   const admin = isAdminUser(row.username);
   return {
@@ -79,6 +112,7 @@ function publicUser(row) {
     username: row.username,
     displayName: row.display_name,
     createdAt: row.created_at,
+    isActive: isUserActive(row),
     canInvite: admin,
     isAdmin: admin,
   };
@@ -136,7 +170,7 @@ async function loadUserFromSession(sid) {
   if (!sid) return null;
   const pool = getPool();
   const [rows] = await pool.execute(
-    `SELECT u.id, u.email, u.username, u.display_name, u.created_at, s.expires_at
+    `SELECT u.id, u.email, u.username, u.display_name, u.is_active, u.created_at, s.expires_at
      FROM sessions s
      JOIN users u ON u.id = s.user_id
      WHERE s.id = :id
@@ -146,6 +180,10 @@ async function loadUserFromSession(sid) {
   const row = rows[0];
   if (!row) return null;
   if (new Date(row.expires_at).getTime() <= Date.now()) {
+    await destroySession(sid);
+    return null;
+  }
+  if (!isUserActive(row)) {
     await destroySession(sid);
     return null;
   }
@@ -325,7 +363,7 @@ export function createAuthRouter() {
       );
       const userId = result.insertId;
       const [rows] = await pool.execute(
-        `SELECT id, email, username, display_name, created_at
+        `SELECT id, email, username, display_name, is_active, created_at
          FROM users WHERE id = :id LIMIT 1`,
         { id: userId }
       );
@@ -349,7 +387,7 @@ export function createAuthRouter() {
       if (!actor) return;
       const pool = getPool();
       const [rows] = await pool.execute(
-        `SELECT id, email, username, display_name, created_at
+        `SELECT id, email, username, display_name, is_active, created_at
          FROM users
          ORDER BY id ASC`
       );
@@ -386,7 +424,7 @@ export function createAuthRouter() {
         }
       );
       const [rows] = await pool.execute(
-        `SELECT id, email, username, display_name, created_at
+        `SELECT id, email, username, display_name, is_active, created_at
          FROM users WHERE id = :id LIMIT 1`,
         { id: result.insertId }
       );
@@ -410,13 +448,13 @@ export function createAuthRouter() {
       }
       const pool = getPool();
       const [found] = await pool.execute(
-        `SELECT id, email, username, display_name, created_at FROM users WHERE id = :id LIMIT 1`,
+        `SELECT id, email, username, display_name, is_active, created_at FROM users WHERE id = :id LIMIT 1`,
         { id }
       );
       const row = found[0];
       if (!row) return res.status(404).json({ error: "Pengguna tidak ditemukan." });
-      if (isAdminUser(row.username)) {
-        return res.status(403).json({ error: "Akun admin tidak bisa diubah lewat API pengguna." });
+      if (isAdminUser(row.username) && Number(row.id) !== Number(actor.id)) {
+        return res.status(403).json({ error: "Akun admin lain tidak bisa diubah." });
       }
 
       const body = parseBody(req);
@@ -455,7 +493,7 @@ export function createAuthRouter() {
         );
       }
       const [updated] = await pool.execute(
-        `SELECT id, email, username, display_name, created_at FROM users WHERE id = :id LIMIT 1`,
+        `SELECT id, email, username, display_name, is_active, created_at FROM users WHERE id = :id LIMIT 1`,
         { id }
       );
       return res.json({ ok: true, user: publicUser(updated[0]) });
@@ -465,6 +503,46 @@ export function createAuthRouter() {
       }
       console.error("[auth/users update]", err);
       return res.status(500).json({ error: "Gagal mengubah pengguna." });
+    }
+  });
+
+  router.patch("/users/:id/active", async (req, res) => {
+    try {
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
+      const id = Number(req.params.id);
+      if (!Number.isInteger(id) || id < 1) {
+        return res.status(400).json({ error: "ID tidak valid." });
+      }
+      const body = parseBody(req);
+      const raw = body.isActive ?? body.is_active;
+      const isActive =
+        raw === true || raw === 1 || raw === "1" ? true : raw === false || raw === 0 || raw === "0" ? false : null;
+      if (isActive === null) {
+        return res.status(400).json({ error: "Status isActive tidak valid." });
+      }
+      const pool = getPool();
+      const [found] = await pool.execute(
+        `SELECT id, email, username, display_name, is_active, created_at FROM users WHERE id = :id LIMIT 1`,
+        { id }
+      );
+      const row = found[0];
+      if (!row) return res.status(404).json({ error: "Pengguna tidak ditemukan." });
+      if (!isActive && isAdminUser(row.username)) {
+        return res.status(403).json({ error: "Akun admin tidak bisa dinonaktifkan." });
+      }
+      if (!isActive && Number(row.id) === Number(actor.id)) {
+        return res.status(400).json({ error: "Tidak bisa menonaktifkan akun sendiri." });
+      }
+      await pool.execute(`UPDATE users SET is_active = :isActive WHERE id = :id`, {
+        id,
+        isActive: isActive ? 1 : 0,
+      });
+      if (!isActive) await destroyUserSessions(id);
+      return res.json({ ok: true, user: publicUser({ ...row, is_active: isActive ? 1 : 0 }) });
+    } catch (err) {
+      console.error("[auth/users active]", err);
+      return res.status(500).json({ error: "Gagal mengubah status pengguna." });
     }
   });
 
@@ -525,7 +603,7 @@ export function createAuthRouter() {
     try {
       const pool = getPool();
       const [rows] = await pool.execute(
-        `SELECT id, email, username, password_hash, display_name, created_at
+        `SELECT id, email, username, password_hash, display_name, is_active, created_at
          FROM users
          WHERE email = :login OR username = :login
          LIMIT 1`,
@@ -536,6 +614,9 @@ export function createAuthRouter() {
 
       if (!row || !ok) {
         return res.status(401).json({ error: "Email/username atau password salah." });
+      }
+      if (!isUserActive(row)) {
+        return res.status(403).json({ error: "Akun dinonaktifkan." });
       }
 
       const oldSid = readSid(req);
