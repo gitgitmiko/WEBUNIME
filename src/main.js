@@ -1830,7 +1830,8 @@ function bindActions() {
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
     if (!$("#usersModal")?.classList.contains("hidden")) {
-      closeUsersModal();
+      if (isUsersSheetOpen()) closeUsersSheet();
+      else closeUsersModal();
       return;
     }
     if (!$("#authModal")?.classList.contains("hidden")) {
@@ -1929,6 +1930,18 @@ function setUsersSuccess(msg) {
   el.classList.remove("hidden");
 }
 
+function setUsersSheetError(msg) {
+  const el = $("#usersSheetError");
+  if (!el) return;
+  if (!msg) {
+    el.textContent = "";
+    el.classList.add("hidden");
+    return;
+  }
+  el.textContent = msg;
+  el.classList.remove("hidden");
+}
+
 function resetUsersForm() {
   const form = $("#usersForm");
   if (!form) return;
@@ -1940,10 +1953,12 @@ function resetUsersForm() {
   if (pass) pass.required = true;
   const label = $("#usersPasswordLabel");
   if (label) label.textContent = "Password (min. 10, huruf + angka)";
-  $("#usersCancelEdit")?.classList.add("hidden");
   const submitLabel = $("#usersSubmit .auth-submit-label");
-  if (submitLabel) submitLabel.textContent = "Tambah pengguna";
-  setAuthFormLoading(form, false, "Tambah pengguna");
+  if (submitLabel) submitLabel.textContent = "Simpan";
+  const title = $("#usersSheetTitle");
+  if (title) title.textContent = "Tambah pengguna";
+  setAuthFormLoading(form, false, "Simpan");
+  setUsersSheetError("");
 }
 
 function fillUsersForm(user) {
@@ -1958,9 +1973,27 @@ function fillUsersForm(user) {
   form.elements.password.required = false;
   const label = $("#usersPasswordLabel");
   if (label) label.textContent = "Password baru (kosongkan jika tidak diubah)";
-  $("#usersCancelEdit")?.classList.remove("hidden");
   const submitLabel = $("#usersSubmit .auth-submit-label");
   if (submitLabel) submitLabel.textContent = "Simpan perubahan";
+  const title = $("#usersSheetTitle");
+  if (title) title.textContent = "Ubah pengguna";
+}
+
+function isUsersSheetOpen() {
+  return Boolean($("#usersSheet") && !$("#usersSheet").classList.contains("hidden"));
+}
+
+function openUsersSheet() {
+  $("#usersSheet")?.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    $("#usersForm")?.elements.displayName?.focus();
+  });
+}
+
+function closeUsersSheet() {
+  $("#usersSheet")?.classList.add("hidden");
+  resetUsersForm();
+  setUsersSheetError("");
 }
 
 function formatUserDate(value) {
@@ -2043,7 +2076,7 @@ async function loadAdminUsers() {
 async function openUsersModal() {
   if (!canInviteUsers()) return;
   closeAuthModal();
-  resetUsersForm();
+  closeUsersSheet();
   setUsersError("");
   setUsersSuccess("");
   $("#usersModal")?.classList.remove("hidden");
@@ -2060,7 +2093,7 @@ function closeUsersModal() {
   const modal = $("#usersModal");
   if (!modal || modal.classList.contains("hidden")) return;
   modal.classList.add("hidden");
-  resetUsersForm();
+  closeUsersSheet();
   setUsersError("");
   setUsersSuccess("");
   if (
@@ -2317,7 +2350,22 @@ function bindAuth() {
     openUsersModal();
   });
   $$("[data-users-close]").forEach((el) =>
-    el.addEventListener("click", () => closeUsersModal())
+    el.addEventListener("click", () => {
+      if (el.classList.contains("auth-modal-backdrop") && isUsersSheetOpen()) {
+        closeUsersSheet();
+        return;
+      }
+      closeUsersModal();
+    })
+  );
+  $("#usersAddBtn")?.addEventListener("click", () => {
+    setUsersError("");
+    setUsersSuccess("");
+    resetUsersForm();
+    openUsersSheet();
+  });
+  $$("[data-users-sheet-close]").forEach((el) =>
+    el.addEventListener("click", () => closeUsersSheet())
   );
 
   $("#authLoginForm")?.addEventListener("submit", async (e) => {
@@ -2351,10 +2399,10 @@ function bindAuth() {
   $("#usersForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const form = e.target;
-    setUsersError("");
+    setUsersSheetError("");
     setUsersSuccess("");
     if (!canInviteUsers()) {
-      setUsersError("Khusus admin.");
+      setUsersSheetError("Khusus admin.");
       return;
     }
     const fd = new FormData(form);
@@ -2365,7 +2413,7 @@ function bindAuth() {
       email: String(fd.get("email") || "").toLowerCase(),
       password: String(fd.get("password") || ""),
     };
-    const idleLabel = editingId ? "Simpan perubahan" : "Tambah pengguna";
+    const idleLabel = editingId ? "Simpan perubahan" : "Simpan";
     setAuthFormLoading(form, true, idleLabel);
     try {
       const { res, data } = editingId
@@ -2378,27 +2426,21 @@ function bindAuth() {
             body: JSON.stringify(payload),
           });
       if (!res.ok) {
-        setUsersError(data?.error || "Gagal menyimpan pengguna.");
+        setUsersSheetError(data?.error || "Gagal menyimpan pengguna.");
         return;
       }
-      resetUsersForm();
+      closeUsersSheet();
       setUsersSuccess(
         editingId ? "Perubahan pengguna disimpan." : `Akun @${payload.username} berhasil dibuat.`
       );
       await loadAdminUsers();
     } catch (err) {
       console.error(err);
-      setUsersError("Gagal menyimpan pengguna.");
+      setUsersSheetError("Gagal menyimpan pengguna.");
     } finally {
-      const idle = String(form.elements.id.value || "") ? "Simpan perubahan" : "Tambah pengguna";
+      const idle = String(form.elements.id.value || "") ? "Simpan perubahan" : "Simpan";
       setAuthFormLoading(form, false, idle);
     }
-  });
-
-  $("#usersCancelEdit")?.addEventListener("click", () => {
-    resetUsersForm();
-    setUsersError("");
-    setUsersSuccess("");
   });
 
   $("#usersTableBody")?.addEventListener("click", async (e) => {
@@ -2417,7 +2459,7 @@ function bindAuth() {
       });
       setUsersError("");
       setUsersSuccess("");
-      $("#usersForm")?.scrollIntoView({ block: "nearest" });
+      openUsersSheet();
       return;
     }
     if (action === "delete") {
@@ -2433,7 +2475,7 @@ function bindAuth() {
           setUsersError(data?.error || "Gagal menghapus pengguna.");
           return;
         }
-        resetUsersForm();
+        closeUsersSheet();
         setUsersSuccess(`Akun @${handle} dihapus.`);
         await loadAdminUsers();
       } catch (err) {

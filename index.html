@@ -458,39 +458,15 @@
       <div class="auth-modal-backdrop" data-users-close></div>
       <div class="auth-modal-panel users-panel">
         <button type="button" class="modal-close" id="usersCloseBtn" data-users-close aria-label="Tutup">×</button>
-        <h2 class="auth-title" id="usersModalTitle">Pengguna</h2>
-        <p class="auth-lead">Kelola akun yang boleh login. Khusus admin.</p>
+        <div class="users-panel-head">
+          <div>
+            <h2 class="auth-title" id="usersModalTitle">Pengguna</h2>
+            <p class="auth-lead">Kelola akun yang boleh login. Khusus admin.</p>
+          </div>
+          <button type="button" class="btn btn-play" id="usersAddBtn">Tambah pengguna</button>
+        </div>
         <p class="auth-error hidden" id="usersError" role="alert"></p>
         <p class="auth-success hidden" id="usersSuccess" role="status"></p>
-
-        <form class="auth-form users-form" id="usersForm" autocomplete="off">
-          <input type="hidden" name="id" value="" />
-          <div class="users-form-grid">
-            <label>
-              <span>Nama tampilan</span>
-              <input name="displayName" type="text" required maxlength="64" />
-            </label>
-            <label>
-              <span>Username</span>
-              <input name="username" type="text" required minlength="3" maxlength="32" pattern="[a-zA-Z0-9_]{3,32}" />
-            </label>
-            <label>
-              <span>Email</span>
-              <input name="email" type="email" required maxlength="191" />
-            </label>
-            <label>
-              <span id="usersPasswordLabel">Password (min. 10, huruf + angka)</span>
-              <input name="password" type="password" minlength="10" maxlength="128" autocomplete="new-password" />
-            </label>
-          </div>
-          <div class="users-form-actions">
-            <button type="submit" class="btn btn-play auth-submit" id="usersSubmit">
-              <span class="auth-submit-label">Tambah pengguna</span>
-              <span class="auth-submit-spinner hidden" aria-hidden="true"></span>
-            </button>
-            <button type="button" class="btn btn-ghost hidden" id="usersCancelEdit">Batal</button>
-          </div>
-        </form>
 
         <div class="users-table-wrap">
           <table class="users-table">
@@ -503,6 +479,43 @@
             </thead>
             <tbody id="usersTableBody"></tbody>
           </table>
+        </div>
+
+        <div class="users-sheet hidden" id="usersSheet">
+          <div class="users-sheet-backdrop" data-users-sheet-close></div>
+          <div class="users-sheet-card" role="dialog" aria-labelledby="usersSheetTitle">
+            <button type="button" class="modal-close" data-users-sheet-close aria-label="Tutup">×</button>
+            <h3 class="users-sheet-title" id="usersSheetTitle">Tambah pengguna</h3>
+            <p class="auth-error hidden" id="usersSheetError" role="alert"></p>
+            <form class="auth-form users-form" id="usersForm" autocomplete="off">
+              <input type="hidden" name="id" value="" />
+              <div class="users-form-grid">
+                <label>
+                  <span>Nama tampilan</span>
+                  <input name="displayName" type="text" required maxlength="64" />
+                </label>
+                <label>
+                  <span>Username</span>
+                  <input name="username" type="text" required minlength="3" maxlength="32" pattern="[a-zA-Z0-9_]{3,32}" />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input name="email" type="email" required maxlength="191" />
+                </label>
+                <label>
+                  <span id="usersPasswordLabel">Password (min. 10, huruf + angka)</span>
+                  <input name="password" type="password" minlength="10" maxlength="128" autocomplete="new-password" />
+                </label>
+              </div>
+              <div class="users-form-actions">
+                <button type="submit" class="btn btn-play auth-submit" id="usersSubmit">
+                  <span class="auth-submit-label">Simpan</span>
+                  <span class="auth-submit-spinner hidden" aria-hidden="true"></span>
+                </button>
+                <button type="button" class="btn btn-ghost" id="usersCancelEdit" data-users-sheet-close>Batal</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
