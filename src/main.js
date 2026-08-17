@@ -1,4 +1,6 @@
 let movies = [];
+let moviesAction = [];
+let moviesDrama = [];
 let series = [];
 let horror = [];
 let indonesia = [];
@@ -18,90 +20,154 @@ let heroSlides = [];
 let heroSlideIndex = 0;
 let heroTimer = null;
 
+const PAGE_SIZE = 10;
+const itemCache = new Map();
+const rowState = {};
+
+function cacheKey(collection, slug) {
+  return `${collection}:${String(slug || "").toLowerCase()}`;
+}
+
+function rememberItems(collection, items) {
+  for (const item of items || []) {
+    const slug = item?.slug || item?.anime_slug;
+    if (!slug) continue;
+    const key = cacheKey(collection, slug);
+    const prev = itemCache.get(key) || {};
+    itemCache.set(key, { ...prev, ...item, catalog: item.catalog || collection });
+  }
+}
+
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-async function loadMovies() {
-  const res = await fetch("/api/v1/catalog/movies/all", { credentials: "include" });
-  if (!res.ok) throw new Error("Gagal memuat data film");
-  movies = await res.json();
+async function fetchCatalogPage(collection, { page = 1, limit = PAGE_SIZE, q = "", genre = "" } = {}) {
+  const params = new URLSearchParams({
+    page: String(page),
+    limit: String(limit),
+  });
+  if (q) params.set("q", q);
+  if (genre) params.set("genre", genre);
+  const res = await fetch(`/api/v1/catalog/${encodeURIComponent(collection)}?${params}`, {
+    credentials: "include",
+  });
+  if (!res.ok) throw new Error(`Gagal memuat ${collection}`);
+  return res.json();
 }
 
-async function loadSeries() {
-  try {
-    const res = await fetch("/api/v1/catalog/series/all", { credentials: "include" });
-    if (!res.ok) {
-      series = [];
-      return;
+async function loadCollectionPage(collection, target, { page = 1, genre = "" } = {}) {
+  const data = await fetchCatalogPage(collection, { page, genre });
+  const items = Array.isArray(data?.items) ? data.items : [];
+  rememberItems(collection, items);
+  if (page <= 1) {
+    target.length = 0;
+    target.push(...items);
+  } else {
+    const seen = new Set(target.map((x) => x.slug || x.anime_slug));
+    for (const item of items) {
+      const key = item.slug || item.anime_slug;
+      if (key && seen.has(key)) continue;
+      if (key) seen.add(key);
+      target.push(item);
     }
-    series = await res.json();
-  } catch {
-    series = [];
   }
+  return {
+    items,
+    page: Number(data?.page) || page,
+    total: Number(data?.total) || target.length,
+  };
 }
 
-async function loadHorror() {
-  try {
-    const res = await fetch("/api/v1/catalog/horror/all", { credentials: "include" });
-    if (!res.ok) {
-      horror = [];
-      return;
-    }
-    horror = await res.json();
-  } catch {
-    horror = [];
-  }
+function listForKey(key) {
+  const lists = {
+    movies,
+    moviesAction,
+    moviesDrama,
+    series,
+    horror,
+    indonesia,
+    anime,
+    animeMovies,
+    animeLatest,
+  };
+  return lists[key];
 }
 
-async function loadIndonesia() {
-  try {
-    const res = await fetch("/api/v1/catalog/indonesia/all", { credentials: "include" });
-    if (!res.ok) {
-      indonesia = [];
-      return;
-    }
-    indonesia = await res.json();
-  } catch {
-    indonesia = [];
-  }
+const ROW_CONFIG = {
+  trackFeatured: { collection: "movies", listKey: "movies" },
+  trackHorror: { collection: "horror", listKey: "horror" },
+  trackAction: {
+    collection: "movies",
+    listKey: "moviesAction",
+    genre: "Action,Adventure,Thriller",
+  },
+  trackDrama: { collection: "movies", listKey: "moviesDrama", genre: "Drama,Romance" },
+  trackSeries: { collection: "series", listKey: "series" },
+  trackIndonesia: { collection: "indonesia", listKey: "indonesia" },
+  trackAnime: { collection: "anime", listKey: "anime" },
+  trackAnimeMovie: { collection: "anime-movies", listKey: "animeMovies" },
+  trackAnimeLatest: { collection: "anime-latest", listKey: "animeLatest", kind: "episode" },
+};
+
+async function loadHomeCatalog() {
+  const entries = Object.entries(ROW_CONFIG);
+  await Promise.all(
+    entries.map(async ([trackId, cfg]) => {
+      const list = listForKey(cfg.listKey);
+      try {
+        const data = await loadCollectionPage(cfg.collection, list, {
+          page: 1,
+          genre: cfg.genre || "",
+        });
+        rowState[trackId] = {
+          page: 1,
+          total: data.total,
+          loading: false,
+          done: list.length >= data.total || data.items.length < PAGE_SIZE,
+        };
+      } catch (err) {
+        console.warn(`[catalog] ${cfg.collection}`, err);
+        list.length = 0;
+        rowState[trackId] = { page: 1, total: 0, loading: false, done: true };
+      }
+    })
+  );
+  catalog = dedupeBySlug([
+    ...movies,
+    ...horror,
+    ...indonesia,
+    ...series,
+    ...anime,
+    ...animeMovies,
+  ]);
 }
 
-async function loadAnime() {
+async function hydrateItem(movie, fallbackCollection) {
+  if (!movie) return movie;
+  const collection =
+    fallbackCollection ||
+    (movie.type === "anime" || movie.anime_slug ? "anime" : resolveCollection(movie));
+  const slug = movie.anime_slug && collection === "anime" ? movie.anime_slug : movie.slug;
+  if (!slug) return movie;
+  const key = cacheKey(collection, slug);
+  const cached = itemCache.get(key);
+  const rich =
+    cached &&
+    ((Array.isArray(cached.players) && cached.players.length) ||
+      (Array.isArray(cached.episodes) && cached.episodes.length) ||
+      (typeof cached.sinopsis === "string" && cached.sinopsis.length > 320));
+  if (rich) return cached;
   try {
-    const res = await fetch("/api/v1/catalog/anime/all", { credentials: "include" });
-    if (!res.ok) {
-      anime = [];
-      return;
-    }
-    anime = await res.json();
+    const res = await fetch(
+      `/api/v1/catalog/${encodeURIComponent(collection)}/${encodeURIComponent(slug)}`,
+      { credentials: "include" }
+    );
+    if (!res.ok) return cached || movie;
+    const full = await res.json();
+    rememberItems(collection, [full]);
+    return itemCache.get(key) || full;
   } catch {
-    anime = [];
-  }
-}
-
-async function loadAnimeMovies() {
-  try {
-    const res = await fetch("/api/v1/catalog/anime-movies/all", { credentials: "include" });
-    if (!res.ok) {
-      animeMovies = [];
-      return;
-    }
-    animeMovies = await res.json();
-  } catch {
-    animeMovies = [];
-  }
-}
-
-async function loadAnimeLatest() {
-  try {
-    const res = await fetch("/api/v1/catalog/anime-latest/all", { credentials: "include" });
-    if (!res.ok) {
-      animeLatest = [];
-      return;
-    }
-    animeLatest = await res.json();
-  } catch {
-    animeLatest = [];
+    return cached || movie;
   }
 }
 
@@ -128,32 +194,37 @@ function isSeries(item) {
 
 function resolveCollection(movie) {
   if (!movie) return "movies";
+  const cat = String(movie.catalog || "").toLowerCase();
+  if (["movies", "series", "horror", "indonesia", "anime", "anime-movies", "anime-latest"].includes(cat)) {
+    return cat;
+  }
   if (movie.type === "series") return "series";
   if (movie.type === "anime") return "anime";
   if (movie.type === "anime-movie") return "anime-movies";
-  const cat = String(movie.catalog || "").toLowerCase();
   if (cat.includes("horror") || cat === "horor") return "horror";
   if (cat.includes("indonesia")) return "indonesia";
   const slug = movie.slug;
-  if (slug && horror.some((h) => h.slug === slug)) return "horror";
-  if (slug && indonesia.some((i) => i.slug === slug)) return "indonesia";
-  if (slug && series.some((s) => s.slug === slug)) return "series";
-  if (slug && anime.some((a) => a.slug === slug)) return "anime";
-  if (slug && animeMovies.some((a) => a.slug === slug)) return "anime-movies";
+  if (slug && itemCache.get(cacheKey("horror", slug))) return "horror";
+  if (slug && itemCache.get(cacheKey("indonesia", slug))) return "indonesia";
+  if (slug && itemCache.get(cacheKey("series", slug))) return "series";
+  if (slug && itemCache.get(cacheKey("anime", slug))) return "anime";
+  if (slug && itemCache.get(cacheKey("anime-movies", slug))) return "anime-movies";
   return "movies";
 }
 
 function findInCatalog(collection, slug) {
-  const lists = {
-    movies,
-    series,
-    horror,
-    indonesia,
-    anime,
-    "anime-movies": animeMovies,
-  };
-  const list = lists[collection] || [];
-  return list.find((x) => x.slug === slug) || null;
+  if (!slug) return null;
+  return (
+    itemCache.get(cacheKey(collection, slug)) ||
+    listForKey(
+      collection === "anime-movies"
+        ? "animeMovies"
+        : collection === "movies"
+          ? "movies"
+          : collection
+    )?.find((x) => x.slug === slug) ||
+    null
+  );
 }
 
 async function libraryFetch(path, options = {}) {
@@ -231,13 +302,14 @@ function createLibraryPoster(entry, index = 0, options = {}) {
       ${posterYearHtml(movie || {})}
     </div>
   `;
-  btn.addEventListener("click", () => {
-    if (!movie) {
-      openModal({
+  btn.addEventListener("click", async () => {
+    const full = await hydrateItem(
+      {
         nama: title,
         judul: title,
         slug: entry.slug,
         thumbnail: entry.thumbnail,
+        catalog: entry.collection,
         type:
           entry.collection === "series"
             ? "series"
@@ -246,13 +318,18 @@ function createLibraryPoster(entry, index = 0, options = {}) {
               : entry.collection === "anime-movies"
                 ? "anime-movie"
                 : undefined,
-        catalog: entry.collection,
-        sinopsis: "Item tidak ada di katalog lokal. Coba sync ulang.",
-        episodes: [],
-      });
-      return;
-    }
-    openModal(movie, { episodeSlug: entry.episodeSlug || null });
+      },
+      entry.collection
+    );
+    openModal(full || movie || {
+      nama: title,
+      judul: title,
+      slug: entry.slug,
+      thumbnail: entry.thumbnail,
+      catalog: entry.collection,
+      sinopsis: "Item tidak ada di katalog. Coba sync ulang.",
+      episodes: [],
+    }, { episodeSlug: entry.episodeSlug || null });
   });
 
   wrap.appendChild(btn);
@@ -440,20 +517,13 @@ function createLatestEpisodePoster(item, index = 0) {
   const epLabel =
     item.episode != null ? `Episode ${item.episode}` : "Episode baru";
   btn.setAttribute("aria-label", `${item.nama} ${epLabel}`);
-  const show = anime.find((a) => a.slug === item.anime_slug);
-  const metaSource = show
-    ? {
-        rating: show.rating,
-        quality: show.quality || item.quality,
-        tahun: show.tahun || item.tahun,
-        durasi: item.episode != null ? `E${item.episode}` : show.durasi,
-      }
-    : {
-        rating: item.rating,
-        quality: item.quality,
-        tahun: item.tahun,
-        durasi: item.episode != null ? `E${item.episode}` : item.durasi,
-      };
+  const show = item.anime_slug ? itemCache.get(cacheKey("anime", item.anime_slug)) : null;
+  const metaSource = {
+    rating: show?.rating || item.rating,
+    quality: show?.quality || item.quality,
+    tahun: show?.tahun || item.tahun,
+    durasi: item.episode != null ? `E${item.episode}` : show?.durasi || item.durasi,
+  };
   btn.innerHTML = `
     <img src="${item.thumbnail}" alt="${item.nama}" loading="lazy" width="200" height="300" />
     <span class="poster-ep">${epLabel}</span>
@@ -464,20 +534,20 @@ function createLatestEpisodePoster(item, index = 0) {
       ${posterYearHtml(metaSource)}
     </div>
   `;
-  btn.addEventListener("click", () => {
-    if (!show) {
-      openModal({
+  btn.addEventListener("click", async () => {
+    const show = await hydrateItem(
+      {
         type: "anime",
         nama: item.nama,
         judul: item.judul || item.nama,
         thumbnail: item.thumbnail,
         slug: item.anime_slug,
+        anime_slug: item.anime_slug,
         source: item.source,
-        episodes: [],
-        sinopsis: "Data anime belum lengkap. Tunggu sync katalog.",
-      });
-      return;
-    }
+        catalog: "anime",
+      },
+      "anime"
+    );
     const epSlug =
       item.episode_slug ||
       `${item.anime_slug}-episode-${item.episode}`;
@@ -486,50 +556,28 @@ function createLatestEpisodePoster(item, index = 0) {
   return btn;
 }
 
-function fillTrack(id, list) {
+function fillTrack(id, list, { append = false, startIndex = 0 } = {}) {
   const track = document.getElementById(id);
   if (!track) return;
-  track.replaceChildren(...list.map((m, i) => createPoster(m, i)));
-  requestAnimationFrame(() => syncRowArrows(track));
-}
-
-function fillLatestTrack(id, list) {
-  const track = document.getElementById(id);
-  if (!track) return;
-  track.replaceChildren(...list.map((m, i) => createLatestEpisodePoster(m, i)));
+  const makePoster =
+    ROW_CONFIG[id]?.kind === "episode" ? createLatestEpisodePoster : createPoster;
+  const nodes = list.map((m, i) => makePoster(m, startIndex + i));
+  if (append) track.append(...nodes);
+  else track.replaceChildren(...nodes);
   requestAnimationFrame(() => syncRowArrows(track));
 }
 
 function renderRows() {
   renderLibraryRows();
   fillTrack("trackAnime", anime);
-  fillLatestTrack("trackAnimeLatest", animeLatest);
+  fillTrack("trackAnimeLatest", animeLatest);
   fillTrack("trackAnimeMovie", animeMovies);
   fillTrack("trackFeatured", movies);
   fillTrack("trackHorror", horror);
-  fillTrack(
-    "trackAction",
-    movies.filter((m) => hasGenre(m, ["Action", "Adventure", "Thriller"]))
-  );
-  fillTrack(
-    "trackDrama",
-    movies.filter((m) => hasGenre(m, ["Drama", "Romance"]))
-  );
+  fillTrack("trackAction", moviesAction);
+  fillTrack("trackDrama", moviesDrama);
   fillTrack("trackSeries", series);
-  fillTrack(
-    "trackIndonesia",
-    [...indonesia].sort((a, b) => {
-      const key = (m) => {
-        const iso = String(m.rilis_iso || "").match(/^(\d{4})-(\d{2})-(\d{2})/);
-        if (iso) return `${iso[1]}${iso[2]}${iso[3]}`;
-        const y = Number(m.tahun) || 0;
-        return String(y * 10000).padStart(8, "0");
-      };
-      const d = key(b).localeCompare(key(a));
-      if (d) return d;
-      return String(a.nama || "").localeCompare(String(b.nama || ""), "id");
-    })
-  );
+  fillTrack("trackIndonesia", indonesia);
 }
 
 function shortSinopsis(text) {
@@ -714,11 +762,27 @@ function startHeroCarousel() {
   }, 7000);
 }
 
-function initHeroCarousel() {
-  heroSlides = pickHeroSlides(catalog, 10);
+async function initHeroCarousel() {
+  let pool = catalog;
+  try {
+    const res = await fetch("/api/v1/hero?limit=12", { credentials: "include" });
+    if (res.ok) {
+      const data = await res.json();
+      const items = Array.isArray(data?.items) ? data.items : [];
+      if (items.length) {
+        for (const item of items) {
+          rememberItems(item.catalog || resolveCollection(item), [item]);
+        }
+        pool = items;
+      }
+    }
+  } catch {
+    /* pakai katalog halaman 1 */
+  }
+  heroSlides = pickHeroSlides(pool, 10);
   if (!heroSlides.length) {
     heroSlides = pickHeroSlides(
-      catalog.filter((item) => item.thumbnail || item.thumbnail_landscape),
+      pool.filter((item) => item.thumbnail || item.thumbnail_landscape),
       10
     );
   }
@@ -898,11 +962,12 @@ function bindNfDropdown(root) {
   });
 }
 
-function openModal(movie, opts = {}) {
+async function openModal(movie, opts = {}) {
   if (!currentUser) {
     enterAuthGate("login");
     return;
   }
+  movie = (await hydrateItem(movie)) || movie;
   activeMovie = movie;
   activeEpisode = null;
   const modal = $("#modal");
@@ -1208,11 +1273,12 @@ function setupPlayerEpisodes(movie) {
   wrap.classList.remove("hidden");
 }
 
-function openPlayer(movie) {
+async function openPlayer(movie) {
   if (!currentUser) {
     enterAuthGate("login");
     return;
   }
+  movie = (await hydrateItem(movie)) || movie;
   activeMovie = movie;
   if (!isSeries(movie)) {
     activeEpisode = null;
@@ -1370,15 +1436,50 @@ function syncRowArrows(track) {
   const canScroll = maxScroll > 12;
   const atStart = track.scrollLeft <= 12;
   const atEnd = track.scrollLeft >= maxScroll - 12;
+  const more = Boolean(rowState[track.id] && !rowState[track.id].done);
 
   if (prev) prev.classList.toggle("is-hidden", !canScroll || atStart);
-  // Tombol kanan: tampilkan jika bisa scroll (atau paksa tampil saat overflow)
-  if (next) next.classList.toggle("is-hidden", !canScroll || atEnd);
+  if (next) next.classList.toggle("is-hidden", (!canScroll && !more) || (atEnd && !more));
+}
+
+async function loadMoreTrack(trackId) {
+  const cfg = ROW_CONFIG[trackId];
+  const state = rowState[trackId];
+  if (!cfg || !state || state.loading || state.done) return false;
+  const list = listForKey(cfg.listKey);
+  if (!list) return false;
+  state.loading = true;
+  try {
+    const nextPage = state.page + 1;
+    const before = list.length;
+    const data = await loadCollectionPage(cfg.collection, list, {
+      page: nextPage,
+      genre: cfg.genre || "",
+    });
+    const added = list.slice(before);
+    state.page = nextPage;
+    state.total = data.total;
+    if (!data.items.length || list.length >= data.total) state.done = true;
+    if (added.length) fillTrack(trackId, added, { append: true, startIndex: before });
+    return added.length > 0;
+  } catch (err) {
+    console.warn(`[catalog] load more ${trackId}`, err);
+    return false;
+  } finally {
+    state.loading = false;
+    syncRowArrows(document.getElementById(trackId));
+  }
 }
 
 function bindRows() {
   $$(".row-track").forEach((track) => {
-    const update = () => syncRowArrows(track);
+    const update = () => {
+      syncRowArrows(track);
+      const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+      if (track.scrollLeft >= maxScroll - 80) {
+        loadMoreTrack(track.id);
+      }
+    };
     track.addEventListener("scroll", update, { passive: true });
     track.addEventListener("load", update, true);
 
@@ -1390,11 +1491,17 @@ function bindRows() {
   });
 
   $$(".row-arrow").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click", async (e) => {
       e.preventDefault();
       e.stopPropagation();
       const track = document.getElementById(btn.dataset.row);
       if (!track) return;
+      if (btn.classList.contains("next")) {
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+        if (track.scrollLeft >= maxScroll - 12 || maxScroll <= 12) {
+          await loadMoreTrack(track.id);
+        }
+      }
       const delta =
         Math.max(240, Math.round(track.clientWidth * 0.85)) *
         (btn.classList.contains("next") ? 1 : -1);
@@ -1416,25 +1523,40 @@ function bindSearch() {
   const section = $("#searchResults");
   const grid = $("#searchGrid");
   const rows = $("#koleksi");
+  let timer = 0;
+  let seq = 0;
 
   input.addEventListener("input", () => {
-    const q = input.value.trim().toLowerCase();
+    const q = input.value.trim();
+    clearTimeout(timer);
     if (!q) {
       section.classList.add("hidden");
       rows.classList.remove("hidden");
       return;
     }
-
-    const hits = catalog.filter(
-      (m) =>
-        m.nama.toLowerCase().includes(q) ||
-        m.judul.toLowerCase().includes(q) ||
-        (m.genre || []).some((g) => g.toLowerCase().includes(q))
-    );
-
-    grid.replaceChildren(...hits.map((m, i) => createPoster(m, i)));
-    section.classList.remove("hidden");
-    rows.classList.add("hidden");
+    timer = setTimeout(async () => {
+      const n = ++seq;
+      try {
+        const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}&limit=40`, {
+          credentials: "include",
+        });
+        if (!res.ok || n !== seq) return;
+        const data = await res.json();
+        const hits = Array.isArray(data?.items) ? data.items : [];
+        for (const item of hits) {
+          rememberItems(item.catalog || resolveCollection(item), [item]);
+        }
+        if (n !== seq) return;
+        grid.replaceChildren(...hits.map((m, i) => createPoster(m, i)));
+        section.classList.remove("hidden");
+        rows.classList.add("hidden");
+      } catch {
+        if (n !== seq) return;
+        grid.replaceChildren();
+        section.classList.remove("hidden");
+        rows.classList.add("hidden");
+      }
+    }, 250);
   });
 }
 
@@ -1773,24 +1895,8 @@ async function bootApp() {
     closeAuthModal();
     return;
   }
-  await Promise.all([
-    loadMovies(),
-    loadSeries(),
-    loadHorror(),
-    loadIndonesia(),
-    loadAnime(),
-    loadAnimeMovies(),
-    loadAnimeLatest(),
-  ]);
-  catalog = dedupeBySlug([
-    ...movies,
-    ...horror,
-    ...indonesia,
-    ...series,
-    ...anime,
-    ...animeMovies,
-  ]);
-  initHeroCarousel();
+  await loadHomeCatalog();
+  await initHeroCarousel();
   bindNav();
   bindRows();
   bindSearch();

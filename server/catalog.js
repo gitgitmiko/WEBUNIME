@@ -70,73 +70,169 @@ export async function putDoc(name, payload) {
   return { name, ok: true };
 }
 
-export async function listCollection(collection, { page = 1, limit = 50, q = "" } = {}) {
+function parsePayload(value) {
+  if (value == null) return null;
+  return typeof value === "string" ? JSON.parse(value) : value;
+}
+
+function shortSinopsis(text, max = 280) {
+  if (!text) return undefined;
+  const first = String(text).split(/\n\n+/)[0].trim();
+  if (!first) return undefined;
+  return first.length > max ? `${first.slice(0, max - 1)}…` : first;
+}
+
+/** Kartu ringan: tanpa players/episodes (dimuat saat modal/player). */
+export function toCard(item, collection = "") {
+  if (!item || typeof item !== "object") return item;
+  const feed = collection === "anime-latest" || collection === "series-latest";
+  const card = {
+    id: item.id,
+    nama: item.nama,
+    judul: item.judul,
+    tahun: item.tahun,
+    thumbnail: item.thumbnail,
+    thumbnail_landscape: item.thumbnail_landscape,
+    rating: item.rating,
+    quality: item.quality,
+    durasi: item.durasi,
+    genre: Array.isArray(item.genre) ? item.genre : undefined,
+    slug: item.slug,
+    type: item.type,
+    catalog: item.catalog || collection || undefined,
+    source: item.source,
+    is_new: item.is_new,
+    studio: item.studio,
+    sumber: item.sumber,
+    rilis_iso: item.rilis_iso,
+    anime_slug: item.anime_slug,
+    episode: item.episode,
+    episode_slug: item.episode_slug,
+    episodes_count:
+      item.episodes_count ??
+      (Array.isArray(item.episodes) ? item.episodes.length : undefined),
+    sinopsis: feed ? undefined : shortSinopsis(item.sinopsis),
+  };
+  return Object.fromEntries(
+    Object.entries(card).filter(([, v]) => v != null && v !== "")
+  );
+}
+
+function parseGenreList(raw) {
+  return String(raw || "")
+    .split(",")
+    .map((g) => g.trim())
+    .filter((g) => /^[A-Za-z0-9][A-Za-z0-9 \-]{0,40}$/.test(g))
+    .slice(0, 8);
+}
+
+async function payloadsByIds(pool, ids) {
+  if (!ids.length) return [];
+  const [data] = await pool.query(`SELECT id, payload FROM catalog_items WHERE id IN (?)`, [ids]);
+  const byId = new Map(data.map((r) => [r.id, r]));
+  return ids.map((id) => byId.get(id)).filter(Boolean);
+}
+
+export async function listCollection(
+  collection,
+  { page = 1, limit = 50, q = "", genre = "" } = {}
+) {
   if (!isItemCollection(collection)) return null;
   const pool = getPool();
   const safeLimit = Math.min(Math.max(Number(limit) || 50, 1), 200);
   const safePage = Math.max(Number(page) || 1, 1);
   const offset = (safePage - 1) * safeLimit;
   const query = String(q || "").trim();
+  const genres = parseGenreList(genre);
 
-  let total;
-  let rows;
+  const where = ["collection = ?"];
+  const params = [collection];
   if (query) {
+    where.push("(title LIKE ? OR slug LIKE ?)");
     const like = `%${query}%`;
-    const [countRows] = await pool.execute(
-      `SELECT COUNT(*) AS c FROM catalog_items
-       WHERE collection = ? AND (title LIKE ? OR slug LIKE ?)`,
-      [collection, like, like]
-    );
-    total = Number(countRows[0].c);
-    const [idRows] = await pool.query(
-      `SELECT id FROM catalog_items
-       WHERE collection = ? AND (title LIKE ? OR slug LIKE ?)
-       ORDER BY id ASC
-       LIMIT ? OFFSET ?`,
-      [collection, like, like, safeLimit, offset]
-    );
-    const ids = idRows.map((r) => r.id);
-    if (!ids.length) {
-      rows = [];
-    } else {
-      const [data] = await pool.query(`SELECT id, payload FROM catalog_items WHERE id IN (?)`, [
-        ids,
-      ]);
-      const byId = new Map(data.map((r) => [r.id, r]));
-      rows = ids.map((id) => byId.get(id)).filter(Boolean);
-    }
-  } else {
-    const [countRows] = await pool.execute(
-      `SELECT COUNT(*) AS c FROM catalog_items WHERE collection = ?`,
-      [collection]
-    );
-    total = Number(countRows[0].c);
-    const [idRows] = await pool.query(
-      `SELECT id FROM catalog_items
-       WHERE collection = ?
-       ORDER BY id ASC
-       LIMIT ? OFFSET ?`,
-      [collection, safeLimit, offset]
-    );
-    const ids = idRows.map((r) => r.id);
-    if (!ids.length) {
-      rows = [];
-    } else {
-      const [data] = await pool.query(`SELECT id, payload FROM catalog_items WHERE id IN (?)`, [
-        ids,
-      ]);
-      const byId = new Map(data.map((r) => [r.id, r]));
-      rows = ids.map((id) => byId.get(id)).filter(Boolean);
-    }
+    params.push(like, like);
   }
+  if (genres.length) {
+    where.push(
+      `(${genres.map(() => "JSON_CONTAINS(JSON_EXTRACT(payload, '$.genre'), ?)").join(" OR ")})`
+    );
+    params.push(...genres.map((g) => JSON.stringify(g)));
+  }
+  const whereSql = where.join(" AND ");
+
+  const [countRows] = await pool.query(
+    `SELECT COUNT(*) AS c FROM catalog_items WHERE ${whereSql}`,
+    params
+  );
+  const total = Number(countRows[0]?.c || 0);
+  const [idRows] = await pool.query(
+    `SELECT id FROM catalog_items
+     WHERE ${whereSql}
+     ORDER BY id ASC
+     LIMIT ? OFFSET ?`,
+    [...params, safeLimit, offset]
+  );
+  const rows = await payloadsByIds(
+    pool,
+    idRows.map((r) => r.id)
+  );
 
   return {
     collection,
     page: safePage,
     limit: safeLimit,
     total,
-    items: rows.map((r) => (typeof r.payload === "string" ? JSON.parse(r.payload) : r.payload)),
+    items: rows.map((r) => toCard(parsePayload(r.payload), collection)),
   };
+}
+
+export async function searchCatalog({ q = "", limit = 40 } = {}) {
+  const query = String(q || "").trim();
+  if (!query) return { q: "", total: 0, items: [] };
+  const pool = getPool();
+  const safeLimit = Math.min(Math.max(Number(limit) || 40, 1), 80);
+  const like = `%${query}%`;
+  const [countRows] = await pool.query(
+    `SELECT COUNT(*) AS c FROM catalog_items
+     WHERE collection NOT IN ('anime-latest', 'series-latest')
+       AND (title LIKE ? OR slug LIKE ?)`,
+    [like, like]
+  );
+  const [idRows] = await pool.query(
+    `SELECT id, collection FROM catalog_items
+     WHERE collection NOT IN ('anime-latest', 'series-latest')
+       AND (title LIKE ? OR slug LIKE ?)
+     ORDER BY id ASC
+     LIMIT ?`,
+    [like, like, safeLimit]
+  );
+  const rows = await payloadsByIds(
+    pool,
+    idRows.map((r) => r.id)
+  );
+  const colById = new Map(idRows.map((r) => [r.id, r.collection]));
+  return {
+    q: query,
+    total: Number(countRows[0]?.c || 0),
+    items: rows.map((r) => toCard(parsePayload(r.payload), colById.get(r.id) || "")),
+  };
+}
+
+export async function listHero({ limit = 12 } = {}) {
+  const pool = getPool();
+  const safeLimit = Math.min(Math.max(Number(limit) || 12, 1), 24);
+  const [rows] = await pool.query(
+    `SELECT collection, payload FROM catalog_items
+     WHERE collection IN ('movies', 'series', 'horror', 'indonesia', 'anime', 'anime-movies')
+       AND thumbnail IS NOT NULL AND thumbnail <> ''
+       AND rating REGEXP '^[0-9]'
+       AND CAST(REPLACE(rating, ',', '.') AS DECIMAL(6,2)) >= 7
+     ORDER BY id ASC
+     LIMIT ?`,
+    [Math.max(safeLimit * 3, 24)]
+  );
+  const items = rows.map((r) => toCard(parsePayload(r.payload), r.collection));
+  return { items };
 }
 
 /** Drop-in kompatibel dengan /data/*.json (seluruh array). */

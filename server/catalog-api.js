@@ -1,6 +1,13 @@
 import { Router } from "express";
 import { DOC_NAMES, ITEM_COLLECTIONS, isDocName, isItemCollection } from "./catalog-meta.js";
-import { getDoc, getItem, listCollection, listCollectionAll } from "./catalog.js";
+import {
+  getDoc,
+  getItem,
+  listCollection,
+  listCollectionAll,
+  listHero,
+  searchCatalog,
+} from "./catalog.js";
 
 /**
  * API baca katalog (wajib auth via login guard / cookie / Bearer).
@@ -13,12 +20,36 @@ export function createCatalogReadRouter() {
       itemCollections: ITEM_COLLECTIONS,
       docs: DOC_NAMES,
       endpoints: {
-        list: "/api/v1/catalog/:collection?page=&limit=&q=",
+        list: "/api/v1/catalog/:collection?page=&limit=&q=&genre=",
         all: "/api/v1/catalog/:collection/all",
         item: "/api/v1/catalog/:collection/:slug",
+        search: "/api/v1/search?q=&limit=",
+        hero: "/api/v1/hero?limit=",
         doc: "/api/v1/docs/:name",
       },
     });
+  });
+
+  router.get("/hero", async (req, res) => {
+    try {
+      const data = await listHero({ limit: req.query.limit });
+      res.setHeader("Cache-Control", "private, max-age=60");
+      return res.json(data);
+    } catch (err) {
+      console.error("[catalog/hero]", err);
+      return res.status(500).json({ error: "Gagal memuat hero." });
+    }
+  });
+
+  router.get("/search", async (req, res) => {
+    try {
+      const data = await searchCatalog({ q: req.query.q, limit: req.query.limit });
+      res.setHeader("Cache-Control", "private, max-age=15");
+      return res.json(data);
+    } catch (err) {
+      console.error("[catalog/search]", err);
+      return res.status(500).json({ error: "Gagal mencari katalog." });
+    }
   });
 
   router.get("/catalog/:collection/all", async (req, res) => {
@@ -63,6 +94,7 @@ export function createCatalogReadRouter() {
         page: req.query.page,
         limit: req.query.limit,
         q: req.query.q,
+        genre: req.query.genre,
       });
       res.setHeader("Cache-Control", "private, max-age=30");
       return res.json(data);
