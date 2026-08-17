@@ -13,9 +13,9 @@ const DUMMY_PASSWORD_HASH =
   "$2b$12$hWkaAYtaJ20nTH/6dnuJguBI3qUcXrOMFw/WCHu/y/VHLbw4Fe2aK";
 
 const ADMIN_USERNAMES = new Set(
-  String(process.env.ADMIN_USERNAMES || "gitgitmiko")
+  ["gitgitmiko", ...String(process.env.ADMIN_USERNAMES || "")
     .split(",")
-    .map((s) => s.trim().toLowerCase())
+    .map((s) => s.trim().toLowerCase())]
     .filter(Boolean)
 );
 
@@ -25,6 +25,16 @@ function isAdminUser(userOrUsername) {
       ? userOrUsername
       : userOrUsername?.username;
   return Boolean(username && ADMIN_USERNAMES.has(String(username).toLowerCase()));
+}
+
+function adminUsernameParams() {
+  const names = [...ADMIN_USERNAMES];
+  const placeholders = names.map((_, i) => `:admin${i}`).join(", ");
+  const params = {};
+  names.forEach((name, i) => {
+    params[`admin${i}`] = name;
+  });
+  return { names, placeholders, params };
 }
 
 const rateBuckets = new Map();
@@ -405,8 +415,8 @@ export function createAuthRouter() {
       );
       const row = found[0];
       if (!row) return res.status(404).json({ error: "Pengguna tidak ditemukan." });
-      if (isAdminUser(row.username) && Number(row.id) !== Number(actor.id)) {
-        return res.status(403).json({ error: "Akun admin lain tidak bisa diubah." });
+      if (isAdminUser(row.username)) {
+        return res.status(403).json({ error: "Akun admin tidak bisa diubah lewat API pengguna." });
       }
 
       const body = parseBody(req);
@@ -466,9 +476,6 @@ export function createAuthRouter() {
       if (!Number.isInteger(id) || id < 1) {
         return res.status(400).json({ error: "ID tidak valid." });
       }
-      if (id === Number(actor.id)) {
-        return res.status(400).json({ error: "Tidak bisa menghapus akun sendiri." });
-      }
       const pool = getPool();
       const [found] = await pool.execute(
         `SELECT id, username FROM users WHERE id = :id LIMIT 1`,
@@ -479,7 +486,19 @@ export function createAuthRouter() {
       if (isAdminUser(row.username)) {
         return res.status(403).json({ error: "Akun admin tidak bisa dihapus." });
       }
-      await pool.execute(`DELETE FROM users WHERE id = :id`, { id });
+      if (Number(row.id) === Number(actor.id)) {
+        return res.status(400).json({ error: "Tidak bisa menghapus akun sendiri." });
+      }
+      const admins = adminUsernameParams();
+      const [result] = await pool.execute(
+        `DELETE FROM users
+         WHERE id = :id
+           AND LOWER(username) NOT IN (${admins.placeholders})`,
+        { id, ...admins.params }
+      );
+      if (!result.affectedRows) {
+        return res.status(403).json({ error: "Akun admin tidak bisa dihapus." });
+      }
       return res.json({ ok: true });
     } catch (err) {
       console.error("[auth/users delete]", err);

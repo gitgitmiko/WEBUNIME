@@ -574,7 +574,9 @@ body.is-auth-checking .auth-boot,
 
 .users-table {
   width: 100%;
+  min-width: 560px;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 0.88rem;
 }
 
@@ -584,6 +586,26 @@ body.is-auth-checking .auth-boot,
   text-align: left;
   vertical-align: middle;
   border-bottom: 1px solid var(--line);
+}
+
+.users-table th:nth-child(1),
+.users-table td:nth-child(1) {
+  width: 42%;
+}
+
+.users-table th:nth-child(2),
+.users-table td:nth-child(2) {
+  width: 34%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.users-col-actions,
+.users-table td.users-row-actions {
+  width: 11.5rem;
+  min-width: 11.5rem;
+  text-align: right;
 }
 
 .users-table th {
@@ -623,8 +645,15 @@ body.is-auth-checking .auth-boot,
 .users-row-actions {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
+}
+
+.users-locked {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.9;
 }
 
 .btn-user {

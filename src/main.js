@@ -2027,6 +2027,7 @@ function renderUsersTable(users) {
       tr.dataset.email = user.email || "";
       tr.dataset.displayName = user.displayName || "";
       const locked = Boolean(user.isAdmin);
+      tr.dataset.locked = locked ? "1" : "";
       tr.innerHTML = `
         <td>
           <span class="users-name"></span>
@@ -2045,7 +2046,13 @@ function renderUsersTable(users) {
       $(".users-handle", tr).textContent = `@${user.username} · ${formatUserDate(user.createdAt)}`;
       tr.children[1].textContent = user.email || "";
       const actions = $(".users-row-actions", tr);
-      if (!locked) {
+      if (locked) {
+        const hint = document.createElement("span");
+        hint.className = "users-locked";
+        hint.textContent = "Terkunci";
+        hint.title = "Akun admin tidak bisa diubah atau dihapus";
+        actions.append(hint);
+      } else {
         const edit = document.createElement("button");
         edit.type = "button";
         edit.className = "btn-user";
@@ -2449,6 +2456,7 @@ function bindAuth() {
     const row = btn.closest("tr");
     const id = row?.dataset.id;
     if (!id || !canInviteUsers()) return;
+    if (row.dataset.locked === "1") return;
     const action = btn.dataset.userAction;
     if (action === "edit") {
       fillUsersForm({
