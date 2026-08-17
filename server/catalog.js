@@ -132,6 +132,18 @@ function parseGenreList(raw) {
     .slice(0, 8);
 }
 
+function collectionOrderSql(sortKey) {
+  const ratingSql = `CAST(REPLACE(IFNULL(rating, '0'), ',', '.') AS DECIMAL(6,2))`;
+  const yearSql = `CAST(IFNULL(NULLIF(year, ''), '0') AS UNSIGNED)`;
+  if (sortKey === "rating" || sortKey === "top") {
+    return `ORDER BY ${ratingSql} DESC, id ASC`;
+  }
+  if (sortKey === "hot") {
+    return `ORDER BY ${yearSql} DESC, ${ratingSql} DESC, id ASC`;
+  }
+  return `ORDER BY id ASC`;
+}
+
 async function payloadsByIds(pool, ids) {
   if (!ids.length) return [];
   const [data] = await pool.query(`SELECT id, payload FROM catalog_items WHERE id IN (?)`, [ids]);
@@ -141,7 +153,7 @@ async function payloadsByIds(pool, ids) {
 
 export async function listCollection(
   collection,
-  { page = 1, limit = 50, q = "", genre = "" } = {}
+  { page = 1, limit = 50, q = "", genre = "", sort = "" } = {}
 ) {
   if (!isItemCollection(collection)) return null;
   const pool = getPool();
@@ -150,6 +162,7 @@ export async function listCollection(
   const offset = (safePage - 1) * safeLimit;
   const query = String(q || "").trim();
   const genres = parseGenreList(genre);
+  const sortKey = String(sort || "").toLowerCase();
 
   const where = ["collection = ?"];
   const params = [collection];
@@ -164,7 +177,15 @@ export async function listCollection(
     );
     params.push(...genres.map((g) => JSON.stringify(g)));
   }
+  if (sortKey === "rating" || sortKey === "top") {
+    where.push("rating REGEXP '^[0-9]'");
+  }
+  if (sortKey === "hot") {
+    where.push("year REGEXP '^[0-9]{4}'");
+    where.push("rating REGEXP '^[0-9]'");
+  }
   const whereSql = where.join(" AND ");
+  const orderSql = collectionOrderSql(sortKey);
 
   const [countRows] = await pool.query(
     `SELECT COUNT(*) AS c FROM catalog_items WHERE ${whereSql}`,
@@ -174,7 +195,7 @@ export async function listCollection(
   const [idRows] = await pool.query(
     `SELECT id FROM catalog_items
      WHERE ${whereSql}
-     ORDER BY id ASC
+     ${orderSql}
      LIMIT ? OFFSET ?`,
     [...params, safeLimit, offset]
   );

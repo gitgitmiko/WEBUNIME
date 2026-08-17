@@ -20,7 +20,7 @@ export function createCatalogReadRouter() {
       itemCollections: ITEM_COLLECTIONS,
       docs: DOC_NAMES,
       endpoints: {
-        list: "/api/v1/catalog/:collection?page=&limit=&q=&genre=",
+        list: "/api/v1/catalog/:collection?page=&limit=&q=&genre=&sort=",
         all: "/api/v1/catalog/:collection/all",
         item: "/api/v1/catalog/:collection/:slug",
         search: "/api/v1/search?q=&limit=",
@@ -95,6 +95,7 @@ export function createCatalogReadRouter() {
         limit: req.query.limit,
         q: req.query.q,
         genre: req.query.genre,
+        sort: req.query.sort,
       });
       res.setHeader("Cache-Control", "private, max-age=30");
       return res.json(data);

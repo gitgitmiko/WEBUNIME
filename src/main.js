@@ -5,6 +5,8 @@ let series = [];
 let horror = [];
 let indonesia = [];
 let anime = [];
+let animeTop = [];
+let animeHot = [];
 let animeMovies = [];
 let animeLatest = [];
 let catalog = [];
@@ -41,13 +43,17 @@ function rememberItems(collection, items) {
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-async function fetchCatalogPage(collection, { page = 1, limit = PAGE_SIZE, q = "", genre = "" } = {}) {
+async function fetchCatalogPage(
+  collection,
+  { page = 1, limit = PAGE_SIZE, q = "", genre = "", sort = "" } = {}
+) {
   const params = new URLSearchParams({
     page: String(page),
     limit: String(limit),
   });
   if (q) params.set("q", q);
   if (genre) params.set("genre", genre);
+  if (sort) params.set("sort", sort);
   const res = await fetch(`/api/v1/catalog/${encodeURIComponent(collection)}?${params}`, {
     credentials: "include",
   });
@@ -55,8 +61,8 @@ async function fetchCatalogPage(collection, { page = 1, limit = PAGE_SIZE, q = "
   return res.json();
 }
 
-async function loadCollectionPage(collection, target, { page = 1, genre = "" } = {}) {
-  const data = await fetchCatalogPage(collection, { page, genre });
+async function loadCollectionPage(collection, target, { page = 1, genre = "", sort = "" } = {}) {
+  const data = await fetchCatalogPage(collection, { page, genre, sort });
   const items = Array.isArray(data?.items) ? data.items : [];
   rememberItems(collection, items);
   if (page <= 1) {
@@ -87,6 +93,8 @@ function listForKey(key) {
     horror,
     indonesia,
     anime,
+    animeTop,
+    animeHot,
     animeMovies,
     animeLatest,
   };
@@ -105,6 +113,8 @@ const ROW_CONFIG = {
   trackSeries: { collection: "series", listKey: "series" },
   trackIndonesia: { collection: "indonesia", listKey: "indonesia" },
   trackAnime: { collection: "anime", listKey: "anime" },
+  trackAnimeTop: { collection: "anime", listKey: "animeTop", sort: "rating" },
+  trackAnimeHot: { collection: "anime", listKey: "animeHot", sort: "hot" },
   trackAnimeMovie: { collection: "anime-movies", listKey: "animeMovies" },
   trackAnimeLatest: { collection: "anime-latest", listKey: "animeLatest", kind: "episode" },
 };
@@ -118,6 +128,7 @@ async function loadHomeCatalog() {
         const data = await loadCollectionPage(cfg.collection, list, {
           page: 1,
           genre: cfg.genre || "",
+          sort: cfg.sort || "",
         });
         rowState[trackId] = {
           page: 1,
@@ -138,6 +149,8 @@ async function loadHomeCatalog() {
     ...indonesia,
     ...series,
     ...anime,
+    ...animeTop,
+    ...animeHot,
     ...animeMovies,
   ]);
 }
@@ -574,6 +587,8 @@ function fillTrack(id, list, { append = false, startIndex = 0 } = {}) {
 function renderRows() {
   renderLibraryRows();
   fillTrack("trackAnime", anime);
+  fillTrack("trackAnimeTop", animeTop);
+  fillTrack("trackAnimeHot", animeHot);
   fillTrack("trackAnimeLatest", animeLatest);
   fillTrack("trackAnimeMovie", animeMovies);
   fillTrack("trackFeatured", movies);
@@ -1431,6 +1446,8 @@ function bindNav() {
 
   const sectionIds = [
     "anime",
+    "top-anime",
+    "hot-anime",
     "series-anime",
     "anime-movie",
     "film-terbaru",
@@ -1498,6 +1515,7 @@ async function loadMoreTrack(trackId) {
     const data = await loadCollectionPage(cfg.collection, list, {
       page: nextPage,
       genre: cfg.genre || "",
+      sort: cfg.sort || "",
     });
     const added = list.slice(before);
     state.page = nextPage;
