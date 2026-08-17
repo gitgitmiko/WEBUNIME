@@ -1829,6 +1829,10 @@ function bindActions() {
 
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
+    if (!$("#usersModal")?.classList.contains("hidden")) {
+      closeUsersModal();
+      return;
+    }
     if (!$("#authModal")?.classList.contains("hidden")) {
       closeAuthModal();
       return;
@@ -1898,7 +1902,174 @@ function setAuthSuccess(msg) {
 }
 
 function canInviteUsers() {
-  return Boolean(currentUser?.canInvite);
+  return Boolean(currentUser?.isAdmin || currentUser?.canInvite);
+}
+
+function setUsersError(msg) {
+  const el = $("#usersError");
+  if (!el) return;
+  if (!msg) {
+    el.textContent = "";
+    el.classList.add("hidden");
+    return;
+  }
+  el.textContent = msg;
+  el.classList.remove("hidden");
+}
+
+function setUsersSuccess(msg) {
+  const el = $("#usersSuccess");
+  if (!el) return;
+  if (!msg) {
+    el.textContent = "";
+    el.classList.add("hidden");
+    return;
+  }
+  el.textContent = msg;
+  el.classList.remove("hidden");
+}
+
+function resetUsersForm() {
+  const form = $("#usersForm");
+  if (!form) return;
+  form.reset();
+  form.elements.id.value = "";
+  const userInput = form.elements.username;
+  if (userInput) userInput.disabled = false;
+  const pass = form.elements.password;
+  if (pass) pass.required = true;
+  const label = $("#usersPasswordLabel");
+  if (label) label.textContent = "Password (min. 10, huruf + angka)";
+  $("#usersCancelEdit")?.classList.add("hidden");
+  const submitLabel = $("#usersSubmit .auth-submit-label");
+  if (submitLabel) submitLabel.textContent = "Tambah pengguna";
+  setAuthFormLoading(form, false, "Tambah pengguna");
+}
+
+function fillUsersForm(user) {
+  const form = $("#usersForm");
+  if (!form || !user) return;
+  form.elements.id.value = String(user.id || "");
+  form.elements.displayName.value = user.displayName || "";
+  form.elements.username.value = user.username || "";
+  form.elements.username.disabled = true;
+  form.elements.email.value = user.email || "";
+  form.elements.password.value = "";
+  form.elements.password.required = false;
+  const label = $("#usersPasswordLabel");
+  if (label) label.textContent = "Password baru (kosongkan jika tidak diubah)";
+  $("#usersCancelEdit")?.classList.remove("hidden");
+  const submitLabel = $("#usersSubmit .auth-submit-label");
+  if (submitLabel) submitLabel.textContent = "Simpan perubahan";
+}
+
+function formatUserDate(value) {
+  if (!value) return "";
+  try {
+    return new Date(value).toLocaleDateString("id-ID", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  } catch {
+    return String(value);
+  }
+}
+
+function renderUsersTable(users) {
+  const body = $("#usersTableBody");
+  if (!body) return;
+  if (!users.length) {
+    body.replaceChildren();
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td colspan="3">Belum ada pengguna.</td>`;
+    body.append(tr);
+    return;
+  }
+  body.replaceChildren(
+    ...users.map((user) => {
+      const tr = document.createElement("tr");
+      tr.dataset.id = String(user.id);
+      tr.dataset.username = user.username || "";
+      tr.dataset.email = user.email || "";
+      tr.dataset.displayName = user.displayName || "";
+      const locked = Boolean(user.isAdmin);
+      tr.innerHTML = `
+        <td>
+          <span class="users-name"></span>
+          <span class="users-handle"></span>
+        </td>
+        <td></td>
+        <td class="users-row-actions"></td>
+      `;
+      $(".users-name", tr).textContent = user.displayName || user.username;
+      if (locked) {
+        const badge = document.createElement("span");
+        badge.className = "users-badge";
+        badge.textContent = "Admin";
+        $(".users-name", tr).append(badge);
+      }
+      $(".users-handle", tr).textContent = `@${user.username} · ${formatUserDate(user.createdAt)}`;
+      tr.children[1].textContent = user.email || "";
+      const actions = $(".users-row-actions", tr);
+      if (!locked) {
+        const edit = document.createElement("button");
+        edit.type = "button";
+        edit.className = "btn-user";
+        edit.dataset.userAction = "edit";
+        edit.textContent = "Ubah";
+        const del = document.createElement("button");
+        del.type = "button";
+        del.className = "btn-user is-danger";
+        del.dataset.userAction = "delete";
+        del.textContent = "Hapus";
+        actions.append(edit, del);
+      }
+      return tr;
+    })
+  );
+}
+
+async function loadAdminUsers() {
+  if (!canInviteUsers()) return;
+  const { res, data } = await authFetch("/users");
+  if (!res.ok) {
+    setUsersError(data?.error || "Gagal memuat pengguna.");
+    return;
+  }
+  renderUsersTable(Array.isArray(data?.users) ? data.users : []);
+}
+
+async function openUsersModal() {
+  if (!canInviteUsers()) return;
+  closeAuthModal();
+  resetUsersForm();
+  setUsersError("");
+  setUsersSuccess("");
+  $("#usersModal")?.classList.remove("hidden");
+  document.body.style.overflow = "hidden";
+  try {
+    await loadAdminUsers();
+  } catch (err) {
+    console.error(err);
+    setUsersError("Gagal memuat pengguna.");
+  }
+}
+
+function closeUsersModal() {
+  const modal = $("#usersModal");
+  if (!modal || modal.classList.contains("hidden")) return;
+  modal.classList.add("hidden");
+  resetUsersForm();
+  setUsersError("");
+  setUsersSuccess("");
+  if (
+    $("#authModal")?.classList.contains("hidden") &&
+    $("#modal")?.classList.contains("hidden") &&
+    $("#player")?.classList.contains("hidden")
+  ) {
+    document.body.style.overflow = "";
+  }
 }
 
 function syncAuthGateChrome() {
@@ -1954,11 +2125,9 @@ function setAuthFormLoading(form, loading, labelWhenIdle) {
 
 function resetAuthForms() {
   const login = $("#authLoginForm");
-  const register = $("#authRegisterForm");
   login?.reset();
-  register?.reset();
   setAuthFormLoading(login, false, "Login");
-  setAuthFormLoading(register, false, "Buat akun");
+  resetUsersForm();
 }
 
 function enterAuthGate(mode = "login") {
@@ -1985,12 +2154,11 @@ function leaveAuthGate() {
 
 function renderAuthChrome() {
   const openBtn = $("#authOpenBtn");
-  const inviteBtn = $("#authInviteBtn");
+  const usersBtn = $("#authUsersBtn");
   const chip = $("#authChip");
   const name = $("#authChipName");
   const avatar = $("#authAvatar");
   const tabLogin = $("#authTabLogin");
-  const tabRegister = $("#authTabRegister");
   const tabProfile = $("#authTabProfile");
 
   if (currentUser) {
@@ -1999,44 +2167,38 @@ function renderAuthChrome() {
     name.textContent = currentUser.displayName || currentUser.username;
     avatar.textContent = (currentUser.displayName || currentUser.username || "?").slice(0, 1).toUpperCase();
     tabLogin?.classList.add("hidden");
-    tabRegister?.classList.add("hidden");
     tabProfile.classList.remove("hidden");
-    inviteBtn?.classList.toggle("hidden", !canInviteUsers());
+    usersBtn?.classList.toggle("hidden", !canInviteUsers());
   } else {
     openBtn.classList.remove("hidden");
     chip.classList.add("hidden");
-    inviteBtn?.classList.add("hidden");
+    usersBtn?.classList.add("hidden");
     tabLogin?.classList.remove("hidden");
-    tabRegister?.classList.add("hidden");
     tabProfile.classList.add("hidden");
+    closeUsersModal();
   }
   syncAuthGateChrome();
 }
 
 function showAuthPane(mode) {
-  let nextMode = mode;
-  if (nextMode === "register" && !canInviteUsers()) nextMode = currentUser ? "profile" : "login";
+  let nextMode = mode === "register" ? (currentUser ? "profile" : "login") : mode;
 
   const login = $("#authLoginForm");
-  const register = $("#authRegisterForm");
   const profile = $("#authProfileForm");
   const title = $("#authModalTitle");
   const lead = $("#authLead");
   const tabs = {
     login: $("#authTabLogin"),
-    register: $("#authTabRegister"),
     profile: $("#authTabProfile"),
   };
 
   login.classList.toggle("hidden", nextMode !== "login");
-  register.classList.toggle("hidden", nextMode !== "register");
   profile.classList.toggle("hidden", nextMode !== "profile");
 
   Object.entries(tabs).forEach(([key, el]) => {
     if (!el) return;
     const visible =
       (key === "login" && !currentUser) ||
-      (key === "register" && canInviteUsers() && Boolean(currentUser)) ||
       (key === "profile" && Boolean(currentUser));
     el.classList.toggle("hidden", !visible);
     el.classList.toggle("is-active", key === nextMode);
@@ -2044,16 +2206,12 @@ function showAuthPane(mode) {
   });
 
   if (nextMode === "login") title.textContent = "Login ke WEBUNIME";
-  else if (nextMode === "register") title.textContent = "Daftarkan akun baru";
   else title.textContent = "Profil saya";
 
   if (lead) {
     if (!currentUser) {
       lead.classList.remove("hidden");
       lead.textContent = "Login untuk mulai menonton";
-    } else if (nextMode === "register") {
-      lead.classList.remove("hidden");
-      lead.textContent = "Buat akun pengguna baru (khusus admin)";
     } else if (nextMode === "profile") {
       lead.classList.remove("hidden");
       lead.textContent = "Kelola profil akun Anda";
@@ -2068,7 +2226,7 @@ function showAuthPane(mode) {
     if (input) input.value = currentUser.displayName || "";
   }
   setAuthError("");
-  if (nextMode !== "register") setAuthSuccess("");
+  setAuthSuccess("");
 }
 
 function openAuthModal(mode = currentUser ? "profile" : "login") {
@@ -2151,16 +2309,16 @@ function bindAuth() {
     })
   );
   $("#authTabLogin")?.addEventListener("click", () => showAuthPane("login"));
-  $("#authTabRegister")?.addEventListener("click", () => {
-    if (canInviteUsers()) showAuthPane("register");
-  });
   $("#authTabProfile")?.addEventListener("click", () => {
     if (currentUser) showAuthPane("profile");
   });
-  $("#authInviteBtn")?.addEventListener("click", () => {
+  $("#authUsersBtn")?.addEventListener("click", () => {
     if (!canInviteUsers()) return;
-    openAuthModal("register");
+    openUsersModal();
   });
+  $$("[data-users-close]").forEach((el) =>
+    el.addEventListener("click", () => closeUsersModal())
+  );
 
   $("#authLoginForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -2190,41 +2348,98 @@ function bindAuth() {
     }
   });
 
-  $("#authRegisterForm")?.addEventListener("submit", async (e) => {
+  $("#usersForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const form = e.target;
-    setAuthError("");
-    setAuthSuccess("");
+    setUsersError("");
+    setUsersSuccess("");
     if (!canInviteUsers()) {
-      setAuthError("Pendaftaran hanya oleh admin.");
+      setUsersError("Khusus admin.");
       return;
     }
-    setAuthFormLoading(form, true, "Buat akun");
+    const fd = new FormData(form);
+    const editingId = String(fd.get("id") || "").trim();
+    const payload = {
+      displayName: String(fd.get("displayName") || ""),
+      username: String(fd.get("username") || "").toLowerCase(),
+      email: String(fd.get("email") || "").toLowerCase(),
+      password: String(fd.get("password") || ""),
+    };
+    const idleLabel = editingId ? "Simpan perubahan" : "Tambah pengguna";
+    setAuthFormLoading(form, true, idleLabel);
     try {
-      const fd = new FormData(form);
-      const username = String(fd.get("username") || "").toLowerCase();
-      const { res, data } = await authFetch("/register", {
-        method: "POST",
-        body: JSON.stringify({
-          displayName: String(fd.get("displayName") || ""),
-          username,
-          email: String(fd.get("email") || "").toLowerCase(),
-          password: String(fd.get("password") || ""),
-        }),
-      });
+      const { res, data } = editingId
+        ? await authFetch(`/users/${encodeURIComponent(editingId)}`, {
+            method: "PATCH",
+            body: JSON.stringify(payload),
+          })
+        : await authFetch("/users", {
+            method: "POST",
+            body: JSON.stringify(payload),
+          });
       if (!res.ok) {
-        setAuthError(data?.error || "Gagal mendaftar.");
+        setUsersError(data?.error || "Gagal menyimpan pengguna.");
         return;
       }
-      form.reset();
-      const invited = data?.invited?.username || username;
-      setAuthSuccess(`Akun @${invited} berhasil dibuat. Pengguna bisa login sendiri.`);
-      showAuthPane("register");
+      resetUsersForm();
+      setUsersSuccess(
+        editingId ? "Perubahan pengguna disimpan." : `Akun @${payload.username} berhasil dibuat.`
+      );
+      await loadAdminUsers();
     } catch (err) {
       console.error(err);
-      setAuthError("Gagal mendaftar. Coba lagi.");
+      setUsersError("Gagal menyimpan pengguna.");
     } finally {
-      setAuthFormLoading(form, false, "Buat akun");
+      const idle = String(form.elements.id.value || "") ? "Simpan perubahan" : "Tambah pengguna";
+      setAuthFormLoading(form, false, idle);
+    }
+  });
+
+  $("#usersCancelEdit")?.addEventListener("click", () => {
+    resetUsersForm();
+    setUsersError("");
+    setUsersSuccess("");
+  });
+
+  $("#usersTableBody")?.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-user-action]");
+    if (!btn) return;
+    const row = btn.closest("tr");
+    const id = row?.dataset.id;
+    if (!id || !canInviteUsers()) return;
+    const action = btn.dataset.userAction;
+    if (action === "edit") {
+      fillUsersForm({
+        id,
+        displayName: row.dataset.displayName || "",
+        username: row.dataset.username || "",
+        email: row.dataset.email || "",
+      });
+      setUsersError("");
+      setUsersSuccess("");
+      $("#usersForm")?.scrollIntoView({ block: "nearest" });
+      return;
+    }
+    if (action === "delete") {
+      const handle = row.dataset.username || "";
+      if (!window.confirm(`Hapus akun @${handle}? Sesi login pengguna itu juga berakhir.`)) return;
+      setUsersError("");
+      setUsersSuccess("");
+      try {
+        const { res, data } = await authFetch(`/users/${encodeURIComponent(id)}`, {
+          method: "DELETE",
+        });
+        if (!res.ok) {
+          setUsersError(data?.error || "Gagal menghapus pengguna.");
+          return;
+        }
+        resetUsersForm();
+        setUsersSuccess(`Akun @${handle} dihapus.`);
+        await loadAdminUsers();
+      } catch (err) {
+        console.error(err);
+        setUsersError("Gagal menghapus pengguna.");
+      }
     }
   });
 

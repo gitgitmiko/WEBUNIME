@@ -87,7 +87,7 @@
             <span class="auth-chip-name" id="authChipName">Akun</span>
           </button>
         </div>
-        <button type="button" class="btn btn-invite hidden" id="authInviteBtn">Daftar</button>
+        <button type="button" class="btn btn-users hidden" id="authUsersBtn">Pengguna</button>
       </div>
     </header>
 
@@ -421,7 +421,6 @@
         <p class="auth-lead" id="authLead">Login untuk mulai menonton</p>
         <div class="auth-tabs" role="tablist">
           <button type="button" class="auth-tab is-active" id="authTabLogin" role="tab" aria-selected="true">Login</button>
-          <button type="button" class="auth-tab hidden" id="authTabRegister" role="tab" aria-selected="false">Daftar</button>
           <button type="button" class="auth-tab hidden" id="authTabProfile" role="tab" aria-selected="false">Profil</button>
         </div>
         <h2 class="auth-title" id="authModalTitle">Login ke WEBUNIME</h2>
@@ -443,29 +442,6 @@
           </button>
         </form>
 
-        <form class="auth-form hidden" id="authRegisterForm" autocomplete="on">
-          <label>
-            <span>Nama tampilan</span>
-            <input name="displayName" type="text" required maxlength="64" autocomplete="nickname" />
-          </label>
-          <label>
-            <span>Username</span>
-            <input name="username" type="text" required minlength="3" maxlength="32" pattern="[a-zA-Z0-9_]{3,32}" autocomplete="username" />
-          </label>
-          <label>
-            <span>Email</span>
-            <input name="email" type="email" required maxlength="191" autocomplete="email" />
-          </label>
-          <label>
-            <span>Password (min. 10, huruf + angka)</span>
-            <input name="password" type="password" required minlength="10" maxlength="128" pattern="(?=.*[A-Za-z])(?=.*[0-9]).{10,}" title="Minimal 10 karakter, harus ada huruf dan angka" autocomplete="new-password" />
-          </label>
-          <button type="submit" class="btn btn-play auth-submit" id="authRegisterSubmit">
-            <span class="auth-submit-label">Buat akun</span>
-            <span class="auth-submit-spinner hidden" aria-hidden="true"></span>
-          </button>
-        </form>
-
         <form class="auth-form hidden" id="authProfileForm">
           <p class="auth-profile-meta" id="authProfileMeta"></p>
           <label>
@@ -475,6 +451,59 @@
           <button type="submit" class="btn btn-play auth-submit">Simpan</button>
           <button type="button" class="btn btn-ghost auth-logout" id="authLogoutBtn">Logout</button>
         </form>
+      </div>
+    </div>
+
+    <div class="auth-modal hidden" id="usersModal" role="dialog" aria-modal="true" aria-labelledby="usersModalTitle">
+      <div class="auth-modal-backdrop" data-users-close></div>
+      <div class="auth-modal-panel users-panel">
+        <button type="button" class="modal-close" id="usersCloseBtn" data-users-close aria-label="Tutup">×</button>
+        <h2 class="auth-title" id="usersModalTitle">Pengguna</h2>
+        <p class="auth-lead">Kelola akun yang boleh login. Khusus admin.</p>
+        <p class="auth-error hidden" id="usersError" role="alert"></p>
+        <p class="auth-success hidden" id="usersSuccess" role="status"></p>
+
+        <form class="auth-form users-form" id="usersForm" autocomplete="off">
+          <input type="hidden" name="id" value="" />
+          <div class="users-form-grid">
+            <label>
+              <span>Nama tampilan</span>
+              <input name="displayName" type="text" required maxlength="64" />
+            </label>
+            <label>
+              <span>Username</span>
+              <input name="username" type="text" required minlength="3" maxlength="32" pattern="[a-zA-Z0-9_]{3,32}" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required maxlength="191" />
+            </label>
+            <label>
+              <span id="usersPasswordLabel">Password (min. 10, huruf + angka)</span>
+              <input name="password" type="password" minlength="10" maxlength="128" autocomplete="new-password" />
+            </label>
+          </div>
+          <div class="users-form-actions">
+            <button type="submit" class="btn btn-play auth-submit" id="usersSubmit">
+              <span class="auth-submit-label">Tambah pengguna</span>
+              <span class="auth-submit-spinner hidden" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="btn btn-ghost hidden" id="usersCancelEdit">Batal</button>
+          </div>
+        </form>
+
+        <div class="users-table-wrap">
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>Pengguna</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
       </div>
     </div>
 

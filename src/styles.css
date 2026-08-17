@@ -268,7 +268,7 @@ input {
   background: #f40612;
 }
 
-.btn-invite {
+.btn-users {
   padding: 0.45rem 0.95rem;
   font-size: 0.88rem;
   border-radius: 999px;
@@ -277,7 +277,7 @@ input {
   border: 1px solid rgba(255, 255, 255, 0.28);
 }
 
-.btn-invite:hover {
+.btn-users:hover {
   background: rgba(255, 255, 255, 0.18);
 }
 
@@ -358,6 +358,8 @@ input {
   font-size: 0.92rem;
 }
 
+body.is-auth-locked #usersModal,
+body.is-auth-checking #usersModal,
 body.is-auth-locked #nav,
 body.is-auth-locked main,
 body.is-auth-locked #modal,
@@ -474,9 +476,116 @@ body.is-auth-checking .auth-boot,
   width: min(420px, 100%);
   padding: 1.1rem 1.35rem 1.35rem;
   border-radius: 14px;
-  border: 1px solid var(--line);
   background: linear-gradient(180deg, #1c1c1c 0%, #121212 100%);
+  border: 1px solid var(--line);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+
+.users-panel {
+  width: min(720px, 100%);
+  max-height: min(88vh, 820px);
+  overflow: auto;
+}
+
+.users-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem 0.85rem;
+}
+
+.users-form-actions {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  margin-top: 0.85rem;
+}
+
+.users-table-wrap {
+  margin-top: 1.15rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.users-table th,
+.users-table td {
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--line);
+}
+
+.users-table th {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.users-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.users-name {
+  display: block;
+  font-weight: 600;
+}
+
+.users-handle {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.users-badge {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(229, 9, 20, 0.2);
+  color: #ff8a8a;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.users-row-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.btn-user {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.btn-user:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-user.is-danger {
+  color: #ffb4b4;
+  border-color: rgba(229, 9, 20, 0.4);
+}
+
+@media (max-width: 720px) {
+  .users-form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .auth-tabs {

@@ -62,13 +62,15 @@ function cookieSecure() {
 }
 
 function publicUser(row) {
+  const admin = isAdminUser(row.username);
   return {
     id: Number(row.id),
     email: row.email,
     username: row.username,
     displayName: row.display_name,
     createdAt: row.created_at,
-    canInvite: isAdminUser(row.username),
+    canInvite: admin,
+    isAdmin: admin,
   };
 }
 
@@ -252,6 +254,16 @@ function validateRegister(body) {
   return { email, username, password, displayName };
 }
 
+async function requireAdmin(req, res) {
+  const sid = readSid(req);
+  const actor = await loadUserFromSession(sid);
+  if (!actor || !isAdminUser(actor)) {
+    res.status(403).json({ error: "Khusus admin." });
+    return null;
+  }
+  return actor;
+}
+
 export function createAuthRouter() {
   const router = Router();
 
@@ -277,11 +289,8 @@ export function createAuthRouter() {
     }
 
     try {
-      const sid = readSid(req);
-      const actor = await loadUserFromSession(sid);
-      if (!actor || !isAdminUser(actor)) {
-        return res.status(403).json({ error: "Pendaftaran hanya oleh admin." });
-      }
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
       if (!rateLimit(`reg-admin:${actor.id}`, 20, 60 * 60_000)) {
         return res.status(429).json({ error: "Batas undangan admin tercapai. Coba lagi nanti." });
       }
@@ -321,6 +330,160 @@ export function createAuthRouter() {
       }
       console.error("[auth/register]", err);
       return res.status(500).json({ error: "Gagal mendaftar." });
+    }
+  });
+
+  router.get("/users", async (req, res) => {
+    try {
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
+      const pool = getPool();
+      const [rows] = await pool.execute(
+        `SELECT id, email, username, display_name, created_at
+         FROM users
+         ORDER BY id ASC`
+      );
+      return res.json({ users: rows.map(publicUser) });
+    } catch (err) {
+      console.error("[auth/users list]", err);
+      return res.status(500).json({ error: "Gagal memuat pengguna." });
+    }
+  });
+
+  router.post("/users", async (req, res) => {
+    const ip = clientIp(req);
+    if (!rateLimit(`users-create:${ip}`, 10, 60 * 60_000)) {
+      return res.status(429).json({ error: "Terlalu banyak percobaan. Coba lagi nanti." });
+    }
+    try {
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
+      const parsed = validateRegister(parseBody(req));
+      if (parsed.error) return res.status(400).json({ error: parsed.error });
+      if (isAdminUser(parsed.username)) {
+        return res.status(400).json({ error: "Username admin tidak bisa didaftarkan ulang." });
+      }
+      const pool = getPool();
+      const passwordHash = await bcrypt.hash(parsed.password, BCRYPT_ROUNDS);
+      const [result] = await pool.execute(
+        `INSERT INTO users (email, username, password_hash, display_name)
+         VALUES (:email, :username, :passwordHash, :displayName)`,
+        {
+          email: parsed.email,
+          username: parsed.username,
+          passwordHash,
+          displayName: parsed.displayName,
+        }
+      );
+      const [rows] = await pool.execute(
+        `SELECT id, email, username, display_name, created_at
+         FROM users WHERE id = :id LIMIT 1`,
+        { id: result.insertId }
+      );
+      return res.status(201).json({ ok: true, user: publicUser(rows[0]) });
+    } catch (err) {
+      if (err && err.code === "ER_DUP_ENTRY") {
+        return res.status(409).json({ error: "Email atau username sudah terpakai." });
+      }
+      console.error("[auth/users create]", err);
+      return res.status(500).json({ error: "Gagal membuat pengguna." });
+    }
+  });
+
+  router.patch("/users/:id", async (req, res) => {
+    try {
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
+      const id = Number(req.params.id);
+      if (!Number.isInteger(id) || id < 1) {
+        return res.status(400).json({ error: "ID tidak valid." });
+      }
+      const pool = getPool();
+      const [found] = await pool.execute(
+        `SELECT id, email, username, display_name, created_at FROM users WHERE id = :id LIMIT 1`,
+        { id }
+      );
+      const row = found[0];
+      if (!row) return res.status(404).json({ error: "Pengguna tidak ditemukan." });
+      if (isAdminUser(row.username) && Number(row.id) !== Number(actor.id)) {
+        return res.status(403).json({ error: "Akun admin lain tidak bisa diubah." });
+      }
+
+      const body = parseBody(req);
+      const displayName = String(body.displayName || body.display_name || "")
+        .trim()
+        .slice(0, 64);
+      const email = String(body.email || "")
+        .trim()
+        .toLowerCase();
+      const password = String(body.password || "");
+      if (!displayName) return res.status(400).json({ error: "Nama tampilan wajib diisi." });
+      if (!EMAIL_RE.test(email) || email.length > 191) {
+        return res.status(400).json({ error: "Email tidak valid." });
+      }
+      if (password) {
+        if (password.length < 10 || password.length > 128) {
+          return res.status(400).json({ error: "Password minimal 10 karakter." });
+        }
+        if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+          return res.status(400).json({ error: "Password harus mengandung huruf dan angka." });
+        }
+      }
+
+      if (password) {
+        const passwordHash = await bcrypt.hash(password, BCRYPT_ROUNDS);
+        await pool.execute(
+          `UPDATE users
+           SET display_name = :displayName, email = :email, password_hash = :passwordHash
+           WHERE id = :id`,
+          { displayName, email, passwordHash, id }
+        );
+      } else {
+        await pool.execute(
+          `UPDATE users SET display_name = :displayName, email = :email WHERE id = :id`,
+          { displayName, email, id }
+        );
+      }
+      const [updated] = await pool.execute(
+        `SELECT id, email, username, display_name, created_at FROM users WHERE id = :id LIMIT 1`,
+        { id }
+      );
+      return res.json({ ok: true, user: publicUser(updated[0]) });
+    } catch (err) {
+      if (err && err.code === "ER_DUP_ENTRY") {
+        return res.status(409).json({ error: "Email sudah terpakai." });
+      }
+      console.error("[auth/users update]", err);
+      return res.status(500).json({ error: "Gagal mengubah pengguna." });
+    }
+  });
+
+  router.delete("/users/:id", async (req, res) => {
+    try {
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
+      const id = Number(req.params.id);
+      if (!Number.isInteger(id) || id < 1) {
+        return res.status(400).json({ error: "ID tidak valid." });
+      }
+      if (id === Number(actor.id)) {
+        return res.status(400).json({ error: "Tidak bisa menghapus akun sendiri." });
+      }
+      const pool = getPool();
+      const [found] = await pool.execute(
+        `SELECT id, username FROM users WHERE id = :id LIMIT 1`,
+        { id }
+      );
+      const row = found[0];
+      if (!row) return res.status(404).json({ error: "Pengguna tidak ditemukan." });
+      if (isAdminUser(row.username)) {
+        return res.status(403).json({ error: "Akun admin tidak bisa dihapus." });
+      }
+      await pool.execute(`DELETE FROM users WHERE id = :id`, { id });
+      return res.json({ ok: true });
+    } catch (err) {
+      console.error("[auth/users delete]", err);
+      return res.status(500).json({ error: "Gagal menghapus pengguna." });
     }
   });
 
