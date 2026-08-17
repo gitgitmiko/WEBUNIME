@@ -2037,7 +2037,7 @@ function renderUsersTable(users) {
           <span class="users-handle"></span>
         </td>
         <td></td>
-        <td class="users-row-actions"></td>
+        <td class="users-col-actions"><div class="users-row-actions"></div></td>
       `;
       $(".users-name", tr).textContent = user.displayName || user.username;
       if (locked) {
@@ -2062,10 +2062,15 @@ function renderUsersTable(users) {
       edit.textContent = "Ubah";
       actions.append(edit);
       if (locked) {
-        const slot = document.createElement("span");
-        slot.className = "btn-user-slot";
-        slot.setAttribute("aria-hidden", "true");
-        actions.append(slot, slot.cloneNode(true));
+        const toggleSlot = document.createElement("span");
+        toggleSlot.className = "btn-user btn-user-slot";
+        toggleSlot.setAttribute("aria-hidden", "true");
+        toggleSlot.textContent = "Nonaktifkan";
+        const delSlot = document.createElement("span");
+        delSlot.className = "btn-user btn-user-slot";
+        delSlot.setAttribute("aria-hidden", "true");
+        delSlot.textContent = "Hapus";
+        actions.append(toggleSlot, delSlot);
       } else {
         const toggle = document.createElement("button");
         toggle.type = "button";

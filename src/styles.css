@@ -483,7 +483,7 @@ body.is-auth-checking .auth-boot,
 
 .users-panel {
   position: relative;
-  width: min(720px, 100%);
+  width: min(860px, 100%);
   max-height: min(88vh, 820px);
   overflow: hidden;
   display: flex;
@@ -574,9 +574,7 @@ body.is-auth-checking .auth-boot,
 
 .users-table {
   width: 100%;
-  min-width: 640px;
   border-collapse: collapse;
-  table-layout: fixed;
   font-size: 0.88rem;
 }
 
@@ -588,24 +586,16 @@ body.is-auth-checking .auth-boot,
   border-bottom: 1px solid var(--line);
 }
 
-.users-table th:nth-child(1),
-.users-table td:nth-child(1) {
-  width: 42%;
-}
-
-.users-table th:nth-child(2),
 .users-table td:nth-child(2) {
-  width: 34%;
+  max-width: 14rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.users-col-actions,
-.users-table td.users-row-actions {
-  width: 16.5rem;
-  min-width: 16.5rem;
-  text-align: right;
+.users-col-actions {
+  width: 1%;
+  white-space: nowrap;
 }
 
 .users-table th {
@@ -652,9 +642,9 @@ body.is-auth-checking .auth-boot,
 }
 
 .users-row-actions {
-  display: grid;
-  grid-template-columns: 4.6rem 7.4rem 4.6rem;
-  justify-content: end;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
@@ -662,10 +652,12 @@ body.is-auth-checking .auth-boot,
 
 .btn-user-slot {
   visibility: hidden;
+  pointer-events: none;
 }
 
 .btn-user {
-  width: 100%;
+  flex: 0 0 auto;
+  width: auto;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
