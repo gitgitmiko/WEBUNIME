@@ -1321,8 +1321,8 @@ function bindNav() {
   });
 
   const sectionIds = [
-    "series-anime",
     "anime",
+    "series-anime",
     "anime-movie",
     "film-terbaru",
     "horor",
