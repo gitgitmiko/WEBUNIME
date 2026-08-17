@@ -1830,7 +1830,8 @@ function bindActions() {
   document.addEventListener("keydown", (e) => {
     if (e.key !== "Escape") return;
     if (!$("#usersModal")?.classList.contains("hidden")) {
-      if (isUsersSheetOpen()) closeUsersSheet();
+      if (isUsersConfirmOpen()) closeUsersConfirm(false);
+      else if (isUsersSheetOpen()) closeUsersSheet();
       else closeUsersModal();
       return;
     }
@@ -1996,6 +1997,36 @@ function closeUsersSheet() {
   setUsersSheetError("");
 }
 
+let usersConfirmResolver = null;
+
+function isUsersConfirmOpen() {
+  return Boolean($("#usersConfirm") && !$("#usersConfirm").classList.contains("hidden"));
+}
+
+function closeUsersConfirm(result = false) {
+  $("#usersConfirm")?.classList.add("hidden");
+  const resolve = usersConfirmResolver;
+  usersConfirmResolver = null;
+  if (resolve) resolve(Boolean(result));
+}
+
+function askUsersConfirm({ title, body, confirmLabel, tone = "play" }) {
+  closeUsersConfirm(false);
+  const dialog = $("#usersConfirm");
+  const ok = $("#usersConfirmOk");
+  if (!dialog || !ok) return Promise.resolve(false);
+  $("#usersConfirmTitle").textContent = title || "Konfirmasi";
+  $("#usersConfirmBody").textContent = body || "";
+  ok.textContent = confirmLabel || "Lanjut";
+  ok.classList.toggle("is-danger", tone === "danger");
+  ok.classList.toggle("is-off", tone === "off");
+  dialog.classList.remove("hidden");
+  requestAnimationFrame(() => ok.focus());
+  return new Promise((resolve) => {
+    usersConfirmResolver = resolve;
+  });
+}
+
 function formatUserDate(value) {
   if (!value) return "";
   try {
@@ -2119,6 +2150,7 @@ function closeUsersModal() {
   const modal = $("#usersModal");
   if (!modal || modal.classList.contains("hidden")) return;
   modal.classList.add("hidden");
+  closeUsersConfirm(false);
   closeUsersSheet();
   setUsersError("");
   setUsersSuccess("");
@@ -2377,6 +2409,10 @@ function bindAuth() {
   });
   $$("[data-users-close]").forEach((el) =>
     el.addEventListener("click", () => {
+      if (el.classList.contains("auth-modal-backdrop") && isUsersConfirmOpen()) {
+        closeUsersConfirm(false);
+        return;
+      }
       if (el.classList.contains("auth-modal-backdrop") && isUsersSheetOpen()) {
         closeUsersSheet();
         return;
@@ -2393,6 +2429,10 @@ function bindAuth() {
   $$("[data-users-sheet-close]").forEach((el) =>
     el.addEventListener("click", () => closeUsersSheet())
   );
+  $$("[data-users-confirm-close]").forEach((el) =>
+    el.addEventListener("click", () => closeUsersConfirm(false))
+  );
+  $("#usersConfirmOk")?.addEventListener("click", () => closeUsersConfirm(true));
 
   $("#authLoginForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -2491,7 +2531,13 @@ function bindAuth() {
     }
     if (action === "delete") {
       const handle = row.dataset.username || "";
-      if (!window.confirm(`Hapus akun @${handle}? Sesi login pengguna itu juga berakhir.`)) return;
+      const ok = await askUsersConfirm({
+        title: "Hapus pengguna",
+        body: `Hapus akun @${handle}? Sesi login pengguna itu juga berakhir.`,
+        confirmLabel: "Hapus",
+        tone: "danger",
+      });
+      if (!ok) return;
       setUsersError("");
       setUsersSuccess("");
       try {
@@ -2515,10 +2561,22 @@ function bindAuth() {
       if (row.dataset.locked === "1") return;
       const handle = row.dataset.username || "";
       const nextActive = row.dataset.active !== "1";
-      const promptMsg = nextActive
-        ? `Aktifkan akun @${handle}?`
-        : `Nonaktifkan akun @${handle}? Pengguna itu tidak bisa login sampai diaktifkan lagi.`;
-      if (!window.confirm(promptMsg)) return;
+      const ok = await askUsersConfirm(
+        nextActive
+          ? {
+              title: "Aktifkan pengguna",
+              body: `Aktifkan akun @${handle}? Pengguna itu bisa login lagi.`,
+              confirmLabel: "Aktifkan",
+              tone: "play",
+            }
+          : {
+              title: "Nonaktifkan pengguna",
+              body: `Nonaktifkan akun @${handle}? Pengguna itu tidak bisa login sampai diaktifkan lagi.`,
+              confirmLabel: "Nonaktifkan",
+              tone: "off",
+            }
+      );
+      if (!ok) return;
       setUsersError("");
       setUsersSuccess("");
       try {
