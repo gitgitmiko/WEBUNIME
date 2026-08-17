@@ -1,16 +1,15 @@
 #!/usr/bin/env node
 /**
- * Scrape film terbaru dari LK21 (/latest) + detail player tiap film.
+ * Scrape film LK21 + detail player.
  *
  * Cara pakai:
- *   node scripts/scrape-latest.js              # 10 halaman (default)
- *   node scripts/scrape-latest.js --pages 5
- *   node scripts/scrape-latest.js --pages 10 --delay 400
- *   node scripts/scrape-latest.js --refresh-desc   # hanya perbarui sinopsis lengkap
+ *   node scripts/scrape-latest.js --pages 50
+ *   node scripts/scrape-latest.js --all-years --merge   # arsip per tahun (cap 50 hlm/tahun)
+ *   node scripts/scrape-latest.js --year 2023 --pages 50 --merge
+ *   node scripts/scrape-latest.js --refresh-desc
  *
- * Hasil:
- *   - public/data/movies.json
- *   - public/data/players.json
+ * Hasil: public/data/movies.json + players.json
+ * --merge: judul lama tetap, hanya tambah slug baru (wajib untuk --year/--all-years).
  */
 
 import { writeFile, mkdir, readFile } from "node:fs/promises";
@@ -28,15 +27,35 @@ const BASE_URL = "https://tv12.lk21official.cc";
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
+const ARCHIVE_YEARS = [
+  2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014,
+  2013, 2012, 2011, 2010, 2009, 2008, 2007,
+];
+
 function parseArgs(argv) {
-  const out = { pages: 10, delay: 350, start: 1, refreshDesc: false };
+  const out = {
+    pages: 0,
+    delay: 350,
+    start: 1,
+    refreshDesc: false,
+    merge: false,
+    years: [],
+  };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === "--pages" && argv[i + 1]) out.pages = Math.max(1, Number(argv[++i]) || 10);
     else if (a === "--delay" && argv[i + 1]) out.delay = Math.max(0, Number(argv[++i]) || 350);
     else if (a === "--start" && argv[i + 1]) out.start = Math.max(1, Number(argv[++i]) || 1);
     else if (a === "--refresh-desc") out.refreshDesc = true;
+    else if (a === "--merge") out.merge = true;
+    else if (a === "--all-years") out.years = [...ARCHIVE_YEARS];
+    else if ((a === "--year" || a === "--years") && argv[i + 1]) {
+      const n = Number(argv[++i]);
+      if (Number.isFinite(n) && n >= 1900) out.years.push(n);
+    }
   }
+  if (out.years.length) out.merge = true;
+  if (!out.pages) out.pages = out.years.length ? 50 : 10;
   return out;
 }
 
@@ -44,7 +63,7 @@ function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-async function fetchHtml(url) {
+async function fetchPage(url) {
   const res = await fetch(url, {
     headers: {
       "User-Agent": USER_AGENT,
@@ -52,12 +71,36 @@ async function fetchHtml(url) {
       "Accept-Language": "id-ID,id;q=0.9,en;q=0.8",
       Referer: `${BASE_URL}/`,
     },
+    redirect: "follow",
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText} — ${url}`);
-  return res.text();
+  const html = await res.text();
+  return { html, ok: res.ok, finalUrl: res.url, status: res.status };
 }
 
-function latestPageUrl(page) {
+async function fetchHtml(url) {
+  const { html, ok, status, finalUrl } = await fetchPage(url);
+  if (!ok) throw new Error(`HTTP ${status} ${url}`);
+  if (looksLikeHome(finalUrl, html) && !/\/latest\/?$/.test(url) && !/\/[a-z0-9-]+-\d{4}\/?$/.test(url)) {
+    throw new Error(`Redirect beranda — ${url}`);
+  }
+  return html;
+}
+
+function looksLikeHome(finalUrl, html) {
+  try {
+    const path = new URL(finalUrl).pathname;
+    if (path === "/" || path === "") return html.length > 150000;
+  } catch {
+    /* ignore */
+  }
+  return false;
+}
+
+function listingPageUrl(page, year) {
+  if (year) {
+    if (page <= 1) return `${BASE_URL}/year/${year}`;
+    return `${BASE_URL}/year/${year}/page/${page}`;
+  }
   if (page <= 1) return `${BASE_URL}/latest`;
   return `${BASE_URL}/latest/page/${page}`;
 }
@@ -319,16 +362,25 @@ function extractDetailMeta(html, fallback = {}) {
   };
 }
 
-async function scrapeListingPages({ start, pages, delay }) {
+async function scrapeListingPages({ start, pages, delay, year }) {
   const bySlug = new Map();
   const end = start + pages - 1;
+  const label = year ? `year/${year}` : "latest";
 
   for (let page = start; page <= end; page++) {
-    const url = latestPageUrl(page);
-    process.stdout.write(`→ Halaman ${page}/${end} ${url} ... `);
+    const url = listingPageUrl(page, year);
+    process.stdout.write(`→ ${label} ${page}/${end} ... `);
     try {
-      const html = await fetchHtml(url);
+      const { html, finalUrl, ok } = await fetchPage(url);
+      if (!ok || looksLikeHome(finalUrl, html)) {
+        console.log("beranda/kosong — stop");
+        break;
+      }
       const items = extractListings(html);
+      if (!items.length) {
+        console.log("0 kartu — stop");
+        break;
+      }
       let added = 0;
       for (const item of items) {
         if (!bySlug.has(item.slug)) {
@@ -454,6 +506,24 @@ async function refreshDescriptions({ delay }) {
   console.log(`\nSelesai refresh deskripsi: ${ok} OK, ${failed} gagal, ${movies.length} total.`);
 }
 
+async function readJsonArray(file) {
+  try {
+    const data = JSON.parse(await readFile(file, "utf8"));
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+}
+
+async function readJsonObject(file) {
+  try {
+    const data = JSON.parse(await readFile(file, "utf8"));
+    return data && typeof data === "object" && !Array.isArray(data) ? data : {};
+  } catch {
+    return {};
+  }
+}
+
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
   await mkdir(DATA_DIR, { recursive: true });
@@ -464,18 +534,67 @@ async function main() {
     return;
   }
 
-  console.log(
-    `Scrape LK21 latest: halaman ${opts.start}–${opts.start + opts.pages - 1} (delay ${opts.delay}ms)\n`
-  );
+  const years = opts.years;
+  const existingMovies = opts.merge ? await readJsonArray(MOVIES_FILE) : [];
+  const existingPlayers = opts.merge ? await readJsonObject(PLAYERS_FILE) : {};
+  const have = new Set(existingMovies.map((m) => m.slug).filter(Boolean));
 
-  const listings = await scrapeListingPages(opts);
-  if (!listings.length) {
-    console.error("Tidak ada film ditemukan.");
-    process.exit(1);
+  const bySlug = new Map();
+  if (years.length) {
+    console.log(
+      `Scrape LK21 arsip tahun ${years[years.length - 1]}–${years[0]} (${opts.pages} hlm/tahun, merge, delay ${opts.delay}ms)\n`
+    );
+    for (let i = 0; i < years.length; i++) {
+      const year = years[i];
+      const items = await scrapeListingPages({ ...opts, year });
+      for (const item of items) {
+        if (!bySlug.has(item.slug)) bySlug.set(item.slug, item);
+      }
+      if (i < years.length - 1 && opts.delay) await sleep(opts.delay);
+    }
+  } else {
+    console.log(
+      `Scrape LK21 latest: halaman ${opts.start}–${opts.start + opts.pages - 1}` +
+        `${opts.merge ? " (merge)" : ""} (delay ${opts.delay}ms)\n`
+    );
+    for (const item of await scrapeListingPages(opts)) {
+      bySlug.set(item.slug, item);
+    }
   }
 
-  console.log(`\nAmbil detail ${listings.length} film...\n`);
+  let listings = [...bySlug.values()];
+  if (opts.merge) {
+    const skipped = listings.filter((l) => have.has(l.slug)).length;
+    listings = listings.filter((l) => l.slug && !have.has(l.slug));
+    console.log(
+      `\nListing unik ${bySlug.size}. Skip ${skipped} yang sudah ada. Detail ${listings.length} film baru.\n`
+    );
+  } else {
+    console.log(`\nAmbil detail ${listings.length} film...\n`);
+  }
+
+  if (!listings.length) {
+    console.log("Tidak ada film baru.");
+    return;
+  }
+
   const { movies, playersMap, withPlayers } = await scrapeDetails(listings, opts);
+
+  if (opts.merge) {
+    const maxId = existingMovies.reduce((n, m) => Math.max(n, Number(m.id) || 0), 0);
+    const added = movies.map((m, i) => ({ ...m, id: maxId + 1 + i }));
+    const mergedMovies = [...existingMovies, ...added];
+    const mergedPlayers = { ...existingPlayers, ...playersMap };
+    await writeFile(MOVIES_FILE, JSON.stringify(mergedMovies, null, 2) + "\n", "utf8");
+    await writeFile(PLAYERS_FILE, JSON.stringify(mergedPlayers, null, 2) + "\n", "utf8");
+    console.log(
+      `\nSelesai (merge).\n` +
+        `  baru         : ${added.length} (player ${withPlayers})\n` +
+        `  movies.json  : ${mergedMovies.length} film\n` +
+        `  players.json : ${Object.keys(mergedPlayers).length} entri`
+    );
+    return;
+  }
 
   await writeFile(MOVIES_FILE, JSON.stringify(movies, null, 2) + "\n", "utf8");
   await writeFile(PLAYERS_FILE, JSON.stringify(playersMap, null, 2) + "\n", "utf8");
