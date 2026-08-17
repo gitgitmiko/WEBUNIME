@@ -1480,6 +1480,18 @@ function setActiveNavLink(hash) {
   });
 }
 
+function isMobileNav() {
+  return window.matchMedia("(max-width: 720px)").matches;
+}
+
+function closeNavGroup(group) {
+  if (!group) return;
+  group.classList.remove("is-open");
+  const btn = $(".nav-group-btn", group);
+  btn?.setAttribute("aria-expanded", "false");
+  btn?.blur();
+}
+
 function closeNavMenus() {
   $("#nav")?.classList.remove("is-menu-open");
   const toggle = $("#navToggle");
@@ -1487,10 +1499,7 @@ function closeNavMenus() {
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Buka menu");
   }
-  $$(".nav-group").forEach((group) => {
-    group.classList.remove("is-open");
-    $(".nav-group-btn", group)?.setAttribute("aria-expanded", "false");
-  });
+  $$(".nav-group").forEach((group) => closeNavGroup(group));
 }
 
 function scrollToNavTarget(hash) {
@@ -1535,14 +1544,24 @@ function bindNav() {
       e.preventDefault();
       e.stopPropagation();
       const group = btn.closest(".nav-group");
+      if (!group) return;
+      if (!isMobileNav()) {
+        closeNavGroup(group);
+        return;
+      }
       const willOpen = !group.classList.contains("is-open");
       $$(".nav-group").forEach((other) => {
         if (other === group) return;
-        other.classList.remove("is-open");
-        $(".nav-group-btn", other)?.setAttribute("aria-expanded", "false");
+        closeNavGroup(other);
       });
       group.classList.toggle("is-open", willOpen);
       btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+  });
+
+  $$(".nav-group").forEach((group) => {
+    group.addEventListener("mouseleave", () => {
+      if (!isMobileNav()) closeNavGroup(group);
     });
   });
 

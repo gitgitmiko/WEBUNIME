@@ -228,7 +228,7 @@ input {
 
 .nav-group:hover .nav-group-menu,
 .nav-group.is-open .nav-group-menu,
-.nav-group:focus-within .nav-group-menu {
+.nav-group:has(.nav-group-btn:focus-visible) .nav-group-menu {
   display: block;
 }
 
