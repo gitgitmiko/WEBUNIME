@@ -688,31 +688,130 @@ function escapeHtml(value) {
 
 function genreTone(genre) {
   const g = String(genre || "").toLowerCase();
-  if (/horror|horor|slasher/.test(g)) return "horror";
+  if (/horror|horor|slasher|gore/.test(g)) return "horror";
   if (/romance|romantic|romantis/.test(g)) return "romance";
-  if (/action|aksi/.test(g)) return "action";
+  if (/action|aksi|martial|samurai|super power/.test(g)) return "action";
   if (/adventure|petualangan/.test(g)) return "adventure";
-  if (/comedy|komedi/.test(g)) return "comedy";
+  if (/comedy|komedi|parody|gag humor/.test(g)) return "comedy";
   if (/thriller|suspense/.test(g)) return "thriller";
+  if (/psychological|psikologi/.test(g)) return "psychological";
   if (/drama/.test(g)) return "drama";
   if (/sci-?fi|science fiction|fiksi ilmiah/.test(g)) return "scifi";
+  if (/isekai|reincarnation|time travel|villainess/.test(g)) return "isekai";
+  if (/urban fantasy/.test(g)) return "fantasy";
   if (/fantasy|fantasi/.test(g)) return "fantasy";
+  if (/slice of life/.test(g)) return "slice";
+  if (/school|sekolah/.test(g)) return "school";
   if (/animation|anime|animasi/.test(g)) return "animation";
-  if (/crime|kriminal/.test(g)) return "crime";
+  if (/mecha/.test(g)) return "mecha";
+  if (/military|militer/.test(g)) return "military";
+  if (/police|kriminal|crime/.test(g)) return "crime";
   if (/mystery|misteri/.test(g)) return "mystery";
+  if (/supernatural|demons|vampire|mythology|magic|mahou/.test(g)) return "supernatural";
+  if (/ecchi|harem|adult cast/.test(g)) return "ecchi";
+  if (/boys love|girls love|shoujo ai|shounen ai/.test(g)) return "bl";
+  if (/shounen/.test(g)) return "shounen";
+  if (/shoujo/.test(g)) return "shoujo";
+  if (/seinen/.test(g)) return "seinen";
+  if (/josei/.test(g)) return "josei";
+  if (/kids|anak/.test(g)) return "kids";
   if (/family|keluarga/.test(g)) return "family";
-  if (/music|musik|musical/.test(g)) return "music";
+  if (/music|musik|musical|idols|performing arts/.test(g)) return "music";
+  if (/gourmet|kuliner/.test(g)) return "gourmet";
+  if (/game|racing|strategy/.test(g)) return "game";
+  if (/space|angkasa/.test(g)) return "space";
+  if (/historical|history|sejarah|biography/.test(g)) return "history";
   if (/war|perang/.test(g)) return "war";
   if (/documentary|dokumenter/.test(g)) return "documentary";
-  if (/sport|olahraga/.test(g)) return "sport";
+  if (/sport|olahraga|wrestling/.test(g)) return "sport";
   if (/western/.test(g)) return "western";
-  return "default";
+  if (/short|tv movie|talk-?show|reality|game-?show/.test(g)) return "media";
+  let hash = 0;
+  for (let i = 0; i < g.length; i += 1) hash = (hash * 31 + g.charCodeAt(i)) >>> 0;
+  return `hue${hash % 12}`;
 }
 
-function qualityTone(quality) {
-  if (/cam|ts|sd/i.test(quality)) return "cam";
-  if (/blu|web|fhd|hd|uhd|4k/i.test(quality)) return "hd";
-  return "default";
+const COUNTRY_ISO = {
+  indonesia: "id",
+  japan: "jp",
+  jepang: "jp",
+  korea: "kr",
+  "south korea": "kr",
+  "korea selatan": "kr",
+  "north korea": "kp",
+  usa: "us",
+  "u.s.a": "us",
+  "united states": "us",
+  "united states of america": "us",
+  america: "us",
+  amerika: "us",
+  "amerika serikat": "us",
+  malaysia: "my",
+  singapore: "sg",
+  singapura: "sg",
+  taiwan: "tw",
+  china: "cn",
+  cina: "cn",
+  tiongkok: "cn",
+  "hong kong": "hk",
+  hongkong: "hk",
+  thailand: "th",
+  vietnam: "vn",
+  philippines: "ph",
+  filipina: "ph",
+  cambodia: "kh",
+  kamboja: "kh",
+  france: "fr",
+  prancis: "fr",
+  netherlands: "nl",
+  belanda: "nl",
+  norway: "no",
+  norwegia: "no",
+  "saudi arabia": "sa",
+  "arab saudi": "sa",
+  uk: "gb",
+  "united kingdom": "gb",
+  england: "gb",
+  inggris: "gb",
+  germany: "de",
+  jerman: "de",
+  italy: "it",
+  italia: "it",
+  spain: "es",
+  spanyol: "es",
+  india: "in",
+  australia: "au",
+  canada: "ca",
+  brazil: "br",
+  brasil: "br",
+  mexico: "mx",
+  meksiko: "mx",
+  russia: "ru",
+  rusia: "ru",
+  turkey: "tr",
+  turki: "tr",
+};
+
+function countryFlagHtml(name) {
+  const key = String(name || "")
+    .toLowerCase()
+    .replace(/\./g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  const iso = COUNTRY_ISO[key];
+  if (!iso) return "";
+  return `<img class="hero-chip-flag" src="https://flagcdn.com/w40/${iso}.png" width="18" height="13" alt="" loading="lazy" />`;
+}
+
+function countryChipsHtml(raw) {
+  const names = String(raw || "")
+    .split(/[,/|]/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return names.map((name) => {
+    const flag = countryFlagHtml(name);
+    return `<span class="hero-chip hero-chip--country">${flag}${escapeHtml(name)}</span>`;
+  });
 }
 
 function heroMetaHtml(movie) {
@@ -740,6 +839,7 @@ function heroMetaHtml(movie) {
       `<span class="hero-chip hero-chip--duration">${escapeHtml(movie.durasi)}</span>`
     );
   }
+  chips.push(...countryChipsHtml(movie.negara));
   for (const genre of movie.genre || []) {
     if (!genre) continue;
     chips.push(
@@ -747,6 +847,12 @@ function heroMetaHtml(movie) {
     );
   }
   return chips.join("");
+}
+
+function qualityTone(quality) {
+  if (/cam|ts|sd/i.test(quality)) return "cam";
+  if (/blu|web|fhd|hd|uhd|4k/i.test(quality)) return "hd";
+  return "default";
 }
 
 function prefersReducedMotion() {

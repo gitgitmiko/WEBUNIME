@@ -948,7 +948,15 @@ body.is-auth-checking .auth-boot,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(11, 11, 15, 0.96) 0%, rgba(11, 11, 15, 0.72) 42%, rgba(11, 11, 15, 0.25) 72%, rgba(11, 11, 15, 0.55) 100%),
+    linear-gradient(
+      90deg,
+      rgba(8, 8, 12, 0.96) 0%,
+      rgba(8, 8, 12, 0.9) 26%,
+      rgba(8, 8, 12, 0.78) 46%,
+      rgba(8, 8, 12, 0.4) 62%,
+      rgba(8, 8, 12, 0.1) 80%,
+      rgba(8, 8, 12, 0.28) 100%
+    ),
     linear-gradient(0deg, var(--bg) 0%, transparent 42%);
 }
 
@@ -967,6 +975,7 @@ body.is-auth-checking .auth-boot,
   font-size: clamp(1.35rem, 3vw, 2.1rem);
   font-weight: 600;
   line-height: 1.15;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
 }
 
 .hero-meta {
@@ -1010,9 +1019,18 @@ body.is-auth-checking .auth-boot,
 }
 
 .hero-chip--year,
-.hero-chip--duration {
+.hero-chip--duration,
+.hero-chip--country {
   background: rgba(255, 255, 255, 0.16);
   font-weight: 600;
+}
+
+.hero-chip-flag {
+  width: 18px;
+  height: 13px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
 }
 
 .hero-chip--genre.is-horror { background: #b91c1c; }
@@ -1021,23 +1039,55 @@ body.is-auth-checking .auth-boot,
 .hero-chip--genre.is-adventure { background: #0d9488; }
 .hero-chip--genre.is-comedy { background: #ca8a04; color: #1a1400; }
 .hero-chip--genre.is-thriller { background: #7f1d1d; }
+.hero-chip--genre.is-psychological { background: #334155; }
 .hero-chip--genre.is-drama { background: #7c3aed; }
 .hero-chip--genre.is-scifi { background: #2563eb; }
+.hero-chip--genre.is-isekai { background: #4338ca; }
 .hero-chip--genre.is-fantasy { background: #4f46e5; }
+.hero-chip--genre.is-slice { background: #65a30d; }
+.hero-chip--genre.is-school { background: #0284c7; }
 .hero-chip--genre.is-animation { background: #0891b2; }
+.hero-chip--genre.is-mecha { background: #0f766e; }
+.hero-chip--genre.is-military { background: #3f6212; }
 .hero-chip--genre.is-crime { background: #475569; }
 .hero-chip--genre.is-mystery { background: #6d28d9; }
+.hero-chip--genre.is-supernatural { background: #6b21a8; }
+.hero-chip--genre.is-ecchi { background: #be185d; }
+.hero-chip--genre.is-bl { background: #c026d3; }
+.hero-chip--genre.is-shounen { background: #dc2626; }
+.hero-chip--genre.is-shoujo { background: #ec4899; }
+.hero-chip--genre.is-seinen { background: #b45309; }
+.hero-chip--genre.is-josei { background: #a21caf; }
+.hero-chip--genre.is-kids { background: #84cc16; color: #142000; }
 .hero-chip--genre.is-family { background: #16a34a; }
 .hero-chip--genre.is-music { background: #c026d3; }
+.hero-chip--genre.is-gourmet { background: #d97706; }
+.hero-chip--genre.is-game { background: #0e7490; }
+.hero-chip--genre.is-space { background: #1e3a8a; }
+.hero-chip--genre.is-history { background: #92400e; }
 .hero-chip--genre.is-war { background: #4d7c0f; }
 .hero-chip--genre.is-documentary { background: #0369a1; }
 .hero-chip--genre.is-sport { background: #059669; }
 .hero-chip--genre.is-western { background: #a16207; }
+.hero-chip--genre.is-media { background: #64748b; }
+.hero-chip--genre.is-hue0 { background: #e11d48; }
+.hero-chip--genre.is-hue1 { background: #f97316; }
+.hero-chip--genre.is-hue2 { background: #eab308; color: #1a1400; }
+.hero-chip--genre.is-hue3 { background: #22c55e; color: #052e16; }
+.hero-chip--genre.is-hue4 { background: #14b8a6; }
+.hero-chip--genre.is-hue5 { background: #06b6d4; color: #042f2e; }
+.hero-chip--genre.is-hue6 { background: #3b82f6; }
+.hero-chip--genre.is-hue7 { background: #6366f1; }
+.hero-chip--genre.is-hue8 { background: #8b5cf6; }
+.hero-chip--genre.is-hue9 { background: #d946ef; }
+.hero-chip--genre.is-hue10 { background: #f43f5e; }
+.hero-chip--genre.is-hue11 { background: #78716c; }
 .hero-chip--genre.is-default { background: rgba(255, 255, 255, 0.2); }
 
 .hero-desc {
   margin: 0 0 1.4rem;
-  color: #d4d4d8;
+  color: #ececee;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55);
   font-size: 1.02rem;
   line-height: 1.55;
   max-width: 34rem;
