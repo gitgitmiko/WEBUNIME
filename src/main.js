@@ -904,6 +904,66 @@ function playerEpisodeSuffix(ep, item = activeMovie) {
   return ep.title ? ` · ${ep.title}` : "";
 }
 
+function episodeListCopy(ep) {
+  const primary = ep.episode != null ? `Episode ${ep.episode}` : episodeLabel(ep);
+  const raw = String(ep.title || "")
+    .replace(/\s*\[end\]\s*$/i, "")
+    .trim();
+  if (!raw) return { primary, secondary: "" };
+  const generic = new RegExp(
+    `^(?:.*\\s)?episode\\s*${ep.episode != null ? ep.episode : ""}\\s*$`,
+    "i"
+  );
+  if (!ep.episode || generic.test(raw) || raw === primary) {
+    return { primary, secondary: "" };
+  }
+  return { primary, secondary: raw };
+}
+
+function syncEpisodeListActive(slug) {
+  $$("#modalEpisodeList .episode-row").forEach((row) => {
+    const on = row.dataset.slug === slug;
+    row.classList.toggle("is-active", on);
+    row.setAttribute("aria-selected", on ? "true" : "false");
+  });
+}
+
+function renderEpisodeList(item, selectedSlug) {
+  const list = $("#modalEpisodeList");
+  const count = $("#modalEpisodeCount");
+  const eps = episodeOptions(item);
+  if (count) count.textContent = `${eps.length} Episode`;
+  if (!list) return;
+  list.replaceChildren(
+    ...eps.map((ep) => {
+      const { primary, secondary } = episodeListCopy(ep);
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "episode-row";
+      btn.dataset.slug = ep.slug;
+      btn.setAttribute("role", "option");
+      btn.setAttribute("aria-selected", ep.slug === selectedSlug ? "true" : "false");
+      btn.innerHTML = `
+        <span class="episode-row-num">${ep.episode ?? "–"}</span>
+        <span class="episode-row-copy">
+          <span class="episode-row-title"></span>
+          ${secondary ? `<span class="episode-row-sub"></span>` : ""}
+        </span>
+        <svg class="episode-row-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+      `;
+      $(".episode-row-title", btn).textContent = primary;
+      const sub = $(".episode-row-sub", btn);
+      if (sub) sub.textContent = secondary;
+      if (ep.slug === selectedSlug) btn.classList.add("is-active");
+      return btn;
+    })
+  );
+  const active = [...list.querySelectorAll(".episode-row")].find(
+    (row) => row.dataset.slug === selectedSlug
+  );
+  active?.scrollIntoView({ block: "nearest" });
+}
+
 function fillEpisodeSelect(selectEl, item, selectedSlug = null) {
   const eps = episodeOptions(item);
   selectEl.replaceChildren(
@@ -920,6 +980,7 @@ function fillEpisodeSelect(selectEl, item, selectedSlug = null) {
     [...eps].reverse().find((e) => e.players?.length) ||
     eps[eps.length - 1];
   selectEl.value = pick.slug;
+  renderEpisodeList(item, pick.slug);
   return pick;
 }
 
@@ -1055,6 +1116,9 @@ async function openModal(movie, opts = {}) {
     epWrap.classList.remove("hidden");
   } else {
     epSelect.replaceChildren();
+    $("#modalEpisodeList")?.replaceChildren();
+    const count = $("#modalEpisodeCount");
+    if (count) count.textContent = "";
     epWrap.classList.add("hidden");
   }
 
@@ -1404,9 +1468,26 @@ function clearSearchUi() {
 
 function setActiveNavLink(hash) {
   const target = hash || "#hero";
-  $$(".nav-links a").forEach((link) => {
+  $$("#navMenu a").forEach((link) => {
     const href = link.getAttribute("href") || "";
     link.classList.toggle("is-active", href === target);
+  });
+  $$(".nav-group").forEach((group) => {
+    const on = Boolean($(".nav-group-menu a.is-active", group));
+    group.classList.toggle("is-active", on);
+  });
+}
+
+function closeNavMenus() {
+  $("#nav")?.classList.remove("is-menu-open");
+  const toggle = $("#navToggle");
+  if (toggle) {
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Buka menu");
+  }
+  $$(".nav-group").forEach((group) => {
+    group.classList.remove("is-open");
+    $(".nav-group-btn", group)?.setAttribute("aria-expanded", "false");
   });
 }
 
@@ -1430,18 +1511,52 @@ function scrollToNavTarget(hash) {
 
 function bindNav() {
   const nav = $("#nav");
+  const toggle = $("#navToggle");
   const onScroll = () => nav.classList.toggle("is-solid", window.scrollY > 40);
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  $$(".nav-links a").forEach((link) => {
+  toggle?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = !nav.classList.contains("is-menu-open");
+    if (!open) {
+      closeNavMenus();
+      return;
+    }
+    nav.classList.add("is-menu-open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Tutup menu");
+  });
+
+  $$(".nav-group-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const group = btn.closest(".nav-group");
+      const willOpen = !group.classList.contains("is-open");
+      $$(".nav-group").forEach((other) => {
+        if (other === group) return;
+        other.classList.remove("is-open");
+        $(".nav-group-btn", other)?.setAttribute("aria-expanded", "false");
+      });
+      group.classList.toggle("is-open", willOpen);
+      btn.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    });
+  });
+
+  $$("#navMenu a").forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href") || "";
       if (!href.startsWith("#")) return;
       e.preventDefault();
+      closeNavMenus();
       scrollToNavTarget(href);
       history.replaceState(null, "", href === "#hero" ? location.pathname : href);
     });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target)) closeNavMenus();
   });
 
   const sectionIds = [
@@ -1669,6 +1784,15 @@ function bindActions() {
   $("#modalEpisodeSelect")?.addEventListener("change", (e) => {
     if (!activeMovie) return;
     activeEpisode = getEpisodeBySlug(activeMovie, e.target.value);
+    syncEpisodeListActive(e.target.value);
+  });
+  $("#modalEpisodeList")?.addEventListener("click", (e) => {
+    const row = e.target.closest(".episode-row");
+    if (!row || !activeMovie) return;
+    const select = $("#modalEpisodeSelect");
+    if (!select) return;
+    select.value = row.dataset.slug || "";
+    select.dispatchEvent(new Event("change"));
   });
   $("#playerBack").addEventListener("click", closePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
@@ -1687,6 +1811,10 @@ function bindActions() {
     }
     if ($$(".nf-dropdown.is-open").length) {
       closeNfDropdowns();
+      return;
+    }
+    if ($("#nav")?.classList.contains("is-menu-open")) {
+      closeNavMenus();
       return;
     }
     if (!$("#player").classList.contains("hidden")) closePlayer();

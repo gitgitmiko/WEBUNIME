@@ -25,17 +25,55 @@
       <a class="brand" href="/" aria-label="WEBUNIME beranda">
         <img class="brand-wordmark" src="/brand/weeboonime.png?v=3" alt="WEBUNIME" width="220" height="43" decoding="async" />
       </a>
-      <nav class="nav-links" aria-label="Menu utama">
+      <button
+        type="button"
+        class="nav-toggle"
+        id="navToggle"
+        aria-label="Buka menu"
+        aria-expanded="false"
+        aria-controls="navMenu"
+      >
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <nav class="nav-links" id="navMenu" aria-label="Menu utama">
         <a href="#hero" class="is-active">Beranda</a>
-        <a href="#anime">Anime Terbaru</a>
-        <a href="#top-anime">Top Anime</a>
-        <a href="#hot-anime">Hot Anime</a>
-        <a href="#series-anime">Series Anime</a>
-        <a href="#anime-movie">Anime Movie</a>
-        <a href="#film-terbaru">Film Terbaru</a>
-        <a href="#horor">Horor</a>
-        <a href="#series">Series Drama</a>
-        <a href="#indonesia">Indonesia</a>
+        <div class="nav-group" data-nav-group="anime">
+          <button type="button" class="nav-group-btn" aria-expanded="false">
+            Anime
+            <svg class="nav-group-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+          <div class="nav-group-menu">
+            <a href="#anime">Anime Terbaru</a>
+            <a href="#top-anime">Top Anime</a>
+            <a href="#hot-anime">Hot Anime</a>
+            <a href="#series-anime">Series Anime</a>
+            <a href="#anime-movie">Anime Movie</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="film">
+          <button type="button" class="nav-group-btn" aria-expanded="false">
+            Film
+            <svg class="nav-group-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+          <div class="nav-group-menu">
+            <a href="#film-terbaru">Film Terbaru</a>
+            <a href="#horor">Horor</a>
+            <a href="#aksi">Aksi &amp; Petualangan</a>
+            <a href="#drama">Drama &amp; Romance</a>
+            <a href="#indonesia">Indonesia</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="series">
+          <button type="button" class="nav-group-btn" aria-expanded="false">
+            Series
+            <svg class="nav-group-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+          <div class="nav-group-menu">
+            <a href="#series">Series Drama</a>
+          </div>
+        </div>
       </nav>
       <div class="nav-actions">
         <label class="search" for="searchInput">
@@ -258,10 +296,6 @@
           </div>
           <div class="modal-grid">
             <div class="modal-col-main">
-              <div class="modal-episodes hidden" id="modalEpisodes">
-                <label class="modal-episode-label" for="modalEpisodeSelect">Episode</label>
-                <select id="modalEpisodeSelect" aria-label="Pilih episode"></select>
-              </div>
               <p class="modal-desc" id="modalDesc"></p>
             </div>
             <aside class="modal-col-side">
@@ -306,6 +340,14 @@
                 <span id="modalRelease"></span>
               </p>
             </aside>
+          </div>
+          <div class="modal-episodes hidden" id="modalEpisodes">
+            <div class="modal-episode-head">
+              <h3>Episode</h3>
+              <span id="modalEpisodeCount"></span>
+            </div>
+            <div class="modal-episode-list" id="modalEpisodeList" role="listbox" aria-label="Daftar episode"></div>
+            <select id="modalEpisodeSelect" hidden aria-hidden="true" tabindex="-1"></select>
           </div>
         </div>
       </div>
