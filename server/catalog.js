@@ -176,14 +176,53 @@ export async function listCollection(
     pool,
     idRows.map((r) => r.id)
   );
+  const items = await attachParentMeta(
+    pool,
+    collection,
+    rows.map((r) => toCard(parsePayload(r.payload), collection))
+  );
 
   return {
     collection,
     page: safePage,
     limit: safeLimit,
     total,
-    items: rows.map((r) => toCard(parsePayload(r.payload), collection)),
+    items,
   };
+}
+
+async function attachParentMeta(pool, collection, items) {
+  const parent =
+    collection === "anime-latest" ? "anime" : collection === "series-latest" ? "series" : null;
+  if (!parent || !items.length) return items;
+  const slugs = [
+    ...new Set(items.map((item) => item.anime_slug || item.slug).filter(Boolean)),
+  ];
+  if (!slugs.length) return items;
+  const [rows] = await pool.query(
+    `SELECT slug, rating, year, payload FROM catalog_items
+     WHERE collection = ? AND slug IN (?)`,
+    [parent, slugs]
+  );
+  const bySlug = new Map();
+  for (const row of rows) {
+    const payload = parsePayload(row.payload) || {};
+    bySlug.set(row.slug, {
+      rating: row.rating || payload.rating,
+      tahun: row.year || payload.tahun,
+      quality: payload.quality,
+    });
+  }
+  return items.map((item) => {
+    const meta = bySlug.get(item.anime_slug || item.slug);
+    if (!meta) return item;
+    return {
+      ...item,
+      rating: item.rating || meta.rating,
+      tahun: item.tahun || meta.tahun,
+      quality: item.quality || meta.quality,
+    };
+  });
 }
 
 export async function searchCatalog({ q = "", limit = 40 } = {}) {

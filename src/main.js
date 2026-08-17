@@ -421,7 +421,11 @@ async function recordWatchHistory(movie) {
 }
 
 function parseRating(value) {
-  const n = Number(String(value ?? "").replace(",", "."));
+  const raw = String(value ?? "")
+    .trim()
+    .replace(",", ".");
+  if (!raw || !/\d/.test(raw)) return null;
+  const n = Number(raw);
   return Number.isFinite(n) ? n : null;
 }
 
