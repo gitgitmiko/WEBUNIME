@@ -203,15 +203,27 @@ input {
 .nav-group-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.55rem);
+  top: 100%;
   left: 0;
   min-width: 13.5rem;
-  padding: 0.45rem 0;
+  padding: 0.7rem 0 0.45rem;
+  border: 0;
+  background: transparent;
+  z-index: 45;
+}
+
+.nav-group-menu::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  right: 0;
+  bottom: 0;
+  left: 0;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: rgba(18, 18, 24, 0.97);
   box-shadow: var(--shadow);
-  z-index: 45;
+  pointer-events: none;
 }
 
 .nav-group:hover .nav-group-menu,
@@ -221,6 +233,8 @@ input {
 }
 
 .nav-group-menu a {
+  position: relative;
+  z-index: 1;
   display: block;
   padding: 0.55rem 1rem;
   color: var(--muted);
@@ -1527,12 +1541,25 @@ body.is-auth-checking .auth-boot,
 }
 
 .episode-row-play {
-  opacity: 0.45;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(229, 9, 20, 0.92);
+  color: #fff;
+  opacity: 0.72;
+  flex-shrink: 0;
 }
 
 .episode-row:hover .episode-row-play,
 .episode-row.is-active .episode-row-play {
   opacity: 1;
+}
+
+.episode-row-play:hover {
+  background: #f40612;
+  transform: scale(1.06);
 }
 
 .modal-col-side {
@@ -1933,9 +1960,14 @@ body.is-auth-checking .auth-boot,
     display: none;
     min-width: 0;
     margin: 0 0 0.35rem;
+    padding: 0;
     border: 0;
     box-shadow: none;
     background: rgba(255, 255, 255, 0.03);
+  }
+
+  .nav-group-menu::before {
+    display: none;
   }
 
   .nav-group.is-open .nav-group-menu {

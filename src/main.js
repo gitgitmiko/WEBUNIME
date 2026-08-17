@@ -949,7 +949,9 @@ function renderEpisodeList(item, selectedSlug) {
           <span class="episode-row-title"></span>
           ${secondary ? `<span class="episode-row-sub"></span>` : ""}
         </span>
-        <svg class="episode-row-play" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        <span class="episode-row-play" title="Putar episode" aria-label="Putar episode">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
+        </span>
       `;
       $(".episode-row-title", btn).textContent = primary;
       const sub = $(".episode-row-sub", btn);
@@ -1793,6 +1795,9 @@ function bindActions() {
     if (!select) return;
     select.value = row.dataset.slug || "";
     select.dispatchEvent(new Event("change"));
+    if (e.target.closest(".episode-row-play")) {
+      openPlayer(activeMovie);
+    }
   });
   $("#playerBack").addEventListener("click", closePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
