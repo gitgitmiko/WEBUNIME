@@ -1473,21 +1473,24 @@ async function loadMoreTrack(trackId) {
 
 function bindRows() {
   $$(".row-track").forEach((track) => {
-    const update = () => {
-      syncRowArrows(track);
-      const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
-      if (track.scrollLeft >= maxScroll - 80) {
-        loadMoreTrack(track.id);
-      }
-    };
-    track.addEventListener("scroll", update, { passive: true });
-    track.addEventListener("load", update, true);
+    const updateArrows = () => syncRowArrows(track);
+    track.addEventListener(
+      "scroll",
+      () => {
+        updateArrows();
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+        // Hanya prefetch jika baris memang overflow dan user sudah geser ke ujung.
+        if (maxScroll > 12 && track.scrollLeft >= maxScroll - 80) {
+          loadMoreTrack(track.id);
+        }
+      },
+      { passive: true }
+    );
 
-    update();
-    requestAnimationFrame(update);
-    setTimeout(update, 100);
-    setTimeout(update, 500);
-    setTimeout(update, 1500);
+    updateArrows();
+    requestAnimationFrame(updateArrows);
+    setTimeout(updateArrows, 100);
+    setTimeout(updateArrows, 500);
   });
 
   $$(".row-arrow").forEach((btn) => {
