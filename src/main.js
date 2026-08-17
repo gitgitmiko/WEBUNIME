@@ -740,6 +740,7 @@ const COUNTRY_ISO = {
   "korea selatan": "kr",
   "north korea": "kp",
   usa: "us",
+  us: "us",
   "u.s.a": "us",
   "united states": "us",
   "united states of america": "us",
@@ -790,15 +791,82 @@ const COUNTRY_ISO = {
   rusia: "ru",
   turkey: "tr",
   turki: "tr",
+  belgium: "be",
+  belgia: "be",
+  ireland: "ie",
+  irlandia: "ie",
+  sweden: "se",
+  swedia: "se",
+  denmark: "dk",
+  poland: "pl",
+  polandia: "pl",
+  "new zealand": "nz",
+  "selandia baru": "nz",
+  argentina: "ar",
+  "south africa": "za",
+  "afrika selatan": "za",
+  switzerland: "ch",
+  swiss: "ch",
+  finland: "fi",
+  finlandia: "fi",
+  "czech republic": "cz",
+  "czechia": "cz",
+  "republik ceko": "cz",
+  ceko: "cz",
+  austria: "at",
+  osterreich: "at",
+  romania: "ro",
+  greece: "gr",
+  yunani: "gr",
+  iran: "ir",
+  israel: "il",
+  portugal: "pt",
+  hungary: "hu",
+  hungaria: "hu",
+  egypt: "eg",
+  mesir: "eg",
+  ukraine: "ua",
+  ukraina: "ua",
+  colombia: "co",
+  kolombia: "co",
+  chile: "cl",
+  nigeria: "ng",
+  pakistan: "pk",
+  bangladesh: "bd",
+  "united arab emirates": "ae",
+  uae: "ae",
+  "uni emirat arab": "ae",
 };
 
-function countryFlagHtml(name) {
+function countryIso(name) {
   const key = String(name || "")
     .toLowerCase()
     .replace(/\./g, "")
     .replace(/\s+/g, " ")
     .trim();
-  const iso = COUNTRY_ISO[key];
+  return COUNTRY_ISO[key] || "";
+}
+
+function resolveMovieCountry(movie) {
+  const direct = String(movie?.negara || movie?.country || "").trim();
+  if (direct) return direct;
+  const sino = String(movie?.sinopsis || "");
+  const match = sino.match(/(?:^|\n)\s*(?:Negara|Country)\s*:\s*([^\n]+)/i);
+  if (match) {
+    const value = match[1]
+      .replace(/\s+/g, " ")
+      .replace(/^[,\s]+|[,\s]+$/g, "")
+      .trim();
+    if (value) return value;
+  }
+  const cat = String(movie?.catalog || movie?.type || "").toLowerCase();
+  if (cat === "indonesia") return "Indonesia";
+  if (cat.includes("anime")) return "Japan";
+  return "";
+}
+
+function countryFlagHtml(name) {
+  const iso = countryIso(name);
   if (!iso) return "";
   return `<img class="hero-chip-flag" src="https://flagcdn.com/w40/${iso}.png" width="18" height="13" alt="" loading="lazy" />`;
 }
@@ -809,8 +877,9 @@ function countryChipsHtml(raw) {
     .map((s) => s.trim())
     .filter(Boolean);
   return names.map((name) => {
+    const iso = countryIso(name) || "default";
     const flag = countryFlagHtml(name);
-    return `<span class="hero-chip hero-chip--country">${flag}${escapeHtml(name)}</span>`;
+    return `<span class="hero-chip hero-chip--country is-${iso}">${flag}${escapeHtml(name)}</span>`;
   });
 }
 
@@ -839,7 +908,7 @@ function heroMetaHtml(movie) {
       `<span class="hero-chip hero-chip--duration">${escapeHtml(movie.durasi)}</span>`
     );
   }
-  chips.push(...countryChipsHtml(movie.negara));
+  chips.push(...countryChipsHtml(resolveMovieCountry(movie)));
   for (const genre of movie.genre || []) {
     if (!genre) continue;
     chips.push(

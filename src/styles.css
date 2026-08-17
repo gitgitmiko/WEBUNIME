@@ -906,6 +906,7 @@ body.is-auth-checking .auth-boot,
 .hero-bg-stack {
   position: absolute;
   inset: 0;
+  z-index: 0;
 }
 
 .hero-bg {
@@ -947,22 +948,24 @@ body.is-auth-checking .auth-boot,
 .hero-shade {
   position: absolute;
   inset: 0;
+  z-index: 2;
+  pointer-events: none;
   background:
     linear-gradient(
       90deg,
-      rgba(8, 8, 12, 0.96) 0%,
-      rgba(8, 8, 12, 0.9) 26%,
-      rgba(8, 8, 12, 0.78) 46%,
-      rgba(8, 8, 12, 0.4) 62%,
-      rgba(8, 8, 12, 0.1) 80%,
-      rgba(8, 8, 12, 0.28) 100%
+      rgba(6, 6, 10, 0.94) 0%,
+      rgba(6, 6, 10, 0.9) 28%,
+      rgba(6, 6, 10, 0.82) 48%,
+      rgba(6, 6, 10, 0.45) 64%,
+      rgba(6, 6, 10, 0.12) 80%,
+      rgba(6, 6, 10, 0.18) 100%
     ),
     linear-gradient(0deg, var(--bg) 0%, transparent 42%);
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   max-width: 640px;
 }
 
@@ -1019,11 +1022,67 @@ body.is-auth-checking .auth-boot,
 }
 
 .hero-chip--year,
-.hero-chip--duration,
-.hero-chip--country {
+.hero-chip--duration {
   background: rgba(255, 255, 255, 0.16);
   font-weight: 600;
 }
+
+.hero-chip--country {
+  gap: 0.4rem;
+  padding: 0.28rem 0.55rem 0.28rem 0.38rem;
+  font-weight: 700;
+  background: #475569;
+}
+
+.hero-chip--country.is-id { background: #e11d48; }
+.hero-chip--country.is-jp { background: #b91c1c; }
+.hero-chip--country.is-kr { background: #1d4ed8; }
+.hero-chip--country.is-us { background: #1e3a8a; }
+.hero-chip--country.is-gb { background: #1e40af; }
+.hero-chip--country.is-cn { background: #dc2626; }
+.hero-chip--country.is-hk { background: #b45309; }
+.hero-chip--country.is-tw { background: #0369a1; }
+.hero-chip--country.is-th { background: #0d9488; }
+.hero-chip--country.is-my { background: #115e59; }
+.hero-chip--country.is-sg { background: #be123c; }
+.hero-chip--country.is-in { background: #c2410c; }
+.hero-chip--country.is-fr { background: #2563eb; }
+.hero-chip--country.is-de { background: #1c1917; }
+.hero-chip--country.is-it { background: #047857; }
+.hero-chip--country.is-es { background: #c2410c; }
+.hero-chip--country.is-au { background: #0f766e; }
+.hero-chip--country.is-ca { background: #b91c1c; }
+.hero-chip--country.is-br { background: #15803d; }
+.hero-chip--country.is-mx { background: #166534; }
+.hero-chip--country.is-ph { background: #1d4ed8; }
+.hero-chip--country.is-vn { background: #b91c1c; }
+.hero-chip--country.is-ru { background: #1e3a8a; }
+.hero-chip--country.is-tr { background: #b91c1c; }
+.hero-chip--country.is-nl { background: #ea580c; }
+.hero-chip--country.is-be { background: #b45309; }
+.hero-chip--country.is-ie { background: #15803d; }
+.hero-chip--country.is-se { background: #0369a1; }
+.hero-chip--country.is-dk { background: #c2410c; }
+.hero-chip--country.is-pl { background: #dc2626; }
+.hero-chip--country.is-nz { background: #0f766e; }
+.hero-chip--country.is-ar { background: #75aadb; color: #082f49; }
+.hero-chip--country.is-za { background: #15803d; }
+.hero-chip--country.is-ch { background: #b91c1c; }
+.hero-chip--country.is-fi { background: #0369a1; }
+.hero-chip--country.is-cz { background: #1d4ed8; }
+.hero-chip--country.is-at { background: #b91c1c; }
+.hero-chip--country.is-ro { background: #b45309; }
+.hero-chip--country.is-gr { background: #1d4ed8; }
+.hero-chip--country.is-ir { background: #15803d; }
+.hero-chip--country.is-il { background: #0369a1; }
+.hero-chip--country.is-pt { background: #047857; }
+.hero-chip--country.is-hu { background: #047857; }
+.hero-chip--country.is-eg { background: #b45309; }
+.hero-chip--country.is-ua { background: #2563eb; }
+.hero-chip--country.is-co { background: #f59e0b; color: #1a1400; }
+.hero-chip--country.is-cl { background: #dc2626; }
+.hero-chip--country.is-no { background: #b91c1c; }
+.hero-chip--country.is-default { background: #475569; }
 
 .hero-chip-flag {
   width: 18px;

@@ -82,6 +82,24 @@ function shortSinopsis(text, max = 280) {
   return first.length > max ? `${first.slice(0, max - 1)}…` : first;
 }
 
+function extractNegara(item, collection = "") {
+  const direct = String(item?.negara || item?.country || "").trim();
+  if (direct) return direct;
+  const sino = String(item?.sinopsis || "");
+  const match = sino.match(/(?:^|\n)\s*(?:Negara|Country)\s*:\s*([^\n]+)/i);
+  if (match) {
+    const value = match[1]
+      .replace(/\s+/g, " ")
+      .replace(/^[,\s]+|[,\s]+$/g, "")
+      .trim();
+    if (value) return value;
+  }
+  const col = String(collection || item?.catalog || "").toLowerCase();
+  if (col === "indonesia") return "Indonesia";
+  if (col === "anime" || col === "anime-movies" || col === "anime-latest") return "Japan";
+  return undefined;
+}
+
 /** Kartu ringan: tanpa players/episodes (dimuat saat modal/player). */
 export function toCard(item, collection = "") {
   if (!item || typeof item !== "object") return item;
@@ -106,7 +124,7 @@ export function toCard(item, collection = "") {
     sumber: item.sumber,
     rilis_iso: item.rilis_iso,
     rilis: item.rilis,
-    negara: item.negara,
+    negara: extractNegara(item, collection),
     bahasa: item.bahasa,
     direksi: item.direksi,
     pemain: item.pemain,
