@@ -648973,5 +648973,92 @@
         "default": false
       }
     ]
+  },
+  "dark-face-2026": {
+    "slug": "dark-face-2026",
+    "film": "Dark face (2026)",
+    "source": "https://tv12.lk21official.cc/dark-face-2026",
+    "scraped_at": "2026-08-18T17:35:27.848Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a845073af332",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/tvvsf6eji36c",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/n5BSqarc9",
+        "default": false
+      }
+    ]
+  },
+  "bohurupi-2024": {
+    "slug": "bohurupi-2024",
+    "film": "Bohurupi (2024)",
+    "source": "https://tv12.lk21official.cc/bohurupi-2024",
+    "scraped_at": "2026-08-18T17:35:27.848Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a84392defc05",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/0m8mh19z720m",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/JEeL4drjg",
+        "default": false
+      }
+    ]
+  },
+  "bulldog-2022": {
+    "slug": "bulldog-2022",
+    "film": "Bulldog (2022)",
+    "source": "https://tv12.lk21official.cc/bulldog-2022",
+    "scraped_at": "2026-08-18T17:35:27.848Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a842997d0f66",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/nmzkud30kwfa",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/6Fw91ejnZ",
+        "default": false
+      }
+    ]
   }
 }
