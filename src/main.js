@@ -12,6 +12,7 @@ let animeLatest = [];
 let catalog = [];
 let favorites = [];
 let watchHistory = [];
+const watchedByTitle = new Map();
 let activeMovie = null;
 /** Slide hero terpisah — jangan timpa activeMovie saat carousel berputar (bisa buka player/modal). */
 let heroMovie = null;
@@ -241,6 +242,49 @@ function findInCatalog(collection, slug) {
   );
 }
 
+function watchedKey(collection, slug) {
+  return `${collection || ""}\t${String(slug || "").toLowerCase()}`;
+}
+
+function parseEpisodeNum(slug, fallback) {
+  const n = Number(fallback);
+  if (Number.isFinite(n) && n > 0) return Math.trunc(n);
+  const m = String(slug || "").match(/episode-(\d+)/i);
+  return m ? Number(m[1]) : null;
+}
+
+function historyForTitle(collection, slug) {
+  const key = String(slug || "").toLowerCase();
+  return (
+    watchHistory.find(
+      (item) => item.collection === collection && String(item.slug || "").toLowerCase() === key
+    ) || null
+  );
+}
+
+function watchedSetForTitle(collection, slug) {
+  return watchedByTitle.get(watchedKey(collection, slug)) || new Set();
+}
+
+async function loadWatchedEpisodes(collection, slug) {
+  if (!currentUser || !collection || !slug) return new Set();
+  const key = watchedKey(collection, slug);
+  try {
+    const { res, data } = await libraryFetch(
+      `/history/${encodeURIComponent(collection)}/${encodeURIComponent(slug)}/episodes`
+    );
+    const slugs = new Set(
+      (res.ok ? data?.items || [] : [])
+        .map((row) => row.episodeSlug)
+        .filter(Boolean)
+    );
+    watchedByTitle.set(key, slugs);
+    return slugs;
+  } catch {
+    return watchedSetForTitle(collection, slug);
+  }
+}
+
 async function libraryFetch(path, options = {}) {
   const res = await fetch(`/api/v1/me${path}`, {
     credentials: "include",
@@ -263,6 +307,7 @@ async function loadUserLibrary() {
   if (!currentUser) {
     favorites = [];
     watchHistory = [];
+    watchedByTitle.clear();
     return;
   }
   try {
@@ -275,6 +320,7 @@ async function loadUserLibrary() {
   } catch {
     favorites = [];
     watchHistory = [];
+    watchedByTitle.clear();
   }
 }
 
@@ -301,11 +347,18 @@ function createLibraryPoster(entry, index = 0, options = {}) {
   btn.className = "poster";
   const title = entry.title || entry.slug;
   btn.setAttribute("aria-label", `Buka ${title}`);
+  const epNum = parseEpisodeNum(entry.episodeSlug, entry.episodeNum);
   const ep =
-    entry.episodeSlug != null
-      ? `<span class="poster-ep-continue">Lanjut</span>`
-      : "";
+    epNum != null
+      ? `<span class="poster-ep-continue">E${epNum}</span>`
+      : entry.episodeSlug
+        ? `<span class="poster-ep-continue">Lanjut</span>`
+        : "";
   const movie = findInCatalog(entry.collection, entry.slug);
+  const epFoot =
+    epNum != null
+      ? `<p class="poster-year">Episode ${epNum}</p>`
+      : posterYearHtml(movie || {});
   btn.innerHTML = `
     ${ep}
     <img src="${entry.thumbnail || ""}" alt="${title}" loading="lazy" width="200" height="300" />
@@ -313,7 +366,7 @@ function createLibraryPoster(entry, index = 0, options = {}) {
     ${posterDurationHtml(movie || {})}
     <div class="poster-foot">
       <p class="poster-label">${title}</p>
-      ${posterYearHtml(movie || {})}
+      ${epFoot}
     </div>
   `;
   btn.addEventListener("click", async () => {
@@ -416,19 +469,31 @@ function renderLibraryRows() {
 async function recordWatchHistory(movie) {
   if (!currentUser || !movie?.slug) return;
   const collection = resolveCollection(movie);
+  const episodeSlug = activeEpisode?.slug || null;
+  const episodeNum = parseEpisodeNum(episodeSlug, activeEpisode?.episode);
   try {
     await libraryFetch("/history", {
       method: "POST",
       body: JSON.stringify({
         collection,
         slug: movie.slug,
-        episodeSlug: activeEpisode?.slug || null,
+        episodeSlug,
+        episodeNum,
         title: movie.nama || movie.judul || movie.slug,
         thumbnail: movie.thumbnail || null,
       }),
     });
+    if (episodeSlug) {
+      const key = watchedKey(collection, movie.slug);
+      const set = watchedByTitle.get(key) || new Set();
+      set.add(episodeSlug);
+      watchedByTitle.set(key, set);
+    }
     await loadUserLibrary();
     renderLibraryRows();
+    if (activeMovie?.slug === movie.slug) {
+      renderEpisodeList(movie, activeEpisode?.slug || null);
+    }
   } catch (err) {
     console.warn("history save failed", err);
   }
@@ -1164,20 +1229,29 @@ function renderEpisodeList(item, selectedSlug) {
   const eps = episodeOptions(item);
   if (count) count.textContent = `${eps.length} Episode`;
   if (!list) return;
+  const collection = resolveCollection(item);
+  const watched = watchedSetForTitle(collection, item?.slug);
+  const last = historyForTitle(collection, item?.slug)?.episodeSlug || "";
   list.replaceChildren(
     ...eps.map((ep) => {
       const { primary, secondary } = episodeListCopy(ep);
+      const seen = watched.has(ep.slug);
+      const lastWatched = last && ep.slug === last;
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "episode-row";
+      if (seen) btn.classList.add("is-watched");
+      if (lastWatched) btn.classList.add("is-last-watched");
       btn.dataset.slug = ep.slug;
       btn.setAttribute("role", "option");
       btn.setAttribute("aria-selected", ep.slug === selectedSlug ? "true" : "false");
+      const seenLabel = lastWatched ? "Terakhir ditonton" : seen ? "Ditonton" : "";
       btn.innerHTML = `
         <span class="episode-row-num">${ep.episode ?? "–"}</span>
         <span class="episode-row-copy">
           <span class="episode-row-title"></span>
           ${secondary ? `<span class="episode-row-sub"></span>` : ""}
+          ${seenLabel ? `<span class="episode-row-seen"></span>` : ""}
         </span>
         <span class="episode-row-play" title="Putar episode" aria-label="Putar episode">
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
@@ -1186,6 +1260,8 @@ function renderEpisodeList(item, selectedSlug) {
       $(".episode-row-title", btn).textContent = primary;
       const sub = $(".episode-row-sub", btn);
       if (sub) sub.textContent = secondary;
+      const seenEl = $(".episode-row-seen", btn);
+      if (seenEl) seenEl.textContent = seenLabel;
       if (ep.slug === selectedSlug) btn.classList.add("is-active");
       return btn;
     })
@@ -1343,9 +1419,17 @@ async function openModal(movie, opts = {}) {
 
   const epWrap = $("#modalEpisodes");
   const epSelect = $("#modalEpisodeSelect");
+  const collection = resolveCollection(movie);
   if (isSeries(movie) && episodeOptions(movie).length) {
-    activeEpisode = fillEpisodeSelect(epSelect, movie, opts.episodeSlug || null);
+    const resumeSlug =
+      opts.episodeSlug || historyForTitle(collection, movie.slug)?.episodeSlug || null;
+    activeEpisode = fillEpisodeSelect(epSelect, movie, resumeSlug);
     epWrap.classList.remove("hidden");
+    loadWatchedEpisodes(collection, movie.slug).then(() => {
+      if (activeMovie?.slug === movie.slug) {
+        renderEpisodeList(movie, activeEpisode?.slug || resumeSlug);
+      }
+    });
   } else {
     epSelect.replaceChildren();
     $("#modalEpisodeList")?.replaceChildren();
@@ -1354,7 +1438,6 @@ async function openModal(movie, opts = {}) {
     epWrap.classList.add("hidden");
   }
 
-  const collection = resolveCollection(movie);
   const favored = favorites.some(
     (f) => f.collection === collection && f.slug === movie.slug
   );
@@ -1621,6 +1704,7 @@ function setupPlayerEpisodes(movie) {
       if (!activeEpisode) return;
       $("#playerTitle").textContent = `${show.nama}${playerEpisodeSuffix(activeEpisode, show)}`;
       setupServers(show);
+      recordWatchHistory(show);
     },
   });
 
@@ -2849,6 +2933,7 @@ function bindAuth() {
     currentUser = null;
     favorites = [];
     watchHistory = [];
+    watchedByTitle.clear();
     renderLibraryRows();
     renderAuthChrome();
     enterAuthGate("login");

@@ -5,6 +5,7 @@ import {
   isFavorite,
   listFavorites,
   listHistory,
+  listWatchedEpisodes,
   removeFavorite,
   removeHistory,
   upsertHistory,
@@ -35,6 +36,7 @@ function parseItemBody(body = {}) {
     title: body.title != null ? String(body.title) : null,
     thumbnail: body.thumbnail != null ? String(body.thumbnail) : null,
     episodeSlug: body.episodeSlug != null ? String(body.episodeSlug) : null,
+    episodeNum: body.episodeNum,
     progressSeconds: body.progressSeconds,
   };
 }
@@ -129,6 +131,25 @@ export function createUserLibraryRouter() {
     } catch (err) {
       console.error("[history/upsert]", err);
       return res.status(500).json({ error: "Gagal menyimpan riwayat." });
+    }
+  });
+
+  router.get("/me/history/:collection/:slug/episodes", async (req, res) => {
+    const user = requireUser(req, res);
+    if (!user) return;
+    const collection = String(req.params.collection || "").trim();
+    const slug = String(req.params.slug || "")
+      .trim()
+      .toLowerCase();
+    if (!ITEM_COLLECTIONS.includes(collection) || !slug) {
+      return res.status(400).json({ error: "collection/slug wajib." });
+    }
+    try {
+      const items = await listWatchedEpisodes(user.id, collection, slug);
+      return res.json({ items });
+    } catch (err) {
+      console.error("[history/episodes]", err);
+      return res.status(500).json({ error: "Gagal memuat episode ditonton." });
     }
   });
 
