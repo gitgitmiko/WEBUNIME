@@ -1,7 +1,7 @@
 {
-  "state": "running",
+  "state": "failed",
   "startedAt": "2026-08-19T17:28:03Z",
-  "finishedAt": null,
+  "finishedAt": "2026-08-19T17:28:48Z",
   "runId": 32281722601,
-  "message": "Scraping in progress"
+  "message": "Catalog sync failed"
 }
