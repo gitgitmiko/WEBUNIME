@@ -114,8 +114,14 @@ function pickReferer(target) {
   ) {
     return "https://abyssplayer.com/";
   }
-  // Segmen P2P (.pict di host acak) butuh Referer playcdn
-  if (/\/docs\/drv|\.pict$/i.test(target.pathname) || host.includes("playcdn")) {
+  // Segmen P2P (.pict / HLS) butuh Referer playcdn; halaman video.php butuh parent videonode
+  if (/\/docs\/drv|\.pict$/i.test(target.pathname) || /\/zzz\/|\/xxx\//i.test(target.pathname)) {
+    return "https://playcdn.de/";
+  }
+  if (host.includes("playcdn")) {
+    if (/video\.php|\/backend\.php|\/verify\.php/i.test(target.pathname)) {
+      return "https://videonode.de/";
+    }
     return "https://playcdn.de/";
   }
   if (
@@ -248,24 +254,30 @@ function injectClientShim(pageUrl) {
       var __slug = String(REAL_PATH).match(/\\/([a-zA-Z0-9_-]{7,17})(?:[/?#]|$)/);
       if (__slug) history.replaceState(null, "", "/" + __slug[1] + "?v=" + encodeURIComponent(__slug[1]));
       else history.replaceState(null, "", REAL_PATH);
+    } else if (IS_P2P) {
+      // Pertahankan prefix proxy agar request relatif (js/, backend.php) tidak 404 di origin app
+      history.replaceState(null, "", PREFIX + REAL_PATH);
     } else {
       history.replaceState(null, "", REAL_PATH);
     }
   } catch (e) {}
 
-  // Cast + TurboVIP: tipu deteksi parent / referrer (wajib playeriframe.sbs)
-  if (IS_CAST || IS_TURBO) {
+  // Cast + TurboVIP + P2P: tipu deteksi parent / referrer
+  if (IS_CAST || IS_TURBO || IS_P2P) {
     try {
       Object.defineProperty(Document.prototype, "referrer", {
         configurable: true,
-        get: function () { return "https://playeriframe.sbs/"; }
+        get: function () {
+          return IS_P2P ? "https://videonode.de/" : "https://playeriframe.sbs/";
+        }
       });
     } catch (e) {}
     try {
       Object.defineProperty(location, "ancestorOrigins", {
         configurable: true,
         get: function () {
-          return { length: 1, 0: "https://playeriframe.sbs/", item: function(){ return "https://playeriframe.sbs/"; } };
+          var o = IS_P2P ? "https://videonode.de/" : "https://playeriframe.sbs/";
+          return { length: 1, 0: o, item: function(){ return o; } };
         }
       });
     } catch (e) {}
@@ -283,17 +295,20 @@ function injectClientShim(pageUrl) {
         if (
           p.startsWith("/api/") ||
           p.startsWith("/api2.php") ||
+          p === "/backend.php" ||
+          p === "/verify.php" ||
           p.startsWith("/zzz/") ||
           p.startsWith("/xxx/") ||
           p.startsWith("/ws/") ||
           p.startsWith("/assets/") ||
+          p.startsWith("/js/") ||
           p.startsWith("/e/") ||
           p.startsWith("/d/") ||
           p.startsWith("/static/") ||
           p.startsWith("/player/") ||
           p.startsWith("/cdn-cgi/") ||
           p.startsWith("/fingerprint-sw") ||
-          (IS_P2P && /\\.(m3u8|ts|m4s|key)(\\?|$)/i.test(p))
+          (IS_P2P && /\\.(m3u8|ts|m4s|key|wasm)(\\?|$)/i.test(p))
         ) {
           return location.origin + PREFIX + p + abs.search + abs.hash;
         }
@@ -633,23 +648,58 @@ function injectClientShim(pageUrl) {
     }, 250);
   }
 
-  // P2P playcdn: setelah overlay dibuang + api2 siap, klik tombol play (.faplbu) sekali
+  // P2P playcdn: buang overlay, auto-klik verifikasi canvas, lalu JW play
   if (IS_P2P) {
     var p2pTries = 0;
+    var p2pPlayed = false;
     var p2pIv = setInterval(function () {
       p2pTries++;
       try {
-        var ov = document.getElementById("overlay");
-        if (ov) ov.remove();
-        var ready = window.p2p && p2p.pc && (p2p.pc.file || p2p.pl && p2p.pl.sources);
-        var btn = document.querySelector(".faplbu");
-        if (ready && btn && !btn.getAttribute("data-wu-clicked")) {
-          btn.setAttribute("data-wu-clicked", "1");
-          btn.click();
-          clearInterval(p2pIv);
+        stripOuterAd();
+        // Tombol / canvas challenge ("Klik tombol…")
+        var challengeBtn = document.querySelector(
+          "button, .button, [role='button'], #challenge, .challenge, canvas"
+        );
+        document.querySelectorAll("button, .button, a.button").forEach(function (el) {
+          var t = (el.textContent || "").toLowerCase();
+          if (/klik|verif|lanjut|continue|start|mulai/i.test(t) && !el.getAttribute("data-wu-clicked")) {
+            el.setAttribute("data-wu-clicked", "1");
+            try { el.click(); } catch (e) {}
+          }
+        });
+        if (challengeBtn && challengeBtn.tagName === "CANVAS" && !challengeBtn.getAttribute("data-wu-ptr")) {
+          challengeBtn.setAttribute("data-wu-ptr", "1");
+          try {
+            var r = challengeBtn.getBoundingClientRect();
+            var cx = r.left + r.width / 2;
+            var cy = r.top + r.height / 2;
+            ["pointerdown", "mousedown", "pointerup", "mouseup", "click"].forEach(function (type) {
+              challengeBtn.dispatchEvent(new MouseEvent(type, {
+                bubbles: true, cancelable: true, clientX: cx, clientY: cy, view: window
+              }));
+            });
+          } catch (e) {}
+        }
+        if (!p2pPlayed && typeof window.jwplayer === "function") {
+          var jw = null;
+          try { jw = window.jwplayer("vstr"); } catch (e) {}
+          if (!jw || typeof jw.play !== "function") {
+            try { jw = window.jwplayer(); } catch (e2) {}
+          }
+          if (jw && typeof jw.play === "function") {
+            var st = "";
+            try { st = jw.getState ? jw.getState() : ""; } catch (e3) {}
+            if (st === "idle" || st === "paused" || st === "ready" || st === "buffering" || !st) {
+              try { jw.play(true); } catch (e4) { try { jw.play(); } catch (e5) {} }
+            }
+            if (st === "playing" || st === "buffering") {
+              p2pPlayed = true;
+              clearInterval(p2pIv);
+            }
+          }
         }
       } catch (e) {}
-      if (p2pTries > 60) clearInterval(p2pIv);
+      if (p2pTries > 80) clearInterval(p2pIv);
     }, 250);
   }
 
@@ -1165,6 +1215,26 @@ function sanitizeHtml(html, pageUrl, origin = "") {
       /<h1[^>]*>\s*Player P2P Maintenance[\s\S]*?<\/h1>/gi,
       ""
     );
+    // playcdn init_core.js wajib global `data = { id }` — HTML mentah dari server sering tanpa ini
+    // (di LK21 kadang diisi PHP/CF). Tanpa data → "Video not found" / layar hitam.
+    const p2pId =
+      pageUrl.searchParams.get("id") ||
+      pageUrl.pathname.split("/").filter(Boolean).pop() ||
+      "";
+    if (p2pId && !/\bvar\s+data\s*=/.test(out) && !/\bwindow\.data\s*=/.test(out)) {
+      const inject =
+        `<script data-webunime-p2p-data>window.data={id:${JSON.stringify(p2pId)}};var data=window.data;</script>`;
+      if (/init_core\.js/i.test(out)) {
+        out = out.replace(
+          /(<script[^>]+init_core\.js[^>]*>\s*<\/script>)/i,
+          `${inject}\n$1`
+        );
+      } else if (/<\/head>/i.test(out)) {
+        out = out.replace(/<\/head>/i, `${inject}\n</head>`);
+      } else {
+        out = inject + out;
+      }
+    }
   }
 
   // Hydrax: matikan deteksi "extension", ganti handler overlay → langsung play
@@ -1702,16 +1772,19 @@ function middleware(req, res, next) {
   // Setelah replaceState, request relatif player mengarah ke origin app (bukan /__px__/...).
   // Jangan ambil alih /assets/ Vite sendiri — hanya remap bila referer masih konteks embed.
   // Hydrax: setelah replaceState ke /{slug}, referer = https://app/{slug} (tanpa /__px__/).
-  // P2P playcdn: HLS /zzz/... dan api2.php setelah replaceState ke /video.php?id=...
+  // P2P playcdn: HLS /zzz/..., backend.php, verify.php setelah replaceState
   if (
     path === "/fingerprint-sw.js" ||
     path.startsWith("/cdn-cgi/") ||
     path.startsWith("/api/") ||
     path === "/api2.php" ||
+    path === "/backend.php" ||
+    path === "/verify.php" ||
     path.startsWith("/zzz/") ||
     path.startsWith("/xxx/") ||
     path.startsWith("/ws/") ||
     path.startsWith("/assets/") ||
+    path.startsWith("/js/") ||
     path.startsWith("/player/")
   ) {
     let host = null;
@@ -1726,6 +1799,9 @@ function middleware(req, res, next) {
         path.startsWith("/zzz/") ||
         path.startsWith("/xxx/") ||
         path === "/api2.php" ||
+        path === "/backend.php" ||
+        path === "/verify.php" ||
+        path.startsWith("/js/") ||
         /video\.php/i.test(ref) ||
         /playcdn|hownetwork/i.test(ref)
       )
@@ -1738,6 +1814,13 @@ function middleware(req, res, next) {
       // Tanpa referer embed: biarkan Vite/static serve (CSS/JS app).
     } catch {
       /* keep null */
+    }
+    // /js/ milik Vite — jangan remap kecuali jelas konteks playcdn
+    if (path.startsWith("/js/") && host === "playcdn.de") {
+      const ref = String(req.headers.referer || "");
+      if (!/playcdn|hownetwork|video\.php|__px__\/playcdn/i.test(ref)) {
+        host = null;
+      }
     }
     if (!host) return next();
     const u = new URL(req.url, "http://local");
