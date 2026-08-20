@@ -865,7 +865,7 @@ function buildHtml5VideoPage(mediaUrl, title = "WEBUNIME Player", origin = "") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${title}</title>
   <style>
-    html, body { margin: 0; height: 100%; background: #000; }
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
     video { width: 100%; height: 100%; object-fit: contain; background: #000; }
     .err { color: #fff; font-family: system-ui, sans-serif; padding: 1.5rem; text-align: center; line-height: 1.5; }
   </style>
@@ -887,7 +887,6 @@ function buildHtml5VideoPage(mediaUrl, title = "WEBUNIME Player", origin = "") {
         fail("Gagal memutar video. Coba ganti server (Blogspot / Mega / resolusi lain).");
       });
       video.addEventListener("loadeddata", function () { shown = true; });
-      // Timeout: kalau 25s masih buffering tanpa frame, beri petunjuk
       setTimeout(function () {
         if (!shown && video.readyState < 2) {
           fail("Loading terlalu lama. Coba Blogspot / Mega, atau resolusi Wibufile lain.");
@@ -909,7 +908,7 @@ function buildHlsPlayerPage(m3u8Url, title = "WEBUNIME Player", origin = "") {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${title}</title>
   <style>
-    html, body { margin: 0; height: 100%; background: #000; }
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
     video { width: 100%; height: 100%; object-fit: contain; background: #000; }
     .err { color: #fff; font-family: system-ui, sans-serif; padding: 1.5rem; text-align: center; }
   </style>
@@ -1326,11 +1325,13 @@ async function handleProxy(req, res) {
       body,
     });
 
-    // Hydrax sora: ikuti redirect di server (sssrr → trycloudflare).
+    // Media: ikuti redirect di server (sora/R2/Wibufile).
     // 302 ke browser sering gagal untuk <video> Range; Origin di hop akhir juga 404.
     const looksMediaHop =
       /\/sora\//i.test(finalUrl.pathname) ||
-      /sssrr\.org|trycloudflare\.com/i.test(finalUrl.hostname) ||
+      /sssrr\.org|trycloudflare\.com|wibufile|r2\.cloudflarestorage|filedon/i.test(
+        finalUrl.hostname
+      ) ||
       /\.(mp4|webm|m4v)(\?|$)/i.test(finalUrl.pathname);
     let redirects = 0;
     while (
@@ -1385,8 +1386,10 @@ async function handleProxy(req, res) {
         /\/docs\/drv/i.test(finalUrl.pathname) ||
         /r2\.cloudflarestorage|wibufile|sssrr\.org|trycloudflare\.com/i.test(finalUrl.hostname));
 
-    // Stream media (jangan buffer full file — penyebab loading abadi di Wibufile/VIP)
-    if (isMedia && method !== "HEAD") {
+    // Stream media (jangan buffer full file — penyebab loading abadi di Wibufile/VIP).
+    // Seek/scrub butuh Content-Length + Content-Range; STRIP_HEADERS menghapusnya
+    // sehingga <video> native tidak bisa geser timeline (TV/ExoPlayer tidak lewat proxy ini).
+    if (isMedia) {
       res.statusCode = upstream.status;
       copySafeHeaders(upstream, res);
       if (/\.mp4/i.test(pathLower) || /\.mp4/i.test(finalUrl.search) || /video\/mp4/i.test(contentType)) {
@@ -1401,8 +1404,19 @@ async function handleProxy(req, res) {
       }
       res.setHeader("Access-Control-Allow-Origin", "*");
       res.setHeader("Access-Control-Expose-Headers", "Content-Length, Content-Range, Accept-Ranges");
-      res.setHeader("Accept-Ranges", "bytes");
-      if (!upstream.body) {
+
+      const contentLength = upstream.headers.get("content-length");
+      const contentRange = upstream.headers.get("content-range");
+      const acceptRanges = upstream.headers.get("accept-ranges");
+      if (contentLength) res.setHeader("Content-Length", contentLength);
+      if (contentRange) res.setHeader("Content-Range", contentRange);
+      if (acceptRanges) {
+        res.setHeader("Accept-Ranges", acceptRanges);
+      } else if (contentLength || contentRange || upstream.status === 206) {
+        res.setHeader("Accept-Ranges", "bytes");
+      }
+
+      if (method === "HEAD" || !upstream.body) {
         res.end();
         return;
       }
