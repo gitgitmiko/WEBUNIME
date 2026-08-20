@@ -1277,12 +1277,21 @@ function sanitizeHtml(html, pageUrl, origin = "") {
     ""
   );
 
-  // Buang beacon Cloudflare yang nembak /cdn-cgi/rum ke localhost
+  // Buang beacon + challenge Cloudflare (inline bootstrap sering bikin iframe → about:blank)
   out = out.replace(/<script[^>]*cloudflareinsights[^>]*>[\s\S]*?<\/script>/gi, "");
   out = out.replace(/\/cdn-cgi\/rum[^"'\s]*/gi, "#");
   out = out.replace(
     /<script[^>]*\/cdn-cgi\/challenge-platform[^>]*>[\s\S]*?<\/script>/gi,
     ""
+  );
+  out = out.replace(
+    /<script\b[^>]*>[\s\S]*?(?:__CF\$cv\$params|challenge-platform\/scripts\/jsd)[\s\S]*?<\/script>/gi,
+    "<!-- cf-challenge stripped -->"
+  );
+  // playcdn: hapus juga script anti-devtools utuh (debugger loop)
+  out = out.replace(
+    /<script\b[^>]*>\s*(?:if\s*\(\s*window\.self[\s\S]*?)?function\s+devtoolIsOpening[\s\S]*?<\/script>/gi,
+    "<!-- anti-devtools removed -->"
   );
 
   const dir = pageUrl.pathname.replace(/[^/]*$/, "") || "/";
