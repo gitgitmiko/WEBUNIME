@@ -283,6 +283,44 @@ function injectClientShim(pageUrl) {
     } catch (e) {}
   }
 
+  // playcdn init_core: gagal decrypt/cek → document.write / about:blank (layar hitam)
+  if (IS_P2P) {
+    try {
+      document.write = function () {};
+      document.writeln = function () {};
+      var __docOpen = document.open.bind(document);
+      document.open = function () {
+        try { return document; } catch (e) { return __docOpen.apply(document, arguments); }
+      };
+    } catch (e) {}
+    try {
+      var __hrefDesc = Object.getOwnPropertyDescriptor(Location.prototype, "href");
+      if (__hrefDesc && __hrefDesc.set) {
+        Object.defineProperty(Location.prototype, "href", {
+          configurable: true,
+          enumerable: true,
+          get: function () { return __hrefDesc.get.call(this); },
+          set: function (v) {
+            if (/about\\s*:\\s*blank/i.test(String(v))) return;
+            return __hrefDesc.set.call(this, v);
+          }
+        });
+      }
+    } catch (e) {}
+    try {
+      var __repl = Location.prototype.replace;
+      Location.prototype.replace = function (v) {
+        if (/about\\s*:\\s*blank/i.test(String(v))) return;
+        return __repl.call(this, v);
+      };
+      var __asg = Location.prototype.assign;
+      Location.prototype.assign = function (v) {
+        if (/about\\s*:\\s*blank/i.test(String(v))) return;
+        return __asg.call(this, v);
+      };
+    } catch (e) {}
+  }
+
   function toProxy(url) {
     try {
       var abs = new URL(String(url), location.href);
@@ -336,6 +374,12 @@ function injectClientShim(pageUrl) {
   var ofetch = window.fetch.bind(window);
   function patchedFetch(input, init) {
     try {
+      var raw = typeof input === "string" ? input : (input && input.url);
+      // WASM: jangan bungkus Request baru — rusak WebAssembly.instantiateStreaming
+      if (raw && /\\.wasm(\\?|$)/i.test(String(raw))) {
+        var wasmUrl = toProxy(String(raw));
+        return ofetch(wasmUrl, init);
+      }
       if (typeof input === "string") input = toProxy(input);
       else if (input && typeof input.url === "string") input = new Request(toProxy(input.url), input);
       init = withCastHeaders(init);
@@ -1566,6 +1610,18 @@ async function handleProxy(req, res) {
       /javascript|ecmascript/i.test(contentType) || pathLower.endsWith(".js");
     if (isJs && /iamcdn|abysscdn|abyssplayer|short\.icu/i.test(finalUrl.hostname)) {
       const patched = patchAbyssPlayerJs(buf.toString("utf8"));
+      res.setHeader("Content-Type", "application/javascript; charset=utf-8");
+      res.setHeader("Cache-Control", "no-store");
+      res.end(patched);
+      return;
+    }
+    if (isJs && /playcdn|hownetwork/i.test(finalUrl.hostname) && /init_core/i.test(pathLower)) {
+      // Cegah navigasi ke about:blank saat cek/decrypt gagal
+      let patched = buf.toString("utf8");
+      patched = patched.replace(/about:blank/gi, "about:invalid");
+      patched =
+        "try{document.write=function(){};document.writeln=function(){};}catch(e){}\n" +
+        patched;
       res.setHeader("Content-Type", "application/javascript; charset=utf-8");
       res.setHeader("Cache-Control", "no-store");
       res.end(patched);
