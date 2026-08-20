@@ -9689,5 +9689,42 @@
         "default": false
       }
     ]
+  },
+  "yellow-eyes-2026": {
+    "slug": "yellow-eyes-2026",
+    "film": "Yellow Eyes (2026)",
+    "source": "https://tv12.lk21official.cc/yellow-eyes-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-20T13:41:50.404Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/AkQm",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8596214a1b5",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/a7yz9qn7pl39",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/yc2f15eLd",
+        "default": false
+      }
+    ]
   }
 }
