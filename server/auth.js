@@ -200,7 +200,7 @@ export function isPublicPath(pathname) {
   if (path.startsWith("/api/admin/")) return true; // diverifikasi secret di router admin
   if (path === "/" || path === "/index.html") return true;
   if (path.startsWith("/assets/")) return true;
-  if (/\.(css|js|map|ico|png|jpe?g|webp|svg|woff2?|ttf|txt)$/i.test(path)) return true;
+  if (/\.(css|js|map|ico|png|jpe?g|webp|svg|woff2?|ttf|txt|wasm)$/i.test(path)) return true;
   return false;
 }
 
@@ -208,7 +208,7 @@ export function isPublicPath(pathname) {
 export function isProxyMediaPath(pathname) {
   const path = pathname.split("?")[0] || "/";
   if (!path.startsWith("/__px__/")) return false;
-  return /(\/zzz\/|\/xxx\/|\/docs\/|\.m3u8$|\.ts$|\.m4s$|\.pict$|\.mp4$|\.m4v$)/i.test(path);
+  return /(\/zzz\/|\/xxx\/|\/docs\/|\.m3u8$|\.ts$|\.m4s$|\.pict$|\.mp4$|\.m4v$|\.wasm$)/i.test(path);
 }
 
 /** Blokir katalog & player API tanpa sesi login. */
