@@ -1277,7 +1277,7 @@ function sanitizeHtml(html, pageUrl, origin = "") {
     ""
   );
 
-  // Buang beacon + challenge Cloudflare (inline bootstrap sering bikin iframe → about:blank)
+  // Buang beacon + challenge Cloudflare (hanya dalam 1 tag <script>, jangan lintas tag)
   out = out.replace(/<script[^>]*cloudflareinsights[^>]*>[\s\S]*?<\/script>/gi, "");
   out = out.replace(/\/cdn-cgi\/rum[^"'\s]*/gi, "#");
   out = out.replace(
@@ -1285,12 +1285,12 @@ function sanitizeHtml(html, pageUrl, origin = "") {
     ""
   );
   out = out.replace(
-    /<script\b[^>]*>[\s\S]*?(?:__CF\$cv\$params|challenge-platform\/scripts\/jsd)[\s\S]*?<\/script>/gi,
+    /<script\b[^>]*>(?:(?!<\/script>)[\s\S])*?(?:__CF\$cv\$params|challenge-platform\/scripts\/jsd)(?:(?!<\/script>)[\s\S])*?<\/script>/gi,
     "<!-- cf-challenge stripped -->"
   );
-  // playcdn: hapus juga script anti-devtools utuh (debugger loop)
+  // playcdn: hapus script anti-devtools utuh (debugger loop) — satu tag saja
   out = out.replace(
-    /<script\b[^>]*>\s*(?:if\s*\(\s*window\.self[\s\S]*?)?function\s+devtoolIsOpening[\s\S]*?<\/script>/gi,
+    /<script\b[^>]*>(?:(?!<\/script>)[\s\S])*?function\s+devtoolIsOpening(?:(?!<\/script>)[\s\S])*?<\/script>/gi,
     "<!-- anti-devtools removed -->"
   );
 
