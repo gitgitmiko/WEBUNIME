@@ -2,7 +2,7 @@
  * Sync inkremental Samehadaku (Playwright — Cloudflare).
  *
  * Anime series: https://v2.samehadaku.how/anime-terbaru/ (halaman 1–5)
- *   → tambah episode baru + refresh player yang masih sparse (<6 / hanya 480p)
+ *   → tambah anime baru + episode baru saja (tanpa refresh/backfill player lama)
  *
  * Anime movie: https://v2.samehadaku.how/anime-movie/
  *   → hanya tambah judul baru ke anime-movies.json
@@ -36,13 +36,7 @@ const SCHEDULE_DAYS = [
   { day: "saturday", label: "Sabtu" },
   { day: "sunday", label: "Minggu" },
 ];
-/** Di bawah ini dianggap belum lengkap → scrape ulang. */
-const PLAYER_MIN_COMPLETE = 6;
-/** Batas refresh sparse per sync (env: ANIME_PLAYER_REFRESH_LIMIT). */
-const PLAYER_REFRESH_LIMIT = Math.max(
-  0,
-  Number(process.env.ANIME_PLAYER_REFRESH_LIMIT || 30) || 30
-);
+/** Di bawah ini dianggap belum lengkap → dipakai repair manual saja. */
 const PLAYER_AJAX_DELAY_MS = 120;
 
 function sleep(ms) {
@@ -457,28 +451,6 @@ function playerCount(ep) {
   return Array.isArray(ep?.players) ? ep.players.length : 0;
 }
 
-function hasHighQuality(players) {
-  return (players || []).some((p) => /(720|1080)\s*p/i.test(String(p.label || "")));
-}
-
-/** Episode belum lengkap: sedikit server, kosong, atau hanya 480p. */
-function isSparsePlayers(ep) {
-  const n = playerCount(ep);
-  if (n <= 0) return true;
-  if (n < PLAYER_MIN_COMPLETE) return true;
-  const labels = (ep.players || []).map((p) => String(p.label || p.server || ""));
-  if (labels.length && labels.every((l) => /480\s*p/i.test(l))) return true;
-  return false;
-}
-
-function shouldKeepNewPlayers(oldPlayers, newPlayers) {
-  if (!newPlayers?.length) return false;
-  if (!oldPlayers?.length) return true;
-  if (newPlayers.length > oldPlayers.length) return true;
-  if (!hasHighQuality(oldPlayers) && hasHighQuality(newPlayers)) return true;
-  return false;
-}
-
 function ensureEpisodeSource(anime, ep) {
   if (ep.source) return ep.source;
   if (!anime?.slug || ep.episode == null || ep.episode === "") return "";
@@ -587,7 +559,6 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
   let addedAnime = 0;
   let updatedAnime = 0;
   let addedEps = 0;
-  let refreshedPlayers = 0;
   const touched = [];
   let changed = false;
 
@@ -674,91 +645,43 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
           changed = true;
         }
       } else {
-        // Anime lama: episode baru ATAU refresh player yang masih sparse
+        // Anime lama: hanya tambah episode baru (tanpa refresh player yang sudah ada)
         const knownNums = new Set((current.episodes || []).map((e) => Number(e.episode)));
         const feedEp = Number(item.episode);
         if (knownNums.has(feedEp)) {
-          const existingEp = (current.episodes || []).find(
-            (e) => Number(e.episode) === feedEp
-          );
-          if (
-            existingEp &&
-            isSparsePlayers(existingEp) &&
-            (existingEp.source || item.episode_source)
-          ) {
-            if (!existingEp.source) existingEp.source = item.episode_source;
-            const before = playerCount(existingEp);
-            const oldPlayers = [...(existingEp.players || [])];
-            console.log(
-              `[samehadaku-sync] refresh players ${item.slug} #${feedEp} (${before} → ?)`
-            );
-            try {
-              await scrapeEpisodePlayers(page, existingEp);
-              if (shouldKeepNewPlayers(oldPlayers, existingEp.players)) {
-                current.players = preferPlayers(current.episodes);
-                refreshedPlayers += 1;
-                touched.push(item.slug);
-                changed = true;
-                console.log(
-                  `[samehadaku-sync] ~players ${item.slug} #${feedEp}: ${before} → ${playerCount(existingEp)}`
-                );
-              } else {
-                existingEp.players = oldPlayers;
-              }
-            } catch (err) {
-              existingEp.players = oldPlayers;
-              console.warn(
-                `[samehadaku-sync] refresh ${item.slug} #${feedEp}:`,
-                err.message
-              );
-            }
-          }
-        } else {
-          console.log(`[samehadaku-sync] +ep ${item.slug} #${feedEp}`);
-          const ep = {
-            episode: feedEp,
-            title: `${current.judul || current.nama} Episode ${feedEp}`,
-            slug: `${item.slug}-episode-${feedEp}`,
-            source: item.episode_source,
-            date: item.released_on || "",
-            released_at: new Date().toISOString(),
-            players: [],
-          };
-          await scrapeEpisodePlayers(page, ep);
-          if (!ep.players?.length) {
-            console.warn(`[samehadaku-sync] ep ${feedEp} tanpa server, tetap disimpan`);
-          }
-          current.episodes = [...(current.episodes || []), ep].sort(
-            (a, b) => a.episode - b.episode
-          );
-          current.episodes_count = current.episodes.length;
-          current.durasi = `${current.episodes.length} eps`;
-          current.players = preferPlayers(current.episodes);
-          if (item.thumbnail && !current.thumbnail) current.thumbnail = item.thumbnail;
-          updatedAnime += 1;
-          addedEps += 1;
-          touched.push(item.slug);
-          changed = true;
+          continue;
         }
+        console.log(`[samehadaku-sync] +ep ${item.slug} #${feedEp}`);
+        const ep = {
+          episode: feedEp,
+          title: `${current.judul || current.nama} Episode ${feedEp}`,
+          slug: `${item.slug}-episode-${feedEp}`,
+          source: item.episode_source,
+          date: item.released_on || "",
+          released_at: new Date().toISOString(),
+          players: [],
+        };
+        await scrapeEpisodePlayers(page, ep);
+        if (!ep.players?.length) {
+          console.warn(`[samehadaku-sync] ep ${feedEp} tanpa server, tetap disimpan`);
+        }
+        current.episodes = [...(current.episodes || []), ep].sort(
+          (a, b) => a.episode - b.episode
+        );
+        current.episodes_count = current.episodes.length;
+        current.durasi = `${current.episodes.length} eps`;
+        current.players = preferPlayers(current.episodes);
+        if (item.thumbnail && !current.thumbnail) current.thumbnail = item.thumbnail;
+        updatedAnime += 1;
+        addedEps += 1;
+        touched.push(item.slug);
+        changed = true;
       }
     } catch (err) {
       console.warn(`[samehadaku-sync] ${item.slug}:`, err.message);
     }
 
     if (i < jobs.length - 1) await sleep(DETAIL_DELAY_MS);
-  }
-
-  // Backfill: episode sparse di luar feed hari ini (mirror Samehadaku sudah lengkap belakangan).
-  const backfillBudget = Math.max(0, PLAYER_REFRESH_LIMIT - refreshedPlayers);
-  if (backfillBudget > 0) {
-    const bf = await backfillSparsePlayers(page, existing, {
-      limit: backfillBudget,
-    });
-    refreshedPlayers += bf.refreshed;
-    if (bf.refreshed > 0) {
-      changed = true;
-      touched.push(...bf.slugs);
-    }
   }
 
   if (changed) {
@@ -773,7 +696,7 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
     added: addedAnime,
     updated: updatedAnime,
     episodes_added: addedEps,
-    players_refreshed: refreshedPlayers,
+    players_refreshed: 0,
     slugs: [...new Set(touched)],
   };
 }
@@ -786,75 +709,6 @@ async function syncAnimeTerbaru(page, dataDirs) {
     results.push(await applyTerbaruToCatalog(page, dataDir, listings));
   }
   return results.length === 1 ? results[0] : results;
-}
-
-/**
- * Scrape ulang episode dengan player sparse (batas [limit] per sync).
- * Prioritas: released_at terbaru, lalu episode tertinggi, lalu paling sedikit player.
- */
-async function backfillSparsePlayers(page, existing, { limit = 30 } = {}) {
-  if (limit <= 0) return { refreshed: 0, slugs: [] };
-
-  const candidates = [];
-  for (const anime of existing) {
-    for (const ep of anime.episodes || []) {
-      if (!isSparsePlayers(ep)) continue;
-      if (!ensureEpisodeSource(anime, ep)) continue;
-      candidates.push({ anime, ep });
-    }
-  }
-
-  candidates.sort((a, b) => {
-    const ra = Date.parse(a.ep.released_at || "") || 0;
-    const rb = Date.parse(b.ep.released_at || "") || 0;
-    if (rb !== ra) return rb - ra;
-    const ea = Number(a.ep.episode) || 0;
-    const eb = Number(b.ep.episode) || 0;
-    if (eb !== ea) return eb - ea;
-    return playerCount(a.ep) - playerCount(b.ep);
-  });
-
-  const batch = candidates.slice(0, limit);
-  let refreshed = 0;
-  const slugs = [];
-
-  console.log(
-    `[samehadaku-sync] backfill sparse players: ${batch.length}/${candidates.length} kandidat (limit ${limit})`
-  );
-
-  for (let i = 0; i < batch.length; i++) {
-    const { anime, ep } = batch[i];
-    const before = playerCount(ep);
-    const oldPlayers = [...(ep.players || [])];
-    try {
-      console.log(
-        `[samehadaku-sync] backfill ${anime.slug} #${ep.episode} (${before} players)`
-      );
-      await scrapeEpisodePlayers(page, ep);
-      if (shouldKeepNewPlayers(oldPlayers, ep.players)) {
-        anime.players = preferPlayers(anime.episodes);
-        refreshed += 1;
-        slugs.push(anime.slug);
-        console.log(
-          `[samehadaku-sync] ~backfill ${anime.slug} #${ep.episode}: ${before} → ${playerCount(ep)}`
-        );
-      } else {
-        ep.players = oldPlayers;
-        console.log(
-          `[samehadaku-sync] backfill keep old ${anime.slug} #${ep.episode} (${before})`
-        );
-      }
-    } catch (err) {
-      ep.players = oldPlayers;
-      console.warn(
-        `[samehadaku-sync] backfill ${anime.slug} #${ep.episode}:`,
-        err.message
-      );
-    }
-    if (i < batch.length - 1) await sleep(DETAIL_DELAY_MS);
-  }
-
-  return { refreshed, slugs: [...new Set(slugs)] };
 }
 
 async function collectMovieListings(page) {
@@ -1191,43 +1045,20 @@ export async function syncSamehadakuCatalog(dataDir, extraDirs = []) {
 }
 
 /**
- * Hanya refresh player episode sparse (tanpa sync feed penuh).
- * @param {string} dataDir
- * @param {{ limit?: number }} [opts]
+ * Legacy: refresh sparse player sudah dinonaktifkan (terlalu lambat di scheduler).
+ * Tetap diekspor agar script lama tidak rusak.
  */
 export async function refreshSparseAnimePlayers(dataDir, opts = {}) {
-  await mkdir(dataDir, { recursive: true });
-  const file = join(dataDir, "anime.json");
-  const existing = await readJsonArray(file);
-  const limit = Math.max(0, Number(opts.limit ?? PLAYER_REFRESH_LIMIT) || 0);
-  if (!existing.length || limit <= 0) {
-    return { refreshed: 0, slugs: [], checked: existing.length };
-  }
-
-  const browser = await launchBrowser();
-  const context = await browser.newContext({
-    userAgent:
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-    viewport: { width: 1365, height: 900 },
-    locale: "id-ID",
-  });
-  await context.addInitScript(() => {
-    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
-  });
-  const page = await context.newPage();
-
-  try {
-    await page.goto(TERBARU_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
-    await waitReady(page);
-    const bf = await backfillSparsePlayers(page, existing, { limit });
-    if (bf.refreshed > 0) {
-      const reindexed = existing.map((row, idx) => ({ ...row, id: idx + 1 }));
-      await writeFile(file, JSON.stringify(reindexed, null, 2) + "\n", "utf8");
-    }
-    return { ...bf, checked: existing.length };
-  } finally {
-    await browser.close();
-  }
+  console.log(
+    "[samehadaku-sync] refreshSparseAnimePlayers dinonaktifkan (pakai repair:episode bila perlu)"
+  );
+  return {
+    refreshed: 0,
+    slugs: [],
+    checked: 0,
+    skipped: true,
+    limit: Number(opts.limit) || 0,
+  };
 }
 
 function sameEpisode(a, b) {

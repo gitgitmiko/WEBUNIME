@@ -8,6 +8,7 @@
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
+import { chromium } from "playwright";
 import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
 import { syncAnoboyLatest } from "./anoboy-sync.js";
 import { syncIndonesiaCatalog } from "./kconaz-indonesia.js";
@@ -24,7 +25,7 @@ import {
 const LIST_BASE = "https://tv12.lk21official.cc";
 const DRAMA_BASE = "https://tv5.nontondrama.my";
 const USER_AGENT =
-  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
 const THROTTLE_MS = 5 * 60 * 1000;
 const DETAIL_DELAY_MS = 200;
@@ -35,27 +36,130 @@ const SERIES_LATEST_ADD_BUDGET = 8;
 /** Budget backfill episode yang belum ada (prioritas di atas judul baru). */
 const SERIES_LATEST_UPDATE_BUDGET = 24;
 const QUALITY_BACKFILL_PAGES = 5;
+const FETCH_TIMEOUT_MS = 45000;
+const CF_WAIT_MS = 90000;
 
 let syncInFlight = null;
 let lastSyncAt = 0;
 let lastSyncResult = null;
+let lk21Browser = null;
+let lk21Context = null;
+let lk21Page = null;
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-async function fetchHtml(url, referer = `${LIST_BASE}/`) {
-  const res = await fetch(url, {
-    headers: {
-      "User-Agent": USER_AGENT,
-      Accept: "text/html,application/xhtml+xml",
+function emptyLk21Result(error) {
+  const out = {
+    checked: 0,
+    added: 0,
+    updated: 0,
+    slugs: [],
+    updatedSlugs: [],
+  };
+  if (error) out.error = String(error?.message || error);
+  return out;
+}
+
+async function waitCloudflareClear(page, timeoutMs = CF_WAIT_MS) {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    const title = await page.title();
+    if (
+      !/just a moment|tunggu sebentar|attention required|checking your browser|cloudflare/i.test(
+        title
+      )
+    ) {
+      return true;
+    }
+    await page.waitForTimeout(1000);
+  }
+  return false;
+}
+
+async function ensureLk21Page() {
+  if (lk21Page) return lk21Page;
+  const opts = {
+    headless: true,
+    args: ["--disable-blink-features=AutomationControlled"],
+  };
+  try {
+    lk21Browser = await chromium.launch({ ...opts, channel: "chrome" });
+  } catch {
+    lk21Browser = await chromium.launch(opts);
+  }
+  lk21Context = await lk21Browser.newContext({
+    userAgent: USER_AGENT,
+    viewport: { width: 1365, height: 900 },
+    locale: "id-ID",
+    extraHTTPHeaders: {
       "Accept-Language": "id-ID,id;q=0.9,en;q=0.8",
-      Referer: referer,
     },
-    redirect: "follow",
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
-  return { html: await res.text(), finalUrl: res.url };
+  await lk21Context.addInitScript(() => {
+    Object.defineProperty(navigator, "webdriver", { get: () => undefined });
+  });
+  lk21Page = await lk21Context.newPage();
+  return lk21Page;
+}
+
+async function closeLk21Browser() {
+  try {
+    await lk21Context?.close();
+  } catch {
+    /* ignore */
+  }
+  try {
+    await lk21Browser?.close();
+  } catch {
+    /* ignore */
+  }
+  lk21Browser = null;
+  lk21Context = null;
+  lk21Page = null;
+}
+
+async function fetchHtmlPlain(url, referer = `${LIST_BASE}/`) {
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+  try {
+    const res = await fetch(url, {
+      headers: {
+        "User-Agent": USER_AGENT,
+        Accept: "text/html,application/xhtml+xml",
+        "Accept-Language": "id-ID,id;q=0.9,en;q=0.8",
+        Referer: referer,
+      },
+      redirect: "follow",
+      signal: ctrl.signal,
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
+    return { html: await res.text(), finalUrl: res.url };
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function fetchHtmlPlaywright(url, referer = `${LIST_BASE}/`) {
+  const page = await ensureLk21Page();
+  await page.setExtraHTTPHeaders({ Referer: referer });
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
+  if (!(await waitCloudflareClear(page))) {
+    throw new Error(`Cloudflare timeout ${url}`);
+  }
+  await page.waitForTimeout(400);
+  return { html: await page.content(), finalUrl: page.url() };
+}
+
+/** LK21 di belakang Cloudflare — Playwright dulu, fallback fetch polos. */
+async function fetchHtml(url, referer = `${LIST_BASE}/`) {
+  try {
+    return await fetchHtmlPlaywright(url, referer);
+  } catch (pwErr) {
+    console.warn(`[lk21-sync] playwright gagal → fetch: ${pwErr.message}`);
+    return fetchHtmlPlain(url, referer);
+  }
 }
 
 function stripTags(html) {
@@ -1216,12 +1320,33 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     console.log("[catalog-sync] mulai (LK21 → kconaz Indonesia → Samehadaku → Anoboy)…");
     await clearIsNewFlags(dataDir);
     const results = {
-      movies: await syncMoviesCatalog(dataDir),
-      series: await syncSeriesCatalog(dataDir),
+      movies: emptyLk21Result(),
+      series: emptyLk21Result(),
       seriesLatest: { checked: 0, feed: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
-      horror: await syncHorrorCatalog(dataDir),
+      horror: emptyLk21Result(),
       indonesia: { checked: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
     };
+
+    try {
+      results.movies = await syncMoviesCatalog(dataDir);
+    } catch (err) {
+      console.warn("[sync] lk21 movies:", err.message);
+      results.movies = emptyLk21Result(err);
+    }
+
+    try {
+      results.series = await syncSeriesCatalog(dataDir);
+    } catch (err) {
+      console.warn("[sync] lk21 series:", err.message);
+      results.series = emptyLk21Result(err);
+    }
+
+    try {
+      results.horror = await syncHorrorCatalog(dataDir);
+    } catch (err) {
+      console.warn("[sync] lk21 horror:", err.message);
+      results.horror = emptyLk21Result(err);
+    }
 
     try {
       results.seriesLatest = await syncSeriesLatestCatalog(dataDir);
@@ -1350,5 +1475,6 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     return await syncInFlight;
   } finally {
     syncInFlight = null;
+    await closeLk21Browser();
   }
 }
