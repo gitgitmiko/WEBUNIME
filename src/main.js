@@ -530,9 +530,17 @@ function formatQuality(raw) {
   return map[key] || value.toUpperCase();
 }
 
+function isNewItem(movie) {
+  const v = movie?.is_new;
+  return v === true || v === 1 || v === "1";
+}
+
 function posterBadgesHtml(movie) {
   const rating = parseRating(movie?.rating);
   const quality = formatQuality(movie?.quality);
+  const newHtml = isNewItem(movie)
+    ? `<span class="poster-badge poster-badge--new" title="Baru">NEW</span>`
+    : "";
   const ratingHtml =
     rating != null
       ? `<span class="poster-badge poster-badge--rating" title="Rating"><span class="poster-star" aria-hidden="true">★</span>${rating}</span>`
@@ -542,8 +550,11 @@ function posterBadgesHtml(movie) {
         /cam/i.test(quality) ? " is-cam" : ""
       }" title="Kualitas">${quality}</span>`
     : "";
-  if (!ratingHtml && !qualityHtml) return "";
-  return `<div class="poster-badges">${ratingHtml}${qualityHtml}</div>`;
+  const start = [newHtml, ratingHtml].filter(Boolean).join("");
+  if (!start && !qualityHtml) return "";
+  return `<div class="poster-badges">${
+    start ? `<span class="poster-badges-start">${start}</span>` : ""
+  }${qualityHtml}</div>`;
 }
 
 function posterYearHtml(movie) {
@@ -606,6 +617,7 @@ function createLatestEpisodePoster(item, index = 0) {
     quality: show?.quality || item.quality,
     tahun: show?.tahun || item.tahun,
     durasi: item.episode != null ? `E${item.episode}` : show?.durasi || item.durasi,
+    is_new: item.is_new ?? show?.is_new,
   };
   btn.innerHTML = `
     <img src="${item.thumbnail}" alt="${item.nama}" loading="lazy" width="200" height="300" />

@@ -1569,6 +1569,14 @@ body.is-auth-checking .auth-boot,
   pointer-events: none;
 }
 
+.poster-badges-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
 .poster-badge {
   display: inline-flex;
   align-items: center;
@@ -1581,6 +1589,11 @@ body.is-auth-checking .auth-boot,
   line-height: 1.2;
   color: #fff;
   background: rgba(0, 0, 0, 0.72);
+}
+
+.poster-badge--new {
+  background: rgba(229, 9, 20, 0.95);
+  letter-spacing: 0.06em;
 }
 
 .poster-badge--rating {
