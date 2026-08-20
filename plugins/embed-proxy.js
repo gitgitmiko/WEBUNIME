@@ -23,6 +23,33 @@ const STRIP_HEADERS = new Set([
   "transfer-encoding",
 ]);
 
+/** Cache WASM playcdn agar bisa di-inline ke shim (tanpa fetch di browser). */
+let aesCtrWasmCache = { b64: "", at: 0 };
+
+async function ensureAesCtrWasmB64() {
+  if (aesCtrWasmCache.b64 && Date.now() - aesCtrWasmCache.at < 6 * 60 * 60 * 1000) {
+    return aesCtrWasmCache.b64;
+  }
+  try {
+    const upstream = await fetch("https://playcdn.de/js/aes_ctr.wasm", {
+      headers: {
+        "User-Agent": USER_AGENT,
+        Accept: "application/wasm,*/*",
+        Referer: "https://playcdn.de/",
+      },
+    });
+    if (!upstream.ok) throw new Error("wasm " + upstream.status);
+    const buf = Buffer.from(await upstream.arrayBuffer());
+    if (buf.length < 100 || buf[0] !== 0x00 || buf[1] !== 0x61) {
+      throw new Error("wasm magic invalid");
+    }
+    aesCtrWasmCache = { b64: buf.toString("base64"), at: Date.now() };
+    return aesCtrWasmCache.b64;
+  } catch {
+    return aesCtrWasmCache.b64 || "";
+  }
+}
+
 function isPrivateHost(hostname) {
   const h = String(hostname || "")
     .toLowerCase()
@@ -225,7 +252,7 @@ function buildUpstreamHeaders(target, req) {
   return headers;
 }
 
-function injectClientShim(pageUrl) {
+function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
   const real = pageUrl.href;
   const host = pageUrl.host;
   const prefix = `/__px__/${host}`;
@@ -245,6 +272,7 @@ function injectClientShim(pageUrl) {
   var IS_CAST=${isCast ? "true" : "false"};
   var IS_TURBO=${isTurbo ? "true" : "false"};
   var IS_P2P=${isP2p ? "true" : "false"};
+  var __wuWasmB64=${JSON.stringify(wasmB64 || "")};
   var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn|showcdnx)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
@@ -372,10 +400,41 @@ function injectClientShim(pageUrl) {
   }
 
   var ofetch = window.fetch.bind(window);
+  var __wuWasmP = null;
+  function __wuLoadWasm() {
+    if (!__wuWasmP) {
+      if (__wuWasmB64) {
+        __wuWasmP = Promise.resolve((function () {
+          var bin = atob(__wuWasmB64);
+          var u8 = new Uint8Array(bin.length);
+          for (var i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
+          return u8.buffer;
+        })());
+      } else {
+        var __wuWasmUrl = location.origin + PREFIX + "/js/aes_ctr.wasm";
+        __wuWasmP = ofetch(__wuWasmUrl).then(function (r) {
+          if (!r.ok) throw new Error("wasm " + r.status);
+          return r.arrayBuffer();
+        });
+      }
+    }
+    return __wuWasmP;
+  }
   function patchedFetch(input, init) {
     try {
       var raw = typeof input === "string" ? input : (input && input.url);
-      // WASM: jangan bungkus Request baru — rusak WebAssembly.instantiateStreaming
+      // playcdn: sajikan WASM dari preload (hindari gagal jaringan / MIME di DevTools)
+      if (IS_P2P && raw && /aes_ctr\\.wasm/i.test(String(raw))) {
+        return __wuLoadWasm().then(function (buf) {
+          return new Response(buf.slice(0), {
+            status: 200,
+            headers: {
+              "Content-Type": "application/wasm",
+              "Content-Length": String(buf.byteLength),
+            },
+          });
+        });
+      }
       if (raw && /\\.wasm(\\?|$)/i.test(String(raw))) {
         var wasmUrl = toProxy(String(raw));
         return ofetch(wasmUrl, init);
@@ -393,6 +452,21 @@ function injectClientShim(pageUrl) {
   // Media GCS diurus Service Worker (transparan).
   if (!IS_ABYSS) {
   window.fetch = patchedFetch;
+
+  if (IS_P2P && typeof WebAssembly !== "undefined") {
+    try {
+      __wuLoadWasm();
+      WebAssembly.instantiateStreaming = function (source, imports) {
+        return Promise.resolve(source)
+          .then(function (res) {
+            if (res && typeof res.arrayBuffer === "function") return res.arrayBuffer();
+            return __wuLoadWasm();
+          })
+          .catch(function () { return __wuLoadWasm(); })
+          .then(function (buf) { return WebAssembly.instantiate(buf, imports); });
+      };
+    } catch (e) {}
+  }
 
   var oopen = XMLHttpRequest.prototype.open;
   var oset = XMLHttpRequest.prototype.setRequestHeader;
@@ -1175,7 +1249,7 @@ function buildMessagePage(title, message) {
 </html>`;
 }
 
-function sanitizeHtml(html, pageUrl, origin = "") {
+function sanitizeHtml(html, pageUrl, origin = "", { wasmB64 = "" } = {}) {
   // P2P sering maintenance
   if (
     /hownetwork/i.test(pageUrl.hostname) &&
@@ -1340,7 +1414,7 @@ function sanitizeHtml(html, pageUrl, origin = "") {
 
   const dir = pageUrl.pathname.replace(/[^/]*$/, "") || "/";
   const baseHref = `/__px__/${pageUrl.host}${dir}`;
-  const shim = injectClientShim(pageUrl);
+  const shim = injectClientShim(pageUrl, { wasmB64 });
   const baseTag = `<base href="${baseHref}">`;
 
   if (/<head[^>]*>/i.test(out)) {
@@ -1497,9 +1571,14 @@ async function handleProxy(req, res) {
     const isHtml = /text\/html/i.test(contentType);
     const isM3u8 =
       /mpegurl|m3u8/i.test(contentType) || pathLower.endsWith(".m3u8");
+    // .wasm sering dikirim sebagai octet-stream — jangan masuk jalur stream media
+    // (instantiateStreaming butuh application/wasm + body utuh)
+    const isWasm =
+      pathLower.endsWith(".wasm") || /application\/wasm/i.test(contentType);
     const isMedia =
       !isHtml &&
       !isM3u8 &&
+      !isWasm &&
       (/video\/|audio\//i.test(contentType) ||
         /application\/octet-stream/i.test(contentType) ||
         /image\/x-pict/i.test(contentType) ||
@@ -1577,7 +1656,11 @@ async function handleProxy(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
 
     if (isHtml) {
-      const html = sanitizeHtml(buf.toString("utf8"), finalUrl, origin);
+      let wasmB64 = "";
+      if (/playcdn|hownetwork/i.test(finalUrl.hostname)) {
+        wasmB64 = await ensureAesCtrWasmB64();
+      }
+      const html = sanitizeHtml(buf.toString("utf8"), finalUrl, origin, { wasmB64 });
       res.setHeader("Content-Type", "text/html; charset=utf-8");
       res.end(html);
       return;
@@ -1608,6 +1691,25 @@ async function handleProxy(req, res) {
 
     const isJs =
       /javascript|ecmascript/i.test(contentType) || pathLower.endsWith(".js");
+    if (pathLower.endsWith(".wasm") || /application\/wasm/i.test(contentType)) {
+      res.statusCode = upstream.status || 200;
+      res.setHeader("Content-Type", "application/wasm");
+      const upstreamLen = upstream.headers.get("content-length");
+      if (method === "HEAD") {
+        res.setHeader("Content-Length", upstreamLen || "4021");
+        res.setHeader("Access-Control-Allow-Origin", "*");
+        res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
+        res.setHeader("Cache-Control", "public, max-age=86400");
+        res.end();
+        return;
+      }
+      res.setHeader("Content-Length", String(buf.length));
+      res.setHeader("Access-Control-Allow-Origin", "*");
+      res.setHeader("Cross-Origin-Resource-Policy", "cross-origin");
+      res.setHeader("Cache-Control", "public, max-age=86400");
+      res.end(buf);
+      return;
+    }
     if (isJs && /iamcdn|abysscdn|abyssplayer|short\.icu/i.test(finalUrl.hostname)) {
       const patched = patchAbyssPlayerJs(buf.toString("utf8"));
       res.setHeader("Content-Type", "application/javascript; charset=utf-8");
@@ -1619,6 +1721,11 @@ async function handleProxy(req, res) {
       // Cegah navigasi ke about:blank saat cek/decrypt gagal
       let patched = buf.toString("utf8");
       patched = patched.replace(/about:blank/gi, "about:invalid");
+      // Absolute playcdn → same-origin proxy (XHR backend/verify/wasm)
+      patched = patched.replace(
+        /https?:\/\/(?:www\.)?playcdn\.de\//gi,
+        "/__px__/playcdn.de/"
+      );
       patched =
         "try{document.write=function(){};document.writeln=function(){};}catch(e){}\n" +
         patched;
@@ -1880,8 +1987,12 @@ function middleware(req, res, next) {
     } catch {
       /* keep null */
     }
+    // /js/*.wasm playcdn — selalu remap (Vite tidak punya file ini)
+    if (path.startsWith("/js/") && /\.wasm$/i.test(path)) {
+      host = "playcdn.de";
+    }
     // /js/ milik Vite — jangan remap kecuali jelas konteks playcdn
-    if (path.startsWith("/js/") && host === "playcdn.de") {
+    else if (path.startsWith("/js/") && host === "playcdn.de") {
       const ref = String(req.headers.referer || "");
       if (!/playcdn|hownetwork|video\.php|__px__\/playcdn/i.test(ref)) {
         host = null;
