@@ -18,6 +18,8 @@ let activeMovie = null;
 let heroMovie = null;
 let activeEpisode = null;
 let playerTimer = null;
+let autoNextArmed = false;
+const AUTO_NEXT_STORAGE_KEY = "wu_auto_next_episode";
 let modalIsFavorite = false;
 let heroSlides = [];
 let heroSlideIndex = 0;
@@ -1595,6 +1597,7 @@ async function showEmbed(url) {
     overlay.classList.add("hidden");
     player.classList.add("is-playing", "is-embed");
     $("#playerHint").textContent = `Server: ${serverLabel(url)}`;
+    armAutoNext();
   } catch (err) {
     if (reqId !== embedRequestId) return;
     console.error(err);
@@ -1688,11 +1691,172 @@ function setupServers(movie) {
   return true;
 }
 
+function isAutoNextEnabled() {
+  try {
+    return localStorage.getItem(AUTO_NEXT_STORAGE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function setAutoNextEnabled(on) {
+  try {
+    localStorage.setItem(AUTO_NEXT_STORAGE_KEY, on ? "1" : "0");
+  } catch {
+    /* ignore */
+  }
+}
+
+function currentServerKey(movie = activeMovie) {
+  const players = currentPlayers(movie);
+  const hit = players.find((p) => p.url === currentServerUrl);
+  return String(hit?.server || "").toLowerCase();
+}
+
+function pickContinuityPlayer(players, preferredUrl, preferredServer) {
+  if (!players?.length) return null;
+  if (preferredUrl) {
+    const sameUrl = players.find((p) => p.url === preferredUrl);
+    if (sameUrl) return sameUrl;
+  }
+  const key = String(preferredServer || "").toLowerCase();
+  if (key) {
+    const sameServer = players.find((p) => (p.server || "").toLowerCase() === key);
+    if (sameServer) return sameServer;
+  }
+  return pickPreferredPlayer(activeMovie, players);
+}
+
+function adjacentEpisode(delta) {
+  const eps = episodeOptions(activeMovie);
+  if (!eps.length || !activeEpisode) return null;
+  const idx = eps.findIndex((e) => e.slug === activeEpisode.slug);
+  if (idx < 0) return null;
+  return eps[idx + delta] || null;
+}
+
+function syncEpisodeDropdown(slug) {
+  const wrap = $("#playerEpisodeDropdown");
+  if (!wrap || wrap.classList.contains("hidden")) return;
+  const valueEl = $("#playerEpisodeValue");
+  const ep = getEpisodeBySlug(activeMovie, slug);
+  if (valueEl) valueEl.textContent = episodeLabel(ep);
+  $$("#playerEpisodeMenu .nf-dropdown-option").forEach((btn) => {
+    const on = btn.dataset.value === slug;
+    btn.classList.toggle("is-active", on);
+    btn.setAttribute("aria-selected", on ? "true" : "false");
+  });
+}
+
+function updateEpisodeNavUi() {
+  const nav = $("#playerEpNav");
+  const prevBtn = $("#playerEpPrev");
+  const nextBtn = $("#playerEpNext");
+  const auto = $("#playerAutoNext");
+  if (!nav || !prevBtn || !nextBtn) return;
+
+  const eps = episodeOptions(activeMovie);
+  const show = isSeries(activeMovie) && eps.length > 1;
+  nav.classList.toggle("hidden", !show);
+  if (!show) return;
+
+  const on = isAutoNextEnabled();
+  if (auto) {
+    auto.checked = on;
+    auto.closest(".player-auto-next")?.classList.toggle("is-on", on);
+  }
+  prevBtn.disabled = !adjacentEpisode(-1);
+  nextBtn.disabled = !adjacentEpisode(1);
+}
+
+function goToEpisode(slug, { auto = false } = {}) {
+  const show = activeMovie;
+  if (!show || !slug) return false;
+  const ep = getEpisodeBySlug(show, slug);
+  if (!ep) return false;
+
+  const preferredUrl = currentServerUrl;
+  const preferredServer = currentServerKey(show);
+
+  activeEpisode = ep;
+  autoNextArmed = false;
+  $("#playerTitle").textContent = `${show.nama}${playerEpisodeSuffix(activeEpisode, show)}`;
+  syncEpisodeDropdown(ep.slug);
+  updateEpisodeNavUi();
+
+  const players = currentPlayers(show);
+  if (!players.length) {
+    clearEmbed();
+    $("#playerHint").textContent = auto
+      ? "Episode berikutnya tanpa server — pilih manual."
+      : "Episode ini belum punya server.";
+    recordWatchHistory(show);
+    return false;
+  }
+
+  const pick = pickContinuityPlayer(players, preferredUrl, preferredServer);
+  populateNfDropdown($("#playerServerDropdown"), {
+    valueId: "playerServerValue",
+    selectedValue: pick.url,
+    items: players.map((p) => ({
+      value: p.url,
+      label: formatServerName(p),
+    })),
+    onSelect: (url) => selectServer(url),
+  });
+  $("#playerServerDropdown").classList.remove("hidden");
+  if (auto) {
+    $("#playerHint").textContent = `Auto next → ${episodeLabel(ep)}`;
+  }
+  selectServer(pick.url);
+  recordWatchHistory(show);
+  renderEpisodeList(show, ep.slug);
+  return true;
+}
+
+function goAdjacentEpisode(delta, { auto = false } = {}) {
+  const next = adjacentEpisode(delta);
+  if (!next) return false;
+  return goToEpisode(next.slug, { auto });
+}
+
+function armAutoNext() {
+  autoNextArmed = Boolean(
+    isAutoNextEnabled() &&
+      isSeries(activeMovie) &&
+      episodeOptions(activeMovie).length > 1 &&
+      adjacentEpisode(1)
+  );
+}
+
+function tryAutoNextEpisode() {
+  if (!autoNextArmed || !isAutoNextEnabled()) return;
+  if ($("#player")?.classList.contains("hidden")) return;
+  autoNextArmed = false;
+  goAdjacentEpisode(1, { auto: true });
+}
+
+function isWebunimeEndedMessage(data) {
+  if (!data) return false;
+  if (typeof data === "string") {
+    return /webunime:ended|"ended"|complete/i.test(data);
+  }
+  if (typeof data !== "object") return false;
+  const type = String(data.type || data.event || data.name || "").toLowerCase();
+  const source = String(data.source || data.origin || "");
+  if (source === "webunime" && (type === "ended" || type === "complete")) return true;
+  if (type === "webunime:ended" || type === "ended" || type === "complete") {
+    return source === "webunime" || data.webunime === true;
+  }
+  return false;
+}
+
 function setupPlayerEpisodes(movie) {
   const wrap = $("#playerEpisodeDropdown");
   const eps = episodeOptions(movie);
   if (!isSeries(movie) || !eps.length) {
     wrap.classList.add("hidden");
+    updateEpisodeNavUi();
     return;
   }
 
@@ -1709,18 +1873,11 @@ function setupPlayerEpisodes(movie) {
       value: ep.slug,
       label: episodeLabel(ep),
     })),
-    onSelect: (slug) => {
-      // Pakai `movie` dari closure, bukan activeMovie global (hero carousel bisa menimpa).
-      const show = movie || activeMovie;
-      activeEpisode = getEpisodeBySlug(show, slug);
-      if (!activeEpisode) return;
-      $("#playerTitle").textContent = `${show.nama}${playerEpisodeSuffix(activeEpisode, show)}`;
-      setupServers(show);
-      recordWatchHistory(show);
-    },
+    onSelect: (slug) => goToEpisode(slug),
   });
 
   wrap.classList.remove("hidden");
+  updateEpisodeNavUi();
 }
 
 async function openPlayer(movie) {
@@ -1756,6 +1913,7 @@ async function openPlayer(movie) {
   if (!hasServers) {
     $("#playerHint").textContent = "Mode demo — preview poster cinematic";
   }
+  updateEpisodeNavUi();
   stopHeroCarousel();
   recordWatchHistory(movie);
 }
@@ -1765,9 +1923,11 @@ function closePlayer() {
   player.classList.add("hidden");
   player.classList.remove("is-playing", "is-embed");
   currentServerUrl = null;
+  autoNextArmed = false;
   clearEmbed();
   clearInterval(playerTimer);
   closeNfDropdowns();
+  $("#playerEpNav")?.classList.add("hidden");
   document.body.style.overflow = $("#modal").classList.contains("hidden") ? "" : "hidden";
   startHeroCarousel();
 }
@@ -2146,6 +2306,20 @@ function bindActions() {
   });
   $("#playerBack").addEventListener("click", closePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
+  $("#playerEpPrev")?.addEventListener("click", () => goAdjacentEpisode(-1));
+  $("#playerEpNext")?.addEventListener("click", () => goAdjacentEpisode(1));
+  $("#playerAutoNext")?.addEventListener("change", (e) => {
+    const on = Boolean(e.target.checked);
+    setAutoNextEnabled(on);
+    e.target.closest(".player-auto-next")?.classList.toggle("is-on", on);
+    if (on) armAutoNext();
+    else autoNextArmed = false;
+  });
+  window.addEventListener("message", (e) => {
+    if ($("#player")?.classList.contains("hidden")) return;
+    if (!isWebunimeEndedMessage(e.data)) return;
+    tryAutoNextEpisode();
+  });
 
   bindNfDropdown($("#playerEpisodeDropdown"));
   bindNfDropdown($("#playerServerDropdown"));

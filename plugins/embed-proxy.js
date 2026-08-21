@@ -929,6 +929,46 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
       if (tt > 40) clearInterval(tiv);
     }, 500);
   }
+
+  // Auto-next: kabari parent saat video / JW selesai
+  (function notifyEnded() {
+    var sent = false;
+    function fire() {
+      if (sent) return;
+      sent = true;
+      try {
+        var msg = { source: "webunime", type: "ended" };
+        if (window.parent && window.parent !== window) window.parent.postMessage(msg, "*");
+        if (window.top && window.top !== window && window.top !== window.parent) {
+          window.top.postMessage(msg, "*");
+        }
+      } catch (e) {}
+    }
+    document.addEventListener(
+      "ended",
+      function (ev) {
+        try {
+          if (ev && ev.target && String(ev.target.tagName || "").toUpperCase() === "VIDEO") fire();
+        } catch (e) {}
+      },
+      true
+    );
+    var jwTries = 0;
+    var jwIv = setInterval(function () {
+      jwTries++;
+      try {
+        if (typeof jwplayer === "function") {
+          var jw = jwplayer();
+          if (jw && typeof jw.on === "function") {
+            jw.on("complete", fire);
+            clearInterval(jwIv);
+            return;
+          }
+        }
+      } catch (e) {}
+      if (jwTries > 50) clearInterval(jwIv);
+    }, 400);
+  })();
 })();
 </script>`;
 }
@@ -1055,6 +1095,12 @@ function buildHtml5VideoPage(mediaUrl, title = "WEBUNIME Player", origin = "") {
         fail("Gagal memutar video. Coba ganti server (Blogspot / Mega / resolusi lain).");
       });
       video.addEventListener("loadeddata", function () { shown = true; });
+      video.addEventListener("ended", function () {
+        try {
+          var msg = { source: "webunime", type: "ended" };
+          if (window.parent && window.parent !== window) window.parent.postMessage(msg, "*");
+        } catch (e) {}
+      });
       setTimeout(function () {
         if (!shown && video.readyState < 2) {
           fail("Loading terlalu lama. Coba Blogspot / Mega, atau resolusi Wibufile lain.");
@@ -1103,6 +1149,12 @@ function buildHlsPlayerPage(m3u8Url, title = "WEBUNIME Player", origin = "") {
       } else {
         fail("Browser tidak mendukung HLS.");
       }
+      video.addEventListener("ended", function () {
+        try {
+          var msg = { source: "webunime", type: "ended" };
+          if (window.parent && window.parent !== window) window.parent.postMessage(msg, "*");
+        } catch (e) {}
+      });
     })();
   </script>
 </body>
@@ -1880,6 +1932,18 @@ iframe#wuEmbed{
     loaded = true;
     frame.src = EMBED;
   }
+  // Teruskan sinyal ended dari abyss → parent (auto next episode)
+  window.addEventListener("message", function (e) {
+    try {
+      var d = e && e.data;
+      if (!d) return;
+      var type = typeof d === "object" ? String(d.type || d.event || "") : String(d);
+      var source = typeof d === "object" ? String(d.source || "") : "";
+      if (source === "webunime" && /ended|complete/i.test(type)) {
+        if (window.parent && window.parent !== window) window.parent.postMessage(d, "*");
+      }
+    } catch (err) {}
+  });
   // Pastikan Service Worker aktif dulu supaya GCS/CDN ter-proxy tanpa reload di dalam player
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).then(function () {

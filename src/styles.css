@@ -2099,6 +2099,94 @@ body.is-auth-checking .auth-boot,
   margin-left: auto;
 }
 
+.player-ep-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0 1rem 0.85rem;
+}
+
+.player-ep-btn {
+  min-width: 6.5rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.player-ep-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.player-auto-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 2px;
+  background: rgba(20, 20, 20, 0.9);
+  color: #e5e5e5;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.player-auto-next input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.player-auto-next-ui {
+  position: relative;
+  width: 2.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.player-auto-next-ui::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s ease;
+}
+
+.player-auto-next:has(input:checked),
+.player-auto-next.is-on {
+  border-color: rgba(70, 211, 105, 0.55);
+  background: rgba(70, 211, 105, 0.12);
+  color: #fff;
+}
+
+.player-auto-next:has(input:checked) .player-auto-next-ui,
+.player-auto-next.is-on .player-auto-next-ui {
+  background: #46d369;
+}
+
+.player-auto-next:has(input:checked) .player-auto-next-ui::after,
+.player-auto-next.is-on .player-auto-next-ui::after {
+  transform: translateX(1rem);
+}
+
+.player-auto-next-label {
+  letter-spacing: 0.02em;
+}
+
 /* Netflix-style custom dropdown (player) */
 .nf-dropdown {
   position: relative;
@@ -2234,6 +2322,16 @@ body.is-auth-checking .auth-boot,
 @media (max-width: 720px) {
   .player-top {
     flex-wrap: wrap;
+  }
+
+  .player-ep-nav {
+    gap: 0.5rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .player-ep-btn {
+    min-width: 0;
+    flex: 1 1 auto;
   }
 
   .player-episode {

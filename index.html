@@ -395,6 +395,19 @@
           <ul class="nf-dropdown-menu" id="playerServerMenu" role="listbox" hidden></ul>
         </div>
       </div>
+      <div class="player-ep-nav hidden" id="playerEpNav" aria-label="Navigasi episode">
+        <button type="button" class="btn btn-ghost player-ep-btn" id="playerEpPrev" disabled>
+          ← Prev
+        </button>
+        <label class="player-auto-next" title="Otomatis lanjut ke episode berikutnya">
+          <input type="checkbox" id="playerAutoNext" />
+          <span class="player-auto-next-ui" aria-hidden="true"></span>
+          <span class="player-auto-next-label">Auto next</span>
+        </label>
+        <button type="button" class="btn btn-ghost player-ep-btn" id="playerEpNext" disabled>
+          Next →
+        </button>
+      </div>
       <div class="player-stage">
         <iframe
           class="player-frame hidden"
