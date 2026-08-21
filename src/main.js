@@ -1514,24 +1514,34 @@ function toProxyPath(absoluteUrl) {
 /**
  * Resolve URL player iframe dalam (skip wrapper playeriframe + iklan dobel).
  * Hydrax/Abyss → URL absolut langsung (GCS + hostname check hanya jalan di abyssplayer).
- * Anime Samehadaku (blogger/wibufile/filedon/mega) → embed langsung / proxy.
+ * Anime (blogger/wibufile/filedon/mega/file.fm/…) → proxy / __vid__ agar auto-next bisa deteksi selesai.
  * Cast/Turbo → path proxy /__px__/...
  */
+/** Host anime yang perlu proxy/shim untuk deteksi video ended. */
+const ANIME_ENDED_PROXY_RE =
+  /blogger\.com|wibufile\.com|filedon\.co|mega\.(nz|io)|file\.fm|gdriveplayer\.|krakenfiles\.com|dood\.(to|watch|so|la|ws|pm|wf|sh)|doodstream\.|stream\.coeg\.me|suzihaza\.com|wibuu\.info|pixeldrain\.com/i;
+
 async function resolveEmbedPath(sourceUrl) {
   try {
     const u = new URL(sourceUrl);
     const host = u.hostname;
-    // Embed anime Samehadaku — sudah URL player akhir
-    if (/blogger\.com|wibufile\.com|filedon\.co|mega\.nz/i.test(host)) {
-      if (/mega\.nz|blogger\.com/i.test(host)) return sourceUrl;
-      // MP4 langsung (Wibufile 720/1080) → halaman <video>, bukan iframe ke file mentah
-      if (/\.(mp4|webm)(\?|$)/i.test(u.pathname)) {
+
+    // Pixeldrain /u/ID → stream API langsung (HTML5) supaya ended reliable
+    const pd = u.pathname.match(/^\/u\/([a-zA-Z0-9_-]+)/i);
+    if (/pixeldrain\.com/i.test(host) && pd) {
+      return `/__vid__?u=${encodeURIComponent(`https://pixeldrain.com/api/file/${pd[1]}`)}`;
+    }
+
+    if (ANIME_ENDED_PROXY_RE.test(host)) {
+      // MP4/WebM langsung → <video> same-origin wrapper
+      if (/\.(mp4|webm|m4v)(\?|$)/i.test(u.pathname)) {
         return `/__vid__?u=${encodeURIComponent(u.href)}`;
       }
+      // Mega hash (#key) tetap di URL iframe (tidak dikirim ke server); shim wajib jaga hash.
       return toProxyPath(sourceUrl) || sourceUrl;
     }
+
     // Film Indonesia (p2pplay/barplay): SPA baca video id dari hash (#...).
-    // Hash tidak dikirim ke server, jadi /__px__/ menghapus id → "no videoid found".
     if (/p2pplay\.|barplay\.|p2pstream\./i.test(host)) {
       return sourceUrl;
     }
@@ -1547,10 +1557,15 @@ async function resolveEmbedPath(sourceUrl) {
   const play = data.play || sourceUrl;
   try {
     const host = new URL(play).hostname;
-    // Hydrax: wrapper nested iframe + /__px__ (sanitasi AdBlock/Sandbox).
-    // Media sssrr butuh Referer abyss tanpa Origin (Origin → 404).
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
       return `/__hydrax__?u=${encodeURIComponent(play)}`;
+    }
+    // Server anime lain hasil resolve → tetap proxy agar shim ended aktif
+    if (ANIME_ENDED_PROXY_RE.test(host)) {
+      if (/\.(mp4|webm|m4v)(\?|$)/i.test(new URL(play).pathname)) {
+        return `/__vid__?u=${encodeURIComponent(play)}`;
+      }
+      return toProxyPath(play) || data.embed || play;
     }
   } catch {
     /* fallback proxy */
@@ -1845,21 +1860,39 @@ function armAutoNext() {
 function tryAutoNextEpisode() {
   if (!autoNextArmed || !isAutoNextEnabled()) return;
   if ($("#player")?.classList.contains("hidden")) return;
+  if (Date.now() < (tryAutoNextEpisode._lockUntil || 0)) return;
   autoNextArmed = false;
+  tryAutoNextEpisode._lockUntil = Date.now() + 10000;
   goAdjacentEpisode(1, { auto: true });
 }
 
-function isWebunimeEndedMessage(data) {
+function isWebunimeEndedMessage(data, origin = "") {
   if (!data) return false;
   if (typeof data === "string") {
-    return /webunime:ended|"ended"|complete/i.test(data);
+    if (/webunime:ended/i.test(data)) return true;
+    if (/\"event\"\s*:\s*\"onStateChange\"/.test(data) && /\"info\"\s*:\s*0\b/.test(data)) {
+      return true;
+    }
+    if (
+      /mega\.(nz|io)|file\.fm|gdriveplayer|krakenfiles|dood/i.test(origin) &&
+      /ended|complete|finished/i.test(data)
+    ) {
+      return true;
+    }
+    return false;
   }
   if (typeof data !== "object") return false;
-  const type = String(data.type || data.event || data.name || "").toLowerCase();
+  const type = String(data.type || data.event || data.name || data.action || "").toLowerCase();
   const source = String(data.source || data.origin || "");
   if (source === "webunime" && (type === "ended" || type === "complete")) return true;
-  if (type === "webunime:ended" || type === "ended" || type === "complete") {
-    return source === "webunime" || data.webunime === true;
+  if (type === "webunime:ended") return true;
+  // YouTube IFrame API: info 0 = ended
+  if (data.event === "onStateChange" && (data.info === 0 || data.info === "0")) return true;
+  if (/^(ended|complete|finished|playbackended|videoended|onvideocomplete)$/.test(type)) {
+    if (source === "webunime" || data.webunime === true) return true;
+    if (/mega\.(nz|io)|file\.fm|gdriveplayer|krakenfiles|dood|blogger/i.test(origin)) {
+      return true;
+    }
   }
   return false;
 }
@@ -2343,8 +2376,19 @@ function bindActions() {
   });
   window.addEventListener("message", (e) => {
     if ($("#player")?.classList.contains("hidden")) return;
-    if (!isWebunimeEndedMessage(e.data)) return;
+    if (!isWebunimeEndedMessage(e.data, e.origin || "")) return;
     tryAutoNextEpisode();
+  });
+  document.addEventListener("keydown", (e) => {
+    if ($("#player")?.classList.contains("hidden")) return;
+    if (e.target && /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === "n" || e.key === "N") {
+      e.preventDefault();
+      goAdjacentEpisode(1);
+    } else if (e.key === "p" || e.key === "P") {
+      e.preventDefault();
+      goAdjacentEpisode(-1);
+    }
   });
 
   bindNfDropdown($("#playerEpisodeDropdown"));

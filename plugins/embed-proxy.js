@@ -130,6 +130,15 @@ function pickReferer(target) {
   if (host.includes("abyss") || host.includes("iamcdn") || host.includes("short.icu")) {
     return "https://abyssplayer.com/";
   }
+  if (/mega\.(nz|io)/i.test(host)) return "https://mega.nz/";
+  if (/file\.fm/i.test(host)) return "https://file.fm/";
+  if (/gdriveplayer/i.test(host)) return "https://gdriveplayer.to/";
+  if (/krakenfiles/i.test(host)) return "https://krakenfiles.com/";
+  if (/dood|doodstream/i.test(host)) return "https://dood.to/";
+  if (/pixeldrain/i.test(host)) return "https://pixeldrain.com/";
+  if (/filedon/i.test(host)) return "https://filedon.co/";
+  if (/wibufile/i.test(host)) return "https://wibufile.com/";
+  if (/blogger/i.test(host)) return "https://www.blogger.com/";
   // CDN media Hydrax (sora / GCS / gambar / tunnel)
   if (
     host.includes("sssrr.org") ||
@@ -272,19 +281,30 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
   var IS_CAST=${isCast ? "true" : "false"};
   var IS_TURBO=${isTurbo ? "true" : "false"};
   var IS_P2P=${isP2p ? "true" : "false"};
+  var IS_BLOGGER=${/blogger/i.test(host) ? "true" : "false"};
+  var KEEP_PX=${
+    /playcdn|hownetwork|videonode|blogger|mega\.(nz|io)|file\.fm|gdriveplayer|krakenfiles|dood|filedon|wibufile|suzihaza|coeg\.me|wibuu\.info|pixeldrain/i.test(
+      host
+    )
+      ? "true"
+      : "false"
+  };
+  var IS_MEGA=${/mega\.(nz|io)/i.test(host) ? "true" : "false"};
   var __wuWasmB64=${JSON.stringify(wasmB64 || "")};
-  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn|showcdnx)/i;
+  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn|showcdnx|googlevideo\\.com)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Hydrax: /{slug}?v={slug} — cocok untuk query v DAN regex href di core.bundle.
   try {
+    var __keepHash = location.hash || "";
     if (IS_ABYSS) {
       var __slug = String(REAL_PATH).match(/\\/([a-zA-Z0-9_-]{7,17})(?:[/?#]|$)/);
       if (__slug) history.replaceState(null, "", "/" + __slug[1] + "?v=" + encodeURIComponent(__slug[1]));
       else history.replaceState(null, "", REAL_PATH);
-    } else if (IS_P2P) {
-      // Pertahankan prefix proxy agar request relatif (js/, backend.php) tidak 404 di origin app
-      history.replaceState(null, "", PREFIX + REAL_PATH);
+    } else if (KEEP_PX) {
+      // Pertahankan prefix proxy + hash (Mega butuh #key untuk decrypt)
+      var __path = String(REAL_PATH || "").replace(/#.*$/, "");
+      history.replaceState(null, "", PREFIX + __path + __keepHash);
     } else {
       history.replaceState(null, "", REAL_PATH);
     }
@@ -930,7 +950,7 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
     }, 500);
   }
 
-  // Auto-next: kabari parent saat video / JW selesai
+  // Auto-next: kabari parent saat video / JW / YouTube selesai
   (function notifyEnded() {
     var sent = false;
     function fire() {
@@ -953,6 +973,66 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
       },
       true
     );
+    // YouTube IFrame API (Blogger player sering pakai ini di dalam)
+    window.addEventListener("message", function (e) {
+      try {
+        var d = e && e.data;
+        if (d == null) return;
+        if (typeof d === "string") {
+          if (/\"event\"\s*:\s*\"onStateChange\"/.test(d) && /\"info\"\s*:\s*0\b/.test(d)) fire();
+          if (/ended|complete|finished/i.test(d) && /mega|player|video/i.test(d)) fire();
+          return;
+        }
+        if (typeof d !== "object") return;
+        if (d.event === "onStateChange" && (d.info === 0 || d.info === "0")) fire();
+        if (d.event === "onVideoComplete" || d.type === "ended" || d.state === "ended") fire();
+        var t = String(d.event || d.type || d.action || d.name || d.msg || "").toLowerCase();
+        if (/^(ended|complete|finished|playbackended|videoended)$/.test(t)) fire();
+      } catch (err) {}
+    });
+    // Mega / player SPA: hook HTMLMediaElement.prototype jika video dibuat belakangan
+    try {
+      var _play = HTMLMediaElement.prototype.play;
+      HTMLMediaElement.prototype.play = function () {
+        try {
+          this.addEventListener("ended", fire, { once: true });
+        } catch (e) {}
+        return _play.apply(this, arguments);
+      };
+    } catch (e) {}
+    if (IS_MEGA) {
+      // Mega decrypt → <video>; poll agresif + hook ended
+      var megaPoll = 0;
+      var megaIv = setInterval(function () {
+        megaPoll++;
+        try {
+          document.querySelectorAll("video").forEach(function (v) {
+            try {
+              v.addEventListener("ended", fire, { once: true });
+            } catch (e) {}
+          });
+        } catch (e) {}
+        if (megaPoll > 120) clearInterval(megaIv);
+      }, 1000);
+    }
+    // Poll <video> near-end (fallback bila event ended tertelan player)
+    var poll = 0;
+    var piv = setInterval(function () {
+      poll++;
+      try {
+        var vids = document.querySelectorAll("video");
+        for (var i = 0; i < vids.length; i++) {
+          var v = vids[i];
+          if (!v || !isFinite(v.duration) || v.duration < 5) continue;
+          if (v.ended || (v.currentTime > 0 && v.duration - v.currentTime <= 0.4)) {
+            fire();
+            clearInterval(piv);
+            return;
+          }
+        }
+      } catch (e) {}
+      if (poll > 7200) clearInterval(piv); // ~2 jam @1s
+    }, 1000);
     var jwTries = 0;
     var jwIv = setInterval(function () {
       jwTries++;
@@ -1866,7 +1946,7 @@ async function handleLegacyEmbed(req, res) {
 const PROXY_SW = `/* webunime media proxy SW */
 self.addEventListener("install", (e) => self.skipWaiting());
 self.addEventListener("activate", (e) => e.waitUntil(self.clients.claim()));
-var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place|sssrr\\.org|trycloudflare\\.com|freeimagecdn\\.net)/i;
+var CDN = /(?:storage\\.googleapis\\.com|iamcdn\\.net|abysscdn|abyss\\.to|short\\.icu|morphify\\.net|googleusercontent\\.com|googlevideo\\.com|turboviplay\\.com|turbosplayer\\.com|tiktokcdn\\.com|sptvp\\.com|img-place|sssrr\\.org|trycloudflare\\.com|freeimagecdn\\.net)/i;
 self.addEventListener("fetch", function (event) {
   try {
     var url = new URL(event.request.url);
