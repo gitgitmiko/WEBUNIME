@@ -11,6 +11,7 @@
     "import:catalog": "node server/import-catalog.js",
     "push:catalog-api": "node scripts/push-catalog-to-api.js",
     "scrape": "node scripts/scrape-players.js",
+    "scrape:refresh-players": "node scripts/refresh-movie-players.js",
     "scrape:latest": "node scripts/scrape-latest.js",
     "scrape:desc": "node scripts/scrape-latest.js --refresh-desc",
     "scrape:series": "node scripts/scrape-series.js",
