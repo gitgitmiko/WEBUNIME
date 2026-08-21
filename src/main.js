@@ -19,6 +19,7 @@ let heroMovie = null;
 let activeEpisode = null;
 let playerTimer = null;
 let autoNextArmed = false;
+let epNavPinTimer = null;
 const AUTO_NEXT_STORAGE_KEY = "wu_auto_next_episode";
 let modalIsFavorite = false;
 let heroSlides = [];
@@ -1748,6 +1749,14 @@ function syncEpisodeDropdown(slug) {
   });
 }
 
+function pinEpisodeNav(ms = 4200) {
+  const nav = $("#playerEpNav");
+  if (!nav || nav.classList.contains("hidden")) return;
+  nav.classList.add("is-pinned");
+  clearTimeout(epNavPinTimer);
+  epNavPinTimer = setTimeout(() => nav.classList.remove("is-pinned"), ms);
+}
+
 function updateEpisodeNavUi() {
   const nav = $("#playerEpNav");
   const prevBtn = $("#playerEpPrev");
@@ -1758,7 +1767,10 @@ function updateEpisodeNavUi() {
   const eps = episodeOptions(activeMovie);
   const show = isSeries(activeMovie) && eps.length > 1;
   nav.classList.toggle("hidden", !show);
-  if (!show) return;
+  if (!show) {
+    nav.classList.remove("is-pinned");
+    return;
+  }
 
   const on = isAutoNextEnabled();
   if (auto) {
@@ -1767,6 +1779,7 @@ function updateEpisodeNavUi() {
   }
   prevBtn.disabled = !adjacentEpisode(-1);
   nextBtn.disabled = !adjacentEpisode(1);
+  pinEpisodeNav();
 }
 
 function goToEpisode(slug, { auto = false } = {}) {
@@ -1924,10 +1937,12 @@ function closePlayer() {
   player.classList.remove("is-playing", "is-embed");
   currentServerUrl = null;
   autoNextArmed = false;
+  clearTimeout(epNavPinTimer);
   clearEmbed();
   clearInterval(playerTimer);
   closeNfDropdowns();
   $("#playerEpNav")?.classList.add("hidden");
+  $("#playerEpNav")?.classList.remove("is-pinned");
   document.body.style.overflow = $("#modal").classList.contains("hidden") ? "" : "hidden";
   startHeroCarousel();
 }
@@ -2306,14 +2321,25 @@ function bindActions() {
   });
   $("#playerBack").addEventListener("click", closePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
-  $("#playerEpPrev")?.addEventListener("click", () => goAdjacentEpisode(-1));
-  $("#playerEpNext")?.addEventListener("click", () => goAdjacentEpisode(1));
+  $("#playerEpPrev")?.addEventListener("click", () => {
+    pinEpisodeNav();
+    goAdjacentEpisode(-1);
+  });
+  $("#playerEpNext")?.addEventListener("click", () => {
+    pinEpisodeNav();
+    goAdjacentEpisode(1);
+  });
   $("#playerAutoNext")?.addEventListener("change", (e) => {
     const on = Boolean(e.target.checked);
     setAutoNextEnabled(on);
     e.target.closest(".player-auto-next")?.classList.toggle("is-on", on);
+    pinEpisodeNav();
     if (on) armAutoNext();
     else autoNextArmed = false;
+  });
+  $("#playerEpNav")?.addEventListener("pointerenter", () => pinEpisodeNav(8000));
+  $(".player-stage")?.addEventListener("mousemove", () => {
+    if (!$("#playerEpNav")?.classList.contains("hidden")) pinEpisodeNav(2500);
   });
   window.addEventListener("message", (e) => {
     if ($("#player")?.classList.contains("hidden")) return;
