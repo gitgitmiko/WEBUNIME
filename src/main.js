@@ -1513,18 +1513,28 @@ function toProxyPath(absoluteUrl) {
 
 /**
  * Resolve URL player iframe dalam (skip wrapper playeriframe + iklan dobel).
- * Hydrax/Abyss → URL absolut langsung (GCS + hostname check hanya jalan di abyssplayer).
- * Anime (blogger/wibufile/filedon/mega/file.fm/…) → proxy / __vid__ agar auto-next bisa deteksi selesai.
- * Cast/Turbo → path proxy /__px__/...
+ * Hydrax/Abyss → wrapper /__hydrax__.
+ * Anime:
+ *   - Blogger (Anoboy) + Mega → embed langsung (proxy merusak playback)
+ *   - Wibufile MP4 / Pixeldrain → /__vid__ (auto-next OK)
+ *   - Filedon/Pucuk + embed lain yang aman → /__px__/ (auto-next via shim)
+ * Cast/Turbo → /__px__/...
  */
-/** Host anime yang perlu proxy/shim untuk deteksi video ended. */
+/** Host yang WAJIB iframe langsung (jangan proxy). */
+const ANIME_DIRECT_EMBED_RE = /blogger\.com|mega\.(nz|io)/i;
+/** Host anime yang aman di-proxy untuk deteksi video ended. */
 const ANIME_ENDED_PROXY_RE =
-  /blogger\.com|wibufile\.com|filedon\.co|mega\.(nz|io)|file\.fm|gdriveplayer\.|krakenfiles\.com|dood\.(to|watch|so|la|ws|pm|wf|sh)|doodstream\.|stream\.coeg\.me|suzihaza\.com|wibuu\.info|pixeldrain\.com/i;
+  /wibufile\.com|filedon\.co|file\.fm|gdriveplayer\.|krakenfiles\.com|dood\.(to|watch|so|la|ws|pm|wf|sh)|doodstream\.|stream\.coeg\.me|suzihaza\.com|wibuu\.info|pixeldrain\.com/i;
 
 async function resolveEmbedPath(sourceUrl) {
   try {
     const u = new URL(sourceUrl);
     const host = u.hostname;
+
+    // Anoboy/Blogspot + Mega: wajib direct (proxy → not found / layar hitam)
+    if (ANIME_DIRECT_EMBED_RE.test(host)) {
+      return sourceUrl;
+    }
 
     // Pixeldrain /u/ID → stream API langsung (HTML5) supaya ended reliable
     const pd = u.pathname.match(/^\/u\/([a-zA-Z0-9_-]+)/i);
@@ -1537,7 +1547,6 @@ async function resolveEmbedPath(sourceUrl) {
       if (/\.(mp4|webm|m4v)(\?|$)/i.test(u.pathname)) {
         return `/__vid__?u=${encodeURIComponent(u.href)}`;
       }
-      // Mega hash (#key) tetap di URL iframe (tidak dikirim ke server); shim wajib jaga hash.
       return toProxyPath(sourceUrl) || sourceUrl;
     }
 
@@ -1556,13 +1565,16 @@ async function resolveEmbedPath(sourceUrl) {
 
   const play = data.play || sourceUrl;
   try {
-    const host = new URL(play).hostname;
+    const playUrl = new URL(play);
+    const host = playUrl.hostname;
     if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
       return `/__hydrax__?u=${encodeURIComponent(play)}`;
     }
-    // Server anime lain hasil resolve → tetap proxy agar shim ended aktif
+    if (ANIME_DIRECT_EMBED_RE.test(host)) {
+      return play;
+    }
     if (ANIME_ENDED_PROXY_RE.test(host)) {
-      if (/\.(mp4|webm|m4v)(\?|$)/i.test(new URL(play).pathname)) {
+      if (/\.(mp4|webm|m4v)(\?|$)/i.test(playUrl.pathname)) {
         return `/__vid__?u=${encodeURIComponent(play)}`;
       }
       return toProxyPath(play) || data.embed || play;
