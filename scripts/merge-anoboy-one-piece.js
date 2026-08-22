@@ -21,7 +21,7 @@ const SLUG = "one-piece";
 const TITLE_PREFIX = "One Piece";
 const EP_SLUG_PREFIX = "one-piece-episode";
 const SEARCH_URL = "https://anoboy.xyz/?s=one+piece+episode";
-const MAX_EP = 1174;
+const MAX_EP = 1300;
 
 const BATCHES = [
   {
@@ -304,16 +304,42 @@ function canonicalSlug(n) {
   return `${EP_SLUG_PREFIX}-${n}`;
 }
 
-function findEpisodeRow(anime, n) {
+function findEpisodeRows(anime, n) {
   const want = canonicalSlug(n);
-  const bySlug = (anime.episodes || []).find(
-    (e) => String(e.slug || "") === want,
-  );
-  if (bySlug) return bySlug;
-  return (anime.episodes || []).find((e) => {
-    const s = String(e.slug || "");
-    return Number(e.episode) === n && (!s || s === want);
+  const rows = (anime.episodes || []).filter((e) => {
+    if (Number(e.episode) === n) return true;
+    return String(e.slug || "") === want;
   });
+  // Canonical slug first so new players land on the primary row too.
+  rows.sort((a, b) => {
+    const ac = String(a.slug || "") === want ? 0 : 1;
+    const bc = String(b.slug || "") === want ? 0 : 1;
+    return ac - bc;
+  });
+  return rows;
+}
+
+function upsertAnoboyPlayer(ep, p) {
+  if (!Array.isArray(ep.players)) ep.players = [];
+  const exists = ep.players.some(
+    (x) => isAnoboyPlayer(x) && (x.url === p.url || x.label === p.label),
+  );
+  if (exists) return false;
+  ep.players = ep.players.filter(
+    (x) => !(isAnoboyPlayer(x) && x.label === p.label),
+  );
+  ep.players.push({
+    no: ep.players.length + 1,
+    server: p.server,
+    label: p.label,
+    url: p.url,
+    default: ep.players.length === 0,
+    source: "anoboy",
+  });
+  ep.players.forEach((x, i) => {
+    x.no = i + 1;
+  });
+  return true;
 }
 
 function mergePlayersIntoAnime(anime, anoboyPlayers) {
@@ -323,12 +349,9 @@ function mergePlayersIntoAnime(anime, anoboyPlayers) {
   let skipped = 0;
 
   for (const p of anoboyPlayers) {
-    let ep = findEpisodeRow(anime, p.episode);
-    if (ep && Number(ep.episode) !== p.episode) {
-      ep.episode = p.episode;
-    }
-    if (!ep) {
-      ep = {
+    let rows = findEpisodeRows(anime, p.episode);
+    if (!rows.length) {
+      const ep = {
         episode: p.episode,
         title: `${TITLE_PREFIX} Episode ${p.episode}`,
         slug: canonicalSlug(p.episode),
@@ -338,32 +361,16 @@ function mergePlayersIntoAnime(anime, anoboyPlayers) {
       };
       anime.episodes.push(ep);
       createdEps += 1;
-    }
-    if (!Array.isArray(ep.players)) ep.players = [];
-
-    const exists = ep.players.some(
-      (x) => isAnoboyPlayer(x) && (x.url === p.url || x.label === p.label),
-    );
-    if (exists) {
-      skipped += 1;
-      continue;
+      rows = [ep];
     }
 
-    ep.players = ep.players.filter(
-      (x) => !(isAnoboyPlayer(x) && x.label === p.label),
-    );
-    ep.players.push({
-      no: ep.players.length + 1,
-      server: p.server,
-      label: p.label,
-      url: p.url,
-      default: ep.players.length === 0,
-      source: "anoboy",
-    });
-    ep.players.forEach((x, i) => {
-      x.no = i + 1;
-    });
-    added += 1;
+    let anyAdded = false;
+    for (const ep of rows) {
+      if (Number(ep.episode) !== p.episode) ep.episode = p.episode;
+      if (upsertAnoboyPlayer(ep, p)) anyAdded = true;
+    }
+    if (anyAdded) added += 1;
+    else skipped += 1;
   }
 
   anime.episodes.sort((a, b) => Number(a.episode) - Number(b.episode));

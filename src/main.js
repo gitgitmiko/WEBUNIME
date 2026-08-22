@@ -1188,7 +1188,30 @@ async function initHeroCarousel() {
 }
 
 function episodeOptions(item) {
-  return (item?.episodes || []).filter((e) => e?.slug);
+  const eps = (item?.episodes || []).filter((e) => e?.slug);
+  // Dedup nomor episode (mis. one-piece-episode-586 vs -586-2): pilih yang punya lebih banyak server.
+  const best = new Map();
+  for (const ep of eps) {
+    const n = Number(ep.episode);
+    const key = Number.isFinite(n) && n > 0 ? `n:${n}` : `s:${ep.slug}`;
+    const prev = best.get(key);
+    if (!prev) {
+      best.set(key, ep);
+      continue;
+    }
+    const score = (x) => {
+      const players = Array.isArray(x.players) ? x.players.length : 0;
+      const canonical = /episode-\d+$/i.test(String(x.slug || "")) ? 1 : 0;
+      const hasAnoboy = (x.players || []).some((p) =>
+        /anoboy/i.test(`${p.server || ""} ${p.label || ""}`)
+      )
+        ? 2
+        : 0;
+      return players * 10 + hasAnoboy + canonical;
+    };
+    if (score(ep) > score(prev)) best.set(key, ep);
+  }
+  return [...best.values()];
 }
 
 function episodeLabel(ep) {
