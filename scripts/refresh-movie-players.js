@@ -15,6 +15,10 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { rewritePlayerUrl } from "./lib/player-host-aliases.js";
+import {
+  extractKconazPlayers,
+  rewriteIndonesiaSourceUrl,
+} from "./lib/kconaz-indonesia.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -164,14 +168,17 @@ async function refreshCollection(name, opts) {
   for (let i = 0; i < targets.length; i += 1) {
     const item = targets[i];
     const source =
-      item.source ||
-      `${BASE_URL}/${String(item.slug).replace(/^\/+|\/+$/g, "")}`;
+      name === "indonesia"
+        ? rewriteIndonesiaSourceUrl(item.source, item.slug)
+        : item.source ||
+          `${BASE_URL}/${String(item.slug).replace(/^\/+|\/+$/g, "")}`;
     process.stdout.write(
       `  (${i + 1}/${targets.length}) ${item.slug} ... `
     );
     try {
       const html = await fetchHtml(source);
-      const players = extractPlayers(html);
+      const players =
+        name === "indonesia" ? extractKconazPlayers(html) : extractPlayers(html);
       if (!players.length) {
         console.log("skip (0 player)");
         failed += 1;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Scrape film Indonesia dari https://kconaz.com/country/indonesia/
+ * Scrape film Indonesia dari https://otherindia.org/country/indonesia/
  * + detail tiap film (sinopsis, tahun, genre, direksi, pemain, player, …).
  *
  * Cara pakai:
@@ -26,6 +26,7 @@ import {
   extractKconazDetail,
   sortIndonesiaNewestFirst,
   dedupeIndonesiaMovies,
+  rewriteIndonesiaSourceUrl,
 } from "./lib/kconaz-indonesia.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -72,7 +73,7 @@ async function refreshDescriptions(opts) {
   let failed = 0;
   for (let i = 0; i < movies.length; i++) {
     const movie = movies[i];
-    const url = movie.source || `https://kconaz.com/${movie.slug}/`;
+    const url = rewriteIndonesiaSourceUrl(movie.source, movie.slug);
     process.stdout.write(`→ [${i + 1}/${movies.length}] ${movie.slug} ... `);
     try {
       const html = await fetchKconazHtml(url);
@@ -121,7 +122,7 @@ async function main() {
 
   const pagesLabel = opts.pages > 0 ? `${opts.pages} halaman` : "semua halaman";
   console.log(
-    `Scrape kconaz.com/country/indonesia: ${pagesLabel}, start ${opts.start}, delay ${opts.delay}ms\n`
+    `Scrape otherindia.org/country/indonesia: ${pagesLabel}, start ${opts.start}, delay ${opts.delay}ms\n`
   );
 
   const listings = await scrapeIndonesiaListings(opts);

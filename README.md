@@ -24,9 +24,9 @@ npm run build
 npm run preview
 ```
 
-## Scrape film Indonesia (kconaz)
+## Scrape film Indonesia (otherindia)
 
-Ambil daftar + detail film negara Indonesia dari [kconaz.com/country/indonesia](https://kconaz.com/country/indonesia/):
+Ambil daftar + detail film negara Indonesia dari [otherindia.org/country/indonesia](https://otherindia.org/country/indonesia/) (pengganti kconaz.com):
 
 ```bash
 npm run scrape:indonesia              # semua halaman (~17)

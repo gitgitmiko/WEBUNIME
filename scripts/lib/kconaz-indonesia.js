@@ -1,13 +1,36 @@
 /**
- * Scrape film Indonesia dari kconaz.com/country/indonesia/
+ * Scrape film Indonesia dari otherindia.org/country/indonesia/
+ * (kconaz.com sudah tidak dapat diakses — domain diganti ke otherindia.org)
  * Dipakai oleh scripts/scrape-indonesia.js dan sync katalog.
  */
 
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const KCONAZ_BASE = "https://kconaz.com";
+export const INDONESIA_SITE_BASE = "https://otherindia.org";
+/** Alias kompatibilitas — kconaz.com mati, arahkan ke otherindia.org */
+export const KCONAZ_BASE = INDONESIA_SITE_BASE;
 export const INDONESIA_LIST_PATH = "/country/indonesia/";
+
+/** Normalisasi URL sumber film Indonesia (kconaz lama → otherindia). */
+export function rewriteIndonesiaSourceUrl(url, slug = "") {
+  const raw = String(url || "").trim();
+  if (raw) {
+    try {
+      const u = new URL(raw);
+      if (/^(?:www\.)?kconaz\.com$/i.test(u.hostname)) {
+        u.hostname = "otherindia.org";
+        u.protocol = "https:";
+        return u.toString();
+      }
+      return raw;
+    } catch {
+      /* fall through */
+    }
+  }
+  const s = String(slug || "").replace(/^\/+|\/+$/g, "");
+  return s ? `${INDONESIA_SITE_BASE}/${s}/` : `${INDONESIA_SITE_BASE}/`;
+}
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
@@ -16,8 +39,9 @@ export function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
 }
 
-export async function fetchKconazHtml(url, referer = `${KCONAZ_BASE}/`) {
-  const res = await fetch(url, {
+export async function fetchKconazHtml(url, referer = `${INDONESIA_SITE_BASE}/`) {
+  const target = rewriteIndonesiaSourceUrl(url);
+  const res = await fetch(target, {
     headers: {
       "User-Agent": USER_AGENT,
       Accept: "text/html,application/xhtml+xml",
@@ -26,7 +50,7 @@ export async function fetchKconazHtml(url, referer = `${KCONAZ_BASE}/`) {
     },
     redirect: "follow",
   });
-  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText} — ${url}`);
+  if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText} — ${target}`);
   return res.text();
 }
 
@@ -414,7 +438,7 @@ export function extractKconazListings(html) {
 
     let path;
     try {
-      path = new URL(href, KCONAZ_BASE).pathname;
+      path = new URL(href, INDONESIA_SITE_BASE).pathname;
     } catch {
       continue;
     }
@@ -457,7 +481,7 @@ export function extractKconazListings(html) {
     items.push({
       slug,
       path,
-      source: `${KCONAZ_BASE}/${slug}/`,
+      source: `${INDONESIA_SITE_BASE}/${slug}/`,
       title: cleanTitle(title),
       tahun,
       rilis: rilisText,
@@ -696,7 +720,7 @@ export function buildIndonesiaMovie(item, detail, id) {
     genre: detail.genre?.length ? detail.genre : ensureGenre(item.genre, "Indonesia"),
     sinopsis: detail.sinopsis,
     slug: item.slug,
-    source: item.source || `${KCONAZ_BASE}/${item.slug}/`,
+    source: rewriteIndonesiaSourceUrl(item.source, item.slug),
     catalog: "indonesia",
     rilis: detail.rilis || item.rilis || "",
     rilis_iso: detail.rilis_iso || item.rilis_iso || "",
@@ -788,7 +812,10 @@ export async function scrapeIndonesiaDetails(listings, { delay = 280 } = {}) {
     }
     process.stdout.write(`→ [${n}/${listings.length}] ${item.slug} ... `);
     try {
-      const html = await fetchKconazHtml(item.source, `${KCONAZ_BASE}/country/indonesia/`);
+      const html = await fetchKconazHtml(
+        item.source,
+        `${INDONESIA_SITE_BASE}/country/indonesia/`
+      );
       const detail = extractKconazDetail(html, item);
       const movie = buildIndonesiaMovie(item, detail, movies.length + 1);
       const detailKey = indonesiaDedupeKey(movie.nama, movie.tahun);
@@ -909,7 +936,7 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
     existing.map((m) => filmIdentityKey(m)).filter(Boolean)
   );
 
-  process.stdout.write("[kconaz-sync] indonesia /country/indonesia ... ");
+  process.stdout.write("[otherindia-sync] indonesia /country/indonesia ... ");
   const html = await fetchKconazHtml(indonesiaPageUrl(1));
   const listings = extractKconazListings(html);
   const newcomers = listings.filter((l) => {
@@ -930,19 +957,19 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
     const item = newcomers[i];
     const listKey = indonesiaDedupeKey(item.title, item.tahun);
     if (listKey !== "|" && (existingTitles.has(listKey) || addedTitles.has(listKey))) {
-      console.log(`[kconaz-sync] skip dup ${item.slug}`);
+      console.log(`[otherindia-sync] skip dup ${item.slug}`);
       continue;
     }
     try {
       const detailHtml = await fetchKconazHtml(
         item.source,
-        `${KCONAZ_BASE}/country/indonesia/`
+        `${INDONESIA_SITE_BASE}/country/indonesia/`
       );
       const detail = extractKconazDetail(detailHtml, item);
       const movie = buildIndonesiaMovie(item, detail, nextId([...existing, ...added]));
       const detailKey = indonesiaDedupeKey(movie.nama, movie.tahun);
       if (detailKey !== "|" && (existingTitles.has(detailKey) || addedTitles.has(detailKey))) {
-        console.log(`[kconaz-sync] skip dup ${movie.slug} (${movie.nama})`);
+        console.log(`[otherindia-sync] skip dup ${movie.slug} (${movie.nama})`);
         continue;
       }
       const idKey = filmIdentityKey(movie);
@@ -953,7 +980,7 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
           added.find((m) => filmIdentityKey(m) === idKey);
         const keep = pickPreferredAltTitle([rival, movie].filter(Boolean));
         if (keep.slug !== movie.slug) {
-          console.log(`[kconaz-sync] skip alt-title ${movie.slug} (kepakai ${keep.nama})`);
+          console.log(`[otherindia-sync] skip alt-title ${movie.slug} (kepakai ${keep.nama})`);
           continue;
         }
       }
@@ -962,9 +989,9 @@ export async function syncIndonesiaCatalog(dataDir, { delay = 200 } = {}) {
       if (idKey) addedIdentities.add(idKey);
       movie.is_new = true;
       added.push(movie);
-      console.log(`[kconaz-sync] +indonesia ${movie.slug} (${movie.tahun || "?"})`);
+      console.log(`[otherindia-sync] +indonesia ${movie.slug} (${movie.tahun || "?"})`);
     } catch (err) {
-      console.warn(`[kconaz-sync] indonesia ${item.slug}:`, err.message);
+      console.warn(`[otherindia-sync] indonesia ${item.slug}:`, err.message);
     }
     if (i < newcomers.length - 1) await sleep(delay);
   }

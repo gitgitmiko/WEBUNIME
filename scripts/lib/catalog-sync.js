@@ -1317,7 +1317,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
 
   syncInFlight = (async () => {
     const started = Date.now();
-    console.log("[catalog-sync] mulai (LK21 → kconaz Indonesia → Samehadaku → Anoboy)…");
+    console.log("[catalog-sync] mulai (LK21 → otherindia Indonesia → Samehadaku → Anoboy)…");
     await clearIsNewFlags(dataDir);
     const results = {
       movies: emptyLk21Result(),
@@ -1366,7 +1366,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     try {
       results.indonesia = await syncIndonesiaCatalog(dataDir);
     } catch (err) {
-      console.warn("[sync] kconaz indonesia:", err.message);
+      console.warn("[sync] otherindia indonesia:", err.message);
       results.indonesia = {
         checked: 0,
         added: 0,
