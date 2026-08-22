@@ -1,0 +1,59 @@
+name: Catalog sync
+
+on:
+  schedule:
+    # 02:00 UTC = 09:00 WIB
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalog-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync catalog (LK21 + otherindia + anime)
+        run: npm run sync:catalog
+
+      - name: Refresh player URLs (2025-2026)
+        run: npm run scrape:refresh-players -- --years 2025,2026 --collections movies,horror,indonesia
+
+      - name: Commit catalog updates
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No catalog changes to commit."
+          else
+            git commit -m "chore(data): nightly catalog sync and player refresh."
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Push catalog to production API
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          CATALOG_SYNC_SECRET: ${{ secrets.CATALOG_SYNC_SECRET }}
+          CATALOG_API_BASE: ${{ vars.CATALOG_API_BASE || 'https://gitgitmiko.my.id' }}
+        run: npm run push:catalog-api
