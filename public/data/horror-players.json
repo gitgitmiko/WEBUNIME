@@ -9726,5 +9726,79 @@
         "default": false
       }
     ]
+  },
+  "insidious-out-further-2026": {
+    "slug": "insidious-out-further-2026",
+    "film": "Insidious: Out of the Further (2026)",
+    "source": "https://tv12.lk21official.cc/insidious-out-further-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-23T17:22:25.370Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/d1nG",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8ae62eeae30",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/i9aay1m1gq7e",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/_AYGF23kX4S",
+        "default": false
+      }
+    ]
+  },
+  "corpse-2-2026": {
+    "slug": "corpse-2-2026",
+    "film": "The Corpse 2 (2026)",
+    "source": "https://tv12.lk21official.cc/corpse-2-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-23T17:22:25.370Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/htA6",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8ad4eb1aeb0",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/xetdvnycz0b5",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/xXKqdD3lY3",
+        "default": false
+      }
+    ]
   }
 }
