@@ -656402,5 +656402,189 @@
         "default": false
       }
     ]
+  },
+  "weightless-2025": {
+    "slug": "weightless-2025",
+    "film": "Weightless (2025)",
+    "source": "https://tv12.lk21official.cc/weightless-2025",
+    "scraped_at": "2026-08-23T03:00:43.282Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/WWb8",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a89f26be3e6d",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/p4hk8a87wrlh",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/S9PNtHMXQ",
+        "default": false
+      }
+    ]
+  },
+  "no-hit-wonder-2025": {
+    "slug": "no-hit-wonder-2025",
+    "film": "No Hit Wonder (2025)",
+    "source": "https://tv12.lk21official.cc/no-hit-wonder-2025",
+    "scraped_at": "2026-08-23T03:00:43.282Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/e1Rc",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a89dc7b44a0b",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/sm1nscdzb9oa",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/2p54JjZ3a",
+        "default": false
+      }
+    ]
+  },
+  "pocong-2": {
+    "slug": "pocong-2",
+    "film": "Pocong 2 (2006)",
+    "source": "https://otherindia.org/pocong-2/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/wcemd4z1o7os",
+        "default": true
+      }
+    ]
+  },
+  "perempuan-bergaun-merah": {
+    "slug": "perempuan-bergaun-merah",
+    "film": "Perempuan Bergaun Merah (2022)",
+    "source": "https://otherindia.org/perempuan-bergaun-merah/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/7ro8959mch84",
+        "default": true
+      }
+    ]
+  },
+  "makmum-2": {
+    "slug": "makmum-2",
+    "film": "Makmum 2 (2021)",
+    "source": "https://otherindia.org/makmum-2/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/guon5t87n8ec",
+        "default": true
+      }
+    ]
+  },
+  "makmum": {
+    "slug": "makmum",
+    "film": "Makmum (2019)",
+    "source": "https://otherindia.org/makmum/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/xzq8mz54owwv",
+        "default": true
+      }
+    ]
+  },
+  "cross-the-line": {
+    "slug": "cross-the-line",
+    "film": "Cross the Line (2022)",
+    "source": "https://otherindia.org/cross-the-line/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/vqpoeos3mtol",
+        "default": true
+      }
+    ]
+  },
+  "anak-kolong": {
+    "slug": "anak-kolong",
+    "film": "Anak Kolong (2024)",
+    "source": "https://otherindia.org/anak-kolong/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/g1s05xlz7b2p",
+        "default": true
+      }
+    ]
+  },
+  "172-days": {
+    "slug": "172-days",
+    "film": "172 Days (2023)",
+    "source": "https://otherindia.org/172-days/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-23T03:01:46.458Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/vyfggghfbh1x",
+        "default": true
+      }
+    ]
   }
 }
