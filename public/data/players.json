@@ -657272,5 +657272,105 @@
         "default": false
       }
     ]
+  },
+  "lean-me-1989": {
+    "slug": "lean-me-1989",
+    "film": "Lean on Me (1989)",
+    "source": "https://tv12.lk21official.cc/lean-me-1989",
+    "scraped_at": "2026-08-24T17:32:56.192Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/vU9c",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8be751abe45",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/bs045ox2ufau",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/EfGlnKJw3",
+        "default": false
+      }
+    ]
+  },
+  "talak-3": {
+    "slug": "talak-3",
+    "film": "Talak 3 (2016)",
+    "source": "https://otherindia.org/talak-3/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-24T17:34:22.900Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/wuks58r6xr0k",
+        "default": true
+      }
+    ]
+  },
+  "koboy-kampus": {
+    "slug": "koboy-kampus",
+    "film": "Koboy Kampus (2019)",
+    "source": "https://otherindia.org/koboy-kampus/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-24T17:34:22.900Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/jxzf7ues92i3",
+        "default": true
+      }
+    ]
+  },
+  "after-school-horror": {
+    "slug": "after-school-horror",
+    "film": "After School Horror (2014)",
+    "source": "https://otherindia.org/after-school-horror/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-24T17:34:22.900Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/h9a2higcowkl",
+        "default": true
+      }
+    ]
+  },
+  "after-school-horror-2": {
+    "slug": "after-school-horror-2",
+    "film": "After School Horror 2 (2017)",
+    "source": "https://otherindia.org/after-school-horror-2/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-08-24T17:34:22.900Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/o3cb7qs2r37k",
+        "default": true
+      }
+    ]
   }
 }
