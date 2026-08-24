@@ -657200,5 +657200,77 @@
         "default": false
       }
     ]
+  },
+  "jana-nayagan-2026": {
+    "slug": "jana-nayagan-2026",
+    "film": "Jana Nayagan (2026)",
+    "source": "https://tv12.lk21official.cc/jana-nayagan-2026",
+    "scraped_at": "2026-08-24T03:01:13.599Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/PPRK",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8b3d0199fc9",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/cbe6wx09vtta",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/iYx_3CX8s",
+        "default": false
+      }
+    ]
+  },
+  "angels-melancholia-2009": {
+    "slug": "angels-melancholia-2009",
+    "film": "The Angels' Melancholia (2009)",
+    "source": "https://tv12.lk21official.cc/angels-melancholia-2009",
+    "scraped_at": "2026-08-24T03:01:13.599Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/myYs",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8b35944c193",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/vw1e0ekokorh",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe/hydrax/WxR7uoaTG",
+        "default": false
+      }
+    ]
   }
 }
