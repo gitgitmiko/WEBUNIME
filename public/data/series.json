@@ -270,8 +270,7 @@
         "default": false
       }
     ],
-    "id": 381,
-    "is_new": true
+    "id": 381
   },
   {
     "type": "series",
@@ -1062,8 +1061,7 @@
         "default": false
       }
     ],
-    "id": 380,
-    "is_new": true
+    "id": 380
   },
   {
     "type": "series",
@@ -10242,8 +10240,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-my-years-as-dragon-seeking-master-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "14 eps · S.1",
-    "episodes_count": 14,
+    "durasi": "16 eps · S.1",
+    "episodes_count": 16,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -10771,6 +10769,80 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "My Years as the Dragon-Seeking Master - Season 1 Episode 15 (2026)",
+        "slug": "my-years-as-dragon-seeking-master-season-1-episode-15-2026",
+        "source": "https://tv7.nontondrama.my/my-years-as-dragon-seeking-master-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/pPik",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8ccdf9dabe2",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/5q2chcaz88u7",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/qpJ-XnHt2",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "My Years as the Dragon-Seeking Master - Season 1 Episode 16 (2026)",
+        "slug": "my-years-as-dragon-seeking-master-season-1-episode-16-2026",
+        "source": "https://tv7.nontondrama.my/my-years-as-dragon-seeking-master-season-1-episode-16-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/1809",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8ccee811c98",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/t7yqik8rqz1n",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/xvhPDvblX0",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -10778,28 +10850,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/ZHhf",
+        "url": "https://videonode.de/iframe/p2p/1809",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a8b835ee1245",
+        "url": "https://videonode.de/iframe/turbovip/6a8ccee811c98",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/7so1wquq87az",
+        "url": "https://videonode.de/iframe/cast/t7yqik8rqz1n",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/VI989ex70",
+        "url": "https://videonode.de/iframe/hydrax/xvhPDvblX0",
         "default": false
       }
     ],
@@ -15743,8 +15815,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-trembling-cicada-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "10 eps · S.1",
-    "episodes_count": 10,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -16124,6 +16196,80 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "The Trembling of Cicada - Season 1 Episode 11 (2026)",
+        "slug": "trembling-cicada-season-1-episode-11-2026",
+        "source": "https://tv7.nontondrama.my/trembling-cicada-season-1-episode-11-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/bbQG",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8cccdd59fc9",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/mr1z9h9364k9",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/EXWgzYdz6",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "The Trembling of Cicada - Season 1 Episode 12 (2026)",
+        "slug": "trembling-cicada-season-1-episode-12-2026",
+        "source": "https://tv7.nontondrama.my/trembling-cicada-season-1-episode-12-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Nvzv",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8ccd548ddc1",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/wtevb7wdkdn9",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/HLc78-zFe",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -16131,28 +16277,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/T6E8",
+        "url": "https://videonode.de/iframe/p2p/Nvzv",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a8b7d862b884",
+        "url": "https://videonode.de/iframe/turbovip/6a8ccd548ddc1",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/w537pplj1oji",
+        "url": "https://videonode.de/iframe/cast/wtevb7wdkdn9",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/7nr1OzuT-",
+        "url": "https://videonode.de/iframe/hydrax/HLc78-zFe",
         "default": false
       }
     ],
@@ -35468,8 +35614,8 @@
     "tahun": "2024",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/07/film-eye-storm-2024-lk21.jpg",
     "rating": "8.3",
-    "durasi": "19 eps · S.4",
-    "episodes_count": 19,
+    "durasi": "22 eps · S.4",
+    "episodes_count": 22,
     "seasons_count": 1,
     "genre": [
       "Documentary",
@@ -36147,6 +36293,117 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 4,
+        "episode": 6,
+        "title": "In the Eye of the Storm - Season 4 Episode 6 (2024)",
+        "slug": "eye-storm-season-4-episode-6-2024",
+        "source": "https://tv7.nontondrama.my/eye-storm-season-4-episode-6-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Cklh",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8c8258d234e",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/oipfgapmx0u5",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/m-DvGdHW2",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 4,
+        "episode": 7,
+        "title": "In the Eye of the Storm - Season 4 Episode 7 (2024)",
+        "slug": "eye-storm-season-4-episode-7-2024",
+        "source": "https://tv7.nontondrama.my/eye-storm-season-4-episode-7-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/eD36",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8c8339948bb",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/rwaqpnb9ppzw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/YeuXhQDr_",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 4,
+        "episode": 8,
+        "title": "In the Eye of the Storm - Season 4 Episode 8 (2024)",
+        "slug": "eye-storm-season-4-episode-8-2024",
+        "source": "https://tv7.nontondrama.my/eye-storm-season-4-episode-8-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/QXMV",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8c87763358c",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/5nh6ejqpiiws",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/_OF5GXdoh",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -36154,28 +36411,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/Z0Cs",
+        "url": "https://videonode.de/iframe/p2p/QXMV",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a8c7d1d6dfad",
+        "url": "https://videonode.de/iframe/turbovip/6a8c87763358c",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/scnfonrgo776",
+        "url": "https://videonode.de/iframe/cast/5nh6ejqpiiws",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/x478R8TfB",
+        "url": "https://videonode.de/iframe/hydrax/_OF5GXdoh",
         "default": false
       }
     ],
@@ -36494,8 +36751,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-good-place-2016-lk21.jpg",
     "rating": "8.0",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "15 eps · S.2",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -36898,28 +37155,109 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "title": "The Good Place - Season 2 Episode 1 (2016)",
+        "slug": "good-place-season-2-episode-1-2016",
+        "source": "https://tv7.nontondrama.my/good-place-season-2-episode-1-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/vpUr",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8d018db2245",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/w9t3p55tzk8k",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/_9K_eXq9E",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 2,
+        "title": "The Good Place - Season 2 Episode 2 (2016)",
+        "slug": "good-place-season-2-episode-2-2016",
+        "source": "https://tv7.nontondrama.my/good-place-season-2-episode-2-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/7JDg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8d0343e4e8f",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/6w8w1atk3wjn",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/Sn2YQkqhH",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a845ab47143c",
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe/p2p/7JDg",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/ct27whf0oyhh",
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe/turbovip/6a8d0343e4e8f",
         "default": false
       },
       {
         "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe/cast/6w8w1atk3wjn",
+        "default": false
+      },
+      {
+        "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/KY3g2Cmo5",
+        "url": "https://videonode.de/iframe/hydrax/Sn2YQkqhH",
         "default": false
       }
     ],
@@ -68688,8 +69026,8 @@
     "tahun": "2026",
     "thumbnail": "https://cover.showcdnx.com/wp-content/uploads/2026/07/film-all-nothing-2026-lk21.jpg",
     "rating": "9.6",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Reality-TV"
@@ -68846,6 +69184,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "ALL or NOTHING - Season 1 Episode 5 (2026)",
+        "slug": "all-nothing-season-1-episode-5-2026",
+        "source": "https://tv7.nontondrama.my/all-nothing-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/yR7R",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8cca4ab802a",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/i085a3jo3pub",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/30V3W84bZ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -68853,28 +69228,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/IxQlYysWAykrPxBhMFU3Ky0WZH9oHAcoMT4TKW4Ee2pySn9jEjw1BQ4OLxN6U2Bodxxxdw",
+        "url": "https://videonode.de/iframe/p2p/yR7R",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a833e69355a7",
+        "url": "https://videonode.de/iframe/turbovip/6a8cca4ab802a",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/e0frulwhrxcp",
+        "url": "https://videonode.de/iframe/cast/i085a3jo3pub",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/qRigcVpRH",
+        "url": "https://videonode.de/iframe/hydrax/30V3W84bZ",
         "default": false
       }
     ],
@@ -68887,8 +69262,8 @@
     "tahun": "2026",
     "thumbnail": "https://cover.showcdnx.com/wp-content/uploads/2026/08/film-road-splendor-2026-lk21.jpg",
     "rating": "9.0",
-    "durasi": "29 eps · S.1",
-    "episodes_count": 29,
+    "durasi": "30 eps · S.1",
+    "episodes_count": 30,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -69971,6 +70346,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "title": "The Road to Splendor - Season 1 Episode 30 (2026)",
+        "slug": "road-splendor-season-1-episode-30-2026",
+        "source": "https://tv7.nontondrama.my/road-splendor-season-1-episode-30-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/EsJY",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8cd1591cb97",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/8nksgkc51ajt",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/zwwcMDWAT",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -69978,28 +70390,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/AbWA",
+        "url": "https://videonode.de/iframe/p2p/EsJY",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a8c2eab9171c",
+        "url": "https://videonode.de/iframe/turbovip/6a8cd1591cb97",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/xq7xgeprzsgo",
+        "url": "https://videonode.de/iframe/cast/8nksgkc51ajt",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/H3oDeNvVG",
+        "url": "https://videonode.de/iframe/hydrax/zwwcMDWAT",
         "default": false
       }
     ],
@@ -97642,8 +98054,8 @@
     "tahun": "2026",
     "thumbnail": "https://cover.showcdnx.com/wp-content/uploads/2026/08/film-my-bias-my-boss-2026-lk21.jpg",
     "rating": "9.1",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -97876,6 +98288,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "My Bias, My Boss - Season 1 Episode 7 (2026)",
+        "slug": "my-bias-my-boss-season-1-episode-7-2026",
+        "source": "https://tv7.nontondrama.my/my-bias-my-boss-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe/p2p/Wyo2",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe/turbovip/6a8cc845cdf33",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe/cast/lm90sl4jgo0j",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe/hydrax/g3taYWddj",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -97883,28 +98332,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/mcDt",
+        "url": "https://videonode.de/iframe/p2p/Wyo2",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a851de728b04",
+        "url": "https://videonode.de/iframe/turbovip/6a8cc845cdf33",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/qckcdlj02jv2",
+        "url": "https://videonode.de/iframe/cast/lm90sl4jgo0j",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/uauKtOCy2",
+        "url": "https://videonode.de/iframe/hydrax/g3taYWddj",
         "default": false
       }
     ],
