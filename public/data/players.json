@@ -658257,5 +658257,113 @@
         "default": false
       }
     ]
+  },
+  "snare-2025": {
+    "slug": "snare-2025",
+    "film": "The Snare (2025)",
+    "source": "https://tv12.lk21official.cc/snare-2025",
+    "scraped_at": "2026-08-27T12:20:19.992Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/MWf85cNeNd4_M1IOj_SaZw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/wsGzo7TeR1FSDiLLA2Co6g",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/8RaLP7VjAVgcCqwHPJWpTw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/5cm0tcXhkoy_gj57azGfxw",
+        "default": false
+      }
+    ]
+  },
+  "gintama-yoshiwara-flames-2026": {
+    "slug": "gintama-yoshiwara-flames-2026",
+    "film": "Gintama: Yoshiwara in Flames (2026)",
+    "source": "https://tv12.lk21official.cc/gintama-yoshiwara-flames-2026",
+    "scraped_at": "2026-08-27T12:20:19.993Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/R-lRMIj8aTgafc2Ib5W-ng",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/CEcETNOf_huPDnSno3xwOw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/-970R-JHr-GS9PaWWt_BfQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/v4dPBFGeEA3KJbupRGAUTg",
+        "default": false
+      }
+    ]
+  },
+  "last-sunrise-2026": {
+    "slug": "last-sunrise-2026",
+    "film": "The Last Sunrise (2026)",
+    "source": "https://tv12.lk21official.cc/last-sunrise-2026",
+    "scraped_at": "2026-08-27T12:20:19.993Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Bty0v-NGrbZuMY5lv4UKcg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/iR03S0ANrteFo2Fy17VM2w",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/GPnhzNUNgPkLCZbqa4fmHA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/OFLvqeyHUhnxmS88t8TvUA",
+        "default": false
+      }
+    ]
   }
 }
