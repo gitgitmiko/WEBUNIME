@@ -56210,7 +56210,7 @@
     "film": "Silo (2023)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/silo-2023",
-    "scraped_at": "2026-08-21T17:36:12.879Z",
+    "scraped_at": "2026-08-28T13:47:08.479Z",
     "episodes": [
       {
         "season": 1,
@@ -57104,6 +57104,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/5HVzfRN5Du",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 9,
+        "slug": "silo-season-3-episode-9-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Ayx1ppNnfKf0qqX950xSfA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/8KWv-p6cJNS7qgq0-SXG8A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/CKG5uG7rJxqrSmDcMMAoFg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QPgIfDZQOsDVcmHhxrEwCw",
             "default": false
           }
         ]
@@ -291088,7 +291123,7 @@
     "film": "The Affair Was Just the Beginning (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/affair-just-beginning-2026",
-    "scraped_at": "2026-08-21T17:31:47.453Z",
+    "scraped_at": "2026-08-28T13:46:30.798Z",
     "episodes": [
       {
         "season": 1,
@@ -291289,6 +291324,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/NCQHwdR8Q6",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "affair-just-beginning-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/n3di-0hl2YLR1ibPyhDo3A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/EzMGPt6oa1adL6QuAldYlw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/cRqlZ9iLqzpvW4_XwGNdUw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ydZ331viZe0YSTcjkrS50A",
             "default": false
           }
         ]
@@ -302064,7 +302134,7 @@
     "film": "Family Register (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/family-register-2026",
-    "scraped_at": "2026-08-27T12:20:52.875Z",
+    "scraped_at": "2026-08-28T13:47:08.479Z",
     "episodes": [
       {
         "season": 1,
@@ -303168,6 +303238,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/IeeWG-grRHsnP-633CuMWw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 33,
+        "slug": "family-register-season-1-episode-33-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/O8wIl3qPczbUVloFIrpCyQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/FXAjLqwKq60pFypa-Ape9A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/zPI598mWGsCxp9SK-AvqXA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/L3QoxbCeAkdTffysluc9zw",
             "default": false
           }
         ]
@@ -313685,7 +313790,7 @@
     "film": "Stuart Fails to Save the Universe (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/stuart-fails-save-universe-2026",
-    "scraped_at": "2026-08-21T17:36:12.879Z",
+    "scraped_at": "2026-08-28T13:47:08.479Z",
     "episodes": [
       {
         "season": 1,
@@ -313851,6 +313956,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/QJaL5Gth8",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "stuart-fails-save-universe-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-umvGy5DelHKh7JfE_IuKw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/DxqWCmV2vOa2JmhGEG0AdA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/owUd-PmzY2MGyEaU9ugILQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PMGIkCtYlE4DPgPg2MS5sA",
             "default": false
           }
         ]
@@ -373638,7 +373778,7 @@
     "film": "Whisper of Desire (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/whisper-desire-2026",
-    "scraped_at": "2026-08-22T17:24:17.780Z",
+    "scraped_at": "2026-08-28T13:47:08.479Z",
     "episodes": [
       {
         "season": 1,
@@ -373846,6 +373986,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/xRT5dqfv5",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "whisper-desire-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/rj-RkyjcjS2C9tMUR0OeIA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/WBGFjpPwEAR7gH2g_rdx0Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/LqAXNDuNPk-g8xLvsZNYfw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/BK5GFMlimbjqZY7wRMkp0g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "whisper-desire-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/uwln3MMNsmN1bPbAcRCZ_g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/RnvvTM2lHI0-P_B6Exp-8g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/O_piSNop44UL33OKCIvhzQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/h5zobMX21LTc_le68NzBXg",
             "default": false
           }
         ]
@@ -385603,7 +385813,7 @@
     "film": "Remnants of Gold (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/remnants-gold-2026",
-    "scraped_at": "2026-08-26T19:07:12.977Z",
+    "scraped_at": "2026-08-28T13:47:08.479Z",
     "episodes": [
       {
         "season": 1,
@@ -385741,6 +385951,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/GpUUSDtqzFNVhDRfZE-hHg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "slug": "remnants-gold-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Kxb1Z1n0IiPYcLFItOpcyg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/BAQ5xUNKjd2sZqbCo7Nbzg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/-QareZRaYhvQ8NbXbZ7wOg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/T2LbrdJUP_cRhOOqOdIFig",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "remnants-gold-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dt-cC6K4P-oHKRHFzJp8lQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/JIBg1H-oHEd7BHoEV5dARw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/h1GBO66aFnJ_FzPs8_dU1Q",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jHcRdodaL5bPXDte3BZzCA",
             "default": false
           }
         ]
@@ -386901,7 +387181,7 @@
     "film": "The Early Spring (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/early-spring-2026",
-    "scraped_at": "2026-08-28T01:20:12.021Z",
+    "scraped_at": "2026-08-28T13:46:30.797Z",
     "episodes": [
       {
         "season": 1,
@@ -387109,6 +387389,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/npTEc21M7_gjgL2XQazGCA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "early-spring-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/w0Vu8aVESF3q4kLhtGmMOg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/v7o_J43L29pPlCfy2zXZgg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/F2rbIx0AHqI0QuzgcEnQNw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/NFambrbuQAKZxzdiHwh9og",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "early-spring-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/rCo8Lv8bkGChSUjVz00nVw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/S8S7oC_z9e531QtJajXlHg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/N69yswDouj4T2Pi3QirgyA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Wd4JfISqmqK-C6OArBxlZg",
             "default": false
           }
         ]
@@ -388459,7 +388809,7 @@
     "film": "Forging Justice (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/forging-justice-2026",
-    "scraped_at": "2026-08-28T01:21:13.101Z",
+    "scraped_at": "2026-08-28T13:47:08.478Z",
     "episodes": [
       {
         "season": 1,
@@ -389125,6 +389475,461 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "slug": "forging-justice-season-1-episode-20-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RKOFcFRyPzqz9P2Voic_cg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/lUww3HE7Z_PLDFNvkhXUvw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/L39dobMXNjW2DqFZ6ZzbaA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bFlPX9cgWjG-C2vR__XXXA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "slug": "forging-justice-season-1-episode-21-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1M3XSyVDgJuwLkTHlN9z3g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/5C0Fz9KKCXnmu0UY7ksmUQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fzLqzwAaRxYHYkn7H1SDHA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/1Y4saiZTvWnQ2-yZbC3Nmw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "slug": "forging-justice-season-1-episode-22-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Ye8HDNwuozNedNcOBojDlw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/TYx0mlioYTWSXCgTdfZ9fQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xKw5UPWCXamRV-aGs8Uj-A",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/T9SE9ZT4atkcmZ31tpHU4A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "slug": "forging-justice-season-1-episode-23-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hBKA7IyvYof93g0jNYqgeA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/DvWWMoKzvSRVgrDKXclgsw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/uWJnvvpvq8J419bFtAeMNg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/LM_zYPuRuOYiRPz3Ak0D8Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "slug": "forging-justice-season-1-episode-24-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/iaup6gTspTgJqrcNBK-SHQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/u1nn2B7HftiTPUb1yqFAIA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/w9g6QpFK89PpxzibMQc8Dw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/dHlkjHbSf2aguKHKK9IjYQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "slug": "forging-justice-season-1-episode-25-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/OEzEjxhczBOxw7tvBEAykA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/UoDObbIF9YfmAm9uMgNjGw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/QM2ad0Aq7R5R2DOqeOyPUw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/M-4vGSypOdkVYyOrGHybVA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "slug": "forging-justice-season-1-episode-26-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nlK7uO4uchjGs0xF2QvyWA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/Sd7Vwl76rhwFalQ9wVwaaw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/q-YeScrGiPpH_Vj8IbviEw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bdWzYGuDFlFg3AtOhWEa2w",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "slug": "forging-justice-season-1-episode-27-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/koq3UP5jERDpSqhdxAstQA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/6jhxtjB_Ke12jKketAb5Gw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/9asCIKD_1JZ1LLh3yXqQEg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/db8p95R9Lks5Dpw7X_FJLg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "slug": "forging-justice-season-1-episode-28-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/XQGhL7PulylN4CQCp9siyQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/XOhFkAhnA_hszAyrVxFQ9w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/C8NxaD5psqnectntyi45mA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/NcP-EwziTba0kRyCVVHiEg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 29,
+        "slug": "forging-justice-season-1-episode-29-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/QLwy3IUHuyMZqg-CRP6vXw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/DvukTivD5GYGCnEYDlsevA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kQ7bDlK1S0Hzz1VP_hsyaQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/7et3O67k-GjdsJiTxt48Fw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "slug": "forging-justice-season-1-episode-30-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/mQ_dsTiTBUnxW492MzWeKA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/5bCDGiGidjhEMehxd7fXuQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/F74TBN0jPgkrynVnblzXfQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/atRhBB2Q6XNGPE3lc5dZ3A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "slug": "forging-justice-season-1-episode-31-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/R7ZuwE1s59ONioL-WGNScg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/P4tKkNNR3uw5wdrbG6SlIQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/PQ48YVGMpR32dfgRODHlHQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/aCB5eSvJTGakUf6QCWIMqg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 32,
+        "slug": "forging-justice-season-1-episode-32-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/m7zsE4qtZgDFD1QdFlnvEA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/4fMRoHXim3Uzg5w8vZud0w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/2V2nsl1ae7nMVVy-fYPo3Q",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/X--wvq0qbnAR_ZsDUdAfpA",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -389133,7 +389938,7 @@
     "film": "Pull Strings (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/pull-strings-2026",
-    "scraped_at": "2026-08-28T01:21:13.100Z",
+    "scraped_at": "2026-08-28T13:47:08.479Z",
     "episodes": [
       {
         "season": 1,
@@ -389624,6 +390429,111 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "slug": "pull-strings-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Pz_x1lrdiu5LHpmJFjgJng",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/gtcfVy4NOIqS6RjrM16DZA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fB1fLHQC3_ZitZyomQKZ4Q",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/BXrDAL0hJst5RbUNA_Qovg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "slug": "pull-strings-season-1-episode-16-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/_GXupvVGploMKzmQ1rUpsQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/yNrcY7cc-rJyjJLVODMqoA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/hZ85ik99aActseHF4SLkng",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/G7SbjI-MVu-zXZowgWfMVw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "slug": "pull-strings-season-1-episode-17-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-sxLlT1DHdN_tEoN2xyIlQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/17Sduou5dukypE1tX4kgSQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/F7b8E47u7g-ZSDPkH1wOqQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/3MyMRiKsaACiYWb90PfYgQ",
+            "default": false
+          }
+        ]
       }
     ]
   },
@@ -390059,6 +390969,190 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/HmW_fR4ZWiwzv1CuDqrIYw",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  "one-2026": {
+    "slug": "one-2026",
+    "film": "The One (2026)",
+    "type": "series",
+    "source": "https://tv7.nontondrama.my/one-2026",
+    "scraped_at": "2026-08-28T13:47:08.478Z",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "slug": "one-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/eUKBSrtXajZQ0BWgxVx3Bg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/_fC3rebcVfpP2U6bmgXwdg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/GhtjKU9Om4hamqy-TRvvKQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bCfxOGyzksMx99AkDE06QQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "slug": "one-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xUzU0SmMNjSBScbtCxMXNA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/qXKaepuXrWca3skH7EkvMw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/cAmnZ8zdav8XHBJLKz4_dg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/on9OJPk9nH3wkafmla9F2g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "slug": "one-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/trbvD8xhUUVXlbMhe60WDw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/_eV1pKX_lYEZYptgVgeORg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Wy7Aw0_pA4N4OQ0pXC0R9w",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/xgtc3PjkWTs9nbTK1b8V5Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "one-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/U9usSWBqFKktSvg0lojvCg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/l2oyUwchMiwZHq8oIdT46A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/yWnLnn5RggrqlsYBdwDAWQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/2u8R4U0wC-eywiUSaVn1Ug",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "slug": "one-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/HyJRA5XbOgAzaSyaw1LIvA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/IUourSJ2BIjgUZLcMrVqzg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gheJ3yCQy3xacQTbJ04xZA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/WjUtLo4CORFNFXCfbIeiQw",
             "default": false
           }
         ]
