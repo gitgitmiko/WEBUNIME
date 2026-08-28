@@ -9837,5 +9837,42 @@
         "default": false
       }
     ]
+  },
+  "narsata-sekutu-setan-2026": {
+    "slug": "narsata-sekutu-setan-2026",
+    "film": "Nar'sata: Sekutu Setan (2026)",
+    "source": "https://tv12.lk21official.cc/narsata-sekutu-setan-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-28T01:20:17.613Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/V9PkyNH5D1lUB7fVfim5Vw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/RfQQP920mQV2Eq6yoz33Ew",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/IEszMslftwrXVk-zNC13vw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/9ONOSmg0BqOGQza9-BLpKg",
+        "default": false
+      }
+    ]
   }
 }
