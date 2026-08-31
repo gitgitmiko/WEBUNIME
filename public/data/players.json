@@ -659268,5 +659268,41 @@
         "default": false
       }
     ]
+  },
+  "doc-west-2009": {
+    "slug": "doc-west-2009",
+    "film": "Doc West (2009)",
+    "source": "https://tv12.lk21official.cc/doc-west-2009",
+    "scraped_at": "2026-08-31T21:46:40.471Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/k7IJtG5J4sviwe9Qm-J8kw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/Gba9mwwwchGapD_9HKXSQg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/W4cPRvN3o-uraaoYbQ975w",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/PD3dNV9En82eqrWItcSPlA",
+        "default": false
+      }
+    ]
   }
 }
