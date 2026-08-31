@@ -9874,5 +9874,79 @@
         "default": false
       }
     ]
+  },
+  "sleepwalker-2026": {
+    "slug": "sleepwalker-2026",
+    "film": "Sleepwalker (2026)",
+    "source": "https://tv12.lk21official.cc/sleepwalker-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-31T08:06:55.007Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/jzJx4r2oz-gyLRXv3Bk2xA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/B7swn1rPCaGE3QssUdVTCQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/WoPvTjSocyOW0NxF9hbEYA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/-0BKI4pJ_1xOIOR4zZX_WA",
+        "default": false
+      }
+    ]
+  },
+  "deadlocked-dad-dead-2026": {
+    "slug": "deadlocked-dad-dead-2026",
+    "film": "Deadlocked: Dad of the Dead (2026)",
+    "source": "https://tv12.lk21official.cc/deadlocked-dad-dead-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-08-31T08:06:55.007Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/MVAOUSNu3D-t7WKc1UjxEQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/eHtgcmppNFQHlr-kAYtrjw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/n3ZHziUrn7h8968Dr9atVw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/bqdP1o-pFyncxsPtm2pQzA",
+        "default": false
+      }
+    ]
   }
 }

@@ -2,6 +2,82 @@
   {
     "type": "anime-movie",
     "source_site": "samehadaku",
+    "nama": "Gintama Movie 3: Yoshiwara Daienjou",
+    "judul": "Gintama Movie 3: Yoshiwara Daienjou",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/08/bx197474-jTeY1G9gtD8i.jpg",
+    "rating": "8.77",
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [
+      "Action",
+      "Comedy",
+      "Historical",
+      "Samurai",
+      "Sci-Fi",
+      "Shounen"
+    ],
+    "sinopsis": "Movie remake dari arc Yoshiwara Enjou.",
+    "related": [],
+    "slug": "gintama-movie-3-yoshiwara-daienjou",
+    "source": "https://v2.samehadaku.how/anime/gintama-movie-3-yoshiwara-daienjou/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Gintama Movie 3: Yoshiwara Daienjou Episode 1 [END]",
+        "slug": "gintama-movie-3-yoshiwara-daienjou-episode-1-end",
+        "source": "https://v2.samehadaku.how/gintama-movie-3-yoshiwara-daienjou-episode-1-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/c405510d-d527-437b-89a2-7ef3425ccfce",
+            "default": true,
+            "post": "52356",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/kMtWyZIL#BsWqtog3Vwb3ZZWRFPRfE2gVo_oR0iT9sSF17i6zutQ",
+            "default": false,
+            "post": "52356",
+            "nume": "6"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/c405510d-d527-437b-89a2-7ef3425ccfce",
+        "default": true,
+        "post": "52356",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/kMtWyZIL#BsWqtog3Vwb3ZZWRFPRfE2gVo_oR0iT9sSF17i6zutQ",
+        "default": false,
+        "post": "52356",
+        "nume": "6"
+      }
+    ],
+    "id": 1,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
     "nama": "Assassination Classroom the Movie: Our Time",
     "judul": "Assassination Classroom the Movie: Our Time",
     "tahun": "",
@@ -160,7 +236,7 @@
         "nume": "7"
       }
     ],
-    "id": 1
+    "id": 2
   },
   {
     "type": "anime-movie",
@@ -371,7 +447,7 @@
         "nume": "7"
       }
     ],
-    "id": 2
+    "id": 3
   },
   {
     "type": "anime-movie",
@@ -605,7 +681,7 @@
         "nume": "8"
       }
     ],
-    "id": 3
+    "id": 4
   },
   {
     "type": "anime-movie",
@@ -895,7 +971,7 @@
         "nume": "14"
       }
     ],
-    "id": 4
+    "id": 5
   },
   {
     "type": "anime-movie",
@@ -1146,7 +1222,7 @@
         "nume": "12"
       }
     ],
-    "id": 5
+    "id": 6
   },
   {
     "type": "anime-movie",
@@ -1344,7 +1420,7 @@
         "nume": "9"
       }
     ],
-    "id": 6
+    "id": 7
   },
   {
     "type": "anime-movie",
@@ -1578,7 +1654,7 @@
         "nume": "15"
       }
     ],
-    "id": 7
+    "id": 8
   },
   {
     "type": "anime-movie",
@@ -1775,7 +1851,7 @@
         "nume": "12"
       }
     ],
-    "id": 8
+    "id": 9
   },
   {
     "type": "anime-movie",
@@ -2007,7 +2083,7 @@
         "nume": "15"
       }
     ],
-    "id": 9
+    "id": 10
   },
   {
     "type": "anime-movie",
@@ -2204,7 +2280,7 @@
         "nume": "12"
       }
     ],
-    "id": 10
+    "id": 11
   },
   {
     "type": "anime-movie",
@@ -2439,7 +2515,7 @@
         "nume": "15"
       }
     ],
-    "id": 11
+    "id": 12
   },
   {
     "type": "anime-movie",
@@ -2746,7 +2822,7 @@
         "nume": "20"
       }
     ],
-    "id": 12
+    "id": 13
   },
   {
     "type": "anime-movie",
@@ -2946,7 +3022,7 @@
         "nume": "12"
       }
     ],
-    "id": 13
+    "id": 14
   },
   {
     "type": "anime-movie",
@@ -3182,7 +3258,7 @@
         "nume": "14"
       }
     ],
-    "id": 14
+    "id": 15
   },
   {
     "type": "anime-movie",
@@ -3326,7 +3402,7 @@
         "nume": "11"
       }
     ],
-    "id": 15
+    "id": 16
   },
   {
     "type": "anime-movie",
@@ -3471,7 +3547,7 @@
         "nume": "6"
       }
     ],
-    "id": 16
+    "id": 17
   },
   {
     "type": "anime-movie",
@@ -3615,7 +3691,7 @@
         "nume": "6"
       }
     ],
-    "id": 17
+    "id": 18
   },
   {
     "type": "anime-movie",
@@ -3794,7 +3870,7 @@
         "nume": "8"
       }
     ],
-    "id": 18
+    "id": 19
   },
   {
     "type": "anime-movie",
@@ -3939,7 +4015,7 @@
         "nume": "6"
       }
     ],
-    "id": 19
+    "id": 20
   },
   {
     "type": "anime-movie",
@@ -4086,7 +4162,7 @@
         "nume": "6"
       }
     ],
-    "id": 20
+    "id": 21
   },
   {
     "type": "anime-movie",
@@ -4214,7 +4290,7 @@
         "nume": "5"
       }
     ],
-    "id": 21
+    "id": 22
   },
   {
     "type": "anime-movie",
@@ -4396,7 +4472,7 @@
         "nume": "6"
       }
     ],
-    "id": 22
+    "id": 23
   },
   {
     "type": "anime-movie",
@@ -4505,7 +4581,7 @@
         "nume": "4"
       }
     ],
-    "id": 23
+    "id": 24
   },
   {
     "type": "anime-movie",
@@ -4613,7 +4689,7 @@
         "nume": "4"
       }
     ],
-    "id": 24
+    "id": 25
   },
   {
     "type": "anime-movie",
@@ -4720,7 +4796,7 @@
         "nume": "4"
       }
     ],
-    "id": 25
+    "id": 26
   },
   {
     "type": "anime-movie",
@@ -4811,7 +4887,7 @@
         "nume": "3"
       }
     ],
-    "id": 26
+    "id": 27
   },
   {
     "type": "anime-movie",
@@ -4923,7 +4999,7 @@
         "nume": "4"
       }
     ],
-    "id": 27
+    "id": 28
   },
   {
     "type": "anime-movie",
@@ -4958,7 +5034,7 @@
       }
     ],
     "players": [],
-    "id": 28
+    "id": 29
   },
   {
     "type": "anime-movie",
@@ -5067,7 +5143,7 @@
         "nume": "4"
       }
     ],
-    "id": 29
+    "id": 30
   },
   {
     "type": "anime-movie",
@@ -5265,7 +5341,7 @@
         "nume": "9"
       }
     ],
-    "id": 30
+    "id": 31
   },
   {
     "type": "anime-movie",
@@ -5443,7 +5519,7 @@
         "nume": "8"
       }
     ],
-    "id": 31
+    "id": 32
   },
   {
     "type": "anime-movie",
@@ -5606,7 +5682,7 @@
         "nume": "7"
       }
     ],
-    "id": 32
+    "id": 33
   },
   {
     "type": "anime-movie",
@@ -5678,7 +5754,7 @@
         "nume": "2"
       }
     ],
-    "id": 33
+    "id": 34
   },
   {
     "type": "anime-movie",
@@ -5753,6 +5829,6 @@
         "nume": "2"
       }
     ],
-    "id": 34
+    "id": 35
   }
 ]
