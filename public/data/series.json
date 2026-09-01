@@ -234,8 +234,7 @@
         "default": false
       }
     ],
-    "id": 420,
-    "is_new": true
+    "id": 420
   },
   {
     "type": "series",
@@ -538,8 +537,7 @@
         "default": false
       }
     ],
-    "id": 419,
-    "is_new": true
+    "id": 419
   },
   {
     "type": "series",
@@ -888,8 +886,7 @@
         "default": false
       }
     ],
-    "id": 418,
-    "is_new": true
+    "id": 418
   },
   {
     "type": "series",
@@ -1128,8 +1125,7 @@
         "default": false
       }
     ],
-    "id": 417,
-    "is_new": true
+    "id": 417
   },
   {
     "type": "series",
@@ -2433,8 +2429,7 @@
         "default": false
       }
     ],
-    "id": 416,
-    "is_new": true
+    "id": 416
   },
   {
     "type": "series",
@@ -69336,8 +69331,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-naked-afraid-shipwrecked-2026-lk21.jpg",
     "rating": "8.0",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Documentary",
@@ -69495,6 +69490,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Naked and Afraid: Shipwrecked - Season 1 Episode 5 (2026)",
+        "slug": "naked-afraid-shipwrecked-season-1-episode-5-2026",
+        "source": "https://tv8.nontondrama.my/naked-afraid-shipwrecked-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ycodjUtu8VLu-C73SUquqA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/rT-2K2VjTAD5CMtll9gvVg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/HomQqCrZN5WD1X_qDjihhw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Z1tBCs4UKWBHA_gDfnEtAQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -69502,28 +69534,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/wfWw",
+        "url": "https://videonode.de/iframe3/p2p/ycodjUtu8VLu-C73SUquqA",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a83df6e9bd6c",
+        "url": "https://videonode.de/iframe3/turbovip/rT-2K2VjTAD5CMtll9gvVg",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/oh1nlzriuwu2",
+        "url": "https://videonode.de/iframe3/cast/HomQqCrZN5WD1X_qDjihhw",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/u1mHkK0eM",
+        "url": "https://videonode.de/iframe3/hydrax/Z1tBCs4UKWBHA_gDfnEtAQ",
         "default": false
       }
     ],
@@ -80156,8 +80188,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/07/film-hidden-shadow-aka-prakan-saengjan-2026-lk21.jpg",
     "rating": "8.8",
-    "durasi": "18 eps · S.1",
-    "episodes_count": 18,
+    "durasi": "20 eps · S.1",
+    "episodes_count": 20,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -80818,6 +80850,80 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "The Hidden Shadow aka Prakan Saengjan - Season 1 Episode 19 (2026)",
+        "slug": "hidden-shadow-aka-prakan-saengjan-season-1-episode-19-2026",
+        "source": "https://tv8.nontondrama.my/hidden-shadow-aka-prakan-saengjan-season-1-episode-19-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/IoyjiDasZncUnQwR1Fq7RA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/OBG-HnbBrI2gYdnDC7Ed3Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EABp4nQwPM_r3RxQbMC5Bg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pWE_xEsOlfDDZlaWJ6YBsA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "The Hidden Shadow aka Prakan Saengjan - Season 1 Episode 20 (2026)",
+        "slug": "hidden-shadow-aka-prakan-saengjan-season-1-episode-20-2026",
+        "source": "https://tv8.nontondrama.my/hidden-shadow-aka-prakan-saengjan-season-1-episode-20-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/WsDmZnZnUC-tuk16ekRl_A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/TT1k9DAjMe8o-VsNZPdVIQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/BpUzTp07HS4wwL347xCk1Q",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/u5r5xKckD731fZoFeQkSNQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -80825,28 +80931,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/b5Gq1eO9NbupfU1040tOJA",
+        "url": "https://videonode.de/iframe3/p2p/WsDmZnZnUC-tuk16ekRl_A",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/ZkviOPEp_JPo2y4-9TIdZw",
+        "url": "https://videonode.de/iframe3/turbovip/TT1k9DAjMe8o-VsNZPdVIQ",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/GCsMck3yHROwpqlO1kUZ8Q",
+        "url": "https://videonode.de/iframe3/cast/BpUzTp07HS4wwL347xCk1Q",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Ae-r1rGTcOpgQn5v7Ae1GQ",
+        "url": "https://videonode.de/iframe3/hydrax/u5r5xKckD731fZoFeQkSNQ",
         "default": false
       }
     ],

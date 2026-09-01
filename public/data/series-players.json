@@ -332422,7 +332422,7 @@
     "film": "The Hidden Shadow aka Prakan Saengjan (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/hidden-shadow-aka-prakan-saengjan-2026",
-    "scraped_at": "2026-08-29T19:39:21.567Z",
+    "scraped_at": "2026-09-01T07:15:33.676Z",
     "episodes": [
       {
         "season": 1,
@@ -333036,6 +333036,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/Ae-r1rGTcOpgQn5v7Ae1GQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "slug": "hidden-shadow-aka-prakan-saengjan-season-1-episode-19-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/IoyjiDasZncUnQwR1Fq7RA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/OBG-HnbBrI2gYdnDC7Ed3Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EABp4nQwPM_r3RxQbMC5Bg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pWE_xEsOlfDDZlaWJ6YBsA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "slug": "hidden-shadow-aka-prakan-saengjan-season-1-episode-20-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/WsDmZnZnUC-tuk16ekRl_A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/TT1k9DAjMe8o-VsNZPdVIQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/BpUzTp07HS4wwL347xCk1Q",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/u5r5xKckD731fZoFeQkSNQ",
             "default": false
           }
         ]
@@ -342384,7 +342454,7 @@
     "film": "Naked and Afraid: Shipwrecked (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/naked-afraid-shipwrecked-2026",
-    "scraped_at": "2026-08-18T17:36:04.319Z",
+    "scraped_at": "2026-09-01T07:15:33.676Z",
     "episodes": [
       {
         "season": 1,
@@ -342522,6 +342592,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe/hydrax/u1mHkK0eM",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "slug": "naked-afraid-shipwrecked-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ycodjUtu8VLu-C73SUquqA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/rT-2K2VjTAD5CMtll9gvVg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/HomQqCrZN5WD1X_qDjihhw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Z1tBCs4UKWBHA_gDfnEtAQ",
             "default": false
           }
         ]
