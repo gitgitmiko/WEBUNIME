@@ -1,6 +1,762 @@
 [
   {
     "type": "series",
+    "nama": "Vigil",
+    "judul": "Vigil (2021)",
+    "tahun": "2021",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-vigil-2021-lk21.jpg",
+    "rating": "7.4",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "sinopsis": "Vigil - Hilangnya sebuah kapal pukat nelayan Skotlandia secara misterius dan kematian tak wajar di atas kapal selam nuklir Trident membawa pihak kepolisian ke dalam konflik sengit dengan Angkatan Laut serta badan intelijen Inggris. Penyelidikan yang berisiko tinggi ini mengungkap konspirasi berbahay...\n\nBintang Film: Suranne Jones, Rose Leslie, Gary Lewis, Orla Russell, Shaun Evans\n\nNegara: United Kingdom\n\nVotes: 32.000",
+    "slug": "vigil-2021",
+    "source": "https://tv9.nontondrama.my/vigil-2021",
+    "list_source": "https://tv12.lk21official.cc/vigil-2021",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Vigil - Season 1 Episode 1 (2021)",
+        "slug": "vigil-season-1-episode-1-2021",
+        "source": "https://tv9.nontondrama.my/vigil-season-1-episode-1-2021",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/3YFHTwxAdBSrmM8x8EiJyQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/30jKVtrD8487kJUj0rwZvg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/d560ut3CgqKp3YLYeNnHaQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/O4uZzr2WyOENdSHyEz-6cA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Vigil - Season 1 Episode 2 (2021)",
+        "slug": "vigil-season-1-episode-2-2021",
+        "source": "https://tv9.nontondrama.my/vigil-season-1-episode-2-2021",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/a5BerzsvS875LqE3sG-s1Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/GyiloDsMyGGmejgVRo1tYg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/BeyU_xLE1cnhWVEThThUAQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/8gj_LGZ8IyKI_XTyhIH4Iw",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/a5BerzsvS875LqE3sG-s1Q",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/GyiloDsMyGGmejgVRo1tYg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/BeyU_xLE1cnhWVEThThUAQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/8gj_LGZ8IyKI_XTyhIH4Iw",
+        "default": false
+      }
+    ],
+    "id": 424,
+    "is_new": true
+  },
+  {
+    "type": "series",
+    "nama": "In the Frame: Son Kare",
+    "judul": "In the Frame: Son Kare (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-frame-son-kare-2026-lk21.jpg",
+    "rating": "6.5",
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "sinopsis": "In the Frame - Serangkaian pembunuhan misterius yang mengguncang Istanbul mengarahkan Komisaris Sare pada sebuah petunjuk tunggal yang membingungkan: foto-foto para korban yang secara misterius ditinggalkan di rumah Atlas, seorang fotografer busana, sebelum kematian mereka terjadi. Dalam upaya menyi...\n\nBintang Film: Burcu Ozberk, Uraz Kaygilaroglu, Yigit Ozsener, Nizam Namidar, Nasmina Tuten\n\nNegara: Turkey\n\nVotes: 300",
+    "slug": "frame-son-kare-2026",
+    "source": "https://tv9.nontondrama.my/frame-son-kare-2026",
+    "list_source": "https://tv12.lk21official.cc/frame-son-kare-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "In the Frame: Son Kare - Season 1 Episode 1 (2026)",
+        "slug": "frame-son-kare-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/rd1LwDtkpsA29AbuTqUy7g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/sz5wIpBOhoJRg-xjtmwq4g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jdTJzkvZ_utZewQzYwHJYA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pQNDqdn4pJddlLowsrkGvA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "In the Frame: Son Kare - Season 1 Episode 2 (2026)",
+        "slug": "frame-son-kare-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xKdT1xCrtF1IqTJAAe6NAg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/xll9H9lNhEBsKv5-NdMpig",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/5L1-uZm5CX0LlFPRh9URFQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/LaKp3UOHPFG_ZgrirSuo2w",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "In the Frame: Son Kare - Season 1 Episode 3 (2026)",
+        "slug": "frame-son-kare-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/g0gyI2_poHmJ8nZaIh1oOA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/f2cFtcOXwybUjUrhwroSng",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Dk5cbrTxw8dQmkS6h3luug",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jFNalVS94hmQknP01LH1Lw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "In the Frame: Son Kare - Season 1 Episode 4 (2026)",
+        "slug": "frame-son-kare-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/TMemEQFK69uesJgiY7ukUA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/QSkaZMrB1lULzV7ZSocCAw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Fyguu23Hm7TST3kS_BzzDA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9EAYWIuy3GxyEfy0EwwmVQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "In the Frame: Son Kare - Season 1 Episode 5 (2026)",
+        "slug": "frame-son-kare-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/NBsVaD-ZlgT8Ex_vxA-ziw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/8dwSPcaYZy1M7qMxWejrBw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fhmjk8040GgEbih3v1T9HA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Igv-HmqUCfEGUmX9gEvLWQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "In the Frame: Son Kare - Season 1 Episode 6 (2026)",
+        "slug": "frame-son-kare-season-1-episode-6-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/co7FHpPrNLInFq57ZBEejQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/LbaMw-AXvQgny0FSXWtxKQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3w8pNjvCI8-4f6xkcQhbaA",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PlntEgG0nKmftBS6iJIOnA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "In the Frame: Son Kare - Season 1 Episode 7 (2026)",
+        "slug": "frame-son-kare-season-1-episode-7-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/mD9ZCqB9hEa69_wWctT5Mw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/R1Mlta8dPAKQfA0hWZ6yeg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/iE7gBdYe2RZoNnNxg1tNZw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/L1Z0bPu0WtCFlWzA-Ixnhw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "In the Frame: Son Kare - Season 1 Episode 8 (2026)",
+        "slug": "frame-son-kare-season-1-episode-8-2026",
+        "source": "https://tv9.nontondrama.my/frame-son-kare-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/QiZGiM3lDLmZhQIPUNOJNw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/r23IGcB9uf_X4y4myLsedQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/-R9nrMHCvAwADKp7AGhcJw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MjJSHWXkMcYiNtyNT0uHtQ",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/QiZGiM3lDLmZhQIPUNOJNw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/r23IGcB9uf_X4y4myLsedQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/-R9nrMHCvAwADKp7AGhcJw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/MjJSHWXkMcYiNtyNT0uHtQ",
+        "default": false
+      }
+    ],
+    "id": 423,
+    "is_new": true
+  },
+  {
+    "type": "series",
+    "nama": "Zenigata Heiji",
+    "judul": "Zenigata Heiji (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-zenigata-heiji-2026-lk21.jpg",
+    "rating": "0.0",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "History",
+      "Mystery"
+    ],
+    "sinopsis": "Zenigata Heiji - Ketika mayat seorang pria ditemukan di area sebuah kuil dengan secarik kertas menyerupai cetak biru bangunan di saku bajunya, Heiji segera memulai penyelidikan mendalam. Bersama rekannya, Manpachi, ia berpacu dengan waktu untuk mengurai teka-teki di balik motif pembunuhan tersebut d...\n\nSutradara: Keisuke Toyoshima\n\nBintang Film: Kazuya Kamenashi, Tomoya Oku, Erika Ikuta, Takenori Goto\n\nNegara: Japan",
+    "slug": "zenigata-heiji-2026",
+    "source": "https://tv9.nontondrama.my/zenigata-heiji-2026",
+    "list_source": "https://tv12.lk21official.cc/zenigata-heiji-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Zenigata Heiji - Season 1 Episode 1 (2026)",
+        "slug": "zenigata-heiji-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/zenigata-heiji-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0rXjPY31ZfF7Tc-3I8mGQQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/jsNH8eEIaMbBzXpq3V3hVw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/G9fQoMs3MVap5vf69jZucg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/do5QvOJRX63Ldev6rjJ8DQ",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/0rXjPY31ZfF7Tc-3I8mGQQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/jsNH8eEIaMbBzXpq3V3hVw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/G9fQoMs3MVap5vf69jZucg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/do5QvOJRX63Ldev6rjJ8DQ",
+        "default": false
+      }
+    ],
+    "id": 422,
+    "is_new": true
+  },
+  {
+    "type": "series",
+    "nama": "Bookish",
+    "judul": "Bookish (2025)",
+    "tahun": "2025",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-bookish-2025-lk21.jpg",
+    "rating": "6.9",
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
+    "seasons_count": 1,
+    "genre": [
+      "Crime",
+      "Drama",
+      "Mystery"
+    ],
+    "sinopsis": "Bookish - Gabriel Book, seorang pemilik toko buku antik, memanfaatkan koleksi bukunya yang sangat luas untuk memecahkan berbagai kasus kejahatan yang membingungkan. Di samping itu, ia juga merawat dan membimbing sekelompok individu bermasalah namun berhati baik, dengan memberikan perlindungan serta ...\n\nBintang Film: Mark Gatiss, Polly Walker, Connor Finch, Elliot Levey, Buket Komur\n\nNegara: Belgium, United Kingdom\n\nVotes: 5.000",
+    "slug": "bookish-2025",
+    "source": "https://tv9.nontondrama.my/bookish-2025",
+    "list_source": "https://tv12.lk21official.cc/bookish-2025",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Bookish - Season 1 Episode 1 (2025)",
+        "slug": "bookish-season-1-episode-1-2025",
+        "source": "https://tv9.nontondrama.my/bookish-season-1-episode-1-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/pVuJ9nw4eeryX8gy59Tg2w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/yM_GFEyAqdmpBXCBfCzoWA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/_ZzTlae_ztsN82azmmdvug",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/O7g1oEwgSDG69xptEWNLbw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Bookish - Season 1 Episode 2 (2025)",
+        "slug": "bookish-season-1-episode-2-2025",
+        "source": "https://tv9.nontondrama.my/bookish-season-1-episode-2-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/4rH1zKHSvJZE1QGH2tJJwQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/AqDQJN_zE_bPqfwfoQZeZA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fLRquFBIfP_JYVX0PfdVtw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/5hP9h9IuoxRkUrcUYxapMg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Bookish - Season 1 Episode 3 (2025)",
+        "slug": "bookish-season-1-episode-3-2025",
+        "source": "https://tv9.nontondrama.my/bookish-season-1-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/NY3aJ_NtZgF4qN4O0hYUcg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/PRd-ubz6WhYmWrfQpHp6kA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/NPy3RZ-O68tT9wVYsy1t-A",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/0OqPyub_YElBvz8fVcG2HQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Bookish - Season 1 Episode 4 (2025)",
+        "slug": "bookish-season-1-episode-4-2025",
+        "source": "https://tv9.nontondrama.my/bookish-season-1-episode-4-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Bb7lPzK4nQ7WHfenfFNX-A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/te9Sz6Z46L8Vv54-Ai6nVQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/EK0Asa2W5miaBi4ECQf_9w",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Bb7lPzK4nQ7WHfenfFNX-A",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/te9Sz6Z46L8Vv54-Ai6nVQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/EK0Asa2W5miaBi4ECQf_9w",
+        "default": false
+      }
+    ],
+    "id": 421,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "All the Truth in My Lies",
     "judul": "All the Truth in My Lies (2026)",
     "tahun": "2026",
@@ -16912,8 +17668,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-early-spring-2026-lk21.jpg",
     "rating": "9.8",
-    "durasi": "12 eps · S.1",
-    "episodes_count": 12,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -17367,6 +18123,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "The Early Spring - Season 1 Episode 13 (2026)",
+        "slug": "early-spring-season-1-episode-13-2026",
+        "source": "https://tv9.nontondrama.my/early-spring-season-1-episode-13-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Zypg_3_t8VV-9GUhukm5RA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/3r-AIF1_nAZMCa31s6icLA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1OddrZVZkveGBv22chZQOw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/qyuIi_Lufgd8b2DYH45CwQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -17374,28 +18167,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/CwecsiwR6Ji_iG0aC2VOPA",
+        "url": "https://videonode.de/iframe3/p2p/Zypg_3_t8VV-9GUhukm5RA",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/fxJdoY5c63G0TKv6x4T_9A",
+        "url": "https://videonode.de/iframe3/turbovip/3r-AIF1_nAZMCa31s6icLA",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/vBUWLh5rhn6hJFfUCicQkg",
+        "url": "https://videonode.de/iframe3/cast/1OddrZVZkveGBv22chZQOw",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5KCHv2xMnTsqs9-pwjSw6w",
+        "url": "https://videonode.de/iframe3/hydrax/qyuIi_Lufgd8b2DYH45CwQ",
         "default": false
       }
     ],
@@ -64546,8 +65339,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/08/film-take-hike-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "8 eps · S.1",
-    "episodes_count": 8,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Adventure",
@@ -64825,6 +65618,73 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "Take a Hike! - Season 1 Episode 9 (2026)",
+        "slug": "take-hike-season-1-episode-9-2026",
+        "source": "https://tv9.nontondrama.my/take-hike-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ydXaTTA-26OmNIdP4RQKRw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/Mtv2FJm90vyH30hXlctCow",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/lIWY9W8eHn0QgEDkvCo_fw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PWEQiqFB_UHuHxO-OCfGFA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Take a Hike! - Season 1 Episode 10 (2026)",
+        "slug": "take-hike-season-1-episode-10-2026",
+        "source": "https://tv9.nontondrama.my/take-hike-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1qCSrLy1QP65xwY9Shd73w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/uAfZ4aEq7RqAGYvs7cil8Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/iK82kMheHIbUtOiDMXM6Hw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -64832,28 +65692,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/fLZh",
+        "url": "https://videonode.de/iframe3/p2p/1qCSrLy1QP65xwY9Shd73w",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a8d87736409d",
+        "url": "https://videonode.de/iframe3/turbovip/uAfZ4aEq7RqAGYvs7cil8Q",
         "default": false
       },
       {
         "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/papmgp2jh1bc",
-        "default": false
-      },
-      {
-        "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/GyHT0yPaN",
+        "url": "https://videonode.de/iframe3/hydrax/iK82kMheHIbUtOiDMXM6Hw",
         "default": false
       }
     ],
@@ -126051,8 +126904,8 @@
     "tahun": "2026",
     "thumbnail": "https://cover.showcdnx.com/wp-content/uploads/2026/08/film-my-bias-my-boss-2026-lk21.jpg",
     "rating": "9.1",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -126396,6 +127249,43 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "My Bias, My Boss - Season 1 Episode 10 (2026)",
+        "slug": "my-bias-my-boss-season-1-episode-10-2026",
+        "source": "https://tv9.nontondrama.my/my-bias-my-boss-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kBXVx1XVZGVr8HHbTSrUlA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/AsFCptnB-C6OdQIQYTCiTg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kBhSzz0_HljjqY3YWb-R8A",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/8rFiTIAkuk9DRf_CrLpZ4w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -126403,28 +127293,28 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/FhILdsw_MBibw9gDUUPetg",
+        "url": "https://videonode.de/iframe3/p2p/kBXVx1XVZGVr8HHbTSrUlA",
         "default": true
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/pAe0sVqDv5UYKNi0ex7YFw",
+        "url": "https://videonode.de/iframe3/turbovip/AsFCptnB-C6OdQIQYTCiTg",
         "default": false
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/uV4iDnoxfZP385LXl0C1eA",
+        "url": "https://videonode.de/iframe3/cast/kBhSzz0_HljjqY3YWb-R8A",
         "default": false
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pDSS7hRBuscQaxEkJ54tWw",
+        "url": "https://videonode.de/iframe3/hydrax/8rFiTIAkuk9DRf_CrLpZ4w",
         "default": false
       }
     ],
