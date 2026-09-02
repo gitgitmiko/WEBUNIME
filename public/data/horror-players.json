@@ -9948,5 +9948,109 @@
         "default": false
       }
     ]
+  },
+  "buddy-2026": {
+    "slug": "buddy-2026",
+    "film": "Buddy (2026)",
+    "source": "https://tv12.lk21official.cc/buddy-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-02T19:40:03.833Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/6itsrY98ZXSt14dCRDRkTg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/ghRUNEA6UN03FMvilw4YIw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/WmShUaPoUwlbpfYMoleN2Q",
+        "default": false
+      }
+    ]
+  },
+  "gaskins-hitchhiker-killer-2026": {
+    "slug": "gaskins-hitchhiker-killer-2026",
+    "film": "Gaskins: The Hitchhiker Killer (2026)",
+    "source": "https://tv12.lk21official.cc/gaskins-hitchhiker-killer-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-02T19:40:03.833Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/prOpf2eToUZfa-QJKl00kg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/mYrExtQgAoKxxKIrhYQV5A",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/h_Rue_ZYiZ1bt-_gmD_Qlg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/g0HxmOp9Dri7GCsWe7UwVA",
+        "default": false
+      }
+    ]
+  },
+  "confinement-2026": {
+    "slug": "confinement-2026",
+    "film": "Confinement (2026)",
+    "source": "https://tv12.lk21official.cc/confinement-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-02T19:40:03.833Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/l6hPrSBNSIkB74voJXfilw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/FOCAmE0KBl_IchnPjpT9VA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/xEiS_7mQphuFPko0txDFqg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/rxfZLcHBqtvm2iS3DGMdnQ",
+        "default": false
+      }
+    ]
   }
 }
