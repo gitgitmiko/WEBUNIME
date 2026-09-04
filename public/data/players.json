@@ -660537,5 +660537,77 @@
         "default": true
       }
     ]
+  },
+  "mayday-2026": {
+    "slug": "mayday-2026",
+    "film": "Mayday (2026)",
+    "source": "https://tv12.lk21official.cc/mayday-2026",
+    "scraped_at": "2026-09-04T07:01:21.891Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Z5Ky4SkHBaMm4v9OM7zPWg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/1ASSWhzScw0sNdoMRQiTkw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/eVPOrLyCFVVdkc9Fho59BA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/RSKW8oyp5pIuWwfMOD0H8A",
+        "default": false
+      }
+    ]
+  },
+  "gandhari-2026": {
+    "slug": "gandhari-2026",
+    "film": "Gandhari (2026)",
+    "source": "https://tv12.lk21official.cc/gandhari-2026",
+    "scraped_at": "2026-09-04T07:01:21.891Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/5sn8J3XycQyhxHZhATiPbw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/U7bhg742G1cY7uVODgo1pA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/McfXRp4-93OsEIyulNh0nQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/cjIH3LT98gDbOWNOVqOngw",
+        "default": false
+      }
+    ]
   }
 }
