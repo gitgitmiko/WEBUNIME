@@ -302610,7 +302610,7 @@
     "film": "Family Register (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/family-register-2026",
-    "scraped_at": "2026-09-05T18:51:44.932Z",
+    "scraped_at": "2026-09-06T18:55:40.402Z",
     "episodes": [
       {
         "season": 1,
@@ -303952,6 +303952,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/c8Eiu_yh3S1Rv4xGx9zwNg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 40,
+        "slug": "family-register-season-1-episode-40-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0HWFLcV4zwbFVEMU6Sjf4w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/psB2PhwTy6a42UHFqujhFg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/XplJJ3RPVI0siYB2J_C3qg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/fX4EHV5wd4SzUXsKqVwyvw",
             "default": false
           }
         ]
@@ -377651,7 +377686,7 @@
     "film": "To Love & Cherish (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/love-cherish-2026",
-    "scraped_at": "2026-08-30T19:41:48.319Z",
+    "scraped_at": "2026-09-06T18:55:40.402Z",
     "episodes": [
       {
         "season": 1,
@@ -377929,6 +377964,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/WOCVqkLdHU6O_Wv3df20fw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "slug": "love-cherish-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/I6ZCnHjFLYqU4FvnQIjt5Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/M2VcjOrFM0K2XRjAnEW0gw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/D9nTSBvEPKWLMssF9-vOZQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/8deS6EE_eWzZvTHI5PeQbQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "slug": "love-cherish-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/8u5hmQUwQcpv_c80cpr7ew",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/pFcJDcCDoJuup6KwJM977Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/eZUKULmyDeT9eY-pDuc71g",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/vTeG3jkpt1ayv2gltT5CIQ",
             "default": false
           }
         ]
@@ -390265,7 +390370,7 @@
     "film": "Remnants of Gold (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/remnants-gold-2026",
-    "scraped_at": "2026-09-05T18:51:44.932Z",
+    "scraped_at": "2026-09-06T18:55:40.402Z",
     "episodes": [
       {
         "season": 1,
@@ -390648,6 +390753,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/bA-9n05MUlZ2uBWyknnaWw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "slug": "remnants-gold-season-1-episode-12-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/XIWWUmd4a1Y2maGfjgugqQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/j0YR-isfkXKmTYe6ri24KQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/IAKZVE0Sz3Rr-wiYXvqgQw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/6oG7FSSkfW-0Lpa2H72ONw",
             "default": false
           }
         ]
@@ -402189,7 +402329,7 @@
     "film": "Four Hands, Two Sonatas (2026)",
     "type": "series",
     "source": "https://tv8.nontondrama.my/four-hands-two-sonatas-2026",
-    "scraped_at": "2026-09-05T18:50:36.212Z",
+    "scraped_at": "2026-09-06T18:55:23.189Z",
     "episodes": [
       {
         "season": 1,
@@ -402292,6 +402432,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/Zx-o3MKAyjEaRvDRCUcc1g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "four-hands-two-sonatas-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/HrT77gaXkaUHDlIbeRWwHA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/qxwks4vLHfKRBcLuRfSgCQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/p-fqutKZbJqP4EEXlPVQ4Q",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/xcklGo22wFbm_FivFCQJnQ",
             "default": false
           }
         ]
@@ -412761,7 +412936,7 @@
     "film": "See You Later... Maybe (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/see-you-later-maybe-2026",
-    "scraped_at": "2026-09-05T18:51:44.932Z",
+    "scraped_at": "2026-09-06T18:55:40.402Z",
     "episodes": [
       {
         "season": 1,
@@ -413067,6 +413242,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/ejwb6Logd-bKuFlMjI7Y1g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "slug": "see-you-later-maybe-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/5uSTIAZpj91N7n8iWzVTJw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/ISRFCEC8syIynSMAZsLPag",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/guTgzDw0awY0s_J1EtFT8g",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/rqshKIdFmDP692xelNIqMQ",
             "default": false
           }
         ]
@@ -420475,7 +420685,7 @@
     "film": "The Underworld (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/underworld-2026",
-    "scraped_at": "2026-09-05T18:51:44.932Z",
+    "scraped_at": "2026-09-06T18:55:40.402Z",
     "episodes": [
       {
         "season": 1,
@@ -420816,6 +421026,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/u0phL98gYyFdPBxTPWvkTw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "slug": "underworld-season-1-episode-11-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/XutiRL57SYNG_3xDXGZKCg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/1t5pzEESUMB3JINCctvmoQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/X7JVWt0hwjlnZzMuN-rjFQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jnbmMLrXd8G0maRv4Zy6HQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "slug": "underworld-season-1-episode-12-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/u_LJ11z9kvfU00l97RGVYA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/RXvqxodFOlIrYGAofHYnWw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/MoiNHVI3Cuo-OmxLRQ8Pgg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/yKQGLKg4Ih8TPyxVIrFurA",
             "default": false
           }
         ]
@@ -424188,7 +424468,7 @@
     "film": "Prelude of the White Snake (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/prelude-white-snake-2026",
-    "scraped_at": "2026-09-05T18:51:44.932Z",
+    "scraped_at": "2026-09-06T18:55:40.402Z",
     "episodes": [
       {
         "season": 1,
@@ -424445,6 +424725,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/9wmZjAbSHppnOezkCCVlxw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "slug": "prelude-white-snake-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0NZmzh29yQMQA1B2KSvqSw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/Ci3NPAKS8m8eEueAEZjkuQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0BU89f7u-gjty0LK1yzVow",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/XUyoZLNxVmpks2wV2r9bbQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "slug": "prelude-white-snake-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xjTsrh6voM-w6ug99EP7NA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/J3EqL8nUGNdSYVn6mE_YHA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/NrsRmLKgemcn2rsCUuTB3w",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/IyAC9C8wwGkCoeqLXuBcOQ",
             "default": false
           }
         ]
