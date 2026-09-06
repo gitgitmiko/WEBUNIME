@@ -10267,5 +10267,42 @@
         "default": false
       }
     ]
+  },
+  "haunted-house-2026": {
+    "slug": "haunted-house-2026",
+    "film": "Haunted House (2026)",
+    "source": "https://tv12.lk21official.cc/haunted-house-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-06T06:51:05.035Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/171ohKisteD1q0L_qc8sFA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/zVxlt0cai8ojd1jB23sXzA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/GENhEqJbwjAAaEnX88UGGQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/XJxnYr7vfoCHramkBFL9Xw",
+        "default": false
+      }
+    ]
   }
 }
