@@ -343397,7 +343397,7 @@
     "film": "Lanterns (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/lanterns-2026",
-    "scraped_at": "2026-08-31T08:06:48.434Z",
+    "scraped_at": "2026-09-07T07:00:18.113Z",
     "episodes": [
       {
         "season": 1,
@@ -343500,6 +343500,34 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/7WzcBXCVwh1mb2pPLpeWLA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "lanterns-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/7NljzbCdbG7EMfy5fK5MrQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/KG9XD0Z3-cCgeXIQsZdEqQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4G7ite3a9oMYdVk-KsIG4Q",
             "default": false
           }
         ]
@@ -391948,7 +391976,7 @@
     "film": "The Early Spring (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/early-spring-2026",
-    "scraped_at": "2026-09-06T06:50:59.855Z",
+    "scraped_at": "2026-09-07T07:00:18.113Z",
     "episodes": [
       {
         "season": 1,
@@ -392576,6 +392604,34 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/ZUWfyxAug6hLZRJc7XD-Cw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "slug": "early-spring-season-1-episode-19-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/YqS434t_i6CMlXux3gmeMg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/vTFYTLs78Xc1QnNV37T67g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/uC240kzc5Q2zDtP-hCchxQ",
             "default": false
           }
         ]
@@ -406118,7 +406174,7 @@
     "film": "Braving the Famine with My Wife (2026)",
     "type": "series",
     "source": "https://tv8.nontondrama.my/braving-famine-my-wife-2026",
-    "scraped_at": "2026-09-06T06:51:58.130Z",
+    "scraped_at": "2026-09-07T07:00:25.241Z",
     "episodes": [
       {
         "season": 1,
@@ -406753,6 +406809,41 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/4SEQMtmXceEpAmbkS-J5jA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "slug": "braving-famine-my-wife-season-1-episode-20-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/42bPJNWa5Vd4MWXG-Qu_hA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/uKU3JPJct0xREB3pdR0qPA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1wrkwICmSnXr_IkAaITMDg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/2V9PunzDkeNYEEaCJzd4bg",
             "default": false
           }
         ]
@@ -412521,7 +412612,7 @@
     "film": "Blossom Through the Cloud (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/blossom-through-cloud-2026",
-    "scraped_at": "2026-09-06T06:50:59.855Z",
+    "scraped_at": "2026-09-07T07:00:18.113Z",
     "episodes": [
       {
         "season": 1,
@@ -412925,6 +413016,76 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/xVxoQor6eS7_p2oOGyhv9Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "slug": "blossom-through-cloud-season-1-episode-13-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/gCaFZVC-zlI050sHbHESGg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/gBU_m4qYYmQGu4IJuxsORg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3RynwNnEDncu3JCrRapDIw",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/t1HZIHTKRchYP6zrG0q71A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "slug": "blossom-through-cloud-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Gmh63FZ4OPByuO1KDtLRgA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/YAZAgxMmx-3HriSX1BQ-TQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/IlocxnjTL6V81HcHpeLEtQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/-wMaYgyYXW2d1lOcnnDjmQ",
             "default": false
           }
         ]
