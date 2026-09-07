@@ -10304,5 +10304,42 @@
         "default": false
       }
     ]
+  },
+  "onslaught-2026": {
+    "slug": "onslaught-2026",
+    "film": "Onslaught (2026)",
+    "source": "https://tv12.lk21official.cc/onslaught-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-07T20:23:57.559Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/_pIezqDLaBOMupKkvCGRfA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/8GOpHnoVgWutMn8SEQlhuQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/HWKIXq6JqIxqA_EUwfpMTQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/1I-p6zSHc5tEnDNMxfTN3w",
+        "default": false
+      }
+    ]
   }
 }
