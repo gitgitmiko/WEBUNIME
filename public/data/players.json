@@ -661747,5 +661747,41 @@
         "default": false
       }
     ]
+  },
+  "influence-2023": {
+    "slug": "influence-2023",
+    "film": "Influence (2023)",
+    "source": "https://tv12.lk21official.cc/influence-2023",
+    "scraped_at": "2026-09-08T06:54:39.500Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/dfxeZrNPYz-lHpBme6NQ5Q",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/EElm2Qb8mPWC_08D1kr3sg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/h-V71HKFWhY5x1DNjZ8J3A",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/vh-vt9AoyO3vUsli2CcnAg",
+        "default": false
+      }
+    ]
   }
 }
