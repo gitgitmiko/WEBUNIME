@@ -10341,5 +10341,42 @@
         "default": false
       }
     ]
+  },
+  "this-party-dead-2026": {
+    "slug": "this-party-dead-2026",
+    "film": "This party is DEAD (2026)",
+    "source": "https://tv12.lk21official.cc/this-party-dead-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-09T19:38:05.704Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/jJ-5zdrs4GeIUhy80yQeuw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/IpTndJsWnjWdTUeClBQ4FA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/FMUydU5w7Jfk8hxKX_pxgw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/VSsxy5y6RmG2fyg81zSbyw",
+        "default": false
+      }
+    ]
   }
 }
