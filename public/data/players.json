@@ -662396,5 +662396,37 @@
         "default": false
       }
     ]
+  },
+  "ruang-rahasia-ibu": {
+    "slug": "ruang-rahasia-ibu",
+    "film": "Ruang Rahasia Ibu (2025)",
+    "source": "https://otherindia.org/ruang-rahasia-ibu/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-10T07:08:12.655Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/a6oaslw1l4v5",
+        "default": true
+      }
+    ]
+  },
+  "waktu-maghrib-2-2025": {
+    "slug": "waktu-maghrib-2-2025",
+    "film": "Waktu Maghrib 2 (2025)",
+    "source": "https://otherindia.org/waktu-maghrib-2-2025/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-10T07:08:12.655Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "morencius",
+        "label": "Server 1",
+        "url": "https://morencius.com/embed/uq16zu0wvtw5",
+        "default": true
+      }
+    ]
   }
 }
