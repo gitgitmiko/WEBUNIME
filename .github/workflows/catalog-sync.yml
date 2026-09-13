@@ -50,10 +50,3 @@ jobs:
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Push catalog to production API
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          CATALOG_SYNC_SECRET: ${{ secrets.CATALOG_SYNC_SECRET }}
-          CATALOG_API_BASE: ${{ vars.CATALOG_API_BASE || 'https://gitgitmiko.my.id' }}
-        run: npm run push:catalog-api
