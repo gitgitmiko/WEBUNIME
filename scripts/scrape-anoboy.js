@@ -10,7 +10,7 @@
  * Lengkapi metadata judul Anoboy (hub only, bukan episode):
  *   node scripts/scrape-anoboy.js --meta
  *   node scripts/scrape-anoboy.js --meta --limit 1
- *   node scripts/scrape-anoboy.js --meta --hub https://anoboy.xyz/2026/07/hanaori-san-wa-tensei-shitemo-kenka-ga-shitai/
+ *   node scripts/scrape-anoboy.js --meta --hub https://anoboy.quest/2026/07/hanaori-san-wa-tensei-shitemo-kenka-ga-shitai/
  *
  * Terbaru (homepage, untuk uji GitHub Action):
  *   node scripts/scrape-anoboy.js --latest

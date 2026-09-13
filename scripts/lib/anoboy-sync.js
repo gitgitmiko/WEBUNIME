@@ -13,12 +13,20 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { chromium } from "playwright";
 
-const BASE = "https://anoboy.xyz";
+const BASE = "https://anoboy.quest";
 const LIST_URL = `${BASE}/anime/`;
 const HOME_URL = `${BASE}/`;
 const DETAIL_DELAY_MS = 400;
 const ANOBOY_LABEL = "Anoboy B-Tube";
 const STATE_DIR = "scripts/_anoboy-scrape";
+
+/** Domain lama → baru (sertifikat anoboy.xyz sudah invalid). */
+function rewriteAnoboyHost(url) {
+  return String(url || "").replace(
+    /https?:\/\/(?:www\.)?anoboy\.xyz/gi,
+    BASE
+  );
+}
 
 const STOP = new Set([
   "no",
@@ -86,9 +94,9 @@ function isAnoboyOnly(row) {
 
 function absUrl(href, base = BASE) {
   try {
-    return new URL(href, base).href;
+    return rewriteAnoboyHost(new URL(href, base).href);
   } catch {
-    return href;
+    return rewriteAnoboyHost(href);
   }
 }
 
@@ -420,7 +428,9 @@ async function scrapeListingPage(page, n) {
   await page.waitForTimeout(1800);
   return page.evaluate(() => {
     const cards = [...document.querySelectorAll(".column-content a")].filter(
-      (a) => a.querySelector("img") && /anoboy\.xyz\/\d{4}\/\d{2}\//.test(a.href),
+      (a) =>
+        a.querySelector("img") &&
+        /anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\//i.test(a.href),
     );
     const seen = new Set();
     const items = [];
@@ -448,7 +458,9 @@ async function scrapeLatestPage(page, n) {
   await page.waitForTimeout(1800);
   return page.evaluate(() => {
     const cards = [...document.querySelectorAll(".home_index a")].filter(
-      (a) => a.querySelector("img") && /anoboy\.xyz\/\d{4}\/\d{2}\//.test(a.href),
+      (a) =>
+        a.querySelector("img") &&
+        /anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\//i.test(a.href),
     );
     const seen = new Set();
     const items = [];
@@ -469,7 +481,10 @@ async function scrapeLatestPage(page, n) {
 }
 
 async function scrapeHub(page, hubUrl) {
-  await page.goto(hubUrl, { waitUntil: "domcontentloaded", timeout: 90000 });
+  await page.goto(rewriteAnoboyHost(hubUrl), {
+    waitUntil: "domcontentloaded",
+    timeout: 90000,
+  });
   await page.waitForTimeout(1800);
   const hubSlug = decodeURIComponent(slugFromUrl(hubUrl));
   return page.evaluate(
@@ -747,7 +762,10 @@ function playersFromMirrors(mirrors, episode, sourcePage) {
 }
 
 async function scrapeEpisodePlayers(page, epUrl) {
-  await page.goto(epUrl, { waitUntil: "domcontentloaded", timeout: 90000 });
+  await page.goto(rewriteAnoboyHost(epUrl), {
+    waitUntil: "domcontentloaded",
+    timeout: 90000,
+  });
   await page.waitForTimeout(1200);
   const data = await page.evaluate(() => {
     const servers = [...document.querySelectorAll("button.server")].map((b) => ({
