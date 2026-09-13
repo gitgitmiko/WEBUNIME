@@ -10378,5 +10378,42 @@
         "default": false
       }
     ]
+  },
+  "hope-2026": {
+    "slug": "hope-2026",
+    "film": "Hope (2026)",
+    "source": "https://tv12.lk21official.cc/hope-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-09-13T20:22:07.527Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/dEGo4TQJ-Q5j8teLlIHCtA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/aHgrcVa1gWom3urXA1Y97Q",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/S7uCKRstNTbhKMDaf7PThA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/HPv-qnUIevc-xIon80YDeQ",
+        "default": false
+      }
+    ]
   }
 }

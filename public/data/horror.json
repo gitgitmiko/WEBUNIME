@@ -1,5 +1,58 @@
 [
   {
+    "nama": "Hope",
+    "judul": "Hope (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-hope-2026-lk21.jpg",
+    "rating": "6.9",
+    "quality": "CAM",
+    "durasi": "2j 31m",
+    "genre": [
+      "Drama",
+      "Action",
+      "Sci-fi",
+      "Mystery",
+      "Thriller",
+      "Horror"
+    ],
+    "sinopsis": "Hope - Sebuah penemuan misterius yang menyeramkan terjadi di pinggiran kota pelabuhan yang terisolasi. Para penduduk lokal tiba-tiba berada dalam situasi kritis dan harus berjuang secara luar biasa de...\n\nSubtitle: workkeerr\n\nSutradara: Na Hong-jin\n\nBintang Film: Michael Fassbender, Alicia Vikander, Hwang Jung-min, Zo In-sung, Hoyeon\n\nNegara: South Korea\n\nVotes: 3.106\n\nRelease: 15 Jul 2026\n\nUpdated: 11 Sep 2026 03:57:14",
+    "slug": "hope-2026",
+    "source": "https://tv12.lk21official.cc/hope-2026",
+    "catalog": "horror",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/dEGo4TQJ-Q5j8teLlIHCtA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/aHgrcVa1gWom3urXA1Y97Q",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/S7uCKRstNTbhKMDaf7PThA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/HPv-qnUIevc-xIon80YDeQ",
+        "default": false
+      }
+    ],
+    "id": 284,
+    "is_new": true
+  },
+  {
     "nama": "This party is DEAD",
     "judul": "This party is DEAD (2026)",
     "tahun": "2026",
