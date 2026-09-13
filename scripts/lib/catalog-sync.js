@@ -22,7 +22,15 @@ import {
   rewritePlayerHostsInCatalog,
 } from "./player-host-aliases.js";
 
-const LIST_BASE = "https://tv12.lk21official.cc";
+const LIST_BASE_DEFAULT = "https://tv12.lk21official.cc";
+const LIST_BASE_CANDIDATES = [
+  process.env.LK21_BASE_URL,
+  LIST_BASE_DEFAULT,
+  "https://tv13.lk21official.cc",
+  "https://tv14.lk21official.cc",
+].filter(Boolean);
+
+let LIST_BASE = LIST_BASE_CANDIDATES[0] || LIST_BASE_DEFAULT;
 const DRAMA_BASE = "https://tv5.nontondrama.my";
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
@@ -45,9 +53,51 @@ let lastSyncResult = null;
 let lk21Browser = null;
 let lk21Context = null;
 let lk21Page = null;
+/** Setelah CF/403 di IP runner, skip sisa request LK21 (hindari spam log). */
+let lk21Blocked = false;
+let lk21BlockReason = "";
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
+}
+
+function markLk21Blocked(reason) {
+  if (lk21Blocked) return;
+  lk21Blocked = true;
+  lk21BlockReason = String(reason || "blocked");
+  console.warn(
+    `[lk21-sync] LK21 diblokir (${lk21BlockReason}). ` +
+      "Biasanya Cloudflare memblokir IP GitHub Actions — jalankan `npm run sync:catalog` di PC lokal, lalu commit JSON."
+  );
+}
+
+function looksLikeCloudflare(html, title = "") {
+  const head = `${title}\n${String(html || "").slice(0, 2500)}`;
+  return /just a moment|tunggu sebentar|attention required|checking your browser|cf-browser-verification|cf-challenge|enable javascript and cookies/i.test(
+    head
+  );
+}
+
+function looksLikeLk21Catalog(html) {
+  const s = String(html || "");
+  return (
+    s.length > 8000 &&
+    /search-item|grid-movie|latest|nonton|lk21|film/i.test(s) &&
+    !looksLikeCloudflare(s)
+  );
+}
+
+function rewriteLk21Url(url) {
+  try {
+    const u = new URL(url);
+    if (/lk21official\.cc$/i.test(u.hostname)) {
+      u.hostname = new URL(LIST_BASE).hostname;
+      return u.toString();
+    }
+  } catch {
+    /* ignore */
+  }
+  return url;
 }
 
 function emptyLk21Result(error) {
@@ -134,8 +184,19 @@ async function fetchHtmlPlain(url, referer = `${LIST_BASE}/`) {
       redirect: "follow",
       signal: ctrl.signal,
     });
+    const html = await res.text();
+    if (res.status === 403 || res.status === 503) {
+      const err = new Error(`HTTP ${res.status} ${url}`);
+      err.code = "LK21_HTTP_BLOCK";
+      throw err;
+    }
     if (!res.ok) throw new Error(`HTTP ${res.status} ${url}`);
-    return { html: await res.text(), finalUrl: res.url };
+    if (looksLikeCloudflare(html)) {
+      const err = new Error(`Cloudflare challenge ${url}`);
+      err.code = "LK21_CF";
+      throw err;
+    }
+    return { html, finalUrl: res.url };
   } finally {
     clearTimeout(timer);
   }
@@ -146,20 +207,81 @@ async function fetchHtmlPlaywright(url, referer = `${LIST_BASE}/`) {
   await page.setExtraHTTPHeaders({ Referer: referer });
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
   if (!(await waitCloudflareClear(page))) {
-    throw new Error(`Cloudflare timeout ${url}`);
+    const err = new Error(`Cloudflare timeout ${url}`);
+    err.code = "LK21_CF";
+    throw err;
   }
   await page.waitForTimeout(400);
-  return { html: await page.content(), finalUrl: page.url() };
+  const html = await page.content();
+  if (looksLikeCloudflare(html, await page.title())) {
+    const err = new Error(`Cloudflare challenge ${url}`);
+    err.code = "LK21_CF";
+    throw err;
+  }
+  return { html, finalUrl: page.url() };
 }
 
-/** LK21 di belakang Cloudflare — Playwright dulu, fallback fetch polos. */
+/**
+ * LK21: plain fetch dulu (cepat di IP rumah), Playwright cadangan.
+ * IP GitHub Actions sering kena CF → mark blocked, skip request berikutnya.
+ */
 async function fetchHtml(url, referer = `${LIST_BASE}/`) {
-  try {
-    return await fetchHtmlPlaywright(url, referer);
-  } catch (pwErr) {
-    console.warn(`[lk21-sync] playwright gagal → fetch: ${pwErr.message}`);
-    return fetchHtmlPlain(url, referer);
+  if (lk21Blocked) {
+    const err = new Error(`LK21 skipped (${lk21BlockReason})`);
+    err.code = "LK21_SKIP";
+    throw err;
   }
+  const target = rewriteLk21Url(url);
+  const ref = rewriteLk21Url(referer);
+  try {
+    return await fetchHtmlPlain(target, ref);
+  } catch (plainErr) {
+    const blocked =
+      plainErr.code === "LK21_CF" ||
+      plainErr.code === "LK21_HTTP_BLOCK" ||
+      /HTTP 403|Cloudflare/i.test(plainErr.message || "");
+    if (!blocked) throw plainErr;
+    try {
+      console.warn(
+        `[lk21-sync] fetch plain gagal → playwright: ${plainErr.message}`
+      );
+      return await fetchHtmlPlaywright(target, ref);
+    } catch (pwErr) {
+      markLk21Blocked(pwErr.message || plainErr.message);
+      throw pwErr;
+    }
+  }
+}
+
+/** Coba mirror LK21 sampai dapat HTML katalog valid. */
+async function resolveLk21Base() {
+  for (const base of LIST_BASE_CANDIDATES) {
+    const root = String(base).replace(/\/$/, "");
+    try {
+      const { html } = await fetchHtmlPlain(`${root}/latest`, `${root}/`);
+      if (looksLikeLk21Catalog(html)) {
+        LIST_BASE = root;
+        console.log(`[lk21-sync] base OK: ${LIST_BASE}`);
+        return LIST_BASE;
+      }
+    } catch (err) {
+      console.warn(`[lk21-sync] probe ${root}: ${err.message}`);
+    }
+  }
+  // Cadangan Playwright ke default
+  const root = LIST_BASE_DEFAULT;
+  try {
+    const { html } = await fetchHtmlPlaywright(`${root}/latest`, `${root}/`);
+    if (looksLikeLk21Catalog(html)) {
+      LIST_BASE = root;
+      console.log(`[lk21-sync] base OK via playwright: ${LIST_BASE}`);
+      return LIST_BASE;
+    }
+  } catch (err) {
+    markLk21Blocked(err.message);
+  }
+  if (!lk21Blocked) markLk21Blocked("tidak ada mirror LK21 yang bisa diakses");
+  return LIST_BASE;
 }
 
 function stripTags(html) {
@@ -1318,6 +1440,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
   syncInFlight = (async () => {
     const started = Date.now();
     console.log("[catalog-sync] mulai (LK21 → otherindia Indonesia → Samehadaku → Anoboy)…");
+    lk21Blocked = false;
+    lk21BlockReason = "";
     await clearIsNewFlags(dataDir);
     const results = {
       movies: emptyLk21Result(),
@@ -1328,28 +1452,54 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     };
 
     try {
-      results.movies = await syncMoviesCatalog(dataDir);
+      await resolveLk21Base();
+      if (lk21Blocked) {
+        const blocked = emptyLk21Result(new Error(lk21BlockReason || "LK21 blocked"));
+        results.movies = blocked;
+        results.series = blocked;
+        results.horror = blocked;
+        results.seriesLatest = { ...results.seriesLatest, error: lk21BlockReason };
+      } else {
+        try {
+          results.movies = await syncMoviesCatalog(dataDir);
+        } catch (err) {
+          console.warn("[sync] lk21 movies:", err.message);
+          results.movies = emptyLk21Result(err);
+        }
+
+        try {
+          results.series = await syncSeriesCatalog(dataDir);
+        } catch (err) {
+          console.warn("[sync] lk21 series:", err.message);
+          results.series = emptyLk21Result(err);
+        }
+
+        try {
+          results.horror = await syncHorrorCatalog(dataDir);
+        } catch (err) {
+          console.warn("[sync] lk21 horror:", err.message);
+          results.horror = emptyLk21Result(err);
+        }
+      }
     } catch (err) {
-      console.warn("[sync] lk21 movies:", err.message);
+      console.warn("[sync] lk21 init:", err.message);
       results.movies = emptyLk21Result(err);
     }
 
     try {
-      results.series = await syncSeriesCatalog(dataDir);
-    } catch (err) {
-      console.warn("[sync] lk21 series:", err.message);
-      results.series = emptyLk21Result(err);
-    }
-
-    try {
-      results.horror = await syncHorrorCatalog(dataDir);
-    } catch (err) {
-      console.warn("[sync] lk21 horror:", err.message);
-      results.horror = emptyLk21Result(err);
-    }
-
-    try {
-      results.seriesLatest = await syncSeriesLatestCatalog(dataDir);
+      if (lk21Blocked) {
+        results.seriesLatest = {
+          checked: 0,
+          feed: 0,
+          added: 0,
+          updated: 0,
+          slugs: [],
+          updatedSlugs: [],
+          error: lk21BlockReason || "LK21 blocked",
+        };
+      } else {
+        results.seriesLatest = await syncSeriesLatestCatalog(dataDir);
+      }
     } catch (err) {
       console.warn("[sync] series-latest:", err.message);
       results.seriesLatest = {
