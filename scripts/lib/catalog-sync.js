@@ -56,6 +56,7 @@ let lk21Page = null;
 /** Setelah CF/403 di IP runner, skip sisa request LK21 (hindari spam log). */
 let lk21Blocked = false;
 let lk21BlockReason = "";
+let lk21Warmed = false;
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -113,11 +114,12 @@ function emptyLk21Result(error) {
 }
 
 async function waitCloudflareClear(page, timeoutMs = CF_WAIT_MS) {
+  // Samakan dengan samehadaku-sync waitReady (jangan match kata "cloudflare" di title).
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     const title = await page.title();
     if (
-      !/just a moment|tunggu sebentar|attention required|checking your browser|cloudflare/i.test(
+      !/just a moment|tunggu sebentar|attention required|checking your browser/i.test(
         title
       )
     ) {
@@ -168,6 +170,35 @@ async function closeLk21Browser() {
   lk21Browser = null;
   lk21Context = null;
   lk21Page = null;
+  lk21Warmed = false;
+}
+
+/**
+ * Warmup CF seperti samehadaku-sync: buka 1 halaman dulu, tunggu challenge,
+ * cookie session dipakai request berikutnya.
+ */
+async function warmLk21Session(base = LIST_BASE) {
+  if (lk21Warmed && lk21Page) return true;
+  const root = String(base).replace(/\/$/, "");
+  const page = await ensureLk21Page();
+  console.log(`[lk21-sync] warmup CF ${root}/latest …`);
+  await page.goto(`${root}/latest`, {
+    waitUntil: "domcontentloaded",
+    timeout: 120000,
+  });
+  if (!(await waitCloudflareClear(page))) {
+    markLk21Blocked(`Cloudflare timeout warmup ${root}`);
+    return false;
+  }
+  const html = await page.content();
+  if (looksLikeCloudflare(html, await page.title()) || !looksLikeLk21Catalog(html)) {
+    markLk21Blocked(`warmup tidak mendapat katalog ${root}`);
+    return false;
+  }
+  LIST_BASE = root;
+  lk21Warmed = true;
+  console.log(`[lk21-sync] warmup OK: ${LIST_BASE}`);
+  return true;
 }
 
 async function fetchHtmlPlain(url, referer = `${LIST_BASE}/`) {
@@ -203,6 +234,14 @@ async function fetchHtmlPlain(url, referer = `${LIST_BASE}/`) {
 }
 
 async function fetchHtmlPlaywright(url, referer = `${LIST_BASE}/`) {
+  if (!lk21Warmed) {
+    const ok = await warmLk21Session(LIST_BASE);
+    if (!ok) {
+      const err = new Error(lk21BlockReason || "LK21 warmup failed");
+      err.code = "LK21_CF";
+      throw err;
+    }
+  }
   const page = await ensureLk21Page();
   await page.setExtraHTTPHeaders({ Referer: referer });
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
@@ -221,9 +260,15 @@ async function fetchHtmlPlaywright(url, referer = `${LIST_BASE}/`) {
   return { html, finalUrl: page.url() };
 }
 
+/** Di CI/Actions: Playwright+warmup (pola Samehadaku). Lokal: plain dulu biar cepat. */
+function preferPlainFetch() {
+  if (process.env.LK21_FORCE_PLAYWRIGHT === "1") return false;
+  if (process.env.LK21_PREFER_PLAIN === "1") return true;
+  return process.env.CI !== "true" && process.env.GITHUB_ACTIONS !== "true";
+}
+
 /**
- * LK21: plain fetch dulu (cepat di IP rumah), Playwright cadangan.
- * IP GitHub Actions sering kena CF → mark blocked, skip request berikutnya.
+ * LK21 di belakang Cloudflare — contek samehadaku: session Playwright + warmup.
  */
 async function fetchHtml(url, referer = `${LIST_BASE}/`) {
   if (lk21Blocked) {
@@ -233,6 +278,11 @@ async function fetchHtml(url, referer = `${LIST_BASE}/`) {
   }
   const target = rewriteLk21Url(url);
   const ref = rewriteLk21Url(referer);
+
+  if (!preferPlainFetch()) {
+    return fetchHtmlPlaywright(target, ref);
+  }
+
   try {
     return await fetchHtmlPlain(target, ref);
   } catch (plainErr) {
@@ -241,44 +291,35 @@ async function fetchHtml(url, referer = `${LIST_BASE}/`) {
       plainErr.code === "LK21_HTTP_BLOCK" ||
       /HTTP 403|Cloudflare/i.test(plainErr.message || "");
     if (!blocked) throw plainErr;
-    try {
-      console.warn(
-        `[lk21-sync] fetch plain gagal → playwright: ${plainErr.message}`
-      );
-      return await fetchHtmlPlaywright(target, ref);
-    } catch (pwErr) {
-      markLk21Blocked(pwErr.message || plainErr.message);
-      throw pwErr;
-    }
+    console.warn(
+      `[lk21-sync] fetch plain gagal → playwright: ${plainErr.message}`
+    );
+    return fetchHtmlPlaywright(target, ref);
   }
 }
 
-/** Coba mirror LK21 sampai dapat HTML katalog valid. */
+/** Coba mirror LK21 sampai warmup Playwright (atau plain lokal) berhasil. */
 async function resolveLk21Base() {
+  const onCi = !preferPlainFetch();
   for (const base of LIST_BASE_CANDIDATES) {
     const root = String(base).replace(/\/$/, "");
-    try {
-      const { html } = await fetchHtmlPlain(`${root}/latest`, `${root}/`);
-      if (looksLikeLk21Catalog(html)) {
-        LIST_BASE = root;
-        console.log(`[lk21-sync] base OK: ${LIST_BASE}`);
-        return LIST_BASE;
+    if (!onCi) {
+      try {
+        const { html } = await fetchHtmlPlain(`${root}/latest`, `${root}/`);
+        if (looksLikeLk21Catalog(html)) {
+          LIST_BASE = root;
+          console.log(`[lk21-sync] base OK (plain): ${LIST_BASE}`);
+          return LIST_BASE;
+        }
+      } catch (err) {
+        console.warn(`[lk21-sync] probe plain ${root}: ${err.message}`);
       }
-    } catch (err) {
-      console.warn(`[lk21-sync] probe ${root}: ${err.message}`);
     }
-  }
-  // Cadangan Playwright ke default
-  const root = LIST_BASE_DEFAULT;
-  try {
-    const { html } = await fetchHtmlPlaywright(`${root}/latest`, `${root}/`);
-    if (looksLikeLk21Catalog(html)) {
-      LIST_BASE = root;
-      console.log(`[lk21-sync] base OK via playwright: ${LIST_BASE}`);
-      return LIST_BASE;
-    }
-  } catch (err) {
-    markLk21Blocked(err.message);
+    // Reset browser antar mirror supaya cookie CF tidak campur.
+    await closeLk21Browser();
+    lk21Blocked = false;
+    lk21BlockReason = "";
+    if (await warmLk21Session(root)) return LIST_BASE;
   }
   if (!lk21Blocked) markLk21Blocked("tidak ada mirror LK21 yang bisa diakses");
   return LIST_BASE;
@@ -1442,6 +1483,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     console.log("[catalog-sync] mulai (LK21 → otherindia Indonesia → Samehadaku → Anoboy)…");
     lk21Blocked = false;
     lk21BlockReason = "";
+    lk21Warmed = false;
     await clearIsNewFlags(dataDir);
     const results = {
       movies: emptyLk21Result(),
