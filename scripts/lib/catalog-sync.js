@@ -664,10 +664,12 @@ async function readJsonArray(filePath) {
 const IS_NEW_FILES = [
   "movies.json",
   "series.json",
+  "series-index.json",
   "series-latest.json",
   "horror.json",
   "indonesia.json",
   "anime.json",
+  "anime-index.json",
   "anime-movies.json",
   "anime-latest.json",
 ];
