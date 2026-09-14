@@ -11,7 +11,8 @@ export function rewriteDeadPosterHost(url) {
   if (!url || typeof url !== "string") return url || "";
   return url
     .replace(/https?:\/\/poster\.showcdnx\.com/gi, "https://poster.lk21official.cc")
-    .replace(/https?:\/\/image\.showcdnx\.com/gi, "https://poster.lk21official.cc");
+    .replace(/https?:\/\/image\.showcdnx\.com/gi, "https://poster.lk21official.cc")
+    .replace(/https?:\/\/(?:www\.)?anoboy\.xyz/gi, "https://anoboy.quest");
   // cover.showcdnx.com masih valid — jangan rewrite ke cover.lk21 (sering 404)
 }
 

@@ -697,8 +697,21 @@ function applyAnoboyMeta(row, meta) {
     row.sumber = meta.sumber;
     changed = true;
   }
-  if (meta.thumb && !row.thumbnail) {
-    row.thumbnail = meta.thumb;
+  if (meta.thumb) {
+    const thumb = rewriteAnoboyHost(meta.thumb);
+    if (!row.thumbnail || /anoboy\.xyz/i.test(row.thumbnail)) {
+      if (row.thumbnail !== thumb) {
+        row.thumbnail = thumb;
+        changed = true;
+      }
+    }
+  }
+  if (row.thumbnail && /anoboy\.xyz/i.test(row.thumbnail)) {
+    row.thumbnail = rewriteAnoboyHost(row.thumbnail);
+    changed = true;
+  }
+  if (row.source && /anoboy\.xyz/i.test(row.source)) {
+    row.source = rewriteAnoboyHost(row.source);
     changed = true;
   }
   if (meta.episodesHint && !row.episodes_count) {
