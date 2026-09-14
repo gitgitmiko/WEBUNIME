@@ -22,6 +22,7 @@ import {
   rewritePlayerHostsInCatalog,
 } from "./player-host-aliases.js";
 import { writeCatalogIndexes } from "./catalog-indexes.js";
+import { writeMarvelCatalog } from "./marvel-catalog.js";
 
 const LIST_BASE_DEFAULT = "https://tv12.lk21official.cc";
 const LIST_BASE_CANDIDATES = [
@@ -672,6 +673,7 @@ const IS_NEW_FILES = [
   "anime-index.json",
   "anime-movies.json",
   "anime-latest.json",
+  "marvel.json",
 ];
 
 /**
@@ -1637,6 +1639,18 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     } catch (err) {
       console.warn("[sync] indexes:", err.message);
       results.indexes = { error: err.message };
+    }
+
+    // Film Marvel (kurasi judul MCU — LK21 tidak punya tag studio).
+    try {
+      console.log("[catalog-sync] write marvel catalog…");
+      results.marvel = await writeMarvelCatalog(dataDir);
+      console.log(
+        `[catalog-sync] ${results.marvel.file}: ${results.marvel.count} items`,
+      );
+    } catch (err) {
+      console.warn("[sync] marvel:", err.message);
+      results.marvel = { error: err.message };
     }
 
     const added =
