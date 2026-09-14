@@ -1,6 +1,6 @@
 {
   "source": "https://v2.samehadaku.how/jadwal-rilis/",
-  "scraped_at": "2026-09-13T20:26:23.319Z",
+  "scraped_at": "2026-09-14T07:38:20.952Z",
   "timezone": "Asia/Jakarta",
   "days": [
     {
@@ -98,88 +98,60 @@
       "label": "Selasa",
       "items": [
         {
-          "slug": "one-piece",
-          "judul": "One Piece",
-          "nama": "One Piece",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2020/04/E5RxYkWX0AAwdGH.png.jpg",
-          "rating": "8.73",
+          "slug": "buchigire-reijou-wa-houfuku",
+          "judul": "Buchigire Reijou wa Houfuku",
+          "nama": "Buchigire Reijou wa Houfuku",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Buchigire-Reijou-wa-Houfuku.jpg",
+          "rating": "6.77",
           "type": "TV",
           "genre": [
-            "Action",
-            "Adventure"
-          ],
-          "time": "00:00",
-          "source": "https://v2.samehadaku.how/anime/one-piece/"
-        },
-        {
-          "slug": "kuroneko-to-majo-no-kyoushitsu",
-          "judul": "Kuroneko to Majo no Kyoushitsu",
-          "nama": "Kuroneko to Majo no Kyoushitsu",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/153989.jpg",
-          "rating": "6.8",
-          "type": "TV",
-          "genre": [
-            "Comedy",
+            "Drama",
             "Fantasy"
           ],
-          "time": "01:00",
-          "source": "https://v2.samehadaku.how/anime/kuroneko-to-majo-no-kyoushitsu/"
+          "time": "00:30",
+          "source": "https://v2.samehadaku.how/anime/buchigire-reijou-wa-houfuku/"
         },
         {
-          "slug": "futsutsuka-na-akujo-dewa-gozaimasu",
-          "judul": "Futsutsuka na Akujo dewa Gozaimasu",
-          "nama": "Futsutsuka na Akujo dewa Gozaimasu",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Futsutsuka-na-Akujo-dewa-Gozaimasu-v2.jpg",
-          "rating": "8.19",
+          "slug": "liar-game",
+          "judul": "Liar Game",
+          "nama": "Liar Game",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/156078.jpg",
+          "rating": "6.92",
+          "type": "TV",
+          "genre": [
+            "Drama",
+            "Suspense"
+          ],
+          "time": "01:00",
+          "source": "https://v2.samehadaku.how/anime/liar-game/"
+        },
+        {
+          "slug": "grand-blue-season-3",
+          "judul": "Grand Blue Season 3",
+          "nama": "Grand Blue Season 3",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Grand-Blue-Season-3.jpg",
+          "rating": "8.41",
+          "type": "TV",
+          "genre": [
+            "Adult Cast",
+            "Comedy"
+          ],
+          "time": "01:30",
+          "source": "https://v2.samehadaku.how/anime/grand-blue-season-3/"
+        },
+        {
+          "slug": "mujikaku-seijo",
+          "judul": "Mujikaku Seijo",
+          "nama": "Mujikaku Seijo",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/M.jpg",
+          "rating": "6.49",
           "type": "TV",
           "genre": [
             "Fantasy",
             "Romance"
           ],
-          "time": "01:45",
-          "source": "https://v2.samehadaku.how/anime/futsutsuka-na-akujo-dewa-gozaimasu/"
-        },
-        {
-          "slug": "toumei-na-yoru-ni-kakeru",
-          "judul": "Toumei na Yoru ni Kakeru",
-          "nama": "Toumei na Yoru ni Kakeru",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158339.jpg",
-          "rating": "7.32",
-          "type": "TV",
-          "genre": [
-            "Drama",
-            "Romance"
-          ],
-          "time": "22:00",
-          "source": "https://v2.samehadaku.how/anime/toumei-na-yoru-ni-kakeru/"
-        },
-        {
-          "slug": "degarashi-ouji",
-          "judul": "Degarashi Ouji",
-          "nama": "Degarashi Ouji",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx169582-quL8VMg45fcu.png",
-          "rating": "6.56",
-          "type": "TV",
-          "genre": [
-            "Action",
-            "Adventure"
-          ],
-          "time": "23:30",
-          "source": "https://v2.samehadaku.how/anime/degarashi-ouji/"
-        },
-        {
-          "slug": "gaikotsu-kishi-sama-tadaima-isekai-e-odekakechuu-season-2",
-          "judul": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu Season 2",
-          "nama": "Gaikotsu Kishi-sama, Tadaima Isekai e Odekakechuu Season 2",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/157046.jpg",
-          "rating": "6.53",
-          "type": "TV",
-          "genre": [
-            "Action",
-            "Adventure"
-          ],
-          "time": "23:30",
-          "source": "https://v2.samehadaku.how/anime/gaikotsu-kishi-sama-tadaima-isekai-e-odekakechuu-season-2/"
+          "time": "23:45",
+          "source": "https://v2.samehadaku.how/anime/mujikaku-seijo/"
         }
       ]
     },
@@ -359,59 +331,144 @@
       "label": "Sabtu",
       "items": [
         {
-          "slug": "mebius-dust",
-          "judul": "Mebius Dust",
-          "nama": "Mebius Dust",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx108992-skuOsfmLmMd2vbv2.jpg",
-          "rating": "5.27",
-          "type": "TV",
-          "genre": [
-            "Action",
-            "Supernatural"
-          ],
-          "time": "00:30",
-          "source": "https://v2.samehadaku.how/anime/mebius-dust/"
-        },
-        {
-          "slug": "tsuihou-sareta-tensei-juukishi-wa-game",
-          "judul": "Tsuihou sareta Tensei Juukishi wa Game",
-          "nama": "Tsuihou sareta Tensei Juukishi wa Game",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tsuihou-sareta-Tensei-Juukishi-wa-Game.jpg",
-          "rating": "6.75",
+          "slug": "koko-wa-ore-ni-makasete-saki-ni-ike-to-itte-kara-10-nen-ga-tattara-densetsu-ni-natteita",
+          "judul": "Koko wa Ore ni Makasete Saki ni Ike to Itte kara 10-nen ga Tattara Densetsu ni Natteita.",
+          "nama": "Koko wa Ore ni Makasete Saki ni Ike to Itte kara 10-nen ga Tattara Densetsu ni Natteita.",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/154308.jpg",
+          "rating": "6.8",
           "type": "TV",
           "genre": [
             "Action",
             "Adventure"
           ],
-          "time": "02:00",
-          "source": "https://v2.samehadaku.how/anime/tsuihou-sareta-tensei-juukishi-wa-game/"
+          "time": "00:03",
+          "source": "https://v2.samehadaku.how/anime/koko-wa-ore-ni-makasete-saki-ni-ike-to-itte-kara-10-nen-ga-tattara-densetsu-ni-natteita/"
         },
         {
-          "slug": "ryoumin-0-nin-start-no-henkyou-ryoushu-sama",
-          "judul": "Ryoumin 0-nin Start no Henkyou Ryoushu-sama",
-          "nama": "Ryoumin 0-nin Start no Henkyou Ryoushu-sama",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Ryoumin-0-nin-Start-no-Henkyou-Ryoushu-sama.jpg",
-          "rating": "6.77",
+          "slug": "iwamoto-senpai-no-suisen",
+          "judul": "Iwamoto-senpai no Suisen",
+          "nama": "Iwamoto-senpai no Suisen",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158450.jpg",
+          "rating": "6.1",
           "type": "TV",
           "genre": [
-            "Fantasy"
+            "Historical",
+            "Military"
           ],
-          "time": "23:30",
-          "source": "https://v2.samehadaku.how/anime/ryoumin-0-nin-start-no-henkyou-ryoushu-sama/"
+          "time": "00:30",
+          "source": "https://v2.samehadaku.how/anime/iwamoto-senpai-no-suisen/"
         },
         {
-          "slug": "tensei-shitara-slime-datta-ken-season-4",
-          "judul": "Tensei shitara Slime Datta Ken Season 4",
-          "nama": "Tensei shitara Slime Datta Ken Season 4",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/Tensei-shitara-Slime-Datta-Ken-Season-4.jpg",
-          "rating": "8.18",
+          "slug": "hell-mode-yarikomizuki-no-gamer-season-2",
+          "judul": "Hell Mode Yarikomizuki no Gamer Season 2",
+          "nama": "Hell Mode Yarikomizuki no Gamer Season 2",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Hell-Mode-Yarikomizuki-no-Gamer-Season-2.jpg",
+          "rating": "7.21",
           "type": "TV",
           "genre": [
             "Action",
+            "Adventure"
+          ],
+          "time": "02:30",
+          "source": "https://v2.samehadaku.how/anime/hell-mode-yarikomizuki-no-gamer-season-2/"
+        },
+        {
+          "slug": "nige-jouzu-no-wakagimi-s2",
+          "judul": "Nige Jouzu no Wakagimi S2",
+          "nama": "Nige Jouzu no Wakagimi S2",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx182616-ZOCgArw9cgqIaa.jpg",
+          "rating": "7.57",
+          "type": "TV",
+          "genre": [
+            "Adventure",
             "Comedy"
           ],
-          "time": "23:59",
-          "source": "https://v2.samehadaku.how/anime/tensei-shitara-slime-datta-ken-season-4/"
+          "time": "03:00",
+          "source": "https://v2.samehadaku.how/anime/nige-jouzu-no-wakagimi-s2/"
+        },
+        {
+          "slug": "honzuki-no-gekokujou-season-4",
+          "judul": "Honzuki no Gekokujou Season 4",
+          "nama": "Honzuki no Gekokujou Season 4",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/Honzuki-no-Gekokujou-Season-4.jpg",
+          "rating": "7.75",
+          "type": "TV",
+          "genre": [
+            "Fantasy",
+            "Isekai"
+          ],
+          "time": "19:30",
+          "source": "https://v2.samehadaku.how/anime/honzuki-no-gekokujou-season-4/"
+        },
+        {
+          "slug": "mairimashita-iruma-kun-season-4",
+          "judul": "Mairimashita Iruma kun Season 4",
+          "nama": "Mairimashita Iruma kun Season 4",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/154048.jpg",
+          "rating": "7.26",
+          "type": "TV",
+          "genre": [
+            "Comedy",
+            "Fantasy"
+          ],
+          "time": "21:00",
+          "source": "https://v2.samehadaku.how/anime/mairimashita-iruma-kun-season-4/"
+        },
+        {
+          "slug": "mushoku-tensei-isekai-ittara-honki-dasu-season-3",
+          "judul": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
+          "nama": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158340.jpg",
+          "rating": "",
+          "type": "TV",
+          "genre": [
+            "Adventure",
+            "Drama"
+          ],
+          "time": "21:30",
+          "source": "https://v2.samehadaku.how/anime/mushoku-tensei-isekai-ittara-honki-dasu-season-3/"
+        },
+        {
+          "slug": "black-torch",
+          "judul": "Black Torch",
+          "nama": "Black Torch",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Black-Torch.jpg",
+          "rating": "7.39",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Shounen"
+          ],
+          "time": "23:00",
+          "source": "https://v2.samehadaku.how/anime/black-torch/"
+        },
+        {
+          "slug": "bleach-sennen-kessen-hen-kashin-tan-cour-4",
+          "judul": "Bleach: Sennen Kessen-hen - Kashin-tan (Cour 4)",
+          "nama": "Bleach: Sennen Kessen-hen - Kashin-tan (Cour 4)",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx185874-aU3e6tBT6wwA.jpg",
+          "rating": "9.07",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Adventure"
+          ],
+          "time": "23:30",
+          "source": "https://v2.samehadaku.how/anime/bleach-sennen-kessen-hen-kashin-tan-cour-4/"
+        },
+        {
+          "slug": "yomi-no-tsugai",
+          "judul": "Yomi no Tsugai",
+          "nama": "Yomi no Tsugai",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/04/156397.jpg",
+          "rating": "7.83",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Adventure"
+          ],
+          "time": "23:50",
+          "source": "https://v2.samehadaku.how/anime/yomi-no-tsugai/"
         }
       ]
     },
