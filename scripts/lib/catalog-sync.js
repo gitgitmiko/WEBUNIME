@@ -21,6 +21,7 @@ import {
   rewritePlayerUrl,
   rewritePlayerHostsInCatalog,
 } from "./player-host-aliases.js";
+import { writeCatalogIndexes } from "./catalog-indexes.js";
 
 const LIST_BASE_DEFAULT = "https://tv12.lk21official.cc";
 const LIST_BASE_CANDIDATES = [
@@ -1622,6 +1623,18 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     } catch (err) {
       console.warn("[sync] player-hosts:", err.message);
       results.playerHosts = { error: err.message };
+    }
+
+    // Index ringan untuk browse TV (tanpa episodes/players).
+    try {
+      console.log("[catalog-sync] write catalog indexes…");
+      results.indexes = await writeCatalogIndexes(dataDir);
+      for (const row of results.indexes) {
+        console.log(`[catalog-sync] ${row.file}: ${row.count} items`);
+      }
+    } catch (err) {
+      console.warn("[sync] indexes:", err.message);
+      results.indexes = { error: err.message };
     }
 
     const added =
