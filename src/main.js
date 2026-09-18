@@ -597,7 +597,7 @@ function createPoster(movie, index = 0) {
     ${posterBadgesHtml(movie)}
     ${posterDurationHtml(movie)}
     <div class="poster-foot">
-      <p class="poster-label">${movie.nama}</p>
+    <p class="poster-label">${movie.nama}</p>
       ${posterYearHtml(movie)}
     </div>
   `;
@@ -628,7 +628,7 @@ function createLatestEpisodePoster(item, index = 0) {
     ${posterBadgesHtml(metaSource)}
     ${posterDurationHtml(metaSource)}
     <div class="poster-foot">
-      <p class="poster-label">${item.nama}</p>
+    <p class="poster-label">${item.nama}</p>
       ${posterYearHtml(metaSource)}
     </div>
   `;
@@ -1577,6 +1577,18 @@ async function resolveEmbedPath(sourceUrl) {
     if (/p2pplay\.|barplay\.|p2pstream\./i.test(host)) {
       return sourceUrl;
     }
+
+    // Player sudah di-resolve (bukan wrapper videonode) → proxy langsung.
+    if (
+      /emturbovid|turbovidhls|turboviplay|abyssplayer|abyss\.to|short\.icu|gn1r5n|mfw09|playcdn\.de/i.test(
+        host,
+      )
+    ) {
+      if (/abyssplayer|abyss\.to|short\.icu|abysscdn/i.test(host)) {
+        return `/__hydrax__?u=${encodeURIComponent(sourceUrl)}`;
+      }
+      return toProxyPath(sourceUrl) || sourceUrl;
+    }
   } catch {
     /* lanjut resolve */
   }
@@ -1620,7 +1632,7 @@ function clearEmbed() {
 function applyPlayerFramePolicy(embedPath) {
   const frame = $("#playerFrame");
   if (!frame) return;
-  frame.removeAttribute("sandbox");
+    frame.removeAttribute("sandbox");
 }
 
 async function showEmbed(url) {
@@ -2316,9 +2328,9 @@ function bindSearch() {
           rememberItems(item.catalog || resolveCollection(item), [item]);
         }
         if (n !== seq) return;
-        grid.replaceChildren(...hits.map((m, i) => createPoster(m, i)));
-        section.classList.remove("hidden");
-        rows.classList.add("hidden");
+    grid.replaceChildren(...hits.map((m, i) => createPoster(m, i)));
+    section.classList.remove("hidden");
+    rows.classList.add("hidden");
       } catch {
         if (n !== seq) return;
         grid.replaceChildren();
@@ -2967,10 +2979,10 @@ async function bootApp() {
   }
   await loadHomeCatalog();
   await initHeroCarousel();
-  bindNav();
-  bindRows();
-  bindSearch();
-  bindActions();
+    bindNav();
+    bindRows();
+    bindSearch();
+    bindActions();
   await loadUserLibrary();
   renderRows();
   appBooted = true;

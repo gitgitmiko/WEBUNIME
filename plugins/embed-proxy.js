@@ -126,6 +126,7 @@ function pickReferer(target) {
   const host = target.hostname.toLowerCase();
   if (host.includes("playeriframe")) return "https://tv12.lk21official.cc/";
   if (host.includes("gn1r5n")) return "https://gn1r5n.org/";
+  if (host.includes("mfw09")) return "https://mfw09.org/";
   if (host.includes("hownetwork")) return "https://playeriframe.sbs/";
   if (host.includes("abyss") || host.includes("iamcdn") || host.includes("short.icu")) {
     return "https://abyssplayer.com/";
@@ -217,9 +218,10 @@ function buildUpstreamHeaders(target, req) {
     }
   }
 
-  if (/gn1r5n/i.test(target.hostname)) {
+  if (/gn1r5n|mfw09/i.test(target.hostname)) {
     // Cast memvalidasi embed lewat X-Embed-* (bukan Origin browser)
-    headers.Origin = "https://gn1r5n.org";
+    const castHost = /mfw09/i.test(target.hostname) ? "mfw09.org" : "gn1r5n.org";
+    headers.Origin = `https://${castHost}`;
     headers.Referer = "https://playeriframe.sbs/";
     headers["X-Embed-Origin"] = "playeriframe.sbs";
     headers["X-Embed-Referer"] = "https://playeriframe.sbs/";
@@ -267,7 +269,7 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
   const prefix = `/__px__/${host}`;
   const realPath = pageUrl.pathname + pageUrl.search + pageUrl.hash;
   const isAbyss = /abyss/i.test(host);
-  const isCast = /gn1r5n/i.test(host);
+  const isCast = /gn1r5n|mfw09/i.test(host);
   const isTurbo = /turbo/i.test(host);
   const isP2p = /playcdn|hownetwork|videonode/i.test(host);
 
@@ -291,7 +293,7 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
   };
   var IS_MEGA=${/mega\.(nz|io)/i.test(host) ? "true" : "false"};
   var __wuWasmB64=${JSON.stringify(wasmB64 || "")};
-  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|sssrr\\.org|trycloudflare\\.com|freeimagecdn|showcdnx|googlevideo\\.com)/i;
+  var CDN_RE=/(?:iamcdn|abysscdn|abyss\\.to|short\\.icu|morphify|turboviplay|turbosplayer|turbovid|emturbovid|tiktokcdn|sptvp|googleusercontent|storage\\.googleapis\\.com|img-place|gn1r5n|mfw09|sssrr\\.org|trycloudflare\\.com|freeimagecdn|showcdnx|googlevideo\\.com)/i;
 
   // Path harus mirip aslinya (slug Hydrax = /KZ32..., Cast = /e/...)
   // Hydrax: /{slug}?v={slug} — cocok untuk query v DAN regex href di core.bundle.
@@ -1877,6 +1879,118 @@ async function handleProxy(req, res) {
 }
 
 /** Ambil URL iframe dalam dari halaman playeriframe/videonode (skip iklan wrapper). */
+/** /iframe3/<server>/<id> — pola wrapper baru LK21 (ID opaque). */
+function parseIframe3(url) {
+  try {
+    const u = new URL(url);
+    if (!/playeriframe\.|videonode\./i.test(u.hostname)) return null;
+    const m = u.pathname.match(
+      /^\/iframe3\/(hydrax|turbovip|turbo|cast|p2p)\/([^/]+)\/?$/i,
+    );
+    if (!m) return null;
+    let server = m[1].toLowerCase();
+    if (server === "turbo") server = "turbovip";
+    return { server, id: m[2].trim(), origin: u.origin };
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Mapping deterministic wrapper lama:
+ * /iframe/hydrax|turbovip|cast|p2p/<id> → host player asli (sama App TV).
+ */
+function resolveFromWrapperPath(url) {
+  try {
+    const u = new URL(url);
+    const m = u.pathname.match(
+      /^\/iframe\/(hydrax|turbovip|turbo|cast|p2p)\/([^/]+)\/?$/i,
+    );
+    if (!m) return null;
+    const server = m[1].toLowerCase();
+    const id = m[2].trim();
+    if (!id) return null;
+    switch (server) {
+      case "hydrax":
+        return `https://abyssplayer.com/${id}`;
+      case "turbovip":
+      case "turbo":
+        return `https://emturbovid.com/t/${id}`;
+      case "cast":
+        return `https://gn1r5n.org/e/${id}`;
+      case "p2p":
+        return `https://playcdn.de/video.php?id=${encodeURIComponent(id)}&t=1`;
+      default:
+        return null;
+    }
+  } catch {
+    return null;
+  }
+}
+
+/** Tolak URL sampah (domain forsale / redirect mati). */
+function isValidEmbedPlayUrl(url) {
+  try {
+    const u = new URL(String(url || "").trim());
+    if (!/^https?:$/i.test(u.protocol)) return false;
+    if (
+      /abovedomains|forsale\.min\.js|parkingcrew|sedo\.com|godaddy\.com/i.test(
+        u.href,
+      )
+    ) {
+      return false;
+    }
+    // playeriframe.sbs mati → sering redirect ke landing forsale
+    if (/playeriframe\.sbs$/i.test(u.hostname) && /\.js(\?|$)/i.test(u.pathname)) {
+      return false;
+    }
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+/** POST /api.php seperti bootstrap Chromium di App TV. */
+async function resolveIframe3EmbedUrl(parsed) {
+  const bases = [
+    parsed.origin,
+    "https://videonode.de",
+  ].filter((v, i, a) => v && a.indexOf(v) === i);
+  for (const base of bases) {
+    try {
+      const r = await fetch(`${base}/api.php`, {
+        method: "POST",
+        headers: {
+          "User-Agent": USER_AGENT,
+          "Content-Type": "application/x-www-form-urlencoded",
+          Accept: "application/json, text/plain, */*",
+          Origin: base,
+          Referer: `${base}/iframe3/${parsed.server}/${parsed.id}`,
+        },
+        body: `host=${encodeURIComponent(parsed.server)}&id=${encodeURIComponent(parsed.id)}`,
+        redirect: "follow",
+      });
+      if (!r.ok) continue;
+      const text = await r.text();
+      if (/sorry, you have been blocked|abovedomains|forsale\.min\.js/i.test(text)) {
+        continue;
+      }
+      let embedUrl = "";
+      try {
+        const j = JSON.parse(text);
+        embedUrl = String(j?.embedUrl || "").trim();
+      } catch {
+        // Jangan ambil URL sembarang dari HTML (sering forsale.js).
+        continue;
+      }
+      if (isValidEmbedPlayUrl(embedUrl)) return embedUrl;
+    } catch {
+      /* coba base berikutnya */
+    }
+  }
+  return null;
+}
+
 async function handleResolve(req, res) {
   const incoming = new URL(req.url, "http://127.0.0.1");
   const target = parseHttpUrl(incoming.searchParams.get("url"));
@@ -1889,16 +2003,40 @@ async function handleResolve(req, res) {
 
   try {
     let playUrl = target.href;
-    // Wrapper LK21 (playeriframe / videonode) → ambil iframe player asli
-    if (/playeriframe\.|videonode\.de/i.test(target.hostname)) {
-      const upstream = await fetchUpstream(target);
-      const html = await upstream.text();
-      const m =
-        html.match(
-          /<div[^>]*embed-container[^>]*>[\s\S]*?<iframe[^>]+src=["']([^"']+)["']/i
-        ) || html.match(/<iframe[^>]+src=["'](https?:\/\/[^"']+)["']/i);
-      if (m?.[1]) {
-        playUrl = new URL(m[1], upstream.url).href;
+
+    // /iframe3/: pola TV — POST /api.php → embedUrl (bukan scrape HTML; CF sering 403).
+    const iframe3 = parseIframe3(target.href);
+    if (iframe3) {
+      const resolved = await resolveIframe3EmbedUrl(iframe3);
+      if (resolved) {
+        playUrl = resolved;
+      } else {
+        res.statusCode = 502;
+        res.setHeader("Content-Type", "application/json; charset=utf-8");
+        res.end(
+          JSON.stringify({
+            error:
+              "Gagal resolve iframe3 (Cloudflare). Coba server lain atau refresh katalog player.",
+            source: target.href,
+          }),
+        );
+        return;
+      }
+    } else if (/playeriframe\.|videonode\.de/i.test(target.hostname)) {
+      // Wrapper lama /iframe/<server>/<slug> — map deterministic dulu.
+      const mapped = resolveFromWrapperPath(target.href);
+      if (mapped) {
+        playUrl = mapped;
+      } else {
+        const upstream = await fetchUpstream(target);
+        const html = await upstream.text();
+        const m =
+          html.match(
+            /<div[^>]*embed-container[^>]*>[\s\S]*?<iframe[^>]+src=["']([^"']+)["']/i,
+          ) || html.match(/<iframe[^>]+src=["'](https?:\/\/[^"']+)["']/i);
+        if (m?.[1]) {
+          playUrl = new URL(m[1], upstream.url).href;
+        }
       }
     }
 
@@ -2108,8 +2246,8 @@ function middleware(req, res, next) {
       const ref = String(req.headers.referer || "");
       const px = ref.match(/\/__px__\/([^/]+)/);
       if (px) host = decodeURIComponent(px[1]);
-      else if (path.startsWith("/player/") || /\/e\//.test(ref) || /gn1r5n/i.test(ref))
-        host = "gn1r5n.org";
+      else if (path.startsWith("/player/") || /\/e\//.test(ref) || /gn1r5n|mfw09/i.test(ref))
+        host = /mfw09/i.test(ref) ? "mfw09.org" : "gn1r5n.org";
       else if (/turbo/i.test(ref)) host = "turbovidhls.com";
       else if (
         path.startsWith("/zzz/") ||
