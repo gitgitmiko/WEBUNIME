@@ -1,12 +1,11 @@
 let movies = [];
-let moviesAction = [];
-let moviesDrama = [];
+let moviesTop = [];
 let series = [];
+let seriesLatest = [];
 let horror = [];
-let indonesia = [];
+let horrorTop = [];
+let marvel = [];
 let anime = [];
-let animeTop = [];
-let animeHot = [];
 let animeMovies = [];
 let animeLatest = [];
 let catalog = [];
@@ -92,14 +91,13 @@ async function loadCollectionPage(collection, target, { page = 1, genre = "", so
 function listForKey(key) {
   const lists = {
     movies,
-    moviesAction,
-    moviesDrama,
+    moviesTop,
     series,
+    seriesLatest,
     horror,
-    indonesia,
+    horrorTop,
+    marvel,
     anime,
-    animeTop,
-    animeHot,
     animeMovies,
     animeLatest,
   };
@@ -108,20 +106,29 @@ function listForKey(key) {
 
 const ROW_CONFIG = {
   trackFeatured: { collection: "movies", listKey: "movies" },
-  trackHorror: { collection: "horror", listKey: "horror" },
-  trackAction: {
+  trackMoviesTop: {
     collection: "movies",
-    listKey: "moviesAction",
-    genre: "Action,Adventure,Thriller",
+    listKey: "moviesTop",
+    sort: "top_random",
+    noMore: true,
   },
-  trackDrama: { collection: "movies", listKey: "moviesDrama", genre: "Drama,Romance" },
+  trackHorror: { collection: "horror", listKey: "horror" },
+  trackHorrorTop: {
+    collection: "horror",
+    listKey: "horrorTop",
+    sort: "top_random",
+    noMore: true,
+  },
+  trackMarvel: { collection: "marvel", listKey: "marvel" },
+  trackSeriesLatest: {
+    collection: "series-latest",
+    listKey: "seriesLatest",
+    kind: "episode",
+  },
   trackSeries: { collection: "series", listKey: "series" },
-  trackIndonesia: { collection: "indonesia", listKey: "indonesia" },
-  trackAnime: { collection: "anime", listKey: "anime" },
-  trackAnimeTop: { collection: "anime", listKey: "animeTop", sort: "rating" },
-  trackAnimeHot: { collection: "anime", listKey: "animeHot", sort: "hot" },
-  trackAnimeMovie: { collection: "anime-movies", listKey: "animeMovies" },
   trackAnimeLatest: { collection: "anime-latest", listKey: "animeLatest", kind: "episode" },
+  trackAnime: { collection: "anime", listKey: "anime" },
+  trackAnimeMovie: { collection: "anime-movies", listKey: "animeMovies" },
 };
 
 async function loadHomeCatalog() {
@@ -135,11 +142,12 @@ async function loadHomeCatalog() {
           genre: cfg.genre || "",
           sort: cfg.sort || "",
         });
+        const noMore = Boolean(cfg.noMore) || cfg.sort === "top_random";
         rowState[trackId] = {
           page: 1,
           total: data.total,
           loading: false,
-          done: list.length >= data.total || data.items.length < PAGE_SIZE,
+          done: noMore || list.length >= data.total || data.items.length < PAGE_SIZE,
         };
       } catch (err) {
         console.warn(`[catalog] ${cfg.collection}`, err);
@@ -150,13 +158,15 @@ async function loadHomeCatalog() {
   );
   catalog = dedupeBySlug([
     ...movies,
+    ...moviesTop,
     ...horror,
-    ...indonesia,
+    ...horrorTop,
+    ...marvel,
     ...series,
+    ...seriesLatest,
     ...anime,
-    ...animeTop,
-    ...animeHot,
     ...animeMovies,
+    ...animeLatest,
   ]);
 }
 
@@ -213,16 +223,30 @@ function isSeries(item) {
 function resolveCollection(movie) {
   if (!movie) return "movies";
   const cat = String(movie.catalog || "").toLowerCase();
-  if (["movies", "series", "horror", "indonesia", "anime", "anime-movies", "anime-latest"].includes(cat)) {
+  if (
+    [
+      "movies",
+      "series",
+      "horror",
+      "marvel",
+      "indonesia",
+      "anime",
+      "anime-movies",
+      "anime-latest",
+      "series-latest",
+    ].includes(cat)
+  ) {
     return cat;
   }
   if (movie.type === "series") return "series";
   if (movie.type === "anime") return "anime";
   if (movie.type === "anime-movie") return "anime-movies";
   if (cat.includes("horror") || cat === "horor") return "horror";
+  if (cat.includes("marvel")) return "marvel";
   if (cat.includes("indonesia")) return "indonesia";
   const slug = movie.slug;
   if (slug && itemCache.get(cacheKey("horror", slug))) return "horror";
+  if (slug && itemCache.get(cacheKey("marvel", slug))) return "marvel";
   if (slug && itemCache.get(cacheKey("indonesia", slug))) return "indonesia";
   if (slug && itemCache.get(cacheKey("series", slug))) return "series";
   if (slug && itemCache.get(cacheKey("anime", slug))) return "anime";
@@ -232,15 +256,19 @@ function resolveCollection(movie) {
 
 function findInCatalog(collection, slug) {
   if (!slug) return null;
+  const listKey =
+    collection === "anime-movies"
+      ? "animeMovies"
+      : collection === "anime-latest"
+        ? "animeLatest"
+        : collection === "series-latest"
+          ? "seriesLatest"
+          : collection === "movies"
+            ? "movies"
+            : collection;
   return (
     itemCache.get(cacheKey(collection, slug)) ||
-    listForKey(
-      collection === "anime-movies"
-        ? "animeMovies"
-        : collection === "movies"
-          ? "movies"
-          : collection
-    )?.find((x) => x.slug === slug) ||
+    listForKey(listKey)?.find((x) => x.slug === slug || x.anime_slug === slug || x.series_slug === slug) ||
     null
   );
 }
@@ -611,10 +639,17 @@ function createLatestEpisodePoster(item, index = 0) {
   btn.type = "button";
   btn.className = "poster poster--episode";
   btn.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
+  const isSeries = Boolean(item.series_slug) && !item.anime_slug;
+  const parentCollection = isSeries ? "series" : "anime";
+  const parentSlug = isSeries ? item.series_slug : item.anime_slug;
   const epLabel =
-    item.episode != null ? `Episode ${item.episode}` : "Episode baru";
+    item.episode != null
+      ? isSeries && item.season_label
+        ? `${item.season_label} E${item.episode}`
+        : `Episode ${item.episode}`
+      : "Episode baru";
   btn.setAttribute("aria-label", `${item.nama} ${epLabel}`);
-  const show = item.anime_slug ? itemCache.get(cacheKey("anime", item.anime_slug)) : null;
+  const show = parentSlug ? itemCache.get(cacheKey(parentCollection, parentSlug)) : null;
   const metaSource = {
     rating: show?.rating || item.rating,
     quality: show?.quality || item.quality,
@@ -635,20 +670,23 @@ function createLatestEpisodePoster(item, index = 0) {
   btn.addEventListener("click", async () => {
     const show = await hydrateItem(
       {
-        type: "anime",
+        type: isSeries ? "series" : "anime",
         nama: item.nama,
         judul: item.judul || item.nama,
         thumbnail: item.thumbnail,
-        slug: item.anime_slug,
-        anime_slug: item.anime_slug,
+        slug: parentSlug,
+        anime_slug: isSeries ? undefined : item.anime_slug,
+        series_slug: isSeries ? item.series_slug : undefined,
         source: item.source,
-        catalog: "anime",
+        catalog: parentCollection,
       },
-      "anime"
+      parentCollection
     );
     const epSlug =
       item.episode_slug ||
-      `${item.anime_slug}-episode-${item.episode}`;
+      (isSeries
+        ? `${item.series_slug}-episode-${item.episode}`
+        : `${item.anime_slug}-episode-${item.episode}`);
     openModal(show, { episodeSlug: epSlug });
   });
   return btn;
@@ -667,17 +705,16 @@ function fillTrack(id, list, { append = false, startIndex = 0 } = {}) {
 
 function renderRows() {
   renderLibraryRows();
-  fillTrack("trackAnime", anime);
-  fillTrack("trackAnimeTop", animeTop);
-  fillTrack("trackAnimeHot", animeHot);
-  fillTrack("trackAnimeLatest", animeLatest);
-  fillTrack("trackAnimeMovie", animeMovies);
   fillTrack("trackFeatured", movies);
+  fillTrack("trackMoviesTop", moviesTop);
   fillTrack("trackHorror", horror);
-  fillTrack("trackAction", moviesAction);
-  fillTrack("trackDrama", moviesDrama);
+  fillTrack("trackHorrorTop", horrorTop);
+  fillTrack("trackMarvel", marvel);
+  fillTrack("trackSeriesLatest", seriesLatest);
   fillTrack("trackSeries", series);
-  fillTrack("trackIndonesia", indonesia);
+  fillTrack("trackAnimeLatest", animeLatest);
+  fillTrack("trackAnime", anime);
+  fillTrack("trackAnimeMovie", animeMovies);
 }
 
 function shortSinopsis(text) {
@@ -1156,9 +1193,9 @@ async function initHeroCarousel() {
   if (!heroSlides.length) {
     const fallback =
       movies[0] ||
+      marvel[0] ||
       anime[0] ||
       animeMovies[0] ||
-      indonesia[0] ||
       horror[0] ||
       series[0];
     if (fallback) heroSlides = [fallback];
@@ -2162,17 +2199,16 @@ function bindNav() {
   });
 
   const sectionIds = [
+    "film-terbaru",
+    "top-film",
+    "horor",
+    "top-horor",
+    "marvel",
+    "series-latest",
+    "series",
     "anime",
-    "top-anime",
-    "hot-anime",
     "series-anime",
     "anime-movie",
-    "film-terbaru",
-    "horor",
-    "aksi",
-    "drama",
-    "series",
-    "indonesia",
   ];
   const sections = sectionIds
     .map((id) => document.getElementById(id))

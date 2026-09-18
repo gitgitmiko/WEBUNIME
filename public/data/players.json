@@ -337,35 +337,39 @@
     "film": "Feed (2026)",
     "source": "https://tv12.lk21official.cc/feed-2026",
     "catalog": "movies",
-    "scraped_at": "2026-08-22T06:07:46.405Z",
+    "scraped_at": "2026-09-18T08:15:43.243Z",
     "players": [
       {
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/cpFR",
-        "default": true
+        "url": "https://playcdn.de/MjZmNTExMGE5MmUxM2Y2Yw7wbrYyBMI?cb=3",
+        "default": true,
+        "resolved_from": "iframe3"
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a80a81b0cdab",
-        "default": false
+        "url": "https://emturbovid.com/t/6a80a81b0cdab",
+        "default": false,
+        "resolved_from": "iframe3"
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/nm0bhf62gyrv",
-        "default": false
+        "url": "https://mfw09.org/e/nm0bhf62gyrv",
+        "default": false,
+        "resolved_from": "iframe3"
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/gYMlNQWNd",
-        "default": false
+        "url": "https://abyssplayer.com/FG4j8ttwJ",
+        "default": false,
+        "resolved_from": "iframe3"
       }
     ]
   },

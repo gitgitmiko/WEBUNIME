@@ -698,7 +698,38 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
       });
     } catch (e) {}
 
-    // Cegah jwplayer().remove() ÔåÆ "Player has been destroyed"
+    // Blok popup iklan + document.write gate AdBlock/Sandbox
+    try {
+      window.open = function () { return null; };
+      document.write = function () {};
+      document.writeln = function () {};
+    } catch (e) {}
+    try {
+      if (window.abyssConfig) window.abyssConfig.popups = [];
+    } catch (e) {}
+
+    // Buang overlay iklan lalu play
+    (function killHydraxAds() {
+      function go() {
+        try {
+          var ov = document.getElementById("overlay");
+          if (ov) {
+            try { ov.onclick = null; ov.ontouchend = null; } catch (e) {}
+            ov.remove();
+          }
+          if (typeof window.jwplayer === "function") {
+            var p = window.jwplayer();
+            if (p && typeof p.play === "function") p.play();
+          }
+        } catch (e) {}
+      }
+      document.addEventListener("DOMContentLoaded", go);
+      setTimeout(go, 400);
+      setTimeout(go, 1200);
+      setTimeout(go, 2500);
+    })();
+
+    // Cegah jwplayer().remove() → "Player has been destroyed"
     (function guardJwRemove() {
       var tries = 0;
       var iv = setInterval(function () {
@@ -1143,6 +1174,11 @@ function patchAbyssPlayerJs(text) {
   out = out.replace(/track\.window\s*>=\s*2/g, "false");
   out = out.replace(/track\.window\s*>\s*1/g, "false");
   out = out.replace(/jwplayer\s*\(\s*\)\s*\.\s*remove\s*\(\s*\)/gi, "void 0");
+  out = out.replace(
+    /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,400}?try again\./gi,
+    ""
+  );
+  out = out.replace(/Your browser does not support player/gi, "");
   return out;
 }
 
@@ -1502,11 +1538,22 @@ function sanitizeHtml(html, pageUrl, origin = "", { wasmB64 = "" } = {}) {
   out = out.replace(/jwplayer\s*\(\s*\)\s*\.\s*remove\s*\(\s*\)/gi, "void 0");
   out = out.replace(/track\.window\s*>=\s*2/g, "false");
   out = out.replace(/track\.window\s*>\s*1/g, "false");
+  out = out.replace(/track\.close\s*\+\+/g, "0");
+  out = out.replace(/track\.window\s*\+\+/g, "0");
   out = out.replace(
     /window\.abyssConfig\s*=\s*\{popups:\s*\[[^\]]*\]\}/g,
     "window.abyssConfig={popups:[]}"
   );
+  // Kosongkan daftar URL iklan (pola .map/.sort setelah array)
+  out = out.replace(
+    /var\s+urls\s*=\s*\[[\s\S]*?\]\.map\s*\(\s*url\s*=>\s*\(\s*\{\s*url\s*,\s*sort\s*:\s*Math\.random\s*\(\s*\)\s*\}\s*\)\s*\)\s*\.sort\s*\([\s\S]*?\)\s*\.map\s*\(\s*\(\s*\{\s*url\s*\}\s*\)\s*=>\s*url\s*\)/gi,
+    "var urls = []"
+  );
   out = out.replace(/urls\s*=\s*\[[^\]]*decafeligiblyhad[^\]]*\]/gi, "urls=[]");
+  out = out.replace(
+    /urls\s*=\s*\[[^\]]*decafeligiblyhad[^\]]*\]/gi,
+    "urls=[]"
+  );
   // Hydrax: sebelum SoTrym, paksa URL /{slug}?v={slug} agar core.bundle tidak "Slug is not found"
   if (/abyss/i.test(pageUrl.hostname)) {
     out = out.replace(
@@ -1515,10 +1562,14 @@ function sanitizeHtml(html, pageUrl, origin = "", { wasmB64 = "" } = {}) {
     );
     // Script iamcdn biarkan langsung (native) — rewrite proxy memicu "No playable sources found"
   }
-  // Alert AdBlock/Sandbox / security gate Hydrax
+  // Alert AdBlock/Sandbox / security gate Hydrax (hapus teks + document.write yang mematikannya)
   out = out.replace(
-    /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,280}?try again\./gi,
+    /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,400}?try again\./gi,
     ""
+  );
+  out = out.replace(
+    /document\.write\s*\(\s*['`][^'`]*AdBlock\/Sandbox[^'`]*['`]\s*\)/gi,
+    "void 0"
   );
   out = out.replace(
     /Due to security concerns[\s\S]{0,320}?developer tools[\s\S]{0,120}?\)\./gi,
@@ -2120,8 +2171,8 @@ function handleVid(req, res) {
 }
 
 /**
- * Wrapper ala App TV (WebPlayerProxy.abyssWrapperHtml):
- * Hydrax harus jalan di dalam iframe (top !== self), bukan dokumen top proxy.
+ * Wrapper ala App TV: Hydrax di iframe (top !== self).
+ * Konten abyss lewat /__px__/ supaya kita bisa strip iklan + gate AdBlock/Sandbox.
  */
 function buildHydraxWrapperPage(abyssEmbedPath) {
   return `<!DOCTYPE html>
@@ -2139,7 +2190,7 @@ iframe#wuEmbed{
 </style></head>
 <body>
 <iframe id="wuEmbed" src="about:blank" allow="autoplay; fullscreen; encrypted-media"
-  allowfullscreen scrolling="no" referrerpolicy="origin"></iframe>
+  allowfullscreen scrolling="no"></iframe>
 <script>
 (function () {
   var EMBED = ${JSON.stringify(String(abyssEmbedPath || ""))};
@@ -2150,7 +2201,6 @@ iframe#wuEmbed{
     loaded = true;
     frame.src = EMBED;
   }
-  // Teruskan sinyal ended dari abyss → parent (auto next episode)
   window.addEventListener("message", function (e) {
     try {
       var d = e && e.data;
@@ -2162,13 +2212,12 @@ iframe#wuEmbed{
       }
     } catch (err) {}
   });
-  // Pastikan Service Worker aktif dulu supaya GCS/CDN ter-proxy tanpa reload di dalam player
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("/__wu_sw.js", { scope: "/" }).then(function () {
       if (navigator.serviceWorker.controller) go();
       else {
         navigator.serviceWorker.addEventListener("controllerchange", go);
-        setTimeout(go, 2500);
+        setTimeout(go, 1800);
       }
     }).catch(go);
   } else {

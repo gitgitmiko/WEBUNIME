@@ -3,6 +3,7 @@ export const ITEM_COLLECTIONS = [
   "movies",
   "series",
   "horror",
+  "marvel",
   "indonesia",
   "anime",
   "anime-movies",

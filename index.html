@@ -39,19 +39,6 @@
       </button>
       <nav class="nav-links" id="navMenu" aria-label="Menu utama">
         <a href="#hero" class="is-active">Beranda</a>
-        <div class="nav-group" data-nav-group="anime">
-          <button type="button" class="nav-group-btn" aria-expanded="false">
-            Anime
-            <svg class="nav-group-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
-          </button>
-          <div class="nav-group-menu">
-            <a href="#anime">Anime Terbaru</a>
-            <a href="#top-anime">Top Anime</a>
-            <a href="#hot-anime">Hot Anime</a>
-            <a href="#series-anime">Series Anime</a>
-            <a href="#anime-movie">Anime Movie</a>
-          </div>
-        </div>
         <div class="nav-group" data-nav-group="film">
           <button type="button" class="nav-group-btn" aria-expanded="false">
             Film
@@ -59,10 +46,10 @@
           </button>
           <div class="nav-group-menu">
             <a href="#film-terbaru">Film Terbaru</a>
-            <a href="#horor">Horor</a>
-            <a href="#aksi">Aksi &amp; Petualangan</a>
-            <a href="#drama">Drama &amp; Romance</a>
-            <a href="#indonesia">Indonesia</a>
+            <a href="#top-film">Top Film</a>
+            <a href="#horor">Horor Terbaru</a>
+            <a href="#top-horor">Top Horor</a>
+            <a href="#marvel">Film Marvel</a>
           </div>
         </div>
         <div class="nav-group" data-nav-group="series">
@@ -71,7 +58,19 @@
             <svg class="nav-group-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
           </button>
           <div class="nav-group-menu">
-            <a href="#series">Series Drama</a>
+            <a href="#series-latest">Series Episode Terbaru</a>
+            <a href="#series">Series</a>
+          </div>
+        </div>
+        <div class="nav-group" data-nav-group="anime">
+          <button type="button" class="nav-group-btn" aria-expanded="false">
+            Anime
+            <svg class="nav-group-caret" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M7 10l5 5 5-5z"/></svg>
+          </button>
+          <div class="nav-group-menu">
+            <a href="#anime">Anime Episode Terbaru</a>
+            <a href="#series-anime">Anime</a>
+            <a href="#anime-movie">Anime Movie</a>
           </div>
         </div>
       </nav>
@@ -138,9 +137,80 @@
           </div>
         </div>
 
+        <div class="row" id="film-terbaru">
+          <div class="row-head">
+            <h2>Film Terbaru</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackFeatured" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackFeatured"></div>
+            <button class="row-arrow next" data-row="trackFeatured" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="top-film">
+          <div class="row-head">
+            <h2>Top Film</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackMoviesTop" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackMoviesTop"></div>
+            <button class="row-arrow next" data-row="trackMoviesTop" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="horor">
+          <div class="row-head"><h2>Horor Terbaru</h2></div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackHorror" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackHorror"></div>
+            <button class="row-arrow next" data-row="trackHorror" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="top-horor">
+          <div class="row-head"><h2>Top Horor</h2></div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackHorrorTop" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackHorrorTop"></div>
+            <button class="row-arrow next" data-row="trackHorrorTop" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="marvel">
+          <div class="row-head"><h2>Film Marvel</h2></div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackMarvel" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackMarvel"></div>
+            <button class="row-arrow next" data-row="trackMarvel" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="series-latest">
+          <div class="row-head">
+            <h2>Series Episode Terbaru</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackSeriesLatest" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackSeriesLatest"></div>
+            <button class="row-arrow next" data-row="trackSeriesLatest" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
+        <div class="row" id="series">
+          <div class="row-head">
+            <h2>Series</h2>
+          </div>
+          <div class="row-track-wrap">
+            <button class="row-arrow prev" data-row="trackSeries" aria-label="Geser kiri">‹</button>
+            <div class="row-track" id="trackSeries"></div>
+            <button class="row-arrow next" data-row="trackSeries" aria-label="Geser kanan">›</button>
+          </div>
+        </div>
+
         <div class="row" id="anime">
           <div class="row-head">
-            <h2>Anime Terbaru</h2>
+            <h2>Anime Episode Terbaru</h2>
           </div>
           <div class="row-track-wrap">
             <button class="row-arrow prev" data-row="trackAnimeLatest" aria-label="Geser kiri">‹</button>
@@ -149,31 +219,9 @@
           </div>
         </div>
 
-        <div class="row" id="top-anime">
-          <div class="row-head">
-            <h2>Top Anime</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackAnimeTop" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackAnimeTop"></div>
-            <button class="row-arrow next" data-row="trackAnimeTop" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="hot-anime">
-          <div class="row-head">
-            <h2>Hot Anime</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackAnimeHot" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackAnimeHot"></div>
-            <button class="row-arrow next" data-row="trackAnimeHot" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
         <div class="row" id="series-anime">
           <div class="row-head">
-            <h2>Series Anime</h2>
+            <h2>Anime</h2>
           </div>
           <div class="row-track-wrap">
             <button class="row-arrow prev" data-row="trackAnime" aria-label="Geser kiri">‹</button>
@@ -190,64 +238,6 @@
             <button class="row-arrow prev" data-row="trackAnimeMovie" aria-label="Geser kiri">‹</button>
             <div class="row-track" id="trackAnimeMovie"></div>
             <button class="row-arrow next" data-row="trackAnimeMovie" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="film-terbaru">
-          <div class="row-head">
-            <h2>Film Terbaru</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackFeatured" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackFeatured"></div>
-            <button class="row-arrow next" data-row="trackFeatured" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="horor">
-          <div class="row-head"><h2>Horor</h2></div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackHorror" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackHorror"></div>
-            <button class="row-arrow next" data-row="trackHorror" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="aksi">
-          <div class="row-head"><h2>Aksi & Petualangan</h2></div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackAction" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackAction"></div>
-            <button class="row-arrow next" data-row="trackAction" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="drama">
-          <div class="row-head"><h2>Drama & Romance</h2></div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackDrama" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackDrama"></div>
-            <button class="row-arrow next" data-row="trackDrama" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="series">
-          <div class="row-head">
-            <h2>Series Drama Populer</h2>
-          </div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackSeries" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackSeries"></div>
-            <button class="row-arrow next" data-row="trackSeries" aria-label="Geser kanan">›</button>
-          </div>
-        </div>
-
-        <div class="row" id="indonesia">
-          <div class="row-head"><h2>Film Indonesia</h2></div>
-          <div class="row-track-wrap">
-            <button class="row-arrow prev" data-row="trackIndonesia" aria-label="Geser kiri">‹</button>
-            <div class="row-track" id="trackIndonesia"></div>
-            <button class="row-arrow next" data-row="trackIndonesia" aria-label="Geser kanan">›</button>
           </div>
         </div>
       </section>

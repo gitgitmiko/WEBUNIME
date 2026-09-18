@@ -130,8 +130,11 @@ export function toCard(item, collection = "") {
     pemain: item.pemain,
     pendapatan: item.pendapatan,
     anime_slug: item.anime_slug,
+    series_slug: item.series_slug,
     episode: item.episode,
     episode_slug: item.episode_slug,
+    season: item.season,
+    season_label: item.season_label,
     episodes_count:
       item.episodes_count ??
       (Array.isArray(item.episodes) ? item.episodes.length : undefined),
@@ -153,6 +156,9 @@ function parseGenreList(raw) {
 function collectionOrderSql(sortKey) {
   const ratingSql = `CAST(REPLACE(IFNULL(rating, '0'), ',', '.') AS DECIMAL(6,2))`;
   const yearSql = `CAST(IFNULL(NULLIF(year, ''), '0') AS UNSIGNED)`;
+  if (sortKey === "top_random") {
+    return `ORDER BY RAND()`;
+  }
   if (sortKey === "rating" || sortKey === "top") {
     return `ORDER BY ${ratingSql} DESC, id ASC`;
   }
@@ -175,12 +181,16 @@ export async function listCollection(
 ) {
   if (!isItemCollection(collection)) return null;
   const pool = getPool();
-  const safeLimit = Math.min(Math.max(Number(limit) || 50, 1), 200);
-  const safePage = Math.max(Number(page) || 1, 1);
-  const offset = (safePage - 1) * safeLimit;
+  const sortKey = String(sort || "").toLowerCase();
+  const isTopRandom = sortKey === "top_random";
+  // App TV: rating > 8.0, shuffle, max 10, tanpa paging.
+  const safeLimit = isTopRandom
+    ? Math.min(Math.max(Number(limit) || 10, 1), 10)
+    : Math.min(Math.max(Number(limit) || 50, 1), 200);
+  const safePage = isTopRandom ? 1 : Math.max(Number(page) || 1, 1);
+  const offset = isTopRandom ? 0 : (safePage - 1) * safeLimit;
   const query = String(q || "").trim();
   const genres = parseGenreList(genre);
-  const sortKey = String(sort || "").toLowerCase();
 
   const where = ["collection = ?"];
   const params = [collection];
@@ -198,6 +208,10 @@ export async function listCollection(
   if (sortKey === "rating" || sortKey === "top") {
     where.push("rating REGEXP '^[0-9]'");
   }
+  if (isTopRandom) {
+    where.push("rating REGEXP '^[0-9]'");
+    where.push("CAST(REPLACE(rating, ',', '.') AS DECIMAL(6,2)) > 8");
+  }
   if (sortKey === "hot") {
     where.push("year REGEXP '^[0-9]{4}'");
     where.push("rating REGEXP '^[0-9]'");
@@ -206,11 +220,16 @@ export async function listCollection(
   const whereSql = where.join(" AND ");
   const orderSql = collectionOrderSql(sortKey);
 
-  const [countRows] = await pool.query(
-    `SELECT COUNT(*) AS c FROM catalog_items WHERE ${whereSql}`,
-    params
-  );
-  const total = Number(countRows[0]?.c || 0);
+  let total;
+  if (isTopRandom) {
+    total = safeLimit;
+  } else {
+    const [countRows] = await pool.query(
+      `SELECT COUNT(*) AS c FROM catalog_items WHERE ${whereSql}`,
+      params
+    );
+    total = Number(countRows[0]?.c || 0);
+  }
   const [idRows] = await pool.query(
     `SELECT id FROM catalog_items
      WHERE ${whereSql}
@@ -228,6 +247,8 @@ export async function listCollection(
     rows.map((r) => toCard(parsePayload(r.payload), collection))
   );
 
+  if (isTopRandom) total = items.length;
+
   return {
     collection,
     page: safePage,
@@ -242,7 +263,11 @@ async function attachParentMeta(pool, collection, items) {
     collection === "anime-latest" ? "anime" : collection === "series-latest" ? "series" : null;
   if (!parent || !items.length) return items;
   const slugs = [
-    ...new Set(items.map((item) => item.anime_slug || item.slug).filter(Boolean)),
+    ...new Set(
+      items
+        .map((item) => item.anime_slug || item.series_slug || item.slug)
+        .filter(Boolean)
+    ),
   ];
   if (!slugs.length) return items;
   const [rows] = await pool.query(
@@ -260,7 +285,7 @@ async function attachParentMeta(pool, collection, items) {
     });
   }
   return items.map((item) => {
-    const meta = bySlug.get(item.anime_slug || item.slug);
+    const meta = bySlug.get(item.anime_slug || item.series_slug || item.slug);
     if (!meta) return item;
     return {
       ...item,
