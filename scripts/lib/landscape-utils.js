@@ -3,18 +3,13 @@
  * + normalisasi host poster mati.
  */
 
+import { rewriteDeadPosterHost } from "../../server/catalog-meta.js";
+
+export { rewriteDeadPosterHost };
+
 const LANDSCAPE_HINT =
   /banner|backdrop|cover|landscape|wide|slider|hero|featured|1920|1280|16.?9|w780|original|fanart/i;
 const PORTRAIT_HINT = /poster|thumb|portrait|-\d{2,3}x\d{3,4}\.(jpe?g|png|webp)/i;
-
-export function rewriteDeadPosterHost(url) {
-  if (!url || typeof url !== "string") return url || "";
-  return url
-    .replace(/https?:\/\/poster\.showcdnx\.com/gi, "https://poster.lk21official.cc")
-    .replace(/https?:\/\/image\.showcdnx\.com/gi, "https://poster.lk21official.cc")
-    .replace(/https?:\/\/(?:www\.)?anoboy\.xyz/gi, "https://anoboy.quest");
-  // cover.showcdnx.com masih valid — jangan rewrite ke cover.lk21 (sering 404)
-}
 
 export function absUrl(href, base = "https://tv12.lk21official.cc") {
   const raw = String(href || "").trim();

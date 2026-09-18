@@ -44,11 +44,31 @@ export function itemSlug(item, collection) {
   return slug || null;
 }
 
+/** Host poster mati (DNS) → mirror aktif. cover.showcdnx.com dibiarkan. */
+export function rewriteDeadPosterHost(url) {
+  if (!url || typeof url !== "string") return url || "";
+  return url
+    .replace(/https?:\/\/(?:poster|image)\.showcdnx\.com/gi, "https://poster.assetsy.de")
+    .replace(/https?:\/\/(?:www\.)?anoboy\.xyz/gi, "https://anoboy.quest");
+}
+
+export function rewriteItemPosters(item) {
+  if (!item || typeof item !== "object") return item;
+  const out = { ...item };
+  if (out.thumbnail) out.thumbnail = rewriteDeadPosterHost(out.thumbnail);
+  if (out.thumbnail_landscape) {
+    out.thumbnail_landscape = rewriteDeadPosterHost(out.thumbnail_landscape);
+  }
+  return out;
+}
+
 export function itemMeta(item) {
+  const thumb =
+    item.thumbnail != null ? rewriteDeadPosterHost(String(item.thumbnail)) : null;
   return {
     title: String(item.nama || item.judul || "").slice(0, 512) || null,
     year: item.tahun != null ? String(item.tahun).slice(0, 32) : null,
-    thumbnail: item.thumbnail != null ? String(item.thumbnail) : null,
+    thumbnail: thumb,
     rating: item.rating != null ? String(item.rating).slice(0, 64) : null,
   };
 }

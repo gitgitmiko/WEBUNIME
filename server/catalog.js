@@ -1,5 +1,11 @@
 import { getPool } from "./db.js";
-import { itemMeta, itemSlug, isDocName, isItemCollection } from "./catalog-meta.js";
+import {
+  itemMeta,
+  itemSlug,
+  isDocName,
+  isItemCollection,
+  rewriteItemPosters,
+} from "./catalog-meta.js";
 
 function payloadJson(value) {
   return JSON.stringify(value);
@@ -21,7 +27,7 @@ export async function replaceCollection(collection, items) {
   for (const item of items) {
     const slug = itemSlug(item, collection);
     if (!slug) continue;
-    bySlug.set(slug, item);
+    bySlug.set(slug, rewriteItemPosters(item));
   }
 
   try {
@@ -103,6 +109,7 @@ function extractNegara(item, collection = "") {
 /** Kartu ringan: tanpa players/episodes (dimuat saat modal/player). */
 export function toCard(item, collection = "") {
   if (!item || typeof item !== "object") return item;
+  item = rewriteItemPosters(item);
   const feed = collection === "anime-latest" || collection === "series-latest";
   const card = {
     id: item.id,
@@ -395,7 +402,8 @@ export async function getItem(collection, slug) {
   );
   if (!rows[0]) return null;
   const p = rows[0].payload;
-  return typeof p === "string" ? JSON.parse(p) : p;
+  const item = typeof p === "string" ? JSON.parse(p) : p;
+  return rewriteItemPosters(item);
 }
 
 export async function getDoc(name) {
