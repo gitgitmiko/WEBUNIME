@@ -21,29 +21,33 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/yvMS",
-        "default": true
+        "url": "https://playcdn.de/Y2NlYTIxZDY3NTkwNWNhMwLzoeFCd08?cb=3",
+        "default": true,
+        "resolved_from": "iframe3"
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/6a86937547365",
-        "default": false
+        "url": "https://emturbovid.com/t/6a86937547365",
+        "default": false,
+        "resolved_from": "iframe3"
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/cxnxun8klajh",
-        "default": false
+        "url": "https://mfw09.org/e/cxnxun8klajh",
+        "default": false,
+        "resolved_from": "iframe3"
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/nYpu3yU-o",
-        "default": false
+        "url": "https://abyssplayer.com/nYpu3yU-o",
+        "default": false,
+        "resolved_from": "iframe3"
       }
     ],
     "catalog": "marvel"
