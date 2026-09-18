@@ -24,29 +24,33 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/dEGo4TQJ-Q5j8teLlIHCtA",
-        "default": true
+        "url": "https://playcdn.de/MWY0ZDlmNDEzNmM1ZDk3YfOqinkutcA?cb=3",
+        "default": true,
+        "resolved_from": "iframe3"
       },
       {
         "no": 2,
         "server": "turbovip",
         "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/aHgrcVa1gWom3urXA1Y97Q",
-        "default": false
+        "url": "https://emturbovid.com/t/6aa343c8d7e2b",
+        "default": false,
+        "resolved_from": "iframe3"
       },
       {
         "no": 3,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/S7uCKRstNTbhKMDaf7PThA",
-        "default": false
+        "url": "https://mfw09.org/e/5vh4z2zx7grq",
+        "default": false,
+        "resolved_from": "iframe3"
       },
       {
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HPv-qnUIevc-xIon80YDeQ",
-        "default": false
+        "url": "https://abyssplayer.com/srhtd2xCNr",
+        "default": false,
+        "resolved_from": "iframe3"
       }
     ],
     "id": 284

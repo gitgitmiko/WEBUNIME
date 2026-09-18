@@ -583,7 +583,8 @@ async function main() {
   if (opts.merge) {
     const maxId = existingMovies.reduce((n, m) => Math.max(n, Number(m.id) || 0), 0);
     const added = movies.map((m, i) => ({ ...m, id: maxId + 1 + i }));
-    const mergedMovies = [...existingMovies, ...added];
+    // Film baru di depan supaya "Film Terbaru" (ORDER BY id ASC setelah reimport) tetap segar
+    const mergedMovies = [...added, ...existingMovies];
     const mergedPlayers = { ...existingPlayers, ...playersMap };
     await writeFile(MOVIES_FILE, JSON.stringify(mergedMovies, null, 2) + "\n", "utf8");
     await writeFile(PLAYERS_FILE, JSON.stringify(mergedPlayers, null, 2) + "\n", "utf8");
