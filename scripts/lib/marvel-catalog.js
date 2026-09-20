@@ -125,6 +125,7 @@ export function pickMarvelMovies(movies) {
 
 export async function writeMarvelCatalog(dataDir) {
   const src = join(dataDir, "movies.json");
+  const dest = join(dataDir, "marvel.json");
   let movies = [];
   try {
     const raw = JSON.parse(await readFile(src, "utf8"));
@@ -132,8 +133,50 @@ export async function writeMarvelCatalog(dataDir) {
   } catch {
     movies = [];
   }
-  const marvel = pickMarvelMovies(movies);
-  const dest = join(dataDir, "marvel.json");
+
+  // Pertahankan katalog Marvel lama: movies.json terkadang hanya berisi
+  // film terbaru (ratusan), sehingga regenerate penuh akan menghapus MCU.
+  let existing = [];
+  try {
+    const raw = JSON.parse(await readFile(dest, "utf8"));
+    existing = Array.isArray(raw) ? raw : [];
+  } catch {
+    existing = [];
+  }
+
+  const fromMovies = pickMarvelMovies(movies);
+  const bySlug = new Map();
+  for (const item of existing) {
+    const slug = String(item?.slug || "").trim();
+    if (!slug) continue;
+    bySlug.set(slug, { ...item, catalog: "marvel" });
+  }
+  for (const item of fromMovies) {
+    const slug = String(item?.slug || "").trim();
+    if (!slug) continue;
+    // Prefer entri dari movies.json (metadata/players lebih baru).
+    bySlug.set(slug, item);
+  }
+
+  const marvel = [...bySlug.values()];
+  marvel.sort((a, b) => {
+    const yb = yearValue(b) - yearValue(a);
+    if (yb !== 0) return yb;
+    return String(a.judul || a.nama || "").localeCompare(
+      String(b.judul || b.nama || ""),
+      "en",
+    );
+  });
+  marvel.forEach((m, i) => {
+    m.id = i + 1;
+    m.catalog = "marvel";
+  });
+
   await writeFile(dest, JSON.stringify(marvel, null, 2) + "\n", "utf8");
-  return { file: "marvel.json", count: marvel.length };
+  return {
+    file: "marvel.json",
+    count: marvel.length,
+    fromMovies: fromMovies.length,
+    keptExisting: existing.length,
+  };
 }
