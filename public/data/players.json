@@ -1,9 +1,657 @@
 {
+  "6-jilake-2025": {
+    "slug": "6-jilake-2025",
+    "film": "6 Jilake (2025)",
+    "source": "https://tv12.lk21official.cc/6-jilake-2025",
+    "scraped_at": "2026-09-22T13:11:22.027Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/T4hYFRcATwoVpPV3isT6pw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/Z4JgNQaeJMDmGr4Y48PPcw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/O9PmwJpqmO4_nTCP02oqBA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/UujowwStWsq_uhiuac9Syg",
+        "default": false
+      }
+    ]
+  },
+  "hugo-24-2026": {
+    "slug": "hugo-24-2026",
+    "film": "Hugo 24 (2026)",
+    "source": "https://tv12.lk21official.cc/hugo-24-2026",
+    "scraped_at": "2026-09-22T13:11:22.541Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/BW85jkcqsmMNiuakpxNK2A",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/u35q3gbPbkAsZj5Cirg8bA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/BjaSTwWoWfyGpUnTPSRGog",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/Px36NOpDMydU1vFl4wymXA",
+        "default": false
+      }
+    ]
+  },
+  "puan-2023": {
+    "slug": "puan-2023",
+    "film": "Puan (2023)",
+    "source": "https://tv12.lk21official.cc/puan-2023",
+    "scraped_at": "2026-09-22T13:11:23.010Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Ee2oDOG4cUOlpNILf8upCg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/Q0B6enhiH3v6ikhHboHb9Q",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/bN-GNAEYefbF6RuWEmk_aw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/Ty9_0nKJON41ljZmZZu-vg",
+        "default": false
+      }
+    ]
+  },
+  "abendland-2024": {
+    "slug": "abendland-2024",
+    "film": "Abendland (2024)",
+    "source": "https://tv12.lk21official.cc/abendland-2024",
+    "scraped_at": "2026-09-22T13:11:23.518Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/B5jO289mq9qh8P5nJGY4VA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/mkiyRCRqY2kwMHJbFBQvcg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/a8YKs999Dn_3gtl8Hwvo_A",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/I4oOeBsrbrzeJtfVDmaDVw",
+        "default": false
+      }
+    ]
+  },
+  "avec-kim-2026": {
+    "slug": "avec-kim-2026",
+    "film": "Avec Kim (2026)",
+    "source": "https://tv12.lk21official.cc/avec-kim-2026",
+    "scraped_at": "2026-09-22T13:11:24.026Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/gEkBJ30MX2dntnFAOxezww",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/tEzoDTABjxcLirjLQWqvxw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/ukvkIjuyYbFBKsEaMTaSqg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/3AJf0htBlGbjbL8jDnP8SQ",
+        "default": false
+      }
+    ]
+  },
+  "dog-alone-2025": {
+    "slug": "dog-alone-2025",
+    "film": "Dog Alone (2025)",
+    "source": "https://tv12.lk21official.cc/dog-alone-2025",
+    "scraped_at": "2026-09-22T13:11:24.502Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/8drr6OekcOmzYOQ7HaRIfQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/xitTvT8SY7EeeJxZ9tkDrQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/cQIZe7noeQrz9LKeIWHxwA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/LzHtshb2ViO_ZIWQo2EjXg",
+        "default": false
+      }
+    ]
+  },
+  "nandor-fodor-talking-mongoose-2023": {
+    "slug": "nandor-fodor-talking-mongoose-2023",
+    "film": "Nandor Fodor and the Talking Mongoose (2023)",
+    "source": "https://tv12.lk21official.cc/nandor-fodor-talking-mongoose-2023",
+    "scraped_at": "2026-09-22T13:11:24.975Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/vrrbLFqdj7iPJkGYKLq9hQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/4wqd0lifYED0qH8R3WBbZg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/rayEENNzDktAkdnwlIm9SQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/vtF_JkAuvXpBTlu1dROqWA",
+        "default": false
+      }
+    ]
+  },
+  "polong-2026": {
+    "slug": "polong-2026",
+    "film": "Polong (2026)",
+    "source": "https://tv12.lk21official.cc/polong-2026",
+    "scraped_at": "2026-09-22T13:11:25.451Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/sxSzABfPAuRfqyQ1pzMzUw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/fCtAi_pLbE2bTg_Y9pHUmw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/3wGDobgTrjKWHk2zydT7XQ",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/dvYRYURFlFzQjGCUi31Igg",
+        "default": false
+      }
+    ]
+  },
+  "firstborn-2025": {
+    "slug": "firstborn-2025",
+    "film": "Firstborn (2025)",
+    "source": "https://tv12.lk21official.cc/firstborn-2025",
+    "scraped_at": "2026-09-22T13:11:25.971Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/onw5SlJf-Sf0iiCNp71c6A",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/H3dF3sssLML-wcOTXgkrTA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/f3B08agKwa1K9oELdIVtcg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/-yas1WSgBf7qtBSv_WcA8g",
+        "default": false
+      }
+    ]
+  },
+  "norah-2023": {
+    "slug": "norah-2023",
+    "film": "Norah (2023)",
+    "source": "https://tv12.lk21official.cc/norah-2023",
+    "scraped_at": "2026-09-22T13:11:26.472Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/7ihaaChJNy_ZoJqHKjkP2w",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/UyHK7B9Q0b_IzoLd5Keo6Q",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/xq2qvb53Ui4EPbsj7Wf3LA",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/oeIgN11ngEqFJtL6W48n0g",
+        "default": false
+      }
+    ]
+  },
+  "stavros-halkias-uncle-stav-2026": {
+    "slug": "stavros-halkias-uncle-stav-2026",
+    "film": "Stavros Halkias: Uncle Stav (2026)",
+    "source": "https://tv12.lk21official.cc/stavros-halkias-uncle-stav-2026",
+    "scraped_at": "2026-09-22T13:11:26.944Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/iMHsMgKBcb89w3p1FcYgHQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/Cgi9jC8qR77j9ShKkEFtWA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/8fEstucqIYpi9EcSAGxybg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/ZJjZ8HiBPHrZQVH2_fpljg",
+        "default": false
+      }
+    ]
+  },
+  "japanese-doll-terror-2019": {
+    "slug": "japanese-doll-terror-2019",
+    "film": "Japanese Doll Of Terror (2019)",
+    "source": "https://tv12.lk21official.cc/japanese-doll-terror-2019",
+    "scraped_at": "2026-09-22T13:11:27.418Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/OxQgXhoyx4oCbATrzMiGGQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/h_bUx4mK62gtsr94e7fSfw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/XLU0EOWt050NzL5AuNM7Dg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/WYMm2W3B9YsCKAO6GZA-zQ",
+        "default": false
+      }
+    ]
+  },
+  "irumudi-2026": {
+    "slug": "irumudi-2026",
+    "film": "Irumudi (2026)",
+    "source": "https://tv12.lk21official.cc/irumudi-2026",
+    "scraped_at": "2026-09-22T13:11:28.516Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/AwM-ymjdLn3kTjPQ2-khOA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/BxLljHprUt3O0WgR114wZg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/iC5MHXrkBrsrKAnHe16dEg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/Yr2fqRtBGFqGgoqPgNIUYA",
+        "default": false
+      }
+    ]
+  },
+  "iyanu-war-twin-princes-2026": {
+    "slug": "iyanu-war-twin-princes-2026",
+    "film": "Iyanu: The War of Twin Princes (2026)",
+    "source": "https://tv12.lk21official.cc/iyanu-war-twin-princes-2026",
+    "scraped_at": "2026-09-22T13:11:28.985Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/BeVcR0nXZYygbK1Av0eYyw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/FmuIMb7jMM7OGVq05qQBVw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/fhYdgIdGWYlqpCK90Wjz-Q",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/BsvFqi2FlHZzXqWIjzgepA",
+        "default": false
+      }
+    ]
+  },
+  "dc-2026": {
+    "slug": "dc-2026",
+    "film": "DC (2026)",
+    "source": "https://tv12.lk21official.cc/dc-2026",
+    "scraped_at": "2026-09-22T13:11:29.702Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/1-BNPqzjp6NyxD2DhoyWaQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/tgyz7fbdLRK58po8Hql8PQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/kQfyzVpNkLpP5XTi5o2Pow",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/2XM0befNKqfFr_bN4wkFBA",
+        "default": false
+      }
+    ]
+  },
+  "resident-evil-2026": {
+    "slug": "resident-evil-2026",
+    "film": "Resident Evil (2026)",
+    "source": "https://tv12.lk21official.cc/resident-evil-2026",
+    "scraped_at": "2026-09-22T13:11:30.160Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/LbsWlJDQgD1UW0fMYF297Q",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/E2-DnB0gYgQfv4b5IDeqfw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/RxemviNjzfm-no0X8GFBdg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/8i3u3YWzAvEn_uJbzqYfMQ",
+        "default": false
+      }
+    ]
+  },
+  "bitter-christmas-2026": {
+    "slug": "bitter-christmas-2026",
+    "film": "Bitter Christmas (2026)",
+    "source": "https://tv12.lk21official.cc/bitter-christmas-2026",
+    "scraped_at": "2026-09-22T13:11:30.652Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/HF-Dn7_Lc0lLcRpr76YFAg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/0PYkzTgL8DB6UmbqeFHdVw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/1PPHUwvef3hMp56XlZc-Mg",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/SZxGmBs6YFZnfBaeqtmbqg",
+        "default": false
+      }
+    ]
+  },
+  "recess-schools-out-2001": {
+    "slug": "recess-schools-out-2001",
+    "film": "Recess: School's Out (2001)",
+    "source": "https://tv12.lk21official.cc/recess-schools-out-2001",
+    "scraped_at": "2026-09-22T13:11:31.147Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/xSwW2nUWTZHSwf97AxUX8A",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "turbovip",
+        "label": "GANTI PLAYER TURBOVIP",
+        "url": "https://videonode.de/iframe3/turbovip/VgGZZ09uEEgAdwGtZKl1jg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/JFp1SVpLqoc5r3iCanDVHw",
+        "default": false
+      },
+      {
+        "no": 4,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/svx37olgmGgph1E5juuOIg",
+        "default": false
+      }
+    ]
+  },
   "stranger-eyes-2024": {
     "slug": "stranger-eyes-2024",
     "film": "Stranger Eyes (2024)",
     "source": "https://tv12.lk21official.cc/stranger-eyes-2024",
-    "scraped_at": "2026-09-20T13:21:52.453Z",
+    "scraped_at": "2026-09-22T13:11:31.647Z",
     "players": [
       {
         "no": 1,
@@ -30,7 +678,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5s4Ioc5NP74jvGLb8LeCkQ",
+        "url": "https://videonode.de/iframe3/hydrax/4_EksvXVCPDqUTB8XmqajQ",
         "default": false
       }
     ]
@@ -39,7 +687,7 @@
     "slug": "my-friend-barry-mein-freund-barry-2026",
     "film": "My Friend Barry - Mein Freund Barry (2026)",
     "source": "https://tv12.lk21official.cc/my-friend-barry-mein-freund-barry-2026",
-    "scraped_at": "2026-09-20T13:21:52.894Z",
+    "scraped_at": "2026-09-22T13:11:32.103Z",
     "players": [
       {
         "no": 1,
@@ -66,7 +714,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ntlWL5UJh_MbGTWqPzm9tg",
+        "url": "https://videonode.de/iframe3/hydrax/rNhaqJxazfMR_V1ZWLpPOQ",
         "default": false
       }
     ]
@@ -75,7 +723,7 @@
     "slug": "monkeys-magic-merry-go-round-2024",
     "film": "Monkey's Magic Merry Go Round (2024)",
     "source": "https://tv12.lk21official.cc/monkeys-magic-merry-go-round-2024",
-    "scraped_at": "2026-09-20T13:21:53.331Z",
+    "scraped_at": "2026-09-22T13:11:32.888Z",
     "players": [
       {
         "no": 1,
@@ -102,43 +750,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/i4R9OrUwoiwQVfYm9mo5Ew",
-        "default": false
-      }
-    ]
-  },
-  "irumudi-2026": {
-    "slug": "irumudi-2026",
-    "film": "Irumudi (2026)",
-    "source": "https://tv12.lk21official.cc/irumudi-2026",
-    "scraped_at": "2026-09-20T13:21:53.756Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/wmXyqFgGxnSGCvZuBbs99w",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/BxySVppMw09UoPkeKa1_pw",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/-bbTpffhBr64i9w0AXW5BA",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/EhHjxsTOTqKV9556P9B6Cw",
+        "url": "https://videonode.de/iframe3/hydrax/qIuU61wJV2JmY5e5wlPykA",
         "default": false
       }
     ]
@@ -147,7 +759,7 @@
     "slug": "app-horror-2025",
     "film": "App the Horror (2025)",
     "source": "https://tv12.lk21official.cc/app-horror-2025",
-    "scraped_at": "2026-09-20T13:21:54.347Z",
+    "scraped_at": "2026-09-22T13:11:33.415Z",
     "players": [
       {
         "no": 1,
@@ -174,7 +786,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/w_2YS0fE0812LTorJ30qKw",
+        "url": "https://videonode.de/iframe3/hydrax/We6gIPBUpQuiDIZoChxh8Q",
         "default": false
       }
     ]
@@ -183,7 +795,7 @@
     "slug": "schlingensief-voice-that-shook-silence-2020",
     "film": "Schlingensief: A Voice That Shook the Silence (2020)",
     "source": "https://tv12.lk21official.cc/schlingensief-voice-that-shook-silence-2020",
-    "scraped_at": "2026-09-20T13:21:55.026Z",
+    "scraped_at": "2026-09-22T13:11:33.896Z",
     "players": [
       {
         "no": 1,
@@ -210,7 +822,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/zS4cTAMc5oxdLT0ShCENSw",
+        "url": "https://videonode.de/iframe3/hydrax/PfAsqSYlWRM0RvdGGkq9jw",
         "default": false
       }
     ]
@@ -219,7 +831,7 @@
     "slug": "vishwanath-sons-2026",
     "film": "Vishwanath and Sons (2026)",
     "source": "https://tv12.lk21official.cc/vishwanath-sons-2026",
-    "scraped_at": "2026-09-20T13:21:55.625Z",
+    "scraped_at": "2026-09-22T13:11:34.354Z",
     "players": [
       {
         "no": 1,
@@ -246,7 +858,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/0JJNTJBIScmzKeoBMiEveQ",
+        "url": "https://videonode.de/iframe3/hydrax/H1h3w-BUg4PiCMlosm9OEw",
         "default": false
       }
     ]
@@ -255,7 +867,7 @@
     "slug": "illegal-intruder-2026",
     "film": "Illegal Intruder (2026)",
     "source": "https://tv12.lk21official.cc/illegal-intruder-2026",
-    "scraped_at": "2026-09-20T13:21:56.249Z",
+    "scraped_at": "2026-09-22T13:11:35.124Z",
     "players": [
       {
         "no": 1,
@@ -282,7 +894,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/VA_IMJfk1Q8As60ozpbVAg",
+        "url": "https://videonode.de/iframe3/hydrax/Tbt13B9LGhsfxAOXeD2KgQ",
         "default": false
       }
     ]
@@ -291,7 +903,7 @@
     "slug": "last-kiss-kiss-death-2026",
     "film": "The Last Kiss: Kiss of Death (2026)",
     "source": "https://tv12.lk21official.cc/last-kiss-kiss-death-2026",
-    "scraped_at": "2026-09-20T13:21:56.676Z",
+    "scraped_at": "2026-09-22T13:11:35.617Z",
     "players": [
       {
         "no": 1,
@@ -318,43 +930,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HKS32-eJL0Lmgw5kV0KH9A",
-        "default": false
-      }
-    ]
-  },
-  "resident-evil-2026": {
-    "slug": "resident-evil-2026",
-    "film": "Resident Evil (2026)",
-    "source": "https://tv12.lk21official.cc/resident-evil-2026",
-    "scraped_at": "2026-09-20T13:21:57.103Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ILE80bWkOsJAow_FV1EG6w",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/65NcxA7oUGg9xH73yGPHIA",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/vXBRYm3nsgG-le7j3prFng",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HZCeKk1FDhfu3co9b3m5cw",
+        "url": "https://videonode.de/iframe3/hydrax/7J8sh__4ulxGBP4KuJTKqw",
         "default": false
       }
     ]
@@ -363,7 +939,7 @@
     "slug": "love-ngo-2026",
     "film": "Love, Ngo (2026)",
     "source": "https://tv12.lk21official.cc/love-ngo-2026",
-    "scraped_at": "2026-09-20T13:21:57.536Z",
+    "scraped_at": "2026-09-22T13:11:36.128Z",
     "players": [
       {
         "no": 1,
@@ -390,7 +966,7 @@
         "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/A98DDuPlyrxd2oOHzW2PAQ",
+        "url": "https://videonode.de/iframe3/hydrax/bBa7_v3xGDExavxRWWVFMg",
         "default": false
       }
     ]
@@ -399,7 +975,7 @@
     "slug": "modha-rathiri-2026",
     "film": "Modha Rathiri (2026)",
     "source": "https://tv12.lk21official.cc/modha-rathiri-2026",
-    "scraped_at": "2026-09-20T13:21:57.958Z",
+    "scraped_at": "2026-09-22T13:11:36.596Z",
     "players": [
       {
         "no": 1,
@@ -435,7 +1011,7 @@
     "slug": "fix-2026",
     "film": "The Fix (2026)",
     "source": "https://tv12.lk21official.cc/fix-2026",
-    "scraped_at": "2026-09-20T13:21:58.375Z",
+    "scraped_at": "2026-09-22T13:11:37.063Z",
     "players": [
       {
         "no": 1,
@@ -471,7 +1047,7 @@
     "slug": "thudakkam-2026",
     "film": "Thudakkam (2026)",
     "source": "https://tv12.lk21official.cc/thudakkam-2026",
-    "scraped_at": "2026-09-20T13:21:58.801Z",
+    "scraped_at": "2026-09-22T13:11:37.574Z",
     "players": [
       {
         "no": 1,
@@ -507,7 +1083,7 @@
     "slug": "youme-against-world-2026",
     "film": "You+Me - Against the World (2026)",
     "source": "https://tv12.lk21official.cc/youme-against-world-2026",
-    "scraped_at": "2026-09-20T13:21:59.234Z",
+    "scraped_at": "2026-09-22T13:11:38.042Z",
     "players": [
       {
         "no": 1,
@@ -543,7 +1119,7 @@
     "slug": "goody-goody-2026",
     "film": "Goody Goody (2026)",
     "source": "https://tv12.lk21official.cc/goody-goody-2026",
-    "scraped_at": "2026-09-20T13:21:59.666Z",
+    "scraped_at": "2026-09-22T13:11:38.618Z",
     "players": [
       {
         "no": 1,
@@ -579,7 +1155,7 @@
     "slug": "ram-leela-2026",
     "film": "Ram and Leela (2026)",
     "source": "https://tv12.lk21official.cc/ram-leela-2026",
-    "scraped_at": "2026-09-20T13:22:00.090Z",
+    "scraped_at": "2026-09-22T13:11:39.161Z",
     "players": [
       {
         "no": 1,
@@ -615,7 +1191,7 @@
     "slug": "quantum-supremacy-2025",
     "film": "Quantum Supremacy (2025)",
     "source": "https://tv12.lk21official.cc/quantum-supremacy-2025",
-    "scraped_at": "2026-09-20T13:22:00.496Z",
+    "scraped_at": "2026-09-22T13:11:39.632Z",
     "players": [
       {
         "no": 1,
@@ -651,7 +1227,7 @@
     "slug": "lust-stories-3-2026",
     "film": "Lust Stories 3 (2026)",
     "source": "https://tv12.lk21official.cc/lust-stories-3-2026",
-    "scraped_at": "2026-09-20T13:22:00.913Z",
+    "scraped_at": "2026-09-22T13:11:40.151Z",
     "players": [
       {
         "no": 1,
@@ -680,7 +1256,7 @@
     "slug": "autumn-summer-2024",
     "film": "An Autumn Summer (2024)",
     "source": "https://tv12.lk21official.cc/autumn-summer-2024",
-    "scraped_at": "2026-09-20T13:22:01.322Z",
+    "scraped_at": "2026-09-22T13:11:40.665Z",
     "players": [
       {
         "no": 1,
@@ -716,7 +1292,7 @@
     "slug": "best-best-2026",
     "film": "Best of the Best (2026)",
     "source": "https://tv12.lk21official.cc/best-best-2026",
-    "scraped_at": "2026-09-20T13:22:01.755Z",
+    "scraped_at": "2026-09-22T13:11:41.175Z",
     "players": [
       {
         "no": 1,
@@ -752,7 +1328,7 @@
     "slug": "jackie-chan-presents-wushu-2008",
     "film": "Jackie Chan Presents: Wushu (2008)",
     "source": "https://tv12.lk21official.cc/jackie-chan-presents-wushu-2008",
-    "scraped_at": "2026-09-20T13:22:02.174Z",
+    "scraped_at": "2026-09-22T13:11:41.649Z",
     "players": [
       {
         "no": 1,
@@ -788,7 +1364,7 @@
     "slug": "rivals-amziah-king-2025",
     "film": "The Rivals of Amziah King (2025)",
     "source": "https://tv12.lk21official.cc/rivals-amziah-king-2025",
-    "scraped_at": "2026-09-20T13:22:02.605Z",
+    "scraped_at": "2026-09-22T13:11:42.118Z",
     "players": [
       {
         "no": 1,
@@ -824,7 +1400,7 @@
     "slug": "tony-2026",
     "film": "Tony (2026)",
     "source": "https://tv12.lk21official.cc/tony-2026",
-    "scraped_at": "2026-09-20T13:22:03.040Z",
+    "scraped_at": "2026-09-22T13:11:42.588Z",
     "players": [
       {
         "no": 1,
@@ -860,7 +1436,7 @@
     "slug": "rays-shadows-2026",
     "film": "The Rays and Shadows (2026)",
     "source": "https://tv12.lk21official.cc/rays-shadows-2026",
-    "scraped_at": "2026-09-20T13:22:03.466Z",
+    "scraped_at": "2026-09-22T13:11:43.045Z",
     "players": [
       {
         "no": 1,
@@ -896,7 +1472,7 @@
     "slug": "cabeca-de-nego-2020",
     "film": "Cabeca de Nego (2020)",
     "source": "https://tv12.lk21official.cc/cabeca-de-nego-2020",
-    "scraped_at": "2026-09-20T13:22:03.900Z",
+    "scraped_at": "2026-09-22T13:11:44.120Z",
     "players": [
       {
         "no": 1,
@@ -932,7 +1508,7 @@
     "slug": "nimrods-2025",
     "film": "Nimrods (2025)",
     "source": "https://tv12.lk21official.cc/nimrods-2025",
-    "scraped_at": "2026-09-20T13:22:04.319Z",
+    "scraped_at": "2026-09-22T13:11:44.582Z",
     "players": [
       {
         "no": 1,
@@ -968,7 +1544,7 @@
     "slug": "ghamasaan-2024",
     "film": "Ghamasaan (2024)",
     "source": "https://tv12.lk21official.cc/ghamasaan-2024",
-    "scraped_at": "2026-09-20T13:22:04.750Z",
+    "scraped_at": "2026-09-22T13:11:45.038Z",
     "players": [
       {
         "no": 1,
@@ -1004,7 +1580,7 @@
     "slug": "after-impact-2026",
     "film": "After Impact (2026)",
     "source": "https://tv12.lk21official.cc/after-impact-2026",
-    "scraped_at": "2026-09-20T13:22:05.189Z",
+    "scraped_at": "2026-09-22T13:11:45.512Z",
     "players": [
       {
         "no": 1,
@@ -1040,7 +1616,7 @@
     "slug": "new-dawn-2026",
     "film": "A New Dawn (2026)",
     "source": "https://tv12.lk21official.cc/new-dawn-2026",
-    "scraped_at": "2026-09-20T13:22:05.616Z",
+    "scraped_at": "2026-09-22T13:11:46.042Z",
     "players": [
       {
         "no": 1,
@@ -1076,7 +1652,7 @@
     "slug": "warmth-dance-2026",
     "film": "The Warmth Of Dance (2026)",
     "source": "https://tv12.lk21official.cc/warmth-dance-2026",
-    "scraped_at": "2026-09-20T13:22:06.050Z",
+    "scraped_at": "2026-09-22T13:11:46.563Z",
     "players": [
       {
         "no": 1,
@@ -1112,7 +1688,7 @@
     "slug": "bride-2023",
     "film": "The Bride (2023)",
     "source": "https://tv12.lk21official.cc/bride-2023",
-    "scraped_at": "2026-09-20T13:22:06.480Z",
+    "scraped_at": "2026-09-22T13:11:47.042Z",
     "players": [
       {
         "no": 1,
@@ -1148,7 +1724,7 @@
     "slug": "rosalie-2023",
     "film": "Rosalie (2023)",
     "source": "https://tv12.lk21official.cc/rosalie-2023",
-    "scraped_at": "2026-09-20T13:22:06.906Z",
+    "scraped_at": "2026-09-22T13:11:47.568Z",
     "players": [
       {
         "no": 1,
@@ -1184,7 +1760,7 @@
     "slug": "yana-wara-2023",
     "film": "Yana-Wara (2023)",
     "source": "https://tv12.lk21official.cc/yana-wara-2023",
-    "scraped_at": "2026-09-20T13:22:07.325Z",
+    "scraped_at": "2026-09-22T13:11:48.041Z",
     "players": [
       {
         "no": 1,
@@ -1220,7 +1796,7 @@
     "slug": "dogengers-day-ohgaman-2023",
     "film": "Dogengers: A Day of Ohgaman (2023)",
     "source": "https://tv12.lk21official.cc/dogengers-day-ohgaman-2023",
-    "scraped_at": "2026-09-20T13:22:07.764Z",
+    "scraped_at": "2026-09-22T13:11:48.550Z",
     "players": [
       {
         "no": 1,
@@ -1256,7 +1832,7 @@
     "slug": "lost-paran-2023",
     "film": "Lost: Paran (2023)",
     "source": "https://tv12.lk21official.cc/lost-paran-2023",
-    "scraped_at": "2026-09-20T13:22:08.195Z",
+    "scraped_at": "2026-09-22T13:11:49.020Z",
     "players": [
       {
         "no": 1,
@@ -1292,7 +1868,7 @@
     "slug": "parallel-tales-2026",
     "film": "Parallel Tales (2026)",
     "source": "https://tv12.lk21official.cc/parallel-tales-2026",
-    "scraped_at": "2026-09-20T13:22:08.626Z",
+    "scraped_at": "2026-09-22T13:11:49.556Z",
     "players": [
       {
         "no": 1,
@@ -1328,7 +1904,7 @@
     "slug": "yura-here-2025",
     "film": "Yura Was Here (2025)",
     "source": "https://tv12.lk21official.cc/yura-here-2025",
-    "scraped_at": "2026-09-20T13:22:09.050Z",
+    "scraped_at": "2026-09-22T13:11:50.137Z",
     "players": [
       {
         "no": 1,
@@ -1364,7 +1940,7 @@
     "slug": "delights-garden-2025",
     "film": "The Delights of the Garden (2025)",
     "source": "https://tv12.lk21official.cc/delights-garden-2025",
-    "scraped_at": "2026-09-20T13:22:09.479Z",
+    "scraped_at": "2026-09-22T13:11:50.634Z",
     "players": [
       {
         "no": 1,
@@ -1400,7 +1976,7 @@
     "slug": "bouchra-2024",
     "film": "Bouchra (2024)",
     "source": "https://tv12.lk21official.cc/bouchra-2024",
-    "scraped_at": "2026-09-20T13:22:09.919Z",
+    "scraped_at": "2026-09-22T13:11:51.098Z",
     "players": [
       {
         "no": 1,
@@ -1436,7 +2012,7 @@
     "slug": "all-shall-be-well-2024",
     "film": "All Shall Be Well (2024)",
     "source": "https://tv12.lk21official.cc/all-shall-be-well-2024",
-    "scraped_at": "2026-09-20T13:22:10.350Z",
+    "scraped_at": "2026-09-22T13:11:51.599Z",
     "players": [
       {
         "no": 1,
@@ -1472,7 +2048,7 @@
     "slug": "irkalla-gilgameshs-dream-2025",
     "film": "Irkalla: Gilgamesh's Dream (2025)",
     "source": "https://tv12.lk21official.cc/irkalla-gilgameshs-dream-2025",
-    "scraped_at": "2026-09-20T13:22:10.791Z",
+    "scraped_at": "2026-09-22T13:11:52.087Z",
     "players": [
       {
         "no": 1,
@@ -1508,7 +2084,7 @@
     "slug": "garden-variety-mystery-2025",
     "film": "A Garden Variety Mystery (2025)",
     "source": "https://tv12.lk21official.cc/garden-variety-mystery-2025",
-    "scraped_at": "2026-09-20T13:22:11.220Z",
+    "scraped_at": "2026-09-22T13:11:52.583Z",
     "players": [
       {
         "no": 1,
@@ -1544,7 +2120,7 @@
     "slug": "pout-pout-fish-2026",
     "film": "The Pout-Pout Fish (2026)",
     "source": "https://tv12.lk21official.cc/pout-pout-fish-2026",
-    "scraped_at": "2026-09-20T13:22:11.633Z",
+    "scraped_at": "2026-09-22T13:11:53.104Z",
     "players": [
       {
         "no": 1,
@@ -1580,7 +2156,7 @@
     "slug": "familia-2024",
     "film": "Familia (2024)",
     "source": "https://tv12.lk21official.cc/familia-2024",
-    "scraped_at": "2026-09-20T13:22:12.076Z",
+    "scraped_at": "2026-09-22T13:11:53.576Z",
     "players": [
       {
         "no": 1,
@@ -1616,7 +2192,7 @@
     "slug": "essence-eva-2025",
     "film": "The Essence of Eva (2025)",
     "source": "https://tv12.lk21official.cc/essence-eva-2025",
-    "scraped_at": "2026-09-20T13:22:12.504Z",
+    "scraped_at": "2026-09-22T13:11:54.079Z",
     "players": [
       {
         "no": 1,
@@ -1652,7 +2228,7 @@
     "slug": "dark-matter-2019",
     "film": "Dark Matter (2019)",
     "source": "https://tv12.lk21official.cc/dark-matter-2019",
-    "scraped_at": "2026-09-20T13:22:12.929Z",
+    "scraped_at": "2026-09-22T13:11:54.536Z",
     "players": [
       {
         "no": 1,
@@ -1688,7 +2264,7 @@
     "slug": "flies-2026",
     "film": "Flies (2026)",
     "source": "https://tv12.lk21official.cc/flies-2026",
-    "scraped_at": "2026-09-20T13:22:13.361Z",
+    "scraped_at": "2026-09-22T13:11:55.012Z",
     "players": [
       {
         "no": 1,
@@ -1724,7 +2300,7 @@
     "slug": "god-will-not-help-2025",
     "film": "God Will Not Help (2025)",
     "source": "https://tv12.lk21official.cc/god-will-not-help-2025",
-    "scraped_at": "2026-09-20T13:22:13.796Z",
+    "scraped_at": "2026-09-22T13:11:55.579Z",
     "players": [
       {
         "no": 1,
@@ -1760,7 +2336,7 @@
     "slug": "blood-ancient-vine-2024",
     "film": "Blood of the Ancient Vine (2024)",
     "source": "https://tv12.lk21official.cc/blood-ancient-vine-2024",
-    "scraped_at": "2026-09-20T13:22:14.222Z",
+    "scraped_at": "2026-09-22T13:11:56.053Z",
     "players": [
       {
         "no": 1,
@@ -1796,7 +2372,7 @@
     "slug": "birds-rained-down-2019",
     "film": "And the Birds Rained Down (2019)",
     "source": "https://tv12.lk21official.cc/birds-rained-down-2019",
-    "scraped_at": "2026-09-20T13:22:14.652Z",
+    "scraped_at": "2026-09-22T13:11:56.577Z",
     "players": [
       {
         "no": 1,
@@ -1832,7 +2408,7 @@
     "slug": "us-end-2026",
     "film": "Us in the End (2026)",
     "source": "https://tv12.lk21official.cc/us-end-2026",
-    "scraped_at": "2026-09-20T13:22:15.093Z",
+    "scraped_at": "2026-09-22T13:11:57.100Z",
     "players": [
       {
         "no": 1,
@@ -1868,7 +2444,7 @@
     "slug": "vanishing-point-2026",
     "film": "Vanishing Point (2026)",
     "source": "https://tv12.lk21official.cc/vanishing-point-2026",
-    "scraped_at": "2026-09-20T13:22:15.518Z",
+    "scraped_at": "2026-09-22T13:11:57.566Z",
     "players": [
       {
         "no": 1,
@@ -1904,7 +2480,7 @@
     "slug": "letter-pig-2022",
     "film": "Letter to a Pig (2022)",
     "source": "https://tv12.lk21official.cc/letter-pig-2022",
-    "scraped_at": "2026-09-20T13:22:15.932Z",
+    "scraped_at": "2026-09-22T13:11:58.045Z",
     "players": [
       {
         "no": 1,
@@ -1940,7 +2516,7 @@
     "slug": "libang-libu-2026",
     "film": "Libang Libu (2026)",
     "source": "https://tv12.lk21official.cc/libang-libu-2026",
-    "scraped_at": "2026-09-20T13:22:16.363Z",
+    "scraped_at": "2026-09-22T13:11:58.526Z",
     "players": [
       {
         "no": 1,
@@ -1976,7 +2552,7 @@
     "slug": "end-oak-street-2026",
     "film": "The End of Oak Street (2026)",
     "source": "https://tv12.lk21official.cc/end-oak-street-2026",
-    "scraped_at": "2026-09-20T13:22:16.780Z",
+    "scraped_at": "2026-09-22T13:11:58.998Z",
     "players": [
       {
         "no": 1,
@@ -2012,7 +2588,7 @@
     "slug": "dwelling-fuchun-mountains-2019",
     "film": "Dwelling in the Fuchun Mountains (2019)",
     "source": "https://tv12.lk21official.cc/dwelling-fuchun-mountains-2019",
-    "scraped_at": "2026-09-20T13:22:17.205Z",
+    "scraped_at": "2026-09-22T13:11:59.513Z",
     "players": [
       {
         "no": 1,
@@ -2048,7 +2624,7 @@
     "slug": "gauze-2025",
     "film": "Gauze (2025)",
     "source": "https://tv12.lk21official.cc/gauze-2025",
-    "scraped_at": "2026-09-20T13:22:17.644Z",
+    "scraped_at": "2026-09-22T13:12:00.034Z",
     "players": [
       {
         "no": 1,
@@ -2084,7 +2660,7 @@
     "slug": "tarung-unforgiven-2026",
     "film": "Tarung: Unforgiven (2026)",
     "source": "https://tv12.lk21official.cc/tarung-unforgiven-2026",
-    "scraped_at": "2026-09-20T13:22:18.076Z",
+    "scraped_at": "2026-09-22T13:12:00.535Z",
     "players": [
       {
         "no": 1,
@@ -2120,7 +2696,7 @@
     "slug": "third-wife-2018",
     "film": "The Third Wife (2018)",
     "source": "https://tv12.lk21official.cc/third-wife-2018",
-    "scraped_at": "2026-09-20T13:22:18.494Z",
+    "scraped_at": "2026-09-22T13:12:01.306Z",
     "players": [
       {
         "no": 1,
@@ -2156,7 +2732,7 @@
     "slug": "last-year-darkness-2023",
     "film": "The Last Year of Darkness (2023)",
     "source": "https://tv12.lk21official.cc/last-year-darkness-2023",
-    "scraped_at": "2026-09-20T13:22:18.925Z",
+    "scraped_at": "2026-09-22T13:12:01.792Z",
     "players": [
       {
         "no": 1,
@@ -2192,7 +2768,7 @@
     "slug": "untold-mr-t-i-pity-fool-2026",
     "film": "Untold Mr. T: I Pity the Fool (2026)",
     "source": "https://tv12.lk21official.cc/untold-mr-t-i-pity-fool-2026",
-    "scraped_at": "2026-09-20T13:22:19.346Z",
+    "scraped_at": "2026-09-22T13:12:02.266Z",
     "players": [
       {
         "no": 1,
@@ -2228,7 +2804,7 @@
     "slug": "ish-2025",
     "film": "Ish (2025)",
     "source": "https://tv12.lk21official.cc/ish-2025",
-    "scraped_at": "2026-09-20T13:22:19.766Z",
+    "scraped_at": "2026-09-22T13:12:02.993Z",
     "players": [
       {
         "no": 1,
@@ -2264,7 +2840,7 @@
     "slug": "monkey-hero-2026",
     "film": "The Monkey Hero (2026)",
     "source": "https://tv12.lk21official.cc/monkey-hero-2026",
-    "scraped_at": "2026-09-20T13:22:20.193Z",
+    "scraped_at": "2026-09-22T13:12:03.486Z",
     "players": [
       {
         "no": 1,
@@ -2300,7 +2876,7 @@
     "slug": "2720-2023",
     "film": "2720 (2023)",
     "source": "https://tv12.lk21official.cc/2720-2023",
-    "scraped_at": "2026-09-20T13:22:20.612Z",
+    "scraped_at": "2026-09-22T13:12:03.970Z",
     "players": [
       {
         "no": 1,
@@ -2336,7 +2912,7 @@
     "slug": "hair-2019",
     "film": "By a Hair (2019)",
     "source": "https://tv12.lk21official.cc/hair-2019",
-    "scraped_at": "2026-09-20T13:22:21.035Z",
+    "scraped_at": "2026-09-22T13:12:04.490Z",
     "players": [
       {
         "no": 1,
@@ -2372,7 +2948,7 @@
     "slug": "mary-anning-2025",
     "film": "Mary Anning (2025)",
     "source": "https://tv12.lk21official.cc/mary-anning-2025",
-    "scraped_at": "2026-09-20T13:22:21.465Z",
+    "scraped_at": "2026-09-22T13:12:04.969Z",
     "players": [
       {
         "no": 1,
@@ -2408,7 +2984,7 @@
     "slug": "go-team-gracias-equipo-2026",
     "film": "Go Team! Gracias, equipo (2026)",
     "source": "https://tv12.lk21official.cc/go-team-gracias-equipo-2026",
-    "scraped_at": "2026-09-20T13:22:21.903Z",
+    "scraped_at": "2026-09-22T13:12:05.440Z",
     "players": [
       {
         "no": 1,
@@ -2444,7 +3020,7 @@
     "slug": "knightfall-2026",
     "film": "Knightfall (2026)",
     "source": "https://tv12.lk21official.cc/knightfall-2026",
-    "scraped_at": "2026-09-20T13:22:22.303Z",
+    "scraped_at": "2026-09-22T13:12:06.248Z",
     "players": [
       {
         "no": 1,
@@ -2480,7 +3056,7 @@
     "slug": "little-lorraine-2025",
     "film": "Little Lorraine (2025)",
     "source": "https://tv12.lk21official.cc/little-lorraine-2025",
-    "scraped_at": "2026-09-20T13:22:22.723Z",
+    "scraped_at": "2026-09-22T13:12:07.002Z",
     "players": [
       {
         "no": 1,
@@ -2516,7 +3092,7 @@
     "slug": "drive-through-fire-2026",
     "film": "Drive Through Fire (2026)",
     "source": "https://tv12.lk21official.cc/drive-through-fire-2026",
-    "scraped_at": "2026-09-20T13:22:23.154Z",
+    "scraped_at": "2026-09-22T13:12:07.458Z",
     "players": [
       {
         "no": 1,
@@ -2552,7 +3128,7 @@
     "slug": "crossing-2026",
     "film": "Crossing (2026)",
     "source": "https://tv12.lk21official.cc/crossing-2026",
-    "scraped_at": "2026-09-20T13:22:23.571Z",
+    "scraped_at": "2026-09-22T13:12:07.963Z",
     "players": [
       {
         "no": 1,
@@ -2588,7 +3164,7 @@
     "slug": "spider-man-across-the-spider-verse-2023",
     "film": "Spider-Man: Across the Spider-Verse (2023)",
     "source": "https://tv12.lk21official.cc/spider-man-across-the-spider-verse-2023",
-    "scraped_at": "2026-09-20T13:22:23.984Z",
+    "scraped_at": "2026-09-22T13:12:08.427Z",
     "players": [
       {
         "no": 1,
@@ -2624,7 +3200,7 @@
     "slug": "copper-2025",
     "film": "Copper (2025)",
     "source": "https://tv12.lk21official.cc/copper-2025",
-    "scraped_at": "2026-09-20T13:22:24.411Z",
+    "scraped_at": "2026-09-22T13:12:08.909Z",
     "players": [
       {
         "no": 1,
@@ -2660,7 +3236,7 @@
     "slug": "ne-zha-2-2025",
     "film": "Ne Zha 2 - Nezha: Mo tong nao hai (2025)",
     "source": "https://tv12.lk21official.cc/ne-zha-2-2025",
-    "scraped_at": "2026-09-20T13:22:24.842Z",
+    "scraped_at": "2026-09-22T13:12:09.741Z",
     "players": [
       {
         "no": 1,
@@ -2696,7 +3272,7 @@
     "slug": "ryuichi-sakamoto-opus-2023",
     "film": "Ryuichi Sakamoto: Opus (2023)",
     "source": "https://tv12.lk21official.cc/ryuichi-sakamoto-opus-2023",
-    "scraped_at": "2026-09-20T13:22:25.268Z",
+    "scraped_at": "2026-09-22T13:12:10.193Z",
     "players": [
       {
         "no": 1,
@@ -2732,7 +3308,7 @@
     "slug": "shadow-cosmos-flowers-2025",
     "film": "In the Shadow of the Cosmos Flowers (2025)",
     "source": "https://tv12.lk21official.cc/shadow-cosmos-flowers-2025",
-    "scraped_at": "2026-09-20T13:22:25.698Z",
+    "scraped_at": "2026-09-22T13:12:10.669Z",
     "players": [
       {
         "no": 1,
@@ -2768,7 +3344,7 @@
     "slug": "musical-touken-ranbu-higekiri-hizamaru-duo-performance-2020-soga-2020",
     "film": "Musical Touken Ranbu \"Higekiri Hizamaru Duo Performance 2020 ~SOGA~\" (2020)",
     "source": "https://tv12.lk21official.cc/musical-touken-ranbu-higekiri-hizamaru-duo-performance-2020-soga-2020",
-    "scraped_at": "2026-09-20T13:22:26.124Z",
+    "scraped_at": "2026-09-22T13:12:11.186Z",
     "players": [
       {
         "no": 1,
@@ -2804,7 +3380,7 @@
     "slug": "scenes-friendly-ties-2026",
     "film": "Scenes of Friendly Ties (2026)",
     "source": "https://tv12.lk21official.cc/scenes-friendly-ties-2026",
-    "scraped_at": "2026-09-20T13:22:26.554Z",
+    "scraped_at": "2026-09-22T13:12:11.926Z",
     "players": [
       {
         "no": 1,
@@ -2840,7 +3416,7 @@
     "slug": "what-love-2026",
     "film": "What is Love? (2026)",
     "source": "https://tv12.lk21official.cc/what-love-2026",
-    "scraped_at": "2026-09-20T13:22:26.986Z",
+    "scraped_at": "2026-09-22T13:12:12.690Z",
     "players": [
       {
         "no": 1,
@@ -2876,7 +3452,7 @@
     "slug": "emergency-interrogation-room-final-2025",
     "film": "Emergency Interrogation Room: The Final (2025)",
     "source": "https://tv12.lk21official.cc/emergency-interrogation-room-final-2025",
-    "scraped_at": "2026-09-20T13:22:27.420Z",
+    "scraped_at": "2026-09-22T13:12:13.156Z",
     "players": [
       {
         "no": 1,
@@ -2912,7 +3488,7 @@
     "slug": "one-minute-2022",
     "film": "One Minute (2022)",
     "source": "https://tv12.lk21official.cc/one-minute-2022",
-    "scraped_at": "2026-09-20T13:22:27.855Z",
+    "scraped_at": "2026-09-22T13:12:13.646Z",
     "players": [
       {
         "no": 1,
@@ -2948,7 +3524,7 @@
     "slug": "teenage-wasteland-2025",
     "film": "Teenage Wasteland (2025)",
     "source": "https://tv12.lk21official.cc/teenage-wasteland-2025",
-    "scraped_at": "2026-09-20T13:22:28.290Z",
+    "scraped_at": "2026-09-22T13:12:14.123Z",
     "players": [
       {
         "no": 1,
@@ -2984,7 +3560,7 @@
     "slug": "pretty-guardian-sailor-moon-musical-kaguya-himes-beloved-2021",
     "film": "Pretty Guardian Sailor Moon: The Musical -Kaguya Hime's Beloved- (2021)",
     "source": "https://tv12.lk21official.cc/pretty-guardian-sailor-moon-musical-kaguya-himes-beloved-2021",
-    "scraped_at": "2026-09-20T13:22:28.721Z",
+    "scraped_at": "2026-09-22T13:12:14.594Z",
     "players": [
       {
         "no": 1,
@@ -3020,7 +3596,7 @@
     "slug": "di-renjie-six-dragon-phases-2026",
     "film": "Di Renjie: Six Dragon Phases (2026)",
     "source": "https://tv12.lk21official.cc/di-renjie-six-dragon-phases-2026",
-    "scraped_at": "2026-09-20T13:22:29.143Z",
+    "scraped_at": "2026-09-22T13:12:15.065Z",
     "players": [
       {
         "no": 1,
@@ -3056,7 +3632,7 @@
     "slug": "alpha-2026",
     "film": "Alpha (2026)",
     "source": "https://tv12.lk21official.cc/alpha-2026",
-    "scraped_at": "2026-09-20T13:22:29.572Z",
+    "scraped_at": "2026-09-22T13:12:15.540Z",
     "players": [
       {
         "no": 1,
@@ -3092,7 +3668,7 @@
     "slug": "hope-2026",
     "film": "Hope (2026)",
     "source": "https://tv12.lk21official.cc/hope-2026",
-    "scraped_at": "2026-09-20T13:22:30.009Z",
+    "scraped_at": "2026-09-22T13:12:16.012Z",
     "players": [
       {
         "no": 1,
@@ -3128,7 +3704,7 @@
     "slug": "call-my-agent-movie-2026",
     "film": "Call My Agent! The Movie (2026)",
     "source": "https://tv12.lk21official.cc/call-my-agent-movie-2026",
-    "scraped_at": "2026-09-20T13:22:30.416Z",
+    "scraped_at": "2026-09-22T13:12:16.579Z",
     "players": [
       {
         "no": 1,
@@ -3164,7 +3740,7 @@
     "slug": "before-ice-melts-2026",
     "film": "Before the Ice Melts (2026)",
     "source": "https://tv12.lk21official.cc/before-ice-melts-2026",
-    "scraped_at": "2026-09-20T13:22:30.839Z",
+    "scraped_at": "2026-09-22T13:12:17.053Z",
     "players": [
       {
         "no": 1,
@@ -3200,7 +3776,7 @@
     "slug": "band-brothers-legacy-2026",
     "film": "Band of Brothers: Legacy (2026)",
     "source": "https://tv12.lk21official.cc/band-brothers-legacy-2026",
-    "scraped_at": "2026-09-20T13:22:31.262Z",
+    "scraped_at": "2026-09-22T13:12:17.824Z",
     "players": [
       {
         "no": 1,
@@ -3236,7 +3812,7 @@
     "slug": "paw-patrol-dino-movie-2026",
     "film": "PAW Patrol: The Dino Movie (2026)",
     "source": "https://tv12.lk21official.cc/paw-patrol-dino-movie-2026",
-    "scraped_at": "2026-09-20T13:22:31.688Z",
+    "scraped_at": "2026-09-22T13:12:18.577Z",
     "players": [
       {
         "no": 1,
@@ -3272,7 +3848,7 @@
     "slug": "drawn-together-2026",
     "film": "Drawn Together (2026)",
     "source": "https://tv12.lk21official.cc/drawn-together-2026",
-    "scraped_at": "2026-09-20T13:22:32.105Z",
+    "scraped_at": "2026-09-22T13:12:19.042Z",
     "players": [
       {
         "no": 1,
@@ -3308,7 +3884,7 @@
     "slug": "why-did-i-get-married-again-2026",
     "film": "Why Did I Get Married Again? (2026)",
     "source": "https://tv12.lk21official.cc/why-did-i-get-married-again-2026",
-    "scraped_at": "2026-09-20T13:22:32.531Z",
+    "scraped_at": "2026-09-22T13:12:19.517Z",
     "players": [
       {
         "no": 1,
@@ -3344,7 +3920,7 @@
     "slug": "zodiac-2007",
     "film": "Zodiac (2007)",
     "source": "https://tv12.lk21official.cc/zodiac-2007",
-    "scraped_at": "2026-09-20T13:22:32.953Z",
+    "scraped_at": "2026-09-22T13:12:19.986Z",
     "players": [
       {
         "no": 1,
@@ -3380,7 +3956,7 @@
     "slug": "ensemble-stars-stage-track-miracle-2022",
     "film": "Ensemble Stars! THE STAGE -Track to Miracle- (2022)",
     "source": "https://tv12.lk21official.cc/ensemble-stars-stage-track-miracle-2022",
-    "scraped_at": "2026-09-20T13:22:33.381Z",
+    "scraped_at": "2026-09-22T13:12:20.465Z",
     "players": [
       {
         "no": 1,
@@ -3416,7 +3992,7 @@
     "slug": "ensemble-stars-extra-stage-destruction-road-2019",
     "film": "Ensemble Stars! Extra Stage ～Destruction × Road～ (2019)",
     "source": "https://tv12.lk21official.cc/ensemble-stars-extra-stage-destruction-road-2019",
-    "scraped_at": "2026-09-20T13:22:33.809Z",
+    "scraped_at": "2026-09-22T13:12:20.947Z",
     "players": [
       {
         "no": 1,
@@ -3452,7 +4028,7 @@
     "slug": "creeps-2025",
     "film": "The Creeps (2025)",
     "source": "https://tv12.lk21official.cc/creeps-2025",
-    "scraped_at": "2026-09-20T13:22:34.227Z",
+    "scraped_at": "2026-09-22T13:12:21.406Z",
     "players": [
       {
         "no": 1,
@@ -3488,7 +4064,7 @@
     "slug": "nha-minh-di-thoi-2026",
     "film": "Nha Minh Di Thoi (2026)",
     "source": "https://tv12.lk21official.cc/nha-minh-di-thoi-2026",
-    "scraped_at": "2026-09-20T13:22:34.659Z",
+    "scraped_at": "2026-09-22T13:12:21.863Z",
     "players": [
       {
         "no": 1,
@@ -3524,7 +4100,7 @@
     "slug": "this-party-dead-2026",
     "film": "This party is DEAD (2026)",
     "source": "https://tv12.lk21official.cc/this-party-dead-2026",
-    "scraped_at": "2026-09-20T13:22:35.093Z",
+    "scraped_at": "2026-09-22T13:12:22.390Z",
     "players": [
       {
         "no": 1,
@@ -3560,7 +4136,7 @@
     "slug": "i-wont-die-love-2026",
     "film": "I Won't Die for Love (2026)",
     "source": "https://tv12.lk21official.cc/i-wont-die-love-2026",
-    "scraped_at": "2026-09-20T13:22:35.539Z",
+    "scraped_at": "2026-09-22T13:12:22.842Z",
     "players": [
       {
         "no": 1,
@@ -3596,7 +4172,7 @@
     "slug": "may-it-go-beautifully-you-rico-2024",
     "film": "May It Go Beautifully for You, Rico (2024)",
     "source": "https://tv12.lk21official.cc/may-it-go-beautifully-you-rico-2024",
-    "scraped_at": "2026-09-20T13:22:35.989Z",
+    "scraped_at": "2026-09-22T13:12:23.307Z",
     "players": [
       {
         "no": 1,
@@ -3632,7 +4208,7 @@
     "slug": "agito-chonoryoku-senso-2026",
     "film": "Agito Chonoryoku Senso (2026)",
     "source": "https://tv12.lk21official.cc/agito-chonoryoku-senso-2026",
-    "scraped_at": "2026-09-20T13:22:36.413Z",
+    "scraped_at": "2026-09-22T13:12:23.760Z",
     "players": [
       {
         "no": 1,
@@ -3668,7 +4244,7 @@
     "slug": "botanist-2025",
     "film": "The Botanist (2025)",
     "source": "https://tv12.lk21official.cc/botanist-2025",
-    "scraped_at": "2026-09-20T13:22:36.845Z",
+    "scraped_at": "2026-09-22T13:12:24.274Z",
     "players": [
       {
         "no": 1,
@@ -3704,7 +4280,7 @@
     "slug": "happiness-remains-2026",
     "film": "Happiness Remains (2026)",
     "source": "https://tv12.lk21official.cc/happiness-remains-2026",
-    "scraped_at": "2026-09-20T13:22:37.277Z",
+    "scraped_at": "2026-09-22T13:12:24.756Z",
     "players": [
       {
         "no": 1,
@@ -3740,7 +4316,7 @@
     "slug": "im-not-robot-2023",
     "film": "I'm Not a Robot (2023)",
     "source": "https://tv12.lk21official.cc/im-not-robot-2023",
-    "scraped_at": "2026-09-20T13:22:37.714Z",
+    "scraped_at": "2026-09-22T13:12:25.351Z",
     "players": [
       {
         "no": 1,
@@ -3776,7 +4352,7 @@
     "slug": "my-armenian-phantoms-2025",
     "film": "My Armenian Phantoms (2025)",
     "source": "https://tv12.lk21official.cc/my-armenian-phantoms-2025",
-    "scraped_at": "2026-09-20T13:22:38.139Z",
+    "scraped_at": "2026-09-22T13:12:25.895Z",
     "players": [
       {
         "no": 1,
@@ -3812,7 +4388,7 @@
     "slug": "exhibition-screen-dawn-impressionism-paris-1874-2025",
     "film": "Exhibition on Screen: The Dawn of Impressionism - Paris, 1874 (2025)",
     "source": "https://tv12.lk21official.cc/exhibition-screen-dawn-impressionism-paris-1874-2025",
-    "scraped_at": "2026-09-20T13:22:38.567Z",
+    "scraped_at": "2026-09-22T13:12:26.402Z",
     "players": [
       {
         "no": 1,
@@ -3848,7 +4424,7 @@
     "slug": "abroad-2023",
     "film": "Abroad (2023)",
     "source": "https://tv12.lk21official.cc/abroad-2023",
-    "scraped_at": "2026-09-20T13:22:38.992Z",
+    "scraped_at": "2026-09-22T13:12:26.888Z",
     "players": [
       {
         "no": 1,
@@ -3884,7 +4460,7 @@
     "slug": "militia-2025",
     "film": "The Militia (2025)",
     "source": "https://tv12.lk21official.cc/militia-2025",
-    "scraped_at": "2026-09-20T13:22:39.433Z",
+    "scraped_at": "2026-09-22T13:12:27.380Z",
     "players": [
       {
         "no": 1,
@@ -3920,7 +4496,7 @@
     "slug": "mosquito-ear-2026",
     "film": "A Mosquito in the Ear (2026)",
     "source": "https://tv12.lk21official.cc/mosquito-ear-2026",
-    "scraped_at": "2026-09-20T13:22:39.854Z",
+    "scraped_at": "2026-09-22T13:12:27.906Z",
     "players": [
       {
         "no": 1,
@@ -3956,7 +4532,7 @@
     "slug": "hot-spot-2026",
     "film": "Hot Spot (2026)",
     "source": "https://tv12.lk21official.cc/hot-spot-2026",
-    "scraped_at": "2026-09-20T13:22:40.285Z",
+    "scraped_at": "2026-09-22T13:12:28.460Z",
     "players": [
       {
         "no": 1,
@@ -3992,7 +4568,7 @@
     "slug": "one-night-only-2026",
     "film": "One Night Only (2026)",
     "source": "https://tv12.lk21official.cc/one-night-only-2026",
-    "scraped_at": "2026-09-20T13:22:40.715Z",
+    "scraped_at": "2026-09-22T13:12:28.942Z",
     "players": [
       {
         "no": 1,
@@ -4028,7 +4604,7 @@
     "slug": "sheep-box-2026",
     "film": "Sheep in the Box (2026)",
     "source": "https://tv12.lk21official.cc/sheep-box-2026",
-    "scraped_at": "2026-09-20T13:22:41.137Z",
+    "scraped_at": "2026-09-22T13:12:29.457Z",
     "players": [
       {
         "no": 1,
@@ -4064,7 +4640,7 @@
     "slug": "moana-2026",
     "film": "Moana (2026)",
     "source": "https://tv12.lk21official.cc/moana-2026",
-    "scraped_at": "2026-09-20T13:22:41.561Z",
+    "scraped_at": "2026-09-22T13:12:29.956Z",
     "players": [
       {
         "no": 1,
@@ -4093,7 +4669,7 @@
     "slug": "portal-hell-2025",
     "film": "Portal to Hell (2025)",
     "source": "https://tv12.lk21official.cc/portal-hell-2025",
-    "scraped_at": "2026-09-20T13:22:41.977Z",
+    "scraped_at": "2026-09-22T13:12:30.452Z",
     "players": [
       {
         "no": 1,
@@ -4129,7 +4705,7 @@
     "slug": "replay-moment-when-it-starts-again-2021",
     "film": "Replay: The Moment When It Starts Again (2021)",
     "source": "https://tv12.lk21official.cc/replay-moment-when-it-starts-again-2021",
-    "scraped_at": "2026-09-20T13:22:42.397Z",
+    "scraped_at": "2026-09-22T13:12:30.985Z",
     "players": [
       {
         "no": 1,
@@ -4165,7 +4741,7 @@
     "slug": "influence-2023",
     "film": "Influence (2023)",
     "source": "https://tv12.lk21official.cc/influence-2023",
-    "scraped_at": "2026-09-20T13:22:42.831Z",
+    "scraped_at": "2026-09-22T13:12:31.470Z",
     "players": [
       {
         "no": 1,
@@ -4201,7 +4777,7 @@
     "slug": "onslaught-2026",
     "film": "Onslaught (2026)",
     "source": "https://tv12.lk21official.cc/onslaught-2026",
-    "scraped_at": "2026-09-20T13:22:43.245Z",
+    "scraped_at": "2026-09-22T13:12:32.106Z",
     "players": [
       {
         "no": 1,
@@ -4237,7 +4813,7 @@
     "slug": "clash-thundermans-2026",
     "film": "Clash of the Thundermans (2026)",
     "source": "https://tv12.lk21official.cc/clash-thundermans-2026",
-    "scraped_at": "2026-09-20T13:22:43.667Z",
+    "scraped_at": "2026-09-22T13:12:32.592Z",
     "players": [
       {
         "no": 1,
@@ -4273,7 +4849,7 @@
     "slug": "westbound-inn-2022",
     "film": "Westbound Inn (2022)",
     "source": "https://tv12.lk21official.cc/westbound-inn-2022",
-    "scraped_at": "2026-09-20T13:22:44.091Z",
+    "scraped_at": "2026-09-22T13:12:33.117Z",
     "players": [
       {
         "no": 1,
@@ -4309,7 +4885,7 @@
     "slug": "wrong-girls-2026",
     "film": "The Wrong Girls (2026)",
     "source": "https://tv12.lk21official.cc/wrong-girls-2026",
-    "scraped_at": "2026-09-20T13:22:44.536Z",
+    "scraped_at": "2026-09-22T13:12:33.595Z",
     "players": [
       {
         "no": 1,
@@ -4338,7 +4914,7 @@
     "slug": "two-people-exchanging-saliva-2024",
     "film": "Two People Exchanging Saliva (2024)",
     "source": "https://tv12.lk21official.cc/two-people-exchanging-saliva-2024",
-    "scraped_at": "2026-09-20T13:22:44.960Z",
+    "scraped_at": "2026-09-22T13:12:34.076Z",
     "players": [
       {
         "no": 1,
@@ -4367,7 +4943,7 @@
     "slug": "woman-child-2025",
     "film": "Woman and Child (2025)",
     "source": "https://tv12.lk21official.cc/woman-child-2025",
-    "scraped_at": "2026-09-20T13:22:45.376Z",
+    "scraped_at": "2026-09-22T13:12:34.608Z",
     "players": [
       {
         "no": 1,
@@ -4403,7 +4979,7 @@
     "slug": "weed-eaters-2025",
     "film": "The Weed Eaters (2025)",
     "source": "https://tv12.lk21official.cc/weed-eaters-2025",
-    "scraped_at": "2026-09-20T13:22:45.803Z",
+    "scraped_at": "2026-09-22T13:12:35.073Z",
     "players": [
       {
         "no": 1,
@@ -4439,7 +5015,7 @@
     "slug": "ensemble-stars-extra-stage-meteor-lights-2021",
     "film": "Ensemble Stars! Extra Stage: Meteor Lights (2021)",
     "source": "https://tv12.lk21official.cc/ensemble-stars-extra-stage-meteor-lights-2021",
-    "scraped_at": "2026-09-20T13:22:46.234Z",
+    "scraped_at": "2026-09-22T13:12:36.142Z",
     "players": [
       {
         "no": 1,
@@ -4475,7 +5051,7 @@
     "slug": "raygun-breaking-badly-2026",
     "film": "Raygun: Breaking Badly (2026)",
     "source": "https://tv12.lk21official.cc/raygun-breaking-badly-2026",
-    "scraped_at": "2026-09-20T13:22:46.658Z",
+    "scraped_at": "2026-09-22T13:12:36.636Z",
     "players": [
       {
         "no": 1,
@@ -4511,7 +5087,7 @@
     "slug": "jared-freid-family-plan-2026",
     "film": "Jared Freid: The Family Plan (2026)",
     "source": "https://tv12.lk21official.cc/jared-freid-family-plan-2026",
-    "scraped_at": "2026-09-20T13:22:47.102Z",
+    "scraped_at": "2026-09-22T13:12:37.167Z",
     "players": [
       {
         "no": 1,
@@ -4547,7 +5123,7 @@
     "slug": "haunted-house-2026",
     "film": "Haunted House (2026)",
     "source": "https://tv12.lk21official.cc/haunted-house-2026",
-    "scraped_at": "2026-09-20T13:22:47.527Z",
+    "scraped_at": "2026-09-22T13:12:37.675Z",
     "players": [
       {
         "no": 1,
@@ -4583,7 +5159,7 @@
     "slug": "mongoose-2026",
     "film": "The Mongoose (2026)",
     "source": "https://tv12.lk21official.cc/mongoose-2026",
-    "scraped_at": "2026-09-20T13:22:47.947Z",
+    "scraped_at": "2026-09-22T13:12:38.167Z",
     "players": [
       {
         "no": 1,
@@ -4619,7 +5195,7 @@
     "slug": "virginia-woolfs-night-day-2026",
     "film": "Virginia Woolf's Night & Day (2026)",
     "source": "https://tv12.lk21official.cc/virginia-woolfs-night-day-2026",
-    "scraped_at": "2026-09-20T13:22:48.368Z",
+    "scraped_at": "2026-09-22T13:12:38.915Z",
     "players": [
       {
         "no": 1,
@@ -4655,7 +5231,7 @@
     "slug": "harry-potter-chamber-secrets-2002",
     "film": "Harry Potter and the Chamber of Secrets (2002)",
     "source": "https://tv12.lk21official.cc/harry-potter-chamber-secrets-2002",
-    "scraped_at": "2026-09-20T13:22:48.789Z",
+    "scraped_at": "2026-09-22T13:12:39.384Z",
     "players": [
       {
         "no": 1,
@@ -4691,7 +5267,7 @@
     "slug": "quick-counterattack-2023",
     "film": "Quick Counterattack (2023)",
     "source": "https://tv12.lk21official.cc/quick-counterattack-2023",
-    "scraped_at": "2026-09-20T13:22:49.232Z",
+    "scraped_at": "2026-09-22T13:12:39.857Z",
     "players": [
       {
         "no": 1,
@@ -4727,7 +5303,7 @@
     "slug": "girl-river-2026",
     "film": "The Girl in the River (2026)",
     "source": "https://tv12.lk21official.cc/girl-river-2026",
-    "scraped_at": "2026-09-20T13:22:49.652Z",
+    "scraped_at": "2026-09-22T13:12:40.342Z",
     "players": [
       {
         "no": 1,
@@ -4756,7 +5332,7 @@
     "slug": "splash-city-2026",
     "film": "Splash City (2026)",
     "source": "https://tv12.lk21official.cc/splash-city-2026",
-    "scraped_at": "2026-09-20T13:22:50.095Z",
+    "scraped_at": "2026-09-22T13:12:41.081Z",
     "players": [
       {
         "no": 1,
@@ -4785,7 +5361,7 @@
     "slug": "parasomnia-2025",
     "film": "Parasomnia (2025)",
     "source": "https://tv12.lk21official.cc/parasomnia-2025",
-    "scraped_at": "2026-09-20T13:22:50.529Z",
+    "scraped_at": "2026-09-22T13:12:41.550Z",
     "players": [
       {
         "no": 1,
@@ -4814,7 +5390,7 @@
     "slug": "dhamaal-4-2026",
     "film": "Dhamaal 4 (2026)",
     "source": "https://tv12.lk21official.cc/dhamaal-4-2026",
-    "scraped_at": "2026-09-20T13:22:50.950Z",
+    "scraped_at": "2026-09-22T13:12:42.072Z",
     "players": [
       {
         "no": 1,
@@ -4843,7 +5419,7 @@
     "slug": "instadocs-decoy-plane-2026",
     "film": "Instadocs: The Decoy Plane (2026)",
     "source": "https://tv12.lk21official.cc/instadocs-decoy-plane-2026",
-    "scraped_at": "2026-09-20T13:22:51.370Z",
+    "scraped_at": "2026-09-22T13:12:42.538Z",
     "players": [
       {
         "no": 1,
@@ -4879,7 +5455,7 @@
     "slug": "dark-hollow-2026",
     "film": "Dark Hollow (2026)",
     "source": "https://tv12.lk21official.cc/dark-hollow-2026",
-    "scraped_at": "2026-09-20T13:22:51.806Z",
+    "scraped_at": "2026-09-22T13:12:43.092Z",
     "players": [
       {
         "no": 1,
@@ -4908,7 +5484,7 @@
     "slug": "come-me-2026",
     "film": "Come with Me (2026)",
     "source": "https://tv12.lk21official.cc/come-me-2026",
-    "scraped_at": "2026-09-20T13:22:52.232Z",
+    "scraped_at": "2026-09-22T13:12:43.824Z",
     "players": [
       {
         "no": 1,
@@ -4944,7 +5520,7 @@
     "slug": "deathwoods-2026",
     "film": "Deathwoods (2026)",
     "source": "https://tv12.lk21official.cc/deathwoods-2026",
-    "scraped_at": "2026-09-20T13:22:52.667Z",
+    "scraped_at": "2026-09-22T13:12:44.330Z",
     "players": [
       {
         "no": 1,
@@ -4980,7 +5556,7 @@
     "slug": "korean-kanakaraju-2026",
     "film": "Korean Kanakaraju (2026)",
     "source": "https://tv12.lk21official.cc/korean-kanakaraju-2026",
-    "scraped_at": "2026-09-20T13:22:53.084Z",
+    "scraped_at": "2026-09-22T13:12:44.781Z",
     "players": [
       {
         "no": 1,
@@ -5016,7 +5592,7 @@
     "slug": "gdn-2026",
     "film": "G.D.N. (2026)",
     "source": "https://tv12.lk21official.cc/gdn-2026",
-    "scraped_at": "2026-09-20T13:22:53.515Z",
+    "scraped_at": "2026-09-22T13:12:45.240Z",
     "players": [
       {
         "no": 1,
@@ -5045,7 +5621,7 @@
     "slug": "mayday-2026",
     "film": "Mayday (2026)",
     "source": "https://tv12.lk21official.cc/mayday-2026",
-    "scraped_at": "2026-09-20T13:22:53.962Z",
+    "scraped_at": "2026-09-22T13:12:45.707Z",
     "players": [
       {
         "no": 1,
@@ -5081,7 +5657,7 @@
     "slug": "gandhari-2026",
     "film": "Gandhari (2026)",
     "source": "https://tv12.lk21official.cc/gandhari-2026",
-    "scraped_at": "2026-09-20T13:22:54.419Z",
+    "scraped_at": "2026-09-22T13:12:46.203Z",
     "players": [
       {
         "no": 1,
@@ -5117,7 +5693,7 @@
     "slug": "almost-us-2026",
     "film": "Almost Us (2026)",
     "source": "https://tv12.lk21official.cc/almost-us-2026",
-    "scraped_at": "2026-09-20T13:22:54.840Z",
+    "scraped_at": "2026-09-22T13:12:46.657Z",
     "players": [
       {
         "no": 1,
@@ -5153,7 +5729,7 @@
     "slug": "scent-pho-2026",
     "film": "Scent of Pho (2026)",
     "source": "https://tv12.lk21official.cc/scent-pho-2026",
-    "scraped_at": "2026-09-20T13:22:55.260Z",
+    "scraped_at": "2026-09-22T13:12:47.125Z",
     "players": [
       {
         "no": 1,
@@ -5189,7 +5765,7 @@
     "slug": "fito-paez-world-within-song-2026",
     "film": "Fito Paez: The World Within a Song (2026)",
     "source": "https://tv12.lk21official.cc/fito-paez-world-within-song-2026",
-    "scraped_at": "2026-09-20T13:22:55.684Z",
+    "scraped_at": "2026-09-22T13:12:47.583Z",
     "players": [
       {
         "no": 1,
@@ -5225,7 +5801,7 @@
     "slug": "last-blossom-2025",
     "film": "The Last Blossom (2025)",
     "source": "https://tv12.lk21official.cc/last-blossom-2025",
-    "scraped_at": "2026-09-20T13:22:56.112Z",
+    "scraped_at": "2026-09-22T13:12:48.049Z",
     "players": [
       {
         "no": 1,
@@ -5261,7 +5837,7 @@
     "slug": "room-below-2026",
     "film": "The Room Below (2026)",
     "source": "https://tv12.lk21official.cc/room-below-2026",
-    "scraped_at": "2026-09-20T13:22:56.552Z",
+    "scraped_at": "2026-09-22T13:12:48.791Z",
     "players": [
       {
         "no": 1,
@@ -5297,7 +5873,7 @@
     "slug": "weight-2026",
     "film": "The Weight (2026)",
     "source": "https://tv12.lk21official.cc/weight-2026",
-    "scraped_at": "2026-09-20T13:22:56.983Z",
+    "scraped_at": "2026-09-22T13:12:49.256Z",
     "players": [
       {
         "no": 1,
@@ -5333,7 +5909,7 @@
     "slug": "turning-point-generation-911-2026",
     "film": "Turning Point: Generation 9/11 (2026)",
     "source": "https://tv12.lk21official.cc/turning-point-generation-911-2026",
-    "scraped_at": "2026-09-20T13:22:57.385Z",
+    "scraped_at": "2026-09-22T13:12:49.750Z",
     "players": [
       {
         "no": 1,
@@ -5369,7 +5945,7 @@
     "slug": "runner-2026",
     "film": "The Runner (2026)",
     "source": "https://tv12.lk21official.cc/runner-2026",
-    "scraped_at": "2026-09-20T13:22:57.808Z",
+    "scraped_at": "2026-09-22T13:12:50.243Z",
     "players": [
       {
         "no": 1,
@@ -5398,7 +5974,7 @@
     "slug": "just-play-dead-2026",
     "film": "Just Play Dead (2026)",
     "source": "https://tv12.lk21official.cc/just-play-dead-2026",
-    "scraped_at": "2026-09-20T13:22:58.235Z",
+    "scraped_at": "2026-09-22T13:12:50.723Z",
     "players": [
       {
         "no": 1,
@@ -5434,7 +6010,7 @@
     "slug": "kyma-londe-mysterieuse-2026",
     "film": "Kyma, l'onde mysterieuse (2026)",
     "source": "https://tv12.lk21official.cc/kyma-londe-mysterieuse-2026",
-    "scraped_at": "2026-09-20T13:22:58.655Z",
+    "scraped_at": "2026-09-22T13:12:51.248Z",
     "players": [
       {
         "no": 1,
@@ -5463,7 +6039,7 @@
     "slug": "lego-star-wars-mandalorian-2026",
     "film": "Lego Star Wars: The Mandalorian (2026)",
     "source": "https://tv12.lk21official.cc/lego-star-wars-mandalorian-2026",
-    "scraped_at": "2026-09-20T13:22:59.079Z",
+    "scraped_at": "2026-09-22T13:12:51.741Z",
     "players": [
       {
         "no": 1,
@@ -5499,7 +6075,7 @@
     "slug": "mobile-suit-gundam-hathaway-sorcery-nymph-circe-2026",
     "film": "Mobile Suit Gundam Hathaway: The Sorcery of Nymph Circe (2026)",
     "source": "https://tv12.lk21official.cc/mobile-suit-gundam-hathaway-sorcery-nymph-circe-2026",
-    "scraped_at": "2026-09-20T13:22:59.496Z",
+    "scraped_at": "2026-09-22T13:12:52.258Z",
     "players": [
       {
         "no": 1,
@@ -5528,7 +6104,7 @@
     "slug": "spider-island-2026",
     "film": "Spider Island (2026)",
     "source": "https://tv12.lk21official.cc/spider-island-2026",
-    "scraped_at": "2026-09-20T13:22:59.924Z",
+    "scraped_at": "2026-09-22T13:12:52.790Z",
     "players": [
       {
         "no": 1,
@@ -5564,7 +6140,7 @@
     "slug": "brink-war-2026",
     "film": "The Brink of War (2026)",
     "source": "https://tv12.lk21official.cc/brink-war-2026",
-    "scraped_at": "2026-09-20T13:23:00.356Z",
+    "scraped_at": "2026-09-22T13:12:53.566Z",
     "players": [
       {
         "no": 1,
@@ -5593,7 +6169,7 @@
     "slug": "stolen-kingdom-2025",
     "film": "Stolen Kingdom (2025)",
     "source": "https://tv12.lk21official.cc/stolen-kingdom-2025",
-    "scraped_at": "2026-09-20T13:23:00.780Z",
+    "scraped_at": "2026-09-22T13:12:54.369Z",
     "players": [
       {
         "no": 1,
@@ -5629,7 +6205,7 @@
     "slug": "dog-stars-2026",
     "film": "The Dog Stars (2026)",
     "source": "https://tv12.lk21official.cc/dog-stars-2026",
-    "scraped_at": "2026-09-20T13:23:01.197Z",
+    "scraped_at": "2026-09-22T13:12:54.833Z",
     "players": [
       {
         "no": 1,
@@ -5665,7 +6241,7 @@
     "slug": "buddy-2026",
     "film": "Buddy (2026)",
     "source": "https://tv12.lk21official.cc/buddy-2026",
-    "scraped_at": "2026-09-20T13:23:01.617Z",
+    "scraped_at": "2026-09-22T13:12:55.326Z",
     "players": [
       {
         "no": 1,
@@ -5694,7 +6270,7 @@
     "slug": "barreda-2026",
     "film": "Barreda (2026)",
     "source": "https://tv12.lk21official.cc/barreda-2026",
-    "scraped_at": "2026-09-20T13:23:02.039Z",
+    "scraped_at": "2026-09-22T13:12:55.804Z",
     "players": [
       {
         "no": 1,
@@ -5730,7 +6306,7 @@
     "slug": "idiots-2026",
     "film": "Idiots (2026)",
     "source": "https://tv12.lk21official.cc/idiots-2026",
-    "scraped_at": "2026-09-20T13:23:02.466Z",
+    "scraped_at": "2026-09-22T13:12:56.322Z",
     "players": [
       {
         "no": 1,
@@ -5766,7 +6342,7 @@
     "slug": "gaskins-hitchhiker-killer-2026",
     "film": "Gaskins: The Hitchhiker Killer (2026)",
     "source": "https://tv12.lk21official.cc/gaskins-hitchhiker-killer-2026",
-    "scraped_at": "2026-09-20T13:23:02.899Z",
+    "scraped_at": "2026-09-22T13:12:56.800Z",
     "players": [
       {
         "no": 1,
@@ -5802,7 +6378,7 @@
     "slug": "confinement-2026",
     "film": "Confinement (2026)",
     "source": "https://tv12.lk21official.cc/confinement-2026",
-    "scraped_at": "2026-09-20T13:23:03.321Z",
+    "scraped_at": "2026-09-22T13:12:57.320Z",
     "players": [
       {
         "no": 1,
@@ -5838,7 +6414,7 @@
     "slug": "coyote-vs-acme-2026",
     "film": "Coyote vs. Acme (2026)",
     "source": "https://tv12.lk21official.cc/coyote-vs-acme-2026",
-    "scraped_at": "2026-09-20T13:23:03.737Z",
+    "scraped_at": "2026-09-22T13:12:57.861Z",
     "players": [
       {
         "no": 1,
@@ -5874,7 +6450,7 @@
     "slug": "911-reclaiming-ground-zero-2026",
     "film": "9/11: Reclaiming Ground Zero (2026)",
     "source": "https://tv12.lk21official.cc/911-reclaiming-ground-zero-2026",
-    "scraped_at": "2026-09-20T13:23:04.154Z",
+    "scraped_at": "2026-09-22T13:12:58.323Z",
     "players": [
       {
         "no": 1,
@@ -5910,7 +6486,7 @@
     "slug": "911-remembered-25-years-later-2026",
     "film": "9/11 Remembered - 25 Years Later (2026)",
     "source": "https://tv12.lk21official.cc/911-remembered-25-years-later-2026",
-    "scraped_at": "2026-09-20T13:23:04.575Z",
+    "scraped_at": "2026-09-22T13:12:58.801Z",
     "players": [
       {
         "no": 1,
@@ -5946,7 +6522,7 @@
     "slug": "bad-counselors-2026",
     "film": "Bad Counselors (2026)",
     "source": "https://tv12.lk21official.cc/bad-counselors-2026",
-    "scraped_at": "2026-09-20T13:23:05.007Z",
+    "scraped_at": "2026-09-22T13:12:59.313Z",
     "players": [
       {
         "no": 1,
@@ -5982,7 +6558,7 @@
     "slug": "doraemon-nobita-new-castle-undersea-devil-2026",
     "film": "Doraemon: Nobita and the New Castle of the Undersea Devil (2026)",
     "source": "https://tv12.lk21official.cc/doraemon-nobita-new-castle-undersea-devil-2026",
-    "scraped_at": "2026-09-20T13:23:05.439Z",
+    "scraped_at": "2026-09-22T13:12:59.832Z",
     "players": [
       {
         "no": 1,
@@ -6018,7 +6594,7 @@
     "slug": "eight-kings-dragon-heist-2026",
     "film": "The Eight Kings: Dragon Heist (2026)",
     "source": "https://tv12.lk21official.cc/eight-kings-dragon-heist-2026",
-    "scraped_at": "2026-09-20T13:23:05.857Z",
+    "scraped_at": "2026-09-22T13:13:00.291Z",
     "players": [
       {
         "no": 1,
@@ -6054,7 +6630,7 @@
     "slug": "let-me-tell-you-dad-2026",
     "film": "Let Me Tell You, Dad (2026)",
     "source": "https://tv12.lk21official.cc/let-me-tell-you-dad-2026",
-    "scraped_at": "2026-09-20T13:23:06.279Z",
+    "scraped_at": "2026-09-22T13:13:00.797Z",
     "players": [
       {
         "no": 1,
@@ -6090,7 +6666,7 @@
     "slug": "robot-chicken-adult-swim-special-2026",
     "film": "The Robot Chicken Adult Swim Special (2026)",
     "source": "https://tv12.lk21official.cc/robot-chicken-adult-swim-special-2026",
-    "scraped_at": "2026-09-20T13:23:06.701Z",
+    "scraped_at": "2026-09-22T13:13:01.289Z",
     "players": [
       {
         "no": 1,
@@ -6126,7 +6702,7 @@
     "slug": "unsolved-love-hotel-murder-case-incident-2024",
     "film": "The Unsolved Love Hotel Murder Case Incident (2024)",
     "source": "https://tv12.lk21official.cc/unsolved-love-hotel-murder-case-incident-2024",
-    "scraped_at": "2026-09-20T13:23:07.122Z",
+    "scraped_at": "2026-09-22T13:13:01.812Z",
     "players": [
       {
         "no": 1,
@@ -6162,7 +6738,7 @@
     "slug": "ultimate-revenge-2026",
     "film": "Ultimate Revenge (2026)",
     "source": "https://tv12.lk21official.cc/ultimate-revenge-2026",
-    "scraped_at": "2026-09-20T13:23:07.539Z",
+    "scraped_at": "2026-09-22T13:13:02.350Z",
     "players": [
       {
         "no": 1,
@@ -6191,7 +6767,7 @@
     "slug": "birdman-cooper-island-2024",
     "film": "The Birdman of Cooper Island (2024)",
     "source": "https://tv12.lk21official.cc/birdman-cooper-island-2024",
-    "scraped_at": "2026-09-20T13:23:08.042Z",
+    "scraped_at": "2026-09-22T13:13:03.418Z",
     "players": [
       {
         "no": 1,
@@ -6220,7 +6796,7 @@
     "slug": "motherload-2019",
     "film": "Motherload (2019)",
     "source": "https://tv12.lk21official.cc/motherload-2019",
-    "scraped_at": "2026-09-20T13:23:08.560Z",
+    "scraped_at": "2026-09-22T13:13:03.904Z",
     "players": [
       {
         "no": 1,
@@ -6256,7 +6832,7 @@
     "slug": "nha-hai-chu-2025",
     "film": "Whispering Spirit (2025)",
     "source": "https://tv12.lk21official.cc/nha-hai-chu-2025",
-    "scraped_at": "2026-09-20T13:23:09.016Z",
+    "scraped_at": "2026-09-22T13:13:04.366Z",
     "players": [
       {
         "no": 1,
@@ -6292,7 +6868,7 @@
     "slug": "le-jardin-rossini-2025",
     "film": "Le Jardin Rossini (2025)",
     "source": "https://tv12.lk21official.cc/le-jardin-rossini-2025",
-    "scraped_at": "2026-09-20T13:23:09.449Z",
+    "scraped_at": "2026-09-22T13:13:05.143Z",
     "players": [
       {
         "no": 1,
@@ -6328,7 +6904,7 @@
     "slug": "doc-west-2009",
     "film": "Doc West (2009)",
     "source": "https://tv12.lk21official.cc/doc-west-2009",
-    "scraped_at": "2026-09-20T13:23:09.886Z",
+    "scraped_at": "2026-09-22T13:13:05.619Z",
     "players": [
       {
         "no": 1,
@@ -6364,7 +6940,7 @@
     "slug": "lamore-sta-bene-su-tutto-2025",
     "film": "L'amore sta bene su tutto (2025)",
     "source": "https://tv12.lk21official.cc/lamore-sta-bene-su-tutto-2025",
-    "scraped_at": "2026-09-20T13:23:10.318Z",
+    "scraped_at": "2026-09-22T13:13:06.124Z",
     "players": [
       {
         "no": 1,
@@ -6400,7 +6976,7 @@
     "slug": "dance-living-2025",
     "film": "Dance of the Living (2025)",
     "source": "https://tv12.lk21official.cc/dance-living-2025",
-    "scraped_at": "2026-09-20T13:23:10.763Z",
+    "scraped_at": "2026-09-22T13:13:07.175Z",
     "players": [
       {
         "no": 1,
@@ -6436,7 +7012,7 @@
     "slug": "this-life-2-those-left-behind-2022",
     "film": "This Life 2: Those Left Behind (2022)",
     "source": "https://tv12.lk21official.cc/this-life-2-those-left-behind-2022",
-    "scraped_at": "2026-09-20T13:23:11.191Z",
+    "scraped_at": "2026-09-22T13:13:07.641Z",
     "players": [
       {
         "no": 1,
@@ -6472,7 +7048,7 @@
     "slug": "sleepwalker-2026",
     "film": "Sleepwalker (2026)",
     "source": "https://tv12.lk21official.cc/sleepwalker-2026",
-    "scraped_at": "2026-09-20T13:23:11.639Z",
+    "scraped_at": "2026-09-22T13:13:08.227Z",
     "players": [
       {
         "no": 1,
@@ -6508,7 +7084,7 @@
     "slug": "penny-lane-dead-2025",
     "film": "Penny Lane Is Dead (2025)",
     "source": "https://tv12.lk21official.cc/penny-lane-dead-2025",
-    "scraped_at": "2026-09-20T13:23:12.084Z",
+    "scraped_at": "2026-09-22T13:13:08.766Z",
     "players": [
       {
         "no": 1,
@@ -6544,7 +7120,7 @@
     "slug": "last-scene-2026",
     "film": "The Last Scene (2026)",
     "source": "https://tv12.lk21official.cc/last-scene-2026",
-    "scraped_at": "2026-09-20T13:23:12.531Z",
+    "scraped_at": "2026-09-22T13:13:09.300Z",
     "players": [
       {
         "no": 1,
@@ -6580,7 +7156,7 @@
     "slug": "deadlocked-dad-dead-2026",
     "film": "Deadlocked: Dad of the Dead (2026)",
     "source": "https://tv12.lk21official.cc/deadlocked-dad-dead-2026",
-    "scraped_at": "2026-09-20T13:23:12.965Z",
+    "scraped_at": "2026-09-22T13:13:09.813Z",
     "players": [
       {
         "no": 1,
@@ -6616,7 +7192,7 @@
     "slug": "contamination-2025",
     "film": "Contamination (2025)",
     "source": "https://tv12.lk21official.cc/contamination-2025",
-    "scraped_at": "2026-09-20T13:23:13.399Z",
+    "scraped_at": "2026-09-22T13:13:10.306Z",
     "players": [
       {
         "no": 1,
@@ -6652,7 +7228,7 @@
     "slug": "secret-woman-2026",
     "film": "The Secret Woman (2026)",
     "source": "https://tv12.lk21official.cc/secret-woman-2026",
-    "scraped_at": "2026-09-20T13:23:13.820Z",
+    "scraped_at": "2026-09-22T13:13:10.818Z",
     "players": [
       {
         "no": 1,
@@ -6688,7 +7264,7 @@
     "slug": "sword-trust-2019",
     "film": "Sword of Trust (2019)",
     "source": "https://tv12.lk21official.cc/sword-trust-2019",
-    "scraped_at": "2026-09-20T13:23:14.252Z",
+    "scraped_at": "2026-09-22T13:13:12.033Z",
     "players": [
       {
         "no": 1,
@@ -6724,7 +7300,7 @@
     "slug": "whisper-man-2026",
     "film": "The Whisper Man (2026)",
     "source": "https://tv12.lk21official.cc/whisper-man-2026",
-    "scraped_at": "2026-09-20T13:23:14.678Z",
+    "scraped_at": "2026-09-22T13:13:12.515Z",
     "players": [
       {
         "no": 1,
@@ -6760,7 +7336,7 @@
     "slug": "odyssey-most-epic-voyage-all-time-2026",
     "film": "The Odyssey: The Most Epic Voyage of all Time (2026)",
     "source": "https://tv12.lk21official.cc/odyssey-most-epic-voyage-all-time-2026",
-    "scraped_at": "2026-09-20T13:23:15.113Z",
+    "scraped_at": "2026-09-22T13:13:12.965Z",
     "players": [
       {
         "no": 1,
@@ -6796,7 +7372,7 @@
     "slug": "turning-point-2022",
     "film": "Turning Point (2022)",
     "source": "https://tv12.lk21official.cc/turning-point-2022",
-    "scraped_at": "2026-09-20T13:23:15.536Z",
+    "scraped_at": "2026-09-22T13:13:13.519Z",
     "players": [
       {
         "no": 1,
@@ -6832,7 +7408,7 @@
     "slug": "praying-mantis-2025",
     "film": "Praying Mantis (2025)",
     "source": "https://tv12.lk21official.cc/praying-mantis-2025",
-    "scraped_at": "2026-09-20T13:23:15.955Z",
+    "scraped_at": "2026-09-22T13:13:14.014Z",
     "players": [
       {
         "no": 1,
@@ -6868,7 +7444,7 @@
     "slug": "detective-conan-shinichi-kudos-written-challenge-2006",
     "film": "Detective Conan: Shinichi Kudo's Written Challenge (2006)",
     "source": "https://tv12.lk21official.cc/detective-conan-shinichi-kudos-written-challenge-2006",
-    "scraped_at": "2026-09-20T13:23:16.402Z",
+    "scraped_at": "2026-09-22T13:13:14.497Z",
     "players": [
       {
         "no": 1,
@@ -6904,7 +7480,7 @@
     "slug": "babita-singh-reporting-2026",
     "film": "Babita Singh Reporting (2026)",
     "source": "https://tv12.lk21official.cc/babita-singh-reporting-2026",
-    "scraped_at": "2026-09-20T13:23:16.828Z",
+    "scraped_at": "2026-09-22T13:13:15.055Z",
     "players": [
       {
         "no": 1,
@@ -6940,7 +7516,7 @@
     "slug": "pins-needles-2024",
     "film": "Pins & Needles (2024)",
     "source": "https://tv12.lk21official.cc/pins-needles-2024",
-    "scraped_at": "2026-09-20T13:23:17.254Z",
+    "scraped_at": "2026-09-22T13:13:15.554Z",
     "players": [
       {
         "no": 1,
@@ -6976,7 +7552,7 @@
     "slug": "grand-theft-auto-vi-extended-look-2026",
     "film": "Grand Theft Auto VI: An Extended Look (2026)",
     "source": "https://tv12.lk21official.cc/grand-theft-auto-vi-extended-look-2026",
-    "scraped_at": "2026-09-20T13:23:17.658Z",
+    "scraped_at": "2026-09-22T13:13:16.099Z",
     "players": [
       {
         "no": 1,
@@ -7012,7 +7588,7 @@
     "slug": "night-king-2026",
     "film": "Night King (2026)",
     "source": "https://tv12.lk21official.cc/night-king-2026",
-    "scraped_at": "2026-09-20T13:23:18.083Z",
+    "scraped_at": "2026-09-22T13:13:16.613Z",
     "players": [
       {
         "no": 1,
@@ -7048,7 +7624,7 @@
     "slug": "final-piece-2025",
     "film": "The Final Piece (2025)",
     "source": "https://tv12.lk21official.cc/final-piece-2025",
-    "scraped_at": "2026-09-20T13:23:18.507Z",
+    "scraped_at": "2026-09-22T13:13:17.083Z",
     "players": [
       {
         "no": 1,
@@ -7084,7 +7660,7 @@
     "slug": "choir-god-2025",
     "film": "Choir of God (2025)",
     "source": "https://tv12.lk21official.cc/choir-god-2025",
-    "scraped_at": "2026-09-20T13:23:18.934Z",
+    "scraped_at": "2026-09-22T13:13:17.551Z",
     "players": [
       {
         "no": 1,
@@ -7120,7 +7696,7 @@
     "slug": "visitors-complete-edition-2023",
     "film": "Visitors - Complete Edition (2023)",
     "source": "https://tv12.lk21official.cc/visitors-complete-edition-2023",
-    "scraped_at": "2026-09-20T13:23:19.359Z",
+    "scraped_at": "2026-09-22T13:13:18.020Z",
     "players": [
       {
         "no": 1,
@@ -7156,7 +7732,7 @@
     "slug": "gohan-2026",
     "film": "Gohan (2026)",
     "source": "https://tv12.lk21official.cc/gohan-2026",
-    "scraped_at": "2026-09-20T13:23:19.786Z",
+    "scraped_at": "2026-09-22T13:13:18.769Z",
     "players": [
       {
         "no": 1,
@@ -7192,7 +7768,7 @@
     "slug": "narsata-sekutu-setan-2026",
     "film": "Nar'sata: Sekutu Setan (2026)",
     "source": "https://tv12.lk21official.cc/narsata-sekutu-setan-2026",
-    "scraped_at": "2026-09-20T13:23:20.207Z",
+    "scraped_at": "2026-09-22T13:13:19.285Z",
     "players": [
       {
         "no": 1,
@@ -7228,7 +7804,7 @@
     "slug": "adorable-humans-2025",
     "film": "Adorable Humans (2025)",
     "source": "https://tv12.lk21official.cc/adorable-humans-2025",
-    "scraped_at": "2026-09-20T13:23:20.632Z",
+    "scraped_at": "2026-09-22T13:13:19.756Z",
     "players": [
       {
         "no": 1,
@@ -7264,7 +7840,7 @@
     "slug": "harry-potter-sorcerers-stone-extended-2001",
     "film": "Harry Potter and the Sorcerer's Stone (2001)",
     "source": "https://tv12.lk21official.cc/harry-potter-sorcerers-stone-extended-2001",
-    "scraped_at": "2026-09-20T13:23:21.053Z",
+    "scraped_at": "2026-09-22T13:13:20.220Z",
     "players": [
       {
         "no": 1,
@@ -7300,7 +7876,7 @@
     "slug": "witness-2019",
     "film": "Innocent Witness (2019)",
     "source": "https://tv12.lk21official.cc/witness-2019",
-    "scraped_at": "2026-09-20T13:23:21.485Z",
+    "scraped_at": "2026-09-22T13:13:20.683Z",
     "players": [
       {
         "no": 1,
@@ -7329,7 +7905,7 @@
     "slug": "snare-2025",
     "film": "The Snare (2025)",
     "source": "https://tv12.lk21official.cc/snare-2025",
-    "scraped_at": "2026-09-20T13:23:21.912Z",
+    "scraped_at": "2026-09-22T13:13:21.264Z",
     "players": [
       {
         "no": 1,
@@ -7365,7 +7941,7 @@
     "slug": "gintama-yoshiwara-flames-2026",
     "film": "Gintama: Yoshiwara in Flames (2026)",
     "source": "https://tv12.lk21official.cc/gintama-yoshiwara-flames-2026",
-    "scraped_at": "2026-09-20T13:23:22.352Z",
+    "scraped_at": "2026-09-22T13:13:21.793Z",
     "players": [
       {
         "no": 1,
@@ -7401,7 +7977,7 @@
     "slug": "last-sunrise-2026",
     "film": "The Last Sunrise (2026)",
     "source": "https://tv12.lk21official.cc/last-sunrise-2026",
-    "scraped_at": "2026-09-20T13:23:22.781Z",
+    "scraped_at": "2026-09-22T13:13:22.318Z",
     "players": [
       {
         "no": 1,
@@ -7437,7 +8013,7 @@
     "slug": "sunny-dancer-2026",
     "film": "Sunny Dancer (2026)",
     "source": "https://tv12.lk21official.cc/sunny-dancer-2026",
-    "scraped_at": "2026-09-20T13:23:23.205Z",
+    "scraped_at": "2026-09-22T13:13:22.868Z",
     "players": [
       {
         "no": 1,
@@ -7473,7 +8049,7 @@
     "slug": "just-illusion-2026",
     "film": "Just an Illusion (2026)",
     "source": "https://tv12.lk21official.cc/just-illusion-2026",
-    "scraped_at": "2026-09-20T13:23:23.638Z",
+    "scraped_at": "2026-09-22T13:13:23.329Z",
     "players": [
       {
         "no": 1,
@@ -7509,7 +8085,7 @@
     "slug": "home-2026",
     "film": "Home (2026)",
     "source": "https://tv12.lk21official.cc/home-2026",
-    "scraped_at": "2026-09-20T13:23:24.093Z",
+    "scraped_at": "2026-09-22T13:13:23.791Z",
     "players": [
       {
         "no": 1,
@@ -7545,7 +8121,7 @@
     "slug": "somebody-2024",
     "film": "Somebody (2024)",
     "source": "https://tv12.lk21official.cc/somebody-2024",
-    "scraped_at": "2026-09-20T13:23:24.524Z",
+    "scraped_at": "2026-09-22T13:13:24.247Z",
     "players": [
       {
         "no": 1,
@@ -7581,7 +8157,7 @@
     "slug": "batman-knightfall-part-1-knightfall-2026",
     "film": "Batman: Knightfall - Part 1: Knightfall (2026)",
     "source": "https://tv12.lk21official.cc/batman-knightfall-part-1-knightfall-2026",
-    "scraped_at": "2026-09-20T13:23:24.960Z",
+    "scraped_at": "2026-09-22T13:13:24.753Z",
     "players": [
       {
         "no": 1,
@@ -7617,7 +8193,7 @@
     "slug": "memory-princess-mumbi-2025",
     "film": "Memory of Princess Mumbi (2025)",
     "source": "https://tv12.lk21official.cc/memory-princess-mumbi-2025",
-    "scraped_at": "2026-09-20T13:23:25.385Z",
+    "scraped_at": "2026-09-22T13:13:25.266Z",
     "players": [
       {
         "no": 1,
@@ -7653,7 +8229,7 @@
     "slug": "islands-islas-2025",
     "film": "Islands - Islas (2025)",
     "source": "https://tv12.lk21official.cc/islands-islas-2025",
-    "scraped_at": "2026-09-20T13:23:25.812Z",
+    "scraped_at": "2026-09-22T13:13:25.771Z",
     "players": [
       {
         "no": 1,
@@ -7689,7 +8265,7 @@
     "slug": "haunted-mountains-yellow-taboo-2025",
     "film": "Haunted Mountains: The Yellow Taboo (2025)",
     "source": "https://tv12.lk21official.cc/haunted-mountains-yellow-taboo-2025",
-    "scraped_at": "2026-09-20T13:23:26.242Z",
+    "scraped_at": "2026-09-22T13:13:26.241Z",
     "players": [
       {
         "no": 1,
@@ -7725,7 +8301,7 @@
     "slug": "her-private-hell-2026",
     "film": "Her Private Hell (2026)",
     "source": "https://tv12.lk21official.cc/her-private-hell-2026",
-    "scraped_at": "2026-09-20T13:23:26.678Z",
+    "scraped_at": "2026-09-22T13:13:27.018Z",
     "players": [
       {
         "no": 1,
@@ -7761,7 +8337,7 @@
     "slug": "come-see-1985",
     "film": "Come and See (1985)",
     "source": "https://tv12.lk21official.cc/come-see-1985",
-    "scraped_at": "2026-09-20T13:23:27.143Z",
+    "scraped_at": "2026-09-22T13:13:27.478Z",
     "players": [
       {
         "no": 1,
@@ -7797,7 +8373,7 @@
     "slug": "testimony-vince-young-2026",
     "film": "The Testimony of Vince Young (2026)",
     "source": "https://tv12.lk21official.cc/testimony-vince-young-2026",
-    "scraped_at": "2026-09-20T13:23:27.581Z",
+    "scraped_at": "2026-09-22T13:13:27.940Z",
     "players": [
       {
         "no": 1,
@@ -7833,7 +8409,7 @@
     "slug": "motor-city-2025",
     "film": "Motor City (2025)",
     "source": "https://tv12.lk21official.cc/motor-city-2025",
-    "scraped_at": "2026-09-20T13:23:28.007Z",
+    "scraped_at": "2026-09-22T13:13:28.398Z",
     "players": [
       {
         "no": 1,
@@ -7869,7 +8445,7 @@
     "slug": "hadestown-musical-2026",
     "film": "Hadestown: The Musical (2026)",
     "source": "https://tv12.lk21official.cc/hadestown-musical-2026",
-    "scraped_at": "2026-09-20T13:23:28.437Z",
+    "scraped_at": "2026-09-22T13:13:28.861Z",
     "players": [
       {
         "no": 1,
@@ -7905,7 +8481,7 @@
     "slug": "above-below-2026",
     "film": "Above and Below (2026)",
     "source": "https://tv12.lk21official.cc/above-below-2026",
-    "scraped_at": "2026-09-20T13:23:28.876Z",
+    "scraped_at": "2026-09-22T13:13:29.314Z",
     "players": [
       {
         "no": 1,
@@ -7933,582 +8509,6 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/qp52kpexrcaShfIGWBYmdg",
-        "default": false
-      }
-    ]
-  },
-  "woodwalkers-2-2026": {
-    "slug": "woodwalkers-2-2026",
-    "film": "Woodwalkers 2 (2026)",
-    "source": "https://tv12.lk21official.cc/woodwalkers-2-2026",
-    "scraped_at": "2026-09-20T13:23:29.301Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/bjwIa3srlBmhR8debaLblA",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/Fm0E3w1ZwljUZ8hIYxqjsg",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/pJW9yC0ikYcqTcAlA9QBiA",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-cM5DVeGp0vuu74ZX3U8-Q",
-        "default": false
-      }
-    ]
-  },
-  "look-out-officer-1990": {
-    "slug": "look-out-officer-1990",
-    "film": "Look Out, Officer! (1990)",
-    "source": "https://tv12.lk21official.cc/look-out-officer-1990",
-    "scraped_at": "2026-09-20T13:23:29.732Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/K9Wj8mjNAci4efZKDwJSgQ",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/zIUrijO-lbgt2lWMelSlow",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/jTb_SoGGEpYqxP46i64eZA",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/WtYqgFXGW6dZG5aE49XvBQ",
-        "default": false
-      }
-    ]
-  },
-  "cmon-cmon-2021": {
-    "slug": "cmon-cmon-2021",
-    "film": "C'mon C'mon (2021)",
-    "source": "https://tv12.lk21official.cc/cmon-cmon-2021",
-    "scraped_at": "2026-09-20T13:23:30.135Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/4MibyIUWrfVGTlH0V74Oqw",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/LDNYvdzsckYdNgxtkaUkrg",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/olrFKOaIxG-DQukwlB_byw",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HoNd0bxrE3yJHWLkdN7CbQ",
-        "default": false
-      }
-    ]
-  },
-  "main-vaapas-aaunga-2026": {
-    "slug": "main-vaapas-aaunga-2026",
-    "film": "Main Vaapas Aaunga (2026)",
-    "source": "https://tv12.lk21official.cc/main-vaapas-aaunga-2026",
-    "scraped_at": "2026-09-20T13:23:30.565Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/WYOETgJx35Sxexb19CaPhw",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/ig5rdXNHN8dWyWmXa4oQjw",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/IQfV6IGBoROqy4jE1xSqLw",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Kc-JDkjHrqXgKUWcXsPyqQ",
-        "default": false
-      }
-    ]
-  },
-  "iracema-2024": {
-    "slug": "iracema-2024",
-    "film": "Iracema (2024)",
-    "source": "https://tv12.lk21official.cc/iracema-2024",
-    "scraped_at": "2026-09-20T13:23:31.001Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/dwzr62L-ZwmLEJuWiRpmsQ",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/AAVZ8b7RdG3k9WcAjrd0Fg",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/wLy3wbDIh9VcWb7z5eNaMA",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/AhohhFBrROCUa-MT38a8og",
-        "default": false
-      }
-    ]
-  },
-  "stella-next-me-2025": {
-    "slug": "stella-next-me-2025",
-    "film": "Stella Next to Me (2025)",
-    "source": "https://tv12.lk21official.cc/stella-next-me-2025",
-    "scraped_at": "2026-09-20T13:23:31.442Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/72ZgWuuGi9V23LAi19gzCg",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/KIWU8dWZfj9S5XyqWY_d6Q",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/hUlOWYF-wwjeg7xYQaDdSA",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/u0zzUa4P_AKCSGP6LMOwtA",
-        "default": false
-      }
-    ]
-  },
-  "lean-me-1989": {
-    "slug": "lean-me-1989",
-    "film": "Lean on Me (1989)",
-    "source": "https://tv12.lk21official.cc/lean-me-1989",
-    "scraped_at": "2026-09-20T13:23:31.874Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/pbteUVI1C1_n5fvhxF7UqA",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/HSIdtfS0ulDTkVzVN37fZA",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/W5xvD5K4yvhGXJfrB73Y1A",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Lgybdx3Beez6IoxcrhxTfQ",
-        "default": false
-      }
-    ]
-  },
-  "jana-nayagan-2026": {
-    "slug": "jana-nayagan-2026",
-    "film": "Jana Nayagan (2026)",
-    "source": "https://tv12.lk21official.cc/jana-nayagan-2026",
-    "scraped_at": "2026-09-20T13:23:32.308Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/6BwPK8UteWXEE_edWY4ggQ",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/jebHbg3NCq-RLdeO_QU07Q",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/0Nuy0N5a1OmK1TKiFWH_3A",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/jhjBCGUd5LLtxjaCsXz13Q",
-        "default": false
-      }
-    ]
-  },
-  "angels-melancholia-2009": {
-    "slug": "angels-melancholia-2009",
-    "film": "The Angels' Melancholia (2009)",
-    "source": "https://tv12.lk21official.cc/angels-melancholia-2009",
-    "scraped_at": "2026-09-20T13:23:32.738Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/eARz-yG4Bd7BxZKU25Ulew",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/vaHkvBN-puobvEHOwsivqw",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/g6cnnYaEYbLsuu66385olA",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/3ZcNm1F43TznokzJTI4wRQ",
-        "default": false
-      }
-    ]
-  },
-  "rangitaranga-2015": {
-    "slug": "rangitaranga-2015",
-    "film": "RangiTaranga (2015)",
-    "source": "https://tv12.lk21official.cc/rangitaranga-2015",
-    "scraped_at": "2026-09-20T13:23:33.154Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/AUYG8SEAruAr9NcBM931dQ",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/K2bTXrvrroP3KGC-RuRSFQ",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iHJ02IikII19wWWMimFolQ",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/lQAKY3bH5txHYFUe65U9yA",
-        "default": false
-      }
-    ]
-  },
-  "sacrifice-2025": {
-    "slug": "sacrifice-2025",
-    "film": "Sacrifice (2025)",
-    "source": "https://tv12.lk21official.cc/sacrifice-2025",
-    "scraped_at": "2026-09-20T13:23:33.575Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/TXoVJU-bMh-Z_qSmq4i1bw",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/41v9UDuvD5t2g3OxuQViMA",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/LNTLuYiDB4583uR2ETmrag",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/F6NZGoMcyHhq2jcKgq-hkQ",
-        "default": false
-      }
-    ]
-  },
-  "insidious-out-further-2026": {
-    "slug": "insidious-out-further-2026",
-    "film": "Insidious: Out of the Further (2026)",
-    "source": "https://tv12.lk21official.cc/insidious-out-further-2026",
-    "scraped_at": "2026-09-20T13:23:33.992Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/-Vb4-m2_yg9K9vIfV8hddQ",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/DdAd1nt5Wc6kqQ6Llu3jjg",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/aMjEiI4o3S7LaUxfAJ48OQ",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Odl_Euzj8_rI_bSHtgvzNQ",
-        "default": false
-      }
-    ]
-  },
-  "my-country-2025": {
-    "slug": "my-country-2025",
-    "film": "For My Country (2025)",
-    "source": "https://tv12.lk21official.cc/my-country-2025",
-    "scraped_at": "2026-09-20T13:23:34.412Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/6DB_jXUOBW0I1lRHdLgJJQ",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/FpgIA8VBIjtJ7gfxFdUQMQ",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/eiM82dTtqbrfLkFHQLUnlw",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-kzRFeJQ_O-SW3M-MUshiw",
-        "default": false
-      }
-    ]
-  },
-  "corpse-2-2026": {
-    "slug": "corpse-2-2026",
-    "film": "The Corpse 2 (2026)",
-    "source": "https://tv12.lk21official.cc/corpse-2-2026",
-    "scraped_at": "2026-09-20T13:23:34.839Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/zMhAUaLUWuW0uTXfcPRe8g",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/0x-xgwYPD2nWrZVtwKI0TA",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/O90Hmy1UjwK1Hg4o_qcDMw",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/0ThlBxK5-AMPWtchPcCNCA",
-        "default": false
-      }
-    ]
-  },
-  "5-bomoh-2026": {
-    "slug": "5-bomoh-2026",
-    "film": "5 Bomoh (2026)",
-    "source": "https://tv12.lk21official.cc/5-bomoh-2026",
-    "scraped_at": "2026-09-20T13:23:35.255Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/gtmeODdJclsIYJIa2ttG4w",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/3h97UR2Pkbp1Ucam0gKKjA",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/ZI-F1MfKPE0xegeXCH_wmQ",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GpqV1fN3BjduzoiNtJfdXA",
-        "default": false
-      }
-    ]
-  },
-  "see-you-tomorrow-da-bao-2025": {
-    "slug": "see-you-tomorrow-da-bao-2025",
-    "film": "See You Tomorrow Da Bao (2025)",
-    "source": "https://tv12.lk21official.cc/see-you-tomorrow-da-bao-2025",
-    "scraped_at": "2026-09-20T13:23:35.673Z",
-    "players": [
-      {
-        "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/CphuMBMX781ETp9zhto5Ig",
-        "default": true
-      },
-      {
-        "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/DBG7YpqLMSBBUIppm1Tr-A",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Zpp8BhG2xS7Z1pxv_q9ebQ",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "hydrax",
-        "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/PJxnZ1IsvYyz1YTo7_TSVQ",
         "default": false
       }
     ]
