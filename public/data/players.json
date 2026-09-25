@@ -8587,5 +8587,101 @@
         "default": false
       }
     ]
+  },
+  "andragogy": {
+    "slug": "andragogy",
+    "film": "Andragogy (2023)",
+    "source": "https://otherindia.org/andragogy/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-25T20:24:12.631Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "embed",
+        "label": "Server 1",
+        "url": "https://www.youtube.com/embed/AotfGTkEWa0",
+        "default": true
+      }
+    ]
+  },
+  "janin-iblis-neraka": {
+    "slug": "janin-iblis-neraka",
+    "film": "Janin Iblis Neraka (2023)",
+    "source": "https://otherindia.org/janin-iblis-neraka/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-25T20:24:12.632Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "embed",
+        "label": "Server 1",
+        "url": "https://www.youtube.com/embed/Jhc3lTqUe_o",
+        "default": true
+      }
+    ]
+  },
+  "mohon-doa-restu": {
+    "slug": "mohon-doa-restu",
+    "film": "Mohon Doa Restu (2016)",
+    "source": "https://otherindia.org/mohon-doa-restu/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-25T20:24:12.632Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "embed",
+        "label": "Server 1",
+        "url": "https://www.youtube.com/embed/S0cOiwsPpo4",
+        "default": true
+      }
+    ]
+  },
+  "pamali-dusun-pocong": {
+    "slug": "pamali-dusun-pocong",
+    "film": "Pamali: Dusun Pocong (2023)",
+    "source": "https://otherindia.org/pamali-dusun-pocong/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-25T20:24:12.632Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "embed",
+        "label": "Server 1",
+        "url": "https://www.youtube.com/embed/noFWKx8laVA",
+        "default": true
+      }
+    ]
+  },
+  "siksa-neraka": {
+    "slug": "siksa-neraka",
+    "film": "Siksa Neraka (2023)",
+    "source": "https://otherindia.org/siksa-neraka/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-25T20:24:12.632Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "embed",
+        "label": "Server 1",
+        "url": "https://www.youtube.com/embed/Q3bWmyvyA-I",
+        "default": true
+      }
+    ]
+  },
+  "ritual": {
+    "slug": "ritual",
+    "film": "Ritual (2019)",
+    "source": "https://otherindia.org/ritual/",
+    "catalog": "indonesia",
+    "scraped_at": "2026-09-25T20:24:12.632Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "embed",
+        "label": "Server 1",
+        "url": "https://www.youtube.com/embed/6yYozUoUfFc",
+        "default": true
+      }
+    ]
   }
 }
