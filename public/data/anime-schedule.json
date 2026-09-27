@@ -1,6 +1,6 @@
 {
   "source": "https://v2.samehadaku.how/jadwal-rilis/",
-  "scraped_at": "2026-09-27T07:40:03.633Z",
+  "scraped_at": "2026-09-27T20:04:56.042Z",
   "timezone": "Asia/Jakarta",
   "days": [
     {
@@ -12,7 +12,7 @@
           "judul": "One Piece",
           "nama": "One Piece",
           "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2020/04/E5RxYkWX0AAwdGH.png.jpg",
-          "rating": "8.73",
+          "rating": "8.72",
           "type": "TV",
           "genre": [
             "Action",
@@ -20,6 +20,20 @@
           ],
           "time": "00:00",
           "source": "https://v2.samehadaku.how/anime/one-piece/"
+        },
+        {
+          "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3",
+          "judul": "Tensei Kizoku Kantei Skill de Nariagaru Season 3",
+          "nama": "Tensei Kizoku Kantei Skill de Nariagaru Season 3",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/159859.jpg",
+          "rating": "",
+          "type": "TV",
+          "genre": [
+            "Adventure",
+            "Fantasy"
+          ],
+          "time": "01:00",
+          "source": "https://v2.samehadaku.how/anime/tensei-kizoku-kantei-skill-de-nariagaru-season-3/"
         }
       ]
     },
@@ -192,20 +206,6 @@
           "source": "https://v2.samehadaku.how/anime/mairimashita-iruma-kun-season-4/"
         },
         {
-          "slug": "mushoku-tensei-isekai-ittara-honki-dasu-season-3",
-          "judul": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
-          "nama": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158340.jpg",
-          "rating": "",
-          "type": "TV",
-          "genre": [
-            "Adventure",
-            "Drama"
-          ],
-          "time": "21:30",
-          "source": "https://v2.samehadaku.how/anime/mushoku-tensei-isekai-ittara-honki-dasu-season-3/"
-        },
-        {
           "slug": "bleach-sennen-kessen-hen-kashin-tan-cour-4",
           "judul": "Bleach: Sennen Kessen-hen - Kashin-tan (Cour 4)",
           "nama": "Bleach: Sennen Kessen-hen - Kashin-tan (Cour 4)",
@@ -226,6 +226,20 @@
       "label": "Minggu",
       "items": [
         {
+          "slug": "overgeared",
+          "judul": "Overgeared",
+          "nama": "Overgeared",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx212888-NhyvqPt5aIuJ.jpg",
+          "rating": "",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Fantasy"
+          ],
+          "time": "",
+          "source": "https://v2.samehadaku.how/anime/overgeared/"
+        },
+        {
           "slug": "digimon-beatbreak",
           "judul": "Digimon Beatbreak",
           "nama": "Digimon Beatbreak",
@@ -238,20 +252,6 @@
           ],
           "time": "12:30",
           "source": "https://v2.samehadaku.how/anime/digimon-beatbreak/"
-        },
-        {
-          "slug": "nijusseiki-denki-mokuroku",
-          "judul": "Nijusseiki Denki Mokuroku",
-          "nama": "Nijusseiki Denki Mokuroku",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx103303-ORmCjr9wDgbM.jpg",
-          "rating": "7.72",
-          "type": "TV",
-          "genre": [
-            "Drama",
-            "Historical"
-          ],
-          "time": "23:45",
-          "source": "https://v2.samehadaku.how/anime/nijusseiki-denki-mokuroku/"
         }
       ]
     }
