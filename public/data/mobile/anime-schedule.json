@@ -1,6 +1,6 @@
 {
   "source": "https://v2.samehadaku.how/jadwal-rilis/",
-  "scraped_at": "2026-09-30T08:03:02.552Z",
+  "scraped_at": "2026-10-01T21:49:29.210Z",
   "timezone": "Asia/Jakarta",
   "days": [
     {
@@ -46,6 +46,20 @@
       "day": "wednesday",
       "label": "Rabu",
       "items": [
+        {
+          "slug": "tensei-shitara-ken-deshita-s2",
+          "judul": "Tensei shitara Ken deshita S2",
+          "nama": "Tensei shitara Ken deshita S2",
+          "thumbnail": "https://v2.samehadaku.how/null",
+          "rating": "7.52",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Adventure"
+          ],
+          "time": "",
+          "source": "https://v2.samehadaku.how/anime/tensei-shitara-ken-deshita-s2/"
+        },
         {
           "slug": "sora-wa-akai-kawa-no-hotori",
           "judul": "Sora wa Akai Kawa no Hotori",
@@ -93,22 +107,7 @@
     {
       "day": "thursday",
       "label": "Kamis",
-      "items": [
-        {
-          "slug": "tomb-raider-king",
-          "judul": "Tomb Raider King",
-          "nama": "Tomb Raider King",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tomb-Rider-King-v2.jpg",
-          "rating": "6.63",
-          "type": "TV",
-          "genre": [
-            "Action",
-            "Adventure"
-          ],
-          "time": "03:00",
-          "source": "https://v2.samehadaku.how/anime/tomb-raider-king/"
-        }
-      ]
+      "items": []
     },
     {
       "day": "friday",
@@ -119,7 +118,7 @@
           "judul": "Tsuihou sareta Tensei Juukishi wa Game",
           "nama": "Tsuihou sareta Tensei Juukishi wa Game",
           "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tsuihou-sareta-Tensei-Juukishi-wa-Game.jpg",
-          "rating": "6.81",
+          "rating": "6.83",
           "type": "TV",
           "genre": [
             "Action",
