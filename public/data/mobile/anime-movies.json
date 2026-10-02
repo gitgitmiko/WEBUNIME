@@ -2,6 +2,3058 @@
   {
     "type": "anime-movie",
     "source_site": "samehadaku",
+    "nama": "One Piece",
+    "judul": "One Piece",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime One Piece.",
+    "related": [],
+    "slug": "one-piece",
+    "source": "https://v2.samehadaku.how/anime/one-piece/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "One Piece",
+        "slug": "one-piece-episode-1180",
+        "source": "https://v2.samehadaku.how/one-piece-episode-1180/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxyXM_n3GbOCUc4Z0Ym6rv-GebQM8DrQSLTc9nAcJI5yPAQ5zmQLi-omUbKqP-pEP14GuRkDU1ubQ_A7k8Oum0xJTjHJn9P_vVhbTuh3fD-SudvociGP0jzagC6QqnBQ47HT-bp",
+            "default": true,
+            "post": "54232",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/lz604t1hQx",
+            "default": false,
+            "post": "54232",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/t3ZllAZK#KRH51PqrySHEwnzh5dazSkD5oKB_8ykxsfb2pozVxPE",
+            "default": false,
+            "post": "54232",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/hrhHVBbB#j6lxVcfifDj3aXtbpzjPnqO8UgPLK6St8hqiYDGpYpo",
+            "default": false,
+            "post": "54232",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/Zjpn3QrK#szPWjYK32TZ2ULKvfccnAyqJ8b26_S3QLg0GxOkXuZ0",
+            "default": false,
+            "post": "54232",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega-4k",
+            "label": "Mega 4K",
+            "url": "https://mega.nz/embed/1uxQ3RhL#9kB5YQI_5tllcnYLL4MIBau8nKyfnT-W4-xE5ehdsNk",
+            "default": false,
+            "post": "54232",
+            "nume": "6"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxyXM_n3GbOCUc4Z0Ym6rv-GebQM8DrQSLTc9nAcJI5yPAQ5zmQLi-omUbKqP-pEP14GuRkDU1ubQ_A7k8Oum0xJTjHJn9P_vVhbTuh3fD-SudvociGP0jzagC6QqnBQ47HT-bp",
+        "default": true,
+        "post": "54232",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/lz604t1hQx",
+        "default": false,
+        "post": "54232",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/t3ZllAZK#KRH51PqrySHEwnzh5dazSkD5oKB_8ykxsfb2pozVxPE",
+        "default": false,
+        "post": "54232",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/hrhHVBbB#j6lxVcfifDj3aXtbpzjPnqO8UgPLK6St8hqiYDGpYpo",
+        "default": false,
+        "post": "54232",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/Zjpn3QrK#szPWjYK32TZ2ULKvfccnAyqJ8b26_S3QLg0GxOkXuZ0",
+        "default": false,
+        "post": "54232",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega-4k",
+        "label": "Mega 4K",
+        "url": "https://mega.nz/embed/1uxQ3RhL#9kB5YQI_5tllcnYLL4MIBau8nKyfnT-W4-xE5ehdsNk",
+        "default": false,
+        "post": "54232",
+        "nume": "6"
+      }
+    ],
+    "id": 1,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "One Punch Man Season 3",
+    "judul": "One Punch Man Season 3",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime One Punch Man Season 3.",
+    "related": [],
+    "slug": "one-punch-man-season-3",
+    "source": "https://v2.samehadaku.how/anime/one-punch-man-season-3/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "One Punch Man Season 3",
+        "slug": "one-punch-man-season-3-episode-12-end",
+        "source": "https://v2.samehadaku.how/one-punch-man-season-3-episode-12-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot 360p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxrRIswcbSsNJcdPSz92MIYbZhop225FvpZ0MetLsCvP2_boW5c6qaqoWt9NJlKcZXbRARvrlm1_BDOMZ_1C9Ee17JtPWfce5xLA38diSSzMl3iFr1O_2HnDOEK-S9t72EYeV4",
+            "default": true,
+            "post": "47525",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/4307e7f2-4ff3-4064-a6d8-ae5dbcd7eea5",
+            "default": false,
+            "post": "47525",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/OPM-S3-12-END-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "47525",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 1080p",
+            "url": "https://s0.wibufile.com/video01/OPM-S3-12-END-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "47525",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/qBVRRbaa#UXijgHhCy_OCFItStsE2MfjFbYtaQ43mc1AgTUOCM-s",
+            "default": false,
+            "post": "47525",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/HwYyCChL#cH4QVag9ouJ2VsrUQnI-flG_-2469DH46Uc6OvaX1Kc",
+            "default": false,
+            "post": "47525",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/HdklBQ5D#-9nKna8p9EnF-W-iwPEOsckQnJDbL-xjkhJkJ-pLJ0I",
+            "default": false,
+            "post": "47525",
+            "nume": "7"
+          },
+          {
+            "no": 8,
+            "server": "pucuk",
+            "label": "Pucuk 480p",
+            "url": "https://filedon.co/embed/DfFpywIyk9",
+            "default": false,
+            "post": "47525",
+            "nume": "8"
+          },
+          {
+            "no": 9,
+            "server": "pucuk",
+            "label": "Pucuk 720p",
+            "url": "https://filedon.co/embed/14bYvTQBh6",
+            "default": false,
+            "post": "47525",
+            "nume": "9"
+          },
+          {
+            "no": 10,
+            "server": "pucuk",
+            "label": "Pucuk 1080p",
+            "url": "https://filedon.co/embed/BNEW5aeMZc",
+            "default": false,
+            "post": "47525",
+            "nume": "10"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxrRIswcbSsNJcdPSz92MIYbZhop225FvpZ0MetLsCvP2_boW5c6qaqoWt9NJlKcZXbRARvrlm1_BDOMZ_1C9Ee17JtPWfce5xLA38diSSzMl3iFr1O_2HnDOEK-S9t72EYeV4",
+        "default": true,
+        "post": "47525",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/4307e7f2-4ff3-4064-a6d8-ae5dbcd7eea5",
+        "default": false,
+        "post": "47525",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "wibufile",
+        "label": "Wibufile 720p",
+        "url": "https://s0.wibufile.com/video01/OPM-S3-12-END-MP4HD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "47525",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "wibufile",
+        "label": "Wibufile 1080p",
+        "url": "https://s0.wibufile.com/video01/OPM-S3-12-END-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "47525",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/qBVRRbaa#UXijgHhCy_OCFItStsE2MfjFbYtaQ43mc1AgTUOCM-s",
+        "default": false,
+        "post": "47525",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/HwYyCChL#cH4QVag9ouJ2VsrUQnI-flG_-2469DH46Uc6OvaX1Kc",
+        "default": false,
+        "post": "47525",
+        "nume": "6"
+      },
+      {
+        "no": 7,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/HdklBQ5D#-9nKna8p9EnF-W-iwPEOsckQnJDbL-xjkhJkJ-pLJ0I",
+        "default": false,
+        "post": "47525",
+        "nume": "7"
+      },
+      {
+        "no": 8,
+        "server": "pucuk",
+        "label": "Pucuk 480p",
+        "url": "https://filedon.co/embed/DfFpywIyk9",
+        "default": false,
+        "post": "47525",
+        "nume": "8"
+      },
+      {
+        "no": 9,
+        "server": "pucuk",
+        "label": "Pucuk 720p",
+        "url": "https://filedon.co/embed/14bYvTQBh6",
+        "default": false,
+        "post": "47525",
+        "nume": "9"
+      },
+      {
+        "no": 10,
+        "server": "pucuk",
+        "label": "Pucuk 1080p",
+        "url": "https://filedon.co/embed/BNEW5aeMZc",
+        "default": false,
+        "post": "47525",
+        "nume": "10"
+      }
+    ],
+    "id": 2,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2025/10/Boku-no-Hero-Academia-Season-8-225x300.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Sakamoto Days Cour 2",
+    "judul": "Sakamoto Days Cour 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Sakamoto Days Cour 2.",
+    "related": [],
+    "slug": "sakamoto-days-cour-2",
+    "source": "https://v2.samehadaku.how/anime/sakamoto-days-cour-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Sakamoto Days Cour 2",
+        "slug": "sakamoto-days-cour-2-episode-11-end",
+        "source": "https://v2.samehadaku.how/sakamoto-days-cour-2-episode-11-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot 360p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx9VPea2ZNLHj71O5LzBJ4UO3j4ShmjQNgkqEu2EoqxKRAjmvGIxB-iuQ1PI3xeMSP4H-VbRFkHckEjY3GKitap-2_kZoR5_YakN2gZrDsTLmJez_lAl569PrZxC0j9Vbop2T4",
+            "default": true,
+            "post": "45901",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "premium",
+            "label": "Premium 480p",
+            "url": "https://api.wibufile.com/embed/5d22c143-c595-4a2a-a0ea-d520424d9218",
+            "default": false,
+            "post": "45901",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "premium",
+            "label": "Premium 720p",
+            "url": "https://s0.wibufile.com/video01/SakoDay-C2-11-END-MP4HD-v2-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "45901",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "premium",
+            "label": "Premium 1080p",
+            "url": "https://s0.wibufile.com/video01/SakoDay-C2-11-END-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "45901",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/exxU2Z5Z#2nha_RspqxAd9qVDGbDZQ0mwc0JznC4dPPnJ4k65qck",
+            "default": false,
+            "post": "45901",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/igYSUKwL#lkW1yLAkhPdLw9RZXGsuSoIt9pFSakTWGUDLLtMZyM4",
+            "default": false,
+            "post": "45901",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/qwQRwIxI#bSotf1dFS_2jCyuF1-qK-Sb8OO2B7TeFVOqKip5e3ns",
+            "default": false,
+            "post": "45901",
+            "nume": "7"
+          },
+          {
+            "no": 8,
+            "server": "nakama",
+            "label": "Nakama 480p",
+            "url": "https://pixeldrain.com/u/MzRVvx1H",
+            "default": false,
+            "post": "45901",
+            "nume": "8"
+          },
+          {
+            "no": 9,
+            "server": "nakama",
+            "label": "Nakama 720p",
+            "url": "https://pixeldrain.com/u/MCRBAGK8",
+            "default": false,
+            "post": "45901",
+            "nume": "9"
+          },
+          {
+            "no": 10,
+            "server": "nakama",
+            "label": "Nakama 1080p",
+            "url": "https://pixeldrain.com/u/EgzDgqup",
+            "default": false,
+            "post": "45901",
+            "nume": "10"
+          },
+          {
+            "no": 11,
+            "server": "pucuk",
+            "label": "Pucuk 480p",
+            "url": "https://filedon.co/embed/9eX1TDOCYh",
+            "default": false,
+            "post": "45901",
+            "nume": "11"
+          },
+          {
+            "no": 12,
+            "server": "pucuk",
+            "label": "Pucuk 720p",
+            "url": "https://filedon.co/embed/xqWJ9X9eXb",
+            "default": false,
+            "post": "45901",
+            "nume": "12"
+          },
+          {
+            "no": 13,
+            "server": "pucuk",
+            "label": "Pucuk 1080p",
+            "url": "https://filedon.co/embed/aVm9waJ9WG",
+            "default": false,
+            "post": "45901",
+            "nume": "13"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dx9VPea2ZNLHj71O5LzBJ4UO3j4ShmjQNgkqEu2EoqxKRAjmvGIxB-iuQ1PI3xeMSP4H-VbRFkHckEjY3GKitap-2_kZoR5_YakN2gZrDsTLmJez_lAl569PrZxC0j9Vbop2T4",
+        "default": true,
+        "post": "45901",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "premium",
+        "label": "Premium 480p",
+        "url": "https://api.wibufile.com/embed/5d22c143-c595-4a2a-a0ea-d520424d9218",
+        "default": false,
+        "post": "45901",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "premium",
+        "label": "Premium 720p",
+        "url": "https://s0.wibufile.com/video01/SakoDay-C2-11-END-MP4HD-v2-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "45901",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "premium",
+        "label": "Premium 1080p",
+        "url": "https://s0.wibufile.com/video01/SakoDay-C2-11-END-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "45901",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/exxU2Z5Z#2nha_RspqxAd9qVDGbDZQ0mwc0JznC4dPPnJ4k65qck",
+        "default": false,
+        "post": "45901",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/igYSUKwL#lkW1yLAkhPdLw9RZXGsuSoIt9pFSakTWGUDLLtMZyM4",
+        "default": false,
+        "post": "45901",
+        "nume": "6"
+      },
+      {
+        "no": 7,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/qwQRwIxI#bSotf1dFS_2jCyuF1-qK-Sb8OO2B7TeFVOqKip5e3ns",
+        "default": false,
+        "post": "45901",
+        "nume": "7"
+      },
+      {
+        "no": 8,
+        "server": "nakama",
+        "label": "Nakama 480p",
+        "url": "https://pixeldrain.com/u/MzRVvx1H",
+        "default": false,
+        "post": "45901",
+        "nume": "8"
+      },
+      {
+        "no": 9,
+        "server": "nakama",
+        "label": "Nakama 720p",
+        "url": "https://pixeldrain.com/u/MCRBAGK8",
+        "default": false,
+        "post": "45901",
+        "nume": "9"
+      },
+      {
+        "no": 10,
+        "server": "nakama",
+        "label": "Nakama 1080p",
+        "url": "https://pixeldrain.com/u/EgzDgqup",
+        "default": false,
+        "post": "45901",
+        "nume": "10"
+      },
+      {
+        "no": 11,
+        "server": "pucuk",
+        "label": "Pucuk 480p",
+        "url": "https://filedon.co/embed/9eX1TDOCYh",
+        "default": false,
+        "post": "45901",
+        "nume": "11"
+      },
+      {
+        "no": 12,
+        "server": "pucuk",
+        "label": "Pucuk 720p",
+        "url": "https://filedon.co/embed/xqWJ9X9eXb",
+        "default": false,
+        "post": "45901",
+        "nume": "12"
+      },
+      {
+        "no": 13,
+        "server": "pucuk",
+        "label": "Pucuk 1080p",
+        "url": "https://filedon.co/embed/aVm9waJ9WG",
+        "default": false,
+        "post": "45901",
+        "nume": "13"
+      }
+    ],
+    "id": 3,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Jujutsu Kaisen Season 3",
+    "judul": "Jujutsu Kaisen Season 3",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Jujutsu Kaisen Season 3.",
+    "related": [],
+    "slug": "jujutsu-kaisen-season-3",
+    "source": "https://v2.samehadaku.how/anime/jujutsu-kaisen-season-3/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Jujutsu Kaisen Season 3",
+        "slug": "jujutsu-kaisen-season-3-episode-12-end",
+        "source": "https://v2.samehadaku.how/jujutsu-kaisen-season-3-episode-12-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot 360p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzLAd7YkLeQsDLQ9Y1GkS2eHzkVPBKEx1YDXcpyH2PW5_3lWgJyL9kxBF7iWx0mpc3kHETlMO_uxsLrXrsDE3-ugdvbxwpBU10aFcO-ZSAgSDOJTm7lc7JOizeR4ZiWo6MFXjg&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "49184",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/845ce239-25bd-4f91-b0ee-2670476d9e81",
+            "default": false,
+            "post": "49184",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/JjK-S3-12-END-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "49184",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 1080p",
+            "url": "https://s0.wibufile.com/video01/JjK-S3-12-END-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "49184",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/m1YFwJIQ#bUNe5hckO5JcEi7-A2Vf9DW1IZhHCKWMWw7EaWzD4Zo",
+            "default": false,
+            "post": "49184",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/vwYQnaaA#5m-Ypxo6OWqtUrj9xHjjyit4-J5gbtApqbJe66VZ0y4",
+            "default": false,
+            "post": "49184",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/C4hSgSYK#Bi3mO2xdPuWJDWB6GtzGlgoTDHVJA6UWvrkMBCCikL8",
+            "default": false,
+            "post": "49184",
+            "nume": "7"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzLAd7YkLeQsDLQ9Y1GkS2eHzkVPBKEx1YDXcpyH2PW5_3lWgJyL9kxBF7iWx0mpc3kHETlMO_uxsLrXrsDE3-ugdvbxwpBU10aFcO-ZSAgSDOJTm7lc7JOizeR4ZiWo6MFXjg&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "49184",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/845ce239-25bd-4f91-b0ee-2670476d9e81",
+        "default": false,
+        "post": "49184",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "wibufile",
+        "label": "Wibufile 720p",
+        "url": "https://s0.wibufile.com/video01/JjK-S3-12-END-MP4HD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "49184",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "wibufile",
+        "label": "Wibufile 1080p",
+        "url": "https://s0.wibufile.com/video01/JjK-S3-12-END-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "49184",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/m1YFwJIQ#bUNe5hckO5JcEi7-A2Vf9DW1IZhHCKWMWw7EaWzD4Zo",
+        "default": false,
+        "post": "49184",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/vwYQnaaA#5m-Ypxo6OWqtUrj9xHjjyit4-J5gbtApqbJe66VZ0y4",
+        "default": false,
+        "post": "49184",
+        "nume": "6"
+      },
+      {
+        "no": 7,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/C4hSgSYK#Bi3mO2xdPuWJDWB6GtzGlgoTDHVJA6UWvrkMBCCikL8",
+        "default": false,
+        "post": "49184",
+        "nume": "7"
+      }
+    ],
+    "id": 4,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Kaijuu 8-gou Season 2",
+    "judul": "Kaijuu 8-gou Season 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Kaijuu 8-gou Season 2.",
+    "related": [],
+    "slug": "kaijuu-8-gou-season-2",
+    "source": "https://v2.samehadaku.how/anime/kaijuu-8-gou-season-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Kaijuu 8-gou Season 2",
+        "slug": "kaijuu-8-gou-season-2-episode-11-end",
+        "source": "https://v2.samehadaku.how/kaijuu-8-gou-season-2-episode-11-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot 360p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwdkyBcgomuTQlLUrXoOih-tMzOZa4mZMiLsMc-T9AbLbT1PQqFiJECYNpJ-5zM9aE1dPrShNAAUY_K-lc-AI_9O3JrVRQU4zuXtrHhRYJDKdX65yTlnWmSLsZFlJIWKyYBWvs",
+            "default": true,
+            "post": "46087",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "premium",
+            "label": "Premium 480p",
+            "url": "https://api.wibufile.com/embed/7dc325f0-ec36-4c62-b38d-6dc7e6b9c989",
+            "default": false,
+            "post": "46087",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "premium",
+            "label": "Premium 720p",
+            "url": "https://s0.wibufile.com/video01/Kj8g-S2-11-End-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "46087",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "premium",
+            "label": "Premium 1080p",
+            "url": "https://s0.wibufile.com/video01/Kj8g-S2-11-End-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "46087",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/TE1nUbYK#G_SDE8kE117ty173nsWfXrI9zZVUUnHc-XXU3z3JP14",
+            "default": false,
+            "post": "46087",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/mY0x0Kzb#xjOYoS0mJgS5qy7xEFm0Ac7NjKYWZFVK-C1kkp6GN6U",
+            "default": false,
+            "post": "46087",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/KdcgnBTB#z2DF1HgTG05F-ObkpSHRB7J4qTpo-VyIKWnsbszEVRA",
+            "default": false,
+            "post": "46087",
+            "nume": "7"
+          },
+          {
+            "no": 8,
+            "server": "nakama",
+            "label": "Nakama 480p",
+            "url": "https://pixeldrain.com/u/7ABsP9mH",
+            "default": false,
+            "post": "46087",
+            "nume": "8"
+          },
+          {
+            "no": 9,
+            "server": "nakama",
+            "label": "Nakama 720p",
+            "url": "https://pixeldrain.com/u/CfVLe6fC",
+            "default": false,
+            "post": "46087",
+            "nume": "9"
+          },
+          {
+            "no": 10,
+            "server": "nakama",
+            "label": "Nakama 1080p",
+            "url": "https://pixeldrain.com/u/uuSEdD5G",
+            "default": false,
+            "post": "46087",
+            "nume": "10"
+          },
+          {
+            "no": 11,
+            "server": "pucuk",
+            "label": "Pucuk 480p",
+            "url": "https://filedon.co/embed/NhuLPQuiHC",
+            "default": false,
+            "post": "46087",
+            "nume": "11"
+          },
+          {
+            "no": 12,
+            "server": "pucuk",
+            "label": "Pucuk 720p",
+            "url": "https://filedon.co/embed/q2m2O6MPyM",
+            "default": false,
+            "post": "46087",
+            "nume": "12"
+          },
+          {
+            "no": 13,
+            "server": "pucuk",
+            "label": "Pucuk 1080p",
+            "url": "https://filedon.co/embed/FWwmPvViCz",
+            "default": false,
+            "post": "46087",
+            "nume": "13"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwdkyBcgomuTQlLUrXoOih-tMzOZa4mZMiLsMc-T9AbLbT1PQqFiJECYNpJ-5zM9aE1dPrShNAAUY_K-lc-AI_9O3JrVRQU4zuXtrHhRYJDKdX65yTlnWmSLsZFlJIWKyYBWvs",
+        "default": true,
+        "post": "46087",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "premium",
+        "label": "Premium 480p",
+        "url": "https://api.wibufile.com/embed/7dc325f0-ec36-4c62-b38d-6dc7e6b9c989",
+        "default": false,
+        "post": "46087",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "premium",
+        "label": "Premium 720p",
+        "url": "https://s0.wibufile.com/video01/Kj8g-S2-11-End-MP4HD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "46087",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "premium",
+        "label": "Premium 1080p",
+        "url": "https://s0.wibufile.com/video01/Kj8g-S2-11-End-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "46087",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/TE1nUbYK#G_SDE8kE117ty173nsWfXrI9zZVUUnHc-XXU3z3JP14",
+        "default": false,
+        "post": "46087",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/mY0x0Kzb#xjOYoS0mJgS5qy7xEFm0Ac7NjKYWZFVK-C1kkp6GN6U",
+        "default": false,
+        "post": "46087",
+        "nume": "6"
+      },
+      {
+        "no": 7,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/KdcgnBTB#z2DF1HgTG05F-ObkpSHRB7J4qTpo-VyIKWnsbszEVRA",
+        "default": false,
+        "post": "46087",
+        "nume": "7"
+      },
+      {
+        "no": 8,
+        "server": "nakama",
+        "label": "Nakama 480p",
+        "url": "https://pixeldrain.com/u/7ABsP9mH",
+        "default": false,
+        "post": "46087",
+        "nume": "8"
+      },
+      {
+        "no": 9,
+        "server": "nakama",
+        "label": "Nakama 720p",
+        "url": "https://pixeldrain.com/u/CfVLe6fC",
+        "default": false,
+        "post": "46087",
+        "nume": "9"
+      },
+      {
+        "no": 10,
+        "server": "nakama",
+        "label": "Nakama 1080p",
+        "url": "https://pixeldrain.com/u/uuSEdD5G",
+        "default": false,
+        "post": "46087",
+        "nume": "10"
+      },
+      {
+        "no": 11,
+        "server": "pucuk",
+        "label": "Pucuk 480p",
+        "url": "https://filedon.co/embed/NhuLPQuiHC",
+        "default": false,
+        "post": "46087",
+        "nume": "11"
+      },
+      {
+        "no": 12,
+        "server": "pucuk",
+        "label": "Pucuk 720p",
+        "url": "https://filedon.co/embed/q2m2O6MPyM",
+        "default": false,
+        "post": "46087",
+        "nume": "12"
+      },
+      {
+        "no": 13,
+        "server": "pucuk",
+        "label": "Pucuk 1080p",
+        "url": "https://filedon.co/embed/FWwmPvViCz",
+        "default": false,
+        "post": "46087",
+        "nume": "13"
+      }
+    ],
+    "id": 5,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Sousou no Frieren",
+    "judul": "Sousou no Frieren",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Sousou no Frieren.",
+    "related": [],
+    "slug": "sousou-no-frieren",
+    "source": "https://v2.samehadaku.how/anime/sousou-no-frieren/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Sousou no Frieren",
+        "slug": "sousou-no-frieren-episode-28-end",
+        "source": "https://v2.samehadaku.how/sousou-no-frieren-episode-28-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot 360p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwFEMmq9fZnw1qEmNXkPYD7H5fqRQk1Za69gFF5nttWAr-BbBhkC2lWF0glEsNth1Px0GO_Nf-fRuI5OzLzUAzdD0zdQ2mSfxYtB0rz8VObQ9g9WwUJpYzlr74Dh6zqdyr1I_w",
+            "default": true,
+            "post": "31427",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/caVhRTqB#KmoI_fdL53YT90BvuN3BuKxWeuky_oE4oNno8nfmzRo",
+            "default": false,
+            "post": "31427",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/tnsHSCQB#PmafxJAqdyLLjQrQZYkLcpBXUpRSDohIoL2JyJzPgVo",
+            "default": false,
+            "post": "31427",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/cXsThQJQ#DHI00-a43UyI7mvdMW0H0ZwYSXRqA3ZiFG54x-LwMgw",
+            "default": false,
+            "post": "31427",
+            "nume": "4"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwFEMmq9fZnw1qEmNXkPYD7H5fqRQk1Za69gFF5nttWAr-BbBhkC2lWF0glEsNth1Px0GO_Nf-fRuI5OzLzUAzdD0zdQ2mSfxYtB0rz8VObQ9g9WwUJpYzlr74Dh6zqdyr1I_w",
+        "default": true,
+        "post": "31427",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/caVhRTqB#KmoI_fdL53YT90BvuN3BuKxWeuky_oE4oNno8nfmzRo",
+        "default": false,
+        "post": "31427",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/tnsHSCQB#PmafxJAqdyLLjQrQZYkLcpBXUpRSDohIoL2JyJzPgVo",
+        "default": false,
+        "post": "31427",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/cXsThQJQ#DHI00-a43UyI7mvdMW0H0ZwYSXRqA3ZiFG54x-LwMgw",
+        "default": false,
+        "post": "31427",
+        "nume": "4"
+      }
+    ],
+    "id": 6,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Sousou no Frieren Season 2",
+    "judul": "Sousou no Frieren Season 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Sousou no Frieren Season 2.",
+    "related": [],
+    "slug": "sousou-no-frieren-season-2",
+    "source": "https://v2.samehadaku.how/anime/sousou-no-frieren-season-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Sousou no Frieren Season 2",
+        "slug": "sousou-no-frieren-season-2-episode-10-end",
+        "source": "https://v2.samehadaku.how/sousou-no-frieren-season-2-episode-10-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "wibufile",
+            "label": "Wibufile 480p",
+            "url": "https://api.wibufile.com/embed/05a7eb99-58d0-45e1-8422-83485b9b439d",
+            "default": true,
+            "post": "49203",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "blogspot",
+            "label": "Blogspot 360p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwRwKHUsWJYhHfEd0fqFhArLw82EfR0X1ImjkZIr54hMZnqgzYDTAEzgqlGxehrSP4UWFwBmY2DzjA7_5axwtt0Zx3RVkYLtlA2uHyvZ2C0dGWbx2AUFZE477t-2Zxvwir2OB4&#038;origin=sameguru2.blogspot.com",
+            "default": false,
+            "post": "49203",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "wibufile",
+            "label": "Wibufile 720p",
+            "url": "https://s0.wibufile.com/video01/SnF-S2-10-END-MP4HD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "49203",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "wibufile",
+            "label": "Wibufile 1080p",
+            "url": "https://s0.wibufile.com/video01/SnF-S2-10-END-FULLHD-SAMEHADAKU.CARE.mp4",
+            "default": false,
+            "post": "49203",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/LgYjxYBC#TpZs1DYSrDDeKTNaZuFVOXu9suNoLatQCos-rhYj-Eo",
+            "default": false,
+            "post": "49203",
+            "nume": "5"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/2wYy0Tga#B0uwI-R3b8uqZYOUa0qTcImgOCrd7cWCSnZHImxfwPw",
+            "default": false,
+            "post": "49203",
+            "nume": "6"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/y5gGlALK#Qt0MC6rWGqoyOainZeDiIkFgZ2ACquhKjwLMFTCrYIY",
+            "default": false,
+            "post": "49203",
+            "nume": "7"
+          },
+          {
+            "no": 8,
+            "server": "pucuk",
+            "label": "Pucuk 1080p",
+            "url": "https://filedon.co/embed/T0bD5Tnxx0",
+            "default": false,
+            "post": "49203",
+            "nume": "8"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 2,
+        "server": "blogspot",
+        "label": "Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwRwKHUsWJYhHfEd0fqFhArLw82EfR0X1ImjkZIr54hMZnqgzYDTAEzgqlGxehrSP4UWFwBmY2DzjA7_5axwtt0Zx3RVkYLtlA2uHyvZ2C0dGWbx2AUFZE477t-2Zxvwir2OB4&#038;origin=sameguru2.blogspot.com",
+        "default": false,
+        "post": "49203",
+        "nume": "2"
+      },
+      {
+        "no": 1,
+        "server": "wibufile",
+        "label": "Wibufile 480p",
+        "url": "https://api.wibufile.com/embed/05a7eb99-58d0-45e1-8422-83485b9b439d",
+        "default": true,
+        "post": "49203",
+        "nume": "1"
+      },
+      {
+        "no": 3,
+        "server": "wibufile",
+        "label": "Wibufile 720p",
+        "url": "https://s0.wibufile.com/video01/SnF-S2-10-END-MP4HD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "49203",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "wibufile",
+        "label": "Wibufile 1080p",
+        "url": "https://s0.wibufile.com/video01/SnF-S2-10-END-FULLHD-SAMEHADAKU.CARE.mp4",
+        "default": false,
+        "post": "49203",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/LgYjxYBC#TpZs1DYSrDDeKTNaZuFVOXu9suNoLatQCos-rhYj-Eo",
+        "default": false,
+        "post": "49203",
+        "nume": "5"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/2wYy0Tga#B0uwI-R3b8uqZYOUa0qTcImgOCrd7cWCSnZHImxfwPw",
+        "default": false,
+        "post": "49203",
+        "nume": "6"
+      },
+      {
+        "no": 7,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/y5gGlALK#Qt0MC6rWGqoyOainZeDiIkFgZ2ACquhKjwLMFTCrYIY",
+        "default": false,
+        "post": "49203",
+        "nume": "7"
+      },
+      {
+        "no": 8,
+        "server": "pucuk",
+        "label": "Pucuk 1080p",
+        "url": "https://filedon.co/embed/T0bD5Tnxx0",
+        "default": false,
+        "post": "49203",
+        "nume": "8"
+      }
+    ],
+    "id": 7,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2023/07/Jujutsu-Kaisen-Season-2-Cover-213x300.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Bleach: Sennen Kessen-hen",
+    "judul": "Bleach: Sennen Kessen-hen",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Bleach: Sennen Kessen-hen.",
+    "related": [],
+    "slug": "bleach-sennen-kessen-hen",
+    "source": "https://v2.samehadaku.how/anime/bleach-sennen-kessen-hen/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Bleach: Sennen Kessen-hen",
+        "slug": "bleach-sennen-kessen-hen-episode-13-end",
+        "source": "https://v2.samehadaku.how/bleach-sennen-kessen-hen-episode-13-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot 480p",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx89f01FCyF82VIfzRClUFuCtNAlp_-2KtWukkxB9Bh8-ZGFwoIEpEq_A6jYOa9RQ_ZvjqaYXG_28GnY3tCnfXNENTq7QI5r4g9g5Jq9F1f157HMT-6I8-UbcAhidmIM0esBjw",
+            "default": true,
+            "post": "20848",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/0r5FQC5b#ZJOC0Y4lxYpr261SP5WqEleQiaaixVP3LBw0Z4voPXs",
+            "default": false,
+            "post": "20848",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/m7JASJIS#57wU8P8Jh-Lcny92hejb7olPlxOQgx7bResJgWC1oC4",
+            "default": false,
+            "post": "20848",
+            "nume": "3"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot 480p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dx89f01FCyF82VIfzRClUFuCtNAlp_-2KtWukkxB9Bh8-ZGFwoIEpEq_A6jYOa9RQ_ZvjqaYXG_28GnY3tCnfXNENTq7QI5r4g9g5Jq9F1f157HMT-6I8-UbcAhidmIM0esBjw",
+        "default": true,
+        "post": "20848",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/0r5FQC5b#ZJOC0Y4lxYpr261SP5WqEleQiaaixVP3LBw0Z4voPXs",
+        "default": false,
+        "post": "20848",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/m7JASJIS#57wU8P8Jh-Lcny92hejb7olPlxOQgx7bResJgWC1oC4",
+        "default": false,
+        "post": "20848",
+        "nume": "3"
+      }
+    ],
+    "id": 8,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Kusuriya no Hitorigoto Season 3",
+    "judul": "Kusuriya no Hitorigoto Season 3",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Kusuriya no Hitorigoto Season 3.",
+    "related": [],
+    "slug": "kusuriya-no-hitorigoto-season-3",
+    "source": "https://v2.samehadaku.how/anime/kusuriya-no-hitorigoto-season-3/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Kusuriya no Hitorigoto Season 3",
+        "slug": "kusuriya-no-hitorigoto-season-3-episode-1",
+        "source": "https://v2.samehadaku.how/kusuriya-no-hitorigoto-season-3-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyvd2kYWQV66wBRxk0LfEp2aFxCieTAI9XHiRePzAR-gsudxuOLJ-irDbXPpsND5_P1mLn1h6rfa1gblLz2p6er_rdHufIHEQkIHSUGY-VpjW-Bc6GywaPiRhLahUrP6l_HMvd_",
+            "default": true,
+            "post": "54341",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/etAXFJYb#Zi14ecfk6-ZC-iY1GYLUocqUBz8a7PxOSmWm0bTr_f4",
+            "default": false,
+            "post": "54341",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/7soSHSia#cedYFYwBN0LM05dVj7OM0HGk-bI5NqdIXecIqOhtanU",
+            "default": false,
+            "post": "54341",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/bl4GVaSA#Wpl0eQZM30nfN4xms044Efl-OFZVMLT63SC4lr4VuYM",
+            "default": false,
+            "post": "54341",
+            "nume": "4"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyvd2kYWQV66wBRxk0LfEp2aFxCieTAI9XHiRePzAR-gsudxuOLJ-irDbXPpsND5_P1mLn1h6rfa1gblLz2p6er_rdHufIHEQkIHSUGY-VpjW-Bc6GywaPiRhLahUrP6l_HMvd_",
+        "default": true,
+        "post": "54341",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/etAXFJYb#Zi14ecfk6-ZC-iY1GYLUocqUBz8a7PxOSmWm0bTr_f4",
+        "default": false,
+        "post": "54341",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/7soSHSia#cedYFYwBN0LM05dVj7OM0HGk-bI5NqdIXecIqOhtanU",
+        "default": false,
+        "post": "54341",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/bl4GVaSA#Wpl0eQZM30nfN4xms044Efl-OFZVMLT63SC4lr4VuYM",
+        "default": false,
+        "post": "54341",
+        "nume": "4"
+      }
+    ],
+    "id": 9,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Tougen Anki: Nikko Kegon no Taki-hen",
+    "judul": "Tougen Anki: Nikko Kegon no Taki-hen",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Tougen Anki: Nikko Kegon no Taki-hen.",
+    "related": [],
+    "slug": "tougen-anki-nikko-kegon-no-taki-hen",
+    "source": "https://v2.samehadaku.how/anime/tougen-anki-nikko-kegon-no-taki-hen/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tougen Anki: Nikko Kegon no Taki-hen",
+        "slug": "tougen-anki-nikko-kegon-no-taki-hen-episode-1",
+        "source": "https://v2.samehadaku.how/tougen-anki-nikko-kegon-no-taki-hen-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyzBxW5Xv1IpSEgGqsddLQenJXz1jj6moVgcPoUW-sH9OHL3VlESxyGWM4pJvGzk9mvscZ6i__lK_uv1uIoe1Hw5k2KP-Ga4ZYGlnI35dD9w4-6xgWMVAdh_7WbG1LjYGP0_ilA",
+            "default": true,
+            "post": "54346",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/VuxWBISZ#gP5TEOoT8A5QRoGRccKWfcFSohI7W7gpwulTPEX8f2E",
+            "default": false,
+            "post": "54346",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/Y2xjXa5Y#O0UdPbyAqHOFhqdRGu-gXhoBf53LQWjoroNv2W1ZVAY",
+            "default": false,
+            "post": "54346",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/puRjTBAR#23eTx39VKdc5w3YnE53yshA9rc_JuHMoAl10nGHVfPY",
+            "default": false,
+            "post": "54346",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyzBxW5Xv1IpSEgGqsddLQenJXz1jj6moVgcPoUW-sH9OHL3VlESxyGWM4pJvGzk9mvscZ6i__lK_uv1uIoe1Hw5k2KP-Ga4ZYGlnI35dD9w4-6xgWMVAdh_7WbG1LjYGP0_ilA",
+        "default": true,
+        "post": "54346",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/VuxWBISZ#gP5TEOoT8A5QRoGRccKWfcFSohI7W7gpwulTPEX8f2E",
+        "default": false,
+        "post": "54346",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/Y2xjXa5Y#O0UdPbyAqHOFhqdRGu-gXhoBf53LQWjoroNv2W1ZVAY",
+        "default": false,
+        "post": "54346",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/puRjTBAR#23eTx39VKdc5w3YnE53yshA9rc_JuHMoAl10nGHVfPY",
+        "default": false,
+        "post": "54346",
+        "nume": "5"
+      }
+    ],
+    "id": 10,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tougen-Anki-Nikko-Kegon-no-Taki-hen.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Nige Jouzu no Wakagimi S2",
+    "judul": "Nige Jouzu no Wakagimi S2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Nige Jouzu no Wakagimi S2.",
+    "related": [],
+    "slug": "nige-jouzu-no-wakagimi-s2",
+    "source": "https://v2.samehadaku.how/anime/nige-jouzu-no-wakagimi-s2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Nige Jouzu no Wakagimi S2",
+        "slug": "nige-jouzu-no-wakagimi-s2-episode-12-end",
+        "source": "https://v2.samehadaku.how/nige-jouzu-no-wakagimi-s2-episode-12-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy_T8JP3-g5wX2_JWxAK-K-Fmxtvedt53KS4de8b4AeKHpZVlUjdU9OzD3P5wF8lD3IMdHR7r2tPEigPiztqvMU6e-_ooCSi_1bwN_qCXli-92ZMZ6tGk29quIPbk2FaVAxy3g&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54333",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/cBBWHSQZ#WkQZSjHZMAVcwQbsNyMbX8_NWn1uUxv9s-sAtf8LfJ8",
+            "default": false,
+            "post": "54333",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/BM5AlBzY#L6lZ3g0NsT_tgihhFt7rvZ47as0lqUZbqEoZWklftg8",
+            "default": false,
+            "post": "54333",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/dQAkjZzZ#ci1pITYFLH4Gk4aiXhy5RgeKhgXDy1IJ3knDs0sxvmk",
+            "default": false,
+            "post": "54333",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dy_T8JP3-g5wX2_JWxAK-K-Fmxtvedt53KS4de8b4AeKHpZVlUjdU9OzD3P5wF8lD3IMdHR7r2tPEigPiztqvMU6e-_ooCSi_1bwN_qCXli-92ZMZ6tGk29quIPbk2FaVAxy3g&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54333",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/cBBWHSQZ#WkQZSjHZMAVcwQbsNyMbX8_NWn1uUxv9s-sAtf8LfJ8",
+        "default": false,
+        "post": "54333",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/BM5AlBzY#L6lZ3g0NsT_tgihhFt7rvZ47as0lqUZbqEoZWklftg8",
+        "default": false,
+        "post": "54333",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/dQAkjZzZ#ci1pITYFLH4Gk4aiXhy5RgeKhgXDy1IJ3knDs0sxvmk",
+        "default": false,
+        "post": "54333",
+        "nume": "5"
+      }
+    ],
+    "id": 11,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Tokyo Revengers S4",
+    "judul": "Tokyo Revengers S4",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Tokyo Revengers S4.",
+    "related": [],
+    "slug": "tokyo-revengers-s4",
+    "source": "https://v2.samehadaku.how/anime/tokyo-revengers-s4/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tokyo Revengers S4",
+        "slug": "tokyo-revengers-s4-episode-1",
+        "source": "https://v2.samehadaku.how/tokyo-revengers-s4-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzt8Wg6Y-CNy9-JOMhDOOa715njh_qox0VyHgq_nSO1QT079wvz2h0cU-vwRFT0D5Aj8Y65VA-bmh8h3Eyq6cZWAPgyZs0xEO9ww2wqpmk02LBWtyeVRNh_7FAkuvRqBf6IHS8&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54314",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/gQ5X0IgJ#Icxoi-JgPkRhz4eStxLEzredmfEbi6HEKVAj_EDK9NY",
+            "default": false,
+            "post": "54314",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/525xUTaB#4e8VxKrjGewZXirgh1MFBKCjx63jIwgxi5AC0XP1o0k",
+            "default": false,
+            "post": "54314",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/oVRA3IYB#GlM1iaJnulq-wHJnAR8c-9h1Yim0ecZZe1HjAynv5GE",
+            "default": false,
+            "post": "54314",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzt8Wg6Y-CNy9-JOMhDOOa715njh_qox0VyHgq_nSO1QT079wvz2h0cU-vwRFT0D5Aj8Y65VA-bmh8h3Eyq6cZWAPgyZs0xEO9ww2wqpmk02LBWtyeVRNh_7FAkuvRqBf6IHS8&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54314",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/gQ5X0IgJ#Icxoi-JgPkRhz4eStxLEzredmfEbi6HEKVAj_EDK9NY",
+        "default": false,
+        "post": "54314",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/525xUTaB#4e8VxKrjGewZXirgh1MFBKCjx63jIwgxi5AC0XP1o0k",
+        "default": false,
+        "post": "54314",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/oVRA3IYB#GlM1iaJnulq-wHJnAR8c-9h1Yim0ecZZe1HjAynv5GE",
+        "default": false,
+        "post": "54314",
+        "nume": "5"
+      }
+    ],
+    "id": 12,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Tsuihou sareta Tensei Juukishi wa Game",
+    "judul": "Tsuihou sareta Tensei Juukishi wa Game",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Tsuihou sareta Tensei Juukishi wa Game.",
+    "related": [],
+    "slug": "tsuihou-sareta-tensei-juukishi-wa-game",
+    "source": "https://v2.samehadaku.how/anime/tsuihou-sareta-tensei-juukishi-wa-game/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tsuihou sareta Tensei Juukishi wa Game",
+        "slug": "tsuihou-sareta-tensei-juukishi-wa-game-episode-14",
+        "source": "https://v2.samehadaku.how/tsuihou-sareta-tensei-juukishi-wa-game-episode-14/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxISIGhZyQJEpS_6QNgKVP20F3OshmQ8OpSmFtqUhw_5c5VyfjTaPCXS5EG3CqmEZVitGVYXNMMTtONM9WUtMdbKrf5N_q0duLU7UnAVo1VeXYQeT5nxSg3cloMVZI2WNiJRQ",
+            "default": true,
+            "post": "54283",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/0yI3QYCK#fJXgY-AY1euYUZOVMhEG7PkQCMCsheXP_BySM2tGgYk",
+            "default": false,
+            "post": "54283",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/Brxl3K7b#4bNNqbqFsdFx7-GbduPH6s-LNRAEh-HIYIQTb4qUlBs",
+            "default": false,
+            "post": "54283",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/BqgBxbjS#h1FcDZ7D15X--lKl90LJdN25Ywr4cG8qrMPDHUY5Bts",
+            "default": false,
+            "post": "54283",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxISIGhZyQJEpS_6QNgKVP20F3OshmQ8OpSmFtqUhw_5c5VyfjTaPCXS5EG3CqmEZVitGVYXNMMTtONM9WUtMdbKrf5N_q0duLU7UnAVo1VeXYQeT5nxSg3cloMVZI2WNiJRQ",
+        "default": true,
+        "post": "54283",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/0yI3QYCK#fJXgY-AY1euYUZOVMhEG7PkQCMCsheXP_BySM2tGgYk",
+        "default": false,
+        "post": "54283",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/Brxl3K7b#4bNNqbqFsdFx7-GbduPH6s-LNRAEh-HIYIQTb4qUlBs",
+        "default": false,
+        "post": "54283",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/BqgBxbjS#h1FcDZ7D15X--lKl90LJdN25Ywr4cG8qrMPDHUY5Bts",
+        "default": false,
+        "post": "54283",
+        "nume": "5"
+      }
+    ],
+    "id": 13,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tsuihou-sareta-Tensei-Juukishi-wa-Game.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "FX Senshi Kurumi-chan",
+    "judul": "FX Senshi Kurumi-chan",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime FX Senshi Kurumi-chan.",
+    "related": [],
+    "slug": "fx-senshi-kurumi-chan",
+    "source": "https://v2.samehadaku.how/anime/fx-senshi-kurumi-chan/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "FX Senshi Kurumi-chan",
+        "slug": "fx-senshi-kurumi-chan-episode-1",
+        "source": "https://v2.samehadaku.how/fx-senshi-kurumi-chan-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwpDztMjO2KNDzgCuswveIkL4JDNsdOSieIDqoenOBC8MRQbv2LHzAE1znMmCh0M76_JHMjUT8wEL6osmZcgWBdeJiEfg8FQnYmZdFFPP2LZOPf2f7ZgdmbghAx33s50WQqZONq",
+            "default": true,
+            "post": "54270",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/JvxSXZSA#OoZfm9Rtk6W3cpNdTQLLAJm0U7o_t-eu_rE5NRCrvPk",
+            "default": false,
+            "post": "54270",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/s3YBARYJ#kc_85y3Yk5pY_yAFdxzhbGaQTMa9p_5y2Mr2HdIHbgE",
+            "default": false,
+            "post": "54270",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/B24SiDAI#zrk8Vfds8ccQ0GP1-8EUEbUxTEGBn0WHpTQL2SuJWXI",
+            "default": false,
+            "post": "54270",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwpDztMjO2KNDzgCuswveIkL4JDNsdOSieIDqoenOBC8MRQbv2LHzAE1znMmCh0M76_JHMjUT8wEL6osmZcgWBdeJiEfg8FQnYmZdFFPP2LZOPf2f7ZgdmbghAx33s50WQqZONq",
+        "default": true,
+        "post": "54270",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/JvxSXZSA#OoZfm9Rtk6W3cpNdTQLLAJm0U7o_t-eu_rE5NRCrvPk",
+        "default": false,
+        "post": "54270",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/s3YBARYJ#kc_85y3Yk5pY_yAFdxzhbGaQTMa9p_5y2Mr2HdIHbgE",
+        "default": false,
+        "post": "54270",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/B24SiDAI#zrk8Vfds8ccQ0GP1-8EUEbUxTEGBn0WHpTQL2SuJWXI",
+        "default": false,
+        "post": "54270",
+        "nume": "5"
+      }
+    ],
+    "id": 14,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/FX-Senshi-Kurumi-chan.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Tomb Raider King",
+    "judul": "Tomb Raider King",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Tomb Raider King.",
+    "related": [],
+    "slug": "tomb-raider-king",
+    "source": "https://v2.samehadaku.how/anime/tomb-raider-king/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tomb Raider King",
+        "slug": "tomb-raider-king-dogulwang-episode-12-end",
+        "source": "https://v2.samehadaku.how/tomb-raider-king-dogulwang-episode-12-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw2kfHpUsLGlTSSBJOk56CdTBL3aMxxgm58EGmguL0Sgyd5rjnNOWTtk1AbUqLimTLaE0qecc6lfz9GjWCSQSL970BShl9PYV1hIm7SYCLJw_G7bXixRipZl-vXtkUv4fRt24o",
+            "default": true,
+            "post": "54267",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/AzgX3aoQ#pHI2ZYYYSXaiQyi0uJddk8eph3ndFhdSaancZrhnGvM",
+            "default": false,
+            "post": "54267",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/1jhHBCqT#cVhwl2XExpMd1HeB7tkqylGzQUwrZM2d-ADY2svfqcg",
+            "default": false,
+            "post": "54267",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/YnQjiD5R#pMW1VsP0xojh2yyg-JqV834rJDcedLx7qeA92yRW3Yw",
+            "default": false,
+            "post": "54267",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw2kfHpUsLGlTSSBJOk56CdTBL3aMxxgm58EGmguL0Sgyd5rjnNOWTtk1AbUqLimTLaE0qecc6lfz9GjWCSQSL970BShl9PYV1hIm7SYCLJw_G7bXixRipZl-vXtkUv4fRt24o",
+        "default": true,
+        "post": "54267",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/AzgX3aoQ#pHI2ZYYYSXaiQyi0uJddk8eph3ndFhdSaancZrhnGvM",
+        "default": false,
+        "post": "54267",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/1jhHBCqT#cVhwl2XExpMd1HeB7tkqylGzQUwrZM2d-ADY2svfqcg",
+        "default": false,
+        "post": "54267",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/YnQjiD5R#pMW1VsP0xojh2yyg-JqV834rJDcedLx7qeA92yRW3Yw",
+        "default": false,
+        "post": "54267",
+        "nume": "5"
+      }
+    ],
+    "id": 15,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tomb-Rider-King-v2.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Clevatess Season 2",
+    "judul": "Clevatess Season 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Clevatess Season 2.",
+    "related": [],
+    "slug": "clevatess-season-2",
+    "source": "https://v2.samehadaku.how/anime/clevatess-season-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Clevatess Season 2",
+        "slug": "clevatess-s2-episode-13-end",
+        "source": "https://v2.samehadaku.how/clevatess-s2-episode-13-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwGu3Ftu5Y_mccmLYLTxWAKfrE37bdWmfpNLRIIEjKjjm2Ner7xcoSbko1JVSkNEVUTFm0ntfPRnZGJDm1Tz-ClQpvZzKyV7rHJ0SyoUeGXwUNA85nrXZO0rC19HhvYaW0_b8y0",
+            "default": true,
+            "post": "54264",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/zhAXhKQJ#sO6Ni5ZcO_BHQNEc-J4olbQM-ven4-7IABw9GdCIYPU",
+            "default": false,
+            "post": "54264",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/DpwinIaa#gixUDwdT2zMqXYDMQxSUOZ_200-aClIT3-QR7ONaxlg",
+            "default": false,
+            "post": "54264",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/ypojSRCR#d-ATMnf26iNdOGXk1NcoOCtaDeJZsOm1UKzRIWQb-hw",
+            "default": false,
+            "post": "54264",
+            "nume": "4"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwGu3Ftu5Y_mccmLYLTxWAKfrE37bdWmfpNLRIIEjKjjm2Ner7xcoSbko1JVSkNEVUTFm0ntfPRnZGJDm1Tz-ClQpvZzKyV7rHJ0SyoUeGXwUNA85nrXZO0rC19HhvYaW0_b8y0",
+        "default": true,
+        "post": "54264",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/zhAXhKQJ#sO6Ni5ZcO_BHQNEc-J4olbQM-ven4-7IABw9GdCIYPU",
+        "default": false,
+        "post": "54264",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/DpwinIaa#gixUDwdT2zMqXYDMQxSUOZ_200-aClIT3-QR7ONaxlg",
+        "default": false,
+        "post": "54264",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/ypojSRCR#d-ATMnf26iNdOGXk1NcoOCtaDeJZsOm1UKzRIWQb-hw",
+        "default": false,
+        "post": "54264",
+        "nume": "4"
+      }
+    ],
+    "id": 16,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen",
+    "judul": "Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen.",
+    "related": [],
+    "slug": "shin-tennis-no-oujisama-u-17-world-cup-kesshou-member-ketteisen",
+    "source": "https://v2.samehadaku.how/anime/shin-tennis-no-oujisama-u-17-world-cup-kesshou-member-ketteisen/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen",
+        "slug": "shin-tennis-no-oujisama-kesshou-member-ketteisen-episode-1",
+        "source": "https://v2.samehadaku.how/shin-tennis-no-oujisama-kesshou-member-ketteisen-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwmCN4X2uTxHwP_1hvu5Xrc3_6pmNSBO1EJ4-3XNAelAtSq3o9_3OX2NFsB70jFrRNdwmY-H1TpDluvuj5S9mBdDxw7wmYJMX9YxtdGTdCn2mN4cRll5X6PrR3a0KUa_6vTguo",
+            "default": true,
+            "post": "54263",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/1vYiRI4L#RPhwP5Y5VT_4cc1z1F1v5f6tNdkWYZUMMWv3kkO0jOM",
+            "default": false,
+            "post": "54263",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/hrInEIQZ#Cuk4A9-isWGGrSUJsW186RkGRw-_Z83rOJxki-vp7ow",
+            "default": false,
+            "post": "54263",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/QrQnnRDB#23n7RYIzm1u14ffuTwylo5lIYC1sw-gkMzRNG8Ngm5keqJcZxV",
+            "default": false,
+            "post": "54263",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwmCN4X2uTxHwP_1hvu5Xrc3_6pmNSBO1EJ4-3XNAelAtSq3o9_3OX2NFsB70jFrRNdwmY-H1TpDluvuj5S9mBdDxw7wmYJMX9YxtdGTdCn2mN4cRll5X6PrR3a0KUa_6vTguo",
+        "default": true,
+        "post": "54263",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/1vYiRI4L#RPhwP5Y5VT_4cc1z1F1v5f6tNdkWYZUMMWv3kkO0jOM",
+        "default": false,
+        "post": "54263",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/hrInEIQZ#Cuk4A9-isWGGrSUJsW186RkGRw-_Z83rOJxki-vp7ow",
+        "default": false,
+        "post": "54263",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/QrQnnRDB#23n7RYIzm1u14ffuTwylo5lIYC1sw-gkMzRNG8Ngm5keqJcZxV",
+        "default": false,
+        "post": "54263",
+        "nume": "5"
+      }
+    ],
+    "id": 17,
+    "is_new": true,
+    "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shin-Tennis-no-Oujisama-Kesshou-Member-Ketteisen.jpg"
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Tensei shitara Ken deshita S2",
+    "judul": "Tensei shitara Ken deshita S2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Tensei shitara Ken deshita S2.",
+    "related": [],
+    "slug": "tensei-shitara-ken-deshita-s2",
+    "source": "https://v2.samehadaku.how/anime/tensei-shitara-ken-deshita-s2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tensei shitara Ken deshita S2",
+        "slug": "tensei-shitara-ken-deshita-s2-episode-1",
+        "source": "https://v2.samehadaku.how/tensei-shitara-ken-deshita-s2-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxxAe6S2kBEiAT0WSrYRaupQeP3TEdAUW4xJkLLUUhLmda7XReXUI6DZwcRfVTnqMqYLO3uqJ1VXzJuga1nUlIsjwMRm6ZZdlWg4kv3URymF4MebzMAFS-zMm_GtiDHItHvY3mN&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54260",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/YERXTbAT#h0GCmrBG271zHGtGQkiMSioxTyVjFwaAYb9MZwWm6us",
+            "default": false,
+            "post": "54260",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/w34WmQAK#gBq0F9qW2q6ZqS6RaFhhJMDkDK7KPRD__4NIkFnehpA",
+            "default": false,
+            "post": "54260",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/sRwlEDZA#Od7mi9ldwu8STkOL7oxq2DlMUt0_RGQXqbqfuyGe-ZA",
+            "default": false,
+            "post": "54260",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxxAe6S2kBEiAT0WSrYRaupQeP3TEdAUW4xJkLLUUhLmda7XReXUI6DZwcRfVTnqMqYLO3uqJ1VXzJuga1nUlIsjwMRm6ZZdlWg4kv3URymF4MebzMAFS-zMm_GtiDHItHvY3mN&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54260",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/YERXTbAT#h0GCmrBG271zHGtGQkiMSioxTyVjFwaAYb9MZwWm6us",
+        "default": false,
+        "post": "54260",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/w34WmQAK#gBq0F9qW2q6ZqS6RaFhhJMDkDK7KPRD__4NIkFnehpA",
+        "default": false,
+        "post": "54260",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/sRwlEDZA#Od7mi9ldwu8STkOL7oxq2DlMUt0_RGQXqbqfuyGe-ZA",
+        "default": false,
+        "post": "54260",
+        "nume": "5"
+      }
+    ],
+    "id": 18,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Re:Zero kara Hajimeru Isekai Seikatsu Season 4",
+    "judul": "Re:Zero kara Hajimeru Isekai Seikatsu Season 4",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Re:Zero kara Hajimeru Isekai Seikatsu Season 4.",
+    "related": [],
+    "slug": "rezero-kara-hajimeru-isekai-seikatsu-season-4",
+    "source": "https://v2.samehadaku.how/anime/rezero-kara-hajimeru-isekai-seikatsu-season-4/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Re:Zero kara Hajimeru Isekai Seikatsu Season 4",
+        "slug": "rezero-kara-hajimeru-isekai-seikatsu-season-4-episode-19-end",
+        "source": "https://v2.samehadaku.how/rezero-kara-hajimeru-isekai-seikatsu-season-4-episode-19-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/8RoxmQSR#1Wz-9LexZceISrU_yDCB9sFKQGoCB1swrOx0R23wgIw",
+            "default": true,
+            "post": "54257",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/d6AnXbgD#VwBd8AzC_LXmJqyat23ecFIn_HDwBkgQaMbCXncOT9s",
+            "default": false,
+            "post": "54257",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/wVxXTSwb#baDEBm4km5Y_h9QZdQ3kJLDox-DG1FFBKNSJhvvmWS0",
+            "default": false,
+            "post": "54257",
+            "nume": "4"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/8RoxmQSR#1Wz-9LexZceISrU_yDCB9sFKQGoCB1swrOx0R23wgIw",
+        "default": true,
+        "post": "54257",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/d6AnXbgD#VwBd8AzC_LXmJqyat23ecFIn_HDwBkgQaMbCXncOT9s",
+        "default": false,
+        "post": "54257",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/wVxXTSwb#baDEBm4km5Y_h9QZdQ3kJLDox-DG1FFBKNSJhvvmWS0",
+        "default": false,
+        "post": "54257",
+        "nume": "4"
+      }
+    ],
+    "id": 19,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Sora wa Akai Kawa no Hotori",
+    "judul": "Sora wa Akai Kawa no Hotori",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Sora wa Akai Kawa no Hotori.",
+    "related": [],
+    "slug": "sora-wa-akai-kawa-no-hotori",
+    "source": "https://v2.samehadaku.how/anime/sora-wa-akai-kawa-no-hotori/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Sora wa Akai Kawa no Hotori",
+        "slug": "sora-wa-akai-kawa-no-hotori-episode-13",
+        "source": "https://v2.samehadaku.how/sora-wa-akai-kawa-no-hotori-episode-13/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwwLScFUCYe-i3D8cpp_QE04VcYpGNZa_AfsqEx5UqTGKXvgWyczVuZ9jlZN1eOQRQb2GPq-_gpfF5Bhp28u2Gu2oQBPw9VtBZ7HHkQFHlHzYgukozz4g3bldgClUXEyXdGPH3K",
+            "default": true,
+            "post": "54253",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/rkNckFPbcq",
+            "default": false,
+            "post": "54253",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/LxIXGRLJ#L3Nemq7PQMLdDOaY3jHq6lDVxer1NLzZLQps87Nyzbk",
+            "default": false,
+            "post": "54253",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/OshQXaCJ#mcftUn8a6Kmg8lWi4KVhSmvX78iPfLeFD7rQl3fEmj0",
+            "default": false,
+            "post": "54253",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/vpwkHa4R#L4SkEmXfFz6_fv8wVLQCAbLO8uJsxk62H8LysfLLUWA",
+            "default": false,
+            "post": "54253",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwwLScFUCYe-i3D8cpp_QE04VcYpGNZa_AfsqEx5UqTGKXvgWyczVuZ9jlZN1eOQRQb2GPq-_gpfF5Bhp28u2Gu2oQBPw9VtBZ7HHkQFHlHzYgukozz4g3bldgClUXEyXdGPH3K",
+        "default": true,
+        "post": "54253",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/rkNckFPbcq",
+        "default": false,
+        "post": "54253",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/LxIXGRLJ#L3Nemq7PQMLdDOaY3jHq6lDVxer1NLzZLQps87Nyzbk",
+        "default": false,
+        "post": "54253",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/OshQXaCJ#mcftUn8a6Kmg8lWi4KVhSmvX78iPfLeFD7rQl3fEmj0",
+        "default": false,
+        "post": "54253",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/vpwkHa4R#L4SkEmXfFz6_fv8wVLQCAbLO8uJsxk62H8LysfLLUWA",
+        "default": false,
+        "post": "54253",
+        "nume": "5"
+      }
+    ],
+    "id": 20,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Liar Game",
+    "judul": "Liar Game",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Liar Game.",
+    "related": [],
+    "slug": "liar-game",
+    "source": "https://v2.samehadaku.how/anime/liar-game/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Liar Game",
+        "slug": "liar-game-episode-26-end",
+        "source": "https://v2.samehadaku.how/liar-game-episode-26-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwtdkWwT2PJQlOPxwRaxiNfA8mTqjiJHp9tKwvTMsh1x5wFbKf7uHz_y1NvQDBUYkmaqlyGoSvnMtMJU1KuKeapsHhCA4svPtIbUdO391ZTcqD33CjtgflKq90u-AqvvIQ0uVBJ&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54246",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/rt1afqXYIm",
+            "default": false,
+            "post": "54246",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/H4ozFYSL#PdqSyS47y0NyZQ8Awcv2Ok7OcGxpOkN1WWLmlQtUY6U",
+            "default": false,
+            "post": "54246",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/U7IAnJJQ#HYWZQSm6RL81GRQGFwGZ10O-AyIZTp1siuXxTSQ8kgc",
+            "default": false,
+            "post": "54246",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/TpYBVLpL#tcMm-O0IwpbMDZmuoEqfYLMEOReGbBKrC99wBKxitoQ",
+            "default": false,
+            "post": "54246",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwtdkWwT2PJQlOPxwRaxiNfA8mTqjiJHp9tKwvTMsh1x5wFbKf7uHz_y1NvQDBUYkmaqlyGoSvnMtMJU1KuKeapsHhCA4svPtIbUdO391ZTcqD33CjtgflKq90u-AqvvIQ0uVBJ&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54246",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/rt1afqXYIm",
+        "default": false,
+        "post": "54246",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/H4ozFYSL#PdqSyS47y0NyZQ8Awcv2Ok7OcGxpOkN1WWLmlQtUY6U",
+        "default": false,
+        "post": "54246",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/U7IAnJJQ#HYWZQSm6RL81GRQGFwGZ10O-AyIZTp1siuXxTSQ8kgc",
+        "default": false,
+        "post": "54246",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/TpYBVLpL#tcMm-O0IwpbMDZmuoEqfYLMEOReGbBKrC99wBKxitoQ",
+        "default": false,
+        "post": "54246",
+        "nume": "5"
+      }
+    ],
+    "id": 21,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Tensei Kizoku Kantei Skill de Nariagaru Season 3",
+    "judul": "Tensei Kizoku Kantei Skill de Nariagaru Season 3",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Tensei Kizoku Kantei Skill de Nariagaru Season 3.",
+    "related": [],
+    "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3",
+    "source": "https://v2.samehadaku.how/anime/tensei-kizoku-kantei-skill-de-nariagaru-season-3/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tensei Kizoku Kantei Skill de Nariagaru Season 3",
+        "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-1",
+        "source": "https://v2.samehadaku.how/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy7_GtJJNrAdx3dZyEbVmf3L37QguZ914z1uFScdnwzvqjyVxvQlK65beeLyjx51clLNtO3ZoRWEnKVtPkb22K3Y2U6VTVlhD9koGN00F-qOgXMr96TyfDEoSFYOSEshcvtEcU",
+            "default": true,
+            "post": "54240",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/TZm01iBRDD",
+            "default": false,
+            "post": "54240",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/OtAgQCQY#DXvENmBI18khLr9Ju1g6IKemjmyNz6qohGy0nvstBow",
+            "default": false,
+            "post": "54240",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/rpAhxDBK#x_4v2sGb9uTViqs1j3o7GtVcQZjnk3eXpXMc1RFzXrA",
+            "default": false,
+            "post": "54240",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/fhZTyBRb#SFPsXKJmnX9ow3e3UCK0bXZtFp4g6YiWBombl46DxRg",
+            "default": false,
+            "post": "54240",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dy7_GtJJNrAdx3dZyEbVmf3L37QguZ914z1uFScdnwzvqjyVxvQlK65beeLyjx51clLNtO3ZoRWEnKVtPkb22K3Y2U6VTVlhD9koGN00F-qOgXMr96TyfDEoSFYOSEshcvtEcU",
+        "default": true,
+        "post": "54240",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/TZm01iBRDD",
+        "default": false,
+        "post": "54240",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/OtAgQCQY#DXvENmBI18khLr9Ju1g6IKemjmyNz6qohGy0nvstBow",
+        "default": false,
+        "post": "54240",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/rpAhxDBK#x_4v2sGb9uTViqs1j3o7GtVcQZjnk3eXpXMc1RFzXrA",
+        "default": false,
+        "post": "54240",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/fhZTyBRb#SFPsXKJmnX9ow3e3UCK0bXZtFp4g6YiWBombl46DxRg",
+        "default": false,
+        "post": "54240",
+        "nume": "5"
+      }
+    ],
+    "id": 22,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
+    "nama": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
+    "judul": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Mushoku Tensei : Isekai Ittara Honki Dasu Season 3.",
+    "related": [],
+    "slug": "mushoku-tensei-isekai-ittara-honki-dasu-season-3",
+    "source": "https://v2.samehadaku.how/anime/mushoku-tensei-isekai-ittara-honki-dasu-season-3/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Mushoku Tensei : Isekai Ittara Honki Dasu Season 3",
+        "slug": "mushoku-tensei-isekai-ittara-honki-dasu-season-3-episode-14-end",
+        "source": "https://v2.samehadaku.how/mushoku-tensei-isekai-ittara-honki-dasu-season-3-episode-14-end/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx7RYX9nAzIp6BxeWClqf5LmVfVaJqS12PyTOWgDOtLNxrCZIx-CVL0AmlS9Heg2DcxtJSZK93Jl_SRKCRC7wWVdTEZnRlzPn8hX8jRuVVD5F967AWqxJpxpe_h7WdFe4Rvz-g&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54229",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/0LnvVhvdiY",
+            "default": false,
+            "post": "54229",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/X4xgwCKC#mFOffQVDzPRBXUh3JRhJC2igBDIcGLFRsz0pVSz8nI0",
+            "default": false,
+            "post": "54229",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/0yxxjK6A#dRkJ8L7ZSIamXkQDlepdYaOxIH5b6pYN4oad1buYsvg",
+            "default": false,
+            "post": "54229",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/rlIj3QSZ#mScW98Skao5KRpuYLO8Us8FwBKo0snenIvnxT4gTOds",
+            "default": false,
+            "post": "54229",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dx7RYX9nAzIp6BxeWClqf5LmVfVaJqS12PyTOWgDOtLNxrCZIx-CVL0AmlS9Heg2DcxtJSZK93Jl_SRKCRC7wWVdTEZnRlzPn8hX8jRuVVD5F967AWqxJpxpe_h7WdFe4Rvz-g&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54229",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/0LnvVhvdiY",
+        "default": false,
+        "post": "54229",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/X4xgwCKC#mFOffQVDzPRBXUh3JRhJC2igBDIcGLFRsz0pVSz8nI0",
+        "default": false,
+        "post": "54229",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/0yxxjK6A#dRkJ8L7ZSIamXkQDlepdYaOxIH5b6pYN4oad1buYsvg",
+        "default": false,
+        "post": "54229",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/rlIj3QSZ#mScW98Skao5KRpuYLO8Us8FwBKo0snenIvnxT4gTOds",
+        "default": false,
+        "post": "54229",
+        "nume": "5"
+      }
+    ],
+    "id": 23,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
     "nama": "Hibike! Euphonium: The Final Movie Part 1",
     "judul": "Hibike! Euphonium: The Final Movie Part 1",
     "tahun": "",
@@ -51,7 +3103,7 @@
         "nume": "1"
       }
     ],
-    "id": 1,
+    "id": 24,
     "is_new": true,
     "thumbnail_landscape": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcKqxzXkZ3HaEVuEQP2m8wSlVeKonOQ2Ik678ev9QyqV5rWxsb9kWsH6i3bkdj13G1UoirfOSsXWIlqO9HxAUjuuRv4QtiSYyaMkUzC9qjN4D5WQA67RLYu3V86975s0NLJxb-nh5-4sqWCa1O5DzYDHCqHWAdp8tu537q8hvZzW5Mq_uCSrvopQZolNU9/s360/FINALE_BANNER_SAMEHADAKU_BIG777.gif"
   },
@@ -128,7 +3180,7 @@
         "nume": "6"
       }
     ],
-    "id": 2,
+    "id": 25,
     "is_new": true
   },
   {
@@ -292,7 +3344,7 @@
         "nume": "7"
       }
     ],
-    "id": 3
+    "id": 26
   },
   {
     "type": "anime-movie",
@@ -503,7 +3555,7 @@
         "nume": "7"
       }
     ],
-    "id": 4
+    "id": 27
   },
   {
     "type": "anime-movie",
@@ -737,7 +3789,7 @@
         "nume": "8"
       }
     ],
-    "id": 5
+    "id": 28
   },
   {
     "type": "anime-movie",
@@ -1027,7 +4079,7 @@
         "nume": "14"
       }
     ],
-    "id": 6
+    "id": 29
   },
   {
     "type": "anime-movie",
@@ -1278,7 +4330,7 @@
         "nume": "12"
       }
     ],
-    "id": 7
+    "id": 30
   },
   {
     "type": "anime-movie",
@@ -1476,7 +4528,7 @@
         "nume": "9"
       }
     ],
-    "id": 8
+    "id": 31
   },
   {
     "type": "anime-movie",
@@ -1710,7 +4762,7 @@
         "nume": "15"
       }
     ],
-    "id": 9
+    "id": 32
   },
   {
     "type": "anime-movie",
@@ -1907,7 +4959,7 @@
         "nume": "12"
       }
     ],
-    "id": 10
+    "id": 33
   },
   {
     "type": "anime-movie",
@@ -2139,7 +5191,7 @@
         "nume": "15"
       }
     ],
-    "id": 11
+    "id": 34
   },
   {
     "type": "anime-movie",
@@ -2336,7 +5388,7 @@
         "nume": "12"
       }
     ],
-    "id": 12
+    "id": 35
   },
   {
     "type": "anime-movie",
@@ -2571,7 +5623,7 @@
         "nume": "15"
       }
     ],
-    "id": 13
+    "id": 36
   },
   {
     "type": "anime-movie",
@@ -2878,7 +5930,7 @@
         "nume": "20"
       }
     ],
-    "id": 14
+    "id": 37
   },
   {
     "type": "anime-movie",
@@ -3078,7 +6130,7 @@
         "nume": "12"
       }
     ],
-    "id": 15
+    "id": 38
   },
   {
     "type": "anime-movie",
@@ -3314,7 +6366,7 @@
         "nume": "14"
       }
     ],
-    "id": 16
+    "id": 39
   },
   {
     "type": "anime-movie",
@@ -3458,7 +6510,7 @@
         "nume": "11"
       }
     ],
-    "id": 17
+    "id": 40
   },
   {
     "type": "anime-movie",
@@ -3603,7 +6655,7 @@
         "nume": "6"
       }
     ],
-    "id": 18
+    "id": 41
   },
   {
     "type": "anime-movie",
@@ -3747,7 +6799,7 @@
         "nume": "6"
       }
     ],
-    "id": 19
+    "id": 42
   },
   {
     "type": "anime-movie",
@@ -3926,7 +6978,7 @@
         "nume": "8"
       }
     ],
-    "id": 20
+    "id": 43
   },
   {
     "type": "anime-movie",
@@ -4071,7 +7123,7 @@
         "nume": "6"
       }
     ],
-    "id": 21
+    "id": 44
   },
   {
     "type": "anime-movie",
@@ -4218,7 +7270,7 @@
         "nume": "6"
       }
     ],
-    "id": 22
+    "id": 45
   },
   {
     "type": "anime-movie",
@@ -4346,7 +7398,7 @@
         "nume": "5"
       }
     ],
-    "id": 23
+    "id": 46
   },
   {
     "type": "anime-movie",
@@ -4528,7 +7580,7 @@
         "nume": "6"
       }
     ],
-    "id": 24
+    "id": 47
   },
   {
     "type": "anime-movie",
@@ -4637,7 +7689,7 @@
         "nume": "4"
       }
     ],
-    "id": 25
+    "id": 48
   },
   {
     "type": "anime-movie",
@@ -4745,7 +7797,7 @@
         "nume": "4"
       }
     ],
-    "id": 26
+    "id": 49
   },
   {
     "type": "anime-movie",
@@ -4852,7 +7904,7 @@
         "nume": "4"
       }
     ],
-    "id": 27
+    "id": 50
   },
   {
     "type": "anime-movie",
@@ -4943,7 +7995,7 @@
         "nume": "3"
       }
     ],
-    "id": 28
+    "id": 51
   },
   {
     "type": "anime-movie",
@@ -5055,7 +8107,7 @@
         "nume": "4"
       }
     ],
-    "id": 29
+    "id": 52
   },
   {
     "type": "anime-movie",
@@ -5090,7 +8142,7 @@
       }
     ],
     "players": [],
-    "id": 30
+    "id": 53
   },
   {
     "type": "anime-movie",
@@ -5199,7 +8251,7 @@
         "nume": "4"
       }
     ],
-    "id": 31
+    "id": 54
   },
   {
     "type": "anime-movie",
@@ -5397,7 +8449,7 @@
         "nume": "9"
       }
     ],
-    "id": 32
+    "id": 55
   },
   {
     "type": "anime-movie",
@@ -5575,7 +8627,7 @@
         "nume": "8"
       }
     ],
-    "id": 33
+    "id": 56
   },
   {
     "type": "anime-movie",
@@ -5738,7 +8790,7 @@
         "nume": "7"
       }
     ],
-    "id": 34
+    "id": 57
   },
   {
     "type": "anime-movie",
@@ -5810,7 +8862,7 @@
         "nume": "2"
       }
     ],
-    "id": 35
+    "id": 58
   },
   {
     "type": "anime-movie",
@@ -5885,6 +8937,6 @@
         "nume": "2"
       }
     ],
-    "id": 36
+    "id": 59
   }
 ]
