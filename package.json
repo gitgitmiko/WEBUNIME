@@ -18,6 +18,7 @@
     "scrape:genre": "node scripts/scrape-genre.js",
     "scrape:indonesia": "node scripts/scrape-indonesia.js",
     "scrape:anime": "node scripts/scrape-anime.js",
+    "scrape:samehadaku": "node scripts/scrape-samehadaku-latest.js",
     "scrape:anime-movie": "node scripts/scrape-anime-movie.js",
     "scrape:anime-schedule": "node scripts/scrape-anime-schedule.js",
     "fix:player-hosts": "node scripts/fix-player-hosts.js",
