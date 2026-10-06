@@ -30,6 +30,7 @@ function isAdminUser(userOrUsername) {
 let usersSchemaReady = false;
 
 export async function ensureUsersSchema() {
+  return;
   if (usersSchemaReady) return;
   const pool = getPool();
   try {
@@ -126,6 +127,7 @@ function readSid(req) {
   }
   const raw = req.cookies?.[COOKIE];
   if (!raw || typeof raw !== "string") return null;
+  if (raw.startsWith("v1.")) return raw;
   if (!/^[a-f0-9]{64}$/i.test(raw)) return null;
   return raw.toLowerCase();
 }
@@ -167,27 +169,9 @@ async function destroySession(sid) {
 }
 
 async function loadUserFromSession(sid) {
-  if (!sid) return null;
-  const pool = getPool();
-  const [rows] = await pool.execute(
-    `SELECT u.id, u.email, u.username, u.display_name, u.is_active, u.created_at, s.expires_at
-     FROM sessions s
-     JOIN users u ON u.id = s.user_id
-     WHERE s.id = :id
-     LIMIT 1`,
-    { id: sid }
-  );
-  const row = rows[0];
-  if (!row) return null;
-  if (new Date(row.expires_at).getTime() <= Date.now()) {
-    await destroySession(sid);
-    return null;
-  }
-  if (!isUserActive(row)) {
-    await destroySession(sid);
-    return null;
-  }
-  return publicUser(row);
+  if (!sid || !String(sid).startsWith("v1.")) return null;
+  const { sessionUser } = await import("./dashboard-session.js");
+  return sessionUser(sid);
 }
 
 export async function getSessionUser(req) {
@@ -219,44 +203,25 @@ export function createLoginGuard() {
       if (isPublicPath(path)) return next();
 
       const user = await getSessionUser(req);
-      if (user) {
-        req.user = user;
-        // Batasi abuse open-proxy setelah login (HTML/API saja; media HLS exempt).
-        if (
-          path.startsWith("/__px__/") ||
-          path.startsWith("/__vid__") ||
-          path.startsWith("/__hydrax__") ||
-          path === "/api/resolve" ||
-          path === "/api/embed"
-        ) {
-          if (!isProxyMediaPath(path)) {
-            const ip = clientIp(req);
-            if (!rateLimit(`proxy:${user.id}:${ip}`, 400, 60_000)) {
-              res.statusCode = 429;
-              res.setHeader("Content-Type", "application/json; charset=utf-8");
-              res.setHeader("Cache-Control", "no-store");
-              res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
-              return;
-            }
-          }
-        }
-        return next();
-      }
-
-      const needsAuth =
-        path.startsWith("/data/") ||
-        path.startsWith("/api/") ||
+      if (user) req.user = user;
+      if (
         path.startsWith("/__px__/") ||
         path.startsWith("/__vid__") ||
         path.startsWith("/__hydrax__") ||
-        path === "/__wu_sw.js";
-
-      if (needsAuth) {
-        res.statusCode = 401;
-        res.setHeader("Content-Type", "application/json; charset=utf-8");
-        res.setHeader("Cache-Control", "no-store");
-        res.end(JSON.stringify({ error: "Login wajib untuk menonton." }));
-        return;
+        path === "/api/resolve" ||
+        path === "/api/embed"
+      ) {
+        if (!isProxyMediaPath(path)) {
+          const ip = clientIp(req);
+          const bucket = user ? user.id + ":" + ip : ip;
+          if (!rateLimit(`proxy:${bucket}`, 400, 60_000)) {
+            res.statusCode = 429;
+            res.setHeader("Content-Type", "application/json; charset=utf-8");
+            res.setHeader("Cache-Control", "no-store");
+            res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
+            return;
+          }
+        }
       }
       return next();
     } catch (err) {
@@ -596,35 +561,19 @@ export function createAuthRouter() {
       .toLowerCase();
     const password = String(body.password || "");
 
-    if (!login || !password) {
-      return res.status(400).json({ error: "Login dan password wajib diisi." });
+    if (!password) {
+      return res.status(400).json({ error: "Kata sandi wajib diisi." });
     }
 
     try {
-      const pool = getPool();
-      const [rows] = await pool.execute(
-        `SELECT id, email, username, password_hash, display_name, is_active, created_at
-         FROM users
-         WHERE email = :login OR username = :login
-         LIMIT 1`,
-        { login }
-      );
-      const row = rows[0];
-      const ok = await bcrypt.compare(password, row?.password_hash || DUMMY_PASSWORD_HASH);
-
-      if (!row || !ok) {
-        return res.status(401).json({ error: "Email/username atau password salah." });
+      const { dashboardPasswordOk, dashboardUser, signSession } = await import("./dashboard-session.js");
+      const ok = await dashboardPasswordOk(password);
+      if (!ok) {
+        return res.status(401).json({ error: "Kata sandi dasbor salah." });
       }
-      if (!isUserActive(row)) {
-        return res.status(403).json({ error: "Akun dinonaktifkan." });
-      }
-
-      const oldSid = readSid(req);
-      if (oldSid) await destroySession(oldSid);
-
-      const { sid, expires } = await createSession(row.id);
-      setSessionCookie(res, sid, expires.getTime() - Date.now());
-      return res.json({ user: publicUser(row) });
+      const sid = signSession();
+      setSessionCookie(res, sid, 14 * 24 * 60 * 60 * 1000);
+      return res.json({ user: dashboardUser() });
     } catch (err) {
       console.error("[auth/login]", err);
       return res.status(500).json({ error: "Gagal masuk." });
@@ -665,14 +614,7 @@ export function createAuthRouter() {
         return res.status(400).json({ error: "Nama tampilan wajib diisi." });
       }
 
-      const pool = getPool();
-      await pool.execute(`UPDATE users SET display_name = :displayName WHERE id = :id`, {
-        displayName,
-        id: user.id,
-      });
-      return res.json({
-        user: { ...user, displayName },
-      });
+      return res.json({ user });
     } catch (err) {
       console.error("[auth/profile]", err);
       return res.status(500).json({ error: "Gagal memperbarui profil." });

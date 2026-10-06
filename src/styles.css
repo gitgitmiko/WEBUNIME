@@ -2674,3 +2674,30 @@ body.is-auth-checking .auth-boot,
     max-width: none;
   }
 }
+
+.site-settings {
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  padding: 1.2rem 1.3rem;
+  background: #12141a;
+  color: #f4f6f8;
+  max-width: 24rem;
+}
+.site-settings::backdrop { background: rgba(0,0,0,.62); }
+.site-settings h2 { margin: 0 0 .35rem; font-size: 1.35rem; }
+.site-settings p { margin: 0 0 1rem; }
+.site-settings .btn { text-decoration: none; margin-right: .5rem; }
+
+.icon-gear {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.icon-gear:hover { background: rgba(255, 255, 255, 0.16); }

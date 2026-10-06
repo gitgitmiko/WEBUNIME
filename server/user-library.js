@@ -1,194 +1,117 @@
-import fs from "node:fs";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { getPool } from "./db.js";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-let schemaReady = false;
+const file = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../data/library.json");
+
+function clean(value, max) {
+  const text = String(value || "").trim();
+  return text ? text.slice(0, max) : null;
+}
+
+async function load() {
+  try {
+    const data = JSON.parse(await readFile(file, "utf8"));
+    return {
+      favorites: Array.isArray(data.favorites) ? data.favorites : [],
+      history: Array.isArray(data.history) ? data.history : [],
+    };
+  } catch {
+    return { favorites: [], history: [] };
+  }
+}
+
+async function save(data) {
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, JSON.stringify(data), "utf8");
+}
 
 export async function ensureUserLibrarySchema() {
-  if (schemaReady) return;
-  const sql = fs.readFileSync(path.join(__dirname, "sql/user-library.sql"), "utf8");
-  const pool = getPool();
-  for (const stmt of sql
-    .split(/;\s*\n/)
-    .map((s) => s.trim())
-    .filter(Boolean)) {
-    await pool.query(stmt);
-  }
-  try {
-    await pool.query(
-      `ALTER TABLE watch_history ADD COLUMN episode_num INT NULL AFTER episode_slug`
-    );
-  } catch (err) {
-    if (err?.code !== "ER_DUP_FIELDNAME" && err?.errno !== 1060) throw err;
-  }
-  schemaReady = true;
+  const data = await load();
+  await save(data);
 }
 
-function cleanStr(v, max) {
-  if (v == null) return null;
-  const s = String(v).trim();
-  if (!s) return null;
-  return s.slice(0, max);
-}
-
-export async function listFavorites(userId, limit = 100) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
+export async function listFavorites(_userId, limit = 100) {
   const safeLimit = Math.min(Math.max(Number(limit) || 100, 1), 200);
-  const [rows] = await pool.query(
-    `SELECT collection, slug, title, thumbnail, created_at AS createdAt
-     FROM favorites
-     WHERE user_id = ?
-     ORDER BY created_at DESC
-     LIMIT ?`,
-    [userId, safeLimit]
-  );
-  return rows;
+  const data = await load();
+  return data.favorites.slice(0, safeLimit);
 }
 
-export async function isFavorite(userId, collection, slug) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
-  const [rows] = await pool.execute(
-    `SELECT 1 AS ok FROM favorites
-     WHERE user_id = :userId AND collection = :collection AND slug = :slug
-     LIMIT 1`,
-    { userId, collection, slug }
-  );
-  return Boolean(rows[0]);
+export async function isFavorite(_userId, collection, slug) {
+  const data = await load();
+  const key = String(slug || "").toLowerCase();
+  return data.favorites.some((row) => row.collection === collection && row.slug === key);
 }
 
-export async function addFavorite(userId, { collection, slug, title, thumbnail }) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
-  await pool.execute(
-    `INSERT INTO favorites (user_id, collection, slug, title, thumbnail)
-     VALUES (:userId, :collection, :slug, :title, :thumbnail)
-     ON DUPLICATE KEY UPDATE
-       title = VALUES(title),
-       thumbnail = VALUES(thumbnail)`,
-    {
-      userId,
-      collection: cleanStr(collection, 32),
-      slug: cleanStr(slug, 191)?.toLowerCase(),
-      title: cleanStr(title, 512),
-      thumbnail: cleanStr(thumbnail, 2000),
-    }
-  );
+export async function addFavorite(_userId, { collection, slug, title, thumbnail }) {
+  const data = await load();
+  const key = clean(slug, 191)?.toLowerCase();
+  const col = clean(collection, 32);
+  if (!key || !col) return;
+  const row = {
+    collection: col,
+    slug: key,
+    title: clean(title, 512),
+    thumbnail: clean(thumbnail, 2000),
+    createdAt: new Date().toISOString(),
+  };
+  const index = data.favorites.findIndex((item) => item.collection === col && item.slug === key);
+  if (index >= 0) data.favorites[index] = { ...data.favorites[index], ...row, createdAt: data.favorites[index].createdAt };
+  else data.favorites.unshift(row);
+  await save(data);
 }
 
-export async function removeFavorite(userId, collection, slug) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
-  await pool.execute(
-    `DELETE FROM favorites
-     WHERE user_id = :userId AND collection = :collection AND slug = :slug`,
-    { userId, collection, slug: String(slug).toLowerCase() }
-  );
+export async function removeFavorite(_userId, collection, slug) {
+  const data = await load();
+  const key = String(slug || "").toLowerCase();
+  data.favorites = data.favorites.filter((row) => !(row.collection === collection && row.slug === key));
+  await save(data);
 }
 
-export async function listHistory(userId, limit = 40) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
+export async function listHistory(_userId, limit = 40) {
   const safeLimit = Math.min(Math.max(Number(limit) || 40, 1), 100);
-  const [rows] = await pool.query(
-    `SELECT collection, slug, episode_slug AS episodeSlug, episode_num AS episodeNum,
-            title, thumbnail, progress_seconds AS progressSeconds,
-            last_watched_at AS lastWatchedAt
-     FROM watch_history
-     WHERE user_id = ?
-     ORDER BY last_watched_at DESC
-     LIMIT ?`,
-    [userId, safeLimit]
-  );
-  return rows;
-}
-
-function parseEpisodeNum(episodeNum, episodeSlug) {
-  const n = Number(episodeNum);
-  if (Number.isFinite(n) && n > 0) return Math.trunc(n);
-  const m = String(episodeSlug || "").match(/episode-(\d+)/i);
-  return m ? Number(m[1]) : null;
+  const data = await load();
+  return data.history.slice(0, safeLimit);
 }
 
 export async function upsertHistory(
-  userId,
+  _userId,
   { collection, slug, episodeSlug, episodeNum, title, thumbnail, progressSeconds }
 ) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
-  const collectionKey = cleanStr(collection, 32);
-  const slugKey = cleanStr(slug, 191)?.toLowerCase();
-  const epSlug = cleanStr(episodeSlug, 191);
-  const epNum = parseEpisodeNum(episodeNum, epSlug);
-  await pool.execute(
-    `INSERT INTO watch_history
-       (user_id, collection, slug, episode_slug, episode_num, title, thumbnail, progress_seconds)
-     VALUES
-       (:userId, :collection, :slug, :episodeSlug, :episodeNum, :title, :thumbnail, :progressSeconds)
-     ON DUPLICATE KEY UPDATE
-       episode_slug = VALUES(episode_slug),
-       episode_num = VALUES(episode_num),
-       title = VALUES(title),
-       thumbnail = VALUES(thumbnail),
-       progress_seconds = VALUES(progress_seconds),
-       last_watched_at = CURRENT_TIMESTAMP`,
-    {
-      userId,
-      collection: collectionKey,
-      slug: slugKey,
-      episodeSlug: epSlug,
-      episodeNum: epNum,
-      title: cleanStr(title, 512),
-      thumbnail: cleanStr(thumbnail, 2000),
-      progressSeconds: Math.max(0, Number(progressSeconds) || 0),
-    }
+  const data = await load();
+  const col = clean(collection, 32);
+  const key = clean(slug, 191)?.toLowerCase();
+  if (!col || !key) return;
+  const row = {
+    collection: col,
+    slug: key,
+    episodeSlug: clean(episodeSlug, 191),
+    episodeNum: Number(episodeNum) || null,
+    title: clean(title, 512),
+    thumbnail: clean(thumbnail, 2000),
+    progressSeconds: Number(progressSeconds) || 0,
+    lastWatchedAt: new Date().toISOString(),
+  };
+  const index = data.history.findIndex(
+    (item) => item.collection === col && item.slug === key && item.episodeSlug === row.episodeSlug
   );
-  if (epSlug) {
-    await pool.execute(
-      `INSERT INTO watch_episodes
-         (user_id, collection, slug, episode_slug, episode_num)
-       VALUES
-         (:userId, :collection, :slug, :episodeSlug, :episodeNum)
-       ON DUPLICATE KEY UPDATE
-         episode_num = VALUES(episode_num),
-         watched_at = CURRENT_TIMESTAMP`,
-      {
-        userId,
-        collection: collectionKey,
-        slug: slugKey,
-        episodeSlug: epSlug,
-        episodeNum: epNum,
-      }
-    );
-  }
+  if (index >= 0) data.history.splice(index, 1);
+  data.history.unshift(row);
+  data.history = data.history.slice(0, 200);
+  await save(data);
 }
 
-export async function listWatchedEpisodes(userId, collection, slug) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
-  const [rows] = await pool.execute(
-    `SELECT episode_slug AS episodeSlug, episode_num AS episodeNum, watched_at AS watchedAt
-     FROM watch_episodes
-     WHERE user_id = :userId AND collection = :collection AND slug = :slug
-     ORDER BY watched_at DESC`,
-    {
-      userId,
-      collection: cleanStr(collection, 32),
-      slug: String(slug).toLowerCase(),
-    }
-  );
-  return rows;
+export async function listWatchedEpisodes(_userId, collection, slug) {
+  const data = await load();
+  const key = String(slug || "").toLowerCase();
+  return data.history
+    .filter((row) => row.collection === collection && row.slug === key && row.episodeSlug)
+    .map((row) => ({ episodeSlug: row.episodeSlug, episodeNum: row.episodeNum }));
 }
 
-export async function removeHistory(userId, collection, slug) {
-  await ensureUserLibrarySchema();
-  const pool = getPool();
-  await pool.execute(
-    `DELETE FROM watch_history
-     WHERE user_id = :userId AND collection = :collection AND slug = :slug`,
-    { userId, collection, slug: String(slug).toLowerCase() }
-  );
+export async function removeHistory(_userId, collection, slug) {
+  const data = await load();
+  const key = String(slug || "").toLowerCase();
+  data.history = data.history.filter((row) => !(row.collection === collection && row.slug === key));
+  await save(data);
 }

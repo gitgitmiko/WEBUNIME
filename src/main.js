@@ -1464,10 +1464,6 @@ function bindNfDropdown(root) {
 }
 
 async function openModal(movie, opts = {}) {
-  if (!currentUser) {
-    enterAuthGate("login");
-    return;
-  }
   movie = (await hydrateItem(movie)) || movie;
   activeMovie = movie;
   activeEpisode = null;
@@ -2011,10 +2007,6 @@ function setupPlayerEpisodes(movie) {
 }
 
 async function openPlayer(movie) {
-  if (!currentUser) {
-    enterAuthGate("login");
-    return;
-  }
   movie = (await hydrateItem(movie)) || movie;
   activeMovie = movie;
   if (!isSeries(movie)) {
@@ -2914,7 +2906,7 @@ function renderAuthChrome() {
     tabProfile.classList.remove("hidden");
     usersBtn?.classList.toggle("hidden", !canInviteUsers());
   } else {
-    openBtn.classList.remove("hidden");
+    openBtn.classList.add("hidden");
     chip.classList.add("hidden");
     usersBtn?.classList.add("hidden");
     tabLogin?.classList.remove("hidden");
@@ -3283,16 +3275,21 @@ async function init() {
   try {
     bindAuth();
     await refreshAuthSession();
-    if (!currentUser) {
-      enterAuthGate("login");
-      return;
-    }
     await bootApp();
   } catch (err) {
     console.error(err);
-    enterAuthGate("login");
-    setAuthError("Gagal memuat aplikasi. Coba masuk lagi.");
+    endAuthBoot();
   }
 }
 
 init();
+
+const siteSettingsBtn = document.querySelector("#siteSettingsBtn");
+const siteSettings = document.querySelector("#siteSettings");
+const siteSettingsClose = document.querySelector("#siteSettingsClose");
+if (siteSettingsBtn && siteSettings) {
+  siteSettingsBtn.addEventListener("click", () => siteSettings.showModal());
+}
+if (siteSettingsClose && siteSettings) {
+  siteSettingsClose.addEventListener("click", () => siteSettings.close());
+}

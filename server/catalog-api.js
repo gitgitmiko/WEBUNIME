@@ -7,7 +7,7 @@ import {
   listCollectionAll,
   listHero,
   searchCatalog,
-} from "./catalog.js";
+} from "./json-catalog.js";
 
 /**
  * API baca katalog (wajib auth via login guard / cookie / Bearer).
