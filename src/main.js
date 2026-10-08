@@ -614,14 +614,27 @@ function hasGenre(movie, names) {
   return movie.genre?.some((g) => names.includes(g));
 }
 
+function isUsableThumbnail(url) {
+  const raw = (url || "").trim();
+  if (!raw) return false;
+  try {
+    const u = new URL(raw);
+    const path = (u.pathname || "").trimEnd("/");
+    if (path === "" || path === "/") return false;
+    const lower = path.toLowerCase();
+    return lower.endsWith(".jpg") || lower.endsWith(".jpeg") || lower.endsWith(".png") || lower.endsWith(".webp") || lower.endsWith(".gif") || lower.endsWith(".avif") || lower.includes("/uploads/") || lower.includes("/upload/") || lower.includes("/img/");
+  } catch { return false; }
+}
+
 function createPoster(movie, index = 0) {
   const btn = document.createElement("button");
   btn.type = "button";
   btn.className = "poster";
   btn.style.animationDelay = `${Math.min(index * 40, 400)}ms`;
   btn.setAttribute("aria-label", `Detail ${movie.nama}`);
+  const thumb = isUsableThumbnail(movie.thumbnail) ? movie.thumbnail : "";
   btn.innerHTML = `
-    <img src="${movie.thumbnail}" alt="${movie.judul || movie.nama}" loading="lazy" width="200" height="300" />
+    <img src="${thumb}" alt="${movie.judul || movie.nama}" loading="lazy" width="200" height="300" />
     ${posterBadgesHtml(movie)}
     ${posterDurationHtml(movie)}
     <div class="poster-foot">
