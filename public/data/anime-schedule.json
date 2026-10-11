@@ -1,6 +1,6 @@
 {
   "source": "https://v2.samehadaku.how/jadwal-rilis/",
-  "scraped_at": "2026-10-02T08:01:04.484Z",
+  "scraped_at": "2026-10-11T20:55:34.058Z",
   "timezone": "Asia/Jakarta",
   "days": [
     {
@@ -47,20 +47,6 @@
       "label": "Rabu",
       "items": [
         {
-          "slug": "tensei-shitara-ken-deshita-s2",
-          "judul": "Tensei shitara Ken deshita S2",
-          "nama": "Tensei shitara Ken deshita S2",
-          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/bx159042-GGFwlDskc5vR.png",
-          "rating": "7.52",
-          "type": "TV",
-          "genre": [
-            "Action",
-            "Adventure"
-          ],
-          "time": "",
-          "source": "https://v2.samehadaku.how/anime/tensei-shitara-ken-deshita-s2/"
-        },
-        {
           "slug": "sora-wa-akai-kawa-no-hotori",
           "judul": "Sora wa Akai Kawa no Hotori",
           "nama": "Sora wa Akai Kawa no Hotori",
@@ -73,6 +59,20 @@
           ],
           "time": "01:35",
           "source": "https://v2.samehadaku.how/anime/sora-wa-akai-kawa-no-hotori/"
+        },
+        {
+          "slug": "clevatess-season-2",
+          "judul": "Clevatess Season 2",
+          "nama": "Clevatess Season 2",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/157105a.jpg",
+          "rating": "7.72",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Fantasy"
+          ],
+          "time": "22:00",
+          "source": "https://v2.samehadaku.how/anime/clevatess-season-2/"
         },
         {
           "slug": "rezero-kara-hajimeru-isekai-seikatsu-season-4",
@@ -93,7 +93,22 @@
     {
       "day": "thursday",
       "label": "Kamis",
-      "items": []
+      "items": [
+        {
+          "slug": "tomb-raider-king",
+          "judul": "Tomb Raider King",
+          "nama": "Tomb Raider King",
+          "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tomb-Rider-King-v2.jpg",
+          "rating": "6.63",
+          "type": "TV",
+          "genre": [
+            "Action",
+            "Adventure"
+          ],
+          "time": "03:00",
+          "source": "https://v2.samehadaku.how/anime/tomb-raider-king/"
+        }
+      ]
     },
     {
       "day": "friday",
@@ -104,7 +119,7 @@
           "judul": "Tsuihou sareta Tensei Juukishi wa Game",
           "nama": "Tsuihou sareta Tensei Juukishi wa Game",
           "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tsuihou-sareta-Tensei-Juukishi-wa-Game.jpg",
-          "rating": "6.83",
+          "rating": "6.81",
           "type": "TV",
           "genre": [
             "Action",
