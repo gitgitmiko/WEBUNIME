@@ -97,15 +97,42 @@ function episodeWatchUrl(animeSlug, episode) {
   return `${BASE}/${animeSlug}-episode-${n}/`;
 }
 
-async function waitReady(page, timeoutMs = 90000) {
+function isChallenge(title, html) {
+  const head = String(html || "").slice(0, 6000);
+  return /just a moment|tunggu sebentar|attention required|checking your browser|cf-browser-verification|challenge-platform/i.test(
+    `${title}\n${head}`
+  );
+}
+
+function hasListing(html) {
+  return /class=["']dtla["']|class=["']widgetseries["']|class=["']imgseries["']/i.test(html || "");
+}
+
+async function waitReady(page, timeoutMs = 90000, { requireListing = false } = {}) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
     const title = await page.title();
-    if (!/just a moment|tunggu sebentar|attention required|checking your browser/i.test(title)) {
-      return true;
-    }
+    const html = requireListing ? await page.content() : "";
+    if (!isChallenge(title, html) && (!requireListing || hasListing(html))) return true;
     await page.waitForTimeout(1000);
   }
+  return false;
+}
+
+async function gotoReady(page, url, label) {
+  let lastError = null;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
+      if (await waitReady(page, 25000 + attempt * 20000, { requireListing: true })) return true;
+      console.warn(`[samehadaku-sync] ${label} masih Cloudflare, ulang ${attempt}/3`);
+    } catch (err) {
+      lastError = err;
+      console.warn(`[samehadaku-sync] ${label} gagal dibuka (${attempt}/3): ${err.message}`);
+    }
+    await sleep(2000 * attempt);
+  }
+  if (lastError && /timeout/i.test(lastError.message)) return false;
   return false;
 }
 
@@ -142,25 +169,32 @@ function nextId(list) {
 /** Kartu di /anime-terbaru/ → anime slug + nomor episode baru. */
 export function extractTerbaruListings(html) {
   const items = [];
-  const re =
-    /<li[^>]*itemscope[\s\S]*?<a[^>]+href=["']([^"']*\/anime\/([^/"']+)\/?)["'][^>]*>[\s\S]*?<img[^>]+src=["']([^"']+)["'][\s\S]*?class=["']dtla["'][\s\S]*?<a[^>]*>([\s\S]*?)<\/a>[\s\S]*?<b>\s*Episode\s*<\/b>\s*<author[^>]*>\s*([^<]+)\s*<\/author>/gi;
-  let m;
-  while ((m = re.exec(html)) !== null) {
-    const slug = m[2];
-    const epRaw = stripTags(m[5]);
+  const cardRe = /<li[^>]*itemscope[\s\S]*?<\/li>/gi;
+  let card;
+  while ((card = cardRe.exec(html)) !== null) {
+    const block = card[0];
+    if (!/class=["']dtla["']/i.test(block)) continue;
+    const anime = block.match(/href=["']([^"']*\/anime\/([^/"'?#]+)\/?)["']/i);
+    if (!anime) continue;
+    const slug = anime[2];
+    const titleRaw =
+      block.match(/class=["']entry-title["'][\s\S]*?<a[^>]*>([\s\S]*?)<\/a>/i)?.[1] ||
+      block.match(/href=["'][^"']*\/anime\/[^"']+["'][^>]*title=["']([^"']+)["']/i)?.[1] ||
+      "";
+    const thumb = block.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1] || "";
+    const epRaw = stripTags(block.match(/<b>\s*Episode\s*<\/b>\s*([^<]+)/i)?.[1] || "");
     const epNum = Number(epRaw);
-    if (!slug) continue;
-    const tail = html.slice(m.index, m.index + m[0].length + 500);
     const releasedOn = stripTags(
-      tail.match(/<b>\s*Released on\s*<\/b>\s*:\s*([^<]+)/i)?.[1] || ""
+      block.match(/<b>\s*Released on\s*<\/b>\s*:?\s*([^<]+)/i)?.[1] || ""
     ).trim();
+    const watchHref = block.match(/class=["']thumb["'][\s\S]*?href=["']([^"']+)["']/i)?.[1];
     items.push({
       slug,
-      source: absUrl(m[1]),
-      title: cleanTitle(m[4]),
-      thumbnail: absUrl(m[3]),
+      source: absUrl(anime[1]),
+      title: cleanTitle(titleRaw),
+      thumbnail: thumb ? absUrl(thumb) : "",
       episode: Number.isFinite(epNum) && epNum > 0 ? epNum : epRaw || 1,
-      episode_source: episodeWatchUrl(slug, epRaw),
+      episode_source: watchHref ? absUrl(watchHref) : episodeWatchUrl(slug, epRaw || epNum || 1),
       released_on: releasedOn,
     });
   }
@@ -236,39 +270,30 @@ async function mergeAnimeLatestFeed(dataDir, listings) {
 /** Daftar anime-movie (sama pola animpost). */
 export function extractMovieListings(html) {
   const items = [];
-  const re =
-    /<div class=["']animpost[^"']*["'][\s\S]*?<a[^>]*href=["']([^"']+)["'][^>]*title=["']([^"']+)["'][\s\S]*?(?:<img[^>]+src=["']([^"']+)["'][^>]*>)?[\s\S]*?<\/a>/gi;
-  let m;
-  while ((m = re.exec(html)) !== null) {
-    const href = m[1];
-    if (!/\/anime\//i.test(href)) continue;
+  const seen = new Set();
+  const push = (href, title, thumb) => {
+    if (!/\/anime\//i.test(href || "")) return;
     const slug = slugFromUrl(href);
-    if (!slug || items.some((x) => x.slug === slug)) continue;
+    if (!slug || seen.has(slug)) return;
+    seen.add(slug);
     items.push({
       slug,
       source: absUrl(href),
-      title: cleanTitle(m[2]),
-      thumbnail: m[3] ? absUrl(m[3]) : "",
+      title: cleanTitle(title || slug),
+      thumbnail: thumb ? absUrl(thumb) : "",
       genre: [],
       tahun: "",
       season_label: "",
     });
-  }
+  };
+  const seriesRe =
+    /<div class=["']imgseries["'][\s\S]*?<a[^>]+href=["']([^"']+)["'][^>]*>[\s\S]*?<img[^>]+src=["']([^"']+)["'][\s\S]*?<h2>\s*<a[^>]*>([\s\S]*?)<\/a>/gi;
+  let m;
+  while ((m = seriesRe.exec(html)) !== null) push(m[1], m[3], m[2]);
   if (!items.length) {
-    for (const s of html.matchAll(
-      /href=["'](https?:\/\/[^"']*\/anime\/([^/"']+)\/?)["'][^>]*title=["']([^"']+)["']/gi
-    )) {
-      if (items.some((x) => x.slug === s[2])) continue;
-      items.push({
-        slug: s[2],
-        source: absUrl(s[1]),
-        title: cleanTitle(s[3]),
-        thumbnail: "",
-        genre: [],
-        tahun: "",
-        season_label: "",
-      });
-    }
+    const re =
+      /<div class=["']animpost[^"']*["'][\s\S]*?<a[^>]*href=["']([^"']+)["'][^>]*title=["']([^"']+)["'][\s\S]*?(?:<img[^>]+src=["']([^"']+)["'][^>]*>)?[\s\S]*?<\/a>/gi;
+    while ((m = re.exec(html)) !== null) push(m[1], m[2], m[3]);
   }
   return items;
 }
@@ -513,8 +538,14 @@ async function collectTerbaruListings(page) {
   for (let p = 1; p <= TERBARU_PAGES; p++) {
     const url = p <= 1 ? TERBARU_URL : `${BASE}/anime-terbaru/page/${p}/`;
     process.stdout.write(`[samehadaku-sync] terbaru ${p}/${TERBARU_PAGES} ... `);
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
-    if (!(await waitReady(page))) throw new Error("Cloudflare timeout (anime-terbaru)");
+    const ready = await gotoReady(page, url, `terbaru ${p}/${TERBARU_PAGES}`);
+    if (!ready) {
+      if (listings.length) {
+        console.warn(`[samehadaku-sync] terbaru halaman ${p} dilewati (Cloudflare)`);
+        break;
+      }
+      throw new Error("Cloudflare timeout (anime-terbaru)");
+    }
     await page.waitForTimeout(800);
     const html = await page.content();
     const batch = extractTerbaruListings(html);
@@ -716,8 +747,11 @@ async function collectMovieListings(page) {
   for (let p = 1; p <= MOVIE_PAGES; p++) {
     const url = p <= 1 ? MOVIE_URL : `${BASE}/anime-movie/page/${p}/`;
     process.stdout.write(`[samehadaku-sync] movie list ${p}/${MOVIE_PAGES} ... `);
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
-    if (!(await waitReady(page))) throw new Error("Cloudflare timeout (anime-movie)");
+    const ready = await gotoReady(page, url, `movie ${p}/${MOVIE_PAGES}`);
+    if (!ready) {
+      console.warn(`[samehadaku-sync] movie halaman ${p} dilewati (Cloudflare)`);
+      break;
+    }
     await page.waitForTimeout(800);
     const html = await page.content();
     const batch = extractMovieListings(html);

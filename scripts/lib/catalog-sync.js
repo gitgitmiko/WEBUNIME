@@ -11,7 +11,6 @@ import { join } from "node:path";
 import { chromium } from "playwright";
 import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
 import { syncAnoboyLatest } from "./anoboy-sync.js";
-import { syncIndonesiaCatalog } from "./kconaz-indonesia.js";
 import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
@@ -1485,7 +1484,7 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
 
   syncInFlight = (async () => {
     const started = Date.now();
-    console.log("[catalog-sync] mulai (LK21 → otherindia Indonesia → Samehadaku → Anoboy)…");
+    console.log("[catalog-sync] mulai (LK21 → Samehadaku → Anoboy)…");
     lk21Blocked = false;
     lk21BlockReason = "";
     lk21Warmed = false;
@@ -1495,7 +1494,6 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       series: emptyLk21Result(),
       seriesLatest: { checked: 0, feed: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
       horror: emptyLk21Result(),
-      indonesia: { checked: 0, added: 0, updated: 0, slugs: [], updatedSlugs: [] },
     };
 
     try {
@@ -1552,20 +1550,6 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       results.seriesLatest = {
         checked: 0,
         feed: 0,
-        added: 0,
-        updated: 0,
-        slugs: [],
-        updatedSlugs: [],
-        error: err.message,
-      };
-    }
-
-    try {
-      results.indonesia = await syncIndonesiaCatalog(dataDir);
-    } catch (err) {
-      console.warn("[sync] otherindia indonesia:", err.message);
-      results.indonesia = {
-        checked: 0,
         added: 0,
         updated: 0,
         slugs: [],
