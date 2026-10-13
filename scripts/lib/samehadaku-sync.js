@@ -424,6 +424,16 @@ function iframeSrcFromAjax(html) {
   );
 }
 
+function inlinePlayerUrl(html) {
+  const raw = iframeSrcFromAjax(html);
+  if (!raw || /just a moment|tunggu sebentar|challenges\.cloudflare|admin-ajax\.php/i.test(raw)) {
+    return "";
+  }
+  return decodeEntities(raw);
+}
+
+let samehadakuAnimePageBlocked = false;
+
 async function resolvePlayers(page, episodeHtml) {
   const options = extractPlayerOptions(episodeHtml);
   const players = [];
@@ -468,6 +478,22 @@ async function resolvePlayers(page, episodeHtml) {
       console.warn(`[samehadaku-sync] player ${opt.label}:`, err.message);
     }
     if (i < options.length - 1) await sleep(PLAYER_AJAX_DELAY_MS);
+  }
+  if (!players.length) {
+    const url = inlinePlayerUrl(episodeHtml);
+    const opt = options[0];
+    if (url) {
+      console.warn(`[samehadaku-sync] ajax player diblokir Cloudflare, pakai iframe di halaman`);
+      players.push({
+        no: 1,
+        server: opt?.server || "default",
+        label: opt?.label || "Default",
+        url,
+        default: true,
+        post: opt?.post,
+        nume: opt?.nume,
+      });
+    }
   }
   return players;
 }
@@ -627,14 +653,19 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
         // Anime baru: ambil meta + daftar eps, isi player hanya utk episode dari feed (+ sisanya kosong dulu)
         console.log(`[samehadaku-sync] anime baru ${item.slug} (ep ${item.episode})`);
         let detail = null;
-        try {
-          await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
-          if (await waitReady(page, 12000)) {
-            await page.waitForTimeout(400);
-            detail = extractAnimeDetailMeta(await page.content(), item);
+        if (!samehadakuAnimePageBlocked) {
+          try {
+            await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+            if (await waitReady(page, 8000)) {
+              await page.waitForTimeout(400);
+              detail = extractAnimeDetailMeta(await page.content(), item);
+            } else {
+              samehadakuAnimePageBlocked = true;
+            }
+          } catch (err) {
+            samehadakuAnimePageBlocked = true;
+            console.warn(`[samehadaku-sync] ${item.slug} detail: ${err.message}`);
           }
-        } catch (err) {
-          console.warn(`[samehadaku-sync] ${item.slug} detail: ${err.message}`);
         }
         if (!detail?.episodes?.length) {
           console.warn(`[samehadaku-sync] ${item.slug}: halaman anime kena Cloudflare, pakai kartu + episode`);
@@ -814,14 +845,19 @@ async function applyMoviesToCatalog(page, dataDir, listings) {
     console.log(`[samehadaku-sync] movie baru ${item.slug}`);
     try {
       let detail = null;
-      try {
-        await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
-        if (await waitReady(page, 12000)) {
-          await page.waitForTimeout(400);
-          detail = extractMovieDetail(await page.content(), item);
+      if (!samehadakuAnimePageBlocked) {
+        try {
+          await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+          if (await waitReady(page, 8000)) {
+            await page.waitForTimeout(400);
+            detail = extractMovieDetail(await page.content(), item);
+          } else {
+            samehadakuAnimePageBlocked = true;
+          }
+        } catch (err) {
+          samehadakuAnimePageBlocked = true;
+          console.warn(`[samehadaku-sync] movie ${item.slug} detail: ${err.message}`);
         }
-      } catch (err) {
-        console.warn(`[samehadaku-sync] movie ${item.slug} detail: ${err.message}`);
       }
       if (!detail?.episodes?.length) {
         console.warn(`[samehadaku-sync] movie ${item.slug}: halaman anime kena Cloudflare, coba URL tonton`);
