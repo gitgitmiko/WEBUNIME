@@ -1,24 +1,19 @@
 #!/usr/bin/env node
 /**
- * Refresh URL player (P2P/Turbo/Cast/Hydrax) dari halaman LK21 untuk film katalog.
- * Default: tahun 2025–2026 di movies + horror + indonesia.
+ * Refresh URL player (P2P/Turbo/Cast/Hydrax) film LK21 yang muncul
+ * di halaman terbaru. Default: 5 halaman /latest.
  *
  * Usage:
  *   node scripts/refresh-movie-players.js
- *   node scripts/refresh-movie-players.js --years 2025,2026
+ *   node scripts/refresh-movie-players.js --pages 5
  *   node scripts/refresh-movie-players.js --slugs pinocchio-unstrung-2026,last-house-2026
- *   node scripts/refresh-movie-players.js --collections horror --years 2026 --delay 250
- *   node scripts/refresh-movie-players.js --limit 20
+ *   node scripts/refresh-movie-players.js --delay 250 --limit 20
  */
 import { readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { rewritePlayerUrl } from "./lib/player-host-aliases.js";
-import {
-  extractKconazPlayers,
-  rewriteIndonesiaSourceUrl,
-} from "./lib/kconaz-indonesia.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
@@ -27,43 +22,23 @@ const BASE_URL = "https://tv12.lk21official.cc";
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
-const COLLECTION_FILES = {
-  movies: { items: "movies.json", players: "players.json", catalog: "movies" },
-  horror: { items: "horror.json", players: "horror-players.json", catalog: "horror" },
-  indonesia: {
-    items: "indonesia.json",
-    players: "indonesia-players.json",
-    catalog: "indonesia",
-  },
-};
+const COLLECTIONS = [
+  { name: "movies", items: "movies.json", players: "players.json", catalog: "movies" },
+  { name: "horror", items: "horror.json", players: "horror-players.json", catalog: "horror" },
+];
 
 function parseArgs(argv) {
-  const out = {
-    years: [2025, 2026],
-    collections: ["movies", "horror", "indonesia"],
-    slugs: null,
-    delay: 280,
-    limit: 0,
-  };
+  const out = { pages: 5, slugs: null, delay: 280, limit: 0 };
   for (let i = 0; i < argv.length; i += 1) {
     const a = argv[i];
     const next = argv[i + 1];
-    if (a === "--years" && next) {
-      out.years = next.split(",").map((y) => Number(y.trim())).filter(Boolean);
+    if (a === "--pages" && next) {
+      out.pages = Math.max(1, Number(next) || 5);
       i += 1;
-    } else if (a === "--collections" && next) {
-      out.collections = next
-        .split(",")
-        .map((c) => c.trim().toLowerCase())
-        .filter((c) => COLLECTION_FILES[c]);
+    } else if ((a === "--years" || a === "--collections") && next) {
       i += 1;
     } else if (a === "--slugs" && next) {
-      out.slugs = new Set(
-        next
-          .split(",")
-          .map((s) => s.trim())
-          .filter(Boolean)
-      );
+      out.slugs = next.split(",").map((s) => s.trim()).filter(Boolean);
       i += 1;
     } else if (a === "--delay" && next) {
       out.delay = Math.max(0, Number(next) || 0);
@@ -90,7 +65,8 @@ function extractPlayers(html) {
   const selectMatch = html.match(
     /<select[^>]*id=["']player-select["'][^>]*>([\s\S]*?)<\/select>/i
   );
-  const scope = selectMatch ? selectMatch[1] : html;
+  const scope = selectMatch ? selectMatch[1] : "";
+  if (!scope) return [];
   const optionRe =
     /<option\s+value=["'](?<url>[^"']+)["']\s+data-server=["'](?<server>[^"']*)["'](?<rest>[^>]*)>(?<label>[\s\S]*?)<\/option>/gi;
   const players = [];
@@ -116,15 +92,39 @@ function extractTitle(html) {
   return title ? title[1].replace(/\s*[-|].*$/, "").trim() : "";
 }
 
-function yearOf(item) {
-  const y = String(item?.tahun || item?.year || "").match(/(\d{4})/);
-  return y ? Number(y[1]) : 0;
+function playersChanged(a, b) {
+  const sig = (list) => JSON.stringify((list || []).map((p) => [p.server, p.url]));
+  return sig(a) !== sig(b);
 }
 
-function playersChanged(a, b) {
-  const sa = JSON.stringify((a || []).map((p) => [p.server, p.url]));
-  const sb = JSON.stringify((b || []).map((p) => [p.server, p.url]));
-  return sa !== sb;
+function listingUrl(page) {
+  if (page <= 1) return `${BASE_URL}/latest`;
+  return `${BASE_URL}/latest/page/${page}`;
+}
+
+function extractListingSlugs(html) {
+  const slugs = [];
+  const re =
+    /<article\b[^>]*itemtype=["']https?:\/\/schema\.org\/Movie["'][^>]*>([\s\S]*?)<\/article>/gi;
+  let m;
+  while ((m = re.exec(html)) !== null) {
+    const href =
+      m[0].match(/itemprop=["']url["'][^>]*href=["']([^"']+)["']/i)?.[1] ||
+      m[0].match(/href=["']([^"']+)["']/i)?.[1];
+    if (!href) continue;
+    let slug = "";
+    try {
+      const parts = new URL(href, BASE_URL).pathname.split("/").filter(Boolean);
+      slug = decodeURIComponent(parts[parts.length - 1] || "");
+    } catch {
+      continue;
+    }
+    if (!slug || /^(latest|search|genre|year|page|top-series|nontondrama|latest-series)$/i.test(slug)) {
+      continue;
+    }
+    slugs.push(slug);
+  }
+  return slugs;
 }
 
 async function fetchHtml(url) {
@@ -135,103 +135,110 @@ async function fetchHtml(url) {
   return res.text();
 }
 
-async function refreshCollection(name, opts) {
-  const meta = COLLECTION_FILES[name];
-  const itemsPath = join(DATA_DIR, meta.items);
-  const playersPath = join(DATA_DIR, meta.players);
-  const items = await readJson(itemsPath, []);
-  const playersMap = await readJson(playersPath, {});
-  if (!Array.isArray(items)) throw new Error(`${meta.items} bukan array`);
-
-  let targets = items.filter((item) => {
-    if (!item?.slug) return false;
-    if (opts.slugs) return opts.slugs.has(item.slug);
-    if (!item.source && !item.slug) return false;
-    return opts.years.includes(yearOf(item));
-  });
-
-  // Dedup by slug (keep first)
+async function collectSlugs(opts) {
+  if (opts.slugs) return opts.slugs;
+  const slugs = [];
   const seen = new Set();
-  targets = targets.filter((item) => {
-    if (seen.has(item.slug)) return false;
-    seen.add(item.slug);
-    return true;
-  });
-
-  if (opts.limit > 0) targets = targets.slice(0, opts.limit);
-
-  console.log(`\n[${name}] target ${targets.length} film`);
-  let ok = 0;
-  let changed = 0;
-  let failed = 0;
-
-  for (let i = 0; i < targets.length; i += 1) {
-    const item = targets[i];
-    const source =
-      name === "indonesia"
-        ? rewriteIndonesiaSourceUrl(item.source, item.slug)
-        : item.source ||
-          `${BASE_URL}/${String(item.slug).replace(/^\/+|\/+$/g, "")}`;
-    process.stdout.write(
-      `  (${i + 1}/${targets.length}) ${item.slug} ... `
-    );
+  for (let page = 1; page <= opts.pages; page += 1) {
+    const url = listingUrl(page);
+    process.stdout.write(`[movies] daftar ${url} ... `);
     try {
-      const html = await fetchHtml(source);
-      const players =
-        name === "indonesia" ? extractKconazPlayers(html) : extractPlayers(html);
-      if (!players.length) {
-        console.log("skip (0 player)");
-        failed += 1;
-      } else {
-        const didChange = playersChanged(item.players, players);
-        item.source = source;
-        item.players = players;
-        playersMap[item.slug] = {
-          slug: item.slug,
-          film: extractTitle(html) || item.judul || item.nama || item.slug,
-          source,
-          catalog: item.catalog || meta.catalog,
-          scraped_at: new Date().toISOString(),
-          players,
-        };
-        // Sync same slug across items array duplicates
-        for (const other of items) {
-          if (other?.slug === item.slug) {
-            other.source = source;
-            other.players = players;
-          }
-        }
-        ok += 1;
-        if (didChange) changed += 1;
-        console.log(
-          `${players.length} player${didChange ? " (updated)" : " (same)"}`
-        );
+      const html = await fetchHtml(url);
+      const pageSlugs = extractListingSlugs(html);
+      let added = 0;
+      for (const slug of pageSlugs) {
+        if (seen.has(slug)) continue;
+        seen.add(slug);
+        slugs.push(slug);
+        added += 1;
       }
+      console.log(`${pageSlugs.length} kartu, ${added} baru`);
     } catch (err) {
-      failed += 1;
-      console.log(`fail: ${err.message}`);
+      console.log(`gagal: ${err.message}`);
     }
-    if (opts.delay && i < targets.length - 1) await sleep(opts.delay);
+    if (opts.delay && page < opts.pages) await sleep(opts.delay);
   }
-
-  await writeFile(itemsPath, JSON.stringify(items, null, 2) + "\n", "utf8");
-  await writeFile(playersPath, JSON.stringify(playersMap, null, 2) + "\n", "utf8");
-  console.log(
-    `[${name}] done: ok=${ok} changed=${changed} failed=${failed} → ${meta.items}, ${meta.players}`
-  );
-  return { ok, changed, failed };
+  return slugs;
 }
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
   console.log(
-    `Refresh movie players years=${opts.years.join(",")} collections=${opts.collections.join(",")} delay=${opts.delay}ms`
+    `Refresh movie players pages=${opts.pages} delay=${opts.delay}ms limit=${opts.limit || "none"}`
   );
-  const summary = {};
-  for (const name of opts.collections) {
-    summary[name] = await refreshCollection(name, opts);
+
+  const loaded = [];
+  for (const meta of COLLECTIONS) {
+    const items = await readJson(join(DATA_DIR, meta.items), []);
+    const playersMap = await readJson(join(DATA_DIR, meta.players), {});
+    if (!Array.isArray(items)) throw new Error(`${meta.items} bukan array`);
+    loaded.push({ meta, items, playersMap, bySlug: new Map(items.filter((item) => item?.slug).map((item) => [item.slug, item])) });
   }
-  console.log("\nRingkasan:", summary);
+
+  let slugs = await collectSlugs(opts);
+  if (opts.limit > 0) slugs = slugs.slice(0, opts.limit);
+  console.log(`[movies] target ${slugs.length} film`);
+
+  const summary = { ok: 0, changed: 0, missing: 0, failed: 0 };
+
+  for (let i = 0; i < slugs.length; i += 1) {
+    const slug = slugs[i];
+    const hits = loaded.filter((col) => col.bySlug.has(slug));
+    process.stdout.write(`  (${i + 1}/${slugs.length}) ${slug} ... `);
+    if (!hits.length) {
+      summary.missing += 1;
+      console.log("skip (tidak ada di katalog)");
+      continue;
+    }
+    const sample = hits[0].bySlug.get(slug);
+    const source = sample.source || `${BASE_URL}/${slug}`;
+    try {
+      const html = await fetchHtml(source);
+      const players = extractPlayers(html);
+      if (!players.length) {
+        summary.failed += 1;
+        console.log("skip (0 player, URL lama dipertahankan)");
+        continue;
+      }
+      const title = extractTitle(html) || sample.judul || sample.nama || slug;
+      let didChange = false;
+      for (const col of hits) {
+        const item = col.bySlug.get(slug);
+        if (playersChanged(item.players, players)) didChange = true;
+        item.source = source;
+        item.players = players;
+        for (const other of col.items) {
+          if (other?.slug === slug) {
+            other.source = source;
+            other.players = players;
+          }
+        }
+        col.playersMap[slug] = {
+          slug,
+          film: title,
+          source,
+          catalog: item.catalog || col.meta.catalog,
+          scraped_at: new Date().toISOString(),
+          players,
+        };
+      }
+      summary.ok += 1;
+      if (didChange) summary.changed += 1;
+      console.log(`${players.length} player${didChange ? " (updated)" : " (same)"}`);
+    } catch (err) {
+      summary.failed += 1;
+      console.log(`fail: ${err.message}`);
+    }
+    if (opts.delay && i < slugs.length - 1) await sleep(opts.delay);
+  }
+
+  for (const col of loaded) {
+    await writeFile(join(DATA_DIR, col.meta.items), JSON.stringify(col.items, null, 2) + "\n", "utf8");
+    await writeFile(join(DATA_DIR, col.meta.players), JSON.stringify(col.playersMap, null, 2) + "\n", "utf8");
+  }
+  console.log(
+    `[movies] done: ok=${summary.ok} changed=${summary.changed} missing=${summary.missing} failed=${summary.failed}`
+  );
 }
 
 main().catch((err) => {

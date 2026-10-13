@@ -20,7 +20,7 @@ if git diff --staged --quiet; then
 fi
 
 git commit -m "$(cat <<'EOF'
-chore(data): sync katalog LK21 + Samehadaku + Anoboy TV+mobile (done)
+chore(data): sync katalog dan refresh player film serta series terbaru
 
 EOF
 )"
