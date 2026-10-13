@@ -2837,8 +2837,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Gensou%20Suikoden.jpg",
     "rating": "",
     "votes": "",
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "",
     "related": [],
@@ -2859,6 +2859,31 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dz3kEORE4_06V3TEj31DcCwzHy4Dvyp1DLvTxM0EbQ0VJjQ-BkCMDW7ZpLbabKZMKgeHF4DFfPX_lEdPjaA958Gl73Vm2VWeEimIQa81wJAW0ye0bdB-hzWVOSPB0WNbQfDh3A",
             "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 2,
+        "title": "Gensou Suikoden Episode 2",
+        "slug": "gensou-suikoden-episode-2",
+        "source": "https://anoboy.quest/2026/10/gensou-suikoden-episode-2/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxcy6Gwg8sq39PoEefTWXiH3sXHdfuKrsozj6n-vtRFngVt3pgGCakw4vdjpSvzNCqr84mUm8DJnVOEcHfOkI_zpPcshs23X6Hl_6DKMzbR_OX5CVwq73bCvAL8Qy8S4I5zjTQ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyAMsxtqILFZB5VQSmC285fDgL59xLnFVT6sCqyDQUdjWPklCP9f1EYxlXg586XF3Ya7AHD9Etc2X59tvDLGbYjKM9hrsA-dr34LxQgqRccWd_PFgqiZeuVEhv4DuhzAsChAfM",
+            "default": false,
             "source": "anoboy"
           }
         ]
