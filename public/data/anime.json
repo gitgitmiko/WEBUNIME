@@ -1,6 +1,386 @@
 [
   {
     "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Yowaki Max",
+    "judul": "Yowaki Max",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Yowaki Max.",
+    "related": [],
+    "slug": "yowaki-max",
+    "source": "https://v2.samehadaku.how/anime/yowaki-max/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 2,
+        "title": "Yowaki Max Episode 2",
+        "slug": "yowaki-max-episode-2",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-2/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:31.476Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dz3xZNEa30WpI5TRuJNFvzYayK0w0TNMIp36io-hDe9k2nl3kyUDUrjul-aSEXieIrhRaBcLb_EMa_2MU-hQa2sEMAZ89v9bD4OOPq7PxoutkdcU5JEe5bDV6_G73Zg3UcGLsOZ&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54585",
+            "nume": "1"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dz3xZNEa30WpI5TRuJNFvzYayK0w0TNMIp36io-hDe9k2nl3kyUDUrjul-aSEXieIrhRaBcLb_EMa_2MU-hQa2sEMAZ89v9bD4OOPq7PxoutkdcU5JEe5bDV6_G73Zg3UcGLsOZ&origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54585",
+        "nume": "1"
+      }
+    ],
+    "id": 1,
+    "is_new": true
+  },
+  {
+    "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Ao no Hako Season 2",
+    "judul": "Ao no Hako Season 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Ao no Hako Season 2.",
+    "related": [],
+    "slug": "ao-no-hako-season-2",
+    "source": "https://v2.samehadaku.how/anime/ao-no-hako-season-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 2,
+        "title": "Ao no Hako Season 2 Episode 2",
+        "slug": "ao-no-hako-season-2-episode-2",
+        "source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-2/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:29.806Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwT-d88lMtuaIp3wg_azDzI294rNC1JQvDq6IcsFsxR9ITZC5WzN9Vxxmoek_bua8m4e1sdRoh_-YZU5NFMDyGu-oeFhOh6J6jofCx_TQEjXsJ5gkiWr17YoMAWewnbitg_FnI",
+            "default": true,
+            "post": "54587",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyoWKEednI6YESLKmKsM4rc_N0qusbuk81_9XQxklLZUzqsHKf3bMinuulRAPwJHBOwcPiD8sO_CDt-lS68mUV7EyAYxDidnwXS39j7SgW68VJAD9RYONInKVYOYIktdVMnvqg",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyFOXeuXPhfkcsNq50noVH-wi-XrYCCqsW8PJti88uk6ILUAfH_tcOqqauvMnxiSeh5uRtrFKSOEJNPS40bfgEHu0tBUUzGZL1V2rywqBmSdea0zq63bBA7riBxwbg0yaTpivQ",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwT-d88lMtuaIp3wg_azDzI294rNC1JQvDq6IcsFsxR9ITZC5WzN9Vxxmoek_bua8m4e1sdRoh_-YZU5NFMDyGu-oeFhOh6J6jofCx_TQEjXsJ5gkiWr17YoMAWewnbitg_FnI",
+        "default": true,
+        "post": "54587",
+        "nume": "1"
+      }
+    ],
+    "id": 2,
+    "is_new": true
+  },
+  {
+    "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Mission: Yozakura Family Season 2 Part 2",
+    "judul": "Mission: Yozakura Family Season 2 Part 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Mission: Yozakura Family Season 2 Part 2.",
+    "related": [],
+    "slug": "mission-yozakura-family-season-2-part-2",
+    "source": "https://v2.samehadaku.how/anime/mission-yozakura-family-season-2-part-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Mission: Yozakura Family Season 2 Part 2 Episode 1",
+        "slug": "mission-yozakura-family-season-2-part-2-episode-1",
+        "source": "https://v2.samehadaku.how/mission-yozakura-family-season-2-part-2-episode-1/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:28.143Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzmVNnBeWqt3RntUERHaXYgrmcQiCZ5VUF8QZ8a2JjGXfxlh6SxD6J5ITT9Zje0fXZ7wqsVm7MfBqwG1lmFG8KeGN9JxSya8NX8oHg5iNw5gs3ya-24UvHS42cfepbMOFLIf0Ai",
+            "default": true,
+            "post": "54597",
+            "nume": "1"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzmVNnBeWqt3RntUERHaXYgrmcQiCZ5VUF8QZ8a2JjGXfxlh6SxD6J5ITT9Zje0fXZ7wqsVm7MfBqwG1lmFG8KeGN9JxSya8NX8oHg5iNw5gs3ya-24UvHS42cfepbMOFLIf0Ai",
+        "default": true,
+        "post": "54597",
+        "nume": "1"
+      }
+    ],
+    "id": 3,
+    "is_new": true
+  },
+  {
+    "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Kanata kara",
+    "judul": "Kanata kara",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Kanata kara.",
+    "related": [],
+    "slug": "kanata-kara",
+    "source": "https://v2.samehadaku.how/anime/kanata-kara/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 2,
+        "title": "Kanata kara Episode 2",
+        "slug": "kanata-kara-episode-2",
+        "source": "https://v2.samehadaku.how/kanata-kara-episode-2/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:26.570Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw-uWQx3Bu5X2nzyIIrgNqbX9u54WCLIk5e9bYCV_PQamZIHUXZVObi_qaJY1ASPY8YbkSHuXnwu1EZ-sK5UHgWj00RHK9IXhD_7kw8AIPaYe_voKJB-9SLoP0ypSZkOI4VCsdf",
+            "default": true,
+            "post": "54626",
+            "nume": "1"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw-uWQx3Bu5X2nzyIIrgNqbX9u54WCLIk5e9bYCV_PQamZIHUXZVObi_qaJY1ASPY8YbkSHuXnwu1EZ-sK5UHgWj00RHK9IXhD_7kw8AIPaYe_voKJB-9SLoP0ypSZkOI4VCsdf",
+        "default": true,
+        "post": "54626",
+        "nume": "1"
+      }
+    ],
+    "id": 4,
+    "is_new": true
+  },
+  {
+    "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Ao Ashi S2",
+    "judul": "Ao Ashi S2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Ao Ashi S2.",
+    "related": [],
+    "slug": "ao-ashi-s2",
+    "source": "https://v2.samehadaku.how/anime/ao-ashi-s2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 2,
+        "title": "Ao Ashi S2 Episode 2",
+        "slug": "ao-ashi-s2-episode-2",
+        "source": "https://v2.samehadaku.how/ao-ashi-s2-episode-2/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:25.177Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw_L-uAInU19pxwdN4XTgCPNaXSKiAsm7ljuNFtOBMqjpRAshea9nqr6SBjyOUH9E4j0x9OTMc62BPeud12sKA9tfsxb1J2-xat14lp1pYRq5HHALrj65n3gWkfM9L_DuIPsA&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54608",
+            "nume": "1"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw_L-uAInU19pxwdN4XTgCPNaXSKiAsm7ljuNFtOBMqjpRAshea9nqr6SBjyOUH9E4j0x9OTMc62BPeud12sKA9tfsxb1J2-xat14lp1pYRq5HHALrj65n3gWkfM9L_DuIPsA&origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54608",
+        "nume": "1"
+      }
+    ],
+    "id": 5,
+    "is_new": true
+  },
+  {
+    "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Diamond no Ace Act II Season 2 Cour 2",
+    "judul": "Diamond no Ace Act II Season 2 Cour 2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Diamond no Ace Act II Season 2 Cour 2.",
+    "related": [],
+    "slug": "diamond-no-ace-act-ii-season-2-cour-2",
+    "source": "https://v2.samehadaku.how/anime/diamond-no-ace-act-ii-season-2-cour-2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 2,
+        "title": "Diamond no Ace Act II Season 2 Cour 2 Episode 2",
+        "slug": "diamond-no-ace-act-ii-season-2-cour-2-episode-2",
+        "source": "https://v2.samehadaku.how/diamond-no-ace-act-ii-season-2-cour-2/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:23.757Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyJ1LhEkjOusiCmCPLttGVdJywSGuhYSvssev8x8clEtNL4N9WzIuYK6LBRukJ4L3pNP7l-fYNxHEaZy8A5VYB2ExIddHsBSBA7ZdPPtPP1VDA260Mk7bmno4Y5hJMq9OYJl3SW&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54615",
+            "nume": "1"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyJ1LhEkjOusiCmCPLttGVdJywSGuhYSvssev8x8clEtNL4N9WzIuYK6LBRukJ4L3pNP7l-fYNxHEaZy8A5VYB2ExIddHsBSBA7ZdPPtPP1VDA260Mk7bmno4Y5hJMq9OYJl3SW&origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54615",
+        "nume": "1"
+      }
+    ],
+    "id": 6,
+    "is_new": true
+  },
+  {
+    "type": "anime",
+    "source_site": "samehadaku",
+    "nama": "Kashita Maryoku",
+    "judul": "Kashita Maryoku",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "rating": null,
+    "votes": null,
+    "durasi": "1 eps",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Anime Kashita Maryoku.",
+    "related": [],
+    "slug": "kashita-maryoku",
+    "source": "https://v2.samehadaku.how/anime/kashita-maryoku/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 2,
+        "title": "Kashita Maryoku Episode 2",
+        "slug": "kashita-maryoku-episode-2",
+        "source": "https://v2.samehadaku.how/kashita-maryoku-episode-2/",
+        "date": "",
+        "released_at": "2026-10-13T16:20:21.993Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxOzgy2JkTKwcsLKMoUlpj0kLwMSjPf6Dena8yudUIuYL0uLhbkRdfosCg_pklkpBNRHTet4RDSslPzorqCvRnyI0RSadRm3771aH1B7ehp7HEuXYuvt8OdJhlxXgHirDEO1Clz&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54635",
+            "nume": "1"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxOzgy2JkTKwcsLKMoUlpj0kLwMSjPf6Dena8yudUIuYL0uLhbkRdfosCg_pklkpBNRHTet4RDSslPzorqCvRnyI0RSadRm3771aH1B7ehp7HEuXYuvt8OdJhlxXgHirDEO1Clz&origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54635",
+        "nume": "1"
+      }
+    ],
+    "id": 7,
+    "is_new": true
+  },
+  {
+    "type": "anime",
     "source_site": "anoboy",
     "nama": "Yozakura-san Chi no Daisakusen Season 2 Part 2",
     "judul": "Yozakura-san Chi no Daisakusen Season 2 Part 2",
@@ -61,7 +441,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 1
+    "id": 8
   },
   {
     "type": "anime",
@@ -150,7 +530,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 2
+    "id": 9
   },
   {
     "type": "anime",
@@ -239,7 +619,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 3
+    "id": 10
   },
   {
     "type": "anime",
@@ -349,7 +729,7 @@
         "nume": "5"
       }
     ],
-    "id": 4
+    "id": 11
   },
   {
     "type": "anime",
@@ -474,7 +854,7 @@
         "nume": "5"
       }
     ],
-    "id": 5
+    "id": 12
   },
   {
     "type": "anime",
@@ -485,8 +865,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Kyouran%20Reijou%20Nia%20Liston.jpg",
     "rating": "",
     "votes": "",
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "",
     "related": [],
@@ -518,6 +898,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 2,
+        "title": "Kyouran Reijou Nia Liston Episode 2",
+        "slug": "kyouran-reijou-nia-liston-episode-2",
+        "source": "https://anoboy.quest/2026/10/kyouran-reijou-nia-liston-episode-2/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxMPp8-56JWjCJj34swChE0Lz3foMLcSCFA9EyZSdRZ8LBIis03XRpKljoC9bssbawTR5iK0Nr2Zr5IE_Dk5m6M5THQ22VWLnZbIfzxeiNoNFbj9_Ld34fLG5alTaMx0Fwwb2M",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxFC5yt35NJK78U7Di7xs-jtTdIxp5-uNuYD4QpT7ExuWenI8cG5xoQB6VHA4vfJDqDUlS-TgRD30_ur6HLPinq_6mWUW5UlTPqYO3Cg9Zqd1C7KJnHMbeLowPw3GyV2lzNQsfz",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -538,7 +943,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 6
+    "id": 13
   },
   {
     "type": "anime",
@@ -549,8 +954,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Shiotaiou%20no%20Satou-san%20ga%20Ore%20ni%20dake%20Amai.jpg",
     "rating": "",
     "votes": "",
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "",
     "related": [],
@@ -582,6 +987,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 2,
+        "title": "Shiotaiou no Satou-san ga Ore ni dake Amai Episode 2",
+        "slug": "shiotaiou-no-satou-san-ga-ore-ni-dake-amai-episode-2",
+        "source": "https://anoboy.quest/2026/10/shiotaiou-no-satou-san-ga-ore-ni-dake-amai-episode-2/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx5mp0tyNO8dcvxJi7OV9Mcookia7m1wRH5TfWKUGwWIXEisl910EgjYUGhNZPEOH5kUUQxp7QCyyFG2oSxxglT71ONWJ_ZahoyVERfXpi60UR6NnSQOwlLLH9ow_bxxEFaLi0",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyqHIVtO2-SpV6OTuKL9c4stp6cnRGqVIf3XS5zqH52ZE8oBjlWwyUuj7rtRT3IF7qFbQ4x1UxL4R6CbB_u6i-vGynLv_SYCQujgpCAKfAMhXzGNsbiZb8DSvV6a61jNq-I9uXF",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -602,7 +1032,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 7
+    "id": 14
   },
   {
     "type": "anime",
@@ -666,7 +1096,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 8
+    "id": 15
   },
   {
     "type": "anime",
@@ -714,7 +1144,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 9
+    "id": 16
   },
   {
     "type": "anime",
@@ -778,7 +1208,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 10
+    "id": 17
   },
   {
     "type": "anime",
@@ -842,7 +1272,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 11
+    "id": 18
   },
   {
     "type": "anime",
@@ -906,7 +1336,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 12
+    "id": 19
   },
   {
     "type": "anime",
@@ -970,7 +1400,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 13
+    "id": 20
   },
   {
     "type": "anime",
@@ -1034,7 +1464,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 14
+    "id": 21
   },
   {
     "type": "anime",
@@ -1098,7 +1528,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 15
+    "id": 22
   },
   {
     "type": "anime",
@@ -1162,7 +1592,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 16
+    "id": 23
   },
   {
     "type": "anime",
@@ -1251,7 +1681,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 17
+    "id": 24
   },
   {
     "type": "anime",
@@ -1315,7 +1745,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 18
+    "id": 25
   },
   {
     "type": "anime",
@@ -1326,8 +1756,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Mahou%20Shoujo%20Ikusei%20Keikaku%20Restart.jpg",
     "rating": "",
     "votes": "",
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "",
     "related": [],
@@ -1359,6 +1789,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 2,
+        "title": "Mahou Shoujo Ikusei Keikaku: Restart Episode 2",
+        "slug": "mahou-shoujo-ikusei-keikaku-restart-episode-2",
+        "source": "https://anoboy.quest/2026/10/mahou-shoujo-ikusei-keikaku-restart-episode-2/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxAiiE5fCJjPdEdxeKsrapYydJ4gIXXBytLeifZfG7xW48MuYeBV4TUTrEdldWisOlBaGvxTK_RkNZaVQQufYEeyA0QgUYr120cUS0GMZTaQvV1p-ahWzDRbXTfRymH9tg1vsCi",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyMCZwhEy-grWrHa0dprZ391jsH8yqb8sAxdO2jTNAKISHk9DnZ08AxEJ54wXNu9HiISW4v_OTa3uZZfqZ-kK2ELXaNXA2xsEvTyqXj9fWg4Q5mYqW427xpWs3o61j2r-QaTW6R",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -1379,7 +1834,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 19
+    "id": 26
   },
   {
     "type": "anime",
@@ -1468,7 +1923,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 20
+    "id": 27
   },
   {
     "type": "anime",
@@ -1557,7 +2012,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 21
+    "id": 28
   },
   {
     "type": "anime",
@@ -1671,7 +2126,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 22
+    "id": 29
   },
   {
     "type": "anime",
@@ -1744,7 +2199,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 23
+    "id": 30
   },
   {
     "type": "anime",
@@ -1833,7 +2288,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 24
+    "id": 31
   },
   {
     "type": "anime",
@@ -1947,7 +2402,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 25
+    "id": 32
   },
   {
     "type": "anime",
@@ -2065,7 +2520,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 26,
+    "id": 33,
     "studio": "Felix Film",
     "sumber": "Manga"
   },
@@ -2160,7 +2615,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 27,
+    "id": 34,
     "studio": "J.C.Staff",
     "sumber": "Manga"
   },
@@ -2246,7 +2701,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 28,
+    "id": 35,
     "studio": "Shogakukan Music & Digital Entertainment",
     "sumber": "Original"
   },
@@ -2340,7 +2795,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 29,
+    "id": 36,
     "studio": "SynergySP",
     "sumber": "Web Manga"
   },
@@ -2390,7 +2845,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 30
+    "id": 37
   },
   {
     "type": "anime",
@@ -2479,7 +2934,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 31
+    "id": 38
   },
   {
     "type": "anime",
@@ -2568,7 +3023,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 32
+    "id": 39
   },
   {
     "type": "anime",
@@ -2712,7 +3167,7 @@
         "nume": "5"
       }
     ],
-    "id": 33
+    "id": 40
   },
   {
     "type": "anime",
@@ -2821,7 +3276,7 @@
         "nume": "5"
       }
     ],
-    "id": 34
+    "id": 41
   },
   {
     "type": "anime",
@@ -2969,7 +3424,7 @@
         "nume": "5"
       }
     ],
-    "id": 35,
+    "id": 42,
     "studio": "Passione",
     "sumber": "Manga"
   },
@@ -3088,7 +3543,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 36,
+    "id": 43,
     "studio": "J.C.Staff",
     "sumber": "Web Manga"
   },
@@ -3253,7 +3708,7 @@
         "nume": "5"
       }
     ],
-    "id": 37
+    "id": 44
   },
   {
     "type": "anime",
@@ -3445,7 +3900,7 @@
         "nume": "5"
       }
     ],
-    "id": 38
+    "id": 45
   },
   {
     "type": "anime",
@@ -3639,7 +4094,7 @@
         "nume": "5"
       }
     ],
-    "id": 39
+    "id": 46
   },
   {
     "type": "anime",
@@ -3694,7 +4149,7 @@
         "nume": "1"
       }
     ],
-    "id": 40,
+    "id": 47,
     "thumbnail_landscape": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcKqxzXkZ3HaEVuEQP2m8wSlVeKonOQ2Ik678ev9QyqV5rWxsb9kWsH6i3bkdj13G1UoirfOSsXWIlqO9HxAUjuuRv4QtiSYyaMkUzC9qjN4D5WQA67RLYu3V86975s0NLJxb-nh5-4sqWCa1O5DzYDHCqHWAdp8tu537q8hvZzW5Mq_uCSrvopQZolNU9/s360/FINALE_BANNER_SAMEHADAKU_BIG777.gif"
   },
   {
@@ -3785,7 +4240,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 41
+    "id": 48
   },
   {
     "type": "anime",
@@ -4880,7 +5335,7 @@
         "nume": "8"
       }
     ],
-    "id": 42,
+    "id": 49,
     "studio": "Makaria",
     "sumber": "Light Novel"
   },
@@ -4981,7 +5436,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 43
+    "id": 50
   },
   {
     "type": "anime",
@@ -5057,7 +5512,7 @@
         "nume": "6"
       }
     ],
-    "id": 44
+    "id": 51
   },
   {
     "type": "anime",
@@ -5224,7 +5679,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 45,
+    "id": 52,
     "studio": "Signal.MD",
     "sumber": "Manga"
   },
@@ -5394,7 +5849,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 46,
+    "id": 53,
     "studio": "Nut",
     "sumber": "Light Novel"
   },
@@ -5563,7 +6018,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 47,
+    "id": 54,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -5733,7 +6188,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 48,
+    "id": 55,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -5902,7 +6357,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 49,
+    "id": 56,
     "studio": "Imagica Infos, Imageworks Studio",
     "sumber": "Manga"
   },
@@ -6064,7 +6519,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 50,
+    "id": 57,
     "studio": "Bones, Nomad",
     "sumber": "Manga"
   },
@@ -6375,7 +6830,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 51,
+    "id": 58,
     "studio": "Asahi Production",
     "sumber": "Manga"
   },
@@ -6686,7 +7141,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 52,
+    "id": 59,
     "studio": "Bibury Animation Studios",
     "sumber": "Manga"
   },
@@ -7005,7 +7460,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 53,
+    "id": 60,
     "studio": "Nichicaline",
     "sumber": "Mixed Media"
   },
@@ -7318,7 +7773,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 54,
+    "id": 61,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -7480,7 +7935,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 55,
+    "id": 62,
     "studio": "Gekkou",
     "sumber": "Light Novel"
   },
@@ -7791,7 +8246,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 56,
+    "id": 63,
     "studio": "Shin-Ei Animation",
     "sumber": "Manga"
   },
@@ -8153,7 +8608,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 57,
+    "id": 64,
     "studio": "Lay-duce",
     "sumber": "Manga"
   },
@@ -8463,7 +8918,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 58,
+    "id": 65,
     "studio": "OLM",
     "sumber": "Light Novel"
   },
@@ -9137,7 +9592,7 @@
         "nume": "3"
       }
     ],
-    "id": 59
+    "id": 66
   },
   {
     "type": "anime",
@@ -9471,7 +9926,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 60,
+    "id": 67,
     "studio": "A-1 Pictures, Psyde Kick Studio",
     "sumber": "Original"
   },
@@ -9782,7 +10237,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 61,
+    "id": 68,
     "studio": "Science SARU",
     "sumber": "Manga"
   },
@@ -10095,7 +10550,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 62,
+    "id": 69,
     "studio": "Colored Pencil Animation Japan",
     "sumber": "Novel"
   },
@@ -10256,7 +10711,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 63,
+    "id": 70,
     "studio": "Zero-G, Grass",
     "sumber": "Web Manga"
   },
@@ -10569,7 +11024,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 64,
+    "id": 71,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -10915,7 +11370,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 65,
+    "id": 72,
     "studio": "J.C.Staff, Studio Moe",
     "sumber": "Manga"
   },
@@ -11059,7 +11514,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 66,
+    "id": 73,
     "studio": "Seven Arcs",
     "sumber": "Original"
   },
@@ -11143,7 +11598,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 67
+    "id": 74
   },
   {
     "type": "anime",
@@ -11453,7 +11908,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 68,
+    "id": 75,
     "studio": "C-Station",
     "sumber": "Web Manga"
   },
@@ -11765,7 +12220,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 69,
+    "id": 76,
     "studio": "TROYCA",
     "sumber": "Manga"
   },
@@ -11953,7 +12408,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 70,
+    "id": 77,
     "studio": "Lapin Track",
     "sumber": "Manga"
   },
@@ -12118,7 +12573,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 71,
+    "id": 78,
     "studio": "Bibury Animation Studios",
     "sumber": "Manga"
   },
@@ -12429,7 +12884,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 72,
+    "id": 79,
     "studio": "Kinema Citrus",
     "sumber": "Original"
   },
@@ -64942,7 +65397,7 @@
         "nume": "5"
       }
     ],
-    "id": 73,
+    "id": 80,
     "studio": "Toei Animation",
     "sumber": "Manga"
   },
@@ -67405,7 +67860,7 @@
         "nume": "8"
       }
     ],
-    "id": 74,
+    "id": 81,
     "mal_id": 62171,
     "studio": "LIDENFILMS",
     "sumber": "Web Manga"
@@ -68608,7 +69063,7 @@
         "nume": "5"
       }
     ],
-    "id": 75,
+    "id": 82,
     "mal_id": 59193,
     "studio": "Studio Bind",
     "sumber": "Light Novel"
@@ -69890,7 +70345,7 @@
         "nume": "5"
       }
     ],
-    "id": 76,
+    "id": 83,
     "mal_id": 62856,
     "studio": "Kyoto Animation",
     "sumber": "Manga"
@@ -70282,7 +70737,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 77,
+    "id": 84,
     "mal_id": 62435,
     "studio": "Maho Film",
     "sumber": "Light Novel"
@@ -71338,7 +71793,7 @@
         "nume": "8"
       }
     ],
-    "id": 78,
+    "id": 85,
     "studio": "Doga Kobo",
     "sumber": "Light Novel"
   },
@@ -72528,7 +72983,7 @@
         "nume": "8"
       }
     ],
-    "id": 79,
+    "id": 86,
     "mal_id": 62876,
     "studio": "Brain’s Base",
     "sumber": "Light Novel"
@@ -73440,7 +73895,7 @@
         "nume": "6"
       }
     ],
-    "id": 80
+    "id": 87
   },
   {
     "type": "anime",
@@ -76036,7 +76491,7 @@
         "nume": "8"
       }
     ],
-    "id": 81,
+    "id": 88,
     "mal_id": 62001,
     "studio": "Bones Film",
     "sumber": "Manga"
@@ -78582,7 +79037,7 @@
         "nume": "5"
       }
     ],
-    "id": 82,
+    "id": 89,
     "mal_id": 62048,
     "studio": "Sunrise",
     "sumber": "Manga"
@@ -79323,7 +79778,7 @@
         "nume": "8"
       }
     ],
-    "id": 83
+    "id": 90
   },
   {
     "type": "anime",
@@ -80468,7 +80923,7 @@
         "nume": "8"
       }
     ],
-    "id": 84,
+    "id": 91,
     "mal_id": 61169,
     "studio": "100studio",
     "sumber": "Manga"
@@ -81645,7 +82100,7 @@
         "nume": "8"
       }
     ],
-    "id": 85,
+    "id": 92,
     "mal_id": 63324,
     "studio": "Studio Deen",
     "sumber": "Manga"
@@ -83770,7 +84225,7 @@
         "nume": "5"
       }
     ],
-    "id": 86,
+    "id": 93,
     "mal_id": 57466,
     "studio": "Ajia-Do",
     "sumber": "Light Novel"
@@ -84895,7 +85350,7 @@
         "nume": "6"
       }
     ],
-    "id": 87,
+    "id": 94,
     "studio": "Yokohama Animation Lab",
     "sumber": "Light Novel"
   },
@@ -85884,7 +86339,7 @@
         "nume": "6"
       }
     ],
-    "id": 88,
+    "id": 95,
     "studio": "CloverWorks",
     "sumber": "Manga"
   },
@@ -88356,7 +88811,7 @@
         "nume": "6"
       }
     ],
-    "id": 89,
+    "id": 96,
     "mal_id": 59970,
     "studio": "8bit",
     "sumber": "Manga"
@@ -88782,7 +89237,7 @@
         "nume": "8"
       }
     ],
-    "id": 90
+    "id": 97
   },
   {
     "type": "anime",
@@ -90059,7 +90514,7 @@
         "nume": "8"
       }
     ],
-    "id": 91,
+    "id": 98,
     "mal_id": 62078,
     "studio": "animation studio42",
     "sumber": "Light Novel"
@@ -91152,7 +91607,7 @@
         "nume": "8"
       }
     ],
-    "id": 92,
+    "id": 99,
     "mal_id": 63802,
     "studio": "Doga Kobo",
     "sumber": "Manga"
@@ -92335,7 +92790,7 @@
         "nume": "5"
       }
     ],
-    "id": 93,
+    "id": 100,
     "mal_id": 59741,
     "studio": "GoHands",
     "sumber": "Wrb Manga"
@@ -93463,7 +93918,7 @@
         "nume": "8"
       }
     ],
-    "id": 94,
+    "id": 101,
     "mal_id": 63508,
     "studio": "EMT Squared",
     "sumber": "Web Manga"
@@ -94033,7 +94488,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 95,
+    "id": 102,
     "mal_id": 63316,
     "studio": "Studio Eek",
     "sumber": "Web Manga"
@@ -94993,7 +95448,7 @@
         "nume": "8"
       }
     ],
-    "id": 96,
+    "id": 103,
     "mal_id": 49233
   },
   {
@@ -96177,7 +96632,7 @@
         "nume": "7"
       }
     ],
-    "id": 97,
+    "id": 104,
     "mal_id": 62322,
     "studio": "Brain’s Base",
     "sumber": "Light Novel"
@@ -97209,7 +97664,7 @@
         "nume": "8"
       }
     ],
-    "id": 98,
+    "id": 105,
     "mal_id": 54000,
     "studio": "ENGI",
     "sumber": "Light Novel"
@@ -98350,7 +98805,7 @@
         "nume": "7"
       }
     ],
-    "id": 99,
+    "id": 106,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -98920,7 +99375,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 100,
+    "id": 107,
     "studio": "Passione, Hayabusa Film",
     "sumber": "Light Novel"
   },
@@ -99541,7 +99996,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 101,
+    "id": 108,
     "mal_id": 62513,
     "studio": "Lay-duce",
     "sumber": "Web Manga"
@@ -100525,7 +100980,7 @@
         "nume": "5"
       }
     ],
-    "id": 102,
+    "id": 109,
     "mal_id": 63489
   },
   {
@@ -101674,7 +102129,7 @@
         "nume": "8"
       }
     ],
-    "id": 103,
+    "id": 110,
     "mal_id": 62080,
     "studio": "Magic Bus, Picante Circus",
     "sumber": "Light Novel"
@@ -102851,7 +103306,7 @@
         "nume": "8"
       }
     ],
-    "id": 104,
+    "id": 111,
     "mal_id": 56736,
     "studio": "Maho Film",
     "sumber": "Light Novel"
@@ -103997,7 +104452,7 @@
         "nume": "8"
       }
     ],
-    "id": 105,
+    "id": 112,
     "mal_id": 62542,
     "studio": "Zero-G, Saber Works",
     "sumber": "Manga"
@@ -105102,7 +105557,7 @@
         "nume": "8"
       }
     ],
-    "id": 106,
+    "id": 113,
     "mal_id": 62289,
     "studio": "Studio Comet",
     "sumber": "Light Novel"
@@ -107734,7 +108189,7 @@
         "nume": "5"
       }
     ],
-    "id": 107,
+    "id": 114,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -108868,7 +109323,7 @@
         "nume": "8"
       }
     ],
-    "id": 108,
+    "id": 115,
     "studio": "Studio Kai, HORNETS",
     "sumber": "Light Novel"
   },
@@ -110949,7 +111404,7 @@
         "nume": "4"
       }
     ],
-    "id": 109,
+    "id": 116,
     "studio": "Bandai Namco Pictures",
     "sumber": "Manga"
   },
@@ -111185,7 +111640,7 @@
         "nume": "8"
       }
     ],
-    "id": 110
+    "id": 117
   },
   {
     "type": "anime",
@@ -111348,7 +111803,7 @@
         "nume": "7"
       }
     ],
-    "id": 111
+    "id": 118
   },
   {
     "type": "anime",
@@ -112694,7 +113149,7 @@
         "nume": "8"
       }
     ],
-    "id": 112,
+    "id": 119,
     "studio": "Studio Kafka",
     "sumber": "Web Manga"
   },
@@ -112895,7 +113350,7 @@
         "nume": "9"
       }
     ],
-    "id": 113
+    "id": 120
   },
   {
     "type": "anime",
@@ -114363,7 +114818,7 @@
         "nume": "8"
       }
     ],
-    "id": 114,
+    "id": 121,
     "studio": "Production I.G, Signal.MD",
     "sumber": "Web Manga"
   },
@@ -115825,7 +116280,7 @@
         "nume": "8"
       }
     ],
-    "id": 115,
+    "id": 122,
     "studio": "Bones Film",
     "sumber": "Manga"
   },
@@ -116038,7 +116493,7 @@
         "nume": "7"
       }
     ],
-    "id": 116
+    "id": 123
   },
   {
     "type": "anime",
@@ -117217,7 +117672,7 @@
         "nume": "8"
       }
     ],
-    "id": 117
+    "id": 124
   },
   {
     "type": "anime",
@@ -118550,7 +119005,7 @@
         "nume": "9"
       }
     ],
-    "id": 118
+    "id": 125
   },
   {
     "type": "anime",
@@ -119920,7 +120375,7 @@
         "nume": "8"
       }
     ],
-    "id": 119,
+    "id": 126,
     "studio": "Felix Film",
     "sumber": "Web Manga"
   },
@@ -121400,7 +121855,7 @@
         "nume": "8"
       }
     ],
-    "id": 120,
+    "id": 127,
     "studio": "Studio KAI",
     "sumber": "Manga"
   },
@@ -122848,7 +123303,7 @@
         "nume": "8"
       }
     ],
-    "id": 121,
+    "id": 128,
     "studio": "BENTEN Film",
     "sumber": "Manga"
   },
@@ -124182,7 +124637,7 @@
         "nume": "8"
       }
     ],
-    "id": 122
+    "id": 129
   },
   {
     "type": "anime",
@@ -126689,7 +127144,7 @@
         "nume": "8"
       }
     ],
-    "id": 123,
+    "id": 130,
     "studio": "OLM",
     "sumber": "Web Manga"
   },
@@ -128060,7 +128515,7 @@
         "nume": "8"
       }
     ],
-    "id": 124,
+    "id": 131,
     "studio": "LIDENFILMS",
     "sumber": "Light Novel"
   },
@@ -129240,7 +129695,7 @@
         "nume": "8"
       }
     ],
-    "id": 125
+    "id": 132
   },
   {
     "type": "anime",
@@ -130620,7 +131075,7 @@
         "nume": "8"
       }
     ],
-    "id": 126,
+    "id": 133,
     "studio": "Jumondou",
     "sumber": "Manga"
   },
@@ -131816,7 +132271,7 @@
         "nume": "8"
       }
     ],
-    "id": 127
+    "id": 134
   },
   {
     "type": "anime",
@@ -133093,7 +133548,7 @@
         "nume": "8"
       }
     ],
-    "id": 128
+    "id": 135
   },
   {
     "type": "anime",
@@ -134447,7 +134902,7 @@
         "nume": "8"
       }
     ],
-    "id": 129,
+    "id": 136,
     "studio": "Cue",
     "sumber": "Manga"
   },
@@ -135649,7 +136104,7 @@
         "nume": "8"
       }
     ],
-    "id": 130
+    "id": 137
   },
   {
     "type": "anime",
@@ -136173,7 +136628,7 @@
         "nume": "6"
       }
     ],
-    "id": 131
+    "id": 138
   },
   {
     "type": "anime",
@@ -137893,7 +138348,7 @@
         "nume": "9"
       }
     ],
-    "id": 132
+    "id": 139
   },
   {
     "type": "anime",
@@ -139072,7 +139527,7 @@
         "nume": "8"
       }
     ],
-    "id": 133
+    "id": 140
   },
   {
     "type": "anime",
@@ -140435,7 +140890,7 @@
         "nume": "8"
       }
     ],
-    "id": 134,
+    "id": 141,
     "studio": "ENGI",
     "sumber": "Mixed media"
   },
@@ -141870,7 +142325,7 @@
         "nume": "8"
       }
     ],
-    "id": 135,
+    "id": 142,
     "studio": "BUG FILMS",
     "sumber": "Manga"
   },
@@ -143033,7 +143488,7 @@
         "nume": "8"
       }
     ],
-    "id": 136
+    "id": 143
   },
   {
     "type": "anime",
@@ -144379,7 +144834,7 @@
         "nume": "8"
       }
     ],
-    "id": 137,
+    "id": 144,
     "studio": "Studio KAI",
     "sumber": "Manga"
   },
@@ -145568,7 +146023,7 @@
         "nume": "8"
       }
     ],
-    "id": 138
+    "id": 145
   },
   {
     "type": "anime",
@@ -146921,7 +147376,7 @@
         "nume": "8"
       }
     ],
-    "id": 139,
+    "id": 146,
     "studio": "Juvenage",
     "sumber": "Light Novel"
   },
@@ -148112,7 +148567,7 @@
         "nume": "8"
       }
     ],
-    "id": 140
+    "id": 147
   },
   {
     "type": "anime",
@@ -149298,7 +149753,7 @@
         "nume": "8"
       }
     ],
-    "id": 141
+    "id": 148
   },
   {
     "type": "anime",
@@ -150679,7 +151134,7 @@
         "nume": "8"
       }
     ],
-    "id": 142,
+    "id": 149,
     "studio": "Studio Comet",
     "sumber": "Light Novel"
   },
@@ -152370,7 +152825,7 @@
         "nume": "8"
       }
     ],
-    "id": 143,
+    "id": 150,
     "studio": "White Fox",
     "sumber": "Light Novel"
   },
@@ -153534,7 +153989,7 @@
         "nume": "8"
       }
     ],
-    "id": 144
+    "id": 151
   },
   {
     "type": "anime",
@@ -153751,7 +154206,7 @@
         "nume": "10"
       }
     ],
-    "id": 145
+    "id": 152
   },
   {
     "type": "anime",
@@ -155415,7 +155870,7 @@
         "nume": "12"
       }
     ],
-    "id": 146
+    "id": 153
   },
   {
     "type": "anime",
@@ -156486,7 +156941,7 @@
         "nume": "8"
       }
     ],
-    "id": 147
+    "id": 154
   },
   {
     "type": "anime",
@@ -157560,7 +158015,7 @@
         "nume": "8"
       }
     ],
-    "id": 148
+    "id": 155
   },
   {
     "type": "anime",
@@ -158945,7 +159400,7 @@
         "nume": "8"
       }
     ],
-    "id": 149,
+    "id": 156,
     "studio": "Shuka",
     "sumber": "Manga"
   },
@@ -160210,7 +160665,7 @@
         "nume": "8"
       }
     ],
-    "id": 150,
+    "id": 157,
     "studio": "SynergySP",
     "sumber": "Manga"
   },
@@ -162841,7 +163296,7 @@
         "nume": "8"
       }
     ],
-    "id": 151,
+    "id": 158,
     "studio": "Brain’s Base",
     "sumber": "Manga"
   },
@@ -164058,7 +164513,7 @@
         "nume": "8"
       }
     ],
-    "id": 152
+    "id": 159
   },
   {
     "type": "anime",
@@ -165416,7 +165871,7 @@
         "nume": "8"
       }
     ],
-    "id": 153,
+    "id": 160,
     "studio": "Bellnox Films",
     "sumber": "Manga"
   },
@@ -167010,7 +167465,7 @@
         "nume": "13"
       }
     ],
-    "id": 154
+    "id": 161
   },
   {
     "type": "anime",
@@ -168165,7 +168620,7 @@
         "nume": "8"
       }
     ],
-    "id": 155
+    "id": 162
   },
   {
     "type": "anime",
@@ -169938,7 +170393,7 @@
         "nume": "8"
       }
     ],
-    "id": 156,
+    "id": 163,
     "studio": "feel.",
     "sumber": "Light Novel"
   },
@@ -171123,7 +171578,7 @@
         "nume": "8"
       }
     ],
-    "id": 157
+    "id": 164
   },
   {
     "type": "anime",
@@ -172293,7 +172748,7 @@
         "nume": "8"
       }
     ],
-    "id": 158
+    "id": 165
   },
   {
     "type": "anime",
@@ -175187,7 +175642,7 @@
         "nume": "8"
       }
     ],
-    "id": 159,
+    "id": 166,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -176260,7 +176715,7 @@
         "nume": "8"
       }
     ],
-    "id": 160
+    "id": 167
   },
   {
     "type": "anime",
@@ -177628,7 +178083,7 @@
         "nume": "8"
       }
     ],
-    "id": 161,
+    "id": 168,
     "studio": "J.C.Staff",
     "sumber": "Manga"
   },
@@ -178600,7 +179055,7 @@
         "nume": "8"
       }
     ],
-    "id": 162
+    "id": 169
   },
   {
     "type": "anime",
@@ -179871,7 +180326,7 @@
         "nume": "8"
       }
     ],
-    "id": 163,
+    "id": 170,
     "studio": "Eat Fish Studio",
     "sumber": "Web Manga"
   },
@@ -181368,7 +181823,7 @@
         "nume": "9"
       }
     ],
-    "id": 164,
+    "id": 171,
     "studio": "A-1 Pictures",
     "sumber": "Light Novel"
   },
@@ -182627,7 +183082,7 @@
         "nume": "8"
       }
     ],
-    "id": 165,
+    "id": 172,
     "studio": "Felix Film, Ga-Crew",
     "sumber": "Light Novel"
   },
@@ -182793,7 +183248,7 @@
         "nume": "7"
       }
     ],
-    "id": 166
+    "id": 173
   },
   {
     "type": "anime",
@@ -184099,7 +184554,7 @@
         "nume": "8"
       }
     ],
-    "id": 167
+    "id": 174
   },
   {
     "type": "anime",
@@ -185181,7 +185636,7 @@
         "nume": "8"
       }
     ],
-    "id": 168
+    "id": 175
   },
   {
     "type": "anime",
@@ -186443,7 +186898,7 @@
         "nume": "8"
       }
     ],
-    "id": 169,
+    "id": 176,
     "studio": "East Fish Studio, Atelier Peuplier",
     "sumber": "Manga"
   },
@@ -189320,7 +189775,7 @@
         "nume": "8"
       }
     ],
-    "id": 170,
+    "id": 177,
     "studio": "Studio VOLN",
     "sumber": "Original"
   },
@@ -192624,7 +193079,7 @@
         "nume": "8"
       }
     ],
-    "id": 171,
+    "id": 178,
     "studio": "Toei Animation",
     "sumber": "Other"
   },
@@ -194029,7 +194484,7 @@
         "nume": "8"
       }
     ],
-    "id": 172,
+    "id": 179,
     "studio": "Platinum Vision",
     "sumber": "Light Novel"
   },
@@ -194858,7 +195313,7 @@
         "nume": "8"
       }
     ],
-    "id": 173
+    "id": 180
   },
   {
     "type": "anime",
@@ -195929,7 +196384,7 @@
         "nume": "8"
       }
     ],
-    "id": 174
+    "id": 181
   },
   {
     "type": "anime",
@@ -197061,7 +197516,7 @@
         "nume": "8"
       }
     ],
-    "id": 175
+    "id": 182
   },
   {
     "type": "anime",
@@ -197971,7 +198426,7 @@
         "nume": "8"
       }
     ],
-    "id": 176
+    "id": 183
   },
   {
     "type": "anime",
@@ -199131,7 +199586,7 @@
         "nume": "8"
       }
     ],
-    "id": 177
+    "id": 184
   },
   {
     "type": "anime",
@@ -200394,7 +200849,7 @@
         "nume": "8"
       }
     ],
-    "id": 178,
+    "id": 185,
     "studio": "SynergySP",
     "sumber": "Manga"
   },
@@ -201476,7 +201931,7 @@
         "nume": "8"
       }
     ],
-    "id": 179
+    "id": 186
   },
   {
     "type": "anime",
@@ -202739,7 +203194,7 @@
         "nume": "8"
       }
     ],
-    "id": 180,
+    "id": 187,
     "studio": "HORNETS",
     "sumber": "Manga"
   },
@@ -203786,7 +204241,7 @@
         "nume": "7"
       }
     ],
-    "id": 181
+    "id": 188
   },
   {
     "type": "anime",
@@ -204884,7 +205339,7 @@
         "nume": "8"
       }
     ],
-    "id": 182
+    "id": 189
   },
   {
     "type": "anime",
@@ -206164,7 +206619,7 @@
         "nume": "8"
       }
     ],
-    "id": 183,
+    "id": 190,
     "studio": "Diomedéa",
     "sumber": "Web Manga"
   },
@@ -207430,7 +207885,7 @@
         "nume": "8"
       }
     ],
-    "id": 184,
+    "id": 191,
     "studio": "Typhoon Graphics, Qzil.la",
     "sumber": "Manga"
   },
@@ -208521,7 +208976,7 @@
         "nume": "8"
       }
     ],
-    "id": 185
+    "id": 192
   },
   {
     "type": "anime",
@@ -209491,7 +209946,7 @@
         "nume": "8"
       }
     ],
-    "id": 186
+    "id": 193
   },
   {
     "type": "anime",
@@ -210338,7 +210793,7 @@
         "nume": "11"
       }
     ],
-    "id": 187
+    "id": 194
   },
   {
     "type": "anime",
@@ -212944,7 +213399,7 @@
         "nume": "8"
       }
     ],
-    "id": 188,
+    "id": 195,
     "studio": "Nippon Animation",
     "sumber": "Web Manga"
   },
@@ -214546,7 +215001,7 @@
         "nume": "13"
       }
     ],
-    "id": 189
+    "id": 196
   },
   {
     "type": "anime",
@@ -214862,7 +215317,7 @@
         "nume": "10"
       }
     ],
-    "id": 190
+    "id": 197
   },
   {
     "type": "anime",
@@ -216321,7 +216776,7 @@
         "nume": "10"
       }
     ],
-    "id": 191
+    "id": 198
   },
   {
     "type": "anime",
@@ -217869,7 +218324,7 @@
         "nume": "9"
       }
     ],
-    "id": 192
+    "id": 199
   },
   {
     "type": "anime",
@@ -219446,7 +219901,7 @@
         "nume": "9"
       }
     ],
-    "id": 193
+    "id": 200
   },
   {
     "type": "anime",
@@ -219472,7 +219927,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 194
+    "id": 201
   },
   {
     "type": "anime",
@@ -221189,7 +221644,7 @@
         "nume": "10"
       }
     ],
-    "id": 195
+    "id": 202
   },
   {
     "type": "anime",
@@ -223124,7 +223579,7 @@
         "nume": "10"
       }
     ],
-    "id": 196,
+    "id": 203,
     "studio": "Bandai Namco Pictures",
     "sumber": "Novel"
   },
@@ -226589,7 +227044,7 @@
         "nume": "13"
       }
     ],
-    "id": 197,
+    "id": 204,
     "studio": "Studio Hibari",
     "sumber": "Manga"
   },
@@ -227399,7 +227854,7 @@
         "nume": "10"
       }
     ],
-    "id": 198,
+    "id": 205,
     "studio": "David Production",
     "sumber": "Manga"
   },
@@ -229337,7 +229792,7 @@
         "nume": "12"
       }
     ],
-    "id": 199
+    "id": 206
   },
   {
     "type": "anime",
@@ -231069,7 +231524,7 @@
         "nume": "10"
       }
     ],
-    "id": 200,
+    "id": 207,
     "studio": "Madhouse, Cyclone Graphics",
     "sumber": "Manga"
   },
@@ -233107,7 +233562,7 @@
         "nume": "13"
       }
     ],
-    "id": 201
+    "id": 208
   },
   {
     "type": "anime",
@@ -233990,7 +234445,7 @@
         "nume": "7"
       }
     ],
-    "id": 202
+    "id": 209
   },
   {
     "type": "anime",
@@ -235774,7 +236229,7 @@
         "nume": "10"
       }
     ],
-    "id": 203,
+    "id": 210,
     "studio": "Studio Deen",
     "sumber": "Web Manga"
   },
@@ -237379,7 +237834,7 @@
         "nume": "10"
       }
     ],
-    "id": 204
+    "id": 211
   },
   {
     "type": "anime",
@@ -239173,7 +239628,7 @@
         "nume": "10"
       }
     ],
-    "id": 205,
+    "id": 212,
     "studio": "Bandai Namco Pictures",
     "sumber": "Light Novel"
   },
@@ -240703,7 +241158,7 @@
         "nume": "7"
       }
     ],
-    "id": 206
+    "id": 213
   },
   {
     "type": "anime",
@@ -242277,7 +242732,7 @@
         "nume": "10"
       }
     ],
-    "id": 207
+    "id": 214
   },
   {
     "type": "anime",
@@ -243798,7 +244253,7 @@
         "nume": "10"
       }
     ],
-    "id": 208
+    "id": 215
   },
   {
     "type": "anime",
@@ -247279,7 +247734,7 @@
         "nume": "10"
       }
     ],
-    "id": 209,
+    "id": 216,
     "studio": "Bones Film",
     "sumber": "Manga"
   },
@@ -248883,7 +249338,7 @@
         "nume": "10"
       }
     ],
-    "id": 210
+    "id": 217
   },
   {
     "type": "anime",
@@ -250659,7 +251114,7 @@
         "nume": "13"
       }
     ],
-    "id": 211,
+    "id": 218,
     "studio": "WAO World",
     "sumber": "Light Novel"
   },
@@ -252083,7 +252538,7 @@
         "nume": "13"
       }
     ],
-    "id": 212
+    "id": 219
   },
   {
     "type": "anime",
@@ -254074,7 +254529,7 @@
         "nume": "13"
       }
     ],
-    "id": 213,
+    "id": 220,
     "studio": "LIDENFILMS",
     "sumber": "Light Novel"
   },
@@ -255908,7 +256363,7 @@
         "nume": "13"
       }
     ],
-    "id": 214,
+    "id": 221,
     "studio": "Science SARU",
     "sumber": "Manga"
   },
@@ -257749,7 +258204,7 @@
         "nume": "13"
       }
     ],
-    "id": 215,
+    "id": 222,
     "studio": "Asahi Production",
     "sumber": "Web Manga"
   },
@@ -259600,7 +260055,7 @@
         "nume": "13"
       }
     ],
-    "id": 216,
+    "id": 223,
     "studio": "Studio Elle",
     "sumber": "Manga"
   },
@@ -260755,7 +261210,7 @@
         "nume": "13"
       }
     ],
-    "id": 217
+    "id": 224
   },
   {
     "type": "anime",
@@ -262531,7 +262986,7 @@
         "nume": "13"
       }
     ],
-    "id": 218,
+    "id": 225,
     "studio": "Tatsunoko Production, SynergySP",
     "sumber": "Light Novel"
   },
@@ -264110,7 +264565,7 @@
         "nume": "13"
       }
     ],
-    "id": 219
+    "id": 226
   },
   {
     "type": "anime",
@@ -265722,7 +266177,7 @@
         "nume": "13"
       }
     ],
-    "id": 220
+    "id": 227
   },
   {
     "type": "anime",
@@ -266303,7 +266758,7 @@
         "nume": "14"
       }
     ],
-    "id": 221,
+    "id": 228,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -267800,7 +268255,7 @@
         "nume": "10"
       }
     ],
-    "id": 222,
+    "id": 229,
     "studio": "Project No.9",
     "sumber": "Novel"
   },
@@ -270688,7 +271143,7 @@
         "nume": "13"
       }
     ],
-    "id": 223,
+    "id": 230,
     "studio": "Drive",
     "sumber": "Manga"
   },
@@ -272293,7 +272748,7 @@
         "nume": "13"
       }
     ],
-    "id": 224
+    "id": 231
   },
   {
     "type": "anime",
@@ -275941,7 +276396,7 @@
         "nume": "13"
       }
     ],
-    "id": 225,
+    "id": 232,
     "studio": "Bibury Animation Studios",
     "sumber": "Manga"
   },
@@ -277688,7 +278143,7 @@
         "nume": "13"
       }
     ],
-    "id": 226
+    "id": 233
   },
   {
     "type": "anime",
@@ -279535,7 +279990,7 @@
         "nume": "13"
       }
     ],
-    "id": 227,
+    "id": 234,
     "studio": "CygamesPictures",
     "sumber": "Web Manga"
   },
@@ -281195,7 +281650,7 @@
         "nume": "13"
       }
     ],
-    "id": 228
+    "id": 235
   },
   {
     "type": "anime",
@@ -284950,7 +285405,7 @@
         "nume": "13"
       }
     ],
-    "id": 229,
+    "id": 236,
     "studio": "feel.",
     "sumber": "Visual Novel"
   },
@@ -288495,7 +288950,7 @@
         "nume": "13"
       }
     ],
-    "id": 230,
+    "id": 237,
     "studio": "Yokohama Animation Laboratory",
     "sumber": "Novel"
   },
@@ -290280,7 +290735,7 @@
         "nume": "13"
       }
     ],
-    "id": 231
+    "id": 238
   },
   {
     "type": "anime",
@@ -292270,7 +292725,7 @@
         "nume": "13"
       }
     ],
-    "id": 232,
+    "id": 239,
     "studio": "CloverWorks",
     "sumber": "Web Manga"
   },
@@ -294100,7 +294555,7 @@
         "nume": "13"
       }
     ],
-    "id": 233
+    "id": 240
   },
   {
     "type": "anime",
@@ -295966,7 +296421,7 @@
         "nume": "13"
       }
     ],
-    "id": 234,
+    "id": 241,
     "studio": "Studio Kai",
     "sumber": "Manga"
   },
@@ -297605,7 +298060,7 @@
         "nume": "13"
       }
     ],
-    "id": 235
+    "id": 242
   },
   {
     "type": "anime",
@@ -299454,7 +299909,7 @@
         "nume": "13"
       }
     ],
-    "id": 236,
+    "id": 243,
     "studio": "Typhoon Graphics, WonderLand",
     "sumber": "Light Novel"
   },
@@ -301144,7 +301599,7 @@
         "nume": "13"
       }
     ],
-    "id": 237
+    "id": 244
   },
   {
     "type": "anime",
@@ -302800,7 +303255,7 @@
         "nume": "13"
       }
     ],
-    "id": 238
+    "id": 245
   },
   {
     "type": "anime",
@@ -304474,7 +304929,7 @@
         "nume": "13"
       }
     ],
-    "id": 239
+    "id": 246
   },
   {
     "type": "anime",
@@ -306128,7 +306583,7 @@
         "nume": "13"
       }
     ],
-    "id": 240
+    "id": 247
   },
   {
     "type": "anime",
@@ -307976,7 +308431,7 @@
         "nume": "13"
       }
     ],
-    "id": 241,
+    "id": 248,
     "studio": "White Fox",
     "sumber": "Manga"
   },
@@ -309606,7 +310061,7 @@
         "nume": "13"
       }
     ],
-    "id": 242
+    "id": 249
   },
   {
     "type": "anime",
@@ -311434,7 +311889,7 @@
         "nume": "13"
       }
     ],
-    "id": 243,
+    "id": 250,
     "studio": "Studio Blanc.",
     "sumber": "Light Novel"
   },
@@ -313285,7 +313740,7 @@
         "nume": "13"
       }
     ],
-    "id": 244,
+    "id": 251,
     "studio": "Connect",
     "sumber": "Manga"
   },
@@ -314907,7 +315362,7 @@
         "nume": "13"
       }
     ],
-    "id": 245
+    "id": 252
   },
   {
     "type": "anime",
@@ -316517,7 +316972,7 @@
         "nume": "13"
       }
     ],
-    "id": 246
+    "id": 253
   },
   {
     "type": "anime",
@@ -318145,7 +318600,7 @@
         "nume": "13"
       }
     ],
-    "id": 247
+    "id": 254
   },
   {
     "type": "anime",
@@ -319992,7 +320447,7 @@
         "nume": "13"
       }
     ],
-    "id": 248,
+    "id": 255,
     "studio": "Sotsu, Studio Clutch",
     "sumber": "Light Novel"
   },
@@ -321649,7 +322104,7 @@
         "nume": "13"
       }
     ],
-    "id": 249
+    "id": 256
   },
   {
     "type": "anime",
@@ -323359,7 +323814,7 @@
         "nume": "13"
       }
     ],
-    "id": 250
+    "id": 257
   },
   {
     "type": "anime",
@@ -326830,7 +327285,7 @@
         "nume": "13"
       }
     ],
-    "id": 251,
+    "id": 258,
     "studio": "OLM",
     "sumber": "Manga"
   },
@@ -328632,7 +329087,7 @@
         "nume": "13"
       }
     ],
-    "id": 252,
+    "id": 259,
     "studio": "David Production",
     "sumber": "Original"
   },
@@ -330289,7 +330744,7 @@
         "nume": "13"
       }
     ],
-    "id": 253
+    "id": 260
   },
   {
     "type": "anime",
@@ -331941,7 +332396,7 @@
         "nume": "13"
       }
     ],
-    "id": 254
+    "id": 261
   },
   {
     "type": "anime",
@@ -333471,7 +333926,7 @@
         "nume": "13"
       }
     ],
-    "id": 255
+    "id": 262
   },
   {
     "type": "anime",
@@ -336242,7 +336697,7 @@
         "nume": "13"
       }
     ],
-    "id": 256
+    "id": 263
   },
   {
     "type": "anime",
@@ -336493,7 +336948,7 @@
         "nume": "12"
       }
     ],
-    "id": 257
+    "id": 264
   },
   {
     "type": "anime",
@@ -339283,7 +339738,7 @@
         "nume": "13"
       }
     ],
-    "id": 258
+    "id": 265
   },
   {
     "type": "anime",
@@ -341218,7 +341673,7 @@
         "nume": "13"
       }
     ],
-    "id": 259,
+    "id": 266,
     "studio": "MAPPA",
     "sumber": "Original"
   },
@@ -342948,7 +343403,7 @@
         "nume": "13"
       }
     ],
-    "id": 260
+    "id": 267
   },
   {
     "type": "anime",
@@ -344578,7 +345033,7 @@
         "nume": "13"
       }
     ],
-    "id": 261
+    "id": 268
   },
   {
     "type": "anime",
@@ -346524,7 +346979,7 @@
         "nume": "13"
       }
     ],
-    "id": 262,
+    "id": 269,
     "studio": "Arvo Animation",
     "sumber": "Manga"
   },
@@ -348273,7 +348728,7 @@
         "nume": "13"
       }
     ],
-    "id": 263
+    "id": 270
   },
   {
     "type": "anime",
@@ -349767,7 +350222,7 @@
         "nume": "13"
       }
     ],
-    "id": 264
+    "id": 271
   },
   {
     "type": "anime",
@@ -351561,7 +352016,7 @@
         "nume": "13"
       }
     ],
-    "id": 265,
+    "id": 272,
     "studio": "Asahi Production",
     "sumber": "Light Novel"
   },
@@ -353156,7 +353611,7 @@
         "nume": "13"
       }
     ],
-    "id": 266
+    "id": 273
   },
   {
     "type": "anime",
@@ -354749,7 +355204,7 @@
         "nume": "13"
       }
     ],
-    "id": 267
+    "id": 274
   },
   {
     "type": "anime",
@@ -356369,7 +356824,7 @@
         "nume": "13"
       }
     ],
-    "id": 268
+    "id": 275
   },
   {
     "type": "anime",
@@ -358163,7 +358618,7 @@
         "nume": "13"
       }
     ],
-    "id": 269,
+    "id": 276,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -359968,7 +360423,7 @@
         "nume": "13"
       }
     ],
-    "id": 270,
+    "id": 277,
     "studio": "Makaria",
     "sumber": "Manga"
   },
@@ -361729,7 +362184,7 @@
         "nume": "13"
       }
     ],
-    "id": 271,
+    "id": 278,
     "studio": "Quad",
     "sumber": "Light Novel"
   },
@@ -363333,7 +363788,7 @@
         "nume": "13"
       }
     ],
-    "id": 272
+    "id": 279
   },
   {
     "type": "anime",
@@ -364934,7 +365389,7 @@
         "nume": "13"
       }
     ],
-    "id": 273
+    "id": 280
   },
   {
     "type": "anime",
@@ -366552,7 +367007,7 @@
         "nume": "13"
       }
     ],
-    "id": 274
+    "id": 281
   },
   {
     "type": "anime",
@@ -368127,7 +368582,7 @@
         "nume": "13"
       }
     ],
-    "id": 275
+    "id": 282
   },
   {
     "type": "anime",
@@ -369733,7 +370188,7 @@
         "nume": "13"
       }
     ],
-    "id": 276
+    "id": 283
   },
   {
     "type": "anime",
@@ -371297,7 +371752,7 @@
         "nume": "13"
       }
     ],
-    "id": 277
+    "id": 284
   },
   {
     "type": "anime",
@@ -372871,7 +373326,7 @@
         "nume": "13"
       }
     ],
-    "id": 278
+    "id": 285
   },
   {
     "type": "anime",
@@ -374454,7 +374909,7 @@
         "nume": "13"
       }
     ],
-    "id": 279
+    "id": 286
   },
   {
     "type": "anime",
@@ -376049,7 +376504,7 @@
         "nume": "13"
       }
     ],
-    "id": 280
+    "id": 287
   },
   {
     "type": "anime",
@@ -377825,7 +378280,7 @@
         "nume": "13"
       }
     ],
-    "id": 281,
+    "id": 288,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -379594,7 +380049,7 @@
         "nume": "13"
       }
     ],
-    "id": 282,
+    "id": 289,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -380919,7 +381374,7 @@
         "nume": "13"
       }
     ],
-    "id": 283
+    "id": 290
   },
   {
     "type": "anime",
@@ -382104,7 +382559,7 @@
         "nume": "13"
       }
     ],
-    "id": 284,
+    "id": 291,
     "studio": "SANZIGEN",
     "sumber": "Game"
   },
@@ -385123,7 +385578,7 @@
         "nume": "10"
       }
     ],
-    "id": 285,
+    "id": 292,
     "studio": "East Fish Studio",
     "sumber": "Manga"
   },
@@ -386458,7 +386913,7 @@
         "nume": "15"
       }
     ],
-    "id": 286
+    "id": 293
   },
   {
     "type": "anime",
@@ -389356,7 +389811,7 @@
         "nume": "10"
       }
     ],
-    "id": 287
+    "id": 294
   },
   {
     "type": "anime",
@@ -391802,7 +392257,7 @@
         "nume": "10"
       }
     ],
-    "id": 288
+    "id": 295
   },
   {
     "type": "anime",
@@ -393134,7 +393589,7 @@
         "nume": "9"
       }
     ],
-    "id": 289
+    "id": 296
   },
   {
     "type": "anime",
@@ -394632,7 +395087,7 @@
         "nume": "10"
       }
     ],
-    "id": 290,
+    "id": 297,
     "studio": "Satelight",
     "sumber": "Manga"
   },
@@ -396453,7 +396908,7 @@
         "nume": "12"
       }
     ],
-    "id": 291
+    "id": 298
   },
   {
     "type": "anime",
@@ -397913,7 +398368,7 @@
         "nume": "13"
       }
     ],
-    "id": 292,
+    "id": 299,
     "studio": "Blade",
     "sumber": "Manga"
   },
@@ -399318,7 +399773,7 @@
         "nume": "10"
       }
     ],
-    "id": 293
+    "id": 300
   },
   {
     "type": "anime",
@@ -400191,7 +400646,7 @@
         "nume": "3"
       }
     ],
-    "id": 294
+    "id": 301
   },
   {
     "type": "anime",
@@ -400965,7 +401420,7 @@
         "nume": "2"
       }
     ],
-    "id": 295
+    "id": 302
   },
   {
     "type": "anime",
@@ -402368,7 +402823,7 @@
         "nume": "13"
       }
     ],
-    "id": 296
+    "id": 303
   },
   {
     "type": "anime",
@@ -402566,7 +403021,7 @@
         "nume": "9"
       }
     ],
-    "id": 297
+    "id": 304
   },
   {
     "type": "anime",
@@ -403817,7 +404272,7 @@
         "nume": "13"
       }
     ],
-    "id": 298
+    "id": 305
   },
   {
     "type": "anime",
@@ -405022,7 +405477,7 @@
         "nume": "13"
       }
     ],
-    "id": 299
+    "id": 306
   },
   {
     "type": "anime",
@@ -407560,7 +408015,7 @@
         "nume": "16"
       }
     ],
-    "id": 300
+    "id": 307
   },
   {
     "type": "anime",
@@ -408865,7 +409320,7 @@
         "nume": "13"
       }
     ],
-    "id": 301
+    "id": 308
   },
   {
     "type": "anime",
@@ -410370,7 +410825,7 @@
         "nume": "13"
       }
     ],
-    "id": 302,
+    "id": 309,
     "studio": "Zero-G",
     "sumber": "Light Novel"
   },
@@ -411669,7 +412124,7 @@
         "nume": "13"
       }
     ],
-    "id": 303
+    "id": 310
   },
   {
     "type": "anime",
@@ -413176,7 +413631,7 @@
         "nume": "13"
       }
     ],
-    "id": 304,
+    "id": 311,
     "studio": "Satelight, Staple Entertainment",
     "sumber": "Manga"
   },
@@ -414465,7 +414920,7 @@
         "nume": "13"
       }
     ],
-    "id": 305
+    "id": 312
   },
   {
     "type": "anime",
@@ -415962,7 +416417,7 @@
         "nume": "10"
       }
     ],
-    "id": 306,
+    "id": 313,
     "studio": "Bridge",
     "sumber": "Game"
   },
@@ -417470,7 +417925,7 @@
         "nume": "13"
       }
     ],
-    "id": 307,
+    "id": 314,
     "studio": "Okuruto Noboru",
     "sumber": "Light Novel"
   },
@@ -418778,7 +419233,7 @@
         "nume": "13"
       }
     ],
-    "id": 308
+    "id": 315
   },
   {
     "type": "anime",
@@ -421884,7 +422339,7 @@
         "nume": "10"
       }
     ],
-    "id": 309,
+    "id": 316,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -423382,7 +423837,7 @@
         "nume": "13"
       }
     ],
-    "id": 310,
+    "id": 317,
     "studio": "J.C.Staff",
     "sumber": "Manga"
   },
@@ -424881,7 +425336,7 @@
         "nume": "10"
       }
     ],
-    "id": 311,
+    "id": 318,
     "studio": "Studio Deen",
     "sumber": "Light Novel"
   },
@@ -426181,7 +426636,7 @@
         "nume": "13"
       }
     ],
-    "id": 312
+    "id": 319
   },
   {
     "type": "anime",
@@ -427678,7 +428133,7 @@
         "nume": "10"
       }
     ],
-    "id": 313,
+    "id": 320,
     "studio": "Studio Bind",
     "sumber": "Manga"
   },
@@ -428985,7 +429440,7 @@
         "nume": "10"
       }
     ],
-    "id": 314
+    "id": 321
   },
   {
     "type": "anime",
@@ -431864,7 +432319,7 @@
         "nume": "10"
       }
     ],
-    "id": 315,
+    "id": 322,
     "studio": "Satelight",
     "sumber": "Manga"
   },
@@ -433363,7 +433818,7 @@
         "nume": "10"
       }
     ],
-    "id": 316,
+    "id": 323,
     "studio": "MAPPA",
     "sumber": "Original"
   },
@@ -434672,7 +435127,7 @@
         "nume": "13"
       }
     ],
-    "id": 317
+    "id": 324
   },
   {
     "type": "anime",
@@ -436045,7 +436500,7 @@
         "nume": "13"
       }
     ],
-    "id": 318,
+    "id": 325,
     "studio": "TMS Entertainment",
     "sumber": "Manga"
   },
@@ -437543,7 +437998,7 @@
         "nume": "10"
       }
     ],
-    "id": 319,
+    "id": 326,
     "studio": "Studio Gokumi, AXsiZ",
     "sumber": "Light Novel"
   },
@@ -440339,7 +440794,7 @@
         "nume": "10"
       }
     ],
-    "id": 320,
+    "id": 327,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -443659,7 +444114,7 @@
         "nume": "10"
       }
     ],
-    "id": 321,
+    "id": 328,
     "studio": "Telecom Animation Film",
     "sumber": "Manga"
   },
@@ -445158,7 +445613,7 @@
         "nume": "10"
       }
     ],
-    "id": 322,
+    "id": 329,
     "studio": "Studio Comet",
     "sumber": "Light Novel"
   },
@@ -446485,7 +446940,7 @@
         "nume": "10"
       }
     ],
-    "id": 323
+    "id": 330
   },
   {
     "type": "anime",
@@ -449477,7 +449932,7 @@
         "nume": "10"
       }
     ],
-    "id": 324,
+    "id": 331,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -459050,7 +459505,7 @@
         "nume": "15"
       }
     ],
-    "id": 325,
+    "id": 332,
     "studio": "Toei Animation",
     "sumber": "Manga"
   },
@@ -460654,7 +461109,7 @@
         "nume": "10"
       }
     ],
-    "id": 326
+    "id": 333
   },
   {
     "type": "anime",
@@ -460888,7 +461343,7 @@
         "nume": "15"
       }
     ],
-    "id": 327
+    "id": 334
   },
   {
     "type": "anime",
@@ -462601,7 +463056,7 @@
         "nume": "13"
       }
     ],
-    "id": 328
+    "id": 335
   },
   {
     "type": "anime",
@@ -463618,7 +464073,7 @@
         "nume": "9"
       }
     ],
-    "id": 329
+    "id": 336
   },
   {
     "type": "anime",
@@ -463834,7 +464289,7 @@
         "nume": "13"
       }
     ],
-    "id": 330
+    "id": 337
   },
   {
     "type": "anime",
@@ -466596,7 +467051,7 @@
         "nume": "13"
       }
     ],
-    "id": 331,
+    "id": 338,
     "studio": "Passione",
     "sumber": "Light Novel"
   },
@@ -467904,7 +468359,7 @@
         "nume": "13"
       }
     ],
-    "id": 332
+    "id": 339
   },
   {
     "type": "anime",
@@ -468974,7 +469429,7 @@
         "nume": "10"
       }
     ],
-    "id": 333,
+    "id": 340,
     "studio": "Typhoon Graphics",
     "sumber": "Manga"
   },
@@ -471834,7 +472289,7 @@
         "nume": "13"
       }
     ],
-    "id": 334,
+    "id": 341,
     "studio": "Satelight",
     "sumber": "Web Manga"
   },
@@ -473160,7 +473615,7 @@
         "nume": "13"
       }
     ],
-    "id": 335
+    "id": 342
   },
   {
     "type": "anime",
@@ -474123,7 +474578,7 @@
         "nume": "5"
       }
     ],
-    "id": 336
+    "id": 343
   },
   {
     "type": "anime",
@@ -475410,7 +475865,7 @@
         "nume": "13"
       }
     ],
-    "id": 337
+    "id": 344
   },
   {
     "type": "anime",
@@ -477013,7 +477468,7 @@
         "nume": "13"
       }
     ],
-    "id": 338,
+    "id": 345,
     "studio": "TROYCA",
     "sumber": "Visual Novel"
   },
@@ -478506,7 +478961,7 @@
         "nume": "13"
       }
     ],
-    "id": 339,
+    "id": 346,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -479911,7 +480366,7 @@
         "nume": "13"
       }
     ],
-    "id": 340
+    "id": 347
   },
   {
     "type": "anime",
@@ -483354,7 +483809,7 @@
         "nume": "16"
       }
     ],
-    "id": 341,
+    "id": 348,
     "studio": "Satelight, A-1 Pictures",
     "sumber": "Manga"
   },
@@ -486030,7 +486485,7 @@
         "nume": "13"
       }
     ],
-    "id": 342
+    "id": 349
   },
   {
     "type": "anime",
@@ -487518,7 +487973,7 @@
         "nume": "13"
       }
     ],
-    "id": 343,
+    "id": 350,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -488825,7 +489280,7 @@
         "nume": "13"
       }
     ],
-    "id": 344
+    "id": 351
   },
   {
     "type": "anime",
@@ -490375,7 +490830,7 @@
         "nume": "13"
       }
     ],
-    "id": 345
+    "id": 352
   },
   {
     "type": "anime",
@@ -492160,7 +492615,7 @@
         "nume": "16"
       }
     ],
-    "id": 346
+    "id": 353
   },
   {
     "type": "anime",
@@ -493641,7 +494096,7 @@
         "nume": "16"
       }
     ],
-    "id": 347,
+    "id": 354,
     "studio": "Studio Elle",
     "sumber": "Light Novel"
   },
@@ -496298,7 +496753,7 @@
         "nume": "13"
       }
     ],
-    "id": 348,
+    "id": 355,
     "studio": "White Fox",
     "sumber": "Manga"
   },
@@ -497795,7 +498250,7 @@
         "nume": "13"
       }
     ],
-    "id": 349,
+    "id": 356,
     "studio": "Felix Films",
     "sumber": "Web Manga"
   },
@@ -499211,7 +499666,7 @@
         "nume": "16"
       }
     ],
-    "id": 350
+    "id": 357
   },
   {
     "type": "anime",
@@ -500825,7 +501280,7 @@
         "nume": "13"
       }
     ],
-    "id": 351,
+    "id": 358,
     "studio": "Maho Film",
     "sumber": "Light Novel"
   },
@@ -502313,7 +502768,7 @@
         "nume": "13"
       }
     ],
-    "id": 352,
+    "id": 359,
     "studio": "Nut",
     "sumber": "Original"
   },
@@ -503627,7 +504082,7 @@
         "nume": "13"
       }
     ],
-    "id": 353
+    "id": 360
   },
   {
     "type": "anime",
@@ -505132,7 +505587,7 @@
         "nume": "13"
       }
     ],
-    "id": 354,
+    "id": 361,
     "studio": "Signal.MD",
     "sumber": "Manga"
   },
@@ -506639,7 +507094,7 @@
         "nume": "13"
       }
     ],
-    "id": 355,
+    "id": 362,
     "studio": "Studio Deen",
     "sumber": "Manga"
   },
@@ -506956,7 +507411,7 @@
         "nume": "13"
       }
     ],
-    "id": 356
+    "id": 363
   },
   {
     "type": "anime",
@@ -508469,7 +508924,7 @@
         "nume": "16"
       }
     ],
-    "id": 357
+    "id": 364
   },
   {
     "type": "anime",
@@ -509965,7 +510420,7 @@
         "nume": "13"
       }
     ],
-    "id": 358,
+    "id": 365,
     "studio": "Ashi Productions",
     "sumber": "Manga"
   },
@@ -511579,7 +512034,7 @@
         "nume": "13"
       }
     ],
-    "id": 359,
+    "id": 366,
     "studio": "Zero-G",
     "sumber": "Light Novel"
   },
@@ -513081,7 +513536,7 @@
         "nume": "13"
       }
     ],
-    "id": 360,
+    "id": 367,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -514753,7 +515208,7 @@
         "nume": "16"
       }
     ],
-    "id": 361,
+    "id": 368,
     "studio": "SynergySP, Vega Entertainment",
     "sumber": "Light Novel"
   },
@@ -517633,7 +518088,7 @@
         "nume": "13"
       }
     ],
-    "id": 362,
+    "id": 369,
     "studio": "J.C.Staff",
     "sumber": "Manga"
   },
@@ -519132,7 +519587,7 @@
         "nume": "13"
       }
     ],
-    "id": 363,
+    "id": 370,
     "studio": "Studio Signpost",
     "sumber": "Manga"
   },
@@ -520439,7 +520894,7 @@
         "nume": "13"
       }
     ],
-    "id": 364
+    "id": 371
   },
   {
     "type": "anime",
@@ -521709,7 +522164,7 @@
         "nume": "12"
       }
     ],
-    "id": 365
+    "id": 372
   },
   {
     "type": "anime",
@@ -523215,7 +523670,7 @@
         "nume": "13"
       }
     ],
-    "id": 366,
+    "id": 373,
     "studio": "Passione, Hayabusa Film",
     "sumber": "Light Novel"
   },
@@ -523414,7 +523869,7 @@
         "nume": "12"
       }
     ],
-    "id": 367
+    "id": 374
   },
   {
     "type": "anime",
@@ -525034,7 +525489,7 @@
         "nume": "13"
       }
     ],
-    "id": 368,
+    "id": 375,
     "studio": "P.A. Works",
     "sumber": "Game"
   },
@@ -525622,7 +526077,7 @@
         "nume": "13"
       }
     ],
-    "id": 369,
+    "id": 376,
     "studio": "Drive",
     "sumber": "Manga"
   },
@@ -527350,7 +527805,7 @@
         "nume": "13"
       }
     ],
-    "id": 370,
+    "id": 377,
     "studio": "Shaft",
     "sumber": "Light Novel"
   },
@@ -528984,7 +529439,7 @@
         "nume": "13"
       }
     ],
-    "id": 371,
+    "id": 378,
     "studio": "A-1 Pictures",
     "sumber": "Manga"
   },
@@ -529250,7 +529705,7 @@
         "nume": "8"
       }
     ],
-    "id": 372
+    "id": 379
   },
   {
     "type": "anime",
@@ -529602,7 +530057,7 @@
         "nume": "8"
       }
     ],
-    "id": 373
+    "id": 380
   },
   {
     "type": "anime",
@@ -546539,7 +546994,7 @@
         "nume": "2"
       }
     ],
-    "id": 374
+    "id": 381
   },
   {
     "type": "anime",
@@ -566220,7 +566675,7 @@
         "nume": "11"
       }
     ],
-    "id": 375
+    "id": 382
   },
   {
     "type": "anime",
@@ -566563,7 +567018,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 376,
+    "id": 383,
     "studio": "Brain’s Base",
     "sumber": "Manga"
   },
@@ -566800,7 +567255,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 377
+    "id": 384
   },
   {
     "type": "anime",
@@ -566868,7 +567323,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 378,
+    "id": 385,
     "studio": "Khara",
     "sumber": "Original"
   },
@@ -567712,7 +568167,7 @@
         "nume": "6"
       }
     ],
-    "id": 379,
+    "id": 386,
     "studio": "Kinema Citrus",
     "sumber": "Web Manga"
   },
@@ -571451,7 +571906,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 380,
+    "id": 387,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -571997,7 +572452,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 381,
+    "id": 388,
     "studio": "Nippon Animation",
     "sumber": "Manga"
   },
@@ -572183,7 +572638,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 382
+    "id": 389
   },
   {
     "type": "anime",
@@ -575385,7 +575840,7 @@
         "nume": "3"
       }
     ],
-    "id": 383
+    "id": 390
   },
   {
     "type": "anime",
@@ -580922,7 +581377,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 384
+    "id": 391
   },
   {
     "type": "anime",
@@ -582615,7 +583070,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 385,
+    "id": 392,
     "studio": "Sunrise",
     "sumber": "Manga"
   },
@@ -583025,7 +583480,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 386
+    "id": 393
   },
   {
     "type": "anime",
@@ -583418,7 +583873,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 387,
+    "id": 394,
     "studio": "Lerche",
     "sumber": "Manga"
   },
@@ -583539,7 +583994,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 388,
+    "id": 395,
     "studio": "Lay-Duce",
     "sumber": "Original"
   },
@@ -583867,7 +584322,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 389,
+    "id": 396,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -584109,7 +584564,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 390
+    "id": 397
   },
   {
     "type": "anime",
@@ -584347,7 +584802,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 391
+    "id": 398
   },
   {
     "type": "anime",
@@ -584993,7 +585448,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 392
+    "id": 399
   },
   {
     "type": "anime",
@@ -585335,7 +585790,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 393
+    "id": 400
   },
   {
     "type": "anime",
@@ -585573,7 +586028,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 394
+    "id": 401
   },
   {
     "type": "anime",
@@ -585812,7 +586267,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 395
+    "id": 402
   },
   {
     "type": "anime",
@@ -586017,7 +586472,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 396
+    "id": 403
   },
   {
     "type": "anime",
@@ -586255,7 +586710,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 397
+    "id": 404
   },
   {
     "type": "anime",
@@ -586408,7 +586863,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 398
+    "id": 405
   },
   {
     "type": "anime",
@@ -587092,7 +587547,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 399,
+    "id": 406,
     "studio": "feel.",
     "sumber": "Visual novel"
   },
@@ -587334,7 +587789,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 400
+    "id": 407
   },
   {
     "type": "anime",
@@ -587574,7 +588029,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 401
+    "id": 408
   },
   {
     "type": "anime",
@@ -587814,7 +588269,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 402
+    "id": 409
   },
   {
     "type": "anime",
@@ -588053,7 +588508,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 403
+    "id": 410
   },
   {
     "type": "anime",
@@ -588423,7 +588878,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 404,
+    "id": 411,
     "studio": "Silver, Arvo Animation",
     "sumber": "Manga"
   },
@@ -588695,7 +589150,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 405
+    "id": 412
   },
   {
     "type": "anime",
@@ -588936,7 +589391,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 406
+    "id": 413
   },
   {
     "type": "anime",
@@ -589194,7 +589649,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 407
+    "id": 414
   },
   {
     "type": "anime",
@@ -589433,7 +589888,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 408
+    "id": 415
   },
   {
     "type": "anime",
@@ -589673,7 +590128,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 409
+    "id": 416
   },
   {
     "type": "anime",
@@ -590316,7 +590771,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 410,
+    "id": 417,
     "studio": "Bones",
     "sumber": "Original"
   },
@@ -590557,7 +591012,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 411
+    "id": 418
   },
   {
     "type": "anime",
@@ -590797,7 +591252,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 412
+    "id": 419
   },
   {
     "type": "anime",
@@ -591037,7 +591492,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 413,
+    "id": 420,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -591279,7 +591734,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 414,
+    "id": 421,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -591521,7 +591976,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 415,
+    "id": 422,
     "studio": "Ezόla",
     "sumber": "Manga"
   },
@@ -591867,7 +592322,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 416,
+    "id": 423,
     "studio": "Lerche",
     "sumber": "Manga"
   },
@@ -592107,7 +592562,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 417,
+    "id": 424,
     "studio": "Doga Kobo",
     "sumber": "Web manga"
   },
@@ -592451,7 +592906,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 418,
+    "id": 425,
     "studio": "Notfound",
     "sumber": "Web Manga"
   },
@@ -592708,7 +593163,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 419,
+    "id": 426,
     "studio": "Nexus",
     "sumber": "Original"
   },
@@ -592948,7 +593403,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 420,
+    "id": 427,
     "studio": "Silver Link",
     "sumber": "Web manga"
   },
@@ -593191,7 +593646,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 421,
+    "id": 428,
     "studio": "Notfounds",
     "sumber": "Light novel"
   },
@@ -593434,7 +593889,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 422,
+    "id": 429,
     "studio": "Millepensee",
     "sumber": "Light novel"
   },
@@ -593983,7 +594438,7 @@
         "nume": "3"
       }
     ],
-    "id": 423,
+    "id": 430,
     "studio": "Encourage Films",
     "sumber": "Light novel"
   },
@@ -594037,7 +594492,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 424,
+    "id": 431,
     "studio": "J.C.Staff",
     "sumber": "Manga"
   },
@@ -594262,7 +594717,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 425,
+    "id": 432,
     "studio": "Lerche",
     "sumber": "Manga"
   },
@@ -594504,7 +594959,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 426,
+    "id": 433,
     "studio": "J.C.Staff, A.C.G.T.",
     "sumber": "Manga"
   },
@@ -594745,7 +595200,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 427,
+    "id": 434,
     "studio": "TROYCA",
     "sumber": "Light Novel"
   },
@@ -594986,7 +595441,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 428,
+    "id": 435,
     "studio": "David Production",
     "sumber": "Game"
   },
@@ -595292,7 +595747,7 @@
         "nume": "4"
       }
     ],
-    "id": 429,
+    "id": 436,
     "studio": "Barnum Studio, Connect",
     "sumber": "Light Novel"
   },
@@ -595533,7 +595988,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 430,
+    "id": 437,
     "studio": "ENGI",
     "sumber": "Manga"
   },
@@ -595601,7 +596056,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 431,
+    "id": 438,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -595946,7 +596401,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 432,
+    "id": 439,
     "studio": "Bibury Animation Studios",
     "sumber": "Game"
   },
@@ -596185,7 +596640,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 433,
+    "id": 440,
     "studio": "Shin-Ei Animation",
     "sumber": "Original"
   },
@@ -596409,7 +596864,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 434,
+    "id": 441,
     "studio": "Studio Deen",
     "sumber": "Novel"
   },
@@ -596654,7 +597109,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 435,
+    "id": 442,
     "studio": "Hoods Entertainment",
     "sumber": "Manga"
   },
@@ -596964,7 +597419,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 436,
+    "id": 443,
     "studio": "CloverWorks",
     "sumber": "Game"
   },
@@ -597308,7 +597763,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 437,
+    "id": 444,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -597753,7 +598208,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 438,
+    "id": 445,
     "studio": "Production I.G",
     "sumber": "Original"
   },
@@ -598002,7 +598457,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 439,
+    "id": 446,
     "studio": "Studio 3Hz",
     "sumber": "4-Koma Manga"
   },
@@ -598652,7 +599107,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 440,
+    "id": 447,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -598894,7 +599349,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 441,
+    "id": 448,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -598963,7 +599418,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 442,
+    "id": 449,
     "studio": "Science SARU",
     "sumber": "???"
   },
@@ -600235,7 +600690,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 443,
+    "id": 450,
     "studio": "OLM",
     "sumber": "Game"
   },
@@ -600604,7 +601059,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 444,
+    "id": 451,
     "studio": "NAZ",
     "sumber": "Original"
   },
@@ -600845,7 +601300,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 445,
+    "id": 452,
     "studio": "SateLight",
     "sumber": "Web Manga"
   },
@@ -601086,7 +601541,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 446,
+    "id": 453,
     "studio": "Doga Kobo",
     "sumber": "4-Koma Manga"
   },
@@ -601687,7 +602142,7 @@
         "nume": "3"
       }
     ],
-    "id": 447,
+    "id": 454,
     "studio": "Nexus",
     "sumber": "Manga"
   },
@@ -601929,7 +602384,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 448,
+    "id": 455,
     "studio": "Science SARU",
     "sumber": "Manga"
   },
@@ -602188,7 +602643,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 449,
+    "id": 456,
     "studio": "Geno Studio",
     "sumber": "Manga"
   },
@@ -602532,7 +602987,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 450,
+    "id": 457,
     "studio": "Studio Gokumi",
     "sumber": "Manga"
   },
@@ -602772,7 +603227,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 451,
+    "id": 458,
     "studio": "PRA",
     "sumber": "Original"
   },
@@ -603012,7 +603467,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 452,
+    "id": 459,
     "studio": "Felix Film",
     "sumber": "Visual novel"
   },
@@ -603270,7 +603725,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 453,
+    "id": 460,
     "studio": "LIDENFILMS",
     "sumber": "Light Novel"
   },
@@ -603527,7 +603982,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 454,
+    "id": 461,
     "studio": "NAZ",
     "sumber": "Light Novel"
   },
@@ -603749,7 +604204,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 455,
+    "id": 462,
     "studio": "MAPPA, Lapin Track",
     "sumber": "Original"
   },
@@ -603991,7 +604446,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 456,
+    "id": 463,
     "studio": "Ezola",
     "sumber": "Manga"
   },
@@ -604232,7 +604687,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 457,
+    "id": 464,
     "studio": "8bit",
     "sumber": "Manga"
   },
@@ -604321,7 +604776,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 458,
+    "id": 465,
     "studio": "Studio Signpost",
     "sumber": "Manga"
   },
@@ -604668,7 +605123,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 459,
+    "id": 466,
     "studio": "Albacrow",
     "sumber": "Original"
   },
@@ -604949,7 +605404,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 460,
+    "id": 467,
     "studio": "Trigger",
     "sumber": "Original"
   },
@@ -605466,7 +605921,7 @@
         "nume": "3"
       }
     ],
-    "id": 461,
+    "id": 468,
     "studio": "Studio A-CAT",
     "sumber": "Manga"
   },
@@ -605983,7 +606438,7 @@
         "nume": "3"
       }
     ],
-    "id": 462,
+    "id": 469,
     "studio": "SynergySP, Shin-Ei Animation",
     "sumber": "Light Novel"
   },
@@ -606272,7 +606727,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 463,
+    "id": 470,
     "studio": "Ajia-Do",
     "sumber": "Manga"
   },
@@ -606522,7 +606977,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 464,
+    "id": 471,
     "studio": "SANZIGEN",
     "sumber": "Game"
   },
@@ -606812,7 +607267,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 465,
+    "id": 472,
     "studio": "Sunrise",
     "sumber": "Manga"
   },
@@ -607378,7 +607833,7 @@
         "nume": "3"
       }
     ],
-    "id": 466,
+    "id": 473,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -610479,7 +610934,7 @@
         "nume": "3"
       }
     ],
-    "id": 467,
+    "id": 474,
     "studio": "Toei Animation",
     "sumber": "Original"
   },
@@ -610852,7 +611307,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 468,
+    "id": 475,
     "studio": "PINE JAM",
     "sumber": "Manga"
   },
@@ -611387,7 +611842,7 @@
         "nume": "3"
       }
     ],
-    "id": 469,
+    "id": 476,
     "studio": "MAPPA",
     "sumber": "Original"
   },
@@ -611709,7 +612164,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 470,
+    "id": 477,
     "studio": "OLM",
     "sumber": "Game"
   },
@@ -611991,7 +612446,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 471,
+    "id": 478,
     "studio": "Project No.9",
     "sumber": "Game"
   },
@@ -613407,7 +613862,7 @@
         "nume": "3"
       }
     ],
-    "id": 472,
+    "id": 479,
     "studio": "Bridge",
     "sumber": "Card Game"
   },
@@ -613696,7 +614151,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 473,
+    "id": 480,
     "studio": "C2C",
     "sumber": "Game"
   },
@@ -614018,7 +614473,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 474,
+    "id": 481,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -614602,7 +615057,7 @@
         "nume": "3"
       }
     ],
-    "id": 475,
+    "id": 482,
     "studio": "CloverWorks",
     "sumber": "Novel"
   },
@@ -614698,7 +615153,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 476,
+    "id": 483,
     "studio": "Kamikaze Douga, Space Neko Company",
     "sumber": "Manga"
   },
@@ -615911,7 +616366,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 477,
+    "id": 484,
     "studio": "J.C.Staff",
     "sumber": "Other"
   },
@@ -616891,7 +617346,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 478,
+    "id": 485,
     "studio": "Zexcs",
     "sumber": "Card Game"
   },
@@ -617203,7 +617658,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 479,
+    "id": 486,
     "studio": "LIDENFILMS",
     "sumber": "Novel"
   },
@@ -618446,7 +618901,7 @@
         "nume": "3"
       }
     ],
-    "id": 480,
+    "id": 487,
     "studio": "Wit Studio",
     "sumber": "Original"
   },
@@ -618791,7 +619246,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 481,
+    "id": 488,
     "studio": "Funimation",
     "sumber": "Original"
   },
@@ -619139,7 +619594,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 482,
+    "id": 489,
     "studio": "Project No.9",
     "sumber": "Manga"
   },
@@ -619482,7 +619937,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 483,
+    "id": 490,
     "studio": "Yokohama Animation Lab",
     "sumber": "Original"
   },
@@ -619828,7 +620283,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 484,
+    "id": 491,
     "studio": "Wolfsbane",
     "sumber": "Manga"
   },
@@ -620202,7 +620657,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 485,
+    "id": 492,
     "studio": "MAPPA",
     "sumber": "Web Manga"
   },
@@ -620496,7 +620951,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 486,
+    "id": 493,
     "studio": "Science SARU",
     "sumber": "Novel"
   },
@@ -620843,7 +621298,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 487,
+    "id": 494,
     "studio": "Studio elle, l-a-unch・BOX",
     "sumber": "Original"
   },
@@ -621063,7 +621518,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 488,
+    "id": 495,
     "studio": "Sublimation",
     "sumber": "Game"
   },
@@ -621411,7 +621866,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 489,
+    "id": 496,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -621758,7 +622213,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 490,
+    "id": 497,
     "studio": "Maho Film",
     "sumber": "Manga"
   },
@@ -622454,7 +622909,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 491,
+    "id": 498,
     "studio": "OLM, Sunrise Beyond",
     "sumber": "Game"
   },
@@ -623725,7 +624180,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 492,
+    "id": 499,
     "studio": "Toei Animation",
     "sumber": "Manga"
   },
@@ -624069,7 +624524,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 493,
+    "id": 500,
     "studio": "C2C",
     "sumber": "Light Novel"
   },
@@ -624440,7 +624895,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 494,
+    "id": 501,
     "studio": "Bridge",
     "sumber": "Manga"
   },
@@ -624785,7 +625240,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 495,
+    "id": 502,
     "studio": "Blade",
     "sumber": "Web Manga"
   },
@@ -625137,7 +625592,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 496,
+    "id": 503,
     "studio": "A-1 Pictures",
     "sumber": "Original"
   },
@@ -625781,7 +626236,7 @@
         "nume": "3"
       }
     ],
-    "id": 497,
+    "id": 504,
     "studio": "Doga Kobo",
     "sumber": "Novel"
   },
@@ -626152,7 +626607,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 498,
+    "id": 505,
     "studio": "Production I.G",
     "sumber": "Web Manga"
   },
@@ -626769,7 +627224,7 @@
         "nume": "2"
       }
     ],
-    "id": 499,
+    "id": 506,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -627113,7 +627568,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 500,
+    "id": 507,
     "studio": "Feel.",
     "sumber": "Manga"
   },
@@ -627803,7 +628258,7 @@
         "nume": "3"
       }
     ],
-    "id": 501,
+    "id": 508,
     "studio": "LIDENFILMS, Felix Film",
     "sumber": "Novel"
   },
@@ -628146,7 +628601,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 502,
+    "id": 509,
     "studio": "Hoods Entertainment",
     "sumber": "Original"
   },
@@ -628467,7 +628922,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 503,
+    "id": 510,
     "studio": "LIDENFILMS",
     "sumber": "Game"
   },
@@ -628796,7 +629251,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 504,
+    "id": 511,
     "studio": "STUDIO A-CAT",
     "sumber": "Game"
   },
@@ -629478,7 +629933,7 @@
         "nume": "3"
       }
     ],
-    "id": 505,
+    "id": 512,
     "studio": "David Production",
     "sumber": "Manga"
   },
@@ -630734,7 +631189,7 @@
         "nume": "3"
       }
     ],
-    "id": 506,
+    "id": 513,
     "studio": "Millepensee",
     "sumber": "Light Novel"
   },
@@ -631424,7 +631879,7 @@
         "nume": "3"
       }
     ],
-    "id": 507,
+    "id": 514,
     "studio": "Okuruto Noboru",
     "sumber": "Light Novel"
   },
@@ -631997,7 +632452,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 508,
+    "id": 515,
     "studio": "Studio VOLN",
     "sumber": "Original"
   },
@@ -632732,7 +633187,7 @@
         "nume": "3"
       }
     ],
-    "id": 509,
+    "id": 516,
     "studio": "CloverWorks",
     "sumber": "Manga"
   },
@@ -633077,7 +633532,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 510,
+    "id": 517,
     "studio": "Platinum Vision",
     "sumber": "Manga"
   },
@@ -633420,7 +633875,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 511,
+    "id": 518,
     "studio": "Lerche",
     "sumber": "Original"
   },
@@ -633767,7 +634222,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 512,
+    "id": 519,
     "studio": "Ajia-Do",
     "sumber": "Manga"
   },
@@ -634111,7 +634566,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 513,
+    "id": 520,
     "studio": "Bones",
     "sumber": "Original"
   },
@@ -634463,7 +634918,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 514,
+    "id": 521,
     "studio": "CloverWorks",
     "sumber": "Original"
   },
@@ -635151,7 +635606,7 @@
         "nume": "3"
       }
     ],
-    "id": 515,
+    "id": 522,
     "studio": "TNK",
     "sumber": "Light Novel"
   },
@@ -635479,7 +635934,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 516,
+    "id": 523,
     "studio": "Asahi Production",
     "sumber": "Other"
   },
@@ -635807,7 +636262,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 517,
+    "id": 524,
     "studio": "Bones, Orange",
     "sumber": "Original"
   },
@@ -636151,7 +636606,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 518,
+    "id": 525,
     "studio": "Nomad",
     "sumber": "Web Manga"
   },
@@ -636884,7 +637339,7 @@
         "nume": "3"
       }
     ],
-    "id": 519,
+    "id": 526,
     "studio": "Signal.MD",
     "sumber": "Other"
   },
@@ -637229,7 +637684,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 520,
+    "id": 527,
     "studio": "Bakken Record",
     "sumber": "Original"
   },
@@ -637574,7 +638029,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 521,
+    "id": 528,
     "studio": "Trigger",
     "sumber": "Original"
   },
@@ -637921,7 +638376,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 522,
+    "id": 529,
     "studio": "Shin-Ei Animation",
     "sumber": "Manga"
   },
@@ -638603,7 +639058,7 @@
         "nume": "3"
       }
     ],
-    "id": 523,
+    "id": 530,
     "studio": "TMS Entertainment",
     "sumber": "Web Manga"
   },
@@ -639310,7 +639765,7 @@
         "nume": "3"
       }
     ],
-    "id": 524,
+    "id": 531,
     "studio": "Wit Studio",
     "sumber": "Original"
   },
@@ -639655,7 +640110,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 525,
+    "id": 532,
     "studio": "Signal.MD",
     "sumber": "Manga"
   },
@@ -640000,7 +640455,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 526,
+    "id": 533,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -640370,7 +640825,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 527,
+    "id": 534,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -643076,7 +643531,7 @@
         "nume": "3"
       }
     ],
-    "id": 528,
+    "id": 535,
     "studio": "Bridge",
     "sumber": "Manga"
   },
@@ -643420,7 +643875,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 529,
+    "id": 536,
     "studio": "Studio Kai",
     "sumber": "Light Novel"
   },
@@ -643780,7 +644235,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 530,
+    "id": 537,
     "studio": "OLM, P.I.C.S.",
     "sumber": "Original"
   },
@@ -644067,7 +644522,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 531,
+    "id": 538,
     "studio": "Shin-Ei Animation, domerica",
     "sumber": "Game"
   },
@@ -644711,7 +645166,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 532,
+    "id": 539,
     "studio": "J.C.Staff",
     "sumber": "Game"
   },
@@ -644782,7 +645237,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 533,
+    "id": 540,
     "studio": "Doga Kobo",
     "sumber": "Light Novel"
   },
@@ -645125,7 +645580,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 534,
+    "id": 541,
     "studio": "Zexcs",
     "sumber": "Original"
   },
@@ -645453,7 +645908,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 535,
+    "id": 542,
     "studio": "Madhouse",
     "sumber": "Original"
   },
@@ -646854,7 +647309,7 @@
         "nume": "3"
       }
     ],
-    "id": 536,
+    "id": 543,
     "studio": "Sunrise",
     "sumber": "Game"
   },
@@ -647198,7 +647653,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 537,
+    "id": 544,
     "studio": "Asahi Production",
     "sumber": "Manga"
   },
@@ -647871,7 +648326,7 @@
         "nume": "3"
       }
     ],
-    "id": 538,
+    "id": 545,
     "studio": "feel.",
     "sumber": "Light Novel"
   },
@@ -648241,7 +648696,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 539,
+    "id": 546,
     "studio": "Pine Jam",
     "sumber": "Manga"
   },
@@ -648560,7 +649015,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 540,
+    "id": 547,
     "studio": "MAPPA",
     "sumber": "Original"
   },
@@ -648906,7 +649361,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 541,
+    "id": 548,
     "studio": "ENGI",
     "sumber": "Light Novel"
   },
@@ -649250,7 +649705,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 542,
+    "id": 549,
     "studio": "Studio Blanc",
     "sumber": "Manga"
   },
@@ -649519,7 +649974,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 543,
+    "id": 550,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -650199,7 +650654,7 @@
         "nume": "3"
       }
     ],
-    "id": 544,
+    "id": 551,
     "studio": "SILVER LINK.",
     "sumber": "Manga"
   },
@@ -650835,7 +651290,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 545,
+    "id": 552,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -651199,7 +651654,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 546,
+    "id": 553,
     "studio": "SANZIGEN",
     "sumber": "Original"
   },
@@ -651863,7 +652318,7 @@
         "nume": "3"
       }
     ],
-    "id": 547,
+    "id": 554,
     "studio": "Shirogumi",
     "sumber": "Other"
   },
@@ -652169,7 +652624,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 548,
+    "id": 555,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -653266,7 +653721,7 @@
         "nume": "3"
       }
     ],
-    "id": 549,
+    "id": 556,
     "studio": "SILVER LINK.",
     "sumber": "Manga"
   },
@@ -653577,7 +654032,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 550,
+    "id": 557,
     "studio": "Production I.G",
     "sumber": "Original"
   },
@@ -653897,7 +654352,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 551,
+    "id": 558,
     "studio": "Science SARU",
     "sumber": "Book"
   },
@@ -654569,7 +655024,7 @@
         "nume": "3"
       }
     ],
-    "id": 552,
+    "id": 559,
     "studio": "Seven Arcs",
     "sumber": "Manga"
   },
@@ -654937,7 +655392,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 553,
+    "id": 560,
     "studio": "Doga Kobo",
     "sumber": "Original"
   },
@@ -655282,7 +655737,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 554,
+    "id": 561,
     "studio": "Passione",
     "sumber": "Manga"
   },
@@ -655963,7 +656418,7 @@
         "nume": "3"
       }
     ],
-    "id": 555,
+    "id": 562,
     "studio": "Arvo Animation",
     "sumber": "Light novel"
   },
@@ -656643,7 +657098,7 @@
         "nume": "3"
       }
     ],
-    "id": 556,
+    "id": 563,
     "studio": "Madhouse, MAPPA",
     "sumber": "Original"
   },
@@ -656986,7 +657441,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 557,
+    "id": 564,
     "studio": "C2C",
     "sumber": "Original"
   },
@@ -657332,7 +657787,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 558,
+    "id": 565,
     "studio": "Zero-G",
     "sumber": "Manga"
   },
@@ -658005,7 +658460,7 @@
         "nume": "3"
       }
     ],
-    "id": 559,
+    "id": 566,
     "studio": "Satelight",
     "sumber": "Novel"
   },
@@ -659310,7 +659765,7 @@
         "nume": "3"
       }
     ],
-    "id": 560,
+    "id": 567,
     "studio": "Signal.MD",
     "sumber": "Manga"
   },
@@ -659973,7 +660428,7 @@
         "nume": "3"
       }
     ],
-    "id": 561,
+    "id": 568,
     "studio": "A-1 Pictures",
     "sumber": "Original"
   },
@@ -660318,7 +660773,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 562,
+    "id": 569,
     "studio": "SynergySP",
     "sumber": "Manga"
   },
@@ -660998,7 +661453,7 @@
         "nume": "3"
       }
     ],
-    "id": 563,
+    "id": 570,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -661721,7 +662176,7 @@
         "nume": "3"
       }
     ],
-    "id": 564,
+    "id": 571,
     "studio": "Gambit",
     "sumber": "Manga"
   },
@@ -662065,7 +662520,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 565,
+    "id": 572,
     "studio": "Lerche",
     "sumber": "Original"
   },
@@ -662744,7 +663199,7 @@
         "nume": "3"
       }
     ],
-    "id": 566,
+    "id": 573,
     "studio": "SILVER LINK.",
     "sumber": "Original"
   },
@@ -663523,7 +663978,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 567,
+    "id": 574,
     "studio": "Wit Studio",
     "sumber": "Manga"
   },
@@ -664794,7 +665249,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 568,
+    "id": 575,
     "studio": "Toei Animation",
     "sumber": "Other"
   },
@@ -665138,7 +665593,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 569,
+    "id": 576,
     "studio": "Maho Film",
     "sumber": "Light Novel"
   },
@@ -665507,7 +665962,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 570,
+    "id": 577,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -665881,7 +666336,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 571,
+    "id": 578,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -666225,7 +666680,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 572,
+    "id": 579,
     "studio": "Connect",
     "sumber": "Manga"
   },
@@ -666571,7 +667026,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 573,
+    "id": 580,
     "studio": "Asahi Production",
     "sumber": "Game"
   },
@@ -667205,7 +667660,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 574,
+    "id": 581,
     "studio": "Yumeta Company, Graphinica",
     "sumber": "Game"
   },
@@ -667868,7 +668323,7 @@
         "nume": "3"
       }
     ],
-    "id": 575,
+    "id": 582,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -668212,7 +668667,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 576,
+    "id": 583,
     "studio": "CloverWorks",
     "sumber": "Manga"
   },
@@ -668548,7 +669003,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 577,
+    "id": 584,
     "studio": "CloverWorks",
     "sumber": "Original"
   },
@@ -669210,7 +669665,7 @@
         "nume": "3"
       }
     ],
-    "id": 578,
+    "id": 585,
     "studio": "Quad",
     "sumber": "Manga"
   },
@@ -669872,7 +670327,7 @@
         "nume": "3"
       }
     ],
-    "id": 579,
+    "id": 586,
     "studio": "Diomedéa",
     "sumber": "Mixed Media"
   },
@@ -670519,7 +670974,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 580,
+    "id": 587,
     "studio": "J.C.Staff",
     "sumber": "Manga"
   },
@@ -670864,7 +671319,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 581,
+    "id": 588,
     "studio": "LIDENFILMS",
     "sumber": "Mixed Media"
   },
@@ -671209,7 +671664,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 582,
+    "id": 589,
     "studio": "OZ",
     "sumber": "Light Novel"
   },
@@ -671553,7 +672008,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 583,
+    "id": 590,
     "studio": "Yokohama Animation Lab",
     "sumber": "Light Novel"
   },
@@ -671897,7 +672352,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 584,
+    "id": 591,
     "studio": "Studio A-CAT",
     "sumber": "Light novel"
   },
@@ -672242,7 +672697,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 585,
+    "id": 592,
     "studio": "OLM Team Yoshioka",
     "sumber": "Manga"
   },
@@ -672586,7 +673041,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 586,
+    "id": 593,
     "studio": "GEEK TOYS",
     "sumber": "Game"
   },
@@ -672931,7 +673386,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 587,
+    "id": 594,
     "studio": "Platinum Vision",
     "sumber": "Manga"
   },
@@ -673610,7 +674065,7 @@
         "nume": "3"
       }
     ],
-    "id": 588,
+    "id": 595,
     "studio": "LIDENFILMS",
     "sumber": "Original"
   },
@@ -673954,7 +674409,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 589,
+    "id": 596,
     "studio": "P.A. Works",
     "sumber": "Manga"
   },
@@ -674644,7 +675099,7 @@
         "nume": "3"
       }
     ],
-    "id": 590,
+    "id": 597,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -675939,7 +676394,7 @@
         "nume": "3"
       }
     ],
-    "id": 591,
+    "id": 598,
     "studio": "Nippon Animation, OLM",
     "sumber": "Novel"
   },
@@ -676282,7 +676737,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 592,
+    "id": 599,
     "studio": "Lay-duce",
     "sumber": "Original"
   },
@@ -677551,7 +678006,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 593,
+    "id": 600,
     "studio": "Zexcs",
     "sumber": "Game"
   },
@@ -678781,7 +679236,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 594,
+    "id": 601,
     "studio": "Bridge",
     "sumber": "Original"
   },
@@ -679452,7 +679907,7 @@
         "nume": "3"
       }
     ],
-    "id": 595,
+    "id": 602,
     "studio": "Okuruto Noboru",
     "sumber": "Manga"
   },
@@ -680126,7 +680581,7 @@
         "nume": "3"
       }
     ],
-    "id": 596,
+    "id": 603,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -680463,7 +680918,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 597,
+    "id": 604,
     "studio": "Bibury Animation Studios, Bibury Animation CG",
     "sumber": "Other"
   },
@@ -680533,7 +680988,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 598,
+    "id": 605,
     "studio": "SILVER LINK., Blade",
     "sumber": "Light Novel"
   },
@@ -680870,7 +681325,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 599,
+    "id": 606,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -681207,7 +681662,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 600,
+    "id": 607,
     "studio": "Encourage Films",
     "sumber": "Manga"
   },
@@ -681553,7 +682008,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 601,
+    "id": 608,
     "studio": "Project No.9",
     "sumber": "Manga"
   },
@@ -681899,7 +682354,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 602,
+    "id": 609,
     "studio": "Tezuka Productions",
     "sumber": "Light Novel"
   },
@@ -682228,7 +682683,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 603,
+    "id": 610,
     "studio": "Project No.9",
     "sumber": "Manga"
   },
@@ -682547,7 +683002,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 604,
+    "id": 611,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -683191,7 +683646,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 605,
+    "id": 612,
     "studio": "Production I.G",
     "sumber": "Manga"
   },
@@ -683872,7 +684327,7 @@
         "nume": "3"
       }
     ],
-    "id": 606,
+    "id": 613,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -684241,7 +684696,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 607,
+    "id": 614,
     "studio": "CloverWorks",
     "sumber": "Manga"
   },
@@ -684911,7 +685366,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 608,
+    "id": 615,
     "studio": "OLM",
     "sumber": "Manga"
   },
@@ -685254,7 +685709,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 609,
+    "id": 616,
     "studio": "Shaft",
     "sumber": "Other"
   },
@@ -685986,7 +686441,7 @@
         "nume": "3"
       }
     ],
-    "id": 610,
+    "id": 617,
     "studio": "A-1 Pictures",
     "sumber": "Original"
   },
@@ -686354,7 +686809,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 611,
+    "id": 618,
     "studio": "A-1 Pictures",
     "sumber": "Original"
   },
@@ -686700,7 +687155,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 612,
+    "id": 619,
     "studio": "Shaft",
     "sumber": "Original"
   },
@@ -687045,7 +687500,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 613,
+    "id": 620,
     "studio": "Drive",
     "sumber": "Manga"
   },
@@ -687414,7 +687869,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 614,
+    "id": 621,
     "studio": "Magic Bus, EMT Squared",
     "sumber": "Original"
   },
@@ -687758,7 +688213,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 615,
+    "id": 622,
     "studio": "Bibury Animation Studios",
     "sumber": "Mixed Media"
   },
@@ -688054,7 +688509,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 616,
+    "id": 623,
     "studio": "Studio Gokumi",
     "sumber": "Manga"
   },
@@ -688851,7 +689306,7 @@
         "nume": "4"
       }
     ],
-    "id": 617,
+    "id": 624,
     "studio": "AtelierPontdarc",
     "sumber": "Manga"
   },
@@ -689540,7 +689995,7 @@
         "nume": "3"
       }
     ],
-    "id": 618,
+    "id": 625,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -689883,7 +690338,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 619,
+    "id": 626,
     "studio": "LIDENFILMS",
     "sumber": "GAME"
   },
@@ -690227,7 +690682,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 620,
+    "id": 627,
     "studio": "feel., Gaina",
     "sumber": "Manga"
   },
@@ -690571,7 +691026,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 621,
+    "id": 628,
     "studio": "Geno Studio",
     "sumber": "Original"
   },
@@ -691252,7 +691707,7 @@
         "nume": "3"
       }
     ],
-    "id": 622,
+    "id": 629,
     "studio": "SILVER LINK.",
     "sumber": "Manga"
   },
@@ -691900,7 +692355,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 623,
+    "id": 630,
     "studio": "NAZ",
     "sumber": "Manga"
   },
@@ -692582,7 +693037,7 @@
         "nume": "3"
       }
     ],
-    "id": 624,
+    "id": 631,
     "studio": "Satelight",
     "sumber": "Light Novel"
   },
@@ -692926,7 +693381,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 625,
+    "id": 632,
     "studio": "Seven Arcs",
     "sumber": "Original"
   },
@@ -693269,7 +693724,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 626,
+    "id": 633,
     "studio": "Diomedéa",
     "sumber": "Light Novel"
   },
@@ -693589,7 +694044,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 627,
+    "id": 634,
     "studio": "SILVER LINK., Blade",
     "sumber": "Manga"
   },
@@ -693935,7 +694390,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 628,
+    "id": 635,
     "studio": "Studio Kai",
     "sumber": "Manga"
   },
@@ -694280,7 +694735,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 629,
+    "id": 636,
     "studio": "Studio Kai",
     "sumber": "Light Novel"
   },
@@ -695070,7 +695525,7 @@
         "nume": "4"
       }
     ],
-    "id": 630,
+    "id": 637,
     "studio": "Maho Film",
     "sumber": "Light novel"
   },
@@ -695860,7 +696315,7 @@
         "nume": "4"
       }
     ],
-    "id": 631,
+    "id": 638,
     "studio": "C2C",
     "sumber": "Light Novel"
   },
@@ -696230,7 +696685,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 632,
+    "id": 639,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -696599,7 +697054,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 633,
+    "id": 640,
     "studio": "Bandai Namco Pictures",
     "sumber": "Novel"
   },
@@ -697397,7 +697852,7 @@
         "nume": "4"
       }
     ],
-    "id": 634,
+    "id": 641,
     "studio": "ENGI",
     "sumber": "Light Novel"
   },
@@ -698194,7 +698649,7 @@
         "nume": "4"
       }
     ],
-    "id": 635,
+    "id": 642,
     "studio": "TROYCA",
     "sumber": "Original"
   },
@@ -698539,7 +698994,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 636,
+    "id": 643,
     "studio": "8bit",
     "sumber": "Manga"
   },
@@ -698883,7 +699338,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 637,
+    "id": 644,
     "studio": "Pine Jam",
     "sumber": "Original"
   },
@@ -699227,7 +699682,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 638,
+    "id": 645,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -699571,7 +700026,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 639,
+    "id": 646,
     "studio": "Madhouse",
     "sumber": "Light Novel"
   },
@@ -699916,7 +700371,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 640,
+    "id": 647,
     "studio": "TMS Entertainment",
     "sumber": "Manga"
   },
@@ -700260,7 +700715,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 641,
+    "id": 648,
     "studio": "CloverWorks",
     "sumber": "4-Koma Manga"
   },
@@ -700606,7 +701061,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 642,
+    "id": 649,
     "studio": "studio MOTHER",
     "sumber": "Manga"
   },
@@ -700953,7 +701408,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 643,
+    "id": 650,
     "studio": "Passione",
     "sumber": "Original"
   },
@@ -701196,7 +701651,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 644,
+    "id": 651,
     "studio": "Graphinica, Yokohama Animation Lab",
     "sumber": "Game"
   },
@@ -701490,7 +701945,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 645,
+    "id": 652,
     "studio": "Studio Flad",
     "sumber": "Manga"
   },
@@ -702133,7 +702588,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 646,
+    "id": 653,
     "studio": "Pierrot",
     "sumber": "Web Manga"
   },
@@ -702478,7 +702933,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 647,
+    "id": 654,
     "studio": "C2C",
     "sumber": "4-Koma Manga"
   },
@@ -702822,7 +703277,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 648,
+    "id": 655,
     "studio": "Studio Bind",
     "sumber": "Manga"
   },
@@ -703167,7 +703622,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 649,
+    "id": 656,
     "studio": "Geek Toys",
     "sumber": "Light Novel"
   },
@@ -703511,7 +703966,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 650,
+    "id": 657,
     "studio": "Diomedéa",
     "sumber": "Manga"
   },
@@ -703856,7 +704311,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 651,
+    "id": 658,
     "studio": "Zero-G, Liber",
     "sumber": "Web Manga"
   },
@@ -704226,7 +704681,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 652,
+    "id": 659,
     "studio": "Lay-Duce",
     "sumber": "Web Manga"
   },
@@ -705033,7 +705488,7 @@
         "nume": "4"
       }
     ],
-    "id": 653,
+    "id": 660,
     "studio": "Cloud Hearts",
     "sumber": "Light Novel"
   },
@@ -705587,7 +706042,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 654,
+    "id": 661,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -706385,7 +706840,7 @@
         "nume": "4"
       }
     ],
-    "id": 655,
+    "id": 662,
     "studio": "Asahi Production",
     "sumber": "Original"
   },
@@ -706728,7 +707183,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 656,
+    "id": 663,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -707525,7 +707980,7 @@
         "nume": "4"
       }
     ],
-    "id": 657,
+    "id": 664,
     "studio": "Tatsunoko Production",
     "sumber": "Game"
   },
@@ -708321,7 +708776,7 @@
         "nume": "4"
       }
     ],
-    "id": 658,
+    "id": 665,
     "studio": "Encourage Films",
     "sumber": "Light Novel"
   },
@@ -708667,7 +709122,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 659,
+    "id": 666,
     "studio": "Orange",
     "sumber": "Manga"
   },
@@ -709526,7 +709981,7 @@
         "nume": "6"
       }
     ],
-    "id": 660,
+    "id": 667,
     "studio": "Studio Blanc",
     "sumber": "Light Novel"
   },
@@ -709896,7 +710351,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 661,
+    "id": 668,
     "studio": "Ashi Production",
     "sumber": "Manga"
   },
@@ -710267,7 +710722,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 662,
+    "id": 669,
     "studio": "Bakken Record",
     "sumber": "Manga"
   },
@@ -710613,7 +711068,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 663,
+    "id": 670,
     "studio": "Pine Jam",
     "sumber": "Manga"
   },
@@ -710931,7 +711386,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 664,
+    "id": 671,
     "studio": "Polygon Pictures",
     "sumber": "Mixed Media"
   },
@@ -712058,7 +712513,7 @@
         "nume": "7"
       }
     ],
-    "id": 665,
+    "id": 672,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -713259,7 +713714,7 @@
         "nume": "11"
       }
     ],
-    "id": 666,
+    "id": 673,
     "studio": "Production I.G",
     "sumber": "Manga"
   },
@@ -714300,7 +714755,7 @@
         "nume": "7"
       }
     ],
-    "id": 667,
+    "id": 674,
     "studio": "Tezuka Productions",
     "sumber": "Manga"
   },
@@ -714646,7 +715101,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 668,
+    "id": 675,
     "studio": "Studio Signpost",
     "sumber": "Manga"
   },
@@ -714991,7 +715446,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 669,
+    "id": 676,
     "studio": "Nomad",
     "sumber": "Game"
   },
@@ -715336,7 +715791,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 670,
+    "id": 677,
     "studio": "P.A. Works",
     "sumber": "Manga"
   },
@@ -715679,7 +716134,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 671,
+    "id": 678,
     "studio": "Wit Studio, Signal.MD",
     "sumber": "Original"
   },
@@ -716027,7 +716482,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 672,
+    "id": 679,
     "studio": "Studio Palette",
     "sumber": "Manga"
   },
@@ -716371,7 +716826,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 673,
+    "id": 680,
     "studio": "Passione, Studio Lings",
     "sumber": "Manga"
   },
@@ -717413,7 +717868,7 @@
         "nume": "7"
       }
     ],
-    "id": 674,
+    "id": 681,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -717758,7 +718213,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 675,
+    "id": 682,
     "studio": "SynergySP",
     "sumber": "Manga"
   },
@@ -718102,7 +718557,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 676,
+    "id": 683,
     "studio": "Bibury Animation Studios",
     "sumber": "Original"
   },
@@ -718447,7 +718902,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 677,
+    "id": 684,
     "studio": "C2C",
     "sumber": "Manga"
   },
@@ -719515,7 +719970,7 @@
         "nume": "7"
       }
     ],
-    "id": 678,
+    "id": 685,
     "studio": "Asahi Production",
     "sumber": "Manga"
   },
@@ -720576,7 +721031,7 @@
         "nume": "7"
       }
     ],
-    "id": 679,
+    "id": 686,
     "studio": "Studio Elle",
     "sumber": "Manga"
   },
@@ -720921,7 +721376,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 680,
+    "id": 687,
     "studio": "Typoon Graphics",
     "sumber": "Web Manga"
   },
@@ -722063,7 +722518,7 @@
         "nume": "7"
       }
     ],
-    "id": 681,
+    "id": 688,
     "studio": "Geek Toys",
     "sumber": "Manga"
   },
@@ -723203,7 +723658,7 @@
         "nume": "7"
       }
     ],
-    "id": 682,
+    "id": 689,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -723547,7 +724002,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 683,
+    "id": 690,
     "studio": "Lerce",
     "sumber": "Mixed media"
   },
@@ -724840,7 +725295,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 684,
+    "id": 691,
     "studio": "Toei Animation",
     "sumber": "Other"
   },
@@ -726089,7 +726544,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 685,
+    "id": 692,
     "studio": "OLM",
     "sumber": "Game"
   },
@@ -726457,7 +726912,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 686,
+    "id": 693,
     "studio": "Sunrise",
     "sumber": "Web Manga"
   },
@@ -727607,7 +728062,7 @@
         "nume": "7"
       }
     ],
-    "id": 687,
+    "id": 694,
     "studio": "Staple Entertainment",
     "sumber": "Light Novel"
   },
@@ -727951,7 +728406,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 688,
+    "id": 695,
     "studio": "Studio Blanc.",
     "sumber": "Original"
   },
@@ -728295,7 +728750,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 689,
+    "id": 696,
     "studio": "Project No.9",
     "sumber": "Web Manga"
   },
@@ -728639,7 +729094,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 690,
+    "id": 697,
     "studio": "SILVER LINK., Blade",
     "sumber": "Web Manga"
   },
@@ -728959,7 +729414,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 691,
+    "id": 698,
     "studio": "SynergySP",
     "sumber": "Light Novel"
   },
@@ -729304,7 +729759,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 692,
+    "id": 699,
     "studio": "Studio Gokumi, AXsiZ",
     "sumber": "Light Novel"
   },
@@ -730541,7 +730996,7 @@
         "nume": "7"
       }
     ],
-    "id": 693,
+    "id": 700,
     "studio": "GoHands",
     "sumber": "Manga"
   },
@@ -731814,7 +732269,7 @@
         "nume": "7"
       }
     ],
-    "id": 694,
+    "id": 701,
     "studio": "Lapin Track",
     "sumber": "Novel"
   },
@@ -733263,7 +733718,7 @@
         "nume": "7"
       }
     ],
-    "id": 695,
+    "id": 702,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -733609,7 +734064,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 696,
+    "id": 703,
     "studio": "Madhouse",
     "sumber": "Manga"
   },
@@ -733978,7 +734433,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 697,
+    "id": 704,
     "studio": "GoHands",
     "sumber": "Web Manga"
   },
@@ -735127,7 +735582,7 @@
         "nume": "7"
       }
     ],
-    "id": 698,
+    "id": 705,
     "studio": "Maho Film",
     "sumber": "Light Novel"
   },
@@ -736275,7 +736730,7 @@
         "nume": "7"
       }
     ],
-    "id": 699,
+    "id": 706,
     "studio": "Geek Toys",
     "sumber": "Light Novel"
   },
@@ -736621,7 +737076,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 700,
+    "id": 707,
     "studio": "Gekkou",
     "sumber": "Manga"
   },
@@ -737771,7 +738226,7 @@
         "nume": "7"
       }
     ],
-    "id": 701,
+    "id": 708,
     "studio": "Actas",
     "sumber": "Light Novel"
   },
@@ -738118,7 +738573,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 702,
+    "id": 709,
     "studio": "BUG FILMS",
     "sumber": "Manga"
   },
@@ -738788,7 +739243,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 703,
+    "id": 710,
     "studio": "OLM",
     "sumber": "Manga"
   },
@@ -741028,7 +741483,7 @@
         "nume": "7"
       }
     ],
-    "id": 704,
+    "id": 711,
     "studio": "Satelight",
     "sumber": "Web Manga"
   },
@@ -741349,7 +741804,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 705,
+    "id": 712,
     "studio": "Doga Kobo",
     "sumber": "4-Koma Manga"
   },
@@ -742535,7 +742990,7 @@
         "nume": "7"
       }
     ],
-    "id": 706,
+    "id": 713,
     "studio": "Passione",
     "sumber": "Light Novel"
   },
@@ -743771,7 +744226,7 @@
         "nume": "7"
       }
     ],
-    "id": 707,
+    "id": 714,
     "studio": "Project No.9",
     "sumber": "Manga"
   },
@@ -744391,7 +744846,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 708,
+    "id": 715,
     "studio": "Brain’s Base",
     "sumber": "Manga"
   },
@@ -746848,7 +747303,7 @@
         "nume": "13"
       }
     ],
-    "id": 709,
+    "id": 716,
     "studio": "SILVER LINK.",
     "sumber": "Manga"
   },
@@ -747192,7 +747647,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 710,
+    "id": 717,
     "studio": "TROYCA",
     "sumber": "Original"
   },
@@ -748340,7 +748795,7 @@
         "nume": "7"
       }
     ],
-    "id": 711,
+    "id": 718,
     "studio": "A.C.G.T",
     "sumber": "Manga"
   },
@@ -748684,7 +749139,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 712,
+    "id": 719,
     "studio": "A-Real",
     "sumber": "4-koma manga"
   },
@@ -749053,7 +749508,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 713,
+    "id": 720,
     "studio": "Geek Toys, CompTown",
     "sumber": "Manga"
   },
@@ -749399,7 +749854,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 714,
+    "id": 721,
     "studio": "Maho Film",
     "sumber": "Light Novel"
   },
@@ -749744,7 +750199,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 715,
+    "id": 722,
     "studio": "Platinum Vision",
     "sumber": "Light Novel"
   },
@@ -750089,7 +750544,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 716,
+    "id": 723,
     "studio": "Nut",
     "sumber": "Mixed Media"
   },
@@ -750457,7 +750912,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 717,
+    "id": 724,
     "studio": "Silver",
     "sumber": "Web Manga"
   },
@@ -750802,7 +751257,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 718,
+    "id": 725,
     "studio": "Shuka",
     "sumber": "Manga"
   },
@@ -751146,7 +751601,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 719,
+    "id": 726,
     "studio": "Lesprit",
     "sumber": "Other"
   },
@@ -752406,7 +752861,7 @@
         "nume": "11"
       }
     ],
-    "id": 720,
+    "id": 727,
     "studio": "Yokohama Animation Lab",
     "sumber": "Manga"
   },
@@ -752751,7 +753206,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 721,
+    "id": 728,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -753901,7 +754356,7 @@
         "nume": "7"
       }
     ],
-    "id": 722,
+    "id": 729,
     "studio": "Arvo Animation",
     "sumber": "Web Manga"
   },
@@ -755086,7 +755541,7 @@
         "nume": "7"
       }
     ],
-    "id": 723,
+    "id": 730,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -755430,7 +755885,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 724,
+    "id": 731,
     "studio": "Jumondo",
     "sumber": "Light Novel"
   },
@@ -756658,7 +757113,7 @@
         "nume": "7"
       }
     ],
-    "id": 725,
+    "id": 732,
     "studio": "Quad",
     "sumber": "Original"
   },
@@ -757003,7 +757458,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 726,
+    "id": 733,
     "studio": "Studio Gokumi",
     "sumber": "4-Koma Manga"
   },
@@ -757346,7 +757801,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 727,
+    "id": 734,
     "studio": "A-1 Pictures",
     "sumber": "Web Manga"
   },
@@ -757492,7 +757947,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 728,
+    "id": 735,
     "studio": "OLM",
     "sumber": "Game"
   },
@@ -758607,7 +759062,7 @@
         "nume": "4"
       }
     ],
-    "id": 729,
+    "id": 736,
     "studio": "EMT Squared",
     "sumber": "Light Novel"
   },
@@ -759252,7 +759707,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 730,
+    "id": 737,
     "studio": "Trigger",
     "sumber": "Manga"
   },
@@ -760438,7 +760893,7 @@
         "nume": "8"
       }
     ],
-    "id": 731,
+    "id": 738,
     "studio": "SILVER LINK.",
     "sumber": "Light Novel"
   },
@@ -761506,7 +761961,7 @@
         "nume": "4"
       }
     ],
-    "id": 732,
+    "id": 739,
     "studio": "Connect",
     "sumber": "Light Novel"
   },
@@ -762644,7 +763099,7 @@
         "nume": "4"
       }
     ],
-    "id": 733,
+    "id": 740,
     "studio": "Shin-Ei Animation, Studio Add",
     "sumber": "Light Novel"
   },
@@ -762990,7 +763445,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 734,
+    "id": 741,
     "studio": "Drive",
     "sumber": "Manga"
   },
@@ -763334,7 +763789,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 735,
+    "id": 742,
     "studio": "OLM",
     "sumber": "Original"
   },
@@ -763678,7 +764133,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 736,
+    "id": 743,
     "studio": "Ajia-do",
     "sumber": "Manga"
   },
@@ -764747,7 +765202,7 @@
         "nume": "4"
       }
     ],
-    "id": 737,
+    "id": 744,
     "studio": "Children’s Playground Entertainment",
     "sumber": "Manga"
   },
@@ -765796,7 +766251,7 @@
         "nume": "5"
       }
     ],
-    "id": 738,
+    "id": 745,
     "studio": "SILVER LINK., Blade",
     "sumber": "Manga"
   },
@@ -766139,7 +766594,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 739,
+    "id": 746,
     "studio": "SynergySP, Shin-Ei Animation",
     "sumber": "Web Manga"
   },
@@ -767235,7 +767690,7 @@
         "nume": "10"
       }
     ],
-    "id": 740,
+    "id": 747,
     "studio": "Maho Film",
     "sumber": "Web Manga"
   },
@@ -768327,7 +768782,7 @@
         "nume": "5"
       }
     ],
-    "id": 741,
+    "id": 748,
     "studio": "Bones",
     "sumber": "Original"
   },
@@ -769584,7 +770039,7 @@
         "nume": "13"
       }
     ],
-    "id": 742,
+    "id": 749,
     "studio": "Yokohama Animation Lab",
     "sumber": "Manga"
   },
@@ -770590,7 +771045,7 @@
         "nume": "5"
       }
     ],
-    "id": 743,
+    "id": 750,
     "studio": "Studio Massket",
     "sumber": "Light Novel"
   },
@@ -771667,7 +772122,7 @@
         "nume": "10"
       }
     ],
-    "id": 744,
+    "id": 751,
     "studio": "MAPPA",
     "sumber": "Original"
   },
@@ -772785,7 +773240,7 @@
         "nume": "10"
       }
     ],
-    "id": 745,
+    "id": 752,
     "studio": "E&H Production",
     "sumber": "Original"
   },
@@ -773132,7 +773587,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 746,
+    "id": 753,
     "studio": "Okuruto Noboru",
     "sumber": "Manga"
   },
@@ -774530,7 +774985,7 @@
         "nume": "13"
       }
     ],
-    "id": 747,
+    "id": 754,
     "studio": "LIDENFILMS",
     "sumber": "Light Novel"
   },
@@ -775825,7 +776280,7 @@
         "nume": "13"
       }
     ],
-    "id": 748,
+    "id": 755,
     "studio": "Studio Deen",
     "sumber": "Light Novel"
   },
@@ -776169,7 +776624,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 749,
+    "id": 756,
     "studio": "EMT Squared",
     "sumber": "Original"
   },
@@ -777386,7 +777841,7 @@
         "nume": "13"
       }
     ],
-    "id": 750,
+    "id": 757,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -777731,7 +778186,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 751,
+    "id": 758,
     "studio": "Telecom Animation Film",
     "sumber": "Original"
   },
@@ -778075,7 +778530,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 752,
+    "id": 759,
     "studio": "Liber",
     "sumber": "Manga"
   },
@@ -778394,7 +778849,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 753,
+    "id": 760,
     "studio": "SynergySP, Studio Comet",
     "sumber": "Light Novel"
   },
@@ -779713,7 +780168,7 @@
         "nume": "13"
       }
     ],
-    "id": 754,
+    "id": 761,
     "studio": "East Fish Studio",
     "sumber": "Manga"
   },
@@ -780082,7 +780537,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 755,
+    "id": 762,
     "studio": "OLM",
     "sumber": "Manga"
   },
@@ -780426,7 +780881,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 756,
+    "id": 763,
     "studio": "Polygon pictures",
     "sumber": "Game"
   },
@@ -780770,7 +781225,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 757,
+    "id": 764,
     "studio": "Doga Kobo",
     "sumber": "Original"
   },
@@ -783585,7 +784040,7 @@
         "nume": "13"
       }
     ],
-    "id": 758,
+    "id": 765,
     "studio": "Tezuka Productions",
     "sumber": "Manga"
   },
@@ -783953,7 +784408,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 759,
+    "id": 766,
     "studio": "Toei Animation",
     "sumber": "Original"
   },
@@ -784273,7 +784728,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 760,
+    "id": 767,
     "studio": "Gekkou",
     "sumber": "Web Manga"
   },
@@ -785602,7 +786057,7 @@
         "nume": "13"
       }
     ],
-    "id": 761,
+    "id": 768,
     "studio": "Yostar Pictures, Studio CANDY BOX",
     "sumber": "Game"
   },
@@ -786912,7 +787367,7 @@
         "nume": "13"
       }
     ],
-    "id": 762,
+    "id": 769,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -787247,7 +787702,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 763,
+    "id": 770,
     "studio": "TMS Entertainment",
     "sumber": "Mixed Media"
   },
@@ -787591,7 +788046,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 764,
+    "id": 771,
     "studio": "Connect",
     "sumber": "Light Novel"
   },
@@ -788918,7 +789373,7 @@
         "nume": "13"
       }
     ],
-    "id": 765,
+    "id": 772,
     "studio": "Zero-G",
     "sumber": "Web Manga"
   },
@@ -789262,7 +789717,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 766,
+    "id": 773,
     "studio": "Okuruto Noboru",
     "sumber": "Web Manga"
   },
@@ -790629,7 +791084,7 @@
         "nume": "13"
       }
     ],
-    "id": 767,
+    "id": 774,
     "studio": "Yokohama Animation Lab, Cloud Hearts",
     "sumber": "Light Novel"
   },
@@ -790873,7 +791328,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 768,
+    "id": 775,
     "studio": "Yokohama Animation Lab, Cloud Hearts",
     "sumber": "Manga"
   },
@@ -792375,7 +792830,7 @@
         "nume": "13"
       }
     ],
-    "id": 769,
+    "id": 776,
     "studio": "Sunrise",
     "sumber": "Original"
   },
@@ -793931,7 +794386,7 @@
         "nume": "13"
       }
     ],
-    "id": 770,
+    "id": 777,
     "studio": "Studio A-CAT",
     "sumber": "Manga"
   },
@@ -795317,7 +795772,7 @@
         "nume": "16"
       }
     ],
-    "id": 771,
+    "id": 778,
     "studio": "Wit Studio",
     "sumber": "Other"
   },
@@ -795686,7 +796141,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 772,
+    "id": 779,
     "studio": "SANZIGEN",
     "sumber": "Mixed media"
   },
@@ -795857,7 +796312,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 773,
+    "id": 780,
     "studio": "Tezuka Productions",
     "sumber": "Manga"
   },
@@ -796202,7 +796657,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 774,
+    "id": 781,
     "studio": "Doga Kobo",
     "sumber": "Light Novel"
   },
@@ -797818,7 +798273,7 @@
         "nume": "13"
       }
     ],
-    "id": 775,
+    "id": 782,
     "studio": "Nomad",
     "sumber": "Manga"
   },
@@ -799289,7 +799744,7 @@
         "nume": "13"
       }
     ],
-    "id": 776,
+    "id": 783,
     "studio": "Studio Deen",
     "sumber": "Light Novel"
   },
@@ -799633,7 +800088,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 777,
+    "id": 784,
     "studio": "Project No.9",
     "sumber": "Web Manga"
   },
@@ -801087,7 +801542,7 @@
         "nume": "13"
       }
     ],
-    "id": 778,
+    "id": 785,
     "studio": "Wit Studio",
     "sumber": "Manga"
   },
@@ -802809,7 +803264,7 @@
         "nume": "13"
       }
     ],
-    "id": 779,
+    "id": 786,
     "studio": "Studio Palette, 100studio",
     "sumber": "Web Manga"
   },
@@ -804309,7 +804764,7 @@
         "nume": "13"
       }
     ],
-    "id": 780,
+    "id": 787,
     "studio": "OLM",
     "sumber": "Web Manga"
   },
@@ -805854,7 +806309,7 @@
         "nume": "13"
       }
     ],
-    "id": 781,
+    "id": 788,
     "studio": "Gekkou",
     "sumber": "Light Novel"
   },
@@ -807355,7 +807810,7 @@
         "nume": "13"
       }
     ],
-    "id": 782,
+    "id": 789,
     "studio": "Typhoon Graphics, Imagica Infos",
     "sumber": "Light novel"
   },
@@ -807698,7 +808153,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 783,
+    "id": 790,
     "studio": "TNK",
     "sumber": "Light Novel"
   },
@@ -808041,7 +808496,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 784,
+    "id": 791,
     "studio": "P.A.Works",
     "sumber": "Original"
   },
@@ -808386,7 +808841,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 785,
+    "id": 792,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -809888,7 +810343,7 @@
         "nume": "13"
       }
     ],
-    "id": 786,
+    "id": 793,
     "studio": "Bones",
     "sumber": "Manga"
   },
@@ -811389,7 +811844,7 @@
         "nume": "13"
       }
     ],
-    "id": 787,
+    "id": 794,
     "studio": "AtelierPontdarc",
     "sumber": "Web Novel"
   },
@@ -811734,7 +812189,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 788,
+    "id": 795,
     "studio": "ROLL2",
     "sumber": "Light Novel"
   },
@@ -813234,7 +813689,7 @@
         "nume": "13"
       }
     ],
-    "id": 789,
+    "id": 796,
     "studio": "Project No.9",
     "sumber": "Light Novel"
   },
@@ -813428,7 +813883,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 790,
+    "id": 797,
     "studio": "Imagica Infos, Imageworks Studio",
     "sumber": "Web Manga"
   },
@@ -813773,7 +814228,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 791,
+    "id": 798,
     "studio": "J.C.Staff",
     "sumber": "Web Manga"
   },
@@ -814143,7 +814598,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 792,
+    "id": 799,
     "studio": "M.S.C, Studio Kai",
     "sumber": "Manga"
   },
@@ -814487,7 +814942,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 793,
+    "id": 800,
     "studio": "TriF Studio",
     "sumber": "Original"
   },
@@ -814832,7 +815287,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 794,
+    "id": 801,
     "studio": "Ashi Productions",
     "sumber": "Web Manga"
   },
@@ -815177,7 +815632,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 795,
+    "id": 802,
     "studio": "Voil",
     "sumber": "Manga"
   },
@@ -815529,7 +815984,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 796,
+    "id": 803,
     "studio": "GoHands",
     "sumber": "Original"
   },
@@ -815873,7 +816328,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 797,
+    "id": 804,
     "studio": "PRA",
     "sumber": "Game"
   },
@@ -816216,7 +816671,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 798,
+    "id": 805,
     "studio": "Yostar Pictures",
     "sumber": "Original"
   },
@@ -816586,7 +817041,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 799,
+    "id": 806,
     "studio": "Quad",
     "sumber": "Web Manga"
   },
@@ -816932,7 +817387,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 800,
+    "id": 807,
     "studio": "SynergySP",
     "sumber": "Manga"
   },
@@ -817278,7 +817733,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 801,
+    "id": 808,
     "studio": "Ajia-do",
     "sumber": "Manga"
   },
@@ -817649,7 +818104,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 802,
+    "id": 809,
     "studio": "East Fish Studio",
     "sumber": "Manga"
   },
@@ -817993,7 +818448,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 803,
+    "id": 810,
     "studio": "Geno Studio",
     "sumber": "Light Novel"
   },
@@ -818348,7 +818803,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 804,
+    "id": 811,
     "studio": "Bandai Namco Pictures",
     "sumber": "Manga"
   },
@@ -818418,7 +818873,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 805,
+    "id": 812,
     "studio": "J.C.Staff",
     "sumber": "Light Novel"
   },
@@ -818927,7 +819382,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 806,
+    "id": 813,
     "studio": "Wit Studio",
     "sumber": "Manga"
   },
@@ -819571,7 +820026,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 807,
+    "id": 814,
     "studio": "The Answer Studio",
     "sumber": "Novel"
   },
@@ -820030,7 +820485,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 808,
+    "id": 815,
     "studio": "Pb Animation Co. Ltd., LAN Studio, Paper Plane Animation Studio",
     "sumber": "Original"
   },
@@ -820504,7 +820959,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 809,
+    "id": 816,
     "studio": "CygamesPictures",
     "sumber": "Manga"
   },
@@ -820848,7 +821303,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 810,
+    "id": 817,
     "studio": "Sunrise",
     "sumber": "Original"
   },
@@ -821151,7 +821606,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 811,
+    "id": 818,
     "studio": "Lay-duce",
     "sumber": "Game"
   },
@@ -821409,7 +821864,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 812,
+    "id": 819,
     "studio": "Sunrise, Khara",
     "sumber": "Original"
   },
@@ -821753,7 +822208,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 813,
+    "id": 820,
     "studio": "Shaft",
     "sumber": "Manga"
   },
@@ -822096,7 +822551,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 814,
+    "id": 821,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -822439,7 +822894,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 815,
+    "id": 822,
     "studio": "Soigne",
     "sumber": "4-koma Manga"
   },
@@ -822776,7 +823231,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 816,
+    "id": 823,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -823095,7 +823550,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 817,
+    "id": 824,
     "studio": "Studio Gokumi",
     "sumber": "Original"
   },
@@ -823438,7 +823893,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 818,
+    "id": 825,
     "studio": "OLM",
     "sumber": "Light Novel"
   },
@@ -823809,7 +824264,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 819,
+    "id": 826,
     "studio": "SILVER LINK.",
     "sumber": "Manga"
   },
@@ -824506,7 +824961,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 820,
+    "id": 827,
     "studio": "Staple Entertainment",
     "sumber": "Manga"
   },
@@ -824702,7 +825157,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 821,
+    "id": 828,
     "studio": "Enishiya",
     "sumber": "Manga"
   },
@@ -825070,7 +825525,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 822,
+    "id": 829,
     "studio": "PRA",
     "sumber": "Visual Novel"
   },
@@ -825413,7 +825868,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 823,
+    "id": 830,
     "studio": "domerica",
     "sumber": "Manga"
   },
@@ -825757,7 +826212,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 824,
+    "id": 831,
     "studio": "Bridge",
     "sumber": "4-Koma Manga"
   },
@@ -826101,7 +826556,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 825,
+    "id": 832,
     "studio": "Lesprit",
     "sumber": "Manga"
   },
@@ -826447,7 +826902,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 826,
+    "id": 833,
     "studio": "Brain’s Base",
     "sumber": "Manga"
   },
@@ -826704,7 +827159,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 827,
+    "id": 834,
     "studio": "Kyoto Animation",
     "sumber": "Manga"
   },
@@ -827073,7 +827528,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 828,
+    "id": 835,
     "studio": "Bridge",
     "sumber": "Web Manga"
   },
@@ -827217,7 +827672,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 829,
+    "id": 836,
     "studio": "Nomad",
     "sumber": "Web Manga"
   },
@@ -827410,7 +827865,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 830,
+    "id": 837,
     "studio": "Atelier Pontdarc",
     "sumber": "Web Manga"
   },
@@ -827753,7 +828208,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 831,
+    "id": 838,
     "studio": "Bakken Record",
     "sumber": "Original"
   },
@@ -828098,7 +828553,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 832,
+    "id": 839,
     "studio": "P.A. Works",
     "sumber": "Manga"
   },
@@ -828442,7 +828897,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 833,
+    "id": 840,
     "studio": "Imagica Infos, Imageworks Studio",
     "sumber": "Web Manga"
   },
@@ -829086,7 +829541,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 834,
+    "id": 841,
     "studio": "SynergySP",
     "sumber": "Manga"
   },
@@ -829373,7 +829828,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 835,
+    "id": 842,
     "studio": "Shogakukan Music & Digital Entertainment",
     "sumber": "Other"
   },
@@ -829667,7 +830122,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 836,
+    "id": 843,
     "studio": "Jumondou",
     "sumber": "Music"
   },
@@ -829836,7 +830291,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 837,
+    "id": 844,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -830005,7 +830460,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 838,
+    "id": 845,
     "studio": "Doga Kobo",
     "sumber": "Manga"
   },
@@ -830350,7 +830805,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 839,
+    "id": 846,
     "studio": "Ajia-do",
     "sumber": "Web Manga"
   },
@@ -830670,7 +831125,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 840,
+    "id": 847,
     "studio": "Studio Lings",
     "sumber": "Manga"
   },
@@ -831015,7 +831470,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 841,
+    "id": 848,
     "studio": "Studio Kai",
     "sumber": "Manga"
   },
@@ -831358,7 +831813,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 842,
+    "id": 849,
     "studio": "Imagica Infos, Imageworks Studio",
     "sumber": "Light Novel"
   },
@@ -831702,7 +832157,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 843,
+    "id": 850,
     "studio": "P.A. Works",
     "sumber": "Original"
   },
@@ -832045,7 +832500,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 844,
+    "id": 851,
     "studio": "DLE",
     "sumber": "Manga"
   },
@@ -832390,7 +832845,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 845,
+    "id": 852,
     "studio": "Studio Polon",
     "sumber": "Web Manga"
   },
@@ -832736,7 +833191,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 846,
+    "id": 853,
     "studio": "Nexus",
     "sumber": "Manga"
   },
@@ -833081,7 +833536,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 847,
+    "id": 854,
     "studio": "Blade",
     "sumber": "Light Novel"
   },
@@ -833418,7 +833873,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 848,
+    "id": 855,
     "studio": "Zero-G, Liber",
     "sumber": "Manga"
   },
@@ -833738,7 +834193,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 849,
+    "id": 856,
     "studio": "Studio Flad",
     "sumber": "Web Manga"
   },
@@ -834083,7 +834538,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 850,
+    "id": 857,
     "studio": "Marvy Jack",
     "sumber": "Manga"
   },
@@ -834176,7 +834631,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 851,
+    "id": 858,
     "studio": "Voil",
     "sumber": "Web Manga"
   },
@@ -834521,7 +834976,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 852,
+    "id": 859,
     "studio": "Studio Deen",
     "sumber": "Manga"
   },
@@ -834865,7 +835320,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 853,
+    "id": 860,
     "studio": "OLM",
     "sumber": "Other"
   },
@@ -835425,7 +835880,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 854,
+    "id": 861,
     "studio": "Demorica",
     "sumber": "Game"
   },
@@ -835772,7 +836227,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 855,
+    "id": 862,
     "studio": "feel.",
     "sumber": "Manga"
   },
@@ -836117,7 +836572,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 856,
+    "id": 863,
     "studio": "animation studio42",
     "sumber": "Light Novel"
   },
@@ -836461,7 +836916,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 857,
+    "id": 864,
     "studio": "Okuruto Noboru",
     "sumber": "Manga"
   },
@@ -836807,7 +837262,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 858,
+    "id": 865,
     "studio": "Tezuka Production",
     "sumber": "Web Manga"
   },
@@ -837154,7 +837609,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 859,
+    "id": 866,
     "studio": "Gekkou",
     "sumber": "Manga"
   },
@@ -837498,7 +837953,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 860,
+    "id": 867,
     "studio": "EMT Squared",
     "sumber": "Manga"
   },
@@ -837843,7 +838298,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 861,
+    "id": 868,
     "studio": "SILVER LINK.",
     "sumber": "Game"
   },
@@ -838154,7 +838609,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 862,
+    "id": 869,
     "studio": "Studio Deen",
     "sumber": "Light Novel"
   },
@@ -838500,7 +838955,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 863,
+    "id": 870,
     "studio": "Ashi Productions",
     "sumber": "Light Novel"
   },
@@ -838845,7 +839300,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 864,
+    "id": 871,
     "studio": "TROYCA",
     "sumber": "Web Manga"
   },
@@ -839215,7 +839670,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 865,
+    "id": 872,
     "studio": "asread.",
     "sumber": "Light Novel"
   },
@@ -839560,7 +840015,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 866,
+    "id": 873,
     "studio": "Studio Deen",
     "sumber": "Light Novel"
   },
@@ -839903,7 +840358,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 867,
+    "id": 874,
     "studio": "SynergySP",
     "sumber": "Novel"
   },
@@ -840231,7 +840686,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 868,
+    "id": 875,
     "studio": "SANZIGEN",
     "sumber": "Web Manga"
   },
@@ -840618,7 +841073,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 869,
+    "id": 876,
     "studio": "Wit Studio",
     "sumber": "Light Novel"
   },
@@ -840961,7 +841416,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 870,
+    "id": 877,
     "studio": "EMT Squared",
     "sumber": "Web Manga"
   },
@@ -841356,7 +841811,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 871,
+    "id": 878,
     "studio": "Studio KAI",
     "sumber": "Web Manga"
   },
@@ -841700,7 +842155,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 872,
+    "id": 879,
     "studio": "Satelight",
     "sumber": "Web Manga"
   },
@@ -842044,7 +842499,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 873,
+    "id": 880,
     "studio": "Zexcs",
     "sumber": "Manga"
   },
@@ -842396,7 +842851,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 874,
+    "id": 881,
     "studio": "Yostar Pictures",
     "sumber": "Visual Novel"
   },
@@ -842767,7 +843222,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 875,
+    "id": 882,
     "studio": "Voil",
     "sumber": "Light Novel"
   },
@@ -843112,7 +843567,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 876,
+    "id": 883,
     "studio": "Tatsunoko Production",
     "sumber": "Web Manga"
   },
@@ -843458,7 +843913,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 877,
+    "id": 884,
     "studio": "TMS Entertainment",
     "sumber": "Manga"
   },
@@ -843803,7 +844258,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 878,
+    "id": 885,
     "studio": "Studio Hibari",
     "sumber": "Manga"
   },
@@ -844122,7 +844577,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 879,
+    "id": 886,
     "studio": "Madhouse",
     "sumber": "Web Manga"
   },
@@ -844440,7 +844895,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 880,
+    "id": 887,
     "studio": "Soigne",
     "sumber": "Web Manga"
   },
@@ -844837,7 +845292,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 881,
+    "id": 888,
     "studio": "TMS Entertainment",
     "sumber": "Manga"
   },
@@ -845156,7 +845611,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 882,
+    "id": 889,
     "studio": "PRA",
     "sumber": "Manga"
   },
@@ -845501,7 +845956,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 883,
+    "id": 890,
     "studio": "Cypic",
     "sumber": "Manga"
   },
@@ -845845,7 +846300,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 884,
+    "id": 891,
     "studio": "ROLL2",
     "sumber": "Manga"
   },
@@ -846142,7 +846597,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 885,
+    "id": 892,
     "studio": "Diomedéa",
     "sumber": "Manga"
   },
@@ -846414,7 +846869,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 886,
+    "id": 893,
     "studio": "Science SARU",
     "sumber": "Manga"
   },
@@ -846682,7 +847137,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 887,
+    "id": 894,
     "studio": "Studio Deen",
     "sumber": "Light Novel"
   },
@@ -847001,7 +847456,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 888,
+    "id": 895,
     "studio": "Newon",
     "sumber": "Web Manga"
   },
@@ -847306,7 +847761,7 @@
         "source": "anoboy"
       }
     ],
-    "id": 889,
+    "id": 896,
     "studio": "Unend",
     "sumber": "Manga"
   },
@@ -847867,7 +848322,7 @@
         "nume": "6"
       }
     ],
-    "id": 890
+    "id": 897
   },
   {
     "type": "anime",
@@ -850027,7 +850482,7 @@
         "nume": "13"
       }
     ],
-    "id": 891
+    "id": 898
   },
   {
     "type": "anime",
@@ -851335,7 +851790,7 @@
         "nume": "13"
       }
     ],
-    "id": 892
+    "id": 899
   },
   {
     "type": "anime",
@@ -852993,7 +853448,7 @@
         "nume": "16"
       }
     ],
-    "id": 893
+    "id": 900
   },
   {
     "type": "anime",
@@ -855613,7 +856068,7 @@
         "nume": "13"
       }
     ],
-    "id": 894
+    "id": 901
   },
   {
     "type": "anime",
@@ -856921,7 +857376,7 @@
         "nume": "13"
       }
     ],
-    "id": 895
+    "id": 902
   },
   {
     "type": "anime",
@@ -858389,7 +858844,7 @@
         "nume": "13"
       }
     ],
-    "id": 896
+    "id": 903
   },
   {
     "type": "anime",
@@ -861128,7 +861583,7 @@
         "nume": "16"
       }
     ],
-    "id": 897
+    "id": 904
   },
   {
     "type": "anime",
@@ -863063,7 +863518,7 @@
         "nume": "13"
       }
     ],
-    "id": 898
+    "id": 905
   },
   {
     "type": "anime",
@@ -864169,7 +864624,7 @@
         "nume": "13"
       }
     ],
-    "id": 899
+    "id": 906
   },
   {
     "type": "anime",
@@ -865475,7 +865930,7 @@
         "nume": "13"
       }
     ],
-    "id": 900
+    "id": 907
   },
   {
     "type": "anime",
@@ -866988,7 +867443,7 @@
         "nume": "16"
       }
     ],
-    "id": 901
+    "id": 908
   },
   {
     "type": "anime",
@@ -868510,7 +868965,7 @@
         "nume": "16"
       }
     ],
-    "id": 902
+    "id": 909
   },
   {
     "type": "anime",
@@ -869618,7 +870073,7 @@
         "nume": "13"
       }
     ],
-    "id": 903
+    "id": 910
   },
   {
     "type": "anime",
@@ -870924,7 +871379,7 @@
         "nume": "13"
       }
     ],
-    "id": 904
+    "id": 911
   },
   {
     "type": "anime",
@@ -871376,7 +871831,7 @@
         "nume": "3"
       }
     ],
-    "id": 905
+    "id": 912
   },
   {
     "type": "anime",
@@ -871609,7 +872064,7 @@
         "nume": "15"
       }
     ],
-    "id": 906
+    "id": 913
   },
   {
     "type": "anime",
@@ -883698,7 +884153,7 @@
         "nume": "11"
       }
     ],
-    "id": 907
+    "id": 914
   },
   {
     "type": "anime",
@@ -884097,7 +884552,7 @@
         "nume": "11"
       }
     ],
-    "id": 908
+    "id": 915
   },
   {
     "type": "anime",
@@ -884817,7 +885272,7 @@
         "nume": "8"
       }
     ],
-    "id": 909
+    "id": 916
   },
   {
     "type": "anime",
@@ -886239,7 +886694,7 @@
         "nume": "8"
       }
     ],
-    "id": 910
+    "id": 917
   },
   {
     "type": "anime",
@@ -886842,7 +887297,7 @@
         "nume": "6"
       }
     ],
-    "id": 911
+    "id": 918
   },
   {
     "type": "anime",
@@ -889787,7 +890242,7 @@
         "nume": "6"
       }
     ],
-    "id": 912
+    "id": 919
   },
   {
     "type": "anime",
@@ -891064,7 +891519,7 @@
         "nume": "6"
       }
     ],
-    "id": 913
+    "id": 920
   },
   {
     "type": "anime",
@@ -891757,7 +892212,7 @@
         "nume": "6"
       }
     ],
-    "id": 914
+    "id": 921
   },
   {
     "type": "anime",
@@ -892407,7 +892862,7 @@
         "nume": "6"
       }
     ],
-    "id": 915
+    "id": 922
   },
   {
     "type": "anime",
@@ -893596,7 +894051,7 @@
         "nume": "6"
       }
     ],
-    "id": 916
+    "id": 923
   },
   {
     "type": "anime",
@@ -894785,7 +895240,7 @@
         "nume": "6"
       }
     ],
-    "id": 917
+    "id": 924
   },
   {
     "type": "anime",
@@ -894983,7 +895438,7 @@
         "nume": "12"
       }
     ],
-    "id": 918
+    "id": 925
   },
   {
     "type": "anime",
@@ -896163,7 +896618,7 @@
         "nume": "6"
       }
     ],
-    "id": 919
+    "id": 926
   },
   {
     "type": "anime",
@@ -896811,7 +897266,7 @@
         "nume": "6"
       }
     ],
-    "id": 920
+    "id": 927
   },
   {
     "type": "anime",
@@ -897414,7 +897869,7 @@
         "nume": "6"
       }
     ],
-    "id": 921
+    "id": 928
   },
   {
     "type": "anime",
@@ -897936,7 +898391,7 @@
         "nume": "6"
       }
     ],
-    "id": 922
+    "id": 929
   },
   {
     "type": "anime",
@@ -898674,7 +899129,7 @@
         "nume": "6"
       }
     ],
-    "id": 923
+    "id": 930
   },
   {
     "type": "anime",
@@ -899280,7 +899735,7 @@
         "nume": "6"
       }
     ],
-    "id": 924
+    "id": 931
   },
   {
     "type": "anime",
@@ -899931,7 +900386,7 @@
         "nume": "6"
       }
     ],
-    "id": 925
+    "id": 932
   },
   {
     "type": "anime",
@@ -900537,7 +900992,7 @@
         "nume": "6"
       }
     ],
-    "id": 926
+    "id": 933
   },
   {
     "type": "anime",
@@ -901233,7 +901688,7 @@
         "nume": "6"
       }
     ],
-    "id": 927
+    "id": 934
   },
   {
     "type": "anime",
@@ -902422,7 +902877,7 @@
         "nume": "6"
       }
     ],
-    "id": 928
+    "id": 935
   },
   {
     "type": "anime",
@@ -903611,7 +904066,7 @@
         "nume": "6"
       }
     ],
-    "id": 929
+    "id": 936
   },
   {
     "type": "anime",
@@ -904755,7 +905210,7 @@
         "nume": "6"
       }
     ],
-    "id": 930
+    "id": 937
   },
   {
     "type": "anime",
@@ -905854,7 +906309,7 @@
         "nume": "6"
       }
     ],
-    "id": 931
+    "id": 938
   },
   {
     "type": "anime",
@@ -906997,7 +907452,7 @@
         "nume": "6"
       }
     ],
-    "id": 932
+    "id": 939
   },
   {
     "type": "anime",
@@ -907601,7 +908056,7 @@
         "nume": "6"
       }
     ],
-    "id": 933
+    "id": 940
   },
   {
     "type": "anime",
@@ -908764,7 +909219,7 @@
         "nume": "13"
       }
     ],
-    "id": 934
+    "id": 941
   },
   {
     "type": "anime",
@@ -909637,7 +910092,7 @@
         "nume": "6"
       }
     ],
-    "id": 935
+    "id": 942
   },
   {
     "type": "anime",
@@ -910422,7 +910877,7 @@
         "nume": "6"
       }
     ],
-    "id": 936
+    "id": 943
   },
   {
     "type": "anime",
@@ -911071,7 +911526,7 @@
         "nume": "6"
       }
     ],
-    "id": 937
+    "id": 944
   },
   {
     "type": "anime",
@@ -911720,7 +912175,7 @@
         "nume": "6"
       }
     ],
-    "id": 938
+    "id": 945
   },
   {
     "type": "anime",
@@ -912360,7 +912815,7 @@
         "nume": "6"
       }
     ],
-    "id": 939
+    "id": 946
   },
   {
     "type": "anime",
@@ -913548,7 +914003,7 @@
         "nume": "6"
       }
     ],
-    "id": 940
+    "id": 947
   },
   {
     "type": "anime",
@@ -914771,7 +915226,7 @@
         "nume": "6"
       }
     ],
-    "id": 941
+    "id": 948
   },
   {
     "type": "anime",
@@ -915187,7 +915642,7 @@
         "nume": "3"
       }
     ],
-    "id": 942
+    "id": 949
   },
   {
     "type": "anime",
@@ -915791,7 +916246,7 @@
         "nume": "6"
       }
     ],
-    "id": 943
+    "id": 950
   },
   {
     "type": "anime",
@@ -916395,7 +916850,7 @@
         "nume": "6"
       }
     ],
-    "id": 944
+    "id": 951
   },
   {
     "type": "anime",
@@ -916419,7 +916874,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 945
+    "id": 952
   },
   {
     "type": "anime",
@@ -917608,7 +918063,7 @@
         "nume": "6"
       }
     ],
-    "id": 946
+    "id": 953
   },
   {
     "type": "anime",
@@ -917632,7 +918087,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 947
+    "id": 954
   },
   {
     "type": "anime",
@@ -917658,7 +918113,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 948
+    "id": 955
   },
   {
     "type": "anime",
@@ -918262,7 +918717,7 @@
         "nume": "6"
       }
     ],
-    "id": 949
+    "id": 956
   },
   {
     "type": "anime",
@@ -918911,7 +919366,7 @@
         "nume": "6"
       }
     ],
-    "id": 950
+    "id": 957
   },
   {
     "type": "anime",
@@ -919561,7 +920016,7 @@
         "nume": "6"
       }
     ],
-    "id": 951
+    "id": 958
   },
   {
     "type": "anime",
@@ -920164,7 +920619,7 @@
         "nume": "6"
       }
     ],
-    "id": 952
+    "id": 959
   },
   {
     "type": "anime",
@@ -921084,7 +921539,7 @@
         "nume": "5"
       }
     ],
-    "id": 953
+    "id": 960
   },
   {
     "type": "anime",
@@ -921688,7 +922143,7 @@
         "nume": "6"
       }
     ],
-    "id": 954
+    "id": 961
   },
   {
     "type": "anime",
@@ -922912,7 +923367,7 @@
         "nume": "6"
       }
     ],
-    "id": 955
+    "id": 962
   },
   {
     "type": "anime",
@@ -923509,7 +923964,7 @@
         "nume": "6"
       }
     ],
-    "id": 956
+    "id": 963
   },
   {
     "type": "anime",
@@ -924854,7 +925309,7 @@
         "nume": "16"
       }
     ],
-    "id": 957
+    "id": 964
   },
   {
     "type": "anime",
@@ -925783,7 +926238,7 @@
         "nume": "13"
       }
     ],
-    "id": 958
+    "id": 965
   },
   {
     "type": "anime",
@@ -927016,7 +927471,7 @@
         "nume": "13"
       }
     ],
-    "id": 959
+    "id": 966
   },
   {
     "type": "anime",
@@ -928178,7 +928633,7 @@
         "nume": "13"
       }
     ],
-    "id": 960
+    "id": 967
   },
   {
     "type": "anime",
@@ -931194,7 +931649,7 @@
         "nume": "13"
       }
     ],
-    "id": 961
+    "id": 968
   },
   {
     "type": "anime",
@@ -932428,7 +932883,7 @@
         "nume": "13"
       }
     ],
-    "id": 962,
+    "id": 969,
     "studio": "Production I.G",
     "sumber": "Manga"
   },
@@ -933837,7 +934292,7 @@
         "nume": "16"
       }
     ],
-    "id": 963
+    "id": 970
   },
   {
     "type": "anime",
@@ -934073,7 +934528,7 @@
         "nume": "15"
       }
     ],
-    "id": 964
+    "id": 971
   },
   {
     "type": "anime",
@@ -935468,7 +935923,7 @@
         "nume": "16"
       }
     ],
-    "id": 965
+    "id": 972
   },
   {
     "type": "anime",
@@ -936612,7 +937067,7 @@
         "nume": "13"
       }
     ],
-    "id": 966
+    "id": 973
   },
   {
     "type": "anime",
@@ -937754,7 +938209,7 @@
         "nume": "13"
       }
     ],
-    "id": 967
+    "id": 974
   },
   {
     "type": "anime",
@@ -938987,7 +939442,7 @@
         "nume": "16"
       }
     ],
-    "id": 968
+    "id": 975
   },
   {
     "type": "anime",
@@ -939295,7 +939750,7 @@
         "nume": "20"
       }
     ],
-    "id": 969
+    "id": 976
   },
   {
     "type": "anime",
@@ -941269,7 +941724,7 @@
         "nume": "13"
       }
     ],
-    "id": 970
+    "id": 977
   },
   {
     "type": "anime",
@@ -942495,7 +942950,7 @@
         "nume": "16"
       }
     ],
-    "id": 971
+    "id": 978
   },
   {
     "type": "anime",
@@ -943667,7 +944122,7 @@
         "nume": "16"
       }
     ],
-    "id": 972
+    "id": 979
   },
   {
     "type": "anime",
@@ -943868,7 +944323,7 @@
         "nume": "12"
       }
     ],
-    "id": 973
+    "id": 980
   },
   {
     "type": "anime",
@@ -944983,7 +945438,7 @@
         "nume": "13"
       }
     ],
-    "id": 974
+    "id": 981
   },
   {
     "type": "anime",
@@ -946073,7 +946528,7 @@
         "nume": "13"
       }
     ],
-    "id": 975
+    "id": 982
   },
   {
     "type": "anime",
@@ -946218,7 +946673,7 @@
         "nume": "11"
       }
     ],
-    "id": 976
+    "id": 983
   },
   {
     "type": "anime",
@@ -946364,7 +946819,7 @@
         "nume": "6"
       }
     ],
-    "id": 977
+    "id": 984
   },
   {
     "type": "anime",
@@ -946600,7 +947055,7 @@
         "nume": "14"
       }
     ],
-    "id": 978
+    "id": 985
   },
   {
     "type": "anime",
@@ -947717,7 +948172,7 @@
         "nume": "16"
       }
     ],
-    "id": 979
+    "id": 986
   },
   {
     "type": "anime",
@@ -948753,7 +949208,7 @@
         "nume": "13"
       }
     ],
-    "id": 980
+    "id": 987
   },
   {
     "type": "anime",
@@ -949421,7 +949876,7 @@
         "nume": "10"
       }
     ],
-    "id": 981
+    "id": 988
   },
   {
     "type": "anime",
@@ -950107,7 +950562,7 @@
         "nume": "2"
       }
     ],
-    "id": 982
+    "id": 989
   },
   {
     "type": "anime",
@@ -951791,7 +952246,7 @@
         "nume": "5"
       }
     ],
-    "id": 983
+    "id": 990
   },
   {
     "type": "anime",
@@ -953145,7 +953600,7 @@
         "nume": "7"
       }
     ],
-    "id": 984,
+    "id": 991,
     "studio": "White Fox",
     "sumber": "Manga"
   },
@@ -954068,7 +954523,7 @@
         "nume": "7"
       }
     ],
-    "id": 985
+    "id": 992
   },
   {
     "type": "anime",
@@ -954942,7 +955397,7 @@
         "nume": "7"
       }
     ],
-    "id": 986
+    "id": 993
   },
   {
     "type": "anime",
@@ -955933,7 +956388,7 @@
         "nume": "10"
       }
     ],
-    "id": 987
+    "id": 994
   },
   {
     "type": "anime",
@@ -957987,7 +958442,7 @@
         "nume": "8"
       }
     ],
-    "id": 988
+    "id": 995
   },
   {
     "type": "anime",
@@ -958873,7 +959328,7 @@
         "nume": "10"
       }
     ],
-    "id": 989
+    "id": 996
   },
   {
     "type": "anime",
@@ -959926,7 +960381,7 @@
         "nume": "8"
       }
     ],
-    "id": 990
+    "id": 997
   },
   {
     "type": "anime",
@@ -960872,7 +961327,7 @@
         "nume": "4"
       }
     ],
-    "id": 991
+    "id": 998
   },
   {
     "type": "anime",
@@ -961773,7 +962228,7 @@
         "nume": "10"
       }
     ],
-    "id": 992
+    "id": 999
   },
   {
     "type": "anime",
@@ -962638,7 +963093,7 @@
         "nume": "4"
       }
     ],
-    "id": 993
+    "id": 1000
   },
   {
     "type": "anime",
@@ -963540,7 +963995,7 @@
         "nume": "10"
       }
     ],
-    "id": 994
+    "id": 1001
   },
   {
     "type": "anime",
@@ -964477,7 +964932,7 @@
         "nume": "10"
       }
     ],
-    "id": 995
+    "id": 1002
   },
   {
     "type": "anime",
@@ -966291,7 +966746,7 @@
         "nume": "10"
       }
     ],
-    "id": 996
+    "id": 1003
   },
   {
     "type": "anime",
@@ -967174,7 +967629,7 @@
         "nume": "10"
       }
     ],
-    "id": 997
+    "id": 1004
   },
   {
     "type": "anime",
@@ -968005,7 +968460,7 @@
         "nume": "4"
       }
     ],
-    "id": 998
+    "id": 1005
   },
   {
     "type": "anime",
@@ -970156,7 +970611,7 @@
         "nume": "4"
       }
     ],
-    "id": 999,
+    "id": 1006,
     "studio": "David Production",
     "sumber": "Manga"
   },
@@ -972176,7 +972631,7 @@
         "nume": "4"
       }
     ],
-    "id": 1000
+    "id": 1007
   },
   {
     "type": "anime",
@@ -973024,7 +973479,7 @@
         "nume": "5"
       }
     ],
-    "id": 1001
+    "id": 1008
   },
   {
     "type": "anime",
@@ -975186,7 +975641,7 @@
         "nume": "9"
       }
     ],
-    "id": 1002
+    "id": 1009
   },
   {
     "type": "anime",
@@ -976052,7 +976507,7 @@
         "nume": "4"
       }
     ],
-    "id": 1003
+    "id": 1010
   },
   {
     "type": "anime",
@@ -976946,7 +977401,7 @@
         "nume": "8"
       }
     ],
-    "id": 1004
+    "id": 1011
   },
   {
     "type": "anime",
@@ -977109,7 +977564,7 @@
         "nume": "7"
       }
     ],
-    "id": 1005
+    "id": 1012
   },
   {
     "type": "anime",
@@ -977596,7 +978051,7 @@
         "nume": "3"
       }
     ],
-    "id": 1006
+    "id": 1013
   },
   {
     "type": "anime",
@@ -978625,7 +979080,7 @@
         "nume": "7"
       }
     ],
-    "id": 1007
+    "id": 1014
   },
   {
     "type": "anime",
@@ -979618,7 +980073,7 @@
         "nume": "7"
       }
     ],
-    "id": 1008
+    "id": 1015
   },
   {
     "type": "anime",
@@ -980648,7 +981103,7 @@
         "nume": "9"
       }
     ],
-    "id": 1009
+    "id": 1016
   },
   {
     "type": "anime",
@@ -981594,7 +982049,7 @@
         "nume": "7"
       }
     ],
-    "id": 1010
+    "id": 1017
   },
   {
     "type": "anime",
@@ -982541,7 +982996,7 @@
         "nume": "7"
       }
     ],
-    "id": 1011
+    "id": 1018
   },
   {
     "type": "anime",
@@ -983534,7 +983989,7 @@
         "nume": "7"
       }
     ],
-    "id": 1012
+    "id": 1019
   },
   {
     "type": "anime",
@@ -984581,7 +985036,7 @@
         "nume": "11"
       }
     ],
-    "id": 1013
+    "id": 1020
   },
   {
     "type": "anime",
@@ -985615,7 +986070,7 @@
         "nume": "11"
       }
     ],
-    "id": 1014
+    "id": 1021
   },
   {
     "type": "anime",
@@ -986642,7 +987097,7 @@
         "nume": "7"
       }
     ],
-    "id": 1015
+    "id": 1022
   },
   {
     "type": "anime",
@@ -987527,7 +987982,7 @@
         "nume": "7"
       }
     ],
-    "id": 1016
+    "id": 1023
   },
   {
     "type": "anime",
@@ -988664,7 +989119,7 @@
         "nume": "9"
       }
     ],
-    "id": 1017
+    "id": 1024
   },
   {
     "type": "anime",
@@ -990957,7 +991412,7 @@
         "nume": "7"
       }
     ],
-    "id": 1018,
+    "id": 1025,
     "studio": "LIDENFILMS",
     "sumber": "Manga"
   },
@@ -991121,7 +991576,7 @@
         "nume": "7"
       }
     ],
-    "id": 1019
+    "id": 1026
   },
   {
     "type": "anime",
@@ -991284,7 +991739,7 @@
         "nume": "7"
       }
     ],
-    "id": 1020
+    "id": 1027
   },
   {
     "type": "anime",
@@ -991592,7 +992047,7 @@
         "nume": "7"
       }
     ],
-    "id": 1021
+    "id": 1028
   },
   {
     "type": "anime",
@@ -991737,7 +992192,7 @@
         "nume": "6"
       }
     ],
-    "id": 1022
+    "id": 1029
   },
   {
     "type": "anime",
@@ -993441,7 +993896,7 @@
         "nume": "7"
       }
     ],
-    "id": 1023
+    "id": 1030
   },
   {
     "type": "anime",
@@ -995571,7 +996026,7 @@
         "nume": "7"
       }
     ],
-    "id": 1024,
+    "id": 1031,
     "studio": "Nippon Animation",
     "sumber": "Web Manga"
   },
@@ -997339,7 +997794,7 @@
         "nume": "7"
       }
     ],
-    "id": 1025
+    "id": 1032
   },
   {
     "type": "anime",
@@ -998412,7 +998867,7 @@
         "nume": "7"
       }
     ],
-    "id": 1026
+    "id": 1033
   },
   {
     "type": "anime",
@@ -999348,7 +999803,7 @@
         "nume": "7"
       }
     ],
-    "id": 1027
+    "id": 1034
   },
   {
     "type": "anime",
@@ -1000308,7 +1000763,7 @@
         "nume": "7"
       }
     ],
-    "id": 1028
+    "id": 1035
   },
   {
     "type": "anime",
@@ -1001295,7 +1001750,7 @@
         "nume": "7"
       }
     ],
-    "id": 1029
+    "id": 1036
   },
   {
     "type": "anime",
@@ -1002351,7 +1002806,7 @@
         "nume": "7"
       }
     ],
-    "id": 1030
+    "id": 1037
   },
   {
     "type": "anime",
@@ -1003361,7 +1003816,7 @@
         "nume": "7"
       }
     ],
-    "id": 1031
+    "id": 1038
   },
   {
     "type": "anime",
@@ -1004379,7 +1004834,7 @@
         "nume": "7"
       }
     ],
-    "id": 1032
+    "id": 1039
   },
   {
     "type": "anime",
@@ -1005334,7 +1005789,7 @@
         "nume": "7"
       }
     ],
-    "id": 1033
+    "id": 1040
   },
   {
     "type": "anime",
@@ -1006230,7 +1006685,7 @@
         "nume": "7"
       }
     ],
-    "id": 1034
+    "id": 1041
   },
   {
     "type": "anime",
@@ -1007186,7 +1007641,7 @@
         "nume": "7"
       }
     ],
-    "id": 1035
+    "id": 1042
   },
   {
     "type": "anime",
@@ -1008142,7 +1008597,7 @@
         "nume": "7"
       }
     ],
-    "id": 1036
+    "id": 1043
   },
   {
     "type": "anime",
@@ -1009098,7 +1009553,7 @@
         "nume": "7"
       }
     ],
-    "id": 1037
+    "id": 1044
   },
   {
     "type": "anime",
@@ -1010070,7 +1010525,7 @@
         "nume": "7"
       }
     ],
-    "id": 1038
+    "id": 1045
   },
   {
     "type": "anime",
@@ -1010767,7 +1011222,7 @@
         "nume": "8"
       }
     ],
-    "id": 1039
+    "id": 1046
   },
   {
     "type": "anime",
@@ -1012740,7 +1013195,7 @@
         "nume": "7"
       }
     ],
-    "id": 1040
+    "id": 1047
   },
   {
     "type": "anime",
@@ -1012939,7 +1013394,7 @@
         "nume": "9"
       }
     ],
-    "id": 1041
+    "id": 1048
   },
   {
     "type": "anime",
@@ -1013103,7 +1013558,7 @@
         "nume": "7"
       }
     ],
-    "id": 1042
+    "id": 1049
   },
   {
     "type": "anime",
@@ -1013282,7 +1013737,7 @@
         "nume": "8"
       }
     ],
-    "id": 1043
+    "id": 1050
   },
   {
     "type": "anime",
@@ -1013358,7 +1013813,7 @@
         "nume": "2"
       }
     ],
-    "id": 1044
+    "id": 1051
   },
   {
     "type": "anime",
@@ -1013468,7 +1013923,7 @@
         "nume": "4"
       }
     ],
-    "id": 1045
+    "id": 1052
   },
   {
     "type": "anime",
@@ -1013581,7 +1014036,7 @@
         "nume": "4"
       }
     ],
-    "id": 1046
+    "id": 1053
   },
   {
     "type": "anime",
@@ -1013689,7 +1014144,7 @@
         "nume": "4"
       }
     ],
-    "id": 1047
+    "id": 1054
   },
   {
     "type": "anime",
@@ -1014428,7 +1014883,7 @@
         "nume": "7"
       }
     ],
-    "id": 1048
+    "id": 1055
   },
   {
     "type": "anime",
@@ -1014608,7 +1015063,7 @@
         "nume": "8"
       }
     ],
-    "id": 1049
+    "id": 1056
   },
   {
     "type": "anime",
@@ -1014807,7 +1015262,7 @@
         "nume": "9"
       }
     ],
-    "id": 1050
+    "id": 1057
   },
   {
     "type": "anime",
@@ -1015682,7 +1016137,7 @@
         "nume": "7"
       }
     ],
-    "id": 1051
+    "id": 1058
   },
   {
     "type": "anime",
@@ -1016604,7 +1017059,7 @@
         "nume": "7"
       }
     ],
-    "id": 1052
+    "id": 1059
   },
   {
     "type": "anime",
@@ -1017481,7 +1017936,7 @@
         "nume": "7"
       }
     ],
-    "id": 1053
+    "id": 1060
   },
   {
     "type": "anime",
@@ -1018402,7 +1018857,7 @@
         "nume": "7"
       }
     ],
-    "id": 1054
+    "id": 1061
   },
   {
     "type": "anime",
@@ -1019205,7 +1019660,7 @@
         "nume": "7"
       }
     ],
-    "id": 1055
+    "id": 1062
   },
   {
     "type": "anime",
@@ -1020080,7 +1020535,7 @@
         "nume": "7"
       }
     ],
-    "id": 1056
+    "id": 1063
   },
   {
     "type": "anime",
@@ -1020938,7 +1021393,7 @@
         "nume": "7"
       }
     ],
-    "id": 1057
+    "id": 1064
   },
   {
     "type": "anime",
@@ -1021812,7 +1022267,7 @@
         "nume": "7"
       }
     ],
-    "id": 1058
+    "id": 1065
   },
   {
     "type": "anime",
@@ -1022678,7 +1023133,7 @@
         "nume": "7"
       }
     ],
-    "id": 1059
+    "id": 1066
   },
   {
     "type": "anime",
@@ -1023526,7 +1023981,7 @@
         "nume": "7"
       }
     ],
-    "id": 1060
+    "id": 1067
   },
   {
     "type": "anime",
@@ -1024399,7 +1024854,7 @@
         "nume": "7"
       }
     ],
-    "id": 1061
+    "id": 1068
   },
   {
     "type": "anime",
@@ -1025996,7 +1026451,7 @@
         "nume": "7"
       }
     ],
-    "id": 1062
+    "id": 1069
   },
   {
     "type": "anime",
@@ -1026846,7 +1027301,7 @@
         "nume": "7"
       }
     ],
-    "id": 1063
+    "id": 1070
   },
   {
     "type": "anime",
@@ -1027675,7 +1028130,7 @@
         "nume": "7"
       }
     ],
-    "id": 1064
+    "id": 1071
   },
   {
     "type": "anime",
@@ -1027748,7 +1028203,7 @@
         "nume": "2"
       }
     ],
-    "id": 1065
+    "id": 1072
   },
   {
     "type": "anime",
@@ -1028542,7 +1028997,7 @@
         "nume": "6"
       }
     ],
-    "id": 1066
+    "id": 1073
   },
   {
     "type": "anime",
@@ -1028688,7 +1029143,7 @@
         "nume": "6"
       }
     ],
-    "id": 1067
+    "id": 1074
   },
   {
     "type": "anime",
@@ -1029501,7 +1029956,7 @@
         "nume": "7"
       }
     ],
-    "id": 1068
+    "id": 1075
   },
   {
     "type": "anime",
@@ -1029647,7 +1030102,7 @@
         "nume": "6"
       }
     ],
-    "id": 1069
+    "id": 1076
   },
   {
     "type": "anime",
@@ -1030252,7 +1030707,7 @@
         "nume": "4"
       }
     ],
-    "id": 1070
+    "id": 1077
   },
   {
     "type": "anime",
@@ -1030497,7 +1030952,7 @@
         "nume": "4"
       }
     ],
-    "id": 1071
+    "id": 1078
   },
   {
     "type": "anime",
@@ -1031670,7 +1032125,7 @@
         "nume": "9"
       }
     ],
-    "id": 1072
+    "id": 1079
   },
   {
     "type": "anime",
@@ -1032275,7 +1032730,7 @@
         "nume": "4"
       }
     ],
-    "id": 1073
+    "id": 1080
   },
   {
     "type": "anime",
@@ -1032860,7 +1033315,7 @@
         "nume": "3"
       }
     ],
-    "id": 1074
+    "id": 1081
   },
   {
     "type": "anime",
@@ -1033511,7 +1033966,7 @@
         "nume": "4"
       }
     ],
-    "id": 1075
+    "id": 1082
   },
   {
     "type": "anime",
@@ -1034116,7 +1034571,7 @@
         "nume": "4"
       }
     ],
-    "id": 1076
+    "id": 1083
   },
   {
     "type": "anime",
@@ -1034720,7 +1035175,7 @@
         "nume": "4"
       }
     ],
-    "id": 1077
+    "id": 1084
   },
   {
     "type": "anime",
@@ -1043544,7 +1043999,7 @@
         "nume": "4"
       }
     ],
-    "id": 1078
+    "id": 1085
   },
   {
     "type": "anime",
@@ -1043653,7 +1044108,7 @@
         "nume": "4"
       }
     ],
-    "id": 1079
+    "id": 1086
   },
   {
     "type": "anime",
@@ -1045247,7 +1045702,7 @@
         "nume": "10"
       }
     ],
-    "id": 1080
+    "id": 1087
   },
   {
     "type": "anime",
@@ -1045851,7 +1046306,7 @@
         "nume": "4"
       }
     ],
-    "id": 1081
+    "id": 1088
   },
   {
     "type": "anime",
@@ -1045999,7 +1046454,7 @@
         "nume": "6"
       }
     ],
-    "id": 1082
+    "id": 1089
   },
   {
     "type": "anime",
@@ -1047162,7 +1047617,7 @@
         "nume": "3"
       }
     ],
-    "id": 1083
+    "id": 1090
   },
   {
     "type": "anime",
@@ -1047765,7 +1048220,7 @@
         "nume": "4"
       }
     ],
-    "id": 1084
+    "id": 1091
   },
   {
     "type": "anime",
@@ -1048324,7 +1048779,7 @@
         "nume": "4"
       }
     ],
-    "id": 1085
+    "id": 1092
   },
   {
     "type": "anime",
@@ -1049289,7 +1049744,7 @@
         "nume": "4"
       }
     ],
-    "id": 1086
+    "id": 1093
   },
   {
     "type": "anime",
@@ -1049435,7 +1049890,7 @@
         "nume": "6"
       }
     ],
-    "id": 1087
+    "id": 1094
   },
   {
     "type": "anime",
@@ -1051157,7 +1051612,7 @@
         "nume": "8"
       }
     ],
-    "id": 1088
+    "id": 1095
   },
   {
     "type": "anime",
@@ -1051572,7 +1052027,7 @@
         "nume": "3"
       }
     ],
-    "id": 1089
+    "id": 1096
   },
   {
     "type": "anime",
@@ -1052068,7 +1052523,7 @@
         "nume": "3"
       }
     ],
-    "id": 1090
+    "id": 1097
   },
   {
     "type": "anime",
@@ -1052629,7 +1053084,7 @@
         "nume": "3"
       }
     ],
-    "id": 1091
+    "id": 1098
   },
   {
     "type": "anime",
@@ -1053117,7 +1053572,7 @@
         "nume": "3"
       }
     ],
-    "id": 1092
+    "id": 1099
   },
   {
     "type": "anime",
@@ -1053640,7 +1054095,7 @@
         "nume": "3"
       }
     ],
-    "id": 1093
+    "id": 1100
   },
   {
     "type": "anime",
@@ -1054120,7 +1054575,7 @@
         "nume": "3"
       }
     ],
-    "id": 1094
+    "id": 1101
   },
   {
     "type": "anime",
@@ -1054212,7 +1054667,7 @@
         "nume": "3"
       }
     ],
-    "id": 1095
+    "id": 1102
   },
   {
     "type": "anime",
@@ -1054690,7 +1055145,7 @@
         "nume": "3"
       }
     ],
-    "id": 1096
+    "id": 1103
   },
   {
     "type": "anime",
@@ -1054998,7 +1055453,7 @@
         "nume": "3"
       }
     ],
-    "id": 1097
+    "id": 1104
   },
   {
     "type": "anime",
@@ -1055484,7 +1055939,7 @@
         "nume": "3"
       }
     ],
-    "id": 1098
+    "id": 1105
   },
   {
     "type": "anime",
@@ -1056406,7 +1056861,7 @@
         "nume": "3"
       }
     ],
-    "id": 1099
+    "id": 1106
   },
   {
     "type": "anime",
@@ -1056431,7 +1056886,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 1100
+    "id": 1107
   },
   {
     "type": "anime",
@@ -1057080,7 +1057535,7 @@
         "nume": "4"
       }
     ],
-    "id": 1101
+    "id": 1108
   },
   {
     "type": "anime",
@@ -1057675,7 +1058130,7 @@
         "nume": "4"
       }
     ],
-    "id": 1102
+    "id": 1109
   },
   {
     "type": "anime",
@@ -1058315,7 +1058770,7 @@
         "nume": "4"
       }
     ],
-    "id": 1103
+    "id": 1110
   },
   {
     "type": "anime",
@@ -1059112,7 +1059567,7 @@
         "nume": "4"
       }
     ],
-    "id": 1104,
+    "id": 1111,
     "studio": "MAPPA",
     "sumber": "Manga"
   },
@@ -1059754,7 +1060209,7 @@
         "nume": "4"
       }
     ],
-    "id": 1105
+    "id": 1112
   },
   {
     "type": "anime",
@@ -1060359,7 +1060814,7 @@
         "nume": "4"
       }
     ],
-    "id": 1106
+    "id": 1113
   },
   {
     "type": "anime",
@@ -1060542,7 +1060997,7 @@
         "nume": "6"
       }
     ],
-    "id": 1107
+    "id": 1114
   },
   {
     "type": "anime",
@@ -1060671,7 +1061126,7 @@
         "nume": "5"
       }
     ],
-    "id": 1108
+    "id": 1115
   },
   {
     "type": "anime",
@@ -1061158,7 +1061613,7 @@
         "nume": "3"
       }
     ],
-    "id": 1109
+    "id": 1116
   },
   {
     "type": "anime",
@@ -1062149,7 +1062604,7 @@
         "nume": "3"
       }
     ],
-    "id": 1110
+    "id": 1117
   },
   {
     "type": "anime",
@@ -1062672,7 +1063127,7 @@
         "nume": "3"
       }
     ],
-    "id": 1111
+    "id": 1118
   },
   {
     "type": "anime",
@@ -1063160,7 +1063615,7 @@
         "nume": "3"
       }
     ],
-    "id": 1112
+    "id": 1119
   },
   {
     "type": "anime",
@@ -1063613,7 +1064068,7 @@
         "nume": "3"
       }
     ],
-    "id": 1113
+    "id": 1120
   },
   {
     "type": "anime",
@@ -1064119,7 +1064574,7 @@
         "nume": "4"
       }
     ],
-    "id": 1114
+    "id": 1121
   },
   {
     "type": "anime",
@@ -1064643,7 +1065098,7 @@
         "nume": "3"
       }
     ],
-    "id": 1115
+    "id": 1122
   },
   {
     "type": "anime",
@@ -1065130,7 +1065585,7 @@
         "nume": "3"
       }
     ],
-    "id": 1116
+    "id": 1123
   },
   {
     "type": "anime",
@@ -1065652,7 +1066107,7 @@
         "nume": "3"
       }
     ],
-    "id": 1117
+    "id": 1124
   },
   {
     "type": "anime",
@@ -1066578,7 +1067033,7 @@
         "nume": "3"
       }
     ],
-    "id": 1118
+    "id": 1125
   },
   {
     "type": "anime",
@@ -1066688,7 +1067143,7 @@
         "nume": "4"
       }
     ],
-    "id": 1119
+    "id": 1126
   },
   {
     "type": "anime",
@@ -1067178,7 +1067633,7 @@
         "nume": "3"
       }
     ],
-    "id": 1120
+    "id": 1127
   },
   {
     "type": "anime",
@@ -1067666,7 +1068121,7 @@
         "nume": "3"
       }
     ],
-    "id": 1121
+    "id": 1128
   },
   {
     "type": "anime",
@@ -1068154,7 +1068609,7 @@
         "nume": "3"
       }
     ],
-    "id": 1122
+    "id": 1129
   },
   {
     "type": "anime",
@@ -1068283,7 +1068738,7 @@
         "nume": "3"
       }
     ],
-    "id": 1123
+    "id": 1130
   },
   {
     "type": "anime",
@@ -1068798,7 +1069253,7 @@
         "nume": "3"
       }
     ],
-    "id": 1124
+    "id": 1131
   },
   {
     "type": "anime",
@@ -1068887,7 +1069342,7 @@
         "nume": "3"
       }
     ],
-    "id": 1125
+    "id": 1132
   },
   {
     "type": "anime",
@@ -1069374,7 +1069829,7 @@
         "nume": "3"
       }
     ],
-    "id": 1126
+    "id": 1133
   },
   {
     "type": "anime",
@@ -1069855,7 +1070310,7 @@
         "nume": "3"
       }
     ],
-    "id": 1127
+    "id": 1134
   },
   {
     "type": "anime",
@@ -1069946,7 +1070401,7 @@
         "nume": "3"
       }
     ],
-    "id": 1128
+    "id": 1135
   },
   {
     "type": "anime",
@@ -1070433,7 +1070888,7 @@
         "nume": "3"
       }
     ],
-    "id": 1129
+    "id": 1136
   },
   {
     "type": "anime",
@@ -1070956,7 +1071411,7 @@
         "nume": "3"
       }
     ],
-    "id": 1130
+    "id": 1137
   },
   {
     "type": "anime",
@@ -1071445,7 +1071900,7 @@
         "nume": "3"
       }
     ],
-    "id": 1131
+    "id": 1138
   },
   {
     "type": "anime",
@@ -1071932,7 +1072387,7 @@
         "nume": "3"
       }
     ],
-    "id": 1132
+    "id": 1139
   },
   {
     "type": "anime",
@@ -1072356,7 +1072811,7 @@
         "nume": "3"
       }
     ],
-    "id": 1133
+    "id": 1140
   },
   {
     "type": "anime",
@@ -1072834,7 +1073289,7 @@
         "nume": "3"
       }
     ],
-    "id": 1134
+    "id": 1141
   },
   {
     "type": "anime",
@@ -1073339,7 +1073794,7 @@
         "nume": "2"
       }
     ],
-    "id": 1135
+    "id": 1142
   },
   {
     "type": "anime",
@@ -1073738,7 +1074193,7 @@
         "nume": "3"
       }
     ],
-    "id": 1136
+    "id": 1143
   },
   {
     "type": "anime",
@@ -1074190,7 +1074645,7 @@
         "nume": "3"
       }
     ],
-    "id": 1137
+    "id": 1144
   },
   {
     "type": "anime",
@@ -1074577,7 +1075032,7 @@
         "nume": "3"
       }
     ],
-    "id": 1138
+    "id": 1145
   },
   {
     "type": "anime",
@@ -1076083,7 +1076538,7 @@
         "nume": "3"
       }
     ],
-    "id": 1139
+    "id": 1146
   },
   {
     "type": "anime",
@@ -1077029,7 +1077484,7 @@
         "nume": "3"
       }
     ],
-    "id": 1140
+    "id": 1147
   },
   {
     "type": "anime",
@@ -1077913,7 +1078368,7 @@
         "nume": "3"
       }
     ],
-    "id": 1141
+    "id": 1148
   },
   {
     "type": "anime",
@@ -1078418,7 +1078873,7 @@
         "nume": "3"
       }
     ],
-    "id": 1142
+    "id": 1149
   },
   {
     "type": "anime",
@@ -1078895,7 +1079350,7 @@
         "nume": "3"
       }
     ],
-    "id": 1143
+    "id": 1150
   },
   {
     "type": "anime",
@@ -1079806,7 +1080261,7 @@
         "nume": "3"
       }
     ],
-    "id": 1144
+    "id": 1151
   },
   {
     "type": "anime",
@@ -1080330,7 +1080785,7 @@
         "nume": "3"
       }
     ],
-    "id": 1145
+    "id": 1152
   },
   {
     "type": "anime",
@@ -1080818,7 +1081273,7 @@
         "nume": "3"
       }
     ],
-    "id": 1146
+    "id": 1153
   },
   {
     "type": "anime",
@@ -1081307,7 +1081762,7 @@
         "nume": "3"
       }
     ],
-    "id": 1147
+    "id": 1154
   },
   {
     "type": "anime",
@@ -1081758,7 +1082213,7 @@
         "nume": "3"
       }
     ],
-    "id": 1148
+    "id": 1155
   },
   {
     "type": "anime",
@@ -1082640,7 +1083095,7 @@
         "nume": "2"
       }
     ],
-    "id": 1149
+    "id": 1156
   },
   {
     "type": "anime",
@@ -1082730,7 +1083185,7 @@
         "nume": "3"
       }
     ],
-    "id": 1150
+    "id": 1157
   },
   {
     "type": "anime",
@@ -1083128,7 +1083583,7 @@
         "nume": "3"
       }
     ],
-    "id": 1151
+    "id": 1158
   },
   {
     "type": "anime",
@@ -1083994,7 +1084449,7 @@
         "nume": "2"
       }
     ],
-    "id": 1152
+    "id": 1159
   },
   {
     "type": "anime",
@@ -1084480,7 +1084935,7 @@
         "nume": "3"
       }
     ],
-    "id": 1153
+    "id": 1160
   },
   {
     "type": "anime",
@@ -1084868,7 +1085323,7 @@
         "nume": "3"
       }
     ],
-    "id": 1154
+    "id": 1161
   },
   {
     "type": "anime",
@@ -1085453,7 +1085908,7 @@
         "nume": "3"
       }
     ],
-    "id": 1155
+    "id": 1162
   },
   {
     "type": "anime",
@@ -1085922,7 +1086377,7 @@
         "nume": "3"
       }
     ],
-    "id": 1156
+    "id": 1163
   },
   {
     "type": "anime",
@@ -1086771,7 +1087226,7 @@
         "nume": "3"
       }
     ],
-    "id": 1157
+    "id": 1164
   },
   {
     "type": "anime",
@@ -1087611,7 +1088066,7 @@
         "nume": "10"
       }
     ],
-    "id": 1158
+    "id": 1165
   },
   {
     "type": "anime",
@@ -1088235,7 +1088690,7 @@
         "nume": "3"
       }
     ],
-    "id": 1159
+    "id": 1166
   },
   {
     "type": "anime",
@@ -1088624,7 +1089079,7 @@
         "nume": "3"
       }
     ],
-    "id": 1160
+    "id": 1167
   },
   {
     "type": "anime",
@@ -1089057,7 +1089512,7 @@
         "nume": "3"
       }
     ],
-    "id": 1161
+    "id": 1168
   },
   {
     "type": "anime",
@@ -1089398,7 +1089853,7 @@
         "nume": "3"
       }
     ],
-    "id": 1162
+    "id": 1169
   },
   {
     "type": "anime",
@@ -1090347,7 +1090802,7 @@
         "nume": "3"
       }
     ],
-    "id": 1163
+    "id": 1170
   },
   {
     "type": "anime",
@@ -1090870,7 +1091325,7 @@
         "nume": "3"
       }
     ],
-    "id": 1164
+    "id": 1171
   },
   {
     "type": "anime",
@@ -1091358,7 +1091813,7 @@
         "nume": "3"
       }
     ],
-    "id": 1165
+    "id": 1172
   },
   {
     "type": "anime",
@@ -1092315,7 +1092770,7 @@
         "nume": "3"
       }
     ],
-    "id": 1166
+    "id": 1173
   },
   {
     "type": "anime",
@@ -1092803,7 +1093258,7 @@
         "nume": "3"
       }
     ],
-    "id": 1167
+    "id": 1174
   },
   {
     "type": "anime",
@@ -1093949,7 +1094404,7 @@
         "nume": "3"
       }
     ],
-    "id": 1168,
+    "id": 1175,
     "studio": "Brain’s Base",
     "sumber": "Manga"
   },
@@ -1094467,7 +1094922,7 @@
         "nume": "3"
       }
     ],
-    "id": 1169
+    "id": 1176
   },
   {
     "type": "anime",
@@ -1094954,7 +1095409,7 @@
         "nume": "3"
       }
     ],
-    "id": 1170
+    "id": 1177
   },
   {
     "type": "anime",
@@ -1095423,7 +1095878,7 @@
         "nume": "2"
       }
     ],
-    "id": 1171
+    "id": 1178
   },
   {
     "type": "anime",
@@ -1095910,7 +1096365,7 @@
         "nume": "3"
       }
     ],
-    "id": 1172
+    "id": 1179
   },
   {
     "type": "anime",
@@ -1096813,7 +1097268,7 @@
         "nume": "3"
       }
     ],
-    "id": 1173
+    "id": 1180
   },
   {
     "type": "anime",
@@ -1097301,7 +1097756,7 @@
         "nume": "3"
       }
     ],
-    "id": 1174
+    "id": 1181
   },
   {
     "type": "anime",
@@ -1098178,7 +1098633,7 @@
         "nume": "3"
       }
     ],
-    "id": 1175
+    "id": 1182
   },
   {
     "type": "anime",
@@ -1098666,7 +1099121,7 @@
         "nume": "3"
       }
     ],
-    "id": 1176
+    "id": 1183
   },
   {
     "type": "anime",
@@ -1099152,7 +1099607,7 @@
         "nume": "3"
       }
     ],
-    "id": 1177
+    "id": 1184
   },
   {
     "type": "anime",
@@ -1100816,7 +1101271,7 @@
         "nume": "3"
       }
     ],
-    "id": 1178
+    "id": 1185
   },
   {
     "type": "anime",
@@ -1101303,7 +1101758,7 @@
         "nume": "3"
       }
     ],
-    "id": 1179
+    "id": 1186
   },
   {
     "type": "anime",
@@ -1101755,7 +1102210,7 @@
         "nume": "3"
       }
     ],
-    "id": 1180
+    "id": 1187
   },
   {
     "type": "anime",
@@ -1102244,7 +1102699,7 @@
         "nume": "3"
       }
     ],
-    "id": 1181
+    "id": 1188
   },
   {
     "type": "anime",
@@ -1102353,7 +1102808,7 @@
         "nume": "2"
       }
     ],
-    "id": 1182
+    "id": 1189
   },
   {
     "type": "anime",
@@ -1102866,7 +1103321,7 @@
         "nume": "3"
       }
     ],
-    "id": 1183
+    "id": 1190
   },
   {
     "type": "anime",
@@ -1103298,7 +1103753,7 @@
         "nume": "3"
       }
     ],
-    "id": 1184
+    "id": 1191
   },
   {
     "type": "anime",
@@ -1103731,7 +1104186,7 @@
         "nume": "3"
       }
     ],
-    "id": 1185
+    "id": 1192
   },
   {
     "type": "anime",
@@ -1104217,7 +1104672,7 @@
         "nume": "3"
       }
     ],
-    "id": 1186
+    "id": 1193
   },
   {
     "type": "anime",
@@ -1104697,7 +1105152,7 @@
         "nume": "3"
       }
     ],
-    "id": 1187
+    "id": 1194
   },
   {
     "type": "anime",
@@ -1105148,7 +1105603,7 @@
         "nume": "3"
       }
     ],
-    "id": 1188
+    "id": 1195
   },
   {
     "type": "anime",
@@ -1105591,7 +1106046,7 @@
         "nume": "3"
       }
     ],
-    "id": 1189
+    "id": 1196
   },
   {
     "type": "anime",
@@ -1106024,7 +1106479,7 @@
         "nume": "2"
       }
     ],
-    "id": 1190
+    "id": 1197
   },
   {
     "type": "anime",
@@ -1106502,7 +1106957,7 @@
         "nume": "3"
       }
     ],
-    "id": 1191
+    "id": 1198
   },
   {
     "type": "anime",
@@ -1106946,7 +1107401,7 @@
         "nume": "3"
       }
     ],
-    "id": 1192
+    "id": 1199
   },
   {
     "type": "anime",
@@ -1107785,7 +1108240,7 @@
         "nume": "3"
       }
     ],
-    "id": 1193
+    "id": 1200
   },
   {
     "type": "anime",
@@ -1108001,7 +1108456,7 @@
         "nume": "2"
       }
     ],
-    "id": 1194
+    "id": 1201
   },
   {
     "type": "anime",
@@ -1108586,7 +1109041,7 @@
         "nume": "3"
       }
     ],
-    "id": 1195
+    "id": 1202
   },
   {
     "type": "anime",
@@ -1109099,7 +1109554,7 @@
         "nume": "3"
       }
     ],
-    "id": 1196
+    "id": 1203
   },
   {
     "type": "anime",
@@ -1109579,7 +1110034,7 @@
         "nume": "3"
       }
     ],
-    "id": 1197
+    "id": 1204
   },
   {
     "type": "anime",
@@ -1110346,7 +1110801,7 @@
         "nume": "3"
       }
     ],
-    "id": 1198
+    "id": 1205
   },
   {
     "type": "anime",
@@ -1110825,7 +1111280,7 @@
         "nume": "3"
       }
     ],
-    "id": 1199
+    "id": 1206
   },
   {
     "type": "anime",
@@ -1111548,7 +1112003,7 @@
         "nume": "2"
       }
     ],
-    "id": 1200
+    "id": 1207
   },
   {
     "type": "anime",
@@ -1111866,7 +1112321,7 @@
         "nume": "2"
       }
     ],
-    "id": 1201
+    "id": 1208
   },
   {
     "type": "anime",
@@ -1111894,7 +1112349,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 1202
+    "id": 1209
   },
   {
     "type": "anime",
@@ -1112005,7 +1112460,7 @@
         "nume": "3"
       }
     ],
-    "id": 1203
+    "id": 1210
   },
   {
     "type": "anime",
@@ -1112646,7 +1113101,7 @@
         "nume": "1"
       }
     ],
-    "id": 1204
+    "id": 1211
   },
   {
     "type": "anime",
@@ -1113350,7 +1113805,7 @@
         "nume": "2"
       }
     ],
-    "id": 1205
+    "id": 1212
   },
   {
     "type": "anime",
@@ -1113720,7 +1114175,7 @@
         "nume": "2"
       }
     ],
-    "id": 1206
+    "id": 1213
   },
   {
     "type": "anime",
@@ -1114151,7 +1114606,7 @@
         "nume": "3"
       }
     ],
-    "id": 1207
+    "id": 1214
   },
   {
     "type": "anime",
@@ -1114423,7 +1114878,7 @@
         "nume": "3"
       }
     ],
-    "id": 1208
+    "id": 1215
   },
   {
     "type": "anime",
@@ -1114791,7 +1115246,7 @@
         "nume": "2"
       }
     ],
-    "id": 1209
+    "id": 1216
   },
   {
     "type": "anime",
@@ -1115160,7 +1115615,7 @@
         "nume": "2"
       }
     ],
-    "id": 1210
+    "id": 1217
   },
   {
     "type": "anime",
@@ -1115529,7 +1115984,7 @@
         "nume": "2"
       }
     ],
-    "id": 1211
+    "id": 1218
   },
   {
     "type": "anime",
@@ -1115898,7 +1116353,7 @@
         "nume": "2"
       }
     ],
-    "id": 1212
+    "id": 1219
   },
   {
     "type": "anime",
@@ -1117303,7 +1117758,7 @@
         "nume": "2"
       }
     ],
-    "id": 1213
+    "id": 1220
   },
   {
     "type": "anime",
@@ -1117664,7 +1118119,7 @@
         "nume": "2"
       }
     ],
-    "id": 1214
+    "id": 1221
   },
   {
     "type": "anime",
@@ -1118035,7 +1118490,7 @@
         "nume": "2"
       }
     ],
-    "id": 1215
+    "id": 1222
   },
   {
     "type": "anime",
@@ -1118406,7 +1118861,7 @@
         "nume": "2"
       }
     ],
-    "id": 1216
+    "id": 1223
   },
   {
     "type": "anime",
@@ -1118803,7 +1119258,7 @@
         "nume": "2"
       }
     ],
-    "id": 1217
+    "id": 1224
   },
   {
     "type": "anime",
@@ -1119157,7 +1119612,7 @@
         "nume": "2"
       }
     ],
-    "id": 1218
+    "id": 1225
   },
   {
     "type": "anime",
@@ -1119851,7 +1120306,7 @@
         "nume": "2"
       }
     ],
-    "id": 1219
+    "id": 1226
   },
   {
     "type": "anime",
@@ -1120430,7 +1120885,7 @@
         "nume": "2"
       }
     ],
-    "id": 1220
+    "id": 1227
   },
   {
     "type": "anime",
@@ -1121134,7 +1121589,7 @@
         "nume": "2"
       }
     ],
-    "id": 1221
+    "id": 1228
   },
   {
     "type": "anime",
@@ -1121854,7 +1122309,7 @@
         "nume": "2"
       }
     ],
-    "id": 1222
+    "id": 1229
   },
   {
     "type": "anime",
@@ -1122333,7 +1122788,7 @@
         "nume": "3"
       }
     ],
-    "id": 1223
+    "id": 1230
   },
   {
     "type": "anime",
@@ -1122939,7 +1123394,7 @@
         "nume": "6"
       }
     ],
-    "id": 1224
+    "id": 1231
   },
   {
     "type": "anime",
@@ -1123868,6 +1124323,6 @@
         "nume": "2"
       }
     ],
-    "id": 1225
+    "id": 1232
   }
 ]
