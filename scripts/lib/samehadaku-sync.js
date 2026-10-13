@@ -121,16 +121,16 @@ async function waitReady(page, timeoutMs = 90000, { requireListing = false } = {
 
 async function gotoReady(page, url, label) {
   let lastError = null;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
     try {
-      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 120000 });
-      if (await waitReady(page, 25000 + attempt * 20000, { requireListing: true })) return true;
-      console.warn(`[samehadaku-sync] ${label} masih Cloudflare, ulang ${attempt}/3`);
+      await page.goto(url, { waitUntil: "domcontentloaded", timeout: 45000 });
+      if (await waitReady(page, 12000, { requireListing: true })) return true;
+      console.warn(`[samehadaku-sync] ${label} masih Cloudflare, ulang ${attempt}/2`);
     } catch (err) {
       lastError = err;
-      console.warn(`[samehadaku-sync] ${label} gagal dibuka (${attempt}/3): ${err.message}`);
+      console.warn(`[samehadaku-sync] ${label} gagal dibuka (${attempt}/2): ${err.message}`);
     }
-    await sleep(2000 * attempt);
+    await sleep(1500 * attempt);
   }
   if (lastError && /timeout/i.test(lastError.message)) return false;
   return false;
@@ -497,12 +497,12 @@ async function scrapeEpisodePlayers(page, ep) {
     return ep;
   }
   if (!ep.inline) {
-    await page.goto(ep.source, { waitUntil: "domcontentloaded", timeout: 120000 });
-    if (!(await waitReady(page))) throw new Error("Cloudflare timeout");
+    await page.goto(ep.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+    if (!(await waitReady(page, 15000))) throw new Error("Cloudflare timeout");
     await page.waitForTimeout(500);
   }
   const html = await page.content();
-  ep.players = await resolvePlayers(page, html);
+  ep.players = await resolvePlayers(page, await page.content());
   if (cacheKey && ep.players?.length) {
     scrapedPlayersBySource.set(cacheKey, clonePlayers(ep.players));
   }
@@ -564,6 +564,30 @@ async function collectTerbaruListings(page) {
   return listings;
 }
 
+function detailFromListing(item) {
+  const feedEp = Number(item.episode) || 1;
+  return {
+    judul: item.title,
+    thumbnail: item.thumbnail || "",
+    thumbnail_landscape: null,
+    rating: null,
+    votes: null,
+    sinopsis: `Anime ${item.title}.`,
+    genre: [],
+    episodes: [
+      {
+        episode: feedEp,
+        title: `${item.title} Episode ${feedEp}`,
+        slug: `${item.slug}-episode-${feedEp}`,
+        source: item.episode_source,
+        date: item.released_on || "",
+        released_at: new Date().toISOString(),
+        players: [],
+      },
+    ],
+  };
+}
+
 async function applyTerbaruToCatalog(page, dataDir, listings) {
   const file = join(dataDir, "anime.json");
   const existing = await readJsonArray(file);
@@ -602,11 +626,20 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
       if (!current) {
         // Anime baru: ambil meta + daftar eps, isi player hanya utk episode dari feed (+ sisanya kosong dulu)
         console.log(`[samehadaku-sync] anime baru ${item.slug} (ep ${item.episode})`);
-        await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 120000 });
-        if (!(await waitReady(page))) throw new Error("Cloudflare timeout");
-        await page.waitForTimeout(600);
-        const detailHtml = await page.content();
-        const detail = extractAnimeDetailMeta(detailHtml, item);
+        let detail = null;
+        try {
+          await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+          if (await waitReady(page, 12000)) {
+            await page.waitForTimeout(400);
+            detail = extractAnimeDetailMeta(await page.content(), item);
+          }
+        } catch (err) {
+          console.warn(`[samehadaku-sync] ${item.slug} detail: ${err.message}`);
+        }
+        if (!detail?.episodes?.length) {
+          console.warn(`[samehadaku-sync] ${item.slug}: halaman anime kena Cloudflare, pakai kartu + episode`);
+          detail = detailFromListing(item);
+        }
 
         // Pastikan episode dari feed ada di daftar
         const feedEp = Number(item.episode);
@@ -780,11 +813,38 @@ async function applyMoviesToCatalog(page, dataDir, listings) {
     const item = newcomers[i];
     console.log(`[samehadaku-sync] movie baru ${item.slug}`);
     try {
-      await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 120000 });
-      if (!(await waitReady(page))) throw new Error("Cloudflare timeout");
-      await page.waitForTimeout(600);
-      const html = await page.content();
-      const detail = extractMovieDetail(html, item);
+      let detail = null;
+      try {
+        await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+        if (await waitReady(page, 12000)) {
+          await page.waitForTimeout(400);
+          detail = extractMovieDetail(await page.content(), item);
+        }
+      } catch (err) {
+        console.warn(`[samehadaku-sync] movie ${item.slug} detail: ${err.message}`);
+      }
+      if (!detail?.episodes?.length) {
+        console.warn(`[samehadaku-sync] movie ${item.slug}: halaman anime kena Cloudflare, coba URL tonton`);
+        detail = {
+          judul: item.title,
+          thumbnail: item.thumbnail || "",
+          thumbnail_landscape: null,
+          rating: null,
+          votes: null,
+          sinopsis: `Anime ${item.title}.`,
+          genre: item.genre || [],
+          episodes: [
+            {
+              episode: 1,
+              title: item.title,
+              slug: item.slug,
+              source: `${BASE}/${item.slug}/`,
+              date: "",
+              players: [],
+            },
+          ],
+        };
+      }
       for (let j = 0; j < detail.episodes.length; j++) {
         const ep = detail.episodes[j];
         if (ep.inline) {
@@ -923,7 +983,7 @@ export async function syncAnimeSchedule(page, dataDirs) {
     waitUntil: "domcontentloaded",
     timeout: 120000,
   });
-  if (!(await waitReady(page))) {
+  if (!(await waitReady(page, 20000))) {
     throw new Error("Cloudflare timeout (jadwal-rilis)");
   }
   await page.waitForSelector(".east_days_option[data-day]", { timeout: 30000 });
