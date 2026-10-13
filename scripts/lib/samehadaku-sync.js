@@ -271,6 +271,10 @@ async function mergeAnimeLatestFeed(dataDir, listings) {
 export function extractMovieListings(html) {
   const items = [];
   const seen = new Set();
+  const marker = html.search(/Project Movie/i);
+  // /anime-movie/ juga menampilkan anime terbaru. Hanya blok Project Movie yang film.
+  html = marker >= 0 ? html.slice(marker) : "";
+  if (!html) return items;
   const push = (href, title, thumb) => {
     if (!/\/anime\//i.test(href || "")) return;
     const slug = slugFromUrl(href);
@@ -391,24 +395,42 @@ function extractMovieDetail(html, fallback = {}) {
   return meta;
 }
 
-function extractPlayerOptions(html) {
+function embedUrlFromOption(tag) {
+  const raw = tag.match(/data-embed=["']([\s\S]*?)["']/i)?.[1] || "";
+  if (!raw) return "";
+  const decoded = decodeEntities(raw);
+  const src =
+    decoded.match(/<iframe[^>]+src=["']([^"']+)["']/i)?.[1] ||
+    decoded.match(/src=["']([^"']+)["']/i)?.[1] ||
+    "";
+  if (!src || /just a moment|tunggu sebentar|challenges\.cloudflare|admin-ajax\.php/i.test(src)) {
+    return "";
+  }
+  return src;
+}
+
+export function extractPlayerOptions(html) {
   const options = [];
-  // Cocokkan blok option; atribut data-* boleh urutan bebas.
+  // Halaman tonton menaruh iframe tiap server di data-embed.
+  // /anime/<slug>/ tidak punya server; tombol play membuka /<slug>/ atau /<slug>-episode-N/.
   const blockRe =
-    /<[^>]*class=["'][^"']*east_player_option[^"']*["'][^>]*>[\s\S]*?<span>([\s\S]*?)<\/span>/gi;
+    /<[^>]*class=["'][^"']*east_player_option[^"']*["'][^>]*>[\s\S]*?<span(?:\s[^>]*)?>([\s\S]*?)<\/span>/gi;
   let m;
   while ((m = blockRe.exec(html)) !== null) {
     const tag = m[0];
+    const label = stripTags(m[1]);
+    const url = embedUrlFromOption(tag);
+    if (/\bdisabled\b/i.test(tag) && !url) continue;
     const post = tag.match(/data-post=["'](\d+)["']/i)?.[1];
     const nume = tag.match(/data-nume=["'](\d+)["']/i)?.[1];
     const type = tag.match(/data-type=["']([^"']+)["']/i)?.[1];
-    if (!post || !nume || !type) continue;
-    const label = stripTags(m[1]);
+    if (!url && (!post || !nume || !type)) continue;
     options.push({
       post,
       nume,
       type,
       label,
+      url,
       server:
         label.replace(/\s+\d+p$/i, "").trim().toLowerCase().replace(/\s+/g, "-") || "server",
     });
@@ -439,6 +461,18 @@ async function resolvePlayers(page, episodeHtml) {
   const players = [];
   for (let i = 0; i < options.length; i++) {
     const opt = options[i];
+    if (opt.url) {
+      players.push({
+        no: players.length + 1,
+        server: opt.server,
+        label: opt.label,
+        url: opt.url,
+        default: players.length === 0,
+        post: opt.post,
+        nume: opt.nume,
+      });
+      continue;
+    }
     try {
       const body = await page.evaluate(
         async ({ post, nume, type }) => {
