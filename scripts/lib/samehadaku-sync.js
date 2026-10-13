@@ -4,8 +4,7 @@
  * Anime series: https://v2.samehadaku.how/anime-terbaru/ (halaman 1–5)
  *   → tambah anime baru + episode baru saja (tanpa refresh/backfill player lama)
  *
- * Anime movie: https://v2.samehadaku.how/anime-movie/
- *   → hanya tambah judul baru ke anime-movies.json
+ * Anime movie: dinonaktifkan sementara (halaman /anime-movie/ tercampur anime terbaru).
  *
  * Jadwal rilis: https://v2.samehadaku.how/jadwal-rilis/
  *   → public/data/anime-schedule.json (overwrite tiap sync)
@@ -976,13 +975,17 @@ async function applyMoviesToCatalog(page, dataDir, listings) {
   };
 }
 
-async function syncAnimeMovies(page, dataDirs) {
+async function syncAnimeMovies(_page, dataDirs) {
   const dirs = asDataDirs(dataDirs);
-  const listings = await collectMovieListings(page);
-  const results = [];
-  for (const dataDir of dirs) {
-    results.push(await applyMoviesToCatalog(page, dataDir, listings));
-  }
+  console.log("[samehadaku-sync] anime movie dinonaktifkan");
+  const results = dirs.map((dataDir) => ({
+    target: dirLabel(dataDir),
+    checked: 0,
+    added: 0,
+    updated: 0,
+    slugs: [],
+    skipped: true,
+  }));
   return results.length === 1 ? results[0] : results;
 }
 

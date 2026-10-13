@@ -21,6 +21,9 @@ const DATA_DIR = join(ROOT, "public", "data");
 const OUT_FILE = join(DATA_DIR, "anime-movies.json");
 
 const BASE = "https://v2.samehadaku.how";
+
+console.log("[scrape-anime-movie] dinonaktifkan sementara");
+process.exit(0);
 const LIST_URL = `${BASE}/anime-movie/`;
 
 function parseArgs(argv) {
