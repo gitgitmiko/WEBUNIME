@@ -166,6 +166,101 @@ function nextId(list) {
 }
 
 /** Kartu di /anime-terbaru/ → anime slug + nomor episode baru. */
+
+function listingImageUrl(block) {
+  const img = String(block || "").match(/<img\b[^>]*>/i)?.[0] || "";
+  const cut = img.replace(/\sonerror\s*=\s*(["'])[\s\S]*$/i, "");
+  return cut.match(/\ssrc\s*=\s*["']([^"']+)["']/i)?.[1] || "";
+}
+
+export function isBrokenThumb(url) {
+  const value = String(url || "").trim().replace(/\/+$/, "");
+  return !value || /\/wp-content\/uploads$/i.test(value);
+}
+
+export function ogImageUrl(html) {
+  return (
+    html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1] ||
+    html.match(/content=["']([^"']+)["'][^>]*property=["']og:image["']/i)?.[1] ||
+    ""
+  );
+}
+
+export function watchEpisodeLinks(html, animeSlug) {
+  const slug = String(animeSlug || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  if (!slug) return [];
+  const re = new RegExp(
+    "href=[\"'](?:https?:\\/\\/v2\\.samehadaku\\.how)?\\/(" + slug + "-episode-(\\d+))\\/?[\"']",
+    "gi"
+  );
+  const links = [];
+  const seen = new Set();
+  let match;
+  while ((match = re.exec(html)) !== null) {
+    const episode = Number(match[2]);
+    if (!episode || seen.has(episode)) continue;
+    seen.add(episode);
+    links.push({
+      episode,
+      slug: match[1],
+      source: `${BASE}/${match[1]}/`,
+    });
+  }
+  return links.sort((a, b) => a.episode - b.episode);
+}
+
+function needsEpisodeBackfill(anime) {
+  if (isBrokenThumb(anime?.thumbnail)) return true;
+  const nums = (anime?.episodes || []).map((ep) => Number(ep.episode)).filter((n) => n > 0);
+  if (!nums.length) return false;
+  const max = Math.max(...nums);
+  if (max > 8) return false;
+  for (let n = 1; n < max; n += 1) {
+    if (!nums.includes(n)) return true;
+  }
+  return false;
+}
+
+export async function completeFromWatchPage(page, anime) {
+  const episodes = anime.episodes || [];
+  const latest = [...episodes].sort((a, b) => Number(b.episode) - Number(a.episode))[0];
+  if (!latest?.source) return 0;
+  await page.goto(latest.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+  if (!(await waitReady(page, 12000))) return 0;
+  const html = await page.content();
+  const poster = ogImageUrl(html);
+  if (poster && isBrokenThumb(anime.thumbnail)) anime.thumbnail = absUrl(poster);
+  const known = new Set(episodes.map((ep) => Number(ep.episode)));
+  let added = 0;
+  for (const link of watchEpisodeLinks(html, anime.slug)) {
+    if (known.has(link.episode)) continue;
+    const ep = {
+      episode: link.episode,
+      title: `${anime.judul || anime.nama || anime.slug} Episode ${link.episode}`,
+      slug: link.slug,
+      source: link.source,
+      date: "",
+      released_at: new Date().toISOString(),
+      players: [],
+    };
+    try {
+      await scrapeEpisodePlayers(page, ep);
+    } catch (err) {
+      console.warn(`[samehadaku-sync] backfill ${anime.slug} ep ${link.episode}: ${err.message}`);
+    }
+    episodes.push(ep);
+    known.add(link.episode);
+    added += 1;
+    await sleep(DETAIL_DELAY_MS);
+  }
+  episodes.sort((a, b) => Number(a.episode) - Number(b.episode));
+  anime.episodes = episodes;
+  anime.episodes_count = episodes.length;
+  anime.durasi = episodes.length ? `${episodes.length} eps` : anime.durasi || "";
+  anime.players = preferPlayers(episodes);
+  return added;
+}
+
 export function extractTerbaruListings(html) {
   const items = [];
   const cardRe = /<li[^>]*itemscope[\s\S]*?<\/li>/gi;
@@ -180,7 +275,7 @@ export function extractTerbaruListings(html) {
       block.match(/class=["']entry-title["'][\s\S]*?<a[^>]*>([\s\S]*?)<\/a>/i)?.[1] ||
       block.match(/href=["'][^"']*\/anime\/[^"']+["'][^>]*title=["']([^"']+)["']/i)?.[1] ||
       "";
-    const thumb = block.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1] || "";
+    const thumb = listingImageUrl(block);
     const epRaw = stripTags(block.match(/<b>\s*Episode\s*<\/b>\s*([^<]+)/i)?.[1] || "");
     const epNum = Number(epRaw);
     const releasedOn = stripTags(
@@ -734,6 +829,19 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
           await scrapeEpisodePlayers(page, toFetch[j]);
           if (j < toFetch.length - 1) await sleep(DETAIL_DELAY_MS);
         }
+        if (needsEpisodeBackfill({ thumbnail: detail.thumbnail, episodes: detail.episodes, slug: item.slug, judul: detail.judul })) {
+          const holder = {
+            slug: item.slug,
+            judul: detail.judul,
+            nama: item.title,
+            thumbnail: detail.thumbnail,
+            episodes: detail.episodes,
+          };
+          const filled = await completeFromWatchPage(page, holder);
+          detail.episodes = holder.episodes;
+          detail.thumbnail = holder.thumbnail;
+          if (filled) console.log(`[samehadaku-sync] backfill baru ${item.slug} +${filled} episode`);
+        }
 
         const nama = (detail.judul || item.title).replace(/\s*\(\d{4}\)\s*$/, "").trim();
         const entry = {
@@ -777,6 +885,16 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
         const knownNums = new Set((current.episodes || []).map((e) => Number(e.episode)));
         const feedEp = Number(item.episode);
         if (knownNums.has(feedEp)) {
+          if (needsEpisodeBackfill(current)) {
+            const filled = await completeFromWatchPage(page, current);
+            if (filled || !isBrokenThumb(current.thumbnail)) {
+              updatedAnime += 1;
+              addedEps += filled;
+              touched.push(item.slug);
+              changed = true;
+              if (filled) console.log(`[samehadaku-sync] backfill ${item.slug} +${filled} episode`);
+            }
+          }
           continue;
         }
         console.log(`[samehadaku-sync] +ep ${item.slug} #${feedEp}`);

@@ -5,11 +5,11 @@
     "nama": "Yowaki Max",
     "judul": "Yowaki Max",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Yowaki-M2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "Anime Yowaki Max.",
     "related": [],
@@ -18,12 +18,58 @@
     "season_label": "",
     "episodes": [
       {
+        "episode": 1,
+        "title": "Yowaki Max Episode 1",
+        "slug": "yowaki-max-episode-1",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-1/",
+        "date": "",
+        "released_at": "2026-10-13T18:19:52.727Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyk9S6XLYWp-U2HjR0DpZ5ThppRCzBaJydjdpnOcTHj3Rx6FgRp-yg3cWpRk3LqsiMwKM2keZs93xZ63UwchdYpD8TB9N5lgUQ2sjfXIDJdYJYJIvogpXtDdmicfQmlFFZBbFT7&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54422",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/hMZzSQrR#KhSH_T4Pyxv2RHvM4CtRy-TcEMMjGQjcL0VNB2RSTG0",
+            "default": false,
+            "post": "54422",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/sJADzIQB#--z5_O3DrVs2BKvR11rcddsssKe7xFP5EuWKIx7QitM",
+            "default": false,
+            "post": "54422",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/kRQm2CTJ#gXmBdW4r5kFhTUiZaaPbmanTtRWWDvlIV70lkmh9Kwg",
+            "default": false,
+            "post": "54422",
+            "nume": "5"
+          }
+        ]
+      },
+      {
         "episode": 2,
         "title": "Yowaki Max Episode 2",
         "slug": "yowaki-max-episode-2",
         "source": "https://v2.samehadaku.how/yowaki-max-episode-2/",
         "date": "",
-        "released_at": "2026-10-13T16:20:35.282Z",
+        "released_at": "2026-10-13T16:20:31.476Z",
         "players": [
           {
             "no": 1,
@@ -33,6 +79,33 @@
             "default": true,
             "post": "54585",
             "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/y0ATTKBR#qpYdMBXdhElsI9yBrUNJK3wVEtD9FF8oeAtV7rUdLLw",
+            "default": false,
+            "post": "54585",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/qwAURDLA#2mkMJWQSyY5PSW3Yxz3ahq8u58xHmnMiJQafwm9ilFI",
+            "default": false,
+            "post": "54585",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/C8wUEQbC#QTtJ6cdiYWt9hSIftqTOEIHOpaDoIbi4A0-5KYdv1Fc",
+            "default": false,
+            "post": "54585",
+            "nume": "5"
           }
         ]
       }
@@ -46,6 +119,33 @@
         "default": true,
         "post": "54585",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/y0ATTKBR#qpYdMBXdhElsI9yBrUNJK3wVEtD9FF8oeAtV7rUdLLw",
+        "default": false,
+        "post": "54585",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/qwAURDLA#2mkMJWQSyY5PSW3Yxz3ahq8u58xHmnMiJQafwm9ilFI",
+        "default": false,
+        "post": "54585",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/C8wUEQbC#QTtJ6cdiYWt9hSIftqTOEIHOpaDoIbi4A0-5KYdv1Fc",
+        "default": false,
+        "post": "54585",
+        "nume": "5"
       }
     ],
     "id": 1,
@@ -57,11 +157,11 @@
     "nama": "Ao no Hako Season 2",
     "judul": "Ao no Hako Season 2",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "Anime Ao no Hako Season 2.",
     "related": [],
@@ -70,12 +170,58 @@
     "season_label": "",
     "episodes": [
       {
+        "episode": 1,
+        "title": "Ao no Hako Season 2 Episode 1",
+        "slug": "ao-no-hako-season-2-episode-1",
+        "source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-1/",
+        "date": "",
+        "released_at": "2026-10-13T18:19:54.258Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxUkqP8oVGANgAnnCiPvXLX9_8051eO1VUK6wiObvY4yfXbVFHOu5NR4Dq29xMy6mwsZaYSvfBeO-X-Q_5d7aotoEcPfH8Jz4hiaWgO8QBlHWz0Ct-O0nZmYLmZ8K6PwPjixHTC",
+            "default": true,
+            "post": "54413",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/J2wSBBoB#yAG0BnlOqy5h2JVf6l_RSjh596Zr1IqQaCNnNSSjOko",
+            "default": false,
+            "post": "54413",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/B3AyzZ6B#p9qviYoEkYSHQieldU2dlNbyciHWlwguOF-Hk4w3ijw",
+            "default": false,
+            "post": "54413",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/1zRkXRTa#KvMUQ1CUmXQGPI74gpO917dNk-lSJ3DgkMSPaOvHKCY",
+            "default": false,
+            "post": "54413",
+            "nume": "5"
+          }
+        ]
+      },
+      {
         "episode": 2,
         "title": "Ao no Hako Season 2 Episode 2",
         "slug": "ao-no-hako-season-2-episode-2",
         "source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-2/",
         "date": "",
-        "released_at": "2026-10-13T16:20:34.931Z",
+        "released_at": "2026-10-13T16:20:29.806Z",
         "players": [
           {
             "no": 1,
@@ -88,19 +234,30 @@
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyoWKEednI6YESLKmKsM4rc_N0qusbuk81_9XQxklLZUzqsHKf3bMinuulRAPwJHBOwcPiD8sO_CDt-lS68mUV7EyAYxDidnwXS39j7SgW68VJAD9RYONInKVYOYIktdVMnvqg",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/8zgEECba#PGEgz_C-DuGxxg5qc9GHreaWMawdyI0egM88DmLs2eI",
             "default": false,
-            "source": "anoboy"
+            "post": "54587",
+            "nume": "3"
           },
           {
             "no": 3,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyFOXeuXPhfkcsNq50noVH-wi-XrYCCqsW8PJti88uk6ILUAfH_tcOqqauvMnxiSeh5uRtrFKSOEJNPS40bfgEHu0tBUUzGZL1V2rywqBmSdea0zq63bBA7riBxwbg0yaTpivQ",
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/s65HAC7C#WA8JEqFzG-nGe8OzW0YoHIQq2suv_bHp4RHzHPHl11g",
             "default": false,
-            "source": "anoboy"
+            "post": "54587",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/RjZgiRbT#8qkCDgGKd_KUpL-GKD0CtVnZ8aGLTnKyDIGsd3DOrY4",
+            "default": false,
+            "post": "54587",
+            "nume": "5"
           }
         ]
       }
@@ -114,6 +271,33 @@
         "default": true,
         "post": "54587",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/8zgEECba#PGEgz_C-DuGxxg5qc9GHreaWMawdyI0egM88DmLs2eI",
+        "default": false,
+        "post": "54587",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/s65HAC7C#WA8JEqFzG-nGe8OzW0YoHIQq2suv_bHp4RHzHPHl11g",
+        "default": false,
+        "post": "54587",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/RjZgiRbT#8qkCDgGKd_KUpL-GKD0CtVnZ8aGLTnKyDIGsd3DOrY4",
+        "default": false,
+        "post": "54587",
+        "nume": "5"
       }
     ],
     "id": 2,
@@ -125,7 +309,7 @@
     "nama": "Mission: Yozakura Family Season 2 Part 2",
     "judul": "Mission: Yozakura Family Season 2 Part 2",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Mission-Yozakura-Family-Season-2-Part-2-Episode-1.jpg",
     "rating": null,
     "votes": null,
     "durasi": "1 eps",
@@ -143,7 +327,7 @@
         "slug": "mission-yozakura-family-season-2-part-2-episode-1",
         "source": "https://v2.samehadaku.how/mission-yozakura-family-season-2-part-2-episode-1/",
         "date": "",
-        "released_at": "2026-10-13T16:20:34.580Z",
+        "released_at": "2026-10-13T16:20:28.143Z",
         "players": [
           {
             "no": 1,
@@ -153,6 +337,33 @@
             "default": true,
             "post": "54597",
             "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/83pSETTZ#oLs-Xp5Lu4xn4ohRZLUqxOzctP8xw2MNfBmbQR32iFU",
+            "default": false,
+            "post": "54597",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/k3gRybTD#PQQFC9TYmQFHXVVs35q7lj8LEx6TVblo7oFap9Rl4Cg",
+            "default": false,
+            "post": "54597",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/x7w1BRqD#i7lQJI9RcA-fQmS-TuG3u0ihNIOmATEGp6ebIrOWZ_0",
+            "default": false,
+            "post": "54597",
+            "nume": "5"
           }
         ]
       }
@@ -166,6 +377,33 @@
         "default": true,
         "post": "54597",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/83pSETTZ#oLs-Xp5Lu4xn4ohRZLUqxOzctP8xw2MNfBmbQR32iFU",
+        "default": false,
+        "post": "54597",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/k3gRybTD#PQQFC9TYmQFHXVVs35q7lj8LEx6TVblo7oFap9Rl4Cg",
+        "default": false,
+        "post": "54597",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/x7w1BRqD#i7lQJI9RcA-fQmS-TuG3u0ihNIOmATEGp6ebIrOWZ_0",
+        "default": false,
+        "post": "54597",
+        "nume": "5"
       }
     ],
     "id": 3,
@@ -177,11 +415,11 @@
     "nama": "Kanata kara",
     "judul": "Kanata kara",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "Anime Kanata kara.",
     "related": [],
@@ -190,12 +428,58 @@
     "season_label": "",
     "episodes": [
       {
+        "episode": 1,
+        "title": "Kanata kara Episode 1",
+        "slug": "kanata-kara-episode-1",
+        "source": "https://v2.samehadaku.how/kanata-kara-episode-1/",
+        "date": "",
+        "released_at": "2026-10-13T18:19:56.024Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxM2wKeoFLQ_WIBdi9k6wWBggqDqTSE49YKVqm_aIaOZeGvxg3-Ka6KT_pKV6RpjM9hwBnIUhI97u7GEKpM17chrVywjEWRXQDUyLgt_sQUPguoV2H1pLfR23VD4BF1OcuE-ESg",
+            "default": true,
+            "post": "54446",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/R7QHVJJB#5zHWZjbEDhqYScEzcMW96Ppq8WFy-p1EeSc5gQWmZ4Y",
+            "default": false,
+            "post": "54446",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/t3YVzJgD#dZYqyHJVu8NKyYbP1W9QVROGJCwS75ZdYOH6uhOeI7c",
+            "default": false,
+            "post": "54446",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/BiwSgRCR#jqebIojZauWFnxdr65bQqejop8ikouZgJsVxRbMSH98",
+            "default": false,
+            "post": "54446",
+            "nume": "5"
+          }
+        ]
+      },
+      {
         "episode": 2,
         "title": "Kanata kara Episode 2",
         "slug": "kanata-kara-episode-2",
         "source": "https://v2.samehadaku.how/kanata-kara-episode-2/",
         "date": "",
-        "released_at": "2026-10-13T16:20:34.229Z",
+        "released_at": "2026-10-13T16:20:26.570Z",
         "players": [
           {
             "no": 1,
@@ -205,6 +489,33 @@
             "default": true,
             "post": "54626",
             "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/9iwzRRxS#u1Nrdxk9bjiRBf6zdHNTtp75Dxr37B6kyE5c_29oRyg",
+            "default": false,
+            "post": "54626",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/9vxlRBpS#xnIPDyjIX5Uf8CFdr0kpDgnjh4TxispIjrSWplYM9qQ",
+            "default": false,
+            "post": "54626",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/9rwiBSrC#LzGuYuyOmANbqFSJrEyGl40x9CyXX3f3HqE-1Q0YOAw",
+            "default": false,
+            "post": "54626",
+            "nume": "5"
           }
         ]
       }
@@ -218,6 +529,33 @@
         "default": true,
         "post": "54626",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/9iwzRRxS#u1Nrdxk9bjiRBf6zdHNTtp75Dxr37B6kyE5c_29oRyg",
+        "default": false,
+        "post": "54626",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/9vxlRBpS#xnIPDyjIX5Uf8CFdr0kpDgnjh4TxispIjrSWplYM9qQ",
+        "default": false,
+        "post": "54626",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/9rwiBSrC#LzGuYuyOmANbqFSJrEyGl40x9CyXX3f3HqE-1Q0YOAw",
+        "default": false,
+        "post": "54626",
+        "nume": "5"
       }
     ],
     "id": 4,
@@ -229,11 +567,11 @@
     "nama": "Ao Ashi S2",
     "judul": "Ao Ashi S2",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-Ashi-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "Anime Ao Ashi S2.",
     "related": [],
@@ -242,12 +580,58 @@
     "season_label": "",
     "episodes": [
       {
+        "episode": 1,
+        "title": "Ao Ashi S2 Episode 1",
+        "slug": "ao-ashi-s2-episode-1",
+        "source": "https://v2.samehadaku.how/ao-ashi-s2-episode-1/",
+        "date": "",
+        "released_at": "2026-10-13T18:19:58.011Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxRNITF1NjYLdItlCeNU-IOSGgZoXwFPngdFpKADP2LnRmo1FCdYZ2ylGQAqQV_H5O3dGGRMEEUG6EDTjfg4atoDt_DULDGdAKoEiMfnD-lFB5uI5VKoqdk0UvmEI-sXgs8eyE&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54410",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/5VAgzZSR#QBjNTTAd1qQvmkI0d-sfPx4I9aM5bO8gTv72dNNnAZ4",
+            "default": false,
+            "post": "54410",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/pVZmFbST#5zp9GqmPeOkelO3BbPstOw4shrpanYmWBB-2b4ZqYMU",
+            "default": false,
+            "post": "54410",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/tJQkGAQJ#wD2w92ar0lsCkTLbSY0ppmxx3Oum9MLK1x81pTuDJog",
+            "default": false,
+            "post": "54410",
+            "nume": "5"
+          }
+        ]
+      },
+      {
         "episode": 2,
         "title": "Ao Ashi S2 Episode 2",
         "slug": "ao-ashi-s2-episode-2",
         "source": "https://v2.samehadaku.how/ao-ashi-s2-episode-2/",
         "date": "",
-        "released_at": "2026-10-13T16:20:33.878Z",
+        "released_at": "2026-10-13T16:20:25.177Z",
         "players": [
           {
             "no": 1,
@@ -257,6 +641,33 @@
             "default": true,
             "post": "54608",
             "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/n45mgY5L#_SEEp3XA5SDcKZP6ISHQMqIYGMtKEmmUKtOuu254IBc",
+            "default": false,
+            "post": "54608",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/egoggAyJ#r0VacdjsuKfNOmbyzq-SZgRq2XwaE3O6gDpDEoNCDOU",
+            "default": false,
+            "post": "54608",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/fhZDjb4a#Rd-TYL54ijjr-OjOYEfLdOCc2zLdl5iaXNMzgbnMZM4",
+            "default": false,
+            "post": "54608",
+            "nume": "5"
           }
         ]
       }
@@ -270,6 +681,33 @@
         "default": true,
         "post": "54608",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/n45mgY5L#_SEEp3XA5SDcKZP6ISHQMqIYGMtKEmmUKtOuu254IBc",
+        "default": false,
+        "post": "54608",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/egoggAyJ#r0VacdjsuKfNOmbyzq-SZgRq2XwaE3O6gDpDEoNCDOU",
+        "default": false,
+        "post": "54608",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/fhZDjb4a#Rd-TYL54ijjr-OjOYEfLdOCc2zLdl5iaXNMzgbnMZM4",
+        "default": false,
+        "post": "54608",
+        "nume": "5"
       }
     ],
     "id": 5,
@@ -281,7 +719,7 @@
     "nama": "Diamond no Ace Act II Season 2 Cour 2",
     "judul": "Diamond no Ace Act II Season 2 Cour 2",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Screenshot-909.jpg",
     "rating": null,
     "votes": null,
     "durasi": "1 eps",
@@ -299,7 +737,7 @@
         "slug": "diamond-no-ace-act-ii-season-2-cour-2-episode-2",
         "source": "https://v2.samehadaku.how/diamond-no-ace-act-ii-season-2-cour-2/",
         "date": "",
-        "released_at": "2026-10-13T16:20:33.527Z",
+        "released_at": "2026-10-13T16:20:23.757Z",
         "players": [
           {
             "no": 1,
@@ -309,6 +747,33 @@
             "default": true,
             "post": "54615",
             "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/u8wxRLyZ#31gHwXP1O6gEwx0KcZarfdS5G5D0i8tGZL-aRQXaNjE",
+            "default": false,
+            "post": "54615",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/25wk3aqY#YUtsA2wPgiKrY3mQKVlpwygWH7F-DkNzEycMZ1VYyFs",
+            "default": false,
+            "post": "54615",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/68oCjLDK#WPT3ptM8IfxzQ86cSMTobCQCpQ0dyVDK2iXEdc58ssk",
+            "default": false,
+            "post": "54615",
+            "nume": "5"
           }
         ]
       }
@@ -322,6 +787,33 @@
         "default": true,
         "post": "54615",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/u8wxRLyZ#31gHwXP1O6gEwx0KcZarfdS5G5D0i8tGZL-aRQXaNjE",
+        "default": false,
+        "post": "54615",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/25wk3aqY#YUtsA2wPgiKrY3mQKVlpwygWH7F-DkNzEycMZ1VYyFs",
+        "default": false,
+        "post": "54615",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/68oCjLDK#WPT3ptM8IfxzQ86cSMTobCQCpQ0dyVDK2iXEdc58ssk",
+        "default": false,
+        "post": "54615",
+        "nume": "5"
       }
     ],
     "id": 6,
@@ -333,11 +825,11 @@
     "nama": "Kashita Maryoku",
     "judul": "Kashita Maryoku",
     "tahun": "",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "1 eps",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [],
     "sinopsis": "Anime Kashita Maryoku.",
     "related": [],
@@ -346,12 +838,58 @@
     "season_label": "",
     "episodes": [
       {
+        "episode": 1,
+        "title": "Kashita Maryoku Episode 1",
+        "slug": "kashita-maryoku-episode-1",
+        "source": "https://v2.samehadaku.how/kashita-maryoku-episode-1/",
+        "date": "",
+        "released_at": "2026-10-13T18:19:59.876Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwbzq35nEeJeOxX2B-tqOz_vy_JB2_c-nDSkp0n6BO07vNoFqxdhGpAST2N-hHv6BzFs0hCwnIHfw3LPQ3APVDokLAEWq-yhkHX3vRCLwHxakTrIU_rTu3SllfrRUcvwv3dtvFW&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54387",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/oMYnHJCT#UCCFuYwWEe44bBKFp_g5NaOdLe9dfzST9htn4b6hIz4",
+            "default": false,
+            "post": "54387",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/RU5hCZLT#RGwOwBpdgMYU1hSWsiP1yrICZakEbJ1a8sgKCsyo97A",
+            "default": false,
+            "post": "54387",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/NFRQnIQT#a7Lu_YuhV2RlHxZtEVPDh0aGkf8bJ7MtFKx146GGRYQ",
+            "default": false,
+            "post": "54387",
+            "nume": "5"
+          }
+        ]
+      },
+      {
         "episode": 2,
         "title": "Kashita Maryoku Episode 2",
         "slug": "kashita-maryoku-episode-2",
         "source": "https://v2.samehadaku.how/kashita-maryoku-episode-2/",
         "date": "",
-        "released_at": "2026-10-13T16:20:33.177Z",
+        "released_at": "2026-10-13T16:20:21.993Z",
         "players": [
           {
             "no": 1,
@@ -361,6 +899,33 @@
             "default": true,
             "post": "54635",
             "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/L5RAzZJZ#-eAzFMZ89iquYsZl2Zlp9rRrAjKZms3iKG8lHpoVn1w",
+            "default": false,
+            "post": "54635",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/r05XSThK#Vo_Bw4ELcZR0U900Q3-hUYS5pgl9KV159gI6nRvgNG0",
+            "default": false,
+            "post": "54635",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/WsojRYCB#XEwjQcloG26m9yNihW1Ec2x5ROhlmSDbQQALoOzVQnA",
+            "default": false,
+            "post": "54635",
+            "nume": "5"
           }
         ]
       }
@@ -374,6 +939,33 @@
         "default": true,
         "post": "54635",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/L5RAzZJZ#-eAzFMZ89iquYsZl2Zlp9rRrAjKZms3iKG8lHpoVn1w",
+        "default": false,
+        "post": "54635",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/r05XSThK#Vo_Bw4ELcZR0U900Q3-hUYS5pgl9KV159gI6nRvgNG0",
+        "default": false,
+        "post": "54635",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/WsojRYCB#XEwjQcloG26m9yNihW1Ec2x5ROhlmSDbQQALoOzVQnA",
+        "default": false,
+        "post": "54635",
+        "nume": "5"
       }
     ],
     "id": 7,
@@ -660,7 +1252,7 @@
             "label": "Blogspot",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyHAHYgwwCXja6zFE7Iu99tQS_JYT6BclsLZDwVN98aCR9FlvswYq7_sCL5RK2od2acrWlkVayh6PMVzI8bZZUaRBUhzbFdjiqKebCGRXRg9vpvzRNNt6mli84EH_y7yWv0u1vU",
             "default": true,
-            "post": "54264",
+            "post": "54602",
             "nume": "1"
           },
           {
@@ -669,7 +1261,7 @@
             "label": "Mega 480p",
             "url": "https://mega.nz/embed/tigHGbAR#1tOYV8GTYeKc5FNJCzvnic4zpexRGL7M-ajAkRP86TA",
             "default": false,
-            "post": "54264",
+            "post": "54602",
             "nume": "3"
           },
           {
@@ -678,7 +1270,7 @@
             "label": "Mega 720p",
             "url": "https://mega.nz/embed/MnI1mDYA#aHpKCwKbAPEkt_TfxzcyU6H6yBH1hxoLnq0TjaqV_p8",
             "default": false,
-            "post": "54264",
+            "post": "54602",
             "nume": "4"
           },
           {
@@ -687,7 +1279,7 @@
             "label": "Mega 1080p",
             "url": "https://mega.nz/embed/kqxDHDpD#l4IPAyIwYFjqz-qlI0TV4_seggJiALJU7EHK6pxZeQQ",
             "default": false,
-            "post": "54264",
+            "post": "54602",
             "nume": "5"
           }
         ],
@@ -701,7 +1293,7 @@
         "label": "Blogspot",
         "url": "https://www.blogger.com/video.g?token=AD6v5dyHAHYgwwCXja6zFE7Iu99tQS_JYT6BclsLZDwVN98aCR9FlvswYq7_sCL5RK2od2acrWlkVayh6PMVzI8bZZUaRBUhzbFdjiqKebCGRXRg9vpvzRNNt6mli84EH_y7yWv0u1vU",
         "default": true,
-        "post": "54264",
+        "post": "54602",
         "nume": "1"
       },
       {
@@ -710,7 +1302,7 @@
         "label": "Mega 480p",
         "url": "https://mega.nz/embed/tigHGbAR#1tOYV8GTYeKc5FNJCzvnic4zpexRGL7M-ajAkRP86TA",
         "default": false,
-        "post": "54264",
+        "post": "54602",
         "nume": "3"
       },
       {
@@ -719,7 +1311,7 @@
         "label": "Mega 720p",
         "url": "https://mega.nz/embed/MnI1mDYA#aHpKCwKbAPEkt_TfxzcyU6H6yBH1hxoLnq0TjaqV_p8",
         "default": false,
-        "post": "54264",
+        "post": "54602",
         "nume": "4"
       },
       {
@@ -728,7 +1320,7 @@
         "label": "Mega 1080p",
         "url": "https://mega.nz/embed/kqxDHDpD#l4IPAyIwYFjqz-qlI0TV4_seggJiALJU7EHK6pxZeQQ",
         "default": false,
-        "post": "54264",
+        "post": "54602",
         "nume": "5"
       }
     ],
@@ -770,7 +1362,7 @@
             "label": "Blogspot",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzhjjucCBsWZYobCMiQSIfwUirGdZKcwmnSY06tDytDGEoKYdRgDP2TBucEM-T2mvZ7zFKVJGKeKyv_t-Mn52x0caAAhIFHYprPXBXLnSkQn_ercsatWUMDnY4eGqvuIEuCNMjV",
             "default": true,
-            "post": "54270",
+            "post": "54623",
             "nume": "1"
           },
           {
@@ -779,7 +1371,7 @@
             "label": "Mega 480p",
             "url": "https://mega.nz/embed/MnQCRIAb#vXLzKAEGx-oaXP2J_KF0qS3yp7fzQJyQHtUtZCwftbk",
             "default": false,
-            "post": "54270",
+            "post": "54623",
             "nume": "3"
           },
           {
@@ -788,7 +1380,7 @@
             "label": "Mega 720p",
             "url": "https://mega.nz/embed/lv5y2ZrC#eibO0rX3bw0h98a-tv5IScsBsujrNu_R4LnjXIf4RuE",
             "default": false,
-            "post": "54270",
+            "post": "54623",
             "nume": "4"
           },
           {
@@ -797,24 +1389,8 @@
             "label": "Mega 1080p",
             "url": "https://mega.nz/embed/tvBFCLZQ#jHYKgxs8hgUeczMa5PFnTuwZNOd5somwKFTqOfHxwig",
             "default": false,
-            "post": "54270",
+            "post": "54623",
             "nume": "5"
-          },
-          {
-            "no": 5,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dwikKc9JipXM0t1LUce-yEQT-6X7tj7pblZCK2IaICI79H9Osl40-mKSsxjn8TheNDDPjPGbDlDpD-NEIjIvi4JVzk1nUVELKsrZ-6VDVqKDbCjARLMExSG_BcywdzR_vEJD0Ky",
-            "default": false,
-            "source": "anoboy"
-          },
-          {
-            "no": 6,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dxq8PgD96eSz1Wx3hmNbTVVPH73w96rxaDDg-tfEKg0FvE-2MhfddE6CWRtSA2nPTCY7WvsSZ_XQtBBO7m_ut4syuAXo4GyAdWGZj6dU_h0PGKFUKNyzzJc01VzJA7kty9pW30",
-            "default": false,
-            "source": "anoboy"
           }
         ],
         "released_at": "2026-10-11T20:55:24.572Z"
@@ -827,7 +1403,7 @@
         "label": "Blogspot",
         "url": "https://www.blogger.com/video.g?token=AD6v5dzhjjucCBsWZYobCMiQSIfwUirGdZKcwmnSY06tDytDGEoKYdRgDP2TBucEM-T2mvZ7zFKVJGKeKyv_t-Mn52x0caAAhIFHYprPXBXLnSkQn_ercsatWUMDnY4eGqvuIEuCNMjV",
         "default": true,
-        "post": "54270",
+        "post": "54623",
         "nume": "1"
       },
       {
@@ -836,7 +1412,7 @@
         "label": "Mega 480p",
         "url": "https://mega.nz/embed/MnQCRIAb#vXLzKAEGx-oaXP2J_KF0qS3yp7fzQJyQHtUtZCwftbk",
         "default": false,
-        "post": "54270",
+        "post": "54623",
         "nume": "3"
       },
       {
@@ -845,7 +1421,7 @@
         "label": "Mega 720p",
         "url": "https://mega.nz/embed/lv5y2ZrC#eibO0rX3bw0h98a-tv5IScsBsujrNu_R4LnjXIf4RuE",
         "default": false,
-        "post": "54270",
+        "post": "54623",
         "nume": "4"
       },
       {
@@ -854,7 +1430,7 @@
         "label": "Mega 1080p",
         "url": "https://mega.nz/embed/tvBFCLZQ#jHYKgxs8hgUeczMa5PFnTuwZNOd5somwKFTqOfHxwig",
         "default": false,
-        "post": "54270",
+        "post": "54623",
         "nume": "5"
       }
     ],
@@ -908,24 +1484,44 @@
         "episode": 2,
         "title": "Kyouran Reijou Nia Liston Episode 2",
         "slug": "kyouran-reijou-nia-liston-episode-2",
-        "source": "https://anoboy.quest/2026/10/kyouran-reijou-nia-liston-episode-2/",
+        "source": "https://v2.samehadaku.how/kyouran-reijou-nia-liston-episode-2/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dxMPp8-56JWjCJj34swChE0Lz3foMLcSCFA9EyZSdRZ8LBIis03XRpKljoC9bssbawTR5iK0Nr2Zr5IE_Dk5m6M5THQ22VWLnZbIfzxeiNoNFbj9_Ld34fLG5alTaMx0Fwwb2M",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzZV5cIJ-9y9vsqUHj6-N0l8-hVAyL2_Y_YXu8E09Wa82bW6YRZeUp0FSE5Fd6FJ_zbCVokwAqdOtRXroiQAFXZ67hEAdUi3ukWRGbg64o26mZ7X5pxJv1lgyxy7KdVtaey7MJp&origin=sameguru2.blogspot.com",
             "default": true,
-            "source": "anoboy"
+            "post": "54638",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dxFC5yt35NJK78U7Di7xs-jtTdIxp5-uNuYD4QpT7ExuWenI8cG5xoQB6VHA4vfJDqDUlS-TgRD30_ur6HLPinq_6mWUW5UlTPqYO3Cg9Zqd1C7KJnHMbeLowPw3GyV2lzNQsfz",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/C9p0xByQ#YeY5_D1hQpM2iGLhhnShcpDfCmCOtMVVj_GpdrVE2SY",
             "default": false,
-            "source": "anoboy"
+            "post": "54638",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/L9oFFCra#LRbfAuvFd8i1in3Z1JGh9uRtaxeRFA7_mznYw0_AGs4",
+            "default": false,
+            "post": "54638",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/T440jRBZ#eDR4mNqI8beM5XYFFQT98toNGsHoxYHfkb04keAQ5vY",
+            "default": false,
+            "post": "54638",
+            "nume": "5"
           }
         ]
       }
@@ -933,19 +1529,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzYbYd9UkVyLo9o9Xs5hDlSUn5-6kBfG9DzyxjXsn8TP06sS3cNkw-mcbTVZqtptzIpHoUMrU765l2vDg2QmYeaIWsIBh6p9mOxKzCRCU6-8zTVgjmpvw9zEtL6mg8BZYymKyo",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzZV5cIJ-9y9vsqUHj6-N0l8-hVAyL2_Y_YXu8E09Wa82bW6YRZeUp0FSE5Fd6FJ_zbCVokwAqdOtRXroiQAFXZ67hEAdUi3ukWRGbg64o26mZ7X5pxJv1lgyxy7KdVtaey7MJp&origin=sameguru2.blogspot.com",
         "default": true,
-        "source": "anoboy"
+        "post": "54638",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzgyeKnDj4pi_Vk2SoklHbCZE7Qrh2nUO2ZKAetQzFu-PMvH2ihMSvodv8TAcylB75XPkGGmzouze_XF5_qja6ZFFzpCVaiuoLAlLuv4U6my5IpzxwiacSqenFpRyxao5iYqa-b",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/C9p0xByQ#YeY5_D1hQpM2iGLhhnShcpDfCmCOtMVVj_GpdrVE2SY",
         "default": false,
-        "source": "anoboy"
+        "post": "54638",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/L9oFFCra#LRbfAuvFd8i1in3Z1JGh9uRtaxeRFA7_mznYw0_AGs4",
+        "default": false,
+        "post": "54638",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/T440jRBZ#eDR4mNqI8beM5XYFFQT98toNGsHoxYHfkb04keAQ5vY",
+        "default": false,
+        "post": "54638",
+        "nume": "5"
       }
     ],
     "id": 13,
@@ -1502,24 +2118,44 @@
         "episode": 1,
         "title": "Hotaru no Yomeiri Episode 1",
         "slug": "hotaru-no-yomeiri-episode-1",
-        "source": "https://anoboy.quest/2026/10/hotaru-no-yomeiri-episode-1/",
+        "source": "https://v2.samehadaku.how/hotaru-no-yomeiri-episode-1/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dxtrAp-nWZfHAf69xYZ-15c3-yP3WyzaJ5_NR-UH-uIZrYF5VjYc5HwkB72t9iBz1l3OzGMjgrC8CDuk8XUmPYKFS6t8QGYHYx-2aR53jRSdomVP_NfioW78N0-DpvrU6yJdPQ",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw2rKJdyUE3-aqGoukcy_0JHo1-xUhVcTZVtSA6McF7cFXKxyF1XJCRQqleGY0YE-erSYkxGDzX6XClFa1FC2URqHVOH__uWTKhgR35d4D1_J1eWks-wjSuBotaMbEC1i6-6w",
             "default": true,
-            "source": "anoboy"
+            "post": "54540",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dwa9UX4lcIL8aUIeQEDLEhGKJ5srHhAgYUvNW8N1UG8Zdi2gCf4Jgrp3fPSKP-8vbPU2UfyGyYeaE673SldfwU4btZSaC3eMcorpiBwPbPX6jpxdOvnlMLgJOruOzNmUYte5Wen",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/RipBhAYb#l1kia328gCaaVUF3KrD_Szj5RrECpSrJes-2WI3eSvs",
             "default": false,
-            "source": "anoboy"
+            "post": "54540",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/8uBmQb7C#s31NxF7Tidw4ZkB5okNHpABA_v3iy9v-eaCZvVS5Cu0",
+            "default": false,
+            "post": "54540",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/czxABBKT#r5RzHUhUAD3NyfWqXQv5Iwdlxc133a-8P4MHDADYQx0",
+            "default": false,
+            "post": "54540",
+            "nume": "5"
           }
         ]
       }
@@ -1527,19 +2163,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxtrAp-nWZfHAf69xYZ-15c3-yP3WyzaJ5_NR-UH-uIZrYF5VjYc5HwkB72t9iBz1l3OzGMjgrC8CDuk8XUmPYKFS6t8QGYHYx-2aR53jRSdomVP_NfioW78N0-DpvrU6yJdPQ",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw2rKJdyUE3-aqGoukcy_0JHo1-xUhVcTZVtSA6McF7cFXKxyF1XJCRQqleGY0YE-erSYkxGDzX6XClFa1FC2URqHVOH__uWTKhgR35d4D1_J1eWks-wjSuBotaMbEC1i6-6w",
         "default": true,
-        "source": "anoboy"
+        "post": "54540",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwa9UX4lcIL8aUIeQEDLEhGKJ5srHhAgYUvNW8N1UG8Zdi2gCf4Jgrp3fPSKP-8vbPU2UfyGyYeaE673SldfwU4btZSaC3eMcorpiBwPbPX6jpxdOvnlMLgJOruOzNmUYte5Wen",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/RipBhAYb#l1kia328gCaaVUF3KrD_Szj5RrECpSrJes-2WI3eSvs",
         "default": false,
-        "source": "anoboy"
+        "post": "54540",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/8uBmQb7C#s31NxF7Tidw4ZkB5okNHpABA_v3iy9v-eaCZvVS5Cu0",
+        "default": false,
+        "post": "54540",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/czxABBKT#r5RzHUhUAD3NyfWqXQv5Iwdlxc133a-8P4MHDADYQx0",
+        "default": false,
+        "post": "54540",
+        "nume": "5"
       }
     ],
     "id": 22,
@@ -1722,24 +2378,44 @@
         "episode": 1,
         "title": "Shuiro no Kamen Episode 1",
         "slug": "shuiro-no-kamen-episode-1",
-        "source": "https://anoboy.quest/2026/10/shuiro-no-kamen-episode-1/",
+        "source": "https://v2.samehadaku.how/shuiro-no-kamen-episode-1/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzzWVNytPs63t08rfLKHhLuh4ZIxFKJ63f599kkH9Ja8PMtDvif4SRzDYt-Cec84P-LAjh2lwGVqFjOdzL2YU7LtOArLbl0hfFe2bUlDO8hiIH3PohPq8s4LWbibudFXCc9N6Rh",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxqboaQN2eOQBbCORmom4IyOZL9j7dCblTFIyV9zg5sQulpkef0VWBg9TSgkxiDvj6CwQH3luEmOJzjQZ_oPPXW7JwQk62CUVamQJ0cwwd-Vuo5NgFEFBJihp4RzJpH7Q-sPQ&origin=sameguru2.blogspot.com",
             "default": true,
-            "source": "anoboy"
+            "post": "54548",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyb6o7pRl8-FQXvY1Yz1kbywv4Mt4B94I4oyhPr-UqIhaQjp3ktS-lJOnSDN-YElhZBf4tUMyzY8spIK_USj5dFMnFLqOLy4DD-GqDJlVaFARHrgDiSymhOmTXEKaSsdNq4-8y2",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ugx1kCgZ#00K4KulztFks0vJFb7M_NP9pSx0PYi_VggRjv_rKwGs",
             "default": false,
-            "source": "anoboy"
+            "post": "54548",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/L9gn2QTZ#UhBpApsHaibL9AfwXZRK1EAFsxHzp8TdQdaM6bwf40o",
+            "default": false,
+            "post": "54548",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/71hATbTB#2H8rxUS3YOfVaXdz4fGMNMXX8WB7VMPCcmzPJeI9WVI",
+            "default": false,
+            "post": "54548",
+            "nume": "5"
           }
         ]
       }
@@ -1747,19 +2423,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzzWVNytPs63t08rfLKHhLuh4ZIxFKJ63f599kkH9Ja8PMtDvif4SRzDYt-Cec84P-LAjh2lwGVqFjOdzL2YU7LtOArLbl0hfFe2bUlDO8hiIH3PohPq8s4LWbibudFXCc9N6Rh",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxqboaQN2eOQBbCORmom4IyOZL9j7dCblTFIyV9zg5sQulpkef0VWBg9TSgkxiDvj6CwQH3luEmOJzjQZ_oPPXW7JwQk62CUVamQJ0cwwd-Vuo5NgFEFBJihp4RzJpH7Q-sPQ&origin=sameguru2.blogspot.com",
         "default": true,
-        "source": "anoboy"
+        "post": "54548",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyb6o7pRl8-FQXvY1Yz1kbywv4Mt4B94I4oyhPr-UqIhaQjp3ktS-lJOnSDN-YElhZBf4tUMyzY8spIK_USj5dFMnFLqOLy4DD-GqDJlVaFARHrgDiSymhOmTXEKaSsdNq4-8y2",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/ugx1kCgZ#00K4KulztFks0vJFb7M_NP9pSx0PYi_VggRjv_rKwGs",
         "default": false,
-        "source": "anoboy"
+        "post": "54548",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/L9gn2QTZ#UhBpApsHaibL9AfwXZRK1EAFsxHzp8TdQdaM6bwf40o",
+        "default": false,
+        "post": "54548",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/71hATbTB#2H8rxUS3YOfVaXdz4fGMNMXX8WB7VMPCcmzPJeI9WVI",
+        "default": false,
+        "post": "54548",
+        "nume": "5"
       }
     ],
     "id": 25,
@@ -1902,24 +2598,44 @@
         "episode": 2,
         "title": "Doumo, Suki na Hito ni Horegusuri wo Irai sareta Majo desu. Episode 2",
         "slug": "doumo-suki-na-hito-ni-horegusuri-wo-irai-sareta-majo-desu-episode-2",
-        "source": "https://anoboy.quest/2026/10/doumo-suki-na-hito-ni-horegusuri-wo-irai-sareta-majo-desu-episode-2/",
+        "source": "https://v2.samehadaku.how/doumo-suki-na-hito-ni-horegusuri-episode-2/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dwWNV5UhjKZOWbGB42a1GQSHFec6B0OJeyVCBQtvNP1_k7Msixg_1sUh-fRSk4MDDHkB2wbUFk_VGylFvqasc80iKtUGXoC3enJ3olpvdr1Ciet84SoldSV0G8SVb2pYd76GA7J",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyeBYBWWK-yZ-apVLzV7_tMzoVQjd8RVc7dXik7sDRjTUcLZOZB4-E1-rhUfkzJPtR9fXPfiZVPYFSovM6TPbWpOVKPOQkTHX8pOa6qJqhEOUpW3wpnRBdEQYdOKbrPGsdIPxk",
             "default": true,
-            "source": "anoboy"
+            "post": "54605",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzVkDJ69ltL-xY6tWSlALOgsAEUg1J2fClljiYqMm9bGoV1iNQ_jdXWG66BKknlbY8uGKa_zrj_vw1BbqXjplmNtL9vyfJzMAtPxuTDCQhqTOn1u3WKeLz1fmTDpco-JSdgjD94",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/tzgGTLRZ#eT66B0Cas88lszrLR6t0xTsx9rs6SZuTfg-Um1XjF50",
             "default": false,
-            "source": "anoboy"
+            "post": "54605",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/5mxAGBBZ#ZJrZKfoFtNm9qyYrM_xt83wqIHL4ECuMo256NQH5NNY",
+            "default": false,
+            "post": "54605",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/0iBFRYZY#tsoWEpf4sC1rWyfX-icFoaNegMOIV7aHw4VOOMtM4fk",
+            "default": false,
+            "post": "54605",
+            "nume": "5"
           }
         ]
       }
@@ -1927,19 +2643,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwpIENvrPVhjSVm7OIZn2shdcYhBVcKNp0RVF3cNCUIxQRtSrtLPwVhBrlfQ8dLbDXJRdZMvV-Fy8EF6Ey1dc7cT1ltlBH_shwcmdOnJAq5j59O2eFJDuUuh5TvG1jJu1gvnbzh",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyeBYBWWK-yZ-apVLzV7_tMzoVQjd8RVc7dXik7sDRjTUcLZOZB4-E1-rhUfkzJPtR9fXPfiZVPYFSovM6TPbWpOVKPOQkTHX8pOa6qJqhEOUpW3wpnRBdEQYdOKbrPGsdIPxk",
         "default": true,
-        "source": "anoboy"
+        "post": "54605",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxJDsYLAK172QoXs3r-ixsEGFKTFz7Vh_qI0E1wMoW9qJkIatByeI7Rtx0R_VMi99-3oYSTgtg9C6ZbOoq8yL1NzsUsOOvfNTmwxqsTfFnAKAGMRNhFORrbStltO2JzuH4biYU",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/tzgGTLRZ#eT66B0Cas88lszrLR6t0xTsx9rs6SZuTfg-Um1XjF50",
         "default": false,
-        "source": "anoboy"
+        "post": "54605",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/5mxAGBBZ#ZJrZKfoFtNm9qyYrM_xt83wqIHL4ECuMo256NQH5NNY",
+        "default": false,
+        "post": "54605",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/0iBFRYZY#tsoWEpf4sC1rWyfX-icFoaNegMOIV7aHw4VOOMtM4fk",
+        "default": false,
+        "post": "54605",
+        "nume": "5"
       }
     ],
     "id": 27,
@@ -1992,24 +2728,44 @@
         "episode": 2,
         "title": "Psyren Episode 2",
         "slug": "psyren-episode-2",
-        "source": "https://anoboy.quest/2026/10/psyren-episode-2/",
+        "source": "https://v2.samehadaku.how/psyren-episode-2/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzhjrFnnDbx3rur0zH6l7qrNIU0XoDW7HtIqdUL_ul_bp0BFaSY4zShbpYgLlQJWrgvU2pbc6LhKwPngc3zn28W5PvKiWJxaT7L9vf2Zuu_IxpaCplXqsT9jL2FM9JALwmGUxIe",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dz2MjcWY66kY-xWCXZIWQ_Y5B5XycDzluFTuj-LQkzQBKwvdl87gGB1Xcrb41ttP7HJJR5BgLkIySW7A80R0AJnWnRJtgGnCYTFRuP4v2ITgRWUEOaGeB0GmndmBMQernMIIyNu",
             "default": true,
-            "source": "anoboy"
+            "post": "54616",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyGsJLSjM7gja2xxM5rFEdFw8lIDU7CLeJobWPiJf-TEd-nF6NI88An9jdoQ-wF5m7AmXYSlYoqWm95FnCDFT3_3LlzKh_FrkYTxfS2VSy_MroSxqakLUnVqz3-llfnczBGPvdP",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/06R3TQJB#iyIhlQSGp7DD0u5QujMLiXrCkSyRf_rdsr6KSH--E7k",
             "default": false,
-            "source": "anoboy"
+            "post": "54616",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/s2BlwZzC#716Q5EWkvtEW6lRmgN7oeIckrUOvIWskpTYj3gIPTOo",
+            "default": false,
+            "post": "54616",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/pn5jXIgA#8F3ddHKcEAV90v356iVU7V3QTPoQ_k-rKBZWB49ySQ8",
+            "default": false,
+            "post": "54616",
+            "nume": "5"
           }
         ]
       }
@@ -2017,19 +2773,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyGBnB47XJAMcFC-rhLDtSsOhlN1IBXLLtFMpjF1qAWaTQARd9Rpv9hw8autoLCo4RwHzk1ti1wOcjA3FERKPU1cbd9AJrFBRjgNm2TbJbMHarwD_No-O44K3-k5FMsJ6s1jp4",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dz2MjcWY66kY-xWCXZIWQ_Y5B5XycDzluFTuj-LQkzQBKwvdl87gGB1Xcrb41ttP7HJJR5BgLkIySW7A80R0AJnWnRJtgGnCYTFRuP4v2ITgRWUEOaGeB0GmndmBMQernMIIyNu",
         "default": true,
-        "source": "anoboy"
+        "post": "54616",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwbyYiUkPyZdcxpRKvXJyWgaAHE2dbVYTILbmXjI4NYFmHFtp7RfYUC4AdrdRq3qkKsnIzRptsletkthQUROgbQKsWXaov70P4xV9OKsUFM1B7Rzx6IF4eInISQuAWHbk4lDDKt",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/06R3TQJB#iyIhlQSGp7DD0u5QujMLiXrCkSyRf_rdsr6KSH--E7k",
         "default": false,
-        "source": "anoboy"
+        "post": "54616",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/s2BlwZzC#716Q5EWkvtEW6lRmgN7oeIckrUOvIWskpTYj3gIPTOo",
+        "default": false,
+        "post": "54616",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/pn5jXIgA#8F3ddHKcEAV90v356iVU7V3QTPoQ_k-rKBZWB49ySQ8",
+        "default": false,
+        "post": "54616",
+        "nume": "5"
       }
     ],
     "id": 28,
@@ -2107,24 +2883,44 @@
         "episode": 3,
         "title": "Tensei Goblin dakedo Shitsumon Aru? Episode 3",
         "slug": "tensei-goblin-dakedo-shitsumon-aru-episode-3",
-        "source": "https://anoboy.quest/2026/10/tensei-goblin-dakedo-shitsumon-aru-episode-3/",
+        "source": "https://v2.samehadaku.how/tensei-goblin-dakedo-shitsumon-aru-episode-3/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzcaUSPEx0aNWd914txo4OiJK8be4BQk6fRH9GQN8ouc2EKxYS2-Dqaqim0UNzqkol4Ne41cwpXBXCvGxZhmdkKzNwmFbias2SDpZea1GJXEVLwxZR2l0ZgG53QK_v9G-tB2xi4",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxSXZaCBn17_b9d9bNUInbwfjMz3saOLgee3thhURSy9GLd-KoLdq_p7EU11Oxo_mkBZQuWpDaMRKOa35woCo01Hu1_MTJbzQgtBX5CGyIfQB8gXfo6cL0pLah7NIPvBOfp6hM",
             "default": true,
-            "source": "anoboy"
+            "post": "54611",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dz9P5rKySTo_9v2VsBaLSz3s90XnnbfHiyAHDinK701yPxiN8nP10c4OvSbga8-A8p8M7GhaQKEKvYBzYJV8a-9XUufvP1gbHnoncC2B-2IjOwJYiorfsB8OwLWomzNwApYvfl8",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/EvhWRALb#aMrIoqp8cNkH9DZNvrxMYRiLYTzM8LMO55Ynw-Cr74o",
             "default": false,
-            "source": "anoboy"
+            "post": "54611",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/w7Yy2CKA#k4kp54AZ6Wk2mpHXcmZuK8F8FPiAbGxEc1PtKt5KTJU",
+            "default": false,
+            "post": "54611",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/1mRSGJia#aeLhtAPvk9W7FZ7pwb96irE72L9txtVMO6dIgdXKXao",
+            "default": false,
+            "post": "54611",
+            "nume": "5"
           }
         ]
       }
@@ -2132,19 +2928,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwnHprVXANPFPyKovNVhA24wOJ2k6BgAMMwf4g6vpLk7B9J6vjv37cIO1Fep8aZbrk9wUUHWpG8JQUxXTZ6hHgpDPRtUyKrtwzi94HOyf4oz-Xd7pegKD8n78JLw10hbtd1NwoZ",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxSXZaCBn17_b9d9bNUInbwfjMz3saOLgee3thhURSy9GLd-KoLdq_p7EU11Oxo_mkBZQuWpDaMRKOa35woCo01Hu1_MTJbzQgtBX5CGyIfQB8gXfo6cL0pLah7NIPvBOfp6hM",
         "default": true,
-        "source": "anoboy"
+        "post": "54611",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwKZzynzf9W6QMvQ5fu2H7e08SCEnaM1y2pH5n906eeXsHLEr53CRUU4cZWSIP1GDVG77FSGqEkp7iCqzW1QEbNot8cK-g34ktcmZC1dkDqUoyFmq-rIkVYggA_aWGtnqWJJKJv",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/EvhWRALb#aMrIoqp8cNkH9DZNvrxMYRiLYTzM8LMO55Ynw-Cr74o",
         "default": false,
-        "source": "anoboy"
+        "post": "54611",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/w7Yy2CKA#k4kp54AZ6Wk2mpHXcmZuK8F8FPiAbGxEc1PtKt5KTJU",
+        "default": false,
+        "post": "54611",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/1mRSGJia#aeLhtAPvk9W7FZ7pwb96irE72L9txtVMO6dIgdXKXao",
+        "default": false,
+        "post": "54611",
+        "nume": "5"
       }
     ],
     "id": 29,
@@ -2189,24 +3005,44 @@
         "episode": 2,
         "title": "Tank Chair Episode 2",
         "slug": "tank-chair-episode-2",
-        "source": "https://anoboy.quest/2026/10/tank-chair-episode-2/",
+        "source": "https://v2.samehadaku.how/tank-chair-episode-2/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyovr7J4YBWJHvvbDQd5YG6yJtYOlJHmheDlFQmXmYKGv3HJLZGXvWA0BwWDRJMCTw4CgJJvK6O62AUr7GYubzEEmNNYTFyXq7PlfJ66I_ea8H3EqAMHt1_Xzhsz2uJu5n4PY0P",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwf7bBed-cqLBKqD6XTCUTn2oJiDN0rO4z2pCUX07RLOoPx2R6cbg-_gxg6CNA71G3X4UBu6ER7WTcujscMwd1D88mSf8kKrWhm0qn_J655ys75hpPPWow2lAX-3SefihoVxoBS",
             "default": true,
-            "source": "anoboy"
+            "post": "54575",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyRCJQ6NRu5uLMFZMGO6ylK4B43PzkGCmhuWMVzeDB0aExfRMmfawZa2zhMLnyp-LM8RE7VLxPudOHyhPOoIhlbLeFgvWbp-1Y05TEljncziDxyNUbIoz76Qnp1AQUdZAOexkQ",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ikAl3Lra#w54rW4_7ZaTlxv2Dc68mkaVrdgxwHQZwswPo7nejjBo",
             "default": false,
-            "source": "anoboy"
+            "post": "54575",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/v85X1CQB#9WE7jXLozTcj3qw-seMcMJVsvJBBSEfwXReJSFHT42A",
+            "default": false,
+            "post": "54575",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/y0JHzQzY#w50ny53R8NByNj3XJ2uuZiiZBM7s24u8VteJewKy1HA",
+            "default": false,
+            "post": "54575",
+            "nume": "4"
           }
         ]
       }
@@ -2214,11 +3050,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dx2f16_966lPUcRT4d2khnWnA4vd8n4s9NvL5j-fXlglqdBJViovz2hnGRb-lS2S6SinOLGJhxNdI7AuHOUCt-Bzv8zXqObTteijaG-uvjeRi5quuQHVdcEIGeUaso1gksqnEQs",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwf7bBed-cqLBKqD6XTCUTn2oJiDN0rO4z2pCUX07RLOoPx2R6cbg-_gxg6CNA71G3X4UBu6ER7WTcujscMwd1D88mSf8kKrWhm0qn_J655ys75hpPPWow2lAX-3SefihoVxoBS",
         "default": true,
-        "source": "anoboy"
+        "post": "54575",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/ikAl3Lra#w54rW4_7ZaTlxv2Dc68mkaVrdgxwHQZwswPo7nejjBo",
+        "default": false,
+        "post": "54575",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/v85X1CQB#9WE7jXLozTcj3qw-seMcMJVsvJBBSEfwXReJSFHT42A",
+        "default": false,
+        "post": "54575",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/y0JHzQzY#w50ny53R8NByNj3XJ2uuZiiZBM7s24u8VteJewKy1HA",
+        "default": false,
+        "post": "54575",
+        "nume": "4"
       }
     ],
     "id": 30,
@@ -2386,24 +3250,44 @@
         "episode": 3,
         "title": "Magical★Explorer Episode 3",
         "slug": "magical%e2%98%85explorer-episode-3",
-        "source": "https://anoboy.quest/2026/10/magical%e2%98%85explorer-episode-3/",
+        "source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-3/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dxNJ5At8onnAB3AGOBeWOCnsM0mwTaPBBQ7bPYYOqAP9uIU9O7gJNaH3-XmQcwWD003iergJ4ckp8tutf9fiXf-Oit0jszzrJ_igYkjRvAJsHJTWnN28aTBPA8rBmU_FXfBeyeQ",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxpHtEfkjHfQz29FnlA8tN4EnPv1RkZlQmUtSk2jLnsQtR24Q4G2m2zM0mciG32OwSguz9gAHqpsHVWNEnWJBMRaFMf8L7MEc382xsFj-bElsnRtXEHP_jvmv5-WE3wbRgo1iHF",
             "default": true,
-            "source": "anoboy"
+            "post": "54579",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyR4IjtWK1JKqLkBUTLiHj32jXdQHwQSANXSoKcqpLmArR3E0aUyYFKXL7eKXjHO7oR5ZJRbXN5M-tfyS_KOmhQiw8fvxVQr-UyJ44qf2bTZfzqMFvu6CadsaqHSGVQ9Zi9U5_2",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/nkwnBJwC#IP09wtp-NYLHHuhUxXf0kjkxiReAxBw5T-A__t2dBWE",
             "default": false,
-            "source": "anoboy"
+            "post": "54579",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/nwIm1AYS#W97Kx5fa13OzeT2yfmfkd_zACLtddFMiUMJ1FZfMa8c",
+            "default": false,
+            "post": "54579",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/TwowkJ4C#ZaajuSyUY8Iuj5MXz-3C5jV-xu1xAvT6QhuBFVcgqkQ",
+            "default": false,
+            "post": "54579",
+            "nume": "4"
           }
         ]
       }
@@ -2411,19 +3295,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwhT5u__kHOKPbX2FQG3wkQl7WpI8AoONoDH_0IYeFJxhcSFJLgoiNxtFpBVzDS5L-OX-CpcFuzH2c2-6UCNSZP6on23CQniZHs_DEjNJGuK3oWilHP_ZI_tM2XkpAcJ6r-ODke",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxpHtEfkjHfQz29FnlA8tN4EnPv1RkZlQmUtSk2jLnsQtR24Q4G2m2zM0mciG32OwSguz9gAHqpsHVWNEnWJBMRaFMf8L7MEc382xsFj-bElsnRtXEHP_jvmv5-WE3wbRgo1iHF",
         "default": true,
-        "source": "anoboy"
+        "post": "54579",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyw8tLgAiJiWUac_SnJ4ZudKFgxiYTa3RLGreS7B69eMV_hUskkXV4cN1dk10ubyaNaoTnJrGysz4g9F35NWmCnTbsJZwmJbPWeLjJeN2wp3XRkUtMh_pU9sbJsLWws9eLGHq_V",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/nkwnBJwC#IP09wtp-NYLHHuhUxXf0kjkxiReAxBw5T-A__t2dBWE",
         "default": false,
-        "source": "anoboy"
+        "post": "54579",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/nwIm1AYS#W97Kx5fa13OzeT2yfmfkd_zACLtddFMiUMJ1FZfMa8c",
+        "default": false,
+        "post": "54579",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/TwowkJ4C#ZaajuSyUY8Iuj5MXz-3C5jV-xu1xAvT6QhuBFVcgqkQ",
+        "default": false,
+        "post": "54579",
+        "nume": "4"
       }
     ],
     "id": 32,
@@ -2505,24 +3409,44 @@
         "episode": 3,
         "title": "Tensei shita Daiseijo wa, Seijo de Aru Koto wo Hitakakusu Episode 3",
         "slug": "tensei-shita-daiseijo-wa-seijo-de-aru-koto-wo-hitakakusu-episode-3",
-        "source": "https://anoboy.quest/2026/10/tensei-shita-daiseijo-wa-seijo-de-aru-koto-wo-hitakakusu-episode-3/",
+        "source": "https://v2.samehadaku.how/tensei-shita-daiseijo-wa-episode-3/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyYSRS7af9n_I7M1We5c08UxacOQf3jbc_TcT-__3NZsui8YB-HnlvguR9ll5Zy2BytxpvIzXnTcN40ZGw4ygWonVenvY01eyeT1ExncWdEwxdrAdEu8epvGKTT8FYeVgdDLM4",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwm0tNpEs2buvidxRi-ht7YlGKqUyqRrjNfge9kfy8hBTS7DyipwZDwf6AoTaf1aFAVhlvnYjm-mhA3uJNUL-dPsplMk9i2wMTyzTduvPS1en0HS_r85B61QxTOvse8pwN6v_I",
             "default": true,
-            "source": "anoboy"
+            "post": "54562",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzJv3nzrzU8i790KTWuPxYfOdKdmdjwX3HVSQB3ydd2nLDJ8G3ikuRHEzFLroW36410UtKq9q9wasyBwH6JxBo8NwvpoBg3E2QudPhP4dCzJfcAb7dWoviWHpXf9k-nEvEsVk-b",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/xjhnXCqJ#qCGMSqzx1EZnS7SO_LvGGj6Aqv7OSFdZqEPIuIh17ig",
             "default": false,
-            "source": "anoboy"
+            "post": "54562",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/cy512KwR#AdRZL95bHGRGN37Lq9XwPB7BwZeBwfa5bHG2Ql77qmA",
+            "default": false,
+            "post": "54562",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/E3w00B5R#ZaASw-YViIxB5zeCl9iqwbTUw1qaB1MwF71vPInE5Yk",
+            "default": false,
+            "post": "54562",
+            "nume": "5"
           }
         ]
       }
@@ -2530,19 +3454,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dz7Uy3rCZgXMv3MI-nRy-Zs749KgLld9x1DaxLhII2QACXLlZOlfz3284k3CT3NkkR0hq8eKJHZ38zUwJ-4gsfrOZ9mEe1QYufRLWbCTH7Us2MqA_awJC5PvdrgmmOREsBbN_A",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwm0tNpEs2buvidxRi-ht7YlGKqUyqRrjNfge9kfy8hBTS7DyipwZDwf6AoTaf1aFAVhlvnYjm-mhA3uJNUL-dPsplMk9i2wMTyzTduvPS1en0HS_r85B61QxTOvse8pwN6v_I",
         "default": true,
-        "source": "anoboy"
+        "post": "54562",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyy67Pz_axyEg2WmxrD3ZFNXUzCxjI5l7dJ3vUd_DuJi8wHQwoeRK8U09u01DoZGSZzSfj7m2P_smS9Q0S1HpOnfQYi55J8pfTWMRNXpEQQC71VFv6beEx3FxMjBXm6uOd9fpA",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/xjhnXCqJ#qCGMSqzx1EZnS7SO_LvGGj6Aqv7OSFdZqEPIuIh17ig",
         "default": false,
-        "source": "anoboy"
+        "post": "54562",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/cy512KwR#AdRZL95bHGRGN37Lq9XwPB7BwZeBwfa5bHG2Ql77qmA",
+        "default": false,
+        "post": "54562",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/E3w00B5R#ZaASw-YViIxB5zeCl9iqwbTUw1qaB1MwF71vPInE5Yk",
+        "default": false,
+        "post": "54562",
+        "nume": "5"
       }
     ],
     "id": 33,
@@ -2949,24 +3893,44 @@
         "episode": 2,
         "title": "Romelia Senki Episode 2",
         "slug": "romelia-senki-episode-2",
-        "source": "https://anoboy.quest/2026/10/romelia-senki-episode-2/",
+        "source": "https://v2.samehadaku.how/romelia-senki-episode-2/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dwgqDjtEdh50VB3xlXzEhMZbVYWqpg_oZMP9TcDHu5fDeVYm1I7UlJ6l4fNVhl5BcL693LgRNHggZWTuO2Wew7FiqNT1WpOaNt_WHmI1ImxoQ3YNI9cRGj9nDVxRsU9oRK8pGJc",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwfpA224hSKZ925rFuyr5vLsFCgnyB6pK7aCKmUEwBSpd0U0Q2lxz524oTXkbP6Pn5TAZGveh3cy-JLTI0-3XFxrvGJY8SfdLk-NOq2wfcFL7Jas2-WbS-OcSxn0NkPMV3VCDo4&origin=sameguru2.blogspot.com",
             "default": true,
-            "source": "anoboy"
+            "post": "54553",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzsEgbIe44D4bjHxXevrzHXfKT-cdmGInXYUqTKyzz3QmUcQdMDwYDBLfvo_wBu3DFNXnwr3K1CETFLygwdjK3SQ7OC7iVXOqxUyoDVJ2qi05HWDUnJFJUh8-vvSzWdofZ9Ww",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/DxJG0aoA#TFGODeg_yiGWY2a55P0x9uXNGRkCKIAGRPtyL3lNRMA",
             "default": false,
-            "source": "anoboy"
+            "post": "54553",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/eop1SI6D#OFa0fPhYROU4w1dcwO0YZjdRFRVTjAHK9ss1EHzii5c",
+            "default": false,
+            "post": "54553",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/r5ZSlJIS#8Sfb6A9iX2wSi0CjzoQqlgzTMC_YB4CVkVY-RJ7fanA",
+            "default": false,
+            "post": "54553",
+            "nume": "5"
           }
         ]
       }
@@ -2974,19 +3938,39 @@
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxJhxJTp8VlxX3mQgCnn-DTtdpfX8pha3CtemNAhJrJpvICQkzq5mTcpM7ChE3UAsmZ1LFTrPwkbpbkwD6ZzfL17maIXjFz0o2CZjNAn62wLIzIcugx9gi3Y7qD949I55SOljos",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwfpA224hSKZ925rFuyr5vLsFCgnyB6pK7aCKmUEwBSpd0U0Q2lxz524oTXkbP6Pn5TAZGveh3cy-JLTI0-3XFxrvGJY8SfdLk-NOq2wfcFL7Jas2-WbS-OcSxn0NkPMV3VCDo4&origin=sameguru2.blogspot.com",
         "default": true,
-        "source": "anoboy"
+        "post": "54553",
+        "nume": "1"
       },
       {
         "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyw-C-nGXD-8M9ce5sad0VHHBk4S7BV7NcOnHs3Gitm8-Him88fdqPxvWZbsNzpf1CTaWsHjVmh5sPkLq9e6_it9yV4YKJlKnZVUctAUitRHuZzkjvsexmfb1bDgvG-DVyVPNvc",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/DxJG0aoA#TFGODeg_yiGWY2a55P0x9uXNGRkCKIAGRPtyL3lNRMA",
         "default": false,
-        "source": "anoboy"
+        "post": "54553",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/eop1SI6D#OFa0fPhYROU4w1dcwO0YZjdRFRVTjAHK9ss1EHzii5c",
+        "default": false,
+        "post": "54553",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/r5ZSlJIS#8Sfb6A9iX2wSi0CjzoQqlgzTMC_YB4CVkVY-RJ7fanA",
+        "default": false,
+        "post": "54553",
+        "nume": "5"
       }
     ],
     "id": 38,
@@ -3617,8 +4601,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx212888-NhyvqPt5aIuJ.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Fantasy"
@@ -3682,7 +4666,53 @@
             "nume": "5"
           }
         ],
-        "released_at": "2026-09-27T20:04:47.860Z"
+        "released_at": "2026-09-27T20:04:41.169Z"
+      },
+      {
+        "episode": 2,
+        "title": "Overgeared Episode 2",
+        "slug": "overgeared-episode-2",
+        "source": "https://v2.samehadaku.how/overgeared-episode-2/",
+        "date": "",
+        "released_at": "2026-10-13T18:20:01.670Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyOda4zW0sTcdkhd7L3oBTOTn2VO95dBxD0ChdHnm7qLkGuH8XslKi6Pw25o1dzKwKLcUQRQZBE0k261GBIeWpr7sHkB2Sdf0G32K3BFF_76QRPqJOsMg3B0HkbrSvkEOZ2PiWZ&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54423",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/FEZjka6K#8XXWD-bZA3yPvnFMPJK8Zldu3pT-zzyJ4dbdvAzmHnM",
+            "default": false,
+            "post": "54423",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/wcgFVYCZ#N3K4kvXW_OlOV2TDzPFL9zw3tTcfFYwNZ43XS_8VrGM",
+            "default": false,
+            "post": "54423",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/lcgTgSiJ#vtVUxamXj35BfdQCasnJG9RQxMU4iwYg6afkd--Y6Qg",
+            "default": false,
+            "post": "54423",
+            "nume": "5"
+          }
+        ]
       },
       {
         "episode": 3,
@@ -3690,7 +4720,7 @@
         "slug": "overgeared-episode-3",
         "source": "https://v2.samehadaku.how/overgeared-episode-3/",
         "date": "47 minutes yang lalu",
-        "released_at": "2026-10-11T20:55:26.015Z",
+        "released_at": "2026-10-11T20:55:20.593Z",
         "players": [
           {
             "no": 1,
@@ -3698,7 +4728,7 @@
             "label": "Blogspot",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzpOLvqgv-nlPwJ_He_LIXi-sDdSj35gKGb276EZmgj9zHKD4uuHXhOOd1X2An8ORyLlrqTiAC0gObgnnAT1ptRAQtx2tCBKAfX6NO2Dz4vq38zENHY6ZGNfYSx6e3SlWDxdyA&origin=sameguru2.blogspot.com",
             "default": true,
-            "post": "54259",
+            "post": "54589",
             "nume": "1"
           },
           {
@@ -3707,7 +4737,7 @@
             "label": "Mega 480p",
             "url": "https://mega.nz/embed/ilIkDKCT#h7RKnTMu2Xti0MNTnpMmf7hKv61WvP7UJO1RG4YhLxE",
             "default": false,
-            "post": "54259",
+            "post": "54589",
             "nume": "3"
           },
           {
@@ -3716,7 +4746,7 @@
             "label": "Mega 720p",
             "url": "https://mega.nz/embed/i0gCFbCK#8NwAzvCx9UB_iYmvFwUaH-II6f6ZsgpkrxD7nZQXyPc",
             "default": false,
-            "post": "54259",
+            "post": "54589",
             "nume": "4"
           },
           {
@@ -3725,7 +4755,7 @@
             "label": "Mega 1080p",
             "url": "https://mega.nz/embed/f0YlQQpI#Ki3Sg2jPjzXk1ZtgQiRORBG9b9Y2bFgDNtCLJIiMq80",
             "default": false,
-            "post": "54259",
+            "post": "54589",
             "nume": "5"
           }
         ]
@@ -3738,7 +4768,7 @@
         "label": "Blogspot",
         "url": "https://www.blogger.com/video.g?token=AD6v5dzpOLvqgv-nlPwJ_He_LIXi-sDdSj35gKGb276EZmgj9zHKD4uuHXhOOd1X2An8ORyLlrqTiAC0gObgnnAT1ptRAQtx2tCBKAfX6NO2Dz4vq38zENHY6ZGNfYSx6e3SlWDxdyA&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54259",
+        "post": "54589",
         "nume": "1"
       },
       {
@@ -3747,7 +4777,7 @@
         "label": "Mega 480p",
         "url": "https://mega.nz/embed/ilIkDKCT#h7RKnTMu2Xti0MNTnpMmf7hKv61WvP7UJO1RG4YhLxE",
         "default": false,
-        "post": "54259",
+        "post": "54589",
         "nume": "3"
       },
       {
@@ -3756,7 +4786,7 @@
         "label": "Mega 720p",
         "url": "https://mega.nz/embed/i0gCFbCK#8NwAzvCx9UB_iYmvFwUaH-II6f6ZsgpkrxD7nZQXyPc",
         "default": false,
-        "post": "54259",
+        "post": "54589",
         "nume": "4"
       },
       {
@@ -3765,7 +4795,7 @@
         "label": "Mega 1080p",
         "url": "https://mega.nz/embed/f0YlQQpI#Ki3Sg2jPjzXk1ZtgQiRORBG9b9Y2bFgDNtCLJIiMq80",
         "default": false,
-        "post": "54259",
+        "post": "54589",
         "nume": "5"
       }
     ],
@@ -3893,24 +4923,44 @@
         "episode": 3,
         "title": "Tensei Kizoku Kantei Skill de Nariagaru Season 3 Episode 3",
         "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-3",
-        "source": "https://anoboy.quest/2026/10/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-3/",
+        "source": "https://v2.samehadaku.how/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-3/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzAMRTgcjRaG-UO99mMjRF9nXwdLjaA6wpD15VHosOygpuv7RR0DnGxh94sdUkXAj1tNJGMKkI2mUvn0wba7YHjHuIJLmAq-974MrfMlevI-gTT_kADAJypu0YNtZ8ocFs9_A4",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzFfK8maZ3or75zSKrY5hzdG3PY2BErNAhia2PiFjvquKVvNJxKDXWKbJ7s7a0CB5bmysVqSuOBTuXyx2OBAFB4W1_81_aW3kGvrg6ZR1Y5s_WrRvnKUKLY1bm5vHa9qZhnhsg",
             "default": true,
-            "source": "anoboy"
+            "post": "54577",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dwe3vBMw2gnJpycExN-Ut3M_SNy-vcRBIMHdVKyoRPO7lKfFI_OpP2TQnnCLbrUGuILvf6MxmrcGnq4ndSNd0TBtGcEcKfCj2BA-MsA_fpgEey-sJl88I2xFf6txnpQ4W8Iqpc",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/TlhVmTjC#i-gBMZTrT_i_YU6FW9olZLzAAJfNVkOad6N4TgfV4x8",
             "default": false,
-            "source": "anoboy"
+            "post": "54577",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/P5hWgKrS#pKjGFJDhGi1OwE19MNI7VHXXHc6IRd3IgK_RohoNYkA",
+            "default": false,
+            "post": "54577",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/Lx4TACrK#QpqhEJZYzeWPARikRRsgIvSHfWBk8VRHCGb_jk11mps",
+            "default": false,
+            "post": "54577",
+            "nume": "4"
           }
         ]
       }
@@ -3920,46 +4970,37 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dy7_GtJJNrAdx3dZyEbVmf3L37QguZ914z1uFScdnwzvqjyVxvQlK65beeLyjx51clLNtO3ZoRWEnKVtPkb22K3Y2U6VTVlhD9koGN00F-qOgXMr96TyfDEoSFYOSEshcvtEcU",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzFfK8maZ3or75zSKrY5hzdG3PY2BErNAhia2PiFjvquKVvNJxKDXWKbJ7s7a0CB5bmysVqSuOBTuXyx2OBAFB4W1_81_aW3kGvrg6ZR1Y5s_WrRvnKUKLY1bm5vHa9qZhnhsg",
         "default": true,
-        "post": "54240",
+        "post": "54577",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/TZm01iBRDD",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/TlhVmTjC#i-gBMZTrT_i_YU6FW9olZLzAAJfNVkOad6N4TgfV4x8",
         "default": false,
-        "post": "54240",
+        "post": "54577",
         "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/OtAgQCQY#DXvENmBI18khLr9Ju1g6IKemjmyNz6qohGy0nvstBow",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/P5hWgKrS#pKjGFJDhGi1OwE19MNI7VHXXHc6IRd3IgK_RohoNYkA",
         "default": false,
-        "post": "54240",
+        "post": "54577",
         "nume": "3"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/rpAhxDBK#x_4v2sGb9uTViqs1j3o7GtVcQZjnk3eXpXMc1RFzXrA",
-        "default": false,
-        "post": "54240",
-        "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/fhZTyBRb#SFPsXKJmnX9ow3e3UCK0bXZtFp4g6YiWBombl46DxRg",
+        "url": "https://mega.nz/embed/Lx4TACrK#QpqhEJZYzeWPARikRRsgIvSHfWBk8VRHCGb_jk11mps",
         "default": false,
-        "post": "54240",
-        "nume": "5"
+        "post": "54577",
+        "nume": "4"
       }
     ],
     "id": 45,
@@ -4088,24 +5129,44 @@
         "episode": 3,
         "title": "Yasei no Last Boss ga Arawareta! S2 Episode 3",
         "slug": "yasei-no-last-boss-ga-arawareta-s2-episode-3",
-        "source": "https://anoboy.quest/2026/10/yasei-no-last-boss-ga-arawareta-season-2-episode-3/",
+        "source": "https://v2.samehadaku.how/yasei-no-last-boss-ga-arawareta-s2-episode-3/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dzqDkYnugR8N2mxM3L9EQFqyIF85OnteRTbwXucnZE_zTQcMgNMpLU_PNwoXj487WV0QA99oWpaODfimntVdPp9o5Elww66HK6-VGHaIcs5-xHP8fwxVF2caFEU1fvgnk3HVRub",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzNjzC9y5GuDvBVUMUZKtSSfLaHp_EBnQu1zAmcDhkuSfes1aQaeu1JQtEc_wM18vlHQmi3o-HXnEx0BTOHoZDCXHw7uYnjWBBZGR0iWJDai_WQ_O31Bc6epgpvS_Dj25y3gNdV&origin=sameguru2.blogspot.com",
             "default": true,
-            "source": "anoboy"
+            "post": "54554",
+            "nume": "1"
           },
           {
             "no": 2,
-            "server": "anoboy",
-            "label": "Anoboy PC 720",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dwHdmUHREts9iuoU76jE6WaIK7CTdYZtiXWc4lZGQGklowPeqkY4dLlx9i9-tXxIaDGStwSSXbKjsA0uxyMyxt7-pGsN7bzGMyYONpu2e4x5Ba8kFByjOUypFYEow0k86c9gyo",
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/jhgmVDgA#O3mTCYk0x-pywfeJDmvW5bTSib8o9n5EuBOaMVhEgt8",
             "default": false,
-            "source": "anoboy"
+            "post": "54554",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/OwxhiRaZ#x6fOJY2qwiGETkALDZB_OXn0_C2UoemNCLB6JSDO0N8",
+            "default": false,
+            "post": "54554",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/684GTTgS#KiONACq2lpR-_mnDdha282xj5gPRCkk_3P6TLMD-lkI",
+            "default": false,
+            "post": "54554",
+            "nume": "5"
           }
         ]
       }
@@ -4115,45 +5176,36 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxkUqxWvDwlKIwaCM-UBIwYcoYLr_12aIXZ5lMjjmXoIjTblnw9WOSrtzbcBAsWmk5NYPRUKG-2rU0-VZOMzCE2eX4eOyNyIecSDAY6LE2GIp38WIxNaq7K8bODooTnV8cRtrs&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzNjzC9y5GuDvBVUMUZKtSSfLaHp_EBnQu1zAmcDhkuSfes1aQaeu1JQtEc_wM18vlHQmi3o-HXnEx0BTOHoZDCXHw7uYnjWBBZGR0iWJDai_WQ_O31Bc6epgpvS_Dj25y3gNdV&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54208",
+        "post": "54554",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/https://filedon.co/view/aAHKpeb2hV",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/jhgmVDgA#O3mTCYk0x-pywfeJDmvW5bTSib8o9n5EuBOaMVhEgt8",
         "default": false,
-        "post": "54208",
-        "nume": "2"
+        "post": "54554",
+        "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/y4JDlJIQ#_aMQZy89Ef7Lq3Z3AYWr6yyGVw-z6U_XJ8NsZ-xZ0Vc",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/OwxhiRaZ#x6fOJY2qwiGETkALDZB_OXn0_C2UoemNCLB6JSDO0N8",
         "default": false,
-        "post": "54208",
-        "nume": "3"
+        "post": "54554",
+        "nume": "4"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/k3pmlKKT#zvidwp8fi2xtXXgX-pk7fmLrhbFdkwk4HwysBLj0sGs",
-        "default": false,
-        "post": "54208",
-        "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/6oYw1TTC#u6_Sqw2bW77ThBKgKK8pMleZNL3zB2FCbySnfDTQvvQ",
+        "url": "https://mega.nz/embed/684GTTgS#KiONACq2lpR-_mnDdha282xj5gPRCkk_3P6TLMD-lkI",
         "default": false,
-        "post": "54208",
+        "post": "54554",
         "nume": "5"
       }
     ],
@@ -90706,16 +91758,44 @@
         "episode": 15,
         "title": "Tsuihou sareta Tensei Juukishi wa Game Episode 15",
         "slug": "tsuihou-sareta-tensei-juukishi-wa-game-episode-15",
-        "source": "https://anoboy.quest/2026/10/tsuihou-sareta-tensei-juukishi-wa-game-episode-15/",
+        "source": "https://v2.samehadaku.how/tsuihou-sareta-tensei-juukishi-wa-game-episode-15/",
         "date": "",
         "players": [
           {
             "no": 1,
-            "server": "anoboy",
-            "label": "Anoboy 360",
-            "url": "https://www.blogger.com/video.g?token=AD6v5dyfUBUQ1585bRlePveir53JgjTeNQv2xTiOKpysOE700qCxJcGphbDYDvha6800TVvSnd_HHFtOfzIyMvetjCOia3YOwswt2zscfGHIT-dHEgkByeWn51HpCwYiIYQdjqFQtZkO",
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyYgeSg0KKOGQPQSNBdvr60Vwg2nOvQdR_Igu3QgaitJhX4muXOpafkQqYddwKkAFllQubV-Z4OJvUHNYaw-X3NPMjP7zB4aegJ9xiWt21_ncpGX2l0zyo00_D8ZAkSFTOgsL8",
             "default": true,
-            "source": "anoboy"
+            "post": "54528",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/MmRj0YSI#C47tcKD02tr-5tCeKSd19jWEYDamcWZrmhhAsGaW5I8",
+            "default": false,
+            "post": "54528",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/p7AADbJB#HYfoel9rqPXMhJAWLI4wOrPG9DPCqH8acCez3cLwmmQ",
+            "default": false,
+            "post": "54528",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/B6AFBZLD#0S_PXn3uLbJaYWCPN58uuS2fsLNgjadgr-GUsH3vIWY",
+            "default": false,
+            "post": "54528",
+            "nume": "5"
           }
         ]
       }
@@ -90725,36 +91805,36 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxISIGhZyQJEpS_6QNgKVP20F3OshmQ8OpSmFtqUhw_5c5VyfjTaPCXS5EG3CqmEZVitGVYXNMMTtONM9WUtMdbKrf5N_q0duLU7UnAVo1VeXYQeT5nxSg3cloMVZI2WNiJRQ",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyYgeSg0KKOGQPQSNBdvr60Vwg2nOvQdR_Igu3QgaitJhX4muXOpafkQqYddwKkAFllQubV-Z4OJvUHNYaw-X3NPMjP7zB4aegJ9xiWt21_ncpGX2l0zyo00_D8ZAkSFTOgsL8",
         "default": true,
-        "post": "54283",
+        "post": "54528",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/0yI3QYCK#fJXgY-AY1euYUZOVMhEG7PkQCMCsheXP_BySM2tGgYk",
+        "url": "https://mega.nz/embed/MmRj0YSI#C47tcKD02tr-5tCeKSd19jWEYDamcWZrmhhAsGaW5I8",
         "default": false,
-        "post": "54283",
+        "post": "54528",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/Brxl3K7b#4bNNqbqFsdFx7-GbduPH6s-LNRAEh-HIYIQTb4qUlBs",
+        "url": "https://mega.nz/embed/p7AADbJB#HYfoel9rqPXMhJAWLI4wOrPG9DPCqH8acCez3cLwmmQ",
         "default": false,
-        "post": "54283",
+        "post": "54528",
         "nume": "4"
       },
       {
         "no": 4,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/BqgBxbjS#h1FcDZ7D15X--lKl90LJdN25Ywr4cG8qrMPDHUY5Bts",
+        "url": "https://mega.nz/embed/B6AFBZLD#0S_PXn3uLbJaYWCPN58uuS2fsLNgjadgr-GUsH3vIWY",
         "default": false,
-        "post": "54283",
+        "post": "54528",
         "nume": "5"
       }
     ],
