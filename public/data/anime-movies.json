@@ -2,6 +2,111 @@
   {
     "type": "anime-movie",
     "source_site": "samehadaku",
+    "nama": "Tantei wa Mou, Shindeiru S2",
+    "judul": "Tantei wa Mou, Shindeiru S2",
+    "tahun": "",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/bx152677-gtJbgjE94lCN.png",
+    "rating": null,
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 1,
+    "genre": [],
+    "sinopsis": "Season dua dari Tantei wa Mou, Shindeiru",
+    "related": [],
+    "slug": "tantei-wa-mou-shindeiru-s2",
+    "source": "https://v2.samehadaku.how/anime/tantei-wa-mou-shindeiru-s2/",
+    "season_label": "",
+    "episodes": [
+      {
+        "episode": 1,
+        "title": "Tantei wa Mou, Shindeiru S2",
+        "slug": "tantei-wa-mou-shindeiru-s2-episode-1",
+        "source": "https://v2.samehadaku.how/tantei-wa-mou-shindeiru-s2-episode-1/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyYMi6fK40QgWYEjMZE1gW0Sl4e2Z4dpAoZvZxVqqt9XBrMfyI-gTij6TiDLDHxWwTyR0KFZP8uyQzIlqSwFzs6TJmFSXGSRpLBivGq1ujzbDbnKL9yAOSJ9A_8aprrsDsdgp_p&#038;origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54498",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/VU5VWDYY#SwuJAh4PpFtiKlRGEyfRofIv6AHSKfAsWX4QKpNgVF8",
+            "default": false,
+            "post": "54498",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/UBA3jQqQ#Ya-_Jn-tXTWqhj9gwIIRHU2O0DdAbevb2IxrcamIa0M",
+            "default": false,
+            "post": "54498",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/8Ig0BTiB#QN_fObE3WqO-NEO55mujSSQBXOROsFeNJHwdPkxYIig",
+            "default": false,
+            "post": "54498",
+            "nume": "5"
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyYMi6fK40QgWYEjMZE1gW0Sl4e2Z4dpAoZvZxVqqt9XBrMfyI-gTij6TiDLDHxWwTyR0KFZP8uyQzIlqSwFzs6TJmFSXGSRpLBivGq1ujzbDbnKL9yAOSJ9A_8aprrsDsdgp_p&#038;origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "54498",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/VU5VWDYY#SwuJAh4PpFtiKlRGEyfRofIv6AHSKfAsWX4QKpNgVF8",
+        "default": false,
+        "post": "54498",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/UBA3jQqQ#Ya-_Jn-tXTWqhj9gwIIRHU2O0DdAbevb2IxrcamIa0M",
+        "default": false,
+        "post": "54498",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/8Ig0BTiB#QN_fObE3WqO-NEO55mujSSQBXOROsFeNJHwdPkxYIig",
+        "default": false,
+        "post": "54498",
+        "nume": "5"
+      }
+    ],
+    "id": 1,
+    "is_new": true
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "samehadaku",
     "nama": "Shuiro no Kamen",
     "judul": "Shuiro no Kamen",
     "tahun": "",
@@ -101,7 +206,7 @@
         "nume": "5"
       }
     ],
-    "id": 1
+    "id": 2
   },
   {
     "type": "anime-movie",
@@ -205,7 +310,7 @@
         "nume": "5"
       }
     ],
-    "id": 2
+    "id": 3
   },
   {
     "type": "anime-movie",
@@ -309,7 +414,7 @@
         "nume": "5"
       }
     ],
-    "id": 3
+    "id": 4
   },
   {
     "type": "anime-movie",
@@ -413,7 +518,7 @@
         "nume": "5"
       }
     ],
-    "id": 4
+    "id": 5
   },
   {
     "type": "anime-movie",
@@ -517,7 +622,7 @@
         "nume": "5"
       }
     ],
-    "id": 5
+    "id": 6
   },
   {
     "type": "anime-movie",
@@ -621,7 +726,7 @@
         "nume": "5"
       }
     ],
-    "id": 6
+    "id": 7
   },
   {
     "type": "anime-movie",
@@ -679,7 +784,7 @@
         "nume": "5"
       }
     ],
-    "id": 7,
+    "id": 8,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Psyren.jpg"
   },
   {
@@ -738,7 +843,7 @@
         "nume": "5"
       }
     ],
-    "id": 8,
+    "id": 9,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tensei-Goblin-dakedo-Shitsumon-Aru.jpg"
   },
   {
@@ -797,7 +902,7 @@
         "nume": "5"
       }
     ],
-    "id": 9,
+    "id": 10,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Doumo-Suki-na-Hito-ni-Horegusuri-wo-Irai-sareta-Majo-desu.jpg"
   },
   {
@@ -856,7 +961,7 @@
         "nume": "5"
       }
     ],
-    "id": 10,
+    "id": 11,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara.jpg"
   },
   {
@@ -906,7 +1011,7 @@
         "nume": "5"
       }
     ],
-    "id": 11
+    "id": 12
   },
   {
     "type": "anime-movie",
@@ -964,7 +1069,7 @@
         "nume": "4"
       }
     ],
-    "id": 12
+    "id": 13
   },
   {
     "type": "anime-movie",
@@ -1022,7 +1127,7 @@
         "nume": "5"
       }
     ],
-    "id": 13
+    "id": 14
   },
   {
     "type": "anime-movie",
@@ -1080,7 +1185,7 @@
         "nume": "5"
       }
     ],
-    "id": 14
+    "id": 15
   },
   {
     "type": "anime-movie",
@@ -1138,7 +1243,7 @@
         "nume": "5"
       }
     ],
-    "id": 15,
+    "id": 16,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2.jpg"
   },
   {
@@ -1197,7 +1302,7 @@
         "nume": "4"
       }
     ],
-    "id": 16
+    "id": 17
   },
   {
     "type": "anime-movie",
@@ -1255,7 +1360,7 @@
         "nume": "5"
       }
     ],
-    "id": 17,
+    "id": 18,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tensei-shita-Daiseijo-wa-Seijo-de-Aru-Koto-wo-Hitakakusu.jpg"
   },
   {
@@ -1305,7 +1410,7 @@
         "nume": "5"
       }
     ],
-    "id": 18
+    "id": 19
   },
   {
     "type": "anime-movie",
@@ -1363,7 +1468,7 @@
         "nume": "5"
       }
     ],
-    "id": 19,
+    "id": 20,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Black-Clover-Season-2.jpg"
   },
   {
@@ -1413,7 +1518,7 @@
         "nume": "5"
       }
     ],
-    "id": 20
+    "id": 21
   },
   {
     "type": "anime-movie",
@@ -1471,7 +1576,7 @@
         "nume": "5"
       }
     ],
-    "id": 21,
+    "id": 22,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/04/Honzuki-no-Gekokujou-Season-4.jpg"
   },
   {
@@ -1512,7 +1617,7 @@
         "nume": "3"
       }
     ],
-    "id": 22
+    "id": 23
   },
   {
     "type": "anime-movie",
@@ -1570,7 +1675,7 @@
         "nume": "5"
       }
     ],
-    "id": 23,
+    "id": 24,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Zombie-Sagashitemasu.jpg"
   },
   {
@@ -1647,7 +1752,7 @@
         "nume": "6"
       }
     ],
-    "id": 24
+    "id": 25
   },
   {
     "type": "anime-movie",
@@ -1759,7 +1864,7 @@
         "nume": "10"
       }
     ],
-    "id": 25,
+    "id": 26,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2025/10/Boku-no-Hero-Academia-Season-8-225x300.jpg"
   },
   {
@@ -1899,7 +2004,7 @@
         "nume": "13"
       }
     ],
-    "id": 26
+    "id": 27
   },
   {
     "type": "anime-movie",
@@ -1984,7 +2089,7 @@
         "nume": "7"
       }
     ],
-    "id": 27
+    "id": 28
   },
   {
     "type": "anime-movie",
@@ -2123,7 +2228,7 @@
         "nume": "13"
       }
     ],
-    "id": 28
+    "id": 29
   },
   {
     "type": "anime-movie",
@@ -2181,7 +2286,7 @@
         "nume": "4"
       }
     ],
-    "id": 29
+    "id": 30
   },
   {
     "type": "anime-movie",
@@ -2275,7 +2380,7 @@
         "nume": "8"
       }
     ],
-    "id": 30,
+    "id": 31,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2023/07/Jujutsu-Kaisen-Season-2-Cover-213x300.jpg"
   },
   {
@@ -2325,7 +2430,7 @@
         "nume": "3"
       }
     ],
-    "id": 31
+    "id": 32
   },
   {
     "type": "anime-movie",
@@ -2383,7 +2488,7 @@
         "nume": "4"
       }
     ],
-    "id": 32
+    "id": 33
   },
   {
     "type": "anime-movie",
@@ -2441,7 +2546,7 @@
         "nume": "5"
       }
     ],
-    "id": 33,
+    "id": 34,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tougen-Anki-Nikko-Kegon-no-Taki-hen.jpg"
   },
   {
@@ -2500,7 +2605,7 @@
         "nume": "5"
       }
     ],
-    "id": 34
+    "id": 35
   },
   {
     "type": "anime-movie",
@@ -2558,7 +2663,7 @@
         "nume": "5"
       }
     ],
-    "id": 35
+    "id": 36
   },
   {
     "type": "anime-movie",
@@ -2616,7 +2721,7 @@
         "nume": "5"
       }
     ],
-    "id": 36,
+    "id": 37,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tsuihou-sareta-Tensei-Juukishi-wa-Game.jpg"
   },
   {
@@ -2675,7 +2780,7 @@
         "nume": "5"
       }
     ],
-    "id": 37,
+    "id": 38,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/FX-Senshi-Kurumi-chan.jpg"
   },
   {
@@ -2734,7 +2839,7 @@
         "nume": "5"
       }
     ],
-    "id": 38,
+    "id": 39,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tomb-Rider-King-v2.jpg"
   },
   {
@@ -2793,7 +2898,7 @@
         "nume": "4"
       }
     ],
-    "id": 39
+    "id": 40
   },
   {
     "type": "anime-movie",
@@ -2851,7 +2956,7 @@
         "nume": "5"
       }
     ],
-    "id": 40,
+    "id": 41,
     "thumbnail_landscape": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shin-Tennis-no-Oujisama-Kesshou-Member-Ketteisen.jpg"
   },
   {
@@ -2910,7 +3015,7 @@
         "nume": "5"
       }
     ],
-    "id": 41
+    "id": 42
   },
   {
     "type": "anime-movie",
@@ -2959,7 +3064,7 @@
         "nume": "4"
       }
     ],
-    "id": 42
+    "id": 43
   },
   {
     "type": "anime-movie",
@@ -3026,7 +3131,7 @@
         "nume": "5"
       }
     ],
-    "id": 43
+    "id": 44
   },
   {
     "type": "anime-movie",
@@ -3093,7 +3198,7 @@
         "nume": "5"
       }
     ],
-    "id": 44
+    "id": 45
   },
   {
     "type": "anime-movie",
@@ -3160,7 +3265,7 @@
         "nume": "5"
       }
     ],
-    "id": 45
+    "id": 46
   },
   {
     "type": "anime-movie",
@@ -3227,7 +3332,7 @@
         "nume": "5"
       }
     ],
-    "id": 46
+    "id": 47
   },
   {
     "type": "anime-movie",
@@ -3262,7 +3367,7 @@
         "nume": "1"
       }
     ],
-    "id": 47,
+    "id": 48,
     "thumbnail_landscape": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcKqxzXkZ3HaEVuEQP2m8wSlVeKonOQ2Ik678ev9QyqV5rWxsb9kWsH6i3bkdj13G1UoirfOSsXWIlqO9HxAUjuuRv4QtiSYyaMkUzC9qjN4D5WQA67RLYu3V86975s0NLJxb-nh5-4sqWCa1O5DzYDHCqHWAdp8tu537q8hvZzW5Mq_uCSrvopQZolNU9/s360/FINALE_BANNER_SAMEHADAKU_BIG777.gif"
   },
   {
@@ -3310,7 +3415,7 @@
         "nume": "6"
       }
     ],
-    "id": 48
+    "id": 49
   },
   {
     "type": "anime-movie",
@@ -3400,7 +3505,7 @@
         "nume": "7"
       }
     ],
-    "id": 49
+    "id": 50
   },
   {
     "type": "anime-movie",
@@ -3538,7 +3643,7 @@
         "nume": "7"
       }
     ],
-    "id": 50
+    "id": 51
   },
   {
     "type": "anime-movie",
@@ -3600,7 +3705,7 @@
         "nume": "8"
       }
     ],
-    "id": 51
+    "id": 52
   },
   {
     "type": "anime-movie",
@@ -3754,7 +3859,7 @@
         "nume": "14"
       }
     ],
-    "id": 52
+    "id": 53
   },
   {
     "type": "anime-movie",
@@ -3887,7 +3992,7 @@
         "nume": "12"
       }
     ],
-    "id": 53
+    "id": 54
   },
   {
     "type": "anime-movie",
@@ -3994,7 +4099,7 @@
         "nume": "9"
       }
     ],
-    "id": 54
+    "id": 55
   },
   {
     "type": "anime-movie",
@@ -4119,7 +4224,7 @@
         "nume": "15"
       }
     ],
-    "id": 55
+    "id": 56
   },
   {
     "type": "anime-movie",
@@ -4225,7 +4330,7 @@
         "nume": "12"
       }
     ],
-    "id": 56
+    "id": 57
   },
   {
     "type": "anime-movie",
@@ -4348,7 +4453,7 @@
         "nume": "15"
       }
     ],
-    "id": 57
+    "id": 58
   },
   {
     "type": "anime-movie",
@@ -4454,7 +4559,7 @@
         "nume": "12"
       }
     ],
-    "id": 58
+    "id": 59
   },
   {
     "type": "anime-movie",
@@ -4580,7 +4685,7 @@
         "nume": "15"
       }
     ],
-    "id": 59
+    "id": 60
   },
   {
     "type": "anime-movie",
@@ -4742,7 +4847,7 @@
         "nume": "20"
       }
     ],
-    "id": 60
+    "id": 61
   },
   {
     "type": "anime-movie",
@@ -4851,7 +4956,7 @@
         "nume": "12"
       }
     ],
-    "id": 61
+    "id": 62
   },
   {
     "type": "anime-movie",
@@ -4978,7 +5083,7 @@
         "nume": "14"
       }
     ],
-    "id": 62
+    "id": 63
   },
   {
     "type": "anime-movie",
@@ -5058,7 +5163,7 @@
         "nume": "11"
       }
     ],
-    "id": 63
+    "id": 64
   },
   {
     "type": "anime-movie",
@@ -5139,7 +5244,7 @@
         "nume": "6"
       }
     ],
-    "id": 64
+    "id": 65
   },
   {
     "type": "anime-movie",
@@ -5219,7 +5324,7 @@
         "nume": "6"
       }
     ],
-    "id": 65
+    "id": 66
   },
   {
     "type": "anime-movie",
@@ -5316,7 +5421,7 @@
         "nume": "8"
       }
     ],
-    "id": 66
+    "id": 67
   },
   {
     "type": "anime-movie",
@@ -5397,7 +5502,7 @@
         "nume": "6"
       }
     ],
-    "id": 67
+    "id": 68
   },
   {
     "type": "anime-movie",
@@ -5480,7 +5585,7 @@
         "nume": "6"
       }
     ],
-    "id": 68
+    "id": 69
   },
   {
     "type": "anime-movie",
@@ -5553,7 +5658,7 @@
         "nume": "5"
       }
     ],
-    "id": 69
+    "id": 70
   },
   {
     "type": "anime-movie",
@@ -5635,7 +5740,7 @@
         "nume": "6"
       }
     ],
-    "id": 70
+    "id": 71
   },
   {
     "type": "anime-movie",
@@ -5698,7 +5803,7 @@
         "nume": "4"
       }
     ],
-    "id": 71
+    "id": 72
   },
   {
     "type": "anime-movie",
@@ -5760,7 +5865,7 @@
         "nume": "4"
       }
     ],
-    "id": 72
+    "id": 73
   },
   {
     "type": "anime-movie",
@@ -5821,7 +5926,7 @@
         "nume": "4"
       }
     ],
-    "id": 73
+    "id": 74
   },
   {
     "type": "anime-movie",
@@ -5875,7 +5980,7 @@
         "nume": "3"
       }
     ],
-    "id": 74
+    "id": 75
   },
   {
     "type": "anime-movie",
@@ -5941,7 +6046,7 @@
         "nume": "4"
       }
     ],
-    "id": 75
+    "id": 76
   },
   {
     "type": "anime-movie",
@@ -5967,7 +6072,7 @@
     "season_label": "",
     "episodes": [],
     "players": [],
-    "id": 76
+    "id": 77
   },
   {
     "type": "anime-movie",
@@ -6030,7 +6135,7 @@
         "nume": "4"
       }
     ],
-    "id": 77
+    "id": 78
   },
   {
     "type": "anime-movie",
@@ -6137,7 +6242,7 @@
         "nume": "9"
       }
     ],
-    "id": 78
+    "id": 79
   },
   {
     "type": "anime-movie",
@@ -6233,7 +6338,7 @@
         "nume": "8"
       }
     ],
-    "id": 79
+    "id": 80
   },
   {
     "type": "anime-movie",
@@ -6323,7 +6428,7 @@
         "nume": "7"
       }
     ],
-    "id": 80
+    "id": 81
   },
   {
     "type": "anime-movie",
@@ -6367,7 +6472,7 @@
         "nume": "2"
       }
     ],
-    "id": 81
+    "id": 82
   },
   {
     "type": "anime-movie",
@@ -6414,6 +6519,6 @@
         "nume": "2"
       }
     ],
-    "id": 82
+    "id": 83
   }
 ]
