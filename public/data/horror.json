@@ -780,28 +780,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/dEGo4TQJ-Q5j8teLlIHCtA",
+        "url": "https://videonode.de/iframe3/p2p/d-sbtdYMk4T5HmZe6aXvGw",
         "default": true
       },
       {
         "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/aHgrcVa1gWom3urXA1Y97Q",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/fMgIskvPn2WdlVCeQ5_Lmw",
         "default": false
       },
       {
         "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/S7uCKRstNTbhKMDaf7PThA",
-        "default": false
-      },
-      {
-        "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HPv-qnUIevc-xIon80YDeQ",
+        "url": "https://videonode.de/iframe3/hydrax/C6pvgphwwk2rh_QwSahQwA",
         "default": false
       }
     ],
