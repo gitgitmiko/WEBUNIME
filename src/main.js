@@ -3296,13 +3296,3 @@ async function init() {
 }
 
 init();
-
-const siteSettingsBtn = document.querySelector("#siteSettingsBtn");
-const siteSettings = document.querySelector("#siteSettings");
-const siteSettingsClose = document.querySelector("#siteSettingsClose");
-if (siteSettingsBtn && siteSettings) {
-  siteSettingsBtn.addEventListener("click", () => siteSettings.showModal());
-}
-if (siteSettingsClose && siteSettings) {
-  siteSettingsClose.addEventListener("click", () => siteSettings.close());
-}
