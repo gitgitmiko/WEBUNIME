@@ -1,6 +1,114 @@
 [
   {
     "type": "series",
+    "nama": "VisionQuest",
+    "judul": "VisionQuest (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-visionquest-2026-lk21.jpg",
+    "rating": "8.4",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Sci-fi",
+      "Thriller"
+    ],
+    "sinopsis": "VisionQuest - The Vision, yang telah di-reboot dan berhasil melarikan diri dari mereka yang ingin menjadikannya senjata, kini hidup dalam pelarian dan persembunyian. Dalam pencariannya akan makna hidup yang baru, ia berkonsultasi dengan berbagai persona kecerdasan buatan yang tertanam dalam programnya, termasuk Friday, Edith, Jarvis, serta Ultron yang terkenal berbahaya. Keberadaannya yang tersembunyi berakhir ketika sayembara atau hadiah buronan dipasang untuk kepalanya, membuatnya terpaksa melarikan diri bersama Thomas Shepard, seorang anak misterius yang diduga merupakan reinkarnasi dari anak Vision. Saat menghindari penangkapan, Vision harus menghadapi hakikat keberadaannya, melawan pengaruh buruk Ultron, dan memecahkan misteri di balik pendamping mudanya demi bisa bertahan hidup.\n\nBintang Film: Paul Bettany, James Spader, Ruaridh Mollica, Todd Stashwick, Emily Hampshire\n\nNegara: United States, United Kingdom\n\nVotes: 995",
+    "slug": "visionquest-2026",
+    "source": "https://tv9.nontondrama.my/visionquest-2026",
+    "list_source": "https://tv12.lk21official.cc/visionquest-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "VisionQuest - Season 1 Episode 1 (2026)",
+        "slug": "visionquest-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/visionquest-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/SKkql9Rme4GX1c2smc2_Kg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/dF1ZIOZSLpPInhQGvw_1Cg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9iw-fd8KGOKaWoa-5SmAgA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "VisionQuest - Season 1 Episode 2 (2026)",
+        "slug": "visionquest-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/visionquest-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/LwdYi_KhNa8nAA6sTfQffw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kksu9Ul3om8NT7tDFx-B6w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/V4on7r2X3JDFRkjTMyzGsA",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/LwdYi_KhNa8nAA6sTfQffw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/kksu9Ul3om8NT7tDFx-B6w",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/V4on7r2X3JDFRkjTMyzGsA",
+        "default": false
+      }
+    ],
+    "id": 542
+  },
+  {
+    "type": "series",
     "nama": "Slo Pitch",
     "judul": "Slo Pitch (2026)",
     "tahun": "2026",
@@ -24374,8 +24482,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-lament-autumn-2026-lk21.jpg",
     "rating": "9.8",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "9 eps · S.1",
+    "episodes_count": 9,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -24535,6 +24643,126 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "The Lament of Autumn - Season 1 Episode 6 (2026)",
+        "slug": "lament-autumn-season-1-episode-6-2026",
+        "source": "https://tv9.nontondrama.my/lament-autumn-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RZcdHFQYrw80Ce8OQQTTPQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/vljLfaMRQlnbAJ9dn1k8gQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/zHkw2sz2O5XWcCZbPvbAuw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "The Lament of Autumn - Season 1 Episode 7 (2026)",
+        "slug": "lament-autumn-season-1-episode-7-2026",
+        "source": "https://tv9.nontondrama.my/lament-autumn-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1Yljb_54lIyFnFffGHdIcQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/8jMSFeo0axIKUgKMofG6bw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/1T5akJwtCQp36z42ETUn4Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "The Lament of Autumn - Season 1 Episode 8 (2026)",
+        "slug": "lament-autumn-season-1-episode-8-2026",
+        "source": "https://tv9.nontondrama.my/lament-autumn-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/2mUxBGSWiwBUWm2sJo-BVw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3oZE_aosm-rl9-WMiGDpgQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KDcJ8_QpfLsfaUA_6yzShQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "The Lament of Autumn - Season 1 Episode 9 (2026)",
+        "slug": "lament-autumn-season-1-episode-9-2026",
+        "source": "https://tv9.nontondrama.my/lament-autumn-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/NCXbH9EsU0ZPGir3dgTUcA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/CcPwoCPkWTB5lx99XGwBRA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/EZ4NdAh__R9lDPrVjgFWFw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -24542,21 +24770,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/9qM3Tawzq-zuNA0FOfqRCQ",
+        "url": "https://videonode.de/iframe3/p2p/NCXbH9EsU0ZPGir3dgTUcA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/gpbJFckGKI37zzCUm1nXOQ",
+        "url": "https://videonode.de/iframe3/cast/CcPwoCPkWTB5lx99XGwBRA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GlwXNH-fVGTm0124uUwIqg",
+        "url": "https://videonode.de/iframe3/hydrax/EZ4NdAh__R9lDPrVjgFWFw",
         "default": false
       }
     ],
