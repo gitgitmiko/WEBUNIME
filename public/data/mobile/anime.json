@@ -1712,12 +1712,15 @@
     "judul": "#Zombie Sagashitemasu",
     "tahun": "",
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Zombie-Sagashitemasu-Episode-2-300x169.jpg",
-    "rating": null,
+    "rating": "6.7",
     "votes": null,
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
-    "genre": [],
-    "sinopsis": "Anime #Zombie Sagashitemasu.",
+    "genre": [
+      "Adventure",
+      "Shounen"
+    ],
+    "sinopsis": "#Zombie Sagashitemasu atau dikenal #I’m Looking For a Zombie Merupakan manga Jepang karya Katsuwo yang diterbitkan oleh ASCII Media Works dan diadaptasi menjadi anime oleh Studio Comet, dengan penayangan perdana pada 3 Oktober 2026. Ceritanya berlatar 13 tahun setelah sebuah wabah misterius yang dikenal sebagai “Hari Merah” menyebabkan 90% umat manusia terinfeksi dan meninggal dunia. Para penyintas kemudian hidup di desa-desa terpencil yang terisolasi dari kota. Aki, seorang gadis dari generasi baru yang tidak mengingat dunia sebelum kehancuran, memutuskan meninggalkan desa bersama dua teman masa kecilnya, Natsuki dan Haru, untuk mencari ayahnya yang telah pergi. Di luar desa, mereka menemukan dunia yang dipenuhi zombie, tetapi juga menyimpan pemandangan dan pengalaman baru yang menakjubkan. Dalam perjalanan, mereka bertemu Yuu dan Sakura, lalu memulai petualangan bertahan hidup yang memadukan bahaya, persahabatan, dan keseharian yang tidak biasa.",
     "related": [],
     "slug": "zombie-sagashitemasu",
     "source": "https://v2.samehadaku.how/anime/zombie-sagashitemasu/",
@@ -1766,6 +1769,22 @@
             "default": false,
             "post": "54390",
             "nume": "5"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyE5U8tG8fbebEQIQexITC6x3HiYe_5rtcli9kIwy3WAL6J-myT8k8j_FNwngg-O61Y9apjrYSG-_xOE3QdxJYDVRQYLsEBWv4LnyDnc57MEWtkIJL9jtTiyTlXHtMaOsE4IRDw",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwLZ-SJc1gHSfvn5fYWMG1ekiOcDxZUiun3GXOLWyV0M3uf2fts1aywwnmCqQLRbLgFp7nFB15XrETxpgKj-obo1DPSiT1dijfwKGU_Ra-L3PBUEoUgs-yXzTfCT77D-BcwUWjd",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
@@ -1812,6 +1831,22 @@
             "default": false,
             "post": "54569",
             "nume": "5"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyW9kM6sp74635kMvymaax94NNOUn8fT_q9yoIVwhcFCZzaQJwpPFaqWFGqhKntdMye8X5Z6Yc7fIrXMxfaL-poOKMFxesLB2kAoXOJ-IH76XGgmoFudA2ZEjfr4m41OQjkMP0",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxWbqTAVkEPf1EVfJJ7H6E4Ikxyh4nrhGVBXqqhsZm1wpAs4jiH2piF4ZcPWF0j4wk_Qv0e6MrIcDtf9fatJOw0zn0b8Iaqj0tcwqH4Racrygow7IrKySr3Jja0YcbxSEw6Ng",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
@@ -1849,6 +1884,22 @@
             "default": false,
             "post": "54724",
             "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dydbmXSNDgAaa7acE8oKRq7MSliHrI_PIb3phTO5HBo0ok75tUIpqFuDeM9fR2Rh106_N1KfSx1IJ413qjy7NwYLtN8LeJVGu34gKpwEf-mWRsbKlca6K4ptN23ZTupdSXx8FsM",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzjtZMlKlxmHrIzXYUK2Vyv3YqVeLaTCwsoIDeVo3DpbD46Fyf4Szz9_dJ3rKu9JwHqdhs7bC00Ojm4POBU96sd-zyrRzPyqibvLEFSeUKlF6ZAuj7RZ_8T84OreRq5GaU5Vti8",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -1883,7 +1934,9 @@
       }
     ],
     "id": 11,
-    "is_new": true
+    "is_new": true,
+    "studio": "Studio Comet",
+    "sumber": "Manga"
   },
   {
     "type": "anime",
@@ -2988,8 +3041,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [],
     "sinopsis": "Anime Kashita Maryoku.",
     "related": [],
@@ -3088,6 +3141,52 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Kashita Maryoku Episode 3",
+        "slug": "kashita-maryoku-episode-3",
+        "source": "https://v2.samehadaku.how/kashita-maryoku-episode-3/",
+        "date": "",
+        "released_at": "2026-10-17T20:00:39.723Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzcjMc-So_yGiUcpeYGa2xnqUaZl3Wf4KTvPq8Mtdj0pkgk-ybcIvUV3O_SLoxiSoxa8BrpiVOpqJKCSvgdmHoxOOUM55MesI3Ll1dSFirhzDCUvvg_8USZ2ECHWw4ToXwSIt9M&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54727",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/m0xywDKC#bFIypzC5bHFk5hwoTWvkLxAQTH4TD7XKPnzi7Uhbz5E",
+            "default": false,
+            "post": "54727",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/G8glAJQR#DtIbmGc9H4M5Cz8ZvlGCsdfDocikHY7KYbVrrPTmk4c",
+            "default": false,
+            "post": "54727",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/PpJ0AbAS#fKaaBtTz8N0cUJKceOq8moNr6Pj1kpSgNUkg2efm_4c",
+            "default": false,
+            "post": "54727",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -3095,36 +3194,36 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxOzgy2JkTKwcsLKMoUlpj0kLwMSjPf6Dena8yudUIuYL0uLhbkRdfosCg_pklkpBNRHTet4RDSslPzorqCvRnyI0RSadRm3771aH1B7ehp7HEuXYuvt8OdJhlxXgHirDEO1Clz&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzcjMc-So_yGiUcpeYGa2xnqUaZl3Wf4KTvPq8Mtdj0pkgk-ybcIvUV3O_SLoxiSoxa8BrpiVOpqJKCSvgdmHoxOOUM55MesI3Ll1dSFirhzDCUvvg_8USZ2ECHWw4ToXwSIt9M&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54635",
+        "post": "54727",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/L5RAzZJZ#-eAzFMZ89iquYsZl2Zlp9rRrAjKZms3iKG8lHpoVn1w",
+        "url": "https://mega.nz/embed/m0xywDKC#bFIypzC5bHFk5hwoTWvkLxAQTH4TD7XKPnzi7Uhbz5E",
         "default": false,
-        "post": "54635",
+        "post": "54727",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/r05XSThK#Vo_Bw4ELcZR0U900Q3-hUYS5pgl9KV159gI6nRvgNG0",
+        "url": "https://mega.nz/embed/G8glAJQR#DtIbmGc9H4M5Cz8ZvlGCsdfDocikHY7KYbVrrPTmk4c",
         "default": false,
-        "post": "54635",
+        "post": "54727",
         "nume": "4"
       },
       {
         "no": 4,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/WsojRYCB#XEwjQcloG26m9yNihW1Ec2x5ROhlmSDbQQALoOzVQnA",
+        "url": "https://mega.nz/embed/PpJ0AbAS#fKaaBtTz8N0cUJKceOq8moNr6Pj1kpSgNUkg2efm_4c",
         "default": false,
-        "post": "54635",
+        "post": "54727",
         "nume": "5"
       }
     ],
