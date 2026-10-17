@@ -6245,8 +6245,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Vertex%20Force.jpg",
     "rating": "5.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Sci-Fi"
@@ -6294,6 +6294,23 @@
             "server": "anoboy",
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyD_0jJzdvSpA0FttKpawDDtX1jL-Hooj377GO7s1ucCEXgcjIl20VppNArt6iWVzLW5pDTtKA_uO2CUVPJ5aNUeNwXaSiN1k-dZ9E_3PuAUpToqZkw-AtrwuHHfkMu84AnyHO7",
+            "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Vertex Force Episode 3",
+        "slug": "vertex-force-episode-3",
+        "source": "https://anoboy.quest/2026/10/vertex-force-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwWBlZ2MbrLtiSOsO5j49VJwkSz5sfRXH_sAWLGiir7OgP_fsb-KwDwKhvBH0y4rrG2H8j_fdSIjbdDHJ_GvHWO_DkWHT3lrbE3FaNkXFAEm0vh2aGP58jz1LR1zFNUYkw-R8Dc",
             "default": true,
             "source": "anoboy"
           }
