@@ -761,8 +761,7 @@
         "default": false
       }
     ],
-    "id": 575,
-    "is_new": true
+    "id": 575
   },
   {
     "type": "series",
@@ -1529,8 +1528,7 @@
         "default": false
       }
     ],
-    "id": 574,
-    "is_new": true
+    "id": 574
   },
   {
     "type": "series",
@@ -5752,8 +5750,7 @@
         "default": false
       }
     ],
-    "id": 573,
-    "is_new": true
+    "id": 573
   },
   {
     "type": "series",
@@ -6495,8 +6492,7 @@
         "default": false
       }
     ],
-    "id": 572,
-    "is_new": true
+    "id": 572
   },
   {
     "type": "series",
@@ -7443,8 +7439,7 @@
         "default": false
       }
     ],
-    "id": 571,
-    "is_new": true
+    "id": 571
   },
   {
     "type": "series",
@@ -7759,7 +7754,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/k1GXZqvBDtKEX9tHgTlMFg",
+            "url": "https://videonode.de/iframe3/hydrax/WAU2gt2b8oXVAIGZflcJ1Q",
             "default": false
           }
         ]
@@ -7789,7 +7784,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Yj9B5LnXHITqWahRC63M9w",
+            "url": "https://videonode.de/iframe3/hydrax/DssT77LbpPs4uW_EPE6Aag",
             "default": false
           }
         ]
@@ -7819,7 +7814,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/tHkl9GH2mBp4zevZUv5j_A",
+            "url": "https://videonode.de/iframe3/hydrax/mG3_hJeG-3fWMvUW7z8SVg",
             "default": false
           }
         ]
@@ -7844,12 +7839,11 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/tHkl9GH2mBp4zevZUv5j_A",
+        "url": "https://videonode.de/iframe3/hydrax/mG3_hJeG-3fWMvUW7z8SVg",
         "default": false
       }
     ],
-    "id": 570,
-    "is_new": true
+    "id": 570
   },
   {
     "type": "series",
@@ -8074,8 +8068,7 @@
         "default": false
       }
     ],
-    "id": 569,
-    "is_new": true
+    "id": 569
   },
   {
     "type": "series",
@@ -88128,8 +88121,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-cautiva-2026-lk21.jpg",
     "rating": "7.2",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -88224,7 +88217,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/1RhW-h56zkK4Y8_kSHVJXA",
+            "url": "https://videonode.de/iframe3/hydrax/b3fOjsaq1v_jj6Kzs_1AlA",
             "default": false
           }
         ]
@@ -88254,7 +88247,37 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Y5jd8lS2erJVYeceq3bp0A",
+            "url": "https://videonode.de/iframe3/hydrax/7bop7b_Fnh8MhyY2G1VE-Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Cautiva - Season 1 Episode 5 (2026)",
+        "slug": "cautiva-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/cautiva-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wPHxBKbOgBo0gKhQuogbJg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/e-x8lvEQ7Qhcm2z_NueQUg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/6nrdGKC2EOKADfrnL5sNyw",
             "default": false
           }
         ]
@@ -88265,21 +88288,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/lD4gAzti55YMS0X9Xn0jXg",
+        "url": "https://videonode.de/iframe3/p2p/wPHxBKbOgBo0gKhQuogbJg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/nvMtBi_OK6RO_f0Qb9n43Q",
+        "url": "https://videonode.de/iframe3/cast/e-x8lvEQ7Qhcm2z_NueQUg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Y5jd8lS2erJVYeceq3bp0A",
+        "url": "https://videonode.de/iframe3/hydrax/6nrdGKC2EOKADfrnL5sNyw",
         "default": false
       }
     ],
@@ -90457,8 +90480,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "107 eps · S.5",
-    "episodes_count": 107,
+    "durasi": "111 eps · S.5",
+    "episodes_count": 111,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -93840,6 +93863,126 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 5,
+        "episode": 16,
+        "title": "CSI: Crime Scene Investigation - Season 5 Episode 16 (2000)",
+        "slug": "csi-crime-scene-investigation-season-5-episode-16-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-5-episode-16-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ygYNehV3EwWIgPCePpJ2pA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/_Xvgz-6j5xOD5mKQl6E_Ug",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ztkBV3DzpBl_JWJhy4izZg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 5,
+        "episode": 17,
+        "title": "CSI: Crime Scene Investigation - Season 5 Episode 17 (2000)",
+        "slug": "csi-crime-scene-investigation-season-5-episode-17-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-5-episode-17-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/E40zcoZDJ6qMdIn74kRpMA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/O1S812r2jCx6HsHLV_kqMA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ceM4zpnq8tYl_VCzazQKkg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 5,
+        "episode": 18,
+        "title": "CSI: Crime Scene Investigation - Season 5 Episode 18 (2000)",
+        "slug": "csi-crime-scene-investigation-season-5-episode-18-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-5-episode-18-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0xleBWJsPxNASlpAy67wQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/JEkqeajdaYJqrQVofIB-Lw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/waL4ptGJ3tqiqWlcqM-p5g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 5,
+        "episode": 19,
+        "title": "CSI: Crime Scene Investigation - Season 5 Episode 19 (2000)",
+        "slug": "csi-crime-scene-investigation-season-5-episode-19-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-5-episode-19-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/jf3b0sDPX6qjN1kK2Q74EQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/p-FmgszRpRBZflr4jioaPQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/U7NVb2zj5isXImVZg-dehw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -93847,21 +93990,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/OqE0e0LkIPltK0oCmkmdBw",
+        "url": "https://videonode.de/iframe3/p2p/jf3b0sDPX6qjN1kK2Q74EQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Th5It8SP14PqKv6V1mdKLw",
+        "url": "https://videonode.de/iframe3/cast/p-FmgszRpRBZflr4jioaPQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Itt1KBIR0f8P-hsJm7N-9w",
+        "url": "https://videonode.de/iframe3/hydrax/U7NVb2zj5isXImVZg-dehw",
         "default": false
       }
     ],
