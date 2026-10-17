@@ -9,7 +9,7 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { chromium } from "playwright";
-import { syncSamehadakuCatalog } from "./samehadaku-sync.js";
+import { syncSamehadakuCatalog, checkSamehadakuFirstPage } from "./samehadaku-sync.js";
 import { syncAnoboyLatest } from "./anoboy-sync.js";
 import {
   extractLk21Quality,
@@ -1682,4 +1682,56 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
     syncInFlight = null;
     await closeLk21Browser();
   }
+}
+
+/**
+ * Cek ringan halaman pertama (film LK21, series LK21, anime Samehadaku).
+ * Tidak menulis apa pun; hanya melaporkan apakah ada konten yang belum ada di katalog.
+ */
+export async function checkFirstPageForNew(rootDir) {
+  const dataDir = join(rootDir, "public", "data");
+  const report = { movies: [], series: [], anime: [], errors: [] };
+  lk21Blocked = false;
+  lk21BlockReason = "";
+  lk21Warmed = false;
+
+  try {
+    await resolveLk21Base();
+    if (lk21Blocked) throw new Error(lk21BlockReason || "LK21 blocked");
+
+    const slugs = new Set();
+    for (const f of ["movies.json", "horror.json", "indonesia.json"]) {
+      for (const m of await readJsonArray(join(dataDir, f))) slugs.add(m.slug);
+    }
+    const { html: movieHtml } = await fetchHtml(`${LIST_BASE}/latest`);
+    report.movies = extractListings(movieHtml)
+      .map((l) => l.slug)
+      .filter((slug) => slug && !slugs.has(slug));
+
+    const known = new Set(
+      (await readJsonArray(join(dataDir, "series-latest.json"))).map(
+        (r) => `${r.series_slug}#${r.episode}`
+      )
+    );
+    const { html: seriesHtml } = await fetchHtml(`${LIST_BASE}/latest-series`);
+    report.series = extractListings(seriesHtml, { seriesMode: true })
+      .filter((l) => l.slug && l.episodes_count)
+      .map((l) => `${l.slug}#${l.episodes_count}`)
+      .filter((key) => !known.has(key));
+  } catch (err) {
+    report.errors.push(`lk21: ${err.message}`);
+  } finally {
+    await closeLk21Browser();
+  }
+
+  try {
+    report.anime = (await checkSamehadakuFirstPage(dataDir)).fresh;
+  } catch (err) {
+    report.errors.push(`samehadaku: ${err.message}`);
+  }
+
+  report.hasNew = Boolean(
+    report.movies.length || report.series.length || report.anime.length
+  );
+  return report;
 }

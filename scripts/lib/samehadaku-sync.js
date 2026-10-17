@@ -1557,3 +1557,30 @@ export async function repairAnimeEpisodeBatch(dataDirs, items, opts = {}) {
     results,
   };
 }
+
+/**
+ * Cek ringan halaman 1 /anime-terbaru/: ada episode yang belum ada di anime-latest.json?
+ * @returns {Promise<{ checked: number, fresh: string[] }>}
+ */
+export async function checkSamehadakuFirstPage(dataDir) {
+  const known = new Set(
+    (await readJsonArray(join(dataDir, "anime-latest.json"))).map(
+      (row) => `${row.anime_slug}#${row.episode}`
+    )
+  );
+  const browser = await launchBrowser();
+  try {
+    const page = await browser.newPage();
+    if (!(await gotoReady(page, TERBARU_URL, "cek terbaru"))) {
+      throw new Error("Cloudflare timeout (anime-terbaru)");
+    }
+    await page.waitForTimeout(800);
+    const items = extractTerbaruListings(await page.content());
+    const fresh = items
+      .map((i) => `${i.slug}#${i.episode}`)
+      .filter((key) => !known.has(key));
+    return { checked: items.length, fresh };
+  } finally {
+    await browser.close();
+  }
+}
