@@ -1525,11 +1525,15 @@
     "judul": "Black Clover Season 2",
     "tahun": "",
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Black-Clover-Season-2-Episode-2-300x167.jpg",
-    "rating": null,
+    "rating": "8.8",
     "votes": null,
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
-    "genre": [],
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Shounen"
+    ],
     "sinopsis": "Anime Black Clover Season 2.",
     "related": [],
     "slug": "black-clover-season-2",
@@ -1703,7 +1707,9 @@
       }
     ],
     "id": 10,
-    "is_new": true
+    "is_new": true,
+    "studio": "Studio Pierrot",
+    "sumber": "Manga"
   },
   {
     "type": "anime",
@@ -5899,8 +5905,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Magical%E2%98%85Explorer.jpg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Adventure",
       "Comedy",
@@ -6019,6 +6025,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyR4IjtWK1JKqLkBUTLiHj32jXdQHwQSANXSoKcqpLmArR3E0aUyYFKXL7eKXjHO7oR5ZJRbXN5M-tfyS_KOmhQiw8fvxVQr-UyJ44qf2bTZfzqMFvu6CadsaqHSGVQ9Zi9U5_2",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Magical★Explorer Episode 4",
+        "slug": "magical%e2%98%85explorer-episode-4",
+        "source": "https://anoboy.quest/2026/10/magical%e2%98%85explorer-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwyUZUSIzAXoi0LYVK4pwgeYsL115kcJ8P6Y9BzoOv0ma2ApZeEycsJXjX9qEIFpC1qYlkZ3qdhJqKmoGB4iIAEx4w3-AEdGZMxaAQpqSWsLTihSITtpzoduSw3ur-agOHzBgQ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx6JPIrYosNnSvwvVqYZ--kQgeE5Ut4VgY3DG0phOnmp03EDWTBwwI4iQ3BmWQBC7Pt0NMD9YocBnNWYi_fEUSJViJU0dEvLxc1r_DCb4noqhE4sjMjmeIUwOaPvzuUlWar",
             "default": false,
             "source": "anoboy"
           }
@@ -8188,7 +8219,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx204389-jCoFCeTthDMy.jpg",
     "rating": "7.09",
     "votes": null,
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
@@ -8424,7 +8455,9 @@
       }
     ],
     "id": 59,
-    "is_new": true
+    "is_new": true,
+    "studio": "WAO World",
+    "sumber": "Light Novel"
   },
   {
     "type": "anime",
