@@ -1,6 +1,111 @@
 [
   {
     "type": "series",
+    "nama": "Unsoiled Starlight",
+    "judul": "Unsoiled Starlight (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-unsoiled-starlight-2026-lk21.jpg",
+    "rating": "0.0",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Eleven years after her father’s death destroys her family, a woman who changed her identity reunites with a tech entrepreneur and becomes entangled in a relationship that may be part of his decade-long plan or her own quest for revenge\n\nBintang Film: Yang Bingzhuo, Gong Wanyi\n\nNegara: China",
+    "slug": "unsoiled-starlight-2026",
+    "source": "https://tv9.nontondrama.my/unsoiled-starlight-2026",
+    "list_source": "https://tv12.lk21official.cc/unsoiled-starlight-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Unsoiled Starlight - Season 1 Episode 1 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Xyyxow5Uc1BiRbZrcA0kaA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/RtJmqTsnwhcU_9di7EtRMg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/FZUO5noGJazRxOHxtL_aig",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Unsoiled Starlight - Season 1 Episode 2 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/S7qRkkrfXiUPn1Y9dHRImw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/8Pi-dI5IBHPTTTPt0NRlDw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/uBuGCRXKFkRbU3r0gcbUyg",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/S7qRkkrfXiUPn1Y9dHRImw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/8Pi-dI5IBHPTTTPt0NRlDw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/uBuGCRXKFkRbU3r0gcbUyg",
+        "default": false
+      }
+    ],
+    "id": 577,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Merry Berry Love",
     "judul": "Merry Berry Love (2026)",
     "tahun": "2026",
@@ -73,7 +178,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/_4V1DHpV9ild5-4vqqTtHA",
+            "url": "https://videonode.de/iframe3/hydrax/OBWDrm2iGklAy6v6PIMs-A",
             "default": false
           }
         ]
@@ -98,12 +203,11 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/_4V1DHpV9ild5-4vqqTtHA",
+        "url": "https://videonode.de/iframe3/hydrax/OBWDrm2iGklAy6v6PIMs-A",
         "default": false
       }
     ],
-    "id": 576,
-    "is_new": true
+    "id": 576
   },
   {
     "type": "series",
@@ -37458,7 +37562,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/XWTOyA7a5BcwXcLsTQyJ1A",
+            "url": "https://videonode.de/iframe3/hydrax/EpCQhT6qA7ShZidCNmWxxA",
             "default": false
           }
         ]
@@ -37488,7 +37592,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/T_9qzdO00Ng78dsold1xyA",
+            "url": "https://videonode.de/iframe3/hydrax/J5ZoJGGr8VceUe_fJe_Q_g",
             "default": false
           }
         ]
@@ -37518,7 +37622,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/D24W8dmWVZ__OIMv1h6bdQ",
+            "url": "https://videonode.de/iframe3/hydrax/Vf8uzGiuqXYvzs5pERqKgA",
             "default": false
           }
         ]
@@ -37543,7 +37647,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/D24W8dmWVZ__OIMv1h6bdQ",
+        "url": "https://videonode.de/iframe3/hydrax/Vf8uzGiuqXYvzs5pERqKgA",
         "default": false
       }
     ],
@@ -67972,7 +68076,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/GmwErz03CoP-7YlAn0yCjA",
+            "url": "https://videonode.de/iframe3/hydrax/lY2BE2YYHseX3zrg7n5sIA",
             "default": false
           }
         ]
@@ -67997,7 +68101,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GmwErz03CoP-7YlAn0yCjA",
+        "url": "https://videonode.de/iframe3/hydrax/lY2BE2YYHseX3zrg7n5sIA",
         "default": false
       }
     ],
@@ -69958,8 +70062,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-mission-mompossible-2026-lk21.jpg",
     "rating": "8.1",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -70240,6 +70344,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Mission: Mompossible - Season 1 Episode 10 (2026)",
+        "slug": "mission-mompossible-season-1-episode-10-2026",
+        "source": "https://tv9.nontondrama.my/mission-mompossible-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/MOk2q7i12kixHY3BvUhmyg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/mCc7xM7xPi9kBG2KJp11XQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/hQ2yg2R0RvLoMcEC1_R6rg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -70247,21 +70381,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/c7KdzBHjkyIW1qlYb1RhCg",
+        "url": "https://videonode.de/iframe3/p2p/MOk2q7i12kixHY3BvUhmyg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/sdIRPkYgZ34B_3jEEbeXSA",
+        "url": "https://videonode.de/iframe3/cast/mCc7xM7xPi9kBG2KJp11XQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/TcE0IkfR61Xh8Cl6BTM-1A",
+        "url": "https://videonode.de/iframe3/hydrax/hQ2yg2R0RvLoMcEC1_R6rg",
         "default": false
       }
     ],
@@ -71375,7 +71509,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/LqMXnIP7F-9nLSPz2bjqcw",
+            "url": "https://videonode.de/iframe3/hydrax/7wPWlsuGRakZT63jgIBZ7w",
             "default": false
           }
         ]
@@ -71400,7 +71534,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/LqMXnIP7F-9nLSPz2bjqcw",
+        "url": "https://videonode.de/iframe3/hydrax/7wPWlsuGRakZT63jgIBZ7w",
         "default": false
       }
     ],
@@ -89417,7 +89551,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/LXlPmKKinEA_7HdWQDi35g",
+            "url": "https://videonode.de/iframe3/hydrax/e2friHghWqJm7_avt_8gkg",
             "default": false
           }
         ]
@@ -89442,7 +89576,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/LXlPmKKinEA_7HdWQDi35g",
+        "url": "https://videonode.de/iframe3/hydrax/e2friHghWqJm7_avt_8gkg",
         "default": false
       }
     ],
