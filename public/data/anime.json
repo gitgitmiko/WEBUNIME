@@ -2703,8 +2703,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [],
     "sinopsis": "Anime Kanata kara.",
     "related": [],
@@ -2803,6 +2803,52 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Kanata kara Episode 3",
+        "slug": "kanata-kara-episode-3",
+        "source": "https://v2.samehadaku.how/kanata-kara-episode-3/",
+        "date": "",
+        "released_at": "2026-10-18T20:00:39.811Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzGz-Wr35yT6W-RT8YF-9cfhMmRqKbod8ubTBhk4U51s33n7xq_M70osdxKuBYtr8SzbrZ_OIefogaz_kYTe1fQHbAdeMn5g71PE0GKeBYNoItPEcoqWvEOP0L08AT4FlsgkOs",
+            "default": true,
+            "post": "54768",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/bqZUibgK#VUmf3HcBkmfnQC4d63vK-cUIXSXLtdxwP4Q0Q01V-Ug",
+            "default": false,
+            "post": "54768",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/rvghhABT#jz-NKcC26XMVWB-0l8he3ZYnRB_oNZsNXd3UXzhqYLw",
+            "default": false,
+            "post": "54768",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/mhJD1L5L#-mBFHeFvfIb-PZrIBPrqxpHfyZyltHSRPkwPVYtSNjk",
+            "default": false,
+            "post": "54768",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -2810,36 +2856,36 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dw-uWQx3Bu5X2nzyIIrgNqbX9u54WCLIk5e9bYCV_PQamZIHUXZVObi_qaJY1ASPY8YbkSHuXnwu1EZ-sK5UHgWj00RHK9IXhD_7kw8AIPaYe_voKJB-9SLoP0ypSZkOI4VCsdf",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzGz-Wr35yT6W-RT8YF-9cfhMmRqKbod8ubTBhk4U51s33n7xq_M70osdxKuBYtr8SzbrZ_OIefogaz_kYTe1fQHbAdeMn5g71PE0GKeBYNoItPEcoqWvEOP0L08AT4FlsgkOs",
         "default": true,
-        "post": "54626",
+        "post": "54768",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/9iwzRRxS#u1Nrdxk9bjiRBf6zdHNTtp75Dxr37B6kyE5c_29oRyg",
+        "url": "https://mega.nz/embed/bqZUibgK#VUmf3HcBkmfnQC4d63vK-cUIXSXLtdxwP4Q0Q01V-Ug",
         "default": false,
-        "post": "54626",
+        "post": "54768",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/9vxlRBpS#xnIPDyjIX5Uf8CFdr0kpDgnjh4TxispIjrSWplYM9qQ",
+        "url": "https://mega.nz/embed/rvghhABT#jz-NKcC26XMVWB-0l8he3ZYnRB_oNZsNXd3UXzhqYLw",
         "default": false,
-        "post": "54626",
+        "post": "54768",
         "nume": "4"
       },
       {
         "no": 4,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/9rwiBSrC#LzGuYuyOmANbqFSJrEyGl40x9CyXX3f3HqE-1Q0YOAw",
+        "url": "https://mega.nz/embed/mhJD1L5L#-mBFHeFvfIb-PZrIBPrqxpHfyZyltHSRPkwPVYtSNjk",
         "default": false,
-        "post": "54626",
+        "post": "54768",
         "nume": "5"
       }
     ],
