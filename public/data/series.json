@@ -7852,8 +7852,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-where-mask-ends-2026-lk21.jpg",
     "rating": "9.3",
-    "durasi": "7 eps · S.1",
-    "episodes_count": 7,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -8073,6 +8073,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "Where the Mask Ends - Season 1 Episode 8 (2026)",
+        "slug": "where-mask-ends-season-1-episode-8-2026",
+        "source": "https://tv9.nontondrama.my/where-mask-ends-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/l4nHwfw3DksqtiokwO_w0g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/mapCKs0si62og_Uxixpr3g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/z3_gv9pGVBl8XkUg4d1flw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -8080,21 +8110,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Sav0lgEx968pBqosaMj4rg",
+        "url": "https://videonode.de/iframe3/p2p/l4nHwfw3DksqtiokwO_w0g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/6Y8zWVxSmBe8ZgCdJGz2aQ",
+        "url": "https://videonode.de/iframe3/cast/mapCKs0si62og_Uxixpr3g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/hFDCXfos3ytJ-nfa4bG2LA",
+        "url": "https://videonode.de/iframe3/hydrax/z3_gv9pGVBl8XkUg4d1flw",
         "default": false
       }
     ],
