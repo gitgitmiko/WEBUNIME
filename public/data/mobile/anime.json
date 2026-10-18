@@ -2363,8 +2363,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [],
     "sinopsis": "Anime Ao no Hako Season 2.",
     "related": [],
@@ -2479,6 +2479,43 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Ao no Hako Season 2 Episode 3",
+        "slug": "ao-no-hako-season-2-episode-3",
+        "source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-3/",
+        "date": "",
+        "released_at": "2026-10-18T10:00:46.337Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyPjlZkOMARq-fvqSW6yr2vIiJ7yfbRz5r6O0j9WHxkU43FlbmlyRM8jADv1tn4aPBPgOltKvI99k7U80yjQV6nTnpfMN0fq7J_NhLNUDEeVYprLQdSaD5ZqTo110VP4i8WXZSb",
+            "default": true,
+            "post": "54732",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/em42DZCD#i--xjXhe-hohJGzT_tZ7d_jJyGvUuy0vVLoWJdpQqWU",
+            "default": false,
+            "post": "54732",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/iioRCAbb#VpY5xDibs32wym_hHJX4wWIXs2IJwWug80qrUgDP4K8",
+            "default": false,
+            "post": "54732",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
@@ -2486,37 +2523,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwT-d88lMtuaIp3wg_azDzI294rNC1JQvDq6IcsFsxR9ITZC5WzN9Vxxmoek_bua8m4e1sdRoh_-YZU5NFMDyGu-oeFhOh6J6jofCx_TQEjXsJ5gkiWr17YoMAWewnbitg_FnI",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyPjlZkOMARq-fvqSW6yr2vIiJ7yfbRz5r6O0j9WHxkU43FlbmlyRM8jADv1tn4aPBPgOltKvI99k7U80yjQV6nTnpfMN0fq7J_NhLNUDEeVYprLQdSaD5ZqTo110VP4i8WXZSb",
         "default": true,
-        "post": "54587",
+        "post": "54732",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/8zgEECba#PGEgz_C-DuGxxg5qc9GHreaWMawdyI0egM88DmLs2eI",
+        "url": "https://mega.nz/embed/em42DZCD#i--xjXhe-hohJGzT_tZ7d_jJyGvUuy0vVLoWJdpQqWU",
         "default": false,
-        "post": "54587",
+        "post": "54732",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/s65HAC7C#WA8JEqFzG-nGe8OzW0YoHIQq2suv_bHp4RHzHPHl11g",
+        "url": "https://mega.nz/embed/iioRCAbb#VpY5xDibs32wym_hHJX4wWIXs2IJwWug80qrUgDP4K8",
         "default": false,
-        "post": "54587",
+        "post": "54732",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/RjZgiRbT#8qkCDgGKd_KUpL-GKD0CtVnZ8aGLTnKyDIGsd3DOrY4",
-        "default": false,
-        "post": "54587",
-        "nume": "5"
       }
     ],
     "id": 15,
