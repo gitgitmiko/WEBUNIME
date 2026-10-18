@@ -3620,8 +3620,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [
       "Action",
       "Adventure",
@@ -3687,44 +3687,54 @@
           }
         ],
         "released_at": "2026-10-11T20:55:17.968Z"
+      },
+      {
+        "episode": 2,
+        "title": "Dragon Ball Super: Beerus Episode 2",
+        "slug": "dragon-ball-super-beerus-episode-2",
+        "source": "https://v2.samehadaku.how/dragon-ball-super-beerus-episode-2/",
+        "date": "",
+        "released_at": "2026-10-18T17:30:41.087Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/eqZiTZJL#G4AvsJp7JaJlx2fqxOi0kZlLmsT4Ky7P__CX5HIIUIg",
+            "default": true,
+            "post": "54760",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/ruQkWIiZ#bAAY4y8CUMLdzd7m5JF2KA0JPpB3a1WVqKSkYTTYr0k",
+            "default": false,
+            "post": "54760",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyHAHYgwwCXja6zFE7Iu99tQS_JYT6BclsLZDwVN98aCR9FlvswYq7_sCL5RK2od2acrWlkVayh6PMVzI8bZZUaRBUhzbFdjiqKebCGRXRg9vpvzRNNt6mli84EH_y7yWv0u1vU",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/eqZiTZJL#G4AvsJp7JaJlx2fqxOi0kZlLmsT4Ky7P__CX5HIIUIg",
         "default": true,
-        "post": "54602",
-        "nume": "1"
+        "post": "54760",
+        "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/tigHGbAR#1tOYV8GTYeKc5FNJCzvnic4zpexRGL7M-ajAkRP86TA",
-        "default": false,
-        "post": "54602",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/MnI1mDYA#aHpKCwKbAPEkt_TfxzcyU6H6yBH1hxoLnq0TjaqV_p8",
+        "url": "https://mega.nz/embed/ruQkWIiZ#bAAY4y8CUMLdzd7m5JF2KA0JPpB3a1WVqKSkYTTYr0k",
         "default": false,
-        "post": "54602",
+        "post": "54760",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/kqxDHDpD#l4IPAyIwYFjqz-qlI0TV4_seggJiALJU7EHK6pxZeQQ",
-        "default": false,
-        "post": "54602",
-        "nume": "5"
       }
     ],
     "id": 24,
@@ -3740,8 +3750,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shinja-Zero-no-Megami-sama-to-Hajimeru-Isekai-Kouryaku.jpg",
     "rating": "6.6",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 1,
+    "durasi": "2 eps",
+    "episodes_count": 2,
     "genre": [
       "Fantasy",
       "Isekai",
@@ -3814,6 +3824,31 @@
           }
         ],
         "released_at": "2026-10-11T20:55:14.199Z"
+      },
+      {
+        "episode": 2,
+        "title": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku Episode 2",
+        "slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku-episode-2",
+        "source": "https://anoboy.quest/2026/10/shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku-episode-2/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyFhYX58B8e48yXTRwz3cJ0ErNkvUhUf2Ew9tMvJzOEZOXFc9NDF9KMJdYGsAYhvdpkdeWVOAHJDcC4nOmZDe61d4s-aha9464sezTBlTef23vUoD5nsM9zdUZWJsdH8j7fzqQ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzxJqpTXsJCLgQPKyv0V5StLKdU1W7TnYeVxJC3yGF1EKiU2UJERSCWJEO5r2K8nmi4e4FhAFHMQxoxcmBZQouihnZOBPVBxf6c5v8CsaTe-igvVptY4lTspCj7LmdoAz_mnF8",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -5775,7 +5810,7 @@
     "rating": "6.4",
     "votes": "",
     "durasi": "24 Menit",
-    "episodes_count": 2,
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Super Power"
@@ -5863,44 +5898,44 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Tank Chair Episode 3",
+        "slug": "tank-chair-episode-3",
+        "source": "https://v2.samehadaku.how/tank-chair-episode-3/",
+        "date": "",
+        "released_at": "2026-10-18T17:30:39.470Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/TgxzmSiB#0rdS0UYLAU1lOujEKoJyYSdREaN67NnFn6TJXru2EQs",
+            "default": true,
+            "post": "54757",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxnGdroYmBxnOB0shxEJxZ7yVg9AY4aDQUhbTFrIunmoOIor6_2Ut4NQDW2UeKIXD-B8myMAPLvSpASKFFH_c_r-XL5lxHbrhaKnPGskIG6E4xlhBDjxFJxc2hxLtCj41rvOQNv",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwf7bBed-cqLBKqD6XTCUTn2oJiDN0rO4z2pCUX07RLOoPx2R6cbg-_gxg6CNA71G3X4UBu6ER7WTcujscMwd1D88mSf8kKrWhm0qn_J655ys75hpPPWow2lAX-3SefihoVxoBS",
-        "default": true,
-        "post": "54575",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/ikAl3Lra#w54rW4_7ZaTlxv2Dc68mkaVrdgxwHQZwswPo7nejjBo",
-        "default": false,
-        "post": "54575",
-        "nume": "2"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/v85X1CQB#9WE7jXLozTcj3qw-seMcMJVsvJBBSEfwXReJSFHT42A",
-        "default": false,
-        "post": "54575",
-        "nume": "3"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/y0JHzQzY#w50ny53R8NByNj3XJ2uuZiiZBM7s24u8VteJewKy1HA",
-        "default": false,
-        "post": "54575",
-        "nume": "4"
+        "url": "https://mega.nz/embed/TgxzmSiB#0rdS0UYLAU1lOujEKoJyYSdREaN67NnFn6TJXru2EQs",
+        "default": true,
+        "post": "54757",
+        "nume": "1"
       }
     ],
     "id": 43,
@@ -5916,8 +5951,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Yowaki%20Max%20Reijou%20nanoni,%20Ratsuwan%20Konyakusha-sama%20no%20Kake%20ni%20Notte%20Shimatta.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Romance",
       "Shoujo"
@@ -5973,6 +6008,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dy1EQTLUSZ62-6alCMsCBDO5hJ-tz6YcCnswianxYChWWMzo5OWxXgkt7vwFYD1xcA9roLKs6goRS3pzRm5nvyY_caOr52QBdiDogm0IEz0KdqQomMvwooY08H1dQgaqYisglU",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Yowaki Max Reijou Episode 3",
+        "slug": "yowaki-max-reijou-episode-3",
+        "source": "https://anoboy.quest/2026/10/yowaki-max-reijou-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx3XjuODz9adXpceHme3u4_R_zh2TQkdNl1jCm30hzQlmjdvOmMSwXGdF5gHKJiWAjpd9N4L0hfL_e3Pzu_I3fTqbR8jFzoAUOtU7jyjwUEVSNXNs6qxqakeJEyDhcFoX_kR4M",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwjDVCkNIygKbXtVOjHXyH9aWQgecC03n7ppMRe8DoCPtyh7dnN_e-5GiSjwKYKnxtxpN5Shur9PoG1N7RzLZe_LYyTUuS51vuhG6zlWfQx2UKy0Os7H20bt2P8_ndbJE3wTFlA",
             "default": false,
             "source": "anoboy"
           }
@@ -8101,8 +8161,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/159859.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "3 eps",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Adventure",
       "Fantasy"
@@ -8265,6 +8325,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwe3vBMw2gnJpycExN-Ut3M_SNy-vcRBIMHdVKyoRPO7lKfFI_OpP2TQnnCLbrUGuILvf6MxmrcGnq4ndSNd0TBtGcEcKfCj2BA-MsA_fpgEey-sJl88I2xFf6txnpQ4W8Iqpc",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Tensei Kizoku Kantei Skill de Nariagaru Season 3 Episode 4",
+        "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-4",
+        "source": "https://anoboy.quest/2026/10/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxHAq9QPFadXp785AmvI2D7Y52K9gfyI49dDnODkqYvzfN8p7ywapfEmyIatm1LXKSo-q4gNCqOEkEimGS3xy_oH9rqiUPty0BzfgLDo_vHTueqaDKH4ylOUKWYCJP-GQBSH14F",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy9NdViBX9n_EFFRqbOjGkyCXVQSBg-Wzoxb2XW9X_MQ7h4i5u9AQ2E_2ee_tOwDGaNc0e9xa3ocFxTaj4e3P72LpDGsOckmxvBzEYyw79JDy52DhN6J69RzLbzD6iiNd98HRyy",
             "default": false,
             "source": "anoboy"
           }
