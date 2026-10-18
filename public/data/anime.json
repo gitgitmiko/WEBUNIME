@@ -2198,8 +2198,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Yowaki-M2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [],
     "sinopsis": "Anime Yowaki Max.",
     "related": [],
@@ -2298,44 +2298,54 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Yowaki Max Episode 3",
+        "slug": "yowaki-max-episode-3",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-3/",
+        "date": "",
+        "released_at": "2026-10-18T17:00:38.587Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ShZBiCpJ#GvArcHuGu7KBzJyfk0y6SvPVU4C9ZDItg4DJA0BfF5o",
+            "default": true,
+            "post": "54753",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/34gBgKiS#LYzM6PbrpjjAp5ocDVywI-UmtbG8Ji25hHtB8c1maxw",
+            "default": false,
+            "post": "54753",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dz3xZNEa30WpI5TRuJNFvzYayK0w0TNMIp36io-hDe9k2nl3kyUDUrjul-aSEXieIrhRaBcLb_EMa_2MU-hQa2sEMAZ89v9bD4OOPq7PxoutkdcU5JEe5bDV6_G73Zg3UcGLsOZ&origin=sameguru2.blogspot.com",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/ShZBiCpJ#GvArcHuGu7KBzJyfk0y6SvPVU4C9ZDItg4DJA0BfF5o",
         "default": true,
-        "post": "54585",
-        "nume": "1"
+        "post": "54753",
+        "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/y0ATTKBR#qpYdMBXdhElsI9yBrUNJK3wVEtD9FF8oeAtV7rUdLLw",
-        "default": false,
-        "post": "54585",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/qwAURDLA#2mkMJWQSyY5PSW3Yxz3ahq8u58xHmnMiJQafwm9ilFI",
+        "url": "https://mega.nz/embed/34gBgKiS#LYzM6PbrpjjAp5ocDVywI-UmtbG8Ji25hHtB8c1maxw",
         "default": false,
-        "post": "54585",
+        "post": "54753",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/C8wUEQbC#QTtJ6cdiYWt9hSIftqTOEIHOpaDoIbi4A0-5KYdv1Fc",
-        "default": false,
-        "post": "54585",
-        "nume": "5"
       }
     ],
     "id": 14
