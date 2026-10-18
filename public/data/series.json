@@ -89334,8 +89334,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-vanishing-beauty-2026-lk21.jpg",
     "rating": "9.4",
-    "durasi": "20 eps · S.1",
-    "episodes_count": 20,
+    "durasi": "21 eps · S.1",
+    "episodes_count": 21,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -89944,6 +89944,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "The Vanishing Beauty - Season 1 Episode 21 (2026)",
+        "slug": "vanishing-beauty-season-1-episode-21-2026",
+        "source": "https://tv9.nontondrama.my/vanishing-beauty-season-1-episode-21-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/9HsTxX1nbyhISirDiuIL5A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/G9RIjS2lmAv7rHj3BlzzKw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bsLha6LGbHgZYJAyrAFIQA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -89951,21 +89981,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/79uWMNm7u7y9h_sxCZEzXw",
+        "url": "https://videonode.de/iframe3/p2p/9HsTxX1nbyhISirDiuIL5A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/TCSRy0mVMmqusuUDsz5xfA",
+        "url": "https://videonode.de/iframe3/cast/G9RIjS2lmAv7rHj3BlzzKw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/e2friHghWqJm7_avt_8gkg",
+        "url": "https://videonode.de/iframe3/hydrax/bsLha6LGbHgZYJAyrAFIQA",
         "default": false
       }
     ],
