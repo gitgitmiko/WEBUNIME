@@ -3514,8 +3514,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Ojisan%20wa%20Kawaii%20Mono%20ga%20Osuki.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Comedy"
     ],
@@ -3570,6 +3570,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxpYGvpI15D4bEqtC5ODwb-NWsPkyEq4v3Z8oWQB9FaDt2KFcg60LLDMq3fHWjenqtcJ6zp-hiVH4DC7VrmcoHPtDaX84jPKImRDR6YBBebYOWP9N2xQSTFeSJrqRjhL88hWFqK",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Ojisan wa Kawaii Mono ga Osuki. Episode 3",
+        "slug": "ojisan-wa-kawaii-mono-ga-osuki-episode-3",
+        "source": "https://anoboy.quest/2026/10/ojisan-wa-kawaii-mono-ga-osuki-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwur5uXPctWKZ9zeiG5xXTJGsbp2TBQs6Y7isnUWEqK110XwxmQ7XX0iEppy6bS6bApZRJY-dwRgNKYUiqxVySD3QJa_DlhWlKL-8PSu4LBsau4zClYXJYQMejVl3ZfKZvF8P47",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwSKAPLhRa7Xl6dHKcPs7MJMU2MjmVTHvdeOgr9HnIZwv6gq2N7tAvvX7_xYhXXCLpTcR4wbxvFaQJ_5EEmMOUzsTxUKCL0CxCLOX1H3wYGvgZ7ou5zoLJw2IYmijY1LyCvumE",
             "default": false,
             "source": "anoboy"
           }
