@@ -9732,7 +9732,7 @@
     "film": "Insidious: Out of the Further (2026)",
     "source": "https://tv12.lk21official.cc/insidious-out-further-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:54.728Z",
+    "scraped_at": "2026-10-18T14:34:54.852Z",
     "players": [
       {
         "no": 1,
@@ -9940,7 +9940,7 @@
     "film": "Buddy (2026)",
     "source": "https://tv12.lk21official.cc/buddy-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:35.025Z",
+    "scraped_at": "2026-10-18T14:34:36.884Z",
     "players": [
       {
         "no": 1,
@@ -10296,7 +10296,7 @@
     "film": "Onslaught (2026)",
     "source": "https://tv12.lk21official.cc/onslaught-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:06:03.388Z",
+    "scraped_at": "2026-10-18T14:35:03.078Z",
     "players": [
       {
         "no": 1,
@@ -10363,7 +10363,7 @@
     "film": "Hope (2026)",
     "source": "https://tv12.lk21official.cc/hope-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:26.774Z",
+    "scraped_at": "2026-10-18T14:34:28.761Z",
     "players": [
       {
         "no": 1,
@@ -10393,7 +10393,7 @@
     "film": "Khadam (2026)",
     "source": "https://tv12.lk21official.cc/khadam-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:43.794Z",
+    "scraped_at": "2026-10-18T14:34:44.470Z",
     "players": [
       {
         "no": 1,
@@ -10423,7 +10423,7 @@
     "film": "0187 UFO (2026)",
     "source": "https://tv12.lk21official.cc/0187-ufo-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:45.908Z",
+    "scraped_at": "2026-10-18T14:34:46.491Z",
     "players": [
       {
         "no": 1,
@@ -10453,7 +10453,7 @@
     "film": "Haunted Universities 4 (2026)",
     "source": "https://tv12.lk21official.cc/haunted-universities-4-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:50.907Z",
+    "scraped_at": "2026-10-18T14:34:51.286Z",
     "players": [
       {
         "no": 1,
@@ -10483,7 +10483,7 @@
     "film": "Infirmary (2026)",
     "source": "https://tv12.lk21official.cc/infirmary-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:55.236Z",
+    "scraped_at": "2026-10-18T14:34:55.361Z",
     "players": [
       {
         "no": 1,
@@ -10513,7 +10513,7 @@
     "film": "Models vs. Werewolves (2026)",
     "source": "https://tv12.lk21official.cc/models-vs-werewolves-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:06:00.566Z",
+    "scraped_at": "2026-10-18T14:35:00.442Z",
     "players": [
       {
         "no": 1,
@@ -10543,7 +10543,7 @@
     "film": "Harbinger (2026)",
     "source": "https://tv12.lk21official.cc/harbinger-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:06:11.525Z",
+    "scraped_at": "2026-10-18T14:35:09.179Z",
     "players": [
       {
         "no": 1,
@@ -10952,7 +10952,7 @@
     "film": "Beware Boiuna (2026)",
     "source": "https://tv12.lk21official.cc/beware-boiuna-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-18T14:05:25.727Z",
+    "scraped_at": "2026-10-18T14:34:27.748Z",
     "players": [
       {
         "no": 1,
@@ -10973,6 +10973,36 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/VrtaZk3WeI4tzASd5N2Kfg",
+        "default": false
+      }
+    ]
+  },
+  "vhsmixtape-2026": {
+    "slug": "vhsmixtape-2026",
+    "film": "V/H/S/Mixtape (2026)",
+    "source": "https://tv12.lk21official.cc/vhsmixtape-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-10-18T14:34:16.300Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/hu-zV_Ihr_YeJQp54qadKw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/G5DT0Ed9YQpxa2P1J2g7jA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/85QsEcBX61JDm8u9A1nqHQ",
         "default": false
       }
     ]

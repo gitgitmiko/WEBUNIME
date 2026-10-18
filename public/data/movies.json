@@ -1,5 +1,45 @@
 [
   {
+    "nama": "V/H/S/Mixtape",
+    "judul": "V/H/S/Mixtape (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-vhsmixtape-2026-lk21.jpg",
+    "rating": "4.3",
+    "quality": "HD",
+    "durasi": "1j 38m",
+    "genre": [
+      "Horror"
+    ],
+    "sinopsis": "V/H/S/Mixtape - Menaikkan level ketakutan ke porsi maksimal, V/H/S/MIXTAPE menghadirkan kumpulan cerita horor yang berlumuran darah, bermula dari deretan video musik yang dikutuk, pertunjukan-pertunjukan mengerikan, hingga rekaman video temuan (found footage) yang memicu mimpi buruk. Tekan tombol play, dan berdoalah agar itu segera berhenti.\nSoundtrack: Dance, Dance, Dance, Dance\n\nSubtitle: workkeerr\n\nSutradara: Ernest Dickerson, Flying Lotus, Tobias Forge\n\nBintang Film: Josh Willis, Christopher Romero Sosa, Barbara Crampton, Erin Griff, Zach Jobe\n\nNegara: United States\n\nVotes: 2.000\n\nRelease: 09 Oct 2026\n\nUpdated: 18 Oct 2026 14:04:09",
+    "slug": "vhsmixtape-2026",
+    "source": "https://tv12.lk21official.cc/vhsmixtape-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/hu-zV_Ihr_YeJQp54qadKw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/G5DT0Ed9YQpxa2P1J2g7jA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/85QsEcBX61JDm8u9A1nqHQ",
+        "default": false
+      }
+    ],
+    "id": 300,
+    "is_new": true
+  },
+  {
     "nama": "Clean Hands",
     "judul": "Clean Hands (2026)",
     "tahun": "2026",
@@ -39,8 +79,7 @@
         "default": false
       }
     ],
-    "id": 299,
-    "is_new": true
+    "id": 299
   },
   {
     "nama": "Kate Berlant: Parmesan",
