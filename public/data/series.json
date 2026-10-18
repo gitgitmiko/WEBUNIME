@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-unsoiled-starlight-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -76,6 +76,96 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Unsoiled Starlight - Season 1 Episode 3 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/eEETfV3hJbGLhweUSdTxtQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/KpYJUMLmAgyEBDmWI8z9yw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/zLqTh5cyjX_byO0pBglFzw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Unsoiled Starlight - Season 1 Episode 4 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/c1l1OqFCyLHAAmS6rAm59Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DB6oWL63vE2e3KQBtOoaWA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/e9h0_q4fPZxSQAvaGOFDZA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Unsoiled Starlight - Season 1 Episode 5 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/yMCZTxVSl69vzaSDk3HGxw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Maq3zR6_6Zyi276gueULsg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/DCvubb68AF8ap1Aaz79KPA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -83,26 +173,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/S7qRkkrfXiUPn1Y9dHRImw",
+        "url": "https://videonode.de/iframe3/p2p/yMCZTxVSl69vzaSDk3HGxw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/8Pi-dI5IBHPTTTPt0NRlDw",
+        "url": "https://videonode.de/iframe3/cast/Maq3zR6_6Zyi276gueULsg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/uBuGCRXKFkRbU3r0gcbUyg",
+        "url": "https://videonode.de/iframe3/hydrax/DCvubb68AF8ap1Aaz79KPA",
         "default": false
       }
     ],
-    "id": 577,
-    "is_new": true
+    "id": 577
   },
   {
     "type": "series",
