@@ -1708,15 +1708,17 @@ export async function checkFirstPageForNew(rootDir) {
       .map((l) => l.slug)
       .filter((slug) => slug && !slugs.has(slug));
 
-    const known = new Set(
-      (await readJsonArray(join(dataDir, "series-latest.json"))).map(
-        (r) => `${r.series_slug}#${r.episode}`
-      )
-    );
+    // Episode dianggap sudah ada bila tercatat di series.json (season + nomor episode).
+    const known = new Set();
+    for (const s of await readJsonArray(join(dataDir, "series.json"))) {
+      for (const ep of s.episodes || []) {
+        known.add(`${s.slug}#${Number(ep.season) || 1}#${Number(ep.episode)}`);
+      }
+    }
     const { html: seriesHtml } = await fetchHtml(`${LIST_BASE}/latest-series`);
     report.series = extractListings(seriesHtml, { seriesMode: true })
       .filter((l) => l.slug && l.episodes_count)
-      .map((l) => `${l.slug}#${l.episodes_count}`)
+      .map((l) => `${l.slug}#${parseSeasonNumber(l.season_label)}#${Number(l.episodes_count)}`)
       .filter((key) => !known.has(key));
   } catch (err) {
     report.errors.push(`lk21: ${err.message}`);

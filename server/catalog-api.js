@@ -1,13 +1,14 @@
 import { Router } from "express";
 import { DOC_NAMES, ITEM_COLLECTIONS, isDocName, isItemCollection } from "./catalog-meta.js";
 import {
+  catalogBackend,
   getDoc,
   getItem,
   listCollection,
   listCollectionAll,
   listHero,
   searchCatalog,
-} from "./json-catalog.js";
+} from "./catalog-source.js";
 
 /**
  * API baca katalog (wajib auth via login guard / cookie / Bearer).
@@ -17,6 +18,7 @@ export function createCatalogReadRouter() {
 
   router.get("/", (_req, res) => {
     res.json({
+      backend: catalogBackend,
       itemCollections: ITEM_COLLECTIONS,
       docs: DOC_NAMES,
       endpoints: {

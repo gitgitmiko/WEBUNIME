@@ -10,6 +10,7 @@ import {
   createCatalogAdminRouter,
 } from "./catalog-admin.js";
 import { createCatalogReadRouter } from "./catalog-api.js";
+import { catalogBackend } from "./catalog-source.js";
 import { createUserLibraryRouter } from "./user-library-api.js";
 import { ensureUserLibrarySchema } from "./user-library.js";
 import { securityHeadersMiddleware } from "./security-headers.js";
@@ -99,7 +100,7 @@ async function start() {
     console.error("User library schema failed:", err.message);
   }
   app.listen(port, host, () => {
-    console.log(`WEBUNIME listening on http://${host}:${port}`);
+    console.log(`WEBUNIME listening on http://${host}:${port} (katalog: ${catalogBackend})`);
   });
 }
 

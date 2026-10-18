@@ -47,5 +47,9 @@ run npm run scrape:refresh-series-players || { log "refresh player series gagal"
 
 log "publish"
 run bash scripts/publish-catalog.sh || { log "publish gagal"; exit 1; }
+if grep -qE '^DB_USER=.+' .env 2>/dev/null; then
+  log "import katalog ke MySQL"
+  run node server/import-catalog.js || { log "import MySQL gagal"; fail=1; }
+fi
 log "selesai (fail=$fail)"
 exit "$fail"
