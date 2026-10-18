@@ -31,7 +31,15 @@ export function isDocName(name) {
 
 export function itemSlug(item, collection) {
   if (!item || typeof item !== "object") return null;
+  // Feed episode: satu judul bisa punya banyak baris (beda episode/season).
+  const feedKey =
+    collection === "anime-latest"
+      ? item.episode_slug || (item.anime_slug && `${item.anime_slug}-episode-${item.episode}`)
+      : collection === "series-latest" && item.series_slug
+        ? `${item.series_slug}-s${item.season || 1}-e${item.episode}`
+        : null;
   const raw =
+    feedKey ||
     item.slug ||
     item.anime_slug ||
     item.series_slug ||
