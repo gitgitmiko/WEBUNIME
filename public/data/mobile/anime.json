@@ -3514,7 +3514,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Ojisan%20wa%20Kawaii%20Mono%20ga%20Osuki.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Comedy"
@@ -7928,8 +7928,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx212888-NhyvqPt5aIuJ.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "3 eps",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy"
@@ -8086,44 +8086,54 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Overgeared Episode 4",
+        "slug": "overgeared-episode-4",
+        "source": "https://v2.samehadaku.how/overgeared-episode-4/",
+        "date": "",
+        "released_at": "2026-10-18T16:30:47.685Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/rlRzDIZA#f-05xV7m54hyAgsGcXo1q4HAyeLmZcgUYw3ZVMBF8OU",
+            "default": true,
+            "post": "54750",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/ulQXCJQL#NtVwkCVVc9iSRl4SSJc24CO5XXujr4HkUL-1Zx2fPB0",
+            "default": false,
+            "post": "54750",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzpOLvqgv-nlPwJ_He_LIXi-sDdSj35gKGb276EZmgj9zHKD4uuHXhOOd1X2An8ORyLlrqTiAC0gObgnnAT1ptRAQtx2tCBKAfX6NO2Dz4vq38zENHY6ZGNfYSx6e3SlWDxdyA&origin=sameguru2.blogspot.com",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/rlRzDIZA#f-05xV7m54hyAgsGcXo1q4HAyeLmZcgUYw3ZVMBF8OU",
         "default": true,
-        "post": "54589",
-        "nume": "1"
+        "post": "54750",
+        "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/ilIkDKCT#h7RKnTMu2Xti0MNTnpMmf7hKv61WvP7UJO1RG4YhLxE",
-        "default": false,
-        "post": "54589",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/i0gCFbCK#8NwAzvCx9UB_iYmvFwUaH-II6f6ZsgpkrxD7nZQXyPc",
+        "url": "https://mega.nz/embed/ulQXCJQL#NtVwkCVVc9iSRl4SSJc24CO5XXujr4HkUL-1Zx2fPB0",
         "default": false,
-        "post": "54589",
+        "post": "54750",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/f0YlQQpI#Ki3Sg2jPjzXk1ZtgQiRORBG9b9Y2bFgDNtCLJIiMq80",
-        "default": false,
-        "post": "54589",
-        "nume": "5"
       }
     ],
     "id": 57,
