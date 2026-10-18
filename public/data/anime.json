@@ -3337,8 +3337,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Aoashi%20Season%202.jpg",
     "rating": "",
     "votes": "",
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [],
     "sinopsis": "",
     "related": [],
@@ -3391,6 +3391,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyGvpUqujTATnqiBTz5GXLu83CGKjGB9F3SiNSJWySeiwVj5mvPkqEES0NMLILOuyJMNdpyxG7-G1eG7CBTLY9WHX3yMwm61Dqvqgp03qLGsHDPbxx1XCun8v9qCWZ-lNfMz7Pp",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Aoashi Season 2 Episode 3",
+        "slug": "aoashi-season-2-episode-3",
+        "source": "https://anoboy.quest/2026/10/aoashi-season-2-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzQk6drqd_dNIlV9EM-WfoRxU1XFaYRYMAzoXFboMGDKZa4vqUky3V6V8KgNHpx4cdLY7kukbXrVgTqzMsZCSWdOd_emBwYdkAh3P3O37mGYCHpRTl8pj0FNrt_JlbYbmKjxfc",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwktIkzyNNYLb7q7fh6x1RlvTSatLrqjHeRHNqyCSJmqI4LwDH_DrtvXtzqnUqcUkIZBwrKTWqJAiVGNSrQ7eiIR5kIjnzPHhaq2QqDrIBGJQzVOkpF9YTfD7UH3EbaumaKwQ9J",
             "default": false,
             "source": "anoboy"
           }
@@ -136936,6 +136961,14 @@
             "default": false,
             "post": "49603",
             "nume": "8"
+          },
+          {
+            "no": 9,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwDGHPk-nNiMmJvLbA3Gt4uesQi8olrogkaAhDSw4NoobizBVJBZBBYN55MywL1928CVwSyMFzKppKaDcHTbdVwsGwySJNVYBR78pe82PUuS9CWHBzrA7FlTrKUobFqGel2mm3H",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
