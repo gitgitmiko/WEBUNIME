@@ -5494,7 +5494,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Doumo,%20Suki%20na%20Hito%20ni%20Horegusuri%20wo%20Irai%20sareta%20Majo%20desu.jpg",
     "rating": "7.1",
     "votes": "",
-    "durasi": "3 eps",
+    "durasi": "24 Menit",
     "episodes_count": 3,
     "genre": [
       "Fantasy",
@@ -5627,6 +5627,22 @@
             "default": false,
             "post": "54771",
             "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzjGWRD1B48Hca4Jh6MvE2JDKdhoVscihqzIwOjXTh6mh95DhDLUMNCeQSCxwIpAS4U9yElIkUyfo3UWG9rAYQUjjGfqG56zWBHAPfCNx8gOXqC9Hh62ONDy_rF46iBg5Sp2PrZ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzqZOh1mynuo8cQkSds3h5HiaXzhRRmbh8I3zJRlNDqHA6Knvl4v_FOuC6nk3kjN0PS_Fr_m9G7yBRpgGRynSWNU3E6byiCaIlDWySp_ilMly_RiBROfiuJOiwMWy017zj3vgs",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -5831,7 +5847,7 @@
     "rating": "6.8",
     "votes": "",
     "durasi": "23 Menit",
-    "episodes_count": 3,
+    "episodes_count": 4,
     "genre": [
       "Fantasy",
       "Seinen"
@@ -5952,44 +5968,52 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Tensei Goblin dakedo Shitsumon Aru? Episode 4",
+        "slug": "tensei-goblin-dakedo-shitsumon-aru-episode-4",
+        "source": "https://v2.samehadaku.how/tensei-goblin-dakedo-shitsumon-aru-episode-4/",
+        "date": "",
+        "released_at": "2026-10-19T15:00:45.841Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/mrRHjKDJ#RZypXPxUUqH8U35Owmos8Ip4du_cCihRCFy1JPgK5KY",
+            "default": true,
+            "post": "54776",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxOe3GchlvyRBpjA1G2ByWUfvhg5DddBjSfnZCy_oyjLfNm3Lh-g01o1Bc4UfC_VcF6_yn_7xWiFCOdqvFoy0j3jfMs7ke_oS_bcIMB2iopu-kMmhzqaTJhLnvladedVF7J_A",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwWLCidy_35YrNisvxETk7ARPSeZLmHhx5KzsV07JI0ur3k8iH1-_niunv_I8EnfrTuLjQJz4C8Q1fI0vX86HFVefw6MUu2UbzwQshmCj3ZlcoEgj91CKSt2R9iuIWqzdhvZJE",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxSXZaCBn17_b9d9bNUInbwfjMz3saOLgee3thhURSy9GLd-KoLdq_p7EU11Oxo_mkBZQuWpDaMRKOa35woCo01Hu1_MTJbzQgtBX5CGyIfQB8gXfo6cL0pLah7NIPvBOfp6hM",
-        "default": true,
-        "post": "54611",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/EvhWRALb#aMrIoqp8cNkH9DZNvrxMYRiLYTzM8LMO55Ynw-Cr74o",
-        "default": false,
-        "post": "54611",
+        "url": "https://mega.nz/embed/mrRHjKDJ#RZypXPxUUqH8U35Owmos8Ip4du_cCihRCFy1JPgK5KY",
+        "default": true,
+        "post": "54776",
         "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/w7Yy2CKA#k4kp54AZ6Wk2mpHXcmZuK8F8FPiAbGxEc1PtKt5KTJU",
-        "default": false,
-        "post": "54611",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/1mRSGJia#aeLhtAPvk9W7FZ7pwb96irE72L9txtVMO6dIgdXKXao",
-        "default": false,
-        "post": "54611",
-        "nume": "5"
       }
     ],
     "id": 42,
