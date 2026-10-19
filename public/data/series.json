@@ -98049,8 +98049,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-between-steps-2026-lk21.jpg",
     "rating": "9.0",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -98180,6 +98180,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Between Steps - Season 1 Episode 5 (2026)",
+        "slug": "between-steps-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/between-steps-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RG4G0SQEdytpSv2nZPetSg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/q-0K6RCMe9MnTpeclrwMKg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bsk8A_1ZJQtroxebYndTXQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -98187,21 +98217,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/UGTSneiIqpzH_Y4CAzZE9Q",
+        "url": "https://videonode.de/iframe3/p2p/RG4G0SQEdytpSv2nZPetSg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/mHqiixuaRQNQ3wfUuXXNsg",
+        "url": "https://videonode.de/iframe3/cast/q-0K6RCMe9MnTpeclrwMKg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/tUgif_vDJD2K8nvtwNf3pA",
+        "url": "https://videonode.de/iframe3/hydrax/bsk8A_1ZJQtroxebYndTXQ",
         "default": false
       }
     ],
