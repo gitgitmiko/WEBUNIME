@@ -5455,8 +5455,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Doumo,%20Suki%20na%20Hito%20ni%20Horegusuri%20wo%20Irai%20sareta%20Majo%20desu.jpg",
     "rating": "7.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Fantasy",
       "Romance",
@@ -5553,6 +5553,43 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Doumo, Suki na Hito ni Horegusuri wo Irai sareta Majo desu. Episode 3",
+        "slug": "doumo-suki-na-hito-ni-horegusuri-wo-irai-sareta-majo-desu-episode-3",
+        "source": "https://v2.samehadaku.how/doumo-suki-na-hito-ni-horegusuri-episode-3/",
+        "date": "",
+        "released_at": "2026-10-19T14:30:45.446Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzKpPF8FtE2FC_ovYesWmWmRhtbxECW_vCmZcZ0r7gCWw-stT0UJJHsjDLs_g3_CUgDprQ8_emKrjDTnlZG0Mp1HvVZe_CZGhOrmPM46-Q4dXF2eUBTZIYB18ZIk6x9BS3e51A",
+            "default": true,
+            "post": "54771",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/qzAjkCxb#FStkPXQik-J7MaX63PBpc_xAT-DckJZYwt5s1X65094",
+            "default": false,
+            "post": "54771",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/b6RD3LgJ#k9pBFer10qcGb5LLsoKwPX-KSMUxo7jnFfE4mpaDMUg",
+            "default": false,
+            "post": "54771",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
@@ -5560,37 +5597,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyeBYBWWK-yZ-apVLzV7_tMzoVQjd8RVc7dXik7sDRjTUcLZOZB4-E1-rhUfkzJPtR9fXPfiZVPYFSovM6TPbWpOVKPOQkTHX8pOa6qJqhEOUpW3wpnRBdEQYdOKbrPGsdIPxk",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzKpPF8FtE2FC_ovYesWmWmRhtbxECW_vCmZcZ0r7gCWw-stT0UJJHsjDLs_g3_CUgDprQ8_emKrjDTnlZG0Mp1HvVZe_CZGhOrmPM46-Q4dXF2eUBTZIYB18ZIk6x9BS3e51A",
         "default": true,
-        "post": "54605",
+        "post": "54771",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/tzgGTLRZ#eT66B0Cas88lszrLR6t0xTsx9rs6SZuTfg-Um1XjF50",
+        "url": "https://mega.nz/embed/qzAjkCxb#FStkPXQik-J7MaX63PBpc_xAT-DckJZYwt5s1X65094",
         "default": false,
-        "post": "54605",
+        "post": "54771",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/5mxAGBBZ#ZJrZKfoFtNm9qyYrM_xt83wqIHL4ECuMo256NQH5NNY",
+        "url": "https://mega.nz/embed/b6RD3LgJ#k9pBFer10qcGb5LLsoKwPX-KSMUxo7jnFfE4mpaDMUg",
         "default": false,
-        "post": "54605",
+        "post": "54771",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/0iBFRYZY#tsoWEpf4sC1rWyfX-icFoaNegMOIV7aHw4VOOMtM4fk",
-        "default": false,
-        "post": "54605",
-        "nume": "5"
       }
     ],
     "id": 40,
