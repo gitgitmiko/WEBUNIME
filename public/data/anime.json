@@ -5362,8 +5362,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Mahou%20Shoujo%20Ikusei%20Keikaku%20Restart.jpg",
     "rating": "6.7",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action"
     ],
@@ -5418,6 +5418,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyMCZwhEy-grWrHa0dprZ391jsH8yqb8sAxdO2jTNAKISHk9DnZ08AxEJ54wXNu9HiISW4v_OTa3uZZfqZ-kK2ELXaNXA2xsEvTyqXj9fWg4Q5mYqW427xpWs3o61j2r-QaTW6R",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Mahou Shoujo Ikusei Keikaku: Restart Episode 3",
+        "slug": "mahou-shoujo-ikusei-keikaku-restart-episode-3",
+        "source": "https://anoboy.quest/2026/10/mahou-shoujo-ikusei-keikaku-restart-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyCH2PsHMHY6tk0vkB1ZZCnui0XRaw5dalrIIqjFtQ16ihB1lrAbMW3Pc6fOfnqEnK_Y9BIobrsnzi9zzPn61qre05262Clk2SX4KNq0Bl3qJ5hfbofkteDUY_6zM-bPNuzF2k",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw2o-xU8_oKgny51slqobl9UzdXPRC7_Jd6Y_ekW_-ujbY9EHn-K3fKkY_Drqg3McJk7QUaqwrEXP9sO_u01fkdZQqPqe-FZkdQF7LvXwvfZ6EHBdwupEvOw3f3oepNW2UwXq4",
             "default": false,
             "source": "anoboy"
           }
