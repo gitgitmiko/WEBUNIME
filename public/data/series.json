@@ -892,8 +892,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-unsoiled-starlight-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "25 eps · S.1",
-    "episodes_count": 25,
+    "durasi": "27 eps · S.1",
+    "episodes_count": 27,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1652,6 +1652,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "title": "Unsoiled Starlight - Season 1 Episode 26 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-26-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-26-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xODvPtA--D9f16Z3mZA06A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/cA5TW5YT4-ypn1PkgWijvg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/fD3c8viJI-4G6TCWRAhdKw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "title": "Unsoiled Starlight - Season 1 Episode 27 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-27-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-27-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/P-Q39JbOCESLiph5q8nt7w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/8XkKfT7SE0ZKYP0DF5Z2nQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/454ftvvMIKaLtOcuihL0Xw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1659,21 +1719,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/62wFg_W9bZNhofVSnlT0BA",
+        "url": "https://videonode.de/iframe3/p2p/P-Q39JbOCESLiph5q8nt7w",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/FBMd6b3n5f3P5Lj4Bdh3LQ",
+        "url": "https://videonode.de/iframe3/cast/8XkKfT7SE0ZKYP0DF5Z2nQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5D1YWqFLdgyq2u8XqJ6Glg",
+        "url": "https://videonode.de/iframe3/hydrax/454ftvvMIKaLtOcuihL0Xw",
         "default": false
       }
     ],
