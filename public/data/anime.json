@@ -83862,8 +83862,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/bx185874-aU3e6tBT6wwA.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "8 eps",
-    "episodes_count": 8,
+    "durasi": "9 eps",
+    "episodes_count": 9,
     "genre": [
       "Action",
       "Adventure",
@@ -84513,80 +84513,54 @@
             "nume": "8"
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Bleach: Sennen Kessen-hen – Kashin-tan (Cour 4) Episode 9",
+        "slug": "bleach-sennen-kessen-hen-kashin-tan-cour-4-episode-9",
+        "source": "https://v2.samehadaku.how/bleach-sennen-kessen-hen-kashin-tan-cour-4-episode-9/",
+        "date": "",
+        "released_at": "2026-10-19T17:00:38.274Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/jzhgTTCB#YoYCshUfGJPufw-9AafABCcdTnhVoB6ImMmQMtavFZY",
+            "default": true,
+            "post": "54785",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/vrIhnQLK#ULpAtszUeQC9Fz0qo2KJMArJV7FbVC5G9k7KG-MZ5M0",
+            "default": false,
+            "post": "54785",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dy1EtKRO0hVVnq5npNVIt-czq0MvixXArrIcdbdu5fK467hLXu4vqcsr7TVlEJ2ugiISKEVfJB5rxKoH6an_kkX7vINC_LyGGIzYGVfo4Nc__OV5-6LxVR0jCa3CLPZ3O8IRTOW",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/jzhgTTCB#YoYCshUfGJPufw-9AafABCcdTnhVoB6ImMmQMtavFZY",
         "default": true,
-        "post": "52591",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/AIYLWzpldl",
-        "default": false,
-        "post": "52591",
-        "nume": "2"
-      },
-      {
-        "no": 3,
-        "server": "wibufile",
-        "label": "Wibufile 480p",
-        "url": "https://api.wibufile.com/embed/2af1f262-7b24-4531-b88d-1ede0e256936",
-        "default": false,
-        "post": "52591",
+        "post": "54785",
         "nume": "3"
       },
       {
-        "no": 4,
-        "server": "wibufile",
-        "label": "Wibufile 720p",
-        "url": "https://s0.wibufile.com/video01/BSKh-Cour4-08-MP4HD-SAMEHADAKU.CARE.mp4",
-        "default": false,
-        "post": "52591",
-        "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "wibufile",
-        "label": "Wibufile 1080p",
-        "url": "https://s0.wibufile.com/video01/BSKh-Cour4-08-FULLHD-SAMEHADAKU.CARE.mp4",
-        "default": false,
-        "post": "52591",
-        "nume": "5"
-      },
-      {
-        "no": 6,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/h7QS0KhD#HVxmlEp1j_XbUiHwljt0RM16WZJiv1OhESMAX9ncavc",
-        "default": false,
-        "post": "52591",
-        "nume": "6"
-      },
-      {
-        "no": 7,
+        "no": 2,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/UvwUGabC#1AgOtYsM5TFq3PXXUWEZ3c9uiUO2AL6K3QsdWvRg3vA",
+        "url": "https://mega.nz/embed/vrIhnQLK#ULpAtszUeQC9Fz0qo2KJMArJV7FbVC5G9k7KG-MZ5M0",
         "default": false,
-        "post": "52591",
-        "nume": "7"
-      },
-      {
-        "no": 8,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/82gAwAyJ#K2OVgLlfwSZQThSFMcGcHT_sBxkCIUph7sPxItHU7q8",
-        "default": false,
-        "post": "52591",
-        "nume": "8"
+        "post": "54785",
+        "nume": "4"
       }
     ],
     "id": 103
