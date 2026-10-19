@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-hell-home-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -47,6 +47,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Hell Home - Season 1 Episode 2 (2026)",
+        "slug": "hell-home-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/hell-home-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/AWs3wWqUuOwrqYeJN47Fdw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/UZuAOTjtZZfsx5QTuPgHCA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/FEUqInL4H4foBpkMDt4M4g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -54,26 +84,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/7URo52FybTaSy6Jqa2AKTA",
+        "url": "https://videonode.de/iframe3/p2p/AWs3wWqUuOwrqYeJN47Fdw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/H07AzzdONgFHSjI02JNsQg",
+        "url": "https://videonode.de/iframe3/cast/UZuAOTjtZZfsx5QTuPgHCA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/EGuCbzFqdBjm-cfTwytw7A",
+        "url": "https://videonode.de/iframe3/hydrax/FEUqInL4H4foBpkMDt4M4g",
         "default": false
       }
     ],
-    "id": 579,
-    "is_new": true
+    "id": 579
   },
   {
     "type": "series",
@@ -147,8 +176,7 @@
         "default": false
       }
     ],
-    "id": 578,
-    "is_new": true
+    "id": 578
   },
   {
     "type": "series",
@@ -157,8 +185,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-unsoiled-starlight-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "16 eps · S.1",
+    "episodes_count": 16,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -557,6 +585,96 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "Unsoiled Starlight - Season 1 Episode 14 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-14-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/XtnbjDHDhPYbJaB4JduOIw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DM24RyBhgJAZFGsUFaM9Hg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ewwxA0tLysbDhjeKtXsczA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "Unsoiled Starlight - Season 1 Episode 15 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-15-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/D0bzuvFrchxc_jofvdOi4g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/5MgrJIunZWa_AbkW_R1Z7A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/hBr3ABlC8u5YC-wry5DUbg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "Unsoiled Starlight - Season 1 Episode 16 (2026)",
+        "slug": "unsoiled-starlight-season-1-episode-16-2026",
+        "source": "https://tv9.nontondrama.my/unsoiled-starlight-season-1-episode-16-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/VgGgUAoPRbeVbnaKzbwO3g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/CPLbhU6TP9PEVTlHa1M4_g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/1oHCeyQkZk6DlMhiLRuh_A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -564,21 +682,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/cqTgl2pdyZp8n2kZwmfhoA",
+        "url": "https://videonode.de/iframe3/p2p/VgGgUAoPRbeVbnaKzbwO3g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/fYdgykBlsDtDqlK8f3TprA",
+        "url": "https://videonode.de/iframe3/cast/CPLbhU6TP9PEVTlHa1M4_g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/foIjn21e7KUhAJ4hzgra7Q",
+        "url": "https://videonode.de/iframe3/hydrax/1oHCeyQkZk6DlMhiLRuh_A",
         "default": false
       }
     ],
