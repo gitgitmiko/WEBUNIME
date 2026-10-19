@@ -5691,7 +5691,7 @@
     "rating": "7.1",
     "votes": "",
     "durasi": "23 Menit",
-    "episodes_count": 2,
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Romance",
@@ -5792,44 +5792,70 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Psyren Episode 3",
+        "slug": "psyren-episode-3",
+        "source": "https://v2.samehadaku.how/psyren-episode-3/",
+        "date": "",
+        "released_at": "2026-10-19T16:30:55.486Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/XzJWADwK#aj6mApy7CphwwPiPxAy_hRsNKlItfRNKahPeItaEt5w",
+            "default": true,
+            "post": "54779",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/O3ZRDYqR#dghdLlLjfKphpswbdBE_Gih_2HaT-r6kwoFKGLaoN6c",
+            "default": false,
+            "post": "54779",
+            "nume": "4"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzwNX_YYLsc1JRKX64DA7ux8A_ernK72klMY-kxO4TJD_40zCALV-l6Sz5wGvG7PmR5odcT2YsgcRyOXCvou8WxQzucX2T7E_LwuZIytvgctz5AxoHRl1QwowoeBnE1JKULMLk",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxXypHYMKlZzftiAlLlBGTOaY8JYionuPy9a3ffS4v-7-uwNnR0CwRtvS7z9P3xVL7P7T1rThuzTdmQFEzg0GnoAOnnDnYZiFkZbojkHVMgDgJes3OXEwMb-aA6iUoNRDPI1r3u",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dz2MjcWY66kY-xWCXZIWQ_Y5B5XycDzluFTuj-LQkzQBKwvdl87gGB1Xcrb41ttP7HJJR5BgLkIySW7A80R0AJnWnRJtgGnCYTFRuP4v2ITgRWUEOaGeB0GmndmBMQernMIIyNu",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/XzJWADwK#aj6mApy7CphwwPiPxAy_hRsNKlItfRNKahPeItaEt5w",
         "default": true,
-        "post": "54616",
-        "nume": "1"
+        "post": "54779",
+        "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/06R3TQJB#iyIhlQSGp7DD0u5QujMLiXrCkSyRf_rdsr6KSH--E7k",
-        "default": false,
-        "post": "54616",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/s2BlwZzC#716Q5EWkvtEW6lRmgN7oeIckrUOvIWskpTYj3gIPTOo",
+        "url": "https://mega.nz/embed/O3ZRDYqR#dghdLlLjfKphpswbdBE_Gih_2HaT-r6kwoFKGLaoN6c",
         "default": false,
-        "post": "54616",
+        "post": "54779",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/pn5jXIgA#8F3ddHKcEAV90v356iVU7V3QTPoQ_k-rKBZWB49ySQ8",
-        "default": false,
-        "post": "54616",
-        "nume": "5"
       }
     ],
     "id": 41,
@@ -852821,6 +852847,14 @@
             "default": false,
             "post": "20619",
             "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxzajLUr-Qevi0nM74Q5Fc47tSTW8RrfgL95Kber5-ovfuqQ1MNBV5XpF-jVLNdjAbvxCvyvrJGigHpzUdylY1RVRsxJi0oOjrB3OX5H_ecAJO922_Qd-fjN5R6KRT2t7Djphj7",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
