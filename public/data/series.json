@@ -1,6 +1,111 @@
 [
   {
     "type": "series",
+    "nama": "Rising Justice",
+    "judul": "Rising Justice (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-rising-justice-2026-lk21.jpg",
+    "rating": "8.0",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Di jalan pengacara di sebuah kota pesisir kelas dua, pengacara wanita Xiao Longnv (diperankan oleh Gao Ye) membuka kantor hukum di atas pemandian umum yang terletak di lantai dasar. Dulu, ia adalah pengacara andalan di Kantor Hukum Honghu yang paling bergengsi di daerah tersebut, namun ia mengundurkan diri karena tindakan yang adil dalam sebuah kasus. Namun, setelah meninggalkan Honghu, Xiao Longnv kehilangan semua sumber kasusnya sebelumnya. Karena tidak mampu membayar sewa, ia terpaksa pindah kembali ke rumah ayahnya, Xiao Jun, yang selalu berselisih dengannya. Gu Miaomiao, seorang pengacara magang yang secara sukarela mengikuti Xiao Longnv, Dong Beihu—yang sebelumnya tidak saling mengenal—serta keponakannya, Luo Zhi, yang merupakan siswa berprestasi dalam ujian hukum, datang ke firma hukum tersebut satu per satu dan membentuk tim bersama Xiao Longnv. Mereka menghadapi berbagai kasus hukum, baik besar maupun kecil, yang sarat dengan lika-liku emosi manusia di kota kecil di wilayah timur laut ini. Dengan kekuatan mereka sendiri, mereka membantu yang lemah dan menjaga keagungan hukum. Di saat yang sama, Li Xin (diperankan oleh Han Dongjun), seorang pengacara elit dari Honghu, mantan rekan kerja Xiao Longnv sekaligus kekasih masa kecilnya, juga diam-diam membantu Xiao Longnv. Setelah menangani banyak kasus, Xiao Longnv memperoleh pemahaman yang lebih mendalam tentang hukum dan keadilan, emosi dan prinsip-prinsip hukum, serta berhasil menyelesaikan perselisihan antara dirinya dan ayahnya, Xiao Jun. Bisnis firma hukum kecil tersebut pun berangsur-angsur berkembang pesat.\n\nSutradara: Yao Tingting\n\nBintang Film: Ye Gao, Dongjun Han, Lina Wang, Guoqiang Zhang, Hao Wang\n\nNegara: China\n\nVotes: 1",
+    "slug": "rising-justice-2026",
+    "source": "https://tv9.nontondrama.my/rising-justice-2026",
+    "list_source": "https://tv12.lk21official.cc/rising-justice-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Rising Justice - Season 1 Episode 1 (2026)",
+        "slug": "rising-justice-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/rising-justice-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/MhT9GHh19Z3TVbJRccyWyA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7DlBSJeefmTaTEnKgSoi4w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/XU5xyxY6P81oTuTnty6htQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Rising Justice - Season 1 Episode 2 (2026)",
+        "slug": "rising-justice-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/rising-justice-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kAJmUxRMqWIsrMrd-0-cBQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jLHg56t82J-bA-EO2GCoFw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/OGiU-zToZDCURl3dkoH9FQ",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/kAJmUxRMqWIsrMrd-0-cBQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/jLHg56t82J-bA-EO2GCoFw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/OGiU-zToZDCURl3dkoH9FQ",
+        "default": false
+      }
+    ],
+    "id": 583,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Driving Mom Crazy",
     "judul": "Driving Mom Crazy (2026)",
     "tahun": "2026",
