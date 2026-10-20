@@ -1102,8 +1102,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-rising-justice-2026-lk21.jpg",
     "rating": "8.0",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "15 eps · S.1",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1502,6 +1502,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "Rising Justice - Season 1 Episode 14 (2026)",
+        "slug": "rising-justice-season-1-episode-14-2026",
+        "source": "https://tv9.nontondrama.my/rising-justice-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/_qgPXRLHxLFp2Op7ehvb8g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/YL7AHt97n9ySdDZZquixfA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/FjEpd0KLHcyTOL1oHIcC6Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "Rising Justice - Season 1 Episode 15 (2026)",
+        "slug": "rising-justice-season-1-episode-15-2026",
+        "source": "https://tv9.nontondrama.my/rising-justice-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/tM8Bfn40Pyk4BvX5rg8KuA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/vrtauNaS0Ty6q83IymZx-w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PnQSLmDssJsDNl4BoJSa7Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1509,21 +1569,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/tl8ziSmQ4mJI8TMRNL-6Bw",
+        "url": "https://videonode.de/iframe3/p2p/tM8Bfn40Pyk4BvX5rg8KuA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/pnLKE0PUu5FMCwY5QKq2WQ",
+        "url": "https://videonode.de/iframe3/cast/vrtauNaS0Ty6q83IymZx-w",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/coz2hNNqHn7Sdlzs73088w",
+        "url": "https://videonode.de/iframe3/hydrax/PnQSLmDssJsDNl4BoJSa7Q",
         "default": false
       }
     ],
