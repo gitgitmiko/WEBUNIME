@@ -157,8 +157,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-dream-2026-lk21.jpg",
     "rating": "6.0",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -256,7 +256,37 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/fBLbNC2_mj8cYr7fXHqykA",
+            "url": "https://videonode.de/iframe3/hydrax/r6M99az6MPW6E1PK6-IKSQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Dream - Season 1 Episode 4 (2026)",
+        "slug": "dream-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/dream-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xeooFzEFI8s8aCoS8JCW6g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/PQa2ktapfw6_LEdr5AiCdQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/tmd0njnjqcNYtG8cAChjQw",
             "default": false
           }
         ]
@@ -267,21 +297,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/LEsT03jVncE3LqcSByh2gw",
+        "url": "https://videonode.de/iframe3/p2p/xeooFzEFI8s8aCoS8JCW6g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/rRC21WdXw4o6_-8j97aOsA",
+        "url": "https://videonode.de/iframe3/cast/PQa2ktapfw6_LEdr5AiCdQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/fBLbNC2_mj8cYr7fXHqykA",
+        "url": "https://videonode.de/iframe3/hydrax/tmd0njnjqcNYtG8cAChjQw",
         "default": false
       }
     ],
@@ -294,8 +324,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-besties-coming-fortune-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -360,7 +390,97 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/zQWZ-kg43W0KlukxJckDAw",
+            "url": "https://videonode.de/iframe3/hydrax/ARyctUt9AxUz1dqzP7rtgw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Besties' Coming Fortune - Season 1 Episode 3 (2026)",
+        "slug": "besties-coming-fortune-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/besties-coming-fortune-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lFccR9TB2gF4jk6OmrTWxA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/JPHu2FU8tfxIxk9kcG7Svw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Dvd0l6vGiaGxm_uQQhiffw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Besties' Coming Fortune - Season 1 Episode 4 (2026)",
+        "slug": "besties-coming-fortune-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/besties-coming-fortune-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/rYw8tekcimd_tXFuKArdjg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/acBgWi8P-C5lGT4IYqMAww",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PXSp9k3x8MUkyHstWAknug",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Besties' Coming Fortune - Season 1 Episode 5 (2026)",
+        "slug": "besties-coming-fortune-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/besties-coming-fortune-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/3YwX5LMB9BohYXxNSiriew",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Hqo5Do_kScJu26s1sUOZaw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/dy-MXjAf-2_K1Vh9HVcBSQ",
             "default": false
           }
         ]
@@ -371,21 +491,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/kBzOd9fV0b8jjNthKZ5KIQ",
+        "url": "https://videonode.de/iframe3/p2p/3YwX5LMB9BohYXxNSiriew",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/DMAXgrrogKpoLlqgpQW6gw",
+        "url": "https://videonode.de/iframe3/cast/Hqo5Do_kScJu26s1sUOZaw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/zQWZ-kg43W0KlukxJckDAw",
+        "url": "https://videonode.de/iframe3/hydrax/dy-MXjAf-2_K1Vh9HVcBSQ",
         "default": false
       }
     ],
@@ -398,8 +518,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-dear-song-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -464,7 +584,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/87OwCBb1pBpqC_OWDpVS1w",
+            "url": "https://videonode.de/iframe3/hydrax/clddLOs1ZhPmcMvw_33Uvg",
             "default": false
           }
         ]
@@ -494,7 +614,67 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/25w5aa5L_WvO9m5bSEzwQQ",
+            "url": "https://videonode.de/iframe3/hydrax/BhPj6otWaWKXq5OJ_71s9Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Dear Song - Season 1 Episode 4 (2026)",
+        "slug": "dear-song-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/dear-song-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/yGjLRJQW0qltTcfYxaPVbg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/C3dGOOfrSh17jAi58J_OEw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ikPRV9aerB_MJGj7oyRciQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Dear Song - Season 1 Episode 5 (2026)",
+        "slug": "dear-song-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/dear-song-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/cMRQIQ_iXuCm4u0B-29EIw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EtXTVT9J9uIuAv6XCg3uLQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/WmSryn8NtQzJ1lTCx3E43w",
             "default": false
           }
         ]
@@ -505,21 +685,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/VLT_F9n98oucT0H9o3M3xQ",
+        "url": "https://videonode.de/iframe3/p2p/cMRQIQ_iXuCm4u0B-29EIw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/vpT2xygiLXLHJiYDWc7yJQ",
+        "url": "https://videonode.de/iframe3/cast/EtXTVT9J9uIuAv6XCg3uLQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/25w5aa5L_WvO9m5bSEzwQQ",
+        "url": "https://videonode.de/iframe3/hydrax/WmSryn8NtQzJ1lTCx3E43w",
         "default": false
       }
     ],
