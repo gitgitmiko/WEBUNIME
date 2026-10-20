@@ -4212,8 +4212,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Shiotaiou%20no%20Satou-san%20ga%20Ore%20ni%20dake%20Amai.jpg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Comedy",
       "Romance"
@@ -4269,6 +4269,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyqHIVtO2-SpV6OTuKL9c4stp6cnRGqVIf3XS5zqH52ZE8oBjlWwyUuj7rtRT3IF7qFbQ4x1UxL4R6CbB_u6i-vGynLv_SYCQujgpCAKfAMhXzGNsbiZb8DSvV6a61jNq-I9uXF",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Shiotaiou no Satou-san ga Ore ni dake Amai Episode 3",
+        "slug": "shiotaiou-no-satou-san-ga-ore-ni-dake-amai-episode-3",
+        "source": "https://anoboy.quest/2026/10/shiotaiou-no-satou-san-ga-ore-ni-dake-amai-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxz9xsBTmO_GxZ_TIxKz3V-5fH2UJONx5RMJTm8j0ixh5oMhBkcCNKDVmMOlQ1hlp20hED2YU6yEBPzSzlyvPry5gobbP1jP3HqLCxtrtpy01uOBte6hkNAKJIlQLNXQKNXUuI",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx89CYk7GzOZSdAXnjUkidVTVSfxcAX_wFnJcVuDIo9Bf4HzITa7HqFhqne25x8yudax9T2xDVMcPr1XwQYaWHqkeTova_QMa7yOg3Bd_np3599p9Hde3AkyrXaRSZa_uIrz0A",
             "default": false,
             "source": "anoboy"
           }

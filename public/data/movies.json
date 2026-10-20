@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Katseye: Wild Hearts",
+    "judul": "Katseye: Wild Hearts (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-katseye-wild-hearts-2026-lk21.jpg",
+    "rating": "7.1",
+    "quality": "HD",
+    "durasi": "1j 20m",
+    "genre": [
+      "Documentary",
+      "Music"
+    ],
+    "sinopsis": "KATSEYE: Wild Hearts - Sebuah perayaan untuk menyambut era baru grup musik KATSEYE serta apresiasi bagi para penggemar yang telah mewujudkannya. Film dokumenter ini menampilkan cuplikan eksklusif di balik layar (behind-the-scenes), video kiriman dari para Eyekons, serta wawancara intim dan mendalam dengan para anggota grup.\nWorldwide Gross: USD 6,956,009\n\nSubtitle: retail\n\nSutradara: Nadia Hallgren\n\nBintang Film: Daniela Avanzini, Manon Bannerman, Katseye, Sophia Laforteza, Lara Rajagopalan\n\nNegara: United States\n\nVotes: 4\n\nRelease: 12 Aug 2026\n\nUpdated: 20 Oct 2026 15:25:07",
+    "slug": "katseye-wild-hearts-2026",
+    "source": "https://tv12.lk21official.cc/katseye-wild-hearts-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Oz0SV60ugd3LnhOylsnNSQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/XYBtn0jb1PZT_uh42SJXqQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/rK9fVe30ZaOC1_O8ExIDfw",
+        "default": false
+      }
+    ],
+    "id": 304,
+    "is_new": true
+  },
+  {
     "nama": "Rimini",
     "judul": "Rimini (2022)",
     "tahun": "2022",
@@ -38,8 +79,7 @@
         "default": false
       }
     ],
-    "id": 303,
-    "is_new": true
+    "id": 303
   },
   {
     "nama": "Pradhama Drishtiya Kuttakkar",
