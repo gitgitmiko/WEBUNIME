@@ -1942,8 +1942,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-10-300x170.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "2 eps",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [],
     "sinopsis": "Anime Tsuihou sareta Cheat Fuyo Majutsushi.",
     "related": [],
@@ -2042,6 +2042,43 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Tsuihou sareta Cheat Fuyo Majutsushi Episode 3",
+        "slug": "tsuihou-sareta-cheat-fuyo-majutsushi-episode-3",
+        "source": "https://v2.samehadaku.how/tsuihou-sareta-cheat-fuyo-majutsushi-episode-3/",
+        "date": "",
+        "released_at": "2026-10-20T18:31:41.306Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwR3xb09E78oV6E3bQjSpUIf4-ua8s1f8MBi1_dgbZh6EFVIf6Mgx5ZTGE6hyWtzSNi-CDkvaTnKXzOfslRJzlhZYRmwCKYZyhjUkW3LfHVvZojcCJ8hc64irz2ZcyFjF4ieQA",
+            "default": true,
+            "post": "54797",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/mgZTSZTA#fK9WVgaLMK1U4Jvln3dtsYgKXaXvNdkzBhVlG_17SVc",
+            "default": false,
+            "post": "54797",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/bgI2naID#p-lYrZhMid1WFKrGjbjoFbZZcTEwAM77jKReDd6Hi5Q",
+            "default": false,
+            "post": "54797",
+            "nume": "3"
+          }
+        ]
       }
     ],
     "players": [
@@ -2049,37 +2086,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzBVJ856LjwdiFvTpqnLwkb0H2y14qqNZZvKIPppIr821xSMY53HIEfVMk4cPK1S-Ej3YOGge7G3l6HATgOteEndQt2xqAwJavkVWhFqY1eCePNRCNVXy1hgllPTQq--TJW77Gm",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwR3xb09E78oV6E3bQjSpUIf4-ua8s1f8MBi1_dgbZh6EFVIf6Mgx5ZTGE6hyWtzSNi-CDkvaTnKXzOfslRJzlhZYRmwCKYZyhjUkW3LfHVvZojcCJ8hc64irz2ZcyFjF4ieQA",
         "default": true,
-        "post": "54646",
+        "post": "54797",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/DshkEK7R#4AbnBUMq_ZfWSVIlniuftOLaHozxvDB8vFfixakr8-E",
+        "url": "https://mega.nz/embed/mgZTSZTA#fK9WVgaLMK1U4Jvln3dtsYgKXaXvNdkzBhVlG_17SVc",
         "default": false,
-        "post": "54646",
+        "post": "54797",
         "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/ihBQkagK#0tl5QTyNDqFpAMOTiy_QvwXTHK0FOHIg15u_ksa5PkM",
+        "url": "https://mega.nz/embed/bgI2naID#p-lYrZhMid1WFKrGjbjoFbZZcTEwAM77jKReDd6Hi5Q",
         "default": false,
-        "post": "54646",
+        "post": "54797",
         "nume": "3"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/3wQWjQAT#uBMJ-0jOkcCZUvU29WIeYQZ4ILdgscAQObJWJ_NzAns",
-        "default": false,
-        "post": "54646",
-        "nume": "4"
       }
     ],
     "id": 12
@@ -4305,7 +4333,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Chii%20Fuyo.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Action",
@@ -7178,7 +7206,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Gensou%20Suikoden.jpg",
     "rating": "6.8",
     "votes": "",
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Action",
