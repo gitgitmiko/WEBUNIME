@@ -4451,12 +4451,15 @@
     "judul": "Battle Spirits [Re]: Zekkai no Kuu",
     "tahun": "",
     "thumbnail": "https://anoboy.quest/img/upload/01as-Battle%20Spirits%20Re%20Zekkai%20no%20Kuu.jpeg",
-    "rating": "",
+    "rating": "5.6",
     "votes": "",
-    "durasi": "1 eps",
-    "episodes_count": 1,
-    "genre": [],
-    "sinopsis": "",
+    "durasi": "2 eps",
+    "episodes_count": 2,
+    "genre": [
+      "Fantasy",
+      "Historical"
+    ],
+    "sinopsis": "Battle Spirits [Re]: Zekkai no Kuu adalah serial anime orisinal Jepang dari waralaba Battle Spirits yang diproduksi oleh Bandai Namco Pictures dan Bandai. Serial televisi anime ini dijadwalkan tayang perdana pada 6 Oktober 2026. Becerita pada zaman Bakumatsu di Jepang, ketika negeri tersebut sedang mengalami perubahan besar. Dalam dunia Battle Spirits, pertarungan yang disebut Eternal sebelumnya hanya boleh dilakukan oleh para samurai dengan mempertaruhkan nyawa, sementara jenis pertarungan baru bernama Standard memungkinkan masyarakat biasa bertarung tanpa harus kehilangan nyawa ketika kalah. Kisah ini mengikuti Ku Bashin, seorang pemuda yang mempelajari Battle Spirits dan bercita-cita menjadi lebih kuat. Pertemuannya dengan Zetsu Ajara, seorang ronin misterius yang dijuluki Pembantai Zetsu dan sedang diburu oleh kelompok anti-keshogunan, menyeretnya ke dalam pusaran konflik yang dapat mengubah dunia Battle Spirits.",
     "related": [],
     "slug": "battle-spirits-re-zekkai-no-kuu",
     "source": "https://anoboy.quest/2026/10/battle-spirits-re-zekkai-no-kuu/",
@@ -4478,6 +4481,23 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 2,
+        "title": "Battle Spirits [Re]: Zekkai no Kuu Episode 2",
+        "slug": "battle-spirits-re-zekkai-no-kuu-episode-2",
+        "source": "https://anoboy.quest/2026/10/battle-spirits-re-zekkai-no-kuu-episode-2/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwxhHXSmyow4914AlpWfMNy6MJT5coJ4YGRmA3UIQT26wpB8dxZ4zE3p_uwqVrIzuM7Z80jGTPxlsdfmK-_k6gZVXSNGjPFde5UGZhtxOhTjctrsrdeXvLS5hJCZ-R_XpTLGmjI",
+            "default": true,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -4490,7 +4510,9 @@
         "source": "anoboy"
       }
     ],
-    "id": 29
+    "id": 29,
+    "studio": "Bandai Namco Pictures",
+    "sumber": "Card Game"
   },
   {
     "type": "anime",
@@ -105094,8 +105116,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158138.jpg",
     "rating": "6.57",
     "votes": 193,
-    "durasi": "14 eps",
-    "episodes_count": 14,
+    "durasi": "15 eps",
+    "episodes_count": 15,
     "genre": [
       "Action",
       "Adventure",
@@ -106034,16 +106056,35 @@
             "nume": "1"
           }
         ]
+      },
+      {
+        "episode": 16,
+        "title": "Sora wa Akai Kawa no Hotori Episode 16",
+        "slug": "sora-wa-akai-kawa-no-hotori-episode-16",
+        "source": "https://v2.samehadaku.how/sora-wa-akai-kawa-no-hotori-episode-16/",
+        "date": "",
+        "released_at": "2026-10-20T19:30:38.774Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/T0pBGIKZ#Sr4Uv54ZujbUlAArtI99KlMnUH8TVSNt73ueHLj1kI8",
+            "default": true,
+            "post": "54798",
+            "nume": "1"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxRF4r1vGD4LQOAo98Uu2AVJNHrsVAzbxi0--VqqH_BL1J0c_EG34ohL07tCQ3bxuZdzeq3IOV5PmSeR3f0wLsPiSUiAodcgIgIca3Bx2ZmwoDJZxjkd-5G6eN514_RMz1ndeU",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/T0pBGIKZ#Sr4Uv54ZujbUlAArtI99KlMnUH8TVSNt73ueHLj1kI8",
         "default": true,
-        "post": "54650",
+        "post": "54798",
         "nume": "1"
       }
     ],
