@@ -4030,7 +4030,7 @@
     "rating": "7.6",
     "votes": "",
     "durasi": "25 Menit",
-    "episodes_count": 2,
+    "episodes_count": 3,
     "genre": [
       "Fantasy"
     ],
@@ -4125,6 +4125,41 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Kyouran Reijou Nia Liston: Byoujaku Reijou ni Tensei shita Kamigoroshi no Bujin no Karei Naru Musouroku Episode 3",
+        "slug": "kyouran-reijou-nia-liston-episode-3",
+        "source": "https://v2.samehadaku.how/kyouran-reijou-nia-liston-episode-3/",
+        "date": "",
+        "released_at": "2026-10-20T14:30:46.611Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxDsVuzgUjkh4m8S7vi9B-BgGumYBIg69LLOPE3tjoKLwGJAxEzXs5AD_--efRxEIXyBHYoBmRNQt23dJmjwKAVaKbubD0J8iSx_sM36l-0Akc_9YUXJmums5MB3s_H2B_LO9Zy&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54793",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxBDFFR3H2orAsWyiecEMD0DjNa6No2K9O_z6JE65fo6SWvUmEYhwoO3meR09iwFB5dczDH-X31uQDV37sNEHlAbUoy_Reza0dfJY1HBlJwIUN5pZC9HEe-l-b0XAWOZ5yXv4Tz",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyYf4xHnHHHtWkEwxAbS3p_NdBzAuLDE0r3kN6zprLEW-5s12LfCVaJYSFfFxkHxZJnjOiiuNCo862EaqWSmVA40RribKtUJCACWHh_RfWzG43SklfaNxpJ1lXmR3S2KNkevbO-",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -4132,37 +4167,10 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzZV5cIJ-9y9vsqUHj6-N0l8-hVAyL2_Y_YXu8E09Wa82bW6YRZeUp0FSE5Fd6FJ_zbCVokwAqdOtRXroiQAFXZ67hEAdUi3ukWRGbg64o26mZ7X5pxJv1lgyxy7KdVtaey7MJp&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxDsVuzgUjkh4m8S7vi9B-BgGumYBIg69LLOPE3tjoKLwGJAxEzXs5AD_--efRxEIXyBHYoBmRNQt23dJmjwKAVaKbubD0J8iSx_sM36l-0Akc_9YUXJmums5MB3s_H2B_LO9Zy&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54638",
+        "post": "54793",
         "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/C9p0xByQ#YeY5_D1hQpM2iGLhhnShcpDfCmCOtMVVj_GpdrVE2SY",
-        "default": false,
-        "post": "54638",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/L9oFFCra#LRbfAuvFd8i1in3Z1JGh9uRtaxeRFA7_mznYw0_AGs4",
-        "default": false,
-        "post": "54638",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/T440jRBZ#eDR4mNqI8beM5XYFFQT98toNGsHoxYHfkb04keAQ5vY",
-        "default": false,
-        "post": "54638",
-        "nume": "5"
       }
     ],
     "id": 26,
