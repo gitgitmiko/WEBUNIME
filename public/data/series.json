@@ -74,8 +74,7 @@
         "default": false
       }
     ],
-    "id": 591,
-    "is_new": true
+    "id": 591
   },
   {
     "type": "series",
@@ -621,8 +620,7 @@
         "default": false
       }
     ],
-    "id": 590,
-    "is_new": true
+    "id": 590
   },
   {
     "type": "series",
@@ -88974,8 +88972,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/05/film-marshals-2026-lk21.jpg",
     "rating": "7.9",
-    "durasi": "2 eps · S.2",
-    "episodes_count": 15,
+    "durasi": "16 eps · S.2",
+    "episodes_count": 16,
     "seasons_count": 2,
     "genre": [
       "Action",
@@ -89514,6 +89512,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 3,
+        "title": "Marshals - Season 2 Episode 3 (2026)",
+        "slug": "marshals-season-2-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/marshals-season-2-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dO6IQmKlixftPHOeWrzhrA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/HCYRVYOK4swijL2RQUMXUQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/THCbzjYBH3zLUVlGj40J9A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -89521,21 +89549,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/TMwPzZ_YxWGX7rGnaXPr8A",
+        "url": "https://videonode.de/iframe3/p2p/dO6IQmKlixftPHOeWrzhrA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/kN87DUeTeUjyXDnyHpwfJA",
+        "url": "https://videonode.de/iframe3/cast/HCYRVYOK4swijL2RQUMXUQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/oi60ynnJ2Wj4gFbttZ-WOg",
+        "url": "https://videonode.de/iframe3/hydrax/THCbzjYBH3zLUVlGj40J9A",
         "default": false
       }
     ],
