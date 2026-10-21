@@ -2,6 +2,8 @@
 # Dijalankan cron tiap 30 menit: cek halaman pertama sumber; kalau ada konten baru
 # baru jalankan sync catalog + refresh player film/series, lalu publish.
 # flock mencegah dua run saling tabrakan bila sync sebelumnya belum selesai.
+# git-heal memulihkan repo bila run sebelumnya terputus (mis. internet mati), dan commit
+# katalog yang belum sempat di-push akan di-push ulang di awal run berikutnya.
 set -uo pipefail
 
 export PATH="/home/gitgitmiko/.hermes/tools/node-26.7.0-linux-x64/bin:$PATH"
@@ -10,6 +12,8 @@ LOG_DIR=/home/gitgitmiko/cron/scraper
 LOG="$LOG_DIR/scraper.log"
 LOCK="$LOG_DIR/catalog-watch.lock"
 cd "$ROOT"
+# shellcheck source=git-heal.sh
+source "$ROOT/scripts/git-heal.sh"
 
 exec 9>"$LOCK"
 if ! flock -n 9; then
@@ -27,7 +31,15 @@ run() { "$@" >> "$LOG" 2>&1; }
 
 log "pull kode"
 before_lock=$(sha1sum package-lock.json | cut -d' ' -f1)
-run git pull --rebase --autostash origin main || { log "git pull gagal"; exit 1; }
+run git_heal upstream
+# -X theirs: commit katalog lokal yang belum ter-push menang saat di-rebase.
+run git pull --rebase --autostash -X theirs origin main || { run git_heal upstream; log "git pull gagal"; exit 1; }
+# Autostash yang bentrok tetap exit 0 tapi meninggalkan file "unmerged"; bereskan di sini.
+run git_heal upstream
+if [ "$(git_ahead_count)" -gt 0 ]; then
+  log "ada commit katalog belum ter-push, publish ulang"
+  run bash scripts/publish-catalog.sh || log "publish ulang gagal"
+fi
 [ "$before_lock" != "$(sha1sum package-lock.json | cut -d' ' -f1)" ] && run npm ci
 
 log "cek halaman pertama"
