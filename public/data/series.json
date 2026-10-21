@@ -71,8 +71,7 @@
         "default": false
       }
     ],
-    "id": 597,
-    "is_new": true
+    "id": 597
   },
   {
     "type": "series",
@@ -177,8 +176,7 @@
         "default": false
       }
     ],
-    "id": 596,
-    "is_new": true
+    "id": 596
   },
   {
     "type": "series",
@@ -892,8 +890,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-shes-wild-fire-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -993,6 +991,96 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "She's Wild Fire - Season 1 Episode 4 (2026)",
+        "slug": "shes-wild-fire-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/shes-wild-fire-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/iwZVtNgeYSh2wRcZ1BQMFA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/tbaZKPlyGNpeWi64P87otQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Au0YzHhCtZ4tSwr0_xUxHw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "She's Wild Fire - Season 1 Episode 5 (2026)",
+        "slug": "shes-wild-fire-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/shes-wild-fire-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/T8FCYnIJpc7todkgB_tu7A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/9orT9qElMOJT773Z2lL2gg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/cLwkRX_P5CxXtToJyn4RMQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "She's Wild Fire - Season 1 Episode 6 (2026)",
+        "slug": "shes-wild-fire-season-1-episode-6-2026",
+        "source": "https://tv9.nontondrama.my/shes-wild-fire-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hgp7D0izJv7QKINsF7voDQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/T9hC8n7K9GzKSCVDM7UlJQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4BukLasgOoIwsaePa-yUFw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1000,21 +1088,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/HSl8HVmDV3gq8HhNREyJcg",
+        "url": "https://videonode.de/iframe3/p2p/hgp7D0izJv7QKINsF7voDQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/-1hnsa20_L96v552XQ6JJw",
+        "url": "https://videonode.de/iframe3/cast/T9hC8n7K9GzKSCVDM7UlJQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/_u3j4yX85nSCP0dtsRU6oA",
+        "url": "https://videonode.de/iframe3/hydrax/4BukLasgOoIwsaePa-yUFw",
         "default": false
       }
     ],
