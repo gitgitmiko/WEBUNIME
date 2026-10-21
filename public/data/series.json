@@ -105214,8 +105214,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-hell-barrister-2026-lk21.jpg",
     "rating": "7.0",
-    "durasi": "12 eps · S.1",
-    "episodes_count": 12,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -105585,6 +105585,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "Hell Barrister - Season 1 Episode 13 (2026)",
+        "slug": "hell-barrister-season-1-episode-13-2026",
+        "source": "https://tv9.nontondrama.my/hell-barrister-season-1-episode-13-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/JkKeuUmRYpAb9PqD1f0Eeg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7NXEEJQLevCYeUc--NIvOg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/LSIDDfj9VMnpD2imehj9WQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -105592,21 +105622,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/0D4LHxxv4ocMml9NX_EOIg",
+        "url": "https://videonode.de/iframe3/p2p/JkKeuUmRYpAb9PqD1f0Eeg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/RjW92yGn3qj-VAJfJ4dCHw",
+        "url": "https://videonode.de/iframe3/cast/7NXEEJQLevCYeUc--NIvOg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pII9GlBrLoM62Wych4eraQ",
+        "url": "https://videonode.de/iframe3/hydrax/LSIDDfj9VMnpD2imehj9WQ",
         "default": false
       }
     ],
