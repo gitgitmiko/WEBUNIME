@@ -1,6 +1,143 @@
 [
   {
     "type": "series",
+    "nama": "Crystal Lake",
+    "judul": "Crystal Lake (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-crystal-lake-2026-lk21.jpg",
+    "rating": "7.7",
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "sinopsis": "Crystal Lake - Ibu tunggal Pam Voorhees belum mampu meredakan rasa dukanya setelah putra kecilnya yang sakit-sakitan, Jason, tenggelam secara tragis di danau kota hampir setahun yang lalu. Ketika dua orang asing tiba di rumah Pam untuk menggali kembali masa lalunya, situasi berubah menjadi rangkaian misteri yang meresahkan.\n\nBintang Film: Linda Cardellini, William Catlett, Gwendolyn Sundstrom, Cameron Scoggins, Devin Kessler\n\nNegara: United States\n\nVotes: 8.100",
+    "slug": "crystal-lake-2026",
+    "source": "https://tv9.nontondrama.my/crystal-lake-2026",
+    "list_source": "https://tv12.lk21official.cc/crystal-lake-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Crystal Lake - Season 1 Episode 1 (2026)",
+        "slug": "crystal-lake-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/crystal-lake-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/7_J0wxwpn_AGNyNhg-9urg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/U89ynxhWwG49eLCWmQMG5Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KVvp3OBDWWiNbavUIdH6vg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Crystal Lake - Season 1 Episode 2 (2026)",
+        "slug": "crystal-lake-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/crystal-lake-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/qmDgXjwWLVkIzfkMIvWKzg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/6N9usTDVjcmwufPo7xz_lA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/SLL4SzkHOXhtGOrcC1DjpA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Crystal Lake - Season 1 Episode 3 (2026)",
+        "slug": "crystal-lake-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/crystal-lake-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6AZbexroc-uzRgkEqkzQUA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kFKhjktXVnH2bEJWPiTojA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/YFHLhjBeAxYggXyV00qm7w",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/6AZbexroc-uzRgkEqkzQUA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/kFKhjktXVnH2bEJWPiTojA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/YFHLhjBeAxYggXyV00qm7w",
+        "default": false
+      }
+    ],
+    "id": 598,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Iroha no Koi wa Jidai o Kakeru",
     "judul": "Iroha no Koi wa Jidai o Kakeru (2026)",
     "tahun": "2026",
@@ -890,8 +1027,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-shes-wild-fire-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "19 eps · S.1",
-    "episodes_count": 19,
+    "durasi": "22 eps · S.1",
+    "episodes_count": 22,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -1437,7 +1574,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/2vinloeelKS5cz9-kQbgAw",
+            "url": "https://videonode.de/iframe3/hydrax/7ChdeUuXx4ybmksZhpQReg",
             "default": false
           }
         ]
@@ -1467,7 +1604,97 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/UXqvlclArashAGJcL1NFvw",
+            "url": "https://videonode.de/iframe3/hydrax/TNNJ25kCCg_VuX-EDLSXGg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "She's Wild Fire - Season 1 Episode 20 (2026)",
+        "slug": "shes-wild-fire-season-1-episode-20-2026",
+        "source": "https://tv9.nontondrama.my/shes-wild-fire-season-1-episode-20-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/2CXQxUlfmn07WZILCOrP0g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/VEFNak5yVKdB2-tveBBcjg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/HY18seKRUilj3JxA9LRMPg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "She's Wild Fire - Season 1 Episode 21 (2026)",
+        "slug": "shes-wild-fire-season-1-episode-21-2026",
+        "source": "https://tv9.nontondrama.my/shes-wild-fire-season-1-episode-21-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ZiVJgx27jMUFzzoSsPG8UA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/eaIl7nUFskDkZFycNHiicw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/e6J-2tD5ymYGFe0RHAsWng",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "title": "She's Wild Fire - Season 1 Episode 22 (2026)",
+        "slug": "shes-wild-fire-season-1-episode-22-2026",
+        "source": "https://tv9.nontondrama.my/shes-wild-fire-season-1-episode-22-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/NF_qckrNY9LQwmVQmPdiJw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/nSYirfMnZEOsMgc8stogKQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/LHs3-YqnIdkZurcp8tuLsw",
             "default": false
           }
         ]
@@ -1478,21 +1705,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BzrJ4EyQWHxDmfMlUBsEow",
+        "url": "https://videonode.de/iframe3/p2p/NF_qckrNY9LQwmVQmPdiJw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/FR9Z19Jf6YvhYJvcOjsXrA",
+        "url": "https://videonode.de/iframe3/cast/nSYirfMnZEOsMgc8stogKQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/UXqvlclArashAGJcL1NFvw",
+        "url": "https://videonode.de/iframe3/hydrax/LHs3-YqnIdkZurcp8tuLsw",
         "default": false
       }
     ],
@@ -102235,7 +102462,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Y6Yuq3600PId9FmIzKEIIw",
+            "url": "https://videonode.de/iframe3/hydrax/4lIpLfmsGVWj5t597gTMzQ",
             "default": false
           }
         ]
@@ -102260,7 +102487,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Y6Yuq3600PId9FmIzKEIIw",
+        "url": "https://videonode.de/iframe3/hydrax/4lIpLfmsGVWj5t597gTMzQ",
         "default": false
       }
     ],
