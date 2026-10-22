@@ -111449,8 +111449,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-lament-autumn-2026-lk21.jpg",
     "rating": "9.8",
-    "durasi": "18 eps · S.1",
-    "episodes_count": 18,
+    "durasi": "19 eps · S.1",
+    "episodes_count": 19,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -112000,6 +112000,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "The Lament of Autumn - Season 1 Episode 19 (2026)",
+        "slug": "lament-autumn-season-1-episode-19-2026",
+        "source": "https://tv9.nontondrama.my/lament-autumn-season-1-episode-19-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nF9xJZqdHGGYs5z8c2vpSA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/LlaRz3BmZHFo9-fmaYqthA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/I0Rhi9FhhDed84JZhrsDJw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -112007,21 +112037,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/flTCBD_K2RNfFgy9F4ZGUg",
+        "url": "https://videonode.de/iframe3/p2p/nF9xJZqdHGGYs5z8c2vpSA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/962GunpsHKKcwo7zPIXWqA",
+        "url": "https://videonode.de/iframe3/cast/LlaRz3BmZHFo9-fmaYqthA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/LL4O01d7Abvva9VKfwk5cA",
+        "url": "https://videonode.de/iframe3/hydrax/I0Rhi9FhhDed84JZhrsDJw",
         "default": false
       }
     ],
