@@ -8463,8 +8463,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/FX-Senshi-Kurumi-chan.jpg",
     "rating": "7.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Seinen"
     ],
@@ -8622,44 +8622,54 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "FX Senshi Kurumi-chan Episode 4",
+        "slug": "fx-senshi-kurumi-chan-episode-4",
+        "source": "https://v2.samehadaku.how/fx-senshi-kurumi-chan-episode-4/",
+        "date": "",
+        "released_at": "2026-10-22T14:00:50.009Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ni4QhYpS#IvuEakR6ssZGB0pkZ8Mg9XcbKJAqnr0kVMApJ9z9sRE",
+            "default": true,
+            "post": "54827",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/D2J0EI6C#4uc1e_WR_q-eKv3P7a0e2Ti50HT3l1EIlDBFhkCvVYA",
+            "default": false,
+            "post": "54827",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxJ9_QWFZ2AgYX86ddBxiBO4GqYtg-xqYkcjEJG09fZ2ZTrw9ujmJi3cZw95taF4Zrz1vq2Fkg_eePLKrdAoEQg98jb93A11iHwBanqUmWdJfARzIEdw_dH_u8v1gOpgjMI8Dsx",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/ni4QhYpS#IvuEakR6ssZGB0pkZ8Mg9XcbKJAqnr0kVMApJ9z9sRE",
         "default": true,
-        "post": "54680",
-        "nume": "1"
+        "post": "54827",
+        "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/6vZzXTaA#oDbq36bjedUBEL0awNUUm5KAO0PMhTXTfqIANgc_EAU",
-        "default": false,
-        "post": "54680",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/TqZiQRgD#w602-2NHri3VAcs1Vw6FbnEDawdgPf6ktLOj8wNoBh4",
+        "url": "https://mega.nz/embed/D2J0EI6C#4uc1e_WR_q-eKv3P7a0e2Ti50HT3l1EIlDBFhkCvVYA",
         "default": false,
-        "post": "54680",
+        "post": "54827",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/So5nySha#t71Ps0YBAuIQdhe3R8N06XJrQ4H4D61DN5Oq2LSlr0s",
-        "default": false,
-        "post": "54680",
-        "nume": "5"
       }
     ],
     "id": 55,
