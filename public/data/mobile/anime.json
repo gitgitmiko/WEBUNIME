@@ -1029,8 +1029,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-6-1-300x169.jpg",
     "rating": "6.6",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Fantasy",
@@ -1145,6 +1145,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dytZbSkOZoYMLn8SOCWkFbUdF0xTCe3bAZEfnGnLO35sMV9eqZ7VIDrQhzEALV9hXiSk-hyvZ-7BpTXJ104vwyl2Ma-TFl7GLutzB-prAm8z8l5V8UA5VEHxH3EiJOCT0zqRApa",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Hyouken no Majutsushi ga Sekai wo Suberu S2 Episode 3",
+        "slug": "hyouken-no-majutsushi-ga-sekai-wo-suberu-s2-episode-3",
+        "source": "https://anoboy.quest/2026/10/hyouken-no-majutsushi-ga-sekai-wo-suberu-season-2-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx9C0QPEyztQtrZl4ubx6xytM8ZSZOHV2JciZfebmTUs4QsLE1X-n5pJrxkCJqmMSj2oazcXst9D-ByMchTF7LtQOCS3tcBLaCWqQAL_WvodtCQGh-fN4gham-UwEvLagIhogE",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzdGkwMm4QQe6gdlmhz3KuyxEDQ8rJXmkWHj881e44xmXzO8cU6upSi9J1tuwA9bfYV63DNNSgeEjhFE9iffMJqEYULTRrLye-RxrbDm8M9f69SGZbjicOG28IRDCmH80pcFTbL",
             "default": false,
             "source": "anoboy"
           }
@@ -5329,7 +5354,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tetsuryou!%20Meet%20with%20Tetsudou%20Musume.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Slice of Life"
@@ -95145,7 +95170,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/Tsuihou-sareta-Tensei-Juukishi-wa-Game.jpg",
     "rating": "6.84",
     "votes": 9079,
-    "durasi": "17 eps",
+    "durasi": "23 Menit",
     "episodes_count": 17,
     "genre": [
       "Action",
