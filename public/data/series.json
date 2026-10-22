@@ -56579,8 +56579,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-make-me-tingle-2026-lk21.jpg",
     "rating": "9.5",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -56711,6 +56711,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Make Me Tingle - Season 1 Episode 5 (2026)",
+        "slug": "make-me-tingle-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/make-me-tingle-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/qtK1N3ypMHvmEk9ZGud8rQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/u1zCm6D8-CLDfF27lR1bwg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/L4jcQHb__kXhCKxvvldJ9A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Make Me Tingle - Season 1 Episode 6 (2026)",
+        "slug": "make-me-tingle-season-1-episode-6-2026",
+        "source": "https://tv9.nontondrama.my/make-me-tingle-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/SIueDDmEKOV6bzSsjknXUA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xHbEtc8M_XJowYHdbQKODw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/WJS6mnQE1Bo1y7ZPjBOR5A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -56718,21 +56778,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/wc00jI0IRASp1Nm2LsOfoQ",
+        "url": "https://videonode.de/iframe3/p2p/SIueDDmEKOV6bzSsjknXUA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/e3tQsnvh3uzXOQ7oKixGcQ",
+        "url": "https://videonode.de/iframe3/cast/xHbEtc8M_XJowYHdbQKODw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ql2Jln-utYIaeRQvVu4X3A",
+        "url": "https://videonode.de/iframe3/hydrax/WJS6mnQE1Bo1y7ZPjBOR5A",
         "default": false
       }
     ],

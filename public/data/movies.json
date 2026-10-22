@@ -1,5 +1,45 @@
 [
   {
+    "nama": "Casi Fiel",
+    "judul": "Casi Fiel (2019)",
+    "tahun": "2019",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-casi-fiel-2019-lk21.jpg",
+    "rating": "6.2",
+    "quality": "HD",
+    "durasi": "1j 39m",
+    "genre": [
+      "Comedy"
+    ],
+    "sinopsis": "Casi fiel - Alejandro, seorang pria yang dikenal suka mempermainkan wanita (playboy), terpaksa harus memikirkan kembali arah kehidupannya secara drastis ketika pacar lamanya tiba-tiba mengandung anaknya.\nBudget: DOP 60,704,585\n\nSubtitle: workkeerr\n\nSutradara: Roberto Angel Salcedo\n\nBintang Film: Juan Carlos Pichardo Jr., Jenn Quezada, Dalisa Alegria, Sandra Berrocal, Alfonso Crisostomo\n\nNegara: Spain\n\nVotes: 45\n\nRelease: 10 May 2019\n\nUpdated: 22 Oct 2026 20:00:04",
+    "slug": "casi-fiel-2019",
+    "source": "https://tv12.lk21official.cc/casi-fiel-2019",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/7QkXy0ea69oMQv1cQuMbsA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/1WfHwoYV6Pxaej-o1HpeQw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/V_btbqFqJoXFg-H5ioterw",
+        "default": false
+      }
+    ],
+    "id": 323,
+    "is_new": true
+  },
+  {
     "nama": "Alone",
     "judul": "Alone (2021)",
     "tahun": "2021",
@@ -36,8 +76,7 @@
         "default": false
       }
     ],
-    "id": 322,
-    "is_new": true
+    "id": 322
   },
   {
     "nama": "Rosario",
