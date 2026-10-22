@@ -1,5 +1,45 @@
 [
   {
+    "nama": "Desvio",
+    "judul": "Desvio (2019)",
+    "tahun": "2019",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-desvio-2019-lk21.jpg",
+    "rating": "5.8",
+    "quality": "HD",
+    "durasi": "1j 35m",
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Desvio - Pedro diberikan izin keluar sementara dari penjara untuk mengunjungi keluarganya di Patos. Di tengah kunjungan tersebut, ia harus menghadapi bayang-bayang masa lalu dan merencanakan arah baru bagi kehidupannya. Namun, pertemuannya dengan Pamela, sepupunya yang masih remaja, justru membangkitkan kembali percikan emosi yang mengingatkannya pada masa lalu.\n\nSubtitle: workkeerr\n\nSutradara: Arthur Lins\n\nBintang Film: Daniel Porpino, Annie Goretti, Melania Silveira, Cely Farias, Vinicius Guedes\n\nNegara: Brazil\n\nVotes: 21\n\nRelease: 24 Jan 2019\n\nUpdated: 22 Oct 2026 14:07:03",
+    "slug": "desvio-2019",
+    "source": "https://tv12.lk21official.cc/desvio-2019",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/vVSPmjCIvHwDu400NiD6pA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/zGOE0lnK40zh36pdivFA6w",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/6dHJL0gytugGEPDZzTVS-w",
+        "default": false
+      }
+    ],
+    "id": 318,
+    "is_new": true
+  },
+  {
     "nama": "Caustico",
     "judul": "Caustico (2023)",
     "tahun": "2023",
@@ -37,8 +77,7 @@
         "default": false
       }
     ],
-    "id": 316,
-    "is_new": true
+    "id": 316
   },
   {
     "nama": "Feira da Ladra",
@@ -79,8 +118,7 @@
         "default": false
       }
     ],
-    "id": 317,
-    "is_new": true
+    "id": 317
   },
   {
     "nama": "Cat Call",

@@ -6,8 +6,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-golden-egg-2025-lk21.jpg",
     "rating": "7.5",
-    "durasi": "10 eps · S.1",
-    "episodes_count": 10,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -386,6 +386,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "The Golden Egg - Season 1 Episode 11 (2025)",
+        "slug": "golden-egg-season-1-episode-11-2025",
+        "source": "https://tv9.nontondrama.my/golden-egg-season-1-episode-11-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zkl-ZVk9QrZDMsnSjK_0Vg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/YY8BhkjJ6xfvQ2kEPjBzFg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/fA7Wu7B7fnVDnk_Q8LNEdA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "The Golden Egg - Season 1 Episode 12 (2025)",
+        "slug": "golden-egg-season-1-episode-12-2025",
+        "source": "https://tv9.nontondrama.my/golden-egg-season-1-episode-12-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/u4JM2BhO8gHOA_9uDalHBw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ahGzQbSgPcfFChW0bYiBaA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/N1hvT6Ol9pksBqFdvLBIcw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -393,33 +453,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/0dnvdUO5u5Lzx8tbNts0bw",
+        "url": "https://videonode.de/iframe3/p2p/u4JM2BhO8gHOA_9uDalHBw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/h3rmNAZI-zx186C51gQLuw",
+        "url": "https://videonode.de/iframe3/cast/ahGzQbSgPcfFChW0bYiBaA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/RowFiiJeTXGQqlR3FpklyQ",
-        "default": false
-      },
-      {
-        "no": 4,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/JiS3bLmbYxEobW92sP-vbw",
+        "url": "https://videonode.de/iframe3/hydrax/N1hvT6Ol9pksBqFdvLBIcw",
         "default": false
       }
     ],
-    "id": 606,
-    "is_new": true
+    "id": 606
   },
   {
     "type": "series",
