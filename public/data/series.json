@@ -1,6 +1,143 @@
 [
   {
     "type": "series",
+    "nama": "Private Eyes West Coast",
+    "judul": "Private Eyes West Coast (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-private-eyes-west-coast-2026-lk21.jpg",
+    "rating": "6.6",
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "sinopsis": "Private Eyes West Coast - Detektif swasta Matt Shade dan Angie Everett meninggalkan Toronto untuk memulai babak baru dan menghadapi berbagai tantangan dalam membuka firma hukum/penyelidikan swasta di kota baru. Tanpa jaringan informan dan rekan-rekan dekat yang selama ini membantu mereka di Toronto, Shade dan Angie berjuang keras membangun komunitas baru sembari menangani berbagai kasus investigasi yang rumit.\n\nBintang Film: Jason Priestley, Cindy Sampson, David Kaye, Olivia Cheng, Khamisa Wilsher\n\nNegara: United States, Canada\n\nVotes: 160",
+    "slug": "private-eyes-west-coast-2026",
+    "source": "https://tv9.nontondrama.my/private-eyes-west-coast-2026",
+    "list_source": "https://tv12.lk21official.cc/private-eyes-west-coast-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Private Eyes West Coast - Season 1 Episode 1 (2026)",
+        "slug": "private-eyes-west-coast-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/private-eyes-west-coast-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/UVxv0G5Pllfnmea_iN7wLA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/XVE4QcQR6ZVs-8Y-J7ZlQg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MvktWcav1tmlYZrcQA7PrQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Private Eyes West Coast - Season 1 Episode 2 (2026)",
+        "slug": "private-eyes-west-coast-season-1-episode-2-2026",
+        "source": "https://tv9.nontondrama.my/private-eyes-west-coast-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/s43iiIi0hGExF99HBv-qfA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/4U_tZoS1-Qb2amTsyGUdEA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/cfab3H61b82K6FRGWAqUEQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Private Eyes West Coast - Season 1 Episode 3 (2026)",
+        "slug": "private-eyes-west-coast-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/private-eyes-west-coast-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/GH9etqpx54zF1xQcWB5B5w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/JsGJ7IDgCU-Q_BVRwww6_Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/lEn51k9XD7gwOOZBbPJu_A",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/GH9etqpx54zF1xQcWB5B5w",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/JsGJ7IDgCU-Q_BVRwww6_Q",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/lEn51k9XD7gwOOZBbPJu_A",
+        "default": false
+      }
+    ],
+    "id": 607,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "The Golden Egg",
     "judul": "The Golden Egg (2025)",
     "tahun": "2025",
@@ -480,8 +617,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-birth-drama-king-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "18 eps · S.1",
-    "episodes_count": 18,
+    "durasi": "19 eps · S.1",
+    "episodes_count": 19,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1030,6 +1167,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "The Birth Of The Drama King - Season 1 Episode 19 (2019)",
+        "slug": "birth-drama-king-season-1-episode-19-2019",
+        "source": "https://tv9.nontondrama.my/birth-drama-king-season-1-episode-19-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/aDDlM6-Fx5_lUSm2zkwiyA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Lu8apjIXAqTSeX64emU-Hg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/iZLzt2bpT0DcnxP1A0HXMg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1037,21 +1204,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/3NsxYJ4m52vfJP9oa-dthg",
+        "url": "https://videonode.de/iframe3/p2p/aDDlM6-Fx5_lUSm2zkwiyA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Ddm4IO8VHILsgw3tOASOlQ",
+        "url": "https://videonode.de/iframe3/cast/Lu8apjIXAqTSeX64emU-Hg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/7DDNdHV5-rwHX7M-xWHANg",
+        "url": "https://videonode.de/iframe3/hydrax/iZLzt2bpT0DcnxP1A0HXMg",
         "default": false
       }
     ],
@@ -59959,8 +60126,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-line-fire-2026-lk21.jpg",
     "rating": "8.8",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -60099,6 +60266,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Line of Fire - Season 1 Episode 5 (2026)",
+        "slug": "line-fire-season-1-episode-5-2026",
+        "source": "https://tv9.nontondrama.my/line-fire-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/CAluULGwQ8-FE5vTL_9Gow",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3C7RaOq4qe6TxuI5vUM-Bg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MIcIa_AG0tTaaBoUCbgatw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -60106,21 +60303,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/1EOGziIh10yEePS8vqa7lQ",
+        "url": "https://videonode.de/iframe3/p2p/CAluULGwQ8-FE5vTL_9Gow",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Cn5qzb9Oew6Dinsy1dtMcg",
+        "url": "https://videonode.de/iframe3/cast/3C7RaOq4qe6TxuI5vUM-Bg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/JR_b3NpJNI0EkDlTsmMpcQ",
+        "url": "https://videonode.de/iframe3/hydrax/MIcIa_AG0tTaaBoUCbgatw",
         "default": false
       }
     ],
@@ -60133,8 +60330,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/03/film-rj-decker-2026-lk21.jpg",
     "rating": "8.4",
-    "durasi": "5 eps · S.2",
-    "episodes_count": 14,
+    "durasi": "15 eps · S.2",
+    "episodes_count": 15,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -60635,6 +60832,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "title": "RJ Decker - Season 2 Episode 6 (2026)",
+        "slug": "rj-decker-season-2-episode-6-2026",
+        "source": "https://tv9.nontondrama.my/rj-decker-season-2-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6Rb8DUweEXHltwc3vVHJdA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/mf9FC-o7Upt5Iz0Hw39GVw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/XbRNehNXUfqWhPNfaCk4Ew",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -60642,21 +60869,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/GVXOFZvjJf0N4Td-CrYIrw",
+        "url": "https://videonode.de/iframe3/p2p/6Rb8DUweEXHltwc3vVHJdA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/3HaQFwDjLz8B5v88cr3c-g",
+        "url": "https://videonode.de/iframe3/cast/mf9FC-o7Upt5Iz0Hw39GVw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/wIxM2hvysc284L8D0xPUgQ",
+        "url": "https://videonode.de/iframe3/hydrax/XbRNehNXUfqWhPNfaCk4Ew",
         "default": false
       }
     ],
@@ -82527,8 +82754,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-welcome-back-first-love-2026-lk21.jpg",
     "rating": "9.2",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -82597,6 +82824,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Welcome back, First love. - Season 1 Episode 3 (2026)",
+        "slug": "welcome-back-first-love-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/welcome-back-first-love-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Tan9x73RX4Nws7EslJhUrQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/iYr_vfMD81FDebrS4RdWjA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QIXDJKpVJzoFm0jaqoMEuA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -82604,21 +82861,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/63wyr45Xxwfqh08A-gmC-g",
+        "url": "https://videonode.de/iframe3/p2p/Tan9x73RX4Nws7EslJhUrQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/2dpYYvA6aCFEDO-PmCEhDQ",
+        "url": "https://videonode.de/iframe3/cast/iYr_vfMD81FDebrS4RdWjA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/MHCxVBcFIAdYpqsIGb7iEw",
+        "url": "https://videonode.de/iframe3/hydrax/QIXDJKpVJzoFm0jaqoMEuA",
         "default": false
       }
     ],
