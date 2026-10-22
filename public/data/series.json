@@ -1,6 +1,112 @@
 [
   {
     "type": "series",
+    "nama": "Under the Miracle Cherry Tree",
+    "judul": "Under the Miracle Cherry Tree (2020)",
+    "tahun": "2020",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-under-miracle-cherry-tree-2020-lk21.jpg",
+    "rating": "7.5",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Fantasy",
+      "Romance"
+    ],
+    "sinopsis": "Kota Sometani dan Mei Konno, sepasang sahabat sejak kecil, saat itu sedang duduk di kelas tiga SMA ketika Kota tiba-tiba meninggal dunia. Tujuh tahun kemudian, Mei kembali ke kampung halamannya dan mengunjungi sebuah tempat dengan pohon sakura yang mekar di tengah musim dingin—tempat yang memiliki arti istimewa bagi dirinya dan Kota. Tanpa diduga, Kota—yang seharusnya sudah meninggal—muncul di hadapannya. Ia masih berusia 17 tahun, baik secara fisik maupun mental, sementara Mei kini berusia 24 tahun. Kota hanya bisa berada di sana selama bunga sakura mekar. Akankah ia mampu mengungkapkan perasaannya kepada Mei dalam sisa waktu yang dimilikinya?\n\nSutradara: Hisao Ogura\n\nBintang Film: Hayato Sano, Marie Iitoyo, Yoshihiko Hakamada, Yutaro Watanabe, Hikari Ishida\n\nNegara: Japan\n\nVotes: 6",
+    "slug": "under-miracle-cherry-tree-2020",
+    "source": "https://tv9.nontondrama.my/under-miracle-cherry-tree-2020",
+    "list_source": "https://tv12.lk21official.cc/under-miracle-cherry-tree-2020",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Under the Miracle Cherry Tree - Season 1 Episode 1 (2020)",
+        "slug": "under-miracle-cherry-tree-season-1-episode-1-2020",
+        "source": "https://tv9.nontondrama.my/under-miracle-cherry-tree-season-1-episode-1-2020",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/sS8Ks8CJsMm7gBTTwsuWWw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0-DhIcucPq3C14HsVPptHA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/HJOzaS4XSZxWCJaJEgAJQg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Under the Miracle Cherry Tree - Season 1 Episode 2 (2020)",
+        "slug": "under-miracle-cherry-tree-season-1-episode-2-2020",
+        "source": "https://tv9.nontondrama.my/under-miracle-cherry-tree-season-1-episode-2-2020",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-QM73-9bhZix2TEtfPSBvA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/G8jgPXT-MfTqUaJtoM-MtA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/6c33lxb-bkrC77l9KyIqzg",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/-QM73-9bhZix2TEtfPSBvA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/G8jgPXT-MfTqUaJtoM-MtA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/6c33lxb-bkrC77l9KyIqzg",
+        "default": false
+      }
+    ],
+    "id": 611,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "The Trap",
     "judul": "The Trap (2026)",
     "tahun": "2026",
@@ -1420,8 +1526,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-birth-drama-king-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "23 eps · S.1",
-    "episodes_count": 23,
+    "durasi": "24 eps · S.1",
+    "episodes_count": 24,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -2120,6 +2226,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "The Birth Of The Drama King - Season 1 Episode 24 (2019)",
+        "slug": "birth-drama-king-season-1-episode-24-2019",
+        "source": "https://tv9.nontondrama.my/birth-drama-king-season-1-episode-24-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/e8CHcFy74QkgqhIoUlf_rQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gfL70JPDbWgzRNiLGdC1Gw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/yFIGvABHKwoz54S1BR470w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -2127,21 +2263,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/hq_VbhlWQSN0XeYch9te6g",
+        "url": "https://videonode.de/iframe3/p2p/e8CHcFy74QkgqhIoUlf_rQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/XNv5-bv85twUnfkTPrTV5g",
+        "url": "https://videonode.de/iframe3/cast/gfL70JPDbWgzRNiLGdC1Gw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/knTQjyX9LDZITb6Vswe4_A",
+        "url": "https://videonode.de/iframe3/hydrax/yFIGvABHKwoz54S1BR470w",
         "default": false
       }
     ],
@@ -59907,8 +60043,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-ncis-new-york-2026-lk21.jpg",
     "rating": "7.5",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -59979,6 +60115,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "NCIS: New York - Season 1 Episode 3 (2026)",
+        "slug": "ncis-new-york-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/ncis-new-york-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/AArWWKg8TmYuP2j-huUwug",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/tZderBlp4YhsgsQgqn0Azw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bZOUp5Qv9ILOaJqspAFn9Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -59986,21 +60152,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/D0sbcQS9sIaTEZfpArIurQ",
+        "url": "https://videonode.de/iframe3/p2p/AArWWKg8TmYuP2j-huUwug",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/hd0fa7Jr9WPOH8E2AR4T0Q",
+        "url": "https://videonode.de/iframe3/cast/tZderBlp4YhsgsQgqn0Azw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/fqM-HlOonfPHt3KIToou4Q",
+        "url": "https://videonode.de/iframe3/hydrax/bZOUp5Qv9ILOaJqspAFn9Q",
         "default": false
       }
     ],
