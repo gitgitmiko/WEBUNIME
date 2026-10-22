@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-birth-drama-king-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -46,6 +46,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The Birth Of The Drama King - Season 1 Episode 2 (2019)",
+        "slug": "birth-drama-king-season-1-episode-2-2019",
+        "source": "https://tv9.nontondrama.my/birth-drama-king-season-1-episode-2-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1mWoP-Tgs8s0cjVNbdUHmA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/zFg0LIkHKjmFTQw_gz4Rdg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/UdE2Ou7vWg3tlW-xc5f_3g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -53,26 +83,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/0aykwUM3A_rRSxhgn2ELzA",
+        "url": "https://videonode.de/iframe3/p2p/1mWoP-Tgs8s0cjVNbdUHmA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/EWM8cCW6SDf5RljUMAmu7A",
+        "url": "https://videonode.de/iframe3/cast/zFg0LIkHKjmFTQw_gz4Rdg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pTK9lxHqfudx9Z43uNzIKQ",
+        "url": "https://videonode.de/iframe3/hydrax/UdE2Ou7vWg3tlW-xc5f_3g",
         "default": false
       }
     ],
-    "id": 605,
-    "is_new": true
+    "id": 605
   },
   {
     "type": "series",
@@ -82504,8 +82533,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-visionquest-2026-lk21.jpg",
     "rating": "8.4",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -82578,6 +82607,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "VisionQuest - Season 1 Episode 3 (2026)",
+        "slug": "visionquest-season-1-episode-3-2026",
+        "source": "https://tv9.nontondrama.my/visionquest-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/sVF5mtSTHg8mpkVOlYfCZQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Y38iN_Dn5OR2Ou0pMhdZaQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/awaB4QRvuE1xi-KkYNFXbQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "VisionQuest - Season 1 Episode 4 (2026)",
+        "slug": "visionquest-season-1-episode-4-2026",
+        "source": "https://tv9.nontondrama.my/visionquest-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6n-VJELCmGYpjt7_10dzfQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/XUbhd6_R7D9IKECQq5FXVg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Rki1xFrF0QGh8QERWS4N8w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -82585,21 +82674,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/LwdYi_KhNa8nAA6sTfQffw",
+        "url": "https://videonode.de/iframe3/p2p/6n-VJELCmGYpjt7_10dzfQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/kksu9Ul3om8NT7tDFx-B6w",
+        "url": "https://videonode.de/iframe3/cast/XUbhd6_R7D9IKECQq5FXVg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/V4on7r2X3JDFRkjTMyzGsA",
+        "url": "https://videonode.de/iframe3/hydrax/Rki1xFrF0QGh8QERWS4N8w",
         "default": false
       }
     ],
