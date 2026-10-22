@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-birth-drama-king-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -106,6 +106,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "The Birth Of The Drama King - Season 1 Episode 4 (2019)",
+        "slug": "birth-drama-king-season-1-episode-4-2019",
+        "source": "https://tv9.nontondrama.my/birth-drama-king-season-1-episode-4-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/L2BFRpsH-U2dDCjvmN8Ekg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/z9KF7dlfkDHkA0-EPl7fMg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/dkAVnI-GSC-RAx2u57agIQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -113,21 +143,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/QNskYhUUy_iHQCjYjohWgg",
+        "url": "https://videonode.de/iframe3/p2p/L2BFRpsH-U2dDCjvmN8Ekg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/zf2BvPe8QzhwssTI1j_tqA",
+        "url": "https://videonode.de/iframe3/cast/z9KF7dlfkDHkA0-EPl7fMg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/nkAMqR1_OH9tZ8Av5G97RQ",
+        "url": "https://videonode.de/iframe3/hydrax/dkAVnI-GSC-RAx2u57agIQ",
         "default": false
       }
     ],
