@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-queen-pickled-fish-2019-lk21.jpg",
     "rating": "0.0",
-    "durasi": "11 eps · S.1",
-    "episodes_count": 11,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -144,8 +144,30 @@
         "episode": 5,
         "title": "Queen of Pickled Fish - Season 1 Episode 5 (2019)",
         "slug": "queen-pickled-fish-season-1-episode-5-2019",
-        "source": "https://tv5.nontondrama.my/queen-pickled-fish-season-1-episode-5-2019",
-        "players": []
+        "source": "https://tv9.nontondrama.my/queen-pickled-fish-season-1-episode-5-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/YsWgEQCjuHO2TVlk9VR2Tw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Y8HiF5u-S6dCTnCEa4CWPw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4fKR3sSnovWqe-ntLkZ3Zw",
+            "default": false
+          }
+        ]
       },
       {
         "season": 1,
@@ -326,6 +348,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "Queen of Pickled Fish - Season 1 Episode 12 (2019)",
+        "slug": "queen-pickled-fish-season-1-episode-12-2019",
+        "source": "https://tv9.nontondrama.my/queen-pickled-fish-season-1-episode-12-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Cs81Gob2mVlgywSE79_8bQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/SL5kdiwe4tpfOD3lUGkSfA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/w0BxeaECp26FSfzxHLsYWg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "Queen of Pickled Fish - Season 1 Episode 13 (2019)",
+        "slug": "queen-pickled-fish-season-1-episode-13-2019",
+        "source": "https://tv9.nontondrama.my/queen-pickled-fish-season-1-episode-13-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/_H_iNzEKJM1mzBeEqlh8jg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/VBRJesOVFeYBjYK3ZHzuUw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/sKvF_8sz81q7EmyKLmLunQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -333,21 +415,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/fhIeVntRz-fmWvYiCGj7WA",
+        "url": "https://videonode.de/iframe3/p2p/_H_iNzEKJM1mzBeEqlh8jg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/bT01hMoW10ynajxBWIFr4w",
+        "url": "https://videonode.de/iframe3/cast/VBRJesOVFeYBjYK3ZHzuUw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/UOvTkK_L6k8x0DNY0H5wWg",
+        "url": "https://videonode.de/iframe3/hydrax/sKvF_8sz81q7EmyKLmLunQ",
         "default": false
       }
     ],
