@@ -9732,7 +9732,7 @@
     "film": "Insidious: Out of the Further (2026)",
     "source": "https://tv12.lk21official.cc/insidious-out-further-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:50.762Z",
+    "scraped_at": "2026-10-22T16:34:45.516Z",
     "players": [
       {
         "no": 1,
@@ -9940,7 +9940,7 @@
     "film": "Buddy (2026)",
     "source": "https://tv12.lk21official.cc/buddy-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:36.989Z",
+    "scraped_at": "2026-10-22T16:34:34.021Z",
     "players": [
       {
         "no": 1,
@@ -10363,7 +10363,7 @@
     "film": "Hope (2026)",
     "source": "https://tv12.lk21official.cc/hope-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:30.713Z",
+    "scraped_at": "2026-10-22T16:34:28.731Z",
     "players": [
       {
         "no": 1,
@@ -10393,7 +10393,7 @@
     "film": "Khadam (2026)",
     "source": "https://tv12.lk21official.cc/khadam-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:42.866Z",
+    "scraped_at": "2026-10-22T16:34:38.958Z",
     "players": [
       {
         "no": 1,
@@ -10423,7 +10423,7 @@
     "film": "0187 UFO (2026)",
     "source": "https://tv12.lk21official.cc/0187-ufo-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:44.448Z",
+    "scraped_at": "2026-10-22T16:34:40.275Z",
     "players": [
       {
         "no": 1,
@@ -10453,7 +10453,7 @@
     "film": "Haunted Universities 4 (2026)",
     "source": "https://tv12.lk21official.cc/haunted-universities-4-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:48.012Z",
+    "scraped_at": "2026-10-22T16:34:43.234Z",
     "players": [
       {
         "no": 1,
@@ -10483,7 +10483,7 @@
     "film": "Infirmary (2026)",
     "source": "https://tv12.lk21official.cc/infirmary-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:51.152Z",
+    "scraped_at": "2026-10-22T16:34:45.847Z",
     "players": [
       {
         "no": 1,
@@ -10513,7 +10513,7 @@
     "film": "Models vs. Werewolves (2026)",
     "source": "https://tv12.lk21official.cc/models-vs-werewolves-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:55.107Z",
+    "scraped_at": "2026-10-22T16:34:49.122Z",
     "players": [
       {
         "no": 1,
@@ -10952,7 +10952,7 @@
     "film": "Beware Boiuna (2026)",
     "source": "https://tv12.lk21official.cc/beware-boiuna-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:29.932Z",
+    "scraped_at": "2026-10-22T16:34:28.073Z",
     "players": [
       {
         "no": 1,
@@ -10982,7 +10982,7 @@
     "film": "V/H/S/Mixtape (2026)",
     "source": "https://tv12.lk21official.cc/vhsmixtape-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-22T16:04:21.264Z",
+    "scraped_at": "2026-10-22T16:34:20.849Z",
     "players": [
       {
         "no": 1,
@@ -11003,6 +11003,36 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/EkURqJtE-O4M03FZ5I5wFQ",
+        "default": false
+      }
+    ]
+  },
+  "rosario-2026": {
+    "slug": "rosario-2026",
+    "film": "Rosario (2026)",
+    "source": "https://tv12.lk21official.cc/rosario-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-10-22T16:34:13.146Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/j39HUx5PcwqlbhOTwoBSIw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/nGKm5u5TPZ9BNFHRxMRRMw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/o7HzdeomoZuJfruCnWXK8Q",
         "default": false
       }
     ]
