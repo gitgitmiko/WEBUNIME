@@ -1419,8 +1419,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "22 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Drama",
       "Mystery",
@@ -1561,6 +1561,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyiUcLdinONdU0JjQU84wK3DuIdNYHN1KOysRwLHcgd5S5dzztksGdHt9Yb6r9cL6dV9_t7AoxlDH5-VNooGrIpxDS-G2eJAx6oCCBmhiypwVTKqK7DSBJ_eeP2O8WSp299dzY",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Kusuriya no Hitorigoto Season 3 Episode 4",
+        "slug": "kusuriya-no-hitorigoto-season-3-episode-4",
+        "source": "https://anoboy.quest/2026/10/kusuriya-no-hitorigoto-season-3-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxEIyNvMhB28ahJrhEEF98VVNl7GqxwBqleUUBeTKkBvbgeB6YgQ9OyR6CrBQBjyIQekidsDPVjrJuAonCKlFdPe5VqU8VAucE1vvVdAMJkFEyjSrsQEfmQa9P1nR_VauT_5q6W",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyZsiC4HsX929uAUfR5ZtOninamdn6TwYe3OZUDPBChm0QdNa8uy4GbEEWAosyv6IJTXw__ZdPAPqofqeTSh8Pd6NJKw8XyWQ9fL9kbA1iJj4mtiESZY1PP6egKKq-rI1kbAM8",
             "default": false,
             "source": "anoboy"
           }
