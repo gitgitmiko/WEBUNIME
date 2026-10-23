@@ -1,6 +1,82 @@
 [
   {
     "type": "series",
+    "nama": "The Undeclared War",
+    "judul": "The Undeclared War (2022)",
+    "tahun": "2022",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-undeclared-war-2022-lk21.jpg",
+    "rating": "7.1",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "sinopsis": "The Undeclared War - Sekelompok analis terkemuka di GCHQ bekerja secara rahasia untuk menangkal serangkaian serangan siber berbahaya di Inggris menjelang pemilihan umum pada masa pascapandemi 2024.\n\nBintang Film: Simon Pegg, Tom McKay, Hannah Khalique-Brown, Joss Porter, German Segal\n\nNegara: United Kingdom\n\nVotes: 7.700",
+    "slug": "undeclared-war-2022",
+    "source": "https://tv9.nontondrama.my/undeclared-war-2022",
+    "list_source": "https://tv12.lk21official.cc/undeclared-war-2022",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Undeclared War - Season 1 Episode 1 (2022)",
+        "slug": "undeclared-war-season-1-episode-1-2022",
+        "source": "https://tv9.nontondrama.my/undeclared-war-season-1-episode-1-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/WZktbKN_Ih2bhi5tjd5fUw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/5CY8l_V-xxjbIW6oo89fEA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/cI2in7TWNubFnvrhccj_kA",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/WZktbKN_Ih2bhi5tjd5fUw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/5CY8l_V-xxjbIW6oo89fEA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/cI2in7TWNubFnvrhccj_kA",
+        "default": false
+      }
+    ],
+    "id": 618,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Gudfadern Putin",
     "judul": "Gudfadern Putin (2026)",
     "tahun": "2026",
@@ -71,8 +147,7 @@
         "default": false
       }
     ],
-    "id": 617,
-    "is_new": true
+    "id": 617
   },
   {
     "type": "series",
@@ -1336,8 +1411,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-waiting-you-future-2019-lk21.jpg",
     "rating": "7.9",
-    "durasi": "11 eps · S.1",
-    "episodes_count": 11,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1676,6 +1751,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "Waiting for You in the Future - Season 1 Episode 12 (2019)",
+        "slug": "waiting-you-future-season-1-episode-12-2019",
+        "source": "https://tv9.nontondrama.my/waiting-you-future-season-1-episode-12-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/bRSzj37FBV1RPk4Cv6vEmQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DCGWMYYgu6qaAkkBMzdbPg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ZqRxXNgqlFLPkQT2IAaaoQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1683,21 +1788,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/VV92IjQU1pK_11OZKNE-VQ",
+        "url": "https://videonode.de/iframe3/p2p/bRSzj37FBV1RPk4Cv6vEmQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/C_wcjg3AWgch9YYTaKg3VA",
+        "url": "https://videonode.de/iframe3/cast/DCGWMYYgu6qaAkkBMzdbPg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/uPrnbwuD_LhocboMB5CMFA",
+        "url": "https://videonode.de/iframe3/hydrax/ZqRxXNgqlFLPkQT2IAaaoQ",
         "default": false
       }
     ],
@@ -568387,8 +568492,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/04/film-mobland-2025-lk21-d21.jpg",
     "rating": "8.0",
-    "durasi": "15 eps · S.2",
-    "episodes_count": 15,
+    "durasi": "16 eps · S.2",
+    "episodes_count": 16,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -568883,6 +568988,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "title": "MobLand - Season 2 Episode 6 (2025)",
+        "slug": "mobland-season-2-episode-6-2025",
+        "source": "https://tv9.nontondrama.my/mobland-season-2-episode-6-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-ECLkreFExBYnLiLbcEIlA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/yDss6AVlSrx4j6G0WtV85A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/7tjAmQbOODAibGdTaDi-ng",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -568890,21 +569025,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/kMy1bYzBjzN4D9YHL9Ve9g",
+        "url": "https://videonode.de/iframe3/p2p/-ECLkreFExBYnLiLbcEIlA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/sKJQrL6oayAbvhuBXtag2Q",
+        "url": "https://videonode.de/iframe3/cast/yDss6AVlSrx4j6G0WtV85A",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/bHtiTIOYqUlJEp6lXREIyA",
+        "url": "https://videonode.de/iframe3/hydrax/7tjAmQbOODAibGdTaDi-ng",
         "default": false
       }
     ],
