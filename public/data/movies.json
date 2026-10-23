@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Love in Paradise",
+    "judul": "Love in Paradise (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-love-paradise-2026-lk21.jpg",
+    "rating": "5.8",
+    "quality": "HD",
+    "durasi": "1j 52m",
+    "genre": [
+      "Comedy",
+      "Romance"
+    ],
+    "sinopsis": "Lars akan segera menikahi Bella, tetapi ada satu hal yang mengganggunya: ibunya sudah lama menjomblo. Untuk menghindari membiarkannya sendirian, ia mengajak ibunya berlibur ke Curaçao yang cerah. Apa yang tidak ia katakan padanya? Ternyata itu adalah perjalanan khusus untuk para lajang.\n\nSubtitle: workkeerr\n\nSutradara: Johan Nijenhuis\n\nBintang Film: Isa Hoes, Fedja Louman, Tarikh Janssen, Kasper van Kooten, Joy Delima\n\nNegara: Netherlands\n\nVotes: 214\n\nRelease: 29 Jan 2026\n\nUpdated: 23 Oct 2026 08:24:04",
+    "slug": "love-paradise-2026",
+    "source": "https://tv12.lk21official.cc/love-paradise-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/EULGVyY6iyc-471HB-rWug",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/AF6S9esMMVjSmuCaErE1lQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/lMDcPCvLoYryazupZZ1JDA",
+        "default": false
+      }
+    ],
+    "id": 330,
+    "is_new": true
+  },
+  {
     "nama": "Mr. Shota's Last Business Trip",
     "judul": "Mr. Shota's Last Business Trip (2026)",
     "tahun": "2026",
@@ -36,8 +77,7 @@
         "default": false
       }
     ],
-    "id": 329,
-    "is_new": true
+    "id": 329
   },
   {
     "nama": "Redoubt",
