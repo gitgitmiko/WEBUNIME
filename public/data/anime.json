@@ -1643,8 +1643,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tougen-Anki-Nikko-Kegon-no-Taki-hen-Episode-2-300x169.jpg",
     "rating": "6.9",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy",
@@ -1761,6 +1761,31 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwj8mtvxz-wQZB7V5KRN0by5JnWfa-TtBdfBW250y5BFsNz3OJXP20FWatb-cVWgQKnyqOhVE1NWABGuPWu6dAfv4Wz_iel5S_8vmcYOI0rGAKmx-OUry0NzUS5_p9KgCqqZYE",
             "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Tougen Anki: Nikko Kegon no Taki-hen Episode 4",
+        "slug": "tougen-anki-nikko-kegon-no-taki-hen-episode-4",
+        "source": "https://anoboy.quest/2026/10/tougen-anki-nikko-kegon-no-taki-hen-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwCaYT-0-BC7HZGGIhJRVL1vbbE82pjnpRc-X-km7aePzIRTayiuR4LHvH7rplETpqoqEFB95Oi76HCcXKMNYiUS61sRD8LsDSvl2RmBOOpNmcDqA0UcAPECn1gcogCgPm-3As",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dysop0xC-oOk5P6QbuIw2F61N4F8FJBAhLVE8OcMOHR_jxXHFMN44LyKUQ-N57ymMXUfrEVTlT1dsr4SFy1fA6ehk-DxUAFM5fY4Hb1qv43KTU-KlzScUa4a19YfxeaQmfmweY",
+            "default": false,
             "source": "anoboy"
           }
         ]
@@ -5464,8 +5489,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Hotaru%20no%20Yomeiri.jpg",
     "rating": "7.9",
     "votes": "",
-    "durasi": "22 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Romance",
       "Historical"
@@ -5545,6 +5570,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Hotaru no Yomeiri Episode 3",
+        "slug": "hotaru-no-yomeiri-episode-3",
+        "source": "https://anoboy.quest/2026/10/hotaru-no-yomeiri-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dz0-5CY3PB3Zr1OmGgFGke8SRlJ-aJgtM_g2dCCExe4lk1KXmm4bs7SSJTE2poB_1Nk8Xd5-RUf7sQ1Jtp78OdK9sQS-dTa897Y_arz873nEIEUqNyJMHQhQahGtsiqGBiyGj-U",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxi2-WvHs_HuAXvxnLxPggSC-SqtbLrOoqNBP7OGLyOWLwEgUQQ9l4PMmVqOAmadBcVKC5IPZTzxz815J0HUOen9xWzD2Euu1dvEJ_oibimH7HusKHLwjsVdgfN7uwpWggx8rc",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -5598,7 +5648,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Action",
