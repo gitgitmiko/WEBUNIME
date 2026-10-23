@@ -29325,8 +29325,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-waiting-you-future-2019-lk21.jpg",
     "rating": "7.9",
-    "durasi": "32 eps · S.1",
-    "episodes_count": 32,
+    "durasi": "33 eps · S.1",
+    "episodes_count": 33,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -30295,6 +30295,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 33,
+        "title": "Waiting for You in the Future - Season 1 Episode 33 (2019)",
+        "slug": "waiting-you-future-season-1-episode-33-2019",
+        "source": "https://tv9.nontondrama.my/waiting-you-future-season-1-episode-33-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Tx6T61r_4G9Fi9mVyh3opQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xdfpaaxbgLsmN7RKsxzCdA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/V39A6x1r00y-RbJ02ATxjA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -30302,21 +30332,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Rbp8ZmpM9dN7MXL-_JSuww",
+        "url": "https://videonode.de/iframe3/p2p/Tx6T61r_4G9Fi9mVyh3opQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/5bmYn4xfHmtBoJl7zDJCiQ",
+        "url": "https://videonode.de/iframe3/cast/xdfpaaxbgLsmN7RKsxzCdA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/2nJpz6PuKwcPOLQpzzAz_w",
+        "url": "https://videonode.de/iframe3/hydrax/V39A6x1r00y-RbJ02ATxjA",
         "default": false
       }
     ],
