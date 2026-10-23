@@ -13999,8 +13999,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Uchi%20no%20Otouto-domo%20ga%20Sumimasen.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 14,
+    "durasi": "15 eps",
+    "episodes_count": 15,
     "genre": [
       "Comedy",
       "Romance",
@@ -14357,6 +14357,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzh94LZmQOrJ2LGLkst_0gVmWdx1r9GHwFQZCM3R_ejdJTneb4Jmd-7hD8kJqpd1rwVZsWTjtX0p3Ct-b0f0Qhwt5xaz7vohOgTJlbeDxNTRYTOrCDCx_TGxHnNS9SU4C12QdY",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 16,
+        "title": "Uchi no Otouto-domo ga Sumimasen Episode 16",
+        "slug": "uchi-no-otouto-domo-ga-sumimasen-episode-16",
+        "source": "https://anoboy.quest/2026/10/uchi-no-otouto-domo-ga-sumimasen-episode-16/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwy2ZqvOr1S8CajBeQxox7NuSOEBm17jUEk9IumsKzatvtBj9plV17hPU49jiLV0wiEUYuuZ1JZjfkjtg6tpdwp0cd15ndynK_ht_o-XdOc6vupToc-mqOjx2t8PdclllOB_wyw",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxY0kLK8NlEs5UQ-LEZwrzahmhhJ31sWYvW6o8IX-KUG7LesHOYJo2PUFRfzJhSGrHNhxqc0kR5v9ySjrzZ8FWXksOSzsRGoxkY1yZ_Qf9XsQS6JG-G8FA-uBLnUWb0bzmcsCE",
             "default": false,
             "source": "anoboy"
           }
