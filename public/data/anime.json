@@ -1419,7 +1419,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "4 eps",
+    "durasi": "22 Menit",
     "episodes_count": 4,
     "genre": [
       "Drama",
@@ -5598,8 +5598,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Fantasy",
@@ -5657,6 +5657,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dy7AZADn_98YXSMuUbgh-2bIoctoB639o8ygqczEOekzgLJsI_UHWDV-7yPvh3GDXniz6i4enhiTISBUz7GJXjASdG5GHu7I5uDc-8wvKY6_254ZPzrPDDFnzNGV0yUxESwzAvu",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Toaru Anbu no Item Episode 3",
+        "slug": "toaru-anbu-no-item-episode-3",
+        "source": "https://anoboy.quest/2026/10/toaru-anbu-no-item-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dws4Gkf3UpruwvgM15AqV_RvpvQMyk550q5pCdFifPWADpQT9YXWMCNqPreqi156Y_nTuBpJSWQAWwD5gvM-jnj-SpuzlF9a0ZWKYlW3h1Jpue5EBRya1CXLWB13Tz0NrwVI54",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzXO0Llc_eiifgZbgLvD4tcJJpdGYrrQsS35ayfw-Nv10chxv3WSnK-ylVoFHgX5_LiLvLJn1neOlmMFVeOsDzvs6MdRIgguEVNfKRoaxEbTHtnVE5vga8wVqSeZNNQgWBaDGoO",
             "default": false,
             "source": "anoboy"
           }
