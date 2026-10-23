@@ -1,6 +1,84 @@
 [
   {
     "type": "series",
+    "nama": "The Torment",
+    "judul": "The Torment (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-torment-2026-lk21.jpg",
+    "rating": "6.2",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "sinopsis": "The Torment - Seorang jurnalis yang kehilangan kredibilitasnya memutuskan untuk kembali ke kampung halamannya dan bertekad menyelidiki kasus hilangnya teman masa kecil yang tak pernah terpecahkan.\n\nBintang Film: Olek Krupa, Magdalena Cielecka, Piotr Zurawski, Lukasz Simlat, Katarzyna Bujakiewicz\n\nNegara: Poland\n\nVotes: 86",
+    "slug": "torment-2026",
+    "source": "https://tv9.nontondrama.my/torment-2026",
+    "list_source": "https://tv12.lk21official.cc/torment-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Torment - Season 1 Episode 1 (2026)",
+        "slug": "torment-season-1-episode-1-2026",
+        "source": "https://tv9.nontondrama.my/torment-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1Mjol63eG5hFK9aEtZBvkw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/TGUGnVHWugtE9PT1dcXONA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pL9Zw2YldaMiHDVO5q0nTQ",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/1Mjol63eG5hFK9aEtZBvkw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/TGUGnVHWugtE9PT1dcXONA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/pL9Zw2YldaMiHDVO5q0nTQ",
+        "default": false
+      }
+    ],
+    "id": 616,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Overseas Security Guard",
     "judul": "Overseas Security Guard (2026)",
     "tahun": "2026",
@@ -163,7 +241,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/kW4NRmpLLfPKhS062EwzdQ",
+            "url": "https://videonode.de/iframe3/hydrax/3ZLmYAVkLrRj5hSeyZAsPg",
             "default": false
           }
         ]
@@ -193,7 +271,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/gpgUICpoPh5Fj0_KO-nu6w",
+            "url": "https://videonode.de/iframe3/hydrax/w_HD7Z6tI6GCYwvSFMtwqA",
             "default": false
           }
         ]
@@ -223,7 +301,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/tK3YwuzaXe-7BBt-tIMytw",
+            "url": "https://videonode.de/iframe3/hydrax/2sOUIPTGvkpx8QB1q8oXvg",
             "default": false
           }
         ]
@@ -253,7 +331,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Tc8yBBPGYW9D0STFlZDfKQ",
+            "url": "https://videonode.de/iframe3/hydrax/F5gtXg28XikNLpD1NZoyiA",
             "default": false
           }
         ]
@@ -278,7 +356,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Tc8yBBPGYW9D0STFlZDfKQ",
+        "url": "https://videonode.de/iframe3/hydrax/F5gtXg28XikNLpD1NZoyiA",
         "default": false
       }
     ],
@@ -447,7 +525,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/NTw1GJnijKn4CLblfKHrIA",
+            "url": "https://videonode.de/iframe3/hydrax/07Mg4VoVgncAyqtcV5dCsg",
             "default": false
           }
         ]
@@ -477,7 +555,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/9u91GEqz6MeVfOfRsgxMQQ",
+            "url": "https://videonode.de/iframe3/hydrax/PbYGmO3n4wwiR0lvq4t3wg",
             "default": false
           }
         ]
@@ -502,7 +580,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/9u91GEqz6MeVfOfRsgxMQQ",
+        "url": "https://videonode.de/iframe3/hydrax/PbYGmO3n4wwiR0lvq4t3wg",
         "default": false
       }
     ],
@@ -1124,8 +1202,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-waiting-you-future-2019-lk21.jpg",
     "rating": "7.9",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1284,6 +1362,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Waiting for You in the Future - Season 1 Episode 6 (2019)",
+        "slug": "waiting-you-future-season-1-episode-6-2019",
+        "source": "https://tv9.nontondrama.my/waiting-you-future-season-1-episode-6-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/3jJi13BTe6BKqQoFY0fJgQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/sDgQ5Chhv5iN5lghiJMFow",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/89TkqvdgkNM1dCkLMg2bFg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1291,21 +1399,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/uKnQnEXYlfvYlGb_JVRyZQ",
+        "url": "https://videonode.de/iframe3/p2p/3jJi13BTe6BKqQoFY0fJgQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iTOkkPp04h2-2JcxSU0hSQ",
+        "url": "https://videonode.de/iframe3/cast/sDgQ5Chhv5iN5lghiJMFow",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/nJM6aaXr_MkyKRjoNZCNvQ",
+        "url": "https://videonode.de/iframe3/hydrax/89TkqvdgkNM1dCkLMg2bFg",
         "default": false
       }
     ],
