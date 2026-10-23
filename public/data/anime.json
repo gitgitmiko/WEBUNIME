@@ -9664,8 +9664,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Steel%20Ball%20Run%20JoJo%20no%20Kimyou%20na%20Bouken.jpg",
     "rating": "9.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Adventure",
@@ -9749,6 +9749,31 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzVMQGGiKlYrHWjzmZqpnBw9oE-Neek_K_dyvgVdxCnH-BPn8qyQ6CR3wutE26mfqm-kvXi9B5Ym1Fzgbzy2TAI3Pmam_ftqCSARyf4Zo8vw8GFQHReSF3reUo2Mwcbpceq-k8U",
             "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 6,
+        "title": "JoJo no Kimyou na Bouken (TV) Season 7 Episode 6",
+        "slug": "jojo-no-kimyou-na-bouken-tv-season-7-episode-6",
+        "source": "https://anoboy.quest/2026/10/jojo-no-kimyou-na-bouken-tv-season-7-episode-6/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzm8-yXxpHQZRSXnNV22W4WAbhORpbY1987YbTADBES4m4KU9epifZH5Sc3byElzCtRMGyQJBlPFEUekRepfpqS0ByCgkL20LRyDnyugtUY9Mu-Q1lltLFGZEpxkZCdgpx9U_I",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxFk7L0c7vqewV1GPmzPh4-6UjGelpqfjVMixme6WDGA0mLjQX-dUrQgagGt6JSfW2LguXnY_hopX8T1-F-2KoUDhyONIAHjGW56syL2ovw8OdwF3zVZ6xT6FDRFOUvkHuAoMNE",
+            "default": false,
             "source": "anoboy"
           }
         ]

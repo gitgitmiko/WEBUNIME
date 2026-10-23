@@ -282,8 +282,7 @@
         "default": false
       }
     ],
-    "id": 623,
-    "is_new": true
+    "id": 623
   },
   {
     "type": "series",
@@ -446,8 +445,7 @@
         "default": false
       }
     ],
-    "id": 622,
-    "is_new": true
+    "id": 622
   },
   {
     "type": "series",
@@ -1366,7 +1364,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/4OLA9EtygmpDN8zYSJszew",
+            "url": "https://videonode.de/iframe3/hydrax/7Q1F-TuDqjwQkMNxT0446w",
             "default": false
           }
         ]
@@ -1396,7 +1394,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/5YIAywFIawH3bEW8Gjgpag",
+            "url": "https://videonode.de/iframe3/hydrax/oTvGjfzs61ddP-HaVJ21Cg",
             "default": false
           }
         ]
@@ -1426,7 +1424,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/AsFM_YlxGnhcuF-bjnhohw",
+            "url": "https://videonode.de/iframe3/hydrax/hia_irIN5pzZKGxQKtWRNg",
             "default": false
           }
         ]
@@ -1451,7 +1449,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/AsFM_YlxGnhcuF-bjnhohw",
+        "url": "https://videonode.de/iframe3/hydrax/hia_irIN5pzZKGxQKtWRNg",
         "default": false
       }
     ],
@@ -2823,8 +2821,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-waiting-you-future-2019-lk21.jpg",
     "rating": "7.9",
-    "durasi": "19 eps · S.1",
-    "episodes_count": 19,
+    "durasi": "20 eps · S.1",
+    "episodes_count": 20,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -3309,7 +3307,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/fjky8qCbZmtZ931D1Ln6BQ",
+            "url": "https://videonode.de/iframe3/hydrax/aN0dnd_cEIbTETV6DkQp5Q",
             "default": false
           }
         ]
@@ -3339,7 +3337,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/alSL37vHXtY1yB6Ly9bK2A",
+            "url": "https://videonode.de/iframe3/hydrax/1FIue2FbGCHA-uwNK8FX6A",
             "default": false
           }
         ]
@@ -3369,7 +3367,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/pMAMCzJDmIgcmkqiNcsL0A",
+            "url": "https://videonode.de/iframe3/hydrax/Y87A33GqDEFhoGH__zrkGg",
             "default": false
           }
         ]
@@ -3399,7 +3397,37 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/WUD__oQhjzIEdkhvUKQOpQ",
+            "url": "https://videonode.de/iframe3/hydrax/9GMQxq5g7ybC5QHHMkrDWQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "Waiting for You in the Future - Season 1 Episode 20 (2019)",
+        "slug": "waiting-you-future-season-1-episode-20-2019",
+        "source": "https://tv9.nontondrama.my/waiting-you-future-season-1-episode-20-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ucbECik6NgZnxj99v7WR2A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1gbKKG0YpkE6FvM0yBqVgg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/AlIG8mQCSHYy9UCPnZrtOA",
             "default": false
           }
         ]
@@ -3410,21 +3438,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/mQSJ2nlbKT7naIje52IEUw",
+        "url": "https://videonode.de/iframe3/p2p/ucbECik6NgZnxj99v7WR2A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/9CXoKbm3kDt1hczNZQs4Rw",
+        "url": "https://videonode.de/iframe3/cast/1gbKKG0YpkE6FvM0yBqVgg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/WUD__oQhjzIEdkhvUKQOpQ",
+        "url": "https://videonode.de/iframe3/hydrax/AlIG8mQCSHYy9UCPnZrtOA",
         "default": false
       }
     ],
@@ -114020,8 +114048,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "114 eps · S.5",
-    "episodes_count": 114,
+    "durasi": "115 eps · S.6",
+    "episodes_count": 115,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -117613,6 +117641,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 6,
+        "episode": 1,
+        "title": "CSI: Crime Scene Investigation - Season 6 Episode 1 (2000)",
+        "slug": "csi-crime-scene-investigation-season-6-episode-1-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-6-episode-1-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/3gFOnopT1_bm0hGi5janag",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0TwmK4AxhA2al9lywnpSdA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KlnhPLlmDGYuOBMeyKX3Ng",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -117620,21 +117678,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/nWTJ9YrDNWIq6LrLNCmEVg",
+        "url": "https://videonode.de/iframe3/p2p/3gFOnopT1_bm0hGi5janag",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/1PLBXh6SLWr0BgjopJAtMg",
+        "url": "https://videonode.de/iframe3/cast/0TwmK4AxhA2al9lywnpSdA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/zfrT3QU44J-ELkWaGlAUfA",
+        "url": "https://videonode.de/iframe3/hydrax/KlnhPLlmDGYuOBMeyKX3Ng",
         "default": false
       }
     ],
