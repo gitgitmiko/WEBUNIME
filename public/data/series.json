@@ -29325,8 +29325,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-waiting-you-future-2019-lk21.jpg",
     "rating": "7.9",
-    "durasi": "29 eps · S.1",
-    "episodes_count": 29,
+    "durasi": "31 eps · S.1",
+    "episodes_count": 31,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -30205,6 +30205,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 30,
+        "title": "Waiting for You in the Future - Season 1 Episode 30 (2019)",
+        "slug": "waiting-you-future-season-1-episode-30-2019",
+        "source": "https://tv9.nontondrama.my/waiting-you-future-season-1-episode-30-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/BmHxCvkLSN78vivoVWvhvw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fbyIEjiPazKoLyCILIhw_g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/wsve6glz_X7dseHuWem7PQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "title": "Waiting for You in the Future - Season 1 Episode 31 (2019)",
+        "slug": "waiting-you-future-season-1-episode-31-2019",
+        "source": "https://tv9.nontondrama.my/waiting-you-future-season-1-episode-31-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kseFA1y0kGO2Lnpz18_0Ww",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xRfnx1PQiOEb5Zi8iM_mVQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/wSMDLdzyfRPI8f3nWTmpYQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -30212,21 +30272,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ErsGum105DD5pGuant2Gow",
+        "url": "https://videonode.de/iframe3/p2p/kseFA1y0kGO2Lnpz18_0Ww",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/qKBobEHAkUxcz_IH_M8hNw",
+        "url": "https://videonode.de/iframe3/cast/xRfnx1PQiOEb5Zi8iM_mVQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/NVogNTVEe6Df5lOeMeUeaw",
+        "url": "https://videonode.de/iframe3/hydrax/wSMDLdzyfRPI8f3nWTmpYQ",
         "default": false
       }
     ],
