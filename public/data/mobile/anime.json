@@ -1228,8 +1228,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-8-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "3 eps",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [],
     "sinopsis": "Anime Tokyo Revengers S4.",
     "related": [],
@@ -1374,6 +1374,61 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Tokyo Revengers S4 Episode 4",
+        "slug": "tokyo-revengers-s4-episode-4",
+        "source": "https://v2.samehadaku.how/tokyo-revengers-s4-episode-4/",
+        "date": "",
+        "released_at": "2026-10-23T18:31:04.798Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxfKvGo453xTM3wJpWTpKHxABeqmvZZxqbidRe0CxKuCRVfXyHlAKY691W4wy1MQMGRhgOOdotv3S62VUo9X9rVvyWbMSysenBJghKDHKKWw-sciCZ4RTw4m74m1BI_XvHiYYY&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54885",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/gaQjgrrcYe",
+            "default": false,
+            "post": "54885",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/uxRn3bJA#skC98f0Z_ICm1qK0WINID0leeYocj9h47qWSx1jrlG0",
+            "default": false,
+            "post": "54885",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/btggRb4B#Ma1dmaKoHai2Zm7uqW_tEts0P_-dO3aWnQUcL_p9Kfc",
+            "default": false,
+            "post": "54885",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/atQWlDoa#iHD12VQjDVtGfJgA8Khx3BJsXlfQLMq9cWo1AaMh6CI",
+            "default": false,
+            "post": "54885",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -1381,36 +1436,45 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwDqZvXSFsbvEfadr2uuHy21EKZj-Hy3WxmsLRjYm85ED1qmjqQ6ENqjqqVWew5tQd5r98SAnonfjyLMgT6RFgxGA0jzlzbAi7vGx2Rr0CL9UOLU6mmFaib8A_Bjz6ZXaNeyc7c&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxfKvGo453xTM3wJpWTpKHxABeqmvZZxqbidRe0CxKuCRVfXyHlAKY691W4wy1MQMGRhgOOdotv3S62VUo9X9rVvyWbMSysenBJghKDHKKWw-sciCZ4RTw4m74m1BI_XvHiYYY&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54690",
+        "post": "54885",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/v1RyiLBb#Auljy9JWv1gf32gLlu4rqgzQ5jqtpr5xjrPR6uqSuww",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/gaQjgrrcYe",
         "default": false,
-        "post": "54690",
-        "nume": "3"
+        "post": "54885",
+        "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/XlJhTbja#TblR1AyXRW_9TENoGPi3-HCUNfU_0zkfQemLGcxTtEA",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/uxRn3bJA#skC98f0Z_ICm1qK0WINID0leeYocj9h47qWSx1jrlG0",
         "default": false,
-        "post": "54690",
-        "nume": "4"
+        "post": "54885",
+        "nume": "3"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/voh1EJLb#ZZe4CqUcknWHFxdLGCNaUnXUeVbPVf2tp1peTsBPURo",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/btggRb4B#Ma1dmaKoHai2Zm7uqW_tEts0P_-dO3aWnQUcL_p9Kfc",
         "default": false,
-        "post": "54690",
+        "post": "54885",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/atQWlDoa#iHD12VQjDVtGfJgA8Khx3BJsXlfQLMq9cWo1AaMh6CI",
+        "default": false,
+        "post": "54885",
         "nume": "5"
       }
     ],
@@ -8079,7 +8143,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tokyo%20Revengers%20Season%204.jpg",
     "rating": "7.8",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
