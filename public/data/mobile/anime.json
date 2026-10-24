@@ -7339,8 +7339,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tensei%20shita%20Daiseijo%20wa,%20Seijo%20de%20Aru%20Koto%20wo%20Hitakakusu.jpeg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Adventure",
@@ -7511,6 +7511,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxur0zB79SWU9B6h_9Fnw5ym089WIG6GRVw89CbOq5LK6UX9fqntgf-PdJOrCuKu6c6tfrnvKhC8A66J7Zq4mYQyCOTLOTDpkPeKgNsQlaKwNlRFGYCaSNl8otyDaxkHC4LNbnl",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Tensei shita Daiseijo wa, Seijo de Aru Koto wo Hitakakusu Episode 5",
+        "slug": "tensei-shita-daiseijo-wa-seijo-de-aru-koto-wo-hitakakusu-episode-5",
+        "source": "https://anoboy.quest/2026/10/tensei-shita-daiseijo-wa-seijo-de-aru-koto-wo-hitakakusu-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwaGegoPQ-aZ22NrNCzmLnnLXjrHjr-qpk-h6rxj3C0rV7CEaWseMPZu1rSyvI7hy4_fmEQAAOaT86FYVEiai63eKSB_Ry7XT8LODRbwE5itKJjaFgHPu5MrxtZHVyx47umLU4R",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzEwszH-pphwwsWiLg0tGITVLHkCK-AC6n-0Or7UktzxZRj0sIcMzpeVeXorb1C1B9e-owGA5pcleA0FjaBO77zc_dkJ_QP9G8cf-PZMZj43jWrJdAYZp6_ViiFBBKibZHflZkY",
             "default": false,
             "source": "anoboy"
           }
