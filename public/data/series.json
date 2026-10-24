@@ -146,8 +146,7 @@
         "default": false
       }
     ],
-    "id": 631,
-    "is_new": true
+    "id": 631
   },
   {
     "type": "series",
@@ -963,8 +962,7 @@
         "default": false
       }
     ],
-    "id": 630,
-    "is_new": true
+    "id": 630
   },
   {
     "type": "series",
@@ -2343,8 +2341,8 @@
     "tahun": "2020",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-your-home-my-business-aka-i-will-find-you-better-home-2020-lk21.jpg",
     "rating": "8.1",
-    "durasi": "21 eps · S.1",
-    "episodes_count": 21,
+    "durasi": "22 eps · S.1",
+    "episodes_count": 22,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -2983,6 +2981,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "title": "Your Home Is My Business aka I Will Find You a Better Home - Season 1 Episode 22 (2020)",
+        "slug": "your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-22-2020",
+        "source": "https://tv9.nontondrama.my/your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-22-2020",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/VBenLGJxHhPK5wIDUYq6YA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0a8PWF06-4rBBwtrRwfz8g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/fh4kuZwcT6rexzbB0AJP3w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -2990,21 +3018,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/3GD6AesOaXvfNEcuFgdWiQ",
+        "url": "https://videonode.de/iframe3/p2p/VBenLGJxHhPK5wIDUYq6YA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/U1bZZVWBpHjIBK9xjr1Ugg",
+        "url": "https://videonode.de/iframe3/cast/0a8PWF06-4rBBwtrRwfz8g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/SOf9-U0Ix5kg1ZXAmsv-sw",
+        "url": "https://videonode.de/iframe3/hydrax/fh4kuZwcT6rexzbB0AJP3w",
         "default": false
       }
     ],
@@ -3017,8 +3045,8 @@
     "tahun": "1989",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/03/film-the-simpsons-1989-lk21-d21.jpg",
     "rating": "8.7",
-    "durasi": "779 eps · S.36",
-    "episodes_count": 779,
+    "durasi": "782 eps · S.36",
+    "episodes_count": 782,
     "seasons_count": 35,
     "genre": [
       "Comedy",
@@ -29757,6 +29785,96 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 36,
+        "episode": 14,
+        "title": "The Simpsons - Season 36 Episode 14 (1989)",
+        "slug": "simpsons-season-36-episode-14-1989",
+        "source": "https://tv9.nontondrama.my/simpsons-season-36-episode-14-1989",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/91K4t4i6YMnCBxpfZeDypw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/cKMfYDpy8agO4jhbEckQEw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Sk4oW4evkzHRh8qqd8X9OA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 36,
+        "episode": 15,
+        "title": "The Simpsons - Season 36 Episode 15 (1989)",
+        "slug": "simpsons-season-36-episode-15-1989",
+        "source": "https://tv9.nontondrama.my/simpsons-season-36-episode-15-1989",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/l0hi_i53W-zsiImxaVDi6A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0HcLFBAbePCOJ3MsG5MMRA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/cUjxXvip2R9g4vqiLRk4DQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 36,
+        "episode": 16,
+        "title": "The Simpsons - Season 36 Episode 16 (1989)",
+        "slug": "simpsons-season-36-episode-16-1989",
+        "source": "https://tv9.nontondrama.my/simpsons-season-36-episode-16-1989",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/YTZHG9M6B_fljtFYNFp00A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/AERXHR1qjAKbFzDGBIBoEw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/odhbKthz-Gu3SMB3l77HWg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -29764,21 +29882,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/bWdGpPNo_rn-gmuD1GCaeQ",
+        "url": "https://videonode.de/iframe3/p2p/YTZHG9M6B_fljtFYNFp00A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/uGBZAVevNtLAttNpqysm8w",
+        "url": "https://videonode.de/iframe3/cast/AERXHR1qjAKbFzDGBIBoEw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/3M0M1MqkbeGWusrdbhy6dg",
+        "url": "https://videonode.de/iframe3/hydrax/odhbKthz-Gu3SMB3l77HWg",
         "default": false
       }
     ],
