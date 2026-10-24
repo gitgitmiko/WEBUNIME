@@ -3742,8 +3742,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "3 eps",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [],
     "sinopsis": "Anime Kashita Maryoku.",
     "related": [],
@@ -3888,6 +3888,43 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Kashita Maryoku Episode 4",
+        "slug": "kashita-maryoku-episode-4",
+        "source": "https://v2.samehadaku.how/kashita-maryoku-episode-4/",
+        "date": "",
+        "released_at": "2026-10-24T19:30:47.008Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxy-H6CoEbL5JQi1GweiV8pVhLrvMi2h2e4Jj7X-EKGaR13dvDnsb2Lqjpw52QMCZra09sV6Qt3rXrv60RpScDL5UDwxf0GIa2M8ZlggQCXG_mDrv9dDN1VnRRkiQf6PwHBs83B",
+            "default": true,
+            "post": "54923",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/TtQAEApa#U4qreBn1hK7GMxmKCwAkJ1_OnrVQ1C5mTFdW5G8NVKg",
+            "default": false,
+            "post": "54923",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/3t5GEIqC#uKemALBVsPuS2U7AHivz5Z-L4l5zspNDlfXUPzDdd58",
+            "default": false,
+            "post": "54923",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
@@ -3895,37 +3932,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzcjMc-So_yGiUcpeYGa2xnqUaZl3Wf4KTvPq8Mtdj0pkgk-ybcIvUV3O_SLoxiSoxa8BrpiVOpqJKCSvgdmHoxOOUM55MesI3Ll1dSFirhzDCUvvg_8USZ2ECHWw4ToXwSIt9M&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxy-H6CoEbL5JQi1GweiV8pVhLrvMi2h2e4Jj7X-EKGaR13dvDnsb2Lqjpw52QMCZra09sV6Qt3rXrv60RpScDL5UDwxf0GIa2M8ZlggQCXG_mDrv9dDN1VnRRkiQf6PwHBs83B",
         "default": true,
-        "post": "54727",
+        "post": "54923",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/m0xywDKC#bFIypzC5bHFk5hwoTWvkLxAQTH4TD7XKPnzi7Uhbz5E",
+        "url": "https://mega.nz/embed/TtQAEApa#U4qreBn1hK7GMxmKCwAkJ1_OnrVQ1C5mTFdW5G8NVKg",
         "default": false,
-        "post": "54727",
+        "post": "54923",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/G8glAJQR#DtIbmGc9H4M5Cz8ZvlGCsdfDocikHY7KYbVrrPTmk4c",
+        "url": "https://mega.nz/embed/3t5GEIqC#uKemALBVsPuS2U7AHivz5Z-L4l5zspNDlfXUPzDdd58",
         "default": false,
-        "post": "54727",
+        "post": "54923",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/PpJ0AbAS#fKaaBtTz8N0cUJKceOq8moNr6Pj1kpSgNUkg2efm_4c",
-        "default": false,
-        "post": "54727",
-        "nume": "5"
       }
     ],
     "id": 20
@@ -7902,7 +7930,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Kashita%20Maryoku%20wa%20Revo%20Barai%20de%20Kyousei%20Choushuu.jpg",
     "rating": "6.2",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "22 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
