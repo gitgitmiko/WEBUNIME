@@ -7206,8 +7206,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Magical%E2%98%85Explorer.jpg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Adventure",
       "Comedy",
@@ -7355,44 +7355,72 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Magical★Explorer Episode 5",
+        "slug": "magical%e2%98%85explorer-episode-5",
+        "source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-5/",
+        "date": "",
+        "released_at": "2026-10-24T19:00:41.483Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/RtFJykmt5x",
+            "default": true,
+            "post": "54918",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/hEJ1xAwa#V6k6qshGCAGoBQGzV1rPS87zoR6rJ9xmcqohlUD9oVE",
+            "default": false,
+            "post": "54918",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/AI5TBQ4b#gYv8mQdw1zncP_uPFjDYaPVRVmRsl5skCdxK9ANyZJA",
+            "default": false,
+            "post": "54918",
+            "nume": "3"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxpHtEfkjHfQz29FnlA8tN4EnPv1RkZlQmUtSk2jLnsQtR24Q4G2m2zM0mciG32OwSguz9gAHqpsHVWNEnWJBMRaFMf8L7MEc382xsFj-bElsnRtXEHP_jvmv5-WE3wbRgo1iHF",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/RtFJykmt5x",
         "default": true,
-        "post": "54579",
+        "post": "54918",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/nkwnBJwC#IP09wtp-NYLHHuhUxXf0kjkxiReAxBw5T-A__t2dBWE",
+        "url": "https://mega.nz/embed/hEJ1xAwa#V6k6qshGCAGoBQGzV1rPS87zoR6rJ9xmcqohlUD9oVE",
         "default": false,
-        "post": "54579",
+        "post": "54918",
         "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/nwIm1AYS#W97Kx5fa13OzeT2yfmfkd_zACLtddFMiUMJ1FZfMa8c",
+        "url": "https://mega.nz/embed/AI5TBQ4b#gYv8mQdw1zncP_uPFjDYaPVRVmRsl5skCdxK9ANyZJA",
         "default": false,
-        "post": "54579",
+        "post": "54918",
         "nume": "3"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/TwowkJ4C#ZaajuSyUY8Iuj5MXz-3C5jV-xu1xAvT6QhuBFVcgqkQ",
-        "default": false,
-        "post": "54579",
-        "nume": "4"
       }
     ],
     "id": 45,
@@ -7922,8 +7950,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Kashita%20Maryoku%20wa%20Revo%20Barai%20de%20Kyousei%20Choushuu.jpg",
     "rating": "6.2",
     "votes": "",
-    "durasi": "22 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy"
@@ -8004,6 +8032,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwXPLmZYp_tEKCtRidjTQyh1sW99xfJwLGwj_QsilPw4VL9jcwhiFlzNwpE7YB9wr3R0haC87H7DVv89r1f43q3XqBv4ulop6KnlY9t025nPDw31k4ZDsf9s1K9p5DJZ7ucFsOu",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Kashita Maryoku wa “Revo Barai” de Kyousei Choushuu Episode 4",
+        "slug": "kashita-maryoku-wa-revo-barai-de-kyousei-choushuu-episode-4",
+        "source": "https://anoboy.quest/2026/10/kashita-maryoku-wa-revo-barai-de-kyousei-choushuu-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw_Q63Gq1yA9xPF_2aG6SfHl9HV6gRklCWKMPELH69e4r9NFFfX9EZr0iP92ME_xCkYoJ1hLHKgiQEXm_T-xDAftl5cj0kHMYKJQ2V8dkhxgvcNRGPsSeufVaxU9-BQL3TCRYQ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzjq7SQucEWkaDHBzXY7jURsF3LuoZaaaQ9D9jPmtUTccllIVBXZJbg9VWhuUJBIldZhyGY6b_74-3EChc-IJpoB6jYYlgscko_PxLoaptOkw_QrIPvaQsCt5V-oL0vhNetTWY",
             "default": false,
             "source": "anoboy"
           }
