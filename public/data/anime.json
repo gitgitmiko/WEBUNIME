@@ -2116,7 +2116,7 @@
     "rating": "6.7",
     "votes": null,
     "durasi": "23 Menit",
-    "episodes_count": 3,
+    "episodes_count": 4,
     "genre": [
       "Adventure",
       "Shounen"
@@ -2303,6 +2303,59 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "#Zombie Sagashitemasu Episode 4",
+        "slug": "zombie-sagashitemasu-episode-4",
+        "source": "https://v2.samehadaku.how/zombie-sagashitemasu-episode-4/",
+        "date": "",
+        "released_at": "2026-10-24T17:30:37.967Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyOHSqmLEl-SEiYGjTUfuYywx06Jr9EaAPj_dnhwGrxsueCWBPd-BO4rN5osoL3XVunj1H_uJDnT3klVJJAAHoT9ZObchB532zO5lr6tRUFJ9d8h7MwnvJ7nyAQDjqNzZ--2Po",
+            "default": true,
+            "post": "54915",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/O94V1QgJ#WemQXfGBK6Sk-IlT0FqKdZ0gdE_T_tmN4mr0azLTe6k",
+            "default": false,
+            "post": "54915",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/2sxGhJyQ#_6Pn38MuSufeIL8jRpNHdAtOUGIn8xKieWoFGWlMOs8",
+            "default": false,
+            "post": "54915",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzuEfSFPtzVSyF0-d2zKEtMUQutlzBrgg1rCZKsD3Kv1unZpl9N-V_sD1zk7FkvQ4TGtI6pZO48P0rxgsuvif_gy9ryx3EgnC5RLisR4hVOxwP2L3Jb7GU_P4xmkV7mC8Sehw",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwbLqlMTDcfX7N5rZzX16BNpZSlxlX5pIqt7x5WtYYAvHTnnitgkAZYwHIYfHapk-jAQq6TvsvcPeAX0jEonKpB-8VglT466dfqoEWUJbJlt5sXbPdpP0KhMSOOz-Hylshf9A",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -2310,27 +2363,27 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyCoWGYhWz4L7ugw75kaNtyybzNtLq8hqBSuePQBg-P9qNOosbJexN7RW9eVLE5UDf82O9E-Ogu3LS-EWFBpDUJs0SG3Al268YBfcii5Ap2tpKkAf07jmyWMRgnz368PhvnGP8",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyOHSqmLEl-SEiYGjTUfuYywx06Jr9EaAPj_dnhwGrxsueCWBPd-BO4rN5osoL3XVunj1H_uJDnT3klVJJAAHoT9ZObchB532zO5lr6tRUFJ9d8h7MwnvJ7nyAQDjqNzZ--2Po",
         "default": true,
-        "post": "54724",
+        "post": "54915",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/GmhkRb5J#qqkTUTXBP-S5vc_ZvBVnudh4-kLIheT4tu43l4wNKMQ",
+        "url": "https://mega.nz/embed/O94V1QgJ#WemQXfGBK6Sk-IlT0FqKdZ0gdE_T_tmN4mr0azLTe6k",
         "default": false,
-        "post": "54724",
+        "post": "54915",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/eipgFBYa#xFatO76DvjakbbVfxkwDI5R7oJ5yyL0_2F8Jm_w2c30",
+        "url": "https://mega.nz/embed/2sxGhJyQ#_6Pn38MuSufeIL8jRpNHdAtOUGIn8xKieWoFGWlMOs8",
         "default": false,
-        "post": "54724",
+        "post": "54915",
         "nume": "4"
       }
     ],
@@ -7701,7 +7754,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Vertex%20Force.jpg",
     "rating": "5.9",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
