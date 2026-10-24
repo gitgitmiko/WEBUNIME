@@ -7339,7 +7339,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tensei%20shita%20Daiseijo%20wa,%20Seijo%20de%20Aru%20Koto%20wo%20Hitakakusu.jpeg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "5 eps",
+    "durasi": "23 Menit",
     "episodes_count": 5,
     "genre": [
       "Action",
@@ -8035,8 +8035,8 @@
     "thumbnail": "https://anoboy.quest/",
     "rating": "7.3",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy",
@@ -8154,6 +8154,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzH8o32UDQZwOutK7azso2KnYqTHoG5mGgsZqgga-KU8PQ_s-HT_cEk_HJczOWUkJ0_yP49_ZndfkrNURDozaq9h6sHFaE-CLnECDMSZRYuT-NTWJ3ckSHxtieg5YMg8eHd-g",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Romelia Senki Episode 4",
+        "slug": "romelia-senki-episode-4",
+        "source": "https://anoboy.quest/2026/10/romelia-senki-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxdGWdvRb4dKZCscTKl5EPzmq9ezNegWoV7Vfgb4fnlYhfG-PgvGYMUgS9H_G4YmYwOfNmAZiAcP8MXYS2JdtYk4VXi-d4Hn2k3ugwRLKcry2NINbWb_LJtUVuYkzVKzT7HavI",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxQtTAbjtuuULSrksBQK5TNMqk4CALnOtr2Fy6mtVrZ-yEon0gbHeXRN9TTPpqjA84TL4U9qKBjBx4lgJyxyeD-97b0EAdk224HbPrWcCTID_MKpIXyOP6KCED_aKJMsW6zskD_",
             "default": false,
             "source": "anoboy"
           }
