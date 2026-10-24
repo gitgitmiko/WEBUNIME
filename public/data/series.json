@@ -410,8 +410,7 @@
         "default": false
       }
     ],
-    "id": 629,
-    "is_new": true
+    "id": 629
   },
   {
     "type": "series",
@@ -1347,8 +1346,8 @@
     "tahun": "2020",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-your-home-my-business-aka-i-will-find-you-better-home-2020-lk21.jpg",
     "rating": "8.1",
-    "durasi": "16 eps · S.1",
-    "episodes_count": 16,
+    "durasi": "18 eps · S.1",
+    "episodes_count": 18,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1837,6 +1836,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "title": "Your Home Is My Business aka I Will Find You a Better Home - Season 1 Episode 17 (2020)",
+        "slug": "your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-17-2020",
+        "source": "https://tv9.nontondrama.my/your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-17-2020",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/gIE3IKq3ldgiX6kD6ERZgQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/H5D5YBb_XRzR3x-NmA5j2w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/OWWaJ-7f9vrEoXYUb8k2JA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 18,
+        "title": "Your Home Is My Business aka I Will Find You a Better Home - Season 1 Episode 18 (2020)",
+        "slug": "your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-18-2020",
+        "source": "https://tv9.nontondrama.my/your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-18-2020",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/L9n6dJres6Q1AP0BqAD7ew",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/RJ6TPs24Ehf2Ewle_F89wg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/G8FY1-6ICWKPIBWcdvjzNw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1844,21 +1903,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/hz3yX2se0IDQtwFJnAHbKw",
+        "url": "https://videonode.de/iframe3/p2p/L9n6dJres6Q1AP0BqAD7ew",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/-Z_Ufk7CuxPH3EFp4So9lw",
+        "url": "https://videonode.de/iframe3/cast/RJ6TPs24Ehf2Ewle_F89wg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/EnNA4WkSvmfBDDb7xPtMyA",
+        "url": "https://videonode.de/iframe3/hydrax/G8FY1-6ICWKPIBWcdvjzNw",
         "default": false
       }
     ],
