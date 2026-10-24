@@ -8035,7 +8035,7 @@
     "thumbnail": "https://anoboy.quest/",
     "rating": "7.3",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
@@ -9701,8 +9701,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx204389-jCoFCeTthDMy.jpg",
     "rating": "7.09",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Adventure",
@@ -9892,6 +9892,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxVy-AtlyaM0ufdWgZcFiOkL_wfnpvGRcyF4GxLD6VfXuRZjX-9E9sW_WEUg6fE9-joq4K-OH50-A6nm5sXg76D0RCc9oM6TvnYzb_AP_EggxCjq_VeJbddIGwlaP_M7Hmcq2p1",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Yasei no Last Boss ga Arawareta! S2 Episode 5",
+        "slug": "yasei-no-last-boss-ga-arawareta-s2-episode-5",
+        "source": "https://anoboy.quest/2026/10/yasei-no-last-boss-ga-arawareta-season-2-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzVAAXy04ulznYdMS2buGx8xF5w5SigOaiXxXb3N8Y2YatHEzrvooRtpDA3OHfONTH9JSZkXPLFw-ZujvYnZ9oFQjvQboA6XYvYCufqq2pthOCKtrxNphVGaTqEhhbg3LLwwODa",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwi6swdhuihItDJNRBSVeq7mjsbCNrQlOQgfMECv6rsURY4HAv2MvWQjEOny7O1jw5RQrB6M-qAFs_oAnrqk2oFJNQb3k5peTe-c4HOLwf4ZCz_9SeDBRgLv4HbZL341hcm4OM",
             "default": false,
             "source": "anoboy"
           }
