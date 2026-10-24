@@ -9732,7 +9732,7 @@
     "film": "Insidious: Out of the Further (2026)",
     "source": "https://tv12.lk21official.cc/insidious-out-further-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:48.973Z",
+    "scraped_at": "2026-10-24T18:34:54.305Z",
     "players": [
       {
         "no": 1,
@@ -9940,7 +9940,7 @@
     "film": "Buddy (2026)",
     "source": "https://tv12.lk21official.cc/buddy-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:37.626Z",
+    "scraped_at": "2026-10-24T18:34:42.894Z",
     "players": [
       {
         "no": 1,
@@ -10363,7 +10363,7 @@
     "film": "Hope (2026)",
     "source": "https://tv12.lk21official.cc/hope-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:32.430Z",
+    "scraped_at": "2026-10-24T18:34:37.646Z",
     "players": [
       {
         "no": 1,
@@ -10393,7 +10393,7 @@
     "film": "Khadam (2026)",
     "source": "https://tv12.lk21official.cc/khadam-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:42.496Z",
+    "scraped_at": "2026-10-24T18:34:47.808Z",
     "players": [
       {
         "no": 1,
@@ -10423,7 +10423,7 @@
     "film": "0187 UFO (2026)",
     "source": "https://tv12.lk21official.cc/0187-ufo-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:43.812Z",
+    "scraped_at": "2026-10-24T18:34:49.105Z",
     "players": [
       {
         "no": 1,
@@ -10453,7 +10453,7 @@
     "film": "Haunted Universities 4 (2026)",
     "source": "https://tv12.lk21official.cc/haunted-universities-4-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:46.724Z",
+    "scraped_at": "2026-10-24T18:34:52.037Z",
     "players": [
       {
         "no": 1,
@@ -10483,7 +10483,7 @@
     "film": "Infirmary (2026)",
     "source": "https://tv12.lk21official.cc/infirmary-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:49.303Z",
+    "scraped_at": "2026-10-24T18:34:54.632Z",
     "players": [
       {
         "no": 1,
@@ -10952,7 +10952,7 @@
     "film": "Beware Boiuna (2026)",
     "source": "https://tv12.lk21official.cc/beware-boiuna-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:31.780Z",
+    "scraped_at": "2026-10-24T18:34:36.989Z",
     "players": [
       {
         "no": 1,
@@ -10982,7 +10982,7 @@
     "film": "V/H/S/Mixtape (2026)",
     "source": "https://tv12.lk21official.cc/vhsmixtape-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:24.633Z",
+    "scraped_at": "2026-10-24T18:34:29.844Z",
     "players": [
       {
         "no": 1,
@@ -11012,7 +11012,7 @@
     "film": "Rosario (2026)",
     "source": "https://tv12.lk21official.cc/rosario-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:17.140Z",
+    "scraped_at": "2026-10-24T18:34:22.375Z",
     "players": [
       {
         "no": 1,
@@ -11042,7 +11042,7 @@
     "film": "The Djinn's Curse 2 (2026)",
     "source": "https://tv12.lk21official.cc/djinns-curse-2-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:15.835Z",
+    "scraped_at": "2026-10-24T18:34:21.067Z",
     "players": [
       {
         "no": 1,
@@ -11072,7 +11072,7 @@
     "film": "The 3 Killer Pigs (2026)",
     "source": "https://tv12.lk21official.cc/3-killer-pigs-2026",
     "catalog": "horror",
-    "scraped_at": "2026-10-24T18:04:13.557Z",
+    "scraped_at": "2026-10-24T18:34:18.787Z",
     "players": [
       {
         "no": 1,
@@ -11093,6 +11093,36 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/TJDcsReCjlV1X3TpgZG8Ag",
+        "default": false
+      }
+    ]
+  },
+  "exit-state-2026": {
+    "slug": "exit-state-2026",
+    "film": "The Exit State (2026)",
+    "source": "https://tv12.lk21official.cc/exit-state-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-10-24T18:34:18.133Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/PsjJSx-fyfRrHcz25Bp26w",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/KBjI17ydicszbsa7ffVrzQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/C8olmCTEx-laJdu1a61TIA",
         "default": false
       }
     ]
