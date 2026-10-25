@@ -6,8 +6,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-red-alert-2025-lk21.jpg",
     "rating": "6.9",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -78,6 +78,29 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Red Alert - Season 1 Episode 3 (2025)",
+        "slug": "red-alert-season-1-episode-3-2025",
+        "source": "https://tv9.nontondrama.my/red-alert-season-1-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kPGRAr4mr_vj5S26iRLFWw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/B88rENSI5535GFi3wx0Q6g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -85,21 +108,14 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Juc3GoiAbXDheD72Ksb8eA",
+        "url": "https://videonode.de/iframe3/p2p/kPGRAr4mr_vj5S26iRLFWw",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/4YkqXjvL_RYCnvFOE_TXcQ",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/FUVOZTkVCwPPlsoOimy77w",
+        "url": "https://videonode.de/iframe3/hydrax/B88rENSI5535GFi3wx0Q6g",
         "default": false
       }
     ],
@@ -4327,7 +4343,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/fglTASYohpeocOYNlA-9-Q",
+            "url": "https://videonode.de/iframe3/hydrax/hIOXY2SSBjU00P7EWhzGgA",
             "default": false
           }
         ]
@@ -4357,7 +4373,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/0YRfq7mOBaj5-v2VLhtZNw",
+            "url": "https://videonode.de/iframe3/hydrax/Ohslj_iUltHr71_ShT7FAQ",
             "default": false
           }
         ]
@@ -4387,7 +4403,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/ryVpvnLEF_-JNGymaQhMSw",
+            "url": "https://videonode.de/iframe3/hydrax/8Hl5K1EktR7MXwjrb11Akw",
             "default": false
           }
         ]
@@ -4412,7 +4428,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ryVpvnLEF_-JNGymaQhMSw",
+        "url": "https://videonode.de/iframe3/hydrax/8Hl5K1EktR7MXwjrb11Akw",
         "default": false
       }
     ],
@@ -147304,8 +147320,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "156 eps · S.7",
-    "episodes_count": 156,
+    "durasi": "159 eps · S.7",
+    "episodes_count": 159,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -151973,7 +151989,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/g7_xUYEguul4GJLnQ-IevQ",
+            "url": "https://videonode.de/iframe3/hydrax/Qph5H0IjmrTfVnezbFprbA",
             "default": false
           }
         ]
@@ -152003,7 +152019,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/xkVSbpeeP4LPBqG-ixT2KQ",
+            "url": "https://videonode.de/iframe3/hydrax/GzdJjYisDNg-9m1hRtRQ5Q",
             "default": false
           }
         ]
@@ -152033,7 +152049,30 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/wklqLyjYQEMB9BGZuST3bw",
+            "url": "https://videonode.de/iframe3/hydrax/Eq80JSOaw68zHaZ5n6RZYA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 7,
+        "episode": 15,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 15 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-15-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-15-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Riov6Oh-ot1rVFwUjJAPHA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4YvzF2iIhOoXFdNQDRM2cA",
             "default": false
           }
         ]
@@ -152063,7 +152102,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/pEnb75fAzi7BXRimhvQ5rQ",
+            "url": "https://videonode.de/iframe3/hydrax/Oe_HObPItthaF5wiVTxyhw",
             "default": false
           }
         ]
@@ -152086,7 +152125,7 @@
             "no": 2,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/693XKxVdnGQQJmCddiIysw",
+            "url": "https://videonode.de/iframe3/hydrax/EFUEACJVhQY1yXhlI7J3Ww",
             "default": false
           }
         ]
@@ -152116,7 +152155,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/3NbA7mxhuP3M7jR1J_gLmA",
+            "url": "https://videonode.de/iframe3/hydrax/5TvIA-CKWHVarfXAlGr_6w",
             "default": false
           }
         ]
@@ -152146,7 +152185,60 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/pWkfGqAixgmseDfTF4-jKQ",
+            "url": "https://videonode.de/iframe3/hydrax/Ux15DrVdCG5icieUC21Uvw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 7,
+        "episode": 20,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 20 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-20-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-20-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/I9O6ghWGVLfI7WXCXWp2ng",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/c0KdPoyU0iN2XCz1Kx1fuw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 7,
+        "episode": 21,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 21 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-21-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-21-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/PQKAbAY821Vbr7god9Hd6Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/dyUrC9T-MDk3abrjVq8yjA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/dNmNZMzrrUgQIBl181fxSQ",
             "default": false
           }
         ]
@@ -152157,21 +152249,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/g1iFM3FmOH-J3glTS1t_pw",
+        "url": "https://videonode.de/iframe3/p2p/PQKAbAY821Vbr7god9Hd6Q",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/8rjXphqI5bz3LptrbBdcdw",
+        "url": "https://videonode.de/iframe3/cast/dyUrC9T-MDk3abrjVq8yjA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pWkfGqAixgmseDfTF4-jKQ",
+        "url": "https://videonode.de/iframe3/hydrax/dNmNZMzrrUgQIBl181fxSQ",
         "default": false
       }
     ],
