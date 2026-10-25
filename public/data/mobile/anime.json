@@ -2905,7 +2905,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-2.jpg",
     "rating": "8.2",
     "votes": null,
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Romance",
@@ -3114,6 +3114,22 @@
             "default": false,
             "post": "54928",
             "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzz7KsxgmTmbT6OAgHHdvR2O3XIcFavzLuFT11FGLjPlTpX5vCTYALMSPh5CMZEvADrjt0LwprBocDDHFnfgzUBp_MxG3s1nOleq2S55tUplsH3rdvmeND64szmrP7v1QkJpjPe",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyw0YaZ_OTfvN6z6HzqgCEzWcFRwxkJX8M7c7-RCMSbySwXRGj-rdHHxRQikqcF0IhqTtlj22OX9cZWPWz4IyvFUVVEbLdUWNFM2WwwF17gJLUhmfYia8iaAF_OC0KIqy2ntvvc",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -4134,8 +4150,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Yozakura-san%20Chi%20no%20Daisakusen%20Season%202%20Part%202.jpg",
     "rating": "7.6",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Comedy",
@@ -4196,6 +4212,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 3,
+        "title": "Yozakura-san Chi no Daisakusen Season 2 Part 2 Episode 3",
+        "slug": "yozakura-san-chi-no-daisakusen-season-2-part-2-episode-3",
+        "source": "https://anoboy.quest/2026/10/yozakura-san-chi-no-daisakusen-season-2-part-2-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy14LSDskE3b0E3VVmu8QH1-Pr_7jQrpiGKoWi9xM-84gvI5U0A36nZc6AGj3_e6LlVaTOxypGBIYyvwWDAVeaALxyJoM1kNossilhb6ERGRxj8ymRNErK-qIlGZwDxwSCF2CGW",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyKCiuQokIEExqN17FTB7MrK5Lcg9Xp_DcU0VNURgU37in-AN1RoN6CQngV8z5Zx_ATmN-XIbgT5KlS1N4gpdasT0e4n1OjfS6LrqBVVD0oTXb3kdXRXqM2NAKPjCGD58ECRmOg",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -4230,8 +4271,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Aoashi%20Season%202.jpg",
     "rating": "8.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Sports",
       "Seinen"
@@ -4312,6 +4353,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwktIkzyNNYLb7q7fh6x1RlvTSatLrqjHeRHNqyCSJmqI4LwDH_DrtvXtzqnUqcUkIZBwrKTWqJAiVGNSrQ7eiIR5kIjnzPHhaq2QqDrIBGJQzVOkpF9YTfD7UH3EbaumaKwQ9J",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Aoashi Season 2 Episode 4",
+        "slug": "aoashi-season-2-episode-4",
+        "source": "https://anoboy.quest/2026/10/aoashi-season-2-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxeUGbdL4PgEwbeM-DShfpe5YmCSXUn1PL71nAivBPMbwHlfZ8vpoGyjSkP3aPNdU4ciUc0EY5-V6Jwze32wLBZIxKdx8fWnKKreMpnvMD619xglZMp37ZvSFX3TKZ9pFCrSYw",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyKmUlTNDF2kNZKBleVVREJeiF-n5w_8rj2iuqmx6XxvrydAJYv9jh7NIMztni2knNfc7U9kjriCtd0QQkxU6xgIVQb-iEGhn_HNekP0L8mweAe3ZS4IciYmvh8uEH4iqgMmQAz",
             "default": false,
             "source": "anoboy"
           }
@@ -137672,6 +137738,22 @@
             "default": false,
             "post": "49747",
             "nume": "10"
+          },
+          {
+            "no": 11,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwLLwOmApST_0lHem37KRBUk0hqg2xgC45VKiP4ASVAAgteAy2JAkl85ss7yFtwcKRy73eY70nZcZ0ZItpegwIUdgR85y02PwFgrPkp5MR8yB9M1h_zWQOMrP5HpGKkIloC4ChK",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 12,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwVTY3tUQ2KytIpP7f3yrLg2pGizBZAzYyuH5MuswLgCCxAWrvj2TBt1kuW6KDRkAz4Vi3MjRBVz9eFUYhC0m1C2AzcUK9Zb4dgJRodSkImiXOusJKvVsLYhgTXA9BTRUBdjrQr",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },

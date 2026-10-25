@@ -2580,8 +2580,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-tigers-sniff-rose-2026-lk21.jpg",
     "rating": "8.0",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -2771,6 +2771,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Tigers Sniff the Rose - Season 1 Episode 7 (2026)",
+        "slug": "tigers-sniff-rose-season-1-episode-7-2026",
+        "source": "https://tv9.nontondrama.my/tigers-sniff-rose-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ahbY1AdsM1n0ymvGkMEQxg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/VlHg1cGAn8PbXIWi6udQ9Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/YvrXbQjWmmckdNKQ2QLhag",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -2778,21 +2808,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/WQCdsT0tLL3oohGK2wJyuQ",
+        "url": "https://videonode.de/iframe3/p2p/ahbY1AdsM1n0ymvGkMEQxg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/koD80pIzPlbl9aZcGpE2jA",
+        "url": "https://videonode.de/iframe3/cast/VlHg1cGAn8PbXIWi6udQ9Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/axB2SKrKOvIQiw5EzAyc4w",
+        "url": "https://videonode.de/iframe3/hydrax/YvrXbQjWmmckdNKQ2QLhag",
         "default": false
       }
     ],
