@@ -4601,8 +4601,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Action",
       "Adventure",
@@ -4701,6 +4701,23 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwOWQGFMAs8qNHMrYk5cbJVS4M1dxtfq7FEYZk_NiVVcYUAC9wo2iRRrhCs9A-ABcBAkGGajFQiCoWqQEHZdkWLkNwOgkz9IHD7Qe_0nDRxzK6DqSF8TQOuea2yjSVginXWB6K9",
             "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 3,
+        "title": "Dragon Ball Super: Beerus Episode 3",
+        "slug": "dragon-ball-super-beerus-episode-3",
+        "source": "https://anoboy.quest/2026/10/dragon-ball-super-beerus-episode-3/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyPw5E6PXr4owBTw86ltjEV1SuvT3p2v0rP4_Y2a3GhUqV1HGNAe-kR4Aho0jsZ1p4OCXjYfRm5h-BzDcBftqWmtv9AWgl3Lux8LNb1mX5dPWLtMep3jD8fV-WKrHuF4XMSJJQ",
+            "default": true,
             "source": "anoboy"
           }
         ]

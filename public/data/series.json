@@ -147064,8 +147064,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "143 eps · S.7",
-    "episodes_count": 143,
+    "durasi": "145 eps · S.7",
+    "episodes_count": 145,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -151527,6 +151527,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 7,
+        "episode": 6,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 6 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-6-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-6-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kcYyiGDyRm4q2hGRIhLWLQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0Xq0UZNBkdNC21L_LXdqsQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bdg9YKWzMvnj9usiVPrcJA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 7,
+        "episode": 7,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 7 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-7-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-7-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zmuJ4KLH3vVcah4qf7zD0g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Ae6aOV_KILpVV2VJTQOcrg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/nzevaUJjn_MWWtQRnZ32Tg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -151534,21 +151594,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/uWRSszdmk1xCx-ibsU9h2w",
+        "url": "https://videonode.de/iframe3/p2p/zmuJ4KLH3vVcah4qf7zD0g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/n8OLNAipoWosa6pKPUE-Pg",
+        "url": "https://videonode.de/iframe3/cast/Ae6aOV_KILpVV2VJTQOcrg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/9yDjMD39qOZXxAKddqB_rA",
+        "url": "https://videonode.de/iframe3/hydrax/nzevaUJjn_MWWtQRnZ32Tg",
         "default": false
       }
     ],
