@@ -3548,8 +3548,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-Ashi-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "3 eps",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [],
     "sinopsis": "Anime Ao Ashi S2.",
     "related": [],
@@ -3667,17 +3667,54 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Ao Ashi S2 Episode 4",
+        "slug": "ao-ashi-s2-episode-4",
+        "source": "https://v2.samehadaku.how/ao-ashi-s2-episode-4/",
+        "date": "",
+        "released_at": "2026-10-25T10:30:40.482Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwDHeogg-GmdRlkjuyWPOJu_K4JuWtNFJLTbzz5_ZWyxRCuzzuegcsdIHtmiPMARjxkJp-gilej4keWKqx9eFgLYAw7xG1d34WImbpyo1UtSiaz8XZk9pBmJ9VdVs2_J_Ka2tvP&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54933",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/6oBG2JSC#lWKtkuT4LvvYnAlIqGMhvCNCVcYOYnJSoLAGW4yBMSg",
+            "default": false,
+            "post": "54933",
+            "nume": "3"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/bxAWTDQY#RPH1aIAcEMmLKlaZUwXFTLZnnEqq8tgx6QDfHG4saF4",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwDHeogg-GmdRlkjuyWPOJu_K4JuWtNFJLTbzz5_ZWyxRCuzzuegcsdIHtmiPMARjxkJp-gilej4keWKqx9eFgLYAw7xG1d34WImbpyo1UtSiaz8XZk9pBmJ9VdVs2_J_Ka2tvP&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54738",
-        "nume": "4"
+        "post": "54933",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/6oBG2JSC#lWKtkuT4LvvYnAlIqGMhvCNCVcYOYnJSoLAGW4yBMSg",
+        "default": false,
+        "post": "54933",
+        "nume": "3"
       }
     ],
     "id": 18,
