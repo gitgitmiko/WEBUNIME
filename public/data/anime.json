@@ -2730,8 +2730,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Yowaki-M2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "3 eps",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [],
     "sinopsis": "Anime Yowaki Max.",
     "related": [],
@@ -2858,25 +2858,35 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Yowaki Max Episode 4",
+        "slug": "yowaki-max-episode-4",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-4/",
+        "date": "",
+        "released_at": "2026-10-25T17:00:43.337Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/jlo2WBYQ#pgsG8n7aYPksGWkHBgWAMUVCR9qOWXFLgNTQSiSp-eU",
+            "default": true,
+            "post": "54944",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/ShZBiCpJ#GvArcHuGu7KBzJyfk0y6SvPVU4C9ZDItg4DJA0BfF5o",
-        "default": true,
-        "post": "54753",
-        "nume": "3"
-      },
-      {
-        "no": 2,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/34gBgKiS#LYzM6PbrpjjAp5ocDVywI-UmtbG8Ji25hHtB8c1maxw",
-        "default": false,
-        "post": "54753",
+        "url": "https://mega.nz/embed/jlo2WBYQ#pgsG8n7aYPksGWkHBgWAMUVCR9qOWXFLgNTQSiSp-eU",
+        "default": true,
+        "post": "54944",
         "nume": "4"
       }
     ],
@@ -3368,8 +3378,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-2.jpg",
     "rating": "6.5",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Adventure",
       "Fantasy",
@@ -3563,6 +3573,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwsFLrmcea_Z1QQgXuHJREG4-nuhgRWs8VL8csokOeO70Fw7eQEYxtNHAINalMUVgXgvJwBaFl-i1Houng1JTbKMmSvi87LyVcemfwkDfJGIPWDXhjKPu-tve2YLBtTbs6F43w",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Kanata kara Episode 4",
+        "slug": "kanata-kara-episode-4",
+        "source": "https://anoboy.quest/2026/10/kanata-kara-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzZd5CICsECz-vRlJkpbrQkWfSQJ1rixgh-83eNce_JoBEzUISoJb_54JyqOyMsje1W9M0SF2PyR3Jgohf5gZ0V4_1NVpMPpxqsiF8a5kLmBiWVpL17vdJi5V3EKlHsnR1m4QM",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwF4NMFU8YYUxHRkstgrK_uTaOeRqFccn5OQOnB17uOZHc-VoX8ebOY9iCS340rCi5bPUiAAUnUu1svOVz2OKcj464nV96TZHmjl4uhnkYb5El_cdPn3-QM-v9uP1cxjwWdh2Le",
             "default": false,
             "source": "anoboy"
           }
@@ -4601,7 +4636,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Action",
@@ -10056,8 +10091,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/159859.jpg",
     "rating": "7.1",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Adventure",
       "Fantasy"
@@ -10249,44 +10284,36 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Tensei Kizoku Kantei Skill de Nariagaru Season 3 Episode 5",
+        "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-5",
+        "source": "https://v2.samehadaku.how/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-5/",
+        "date": "",
+        "released_at": "2026-10-25T17:00:41.945Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/5YxlSSTT#OPQ-Ajho91JmrpaCBhybzd_zQSuEyd-0KAVs-vbu2jM",
+            "default": true,
+            "post": "54948",
+            "nume": "1"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzFfK8maZ3or75zSKrY5hzdG3PY2BErNAhia2PiFjvquKVvNJxKDXWKbJ7s7a0CB5bmysVqSuOBTuXyx2OBAFB4W1_81_aW3kGvrg6ZR1Y5s_WrRvnKUKLY1bm5vHa9qZhnhsg",
-        "default": true,
-        "post": "54577",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/TlhVmTjC#i-gBMZTrT_i_YU6FW9olZLzAAJfNVkOad6N4TgfV4x8",
-        "default": false,
-        "post": "54577",
-        "nume": "2"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/P5hWgKrS#pKjGFJDhGi1OwE19MNI7VHXXHc6IRd3IgK_RohoNYkA",
-        "default": false,
-        "post": "54577",
-        "nume": "3"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/Lx4TACrK#QpqhEJZYzeWPARikRRsgIvSHfWBk8VRHCGb_jk11mps",
-        "default": false,
-        "post": "54577",
-        "nume": "4"
+        "url": "https://mega.nz/embed/5YxlSSTT#OPQ-Ajho91JmrpaCBhybzd_zQSuEyd-0KAVs-vbu2jM",
+        "default": true,
+        "post": "54948",
+        "nume": "1"
       }
     ],
     "id": 58,
