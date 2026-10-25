@@ -147214,8 +147214,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "151 eps · S.7",
-    "episodes_count": 151,
+    "durasi": "152 eps · S.7",
+    "episodes_count": 152,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -151917,6 +151917,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 7,
+        "episode": 14,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 14 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-14-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-14-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/q8iENKeEolvZVBmIKgP9Tw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gkOLY6uCuolN43oNT5mLCA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/3MTCfPDsEZxp0JDAxdFvrg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -151924,21 +151954,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BIzE_qefjPTEcauOoZoBEg",
+        "url": "https://videonode.de/iframe3/p2p/q8iENKeEolvZVBmIKgP9Tw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/HhaExs4dtp_-ctXUxrF1ww",
+        "url": "https://videonode.de/iframe3/cast/gkOLY6uCuolN43oNT5mLCA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/PX31l8pWcv1EhQ1gAs6mOA",
+        "url": "https://videonode.de/iframe3/hydrax/3MTCfPDsEZxp0JDAxdFvrg",
         "default": false
       }
     ],
