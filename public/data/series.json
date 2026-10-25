@@ -1,6 +1,136 @@
 [
   {
     "type": "series",
+    "nama": "Revival",
+    "judul": "Revival (2025)",
+    "tahun": "2025",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/07/film-revival-2025-lk21-d21.jpg",
+    "rating": "6.9",
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Crime",
+      "Thriller"
+    ],
+    "sinopsis": "Suatu hari yang ajaib di pedesaan Wisconsin, orang-orang yang telah meninggal bangkit dari kubur mereka, namun muncul dan bertindak tidak berubah. Dan sekarang terserah pada petugas dan ibu tunggal Dana Cypress untuk memecahkan kasus pembunuhan di mana semua orang, hidup atau mati, menjadi tersangka.\n\nSutradara: Aaron B. Koontz\n\nBintang Film: David James Elliott, Melanie Scrofano, Romy Weltman\n\nNegara: United States\n\nVotes: 2.698",
+    "slug": "revival-2025",
+    "source": "https://tv9.nontondrama.my/revival-2025",
+    "list_source": "https://tv12.lk21official.cc/revival-2025",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Revival - Season 1 Episode 1 (2025)",
+        "slug": "revival-season-1-episode-1-2025",
+        "source": "https://tv9.nontondrama.my/revival-season-1-episode-1-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/952JKrHCbahxg901ewyy4w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/KP0yP-rXSLAzuuLLnY3FJw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/89SRMunUbrbmXZgVmYr_1g",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/Apu_bwnGOHNgh9fKzm-_PA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Revival - Season 1 Episode 2 (2025)",
+        "slug": "revival-season-1-episode-2-2025",
+        "source": "https://tv9.nontondrama.my/revival-season-1-episode-2-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/q8DwfIKkUczLEE7iQHqY9g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QGb8sVufnK5QAZQorP5U1Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/oUrD_XKk2Bt-JuzjZOxC9A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Revival - Season 1 Episode 3 (2025)",
+        "slug": "revival-season-1-episode-3-2025",
+        "source": "https://tv9.nontondrama.my/revival-season-1-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1Q5o0P2g_JzKMQhJcZI2Kw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/CQfDAgZRsotrzIWNF6PKEg",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/1Q5o0P2g_JzKMQhJcZI2Kw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/CQfDAgZRsotrzIWNF6PKEg",
+        "default": false
+      }
+    ],
+    "id": 636,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Red Alert",
     "judul": "Red Alert (2025)",
     "tahun": "2025",
@@ -127044,8 +127174,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-boston-blue-2025-lk21.jpg",
     "rating": "6.6",
-    "durasi": "22 eps · S.2",
-    "episodes_count": 22,
+    "durasi": "23 eps · S.2",
+    "episodes_count": 23,
     "seasons_count": 2,
     "genre": [
       "Crime",
@@ -127848,6 +127978,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 3,
+        "title": "Boston Blue - Season 2 Episode 3 (2025)",
+        "slug": "boston-blue-season-2-episode-3-2025",
+        "source": "https://tv9.nontondrama.my/boston-blue-season-2-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/b6pbzDnSD_a0dDpgB6JQbw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/g8oZwyUnxvnL2j1NgNgIow",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Eygy5-OJbf6W81dT1WXVxQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -127855,21 +128015,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BRvi6WD5HxzydeYq_DNYqg",
+        "url": "https://videonode.de/iframe3/p2p/b6pbzDnSD_a0dDpgB6JQbw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/qLQxa0Yj-OZHLfRI3YzFSQ",
+        "url": "https://videonode.de/iframe3/cast/g8oZwyUnxvnL2j1NgNgIow",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/YfWhEjJHHllaRS4HhBEnEQ",
+        "url": "https://videonode.de/iframe3/hydrax/Eygy5-OJbf6W81dT1WXVxQ",
         "default": false
       }
     ],
