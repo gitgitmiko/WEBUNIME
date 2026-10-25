@@ -1,6 +1,83 @@
 [
   {
     "type": "series",
+    "nama": "Red Alert",
+    "judul": "Red Alert (2025)",
+    "tahun": "2025",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-red-alert-2025-lk21.jpg",
+    "rating": "6.9",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "History",
+      "War"
+    ],
+    "sinopsis": "Red Alert - Dari penyergapan di sebuah festival musik terbuka hingga perlawanan terakhir sebuah keluarga di dalam rumah mereka sendiri, orang-orang biasa harus menghadapi situasi hidup-mati yang mencekam ketika invasi teroris mengubah wilayah selatan Israel menjadi zona perang nyata. Berdasarkan peristiwa 7 Oktober 2023.\nAwards: 0 wins & 2 nominations\n\nBintang Film: Hisham Suliman, Chen Amsalem Zaguri, Israel Atias, Sarit Vino-Elad, Rotem Abuhab\n\nNegara: Israel, United States\n\nVotes: 3.900",
+    "slug": "red-alert-2025",
+    "source": "https://tv9.nontondrama.my/red-alert-2025",
+    "list_source": "https://tv12.lk21official.cc/red-alert-2025",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Red Alert - Season 1 Episode 1 (2025)",
+        "slug": "red-alert-season-1-episode-1-2025",
+        "source": "https://tv9.nontondrama.my/red-alert-season-1-episode-1-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6rpRf4QnJto-WFncLtdD9Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/pTiT2DRm_-uUAW1E_A83XA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/L_6PPwGlQflcdxwHFQFVhA",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/6rpRf4QnJto-WFncLtdD9Q",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/pTiT2DRm_-uUAW1E_A83XA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/L_6PPwGlQflcdxwHFQFVhA",
+        "default": false
+      }
+    ],
+    "id": 635,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Oh! My Guard",
     "judul": "Oh! My Guard (2026)",
     "tahun": "2026",
@@ -32573,8 +32650,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-overseas-security-guard-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "14 eps · S.1",
+    "episodes_count": 14,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -32974,6 +33051,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "Overseas Security Guard - Season 1 Episode 14 (2026)",
+        "slug": "overseas-security-guard-season-1-episode-14-2026",
+        "source": "https://tv9.nontondrama.my/overseas-security-guard-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/qsVe2sT-pVsgK7QYiM7R9A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/k3YGZjjx__fkdCY35Kr9jQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/kTAjI0wfvre_huqv8uldOA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -32981,21 +33088,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/GU6FD25W8SZ9z15rBc44_g",
+        "url": "https://videonode.de/iframe3/p2p/qsVe2sT-pVsgK7QYiM7R9A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/fTySaqKnjolp9IkdX89VHw",
+        "url": "https://videonode.de/iframe3/cast/k3YGZjjx__fkdCY35Kr9jQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/_rojMNqB0oIKHemgQC2Mfw",
+        "url": "https://videonode.de/iframe3/hydrax/kTAjI0wfvre_huqv8uldOA",
         "default": false
       }
     ],
@@ -33008,8 +33115,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-my-loong-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "10 eps · S.1",
-    "episodes_count": 10,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -33318,6 +33425,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "My Loong - Season 1 Episode 11 (2026)",
+        "slug": "my-loong-season-1-episode-11-2026",
+        "source": "https://tv9.nontondrama.my/my-loong-season-1-episode-11-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6LjQSit56UZ-rQqJwjwJGA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/prec-eIP4rRpkh8chTCccg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Kp6RzJ8u9TU-qu4K5ffmeA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "My Loong - Season 1 Episode 12 (2026)",
+        "slug": "my-loong-season-1-episode-12-2026",
+        "source": "https://tv9.nontondrama.my/my-loong-season-1-episode-12-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nMeKSFYyRMtWgcXhx5iLrQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ZFaMsFjCH03j2ZzIBCh0PA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/iCA56HF8NyznCjMrbKjx7w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -33325,21 +33492,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/2gEcsKZ_gvMxC0fh-sOv7Q",
+        "url": "https://videonode.de/iframe3/p2p/nMeKSFYyRMtWgcXhx5iLrQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/fBOWt6fthA0okttUcyLUXA",
+        "url": "https://videonode.de/iframe3/cast/ZFaMsFjCH03j2ZzIBCh0PA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/MrZ7pbRLPsCzCwzW4bxrWg",
+        "url": "https://videonode.de/iframe3/hydrax/iCA56HF8NyznCjMrbKjx7w",
         "default": false
       }
     ],
@@ -49765,8 +49932,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-dear-song-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "14 eps · S.1",
-    "episodes_count": 14,
+    "durasi": "15 eps · S.1",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -50195,6 +50362,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "Dear Song - Season 1 Episode 15 (2026)",
+        "slug": "dear-song-season-1-episode-15-2026",
+        "source": "https://tv9.nontondrama.my/dear-song-season-1-episode-15-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zoT7VX9FyhB6RRxGaEuCMw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/aOwaxJQKeDJDxRvFDxdRQw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MOvjQn7FelzE97Dh2aAcAw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -50202,21 +50399,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/TEe3gmSNKb_LjYM72E9ouQ",
+        "url": "https://videonode.de/iframe3/p2p/zoT7VX9FyhB6RRxGaEuCMw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/ykYabfXgEunkfLPXU1uq_A",
+        "url": "https://videonode.de/iframe3/cast/aOwaxJQKeDJDxRvFDxdRQw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/svMfelWeGNWM42xnIhSm1w",
+        "url": "https://videonode.de/iframe3/hydrax/MOvjQn7FelzE97Dh2aAcAw",
         "default": false
       }
     ],
@@ -146628,8 +146825,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "140 eps · S.7",
-    "episodes_count": 140,
+    "durasi": "141 eps · S.7",
+    "episodes_count": 141,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -151001,6 +151198,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 7,
+        "episode": 3,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 3 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-3-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-3-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/pE-4iV_uKQAAPjxOinGo-g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/4nZf3nLAuNAs_sCWY1hozQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Q9gVHph7flnS8mZhWTUYLg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -151008,21 +151235,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/9ozeAXqgvmjeG-vS4VZ2yA",
+        "url": "https://videonode.de/iframe3/p2p/pE-4iV_uKQAAPjxOinGo-g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/BZ5gn8NtKi_GLIspnQfdCQ",
+        "url": "https://videonode.de/iframe3/cast/4nZf3nLAuNAs_sCWY1hozQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/XXqaFwjnerf0i2K0X4IrXA",
+        "url": "https://videonode.de/iframe3/hydrax/Q9gVHph7flnS8mZhWTUYLg",
         "default": false
       }
     ],
