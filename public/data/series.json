@@ -40463,8 +40463,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-rainmaker-2025-lk21.jpg",
     "rating": "7.1",
-    "durasi": "10 eps · S.1",
-    "episodes_count": 10,
+    "durasi": "11 eps · S.2",
+    "episodes_count": 11,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -40775,6 +40775,29 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 1,
+        "title": "The Rainmaker - Season 2 Episode 1 (2025)",
+        "slug": "rainmaker-season-2-episode-1-2025",
+        "source": "https://tv9.nontondrama.my/rainmaker-season-2-episode-1-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/JXtysBaEIkJFh3HhUQydOQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/VSl_X4ATuxHy7XwhJS-JRg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -40782,21 +40805,14 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/fQCv7ZqIT1585lNSDtzREA",
+        "url": "https://videonode.de/iframe3/p2p/JXtysBaEIkJFh3HhUQydOQ",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/bP08W9KAfroxljq7-sOwSg",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/cZllHgXehGPYwFSFFLhuqw",
+        "url": "https://videonode.de/iframe3/hydrax/VSl_X4ATuxHy7XwhJS-JRg",
         "default": false
       }
     ],
@@ -147728,8 +147744,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "159 eps · S.7",
-    "episodes_count": 159,
+    "durasi": "160 eps · S.7",
+    "episodes_count": 160,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -152650,6 +152666,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 7,
+        "episode": 22,
+        "title": "CSI: Crime Scene Investigation - Season 7 Episode 22 (2000)",
+        "slug": "csi-crime-scene-investigation-season-7-episode-22-2000",
+        "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-season-7-episode-22-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xt0ECM_nG-DBxatZaYOfQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7kDKDncunCKt9SD-GQqRBQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/fBCz7DrwjdQtnZloXOBHmg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -152657,21 +152703,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/PQKAbAY821Vbr7god9Hd6Q",
+        "url": "https://videonode.de/iframe3/p2p/xt0ECM_nG-DBxatZaYOfQw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/dyUrC9T-MDk3abrjVq8yjA",
+        "url": "https://videonode.de/iframe3/cast/7kDKDncunCKt9SD-GQqRBQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/yWYvm186XmpLIwnWXq00Ow",
+        "url": "https://videonode.de/iframe3/hydrax/fBCz7DrwjdQtnZloXOBHmg",
         "default": false
       }
     ],
