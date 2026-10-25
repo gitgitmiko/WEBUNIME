@@ -1,5 +1,20 @@
 [
   {
+    "anime_slug": "kanata-kara",
+    "nama": "Kanata kara",
+    "judul": "Kanata kara",
+    "episode": 4,
+    "episode_slug": "kanata-kara-episode-4",
+    "episode_source": "https://v2.samehadaku.how/kanata-kara-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-4-300x167.jpg",
+    "source": "https://v2.samehadaku.how/anime/kanata-kara/",
+    "released_on": "",
+    "released_at": "2026-10-25T19:30:42.105Z",
+    "feed_rank": 0,
+    "is_new": true,
+    "id": 1
+  },
+  {
     "anime_slug": "dragon-ball-super-beerus",
     "nama": "Dragon Ball Super: Beerus",
     "judul": "Dragon Ball Super: Beerus",
@@ -10,9 +25,9 @@
     "source": "https://v2.samehadaku.how/anime/dragon-ball-super-beerus/",
     "released_on": "",
     "released_at": "2026-10-25T18:30:40.197Z",
-    "feed_rank": 0,
+    "feed_rank": 1,
     "is_new": true,
-    "id": 1
+    "id": 2
   },
   {
     "anime_slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3",
@@ -23,21 +38,6 @@
     "episode_source": "https://v2.samehadaku.how/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-5/",
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-23-300x170.jpg",
     "source": "https://v2.samehadaku.how/anime/tensei-kizoku-kantei-skill-de-nariagaru-season-3/",
-    "released_on": "",
-    "released_at": "2026-10-25T17:00:45.339Z",
-    "feed_rank": 1,
-    "is_new": true,
-    "id": 2
-  },
-  {
-    "anime_slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku",
-    "nama": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
-    "judul": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
-    "episode": 3,
-    "episode_slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku-episode-3",
-    "episode_source": "https://v2.samehadaku.how/shinja-zero-no-megami-sama-to-hajimeru-episode-3/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shinja-Zero-no-Megami-sama-to-Hajimeru-Isekai-Kouryaku-Episode-3-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku/",
     "released_on": "",
     "released_at": "2026-10-25T17:00:45.339Z",
     "feed_rank": 2,
@@ -60,14 +60,14 @@
     "id": 4
   },
   {
-    "anime_slug": "yowaki-max",
-    "nama": "Yowaki Max",
-    "judul": "Yowaki Max",
-    "episode": 4,
-    "episode_slug": "yowaki-max-episode-4",
-    "episode_source": "https://v2.samehadaku.how/yowaki-max-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-8-3-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/yowaki-max/",
+    "anime_slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku",
+    "nama": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
+    "judul": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku",
+    "episode": 3,
+    "episode_slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku-episode-3",
+    "episode_source": "https://v2.samehadaku.how/shinja-zero-no-megami-sama-to-hajimeru-episode-3/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shinja-Zero-no-Megami-sama-to-Hajimeru-Isekai-Kouryaku-Episode-3-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku/",
     "released_on": "",
     "released_at": "2026-10-25T17:00:45.339Z",
     "feed_rank": 3,
@@ -105,16 +105,16 @@
     "id": 7
   },
   {
-    "anime_slug": "tank-chair",
-    "nama": "Tank Chair",
-    "judul": "Tank Chair",
+    "anime_slug": "yowaki-max",
+    "nama": "Yowaki Max",
+    "judul": "Yowaki Max",
     "episode": 4,
-    "episode_slug": "tank-chair-episode-4",
-    "episode_source": "https://v2.samehadaku.how/tank-chair-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-22-300x170.jpg",
-    "source": "https://v2.samehadaku.how/anime/tank-chair/",
+    "episode_slug": "yowaki-max-episode-4",
+    "episode_source": "https://v2.samehadaku.how/yowaki-max-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-8-3-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/yowaki-max/",
     "released_on": "",
-    "released_at": "2026-10-25T16:30:41.102Z",
+    "released_at": "2026-10-25T17:00:45.339Z",
     "feed_rank": 4,
     "is_new": true,
     "id": 8
@@ -150,16 +150,16 @@
     "id": 10
   },
   {
-    "anime_slug": "overgeared",
-    "nama": "Overgeared",
-    "judul": "Overgeared",
-    "episode": 5,
-    "episode_slug": "overgeared-episode-5",
-    "episode_source": "https://v2.samehadaku.how/overgeared-episode-5/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-6-3-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/overgeared/",
+    "anime_slug": "tank-chair",
+    "nama": "Tank Chair",
+    "judul": "Tank Chair",
+    "episode": 4,
+    "episode_slug": "tank-chair-episode-4",
+    "episode_source": "https://v2.samehadaku.how/tank-chair-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-22-300x170.jpg",
+    "source": "https://v2.samehadaku.how/anime/tank-chair/",
     "released_on": "",
-    "released_at": "2026-10-25T16:00:44.031Z",
+    "released_at": "2026-10-25T16:30:41.102Z",
     "feed_rank": 5,
     "is_new": true,
     "id": 11
@@ -210,16 +210,16 @@
     "id": 14
   },
   {
-    "anime_slug": "diamond-no-ace-act-ii-season-2-cour-2",
-    "nama": "Diamond no Ace Act II Season 2 Cour 2",
-    "judul": "Diamond no Ace Act II Season 2 Cour 2",
-    "episode": 3,
-    "episode_slug": "diamond-no-ace-act-ii-season-2-cour-2-episode-3",
-    "episode_source": "https://v2.samehadaku.how/diamond-no-ace-act-ii-season-2-cour-2-episode-3/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-4-4-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/diamond-no-ace-act-ii-season-2-cour-2/",
+    "anime_slug": "overgeared",
+    "nama": "Overgeared",
+    "judul": "Overgeared",
+    "episode": 5,
+    "episode_slug": "overgeared-episode-5",
+    "episode_source": "https://v2.samehadaku.how/overgeared-episode-5/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-6-3-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/overgeared/",
     "released_on": "",
-    "released_at": "2026-10-25T12:30:39.960Z",
+    "released_at": "2026-10-25T16:00:44.031Z",
     "feed_rank": 6,
     "is_new": true,
     "id": 15
@@ -255,16 +255,16 @@
     "id": 17
   },
   {
-    "anime_slug": "mission-yozakura-family-season-2-part-2",
-    "nama": "Mission: Yozakura Family Season 2 Part 2",
-    "judul": "Mission: Yozakura Family Season 2 Part 2",
+    "anime_slug": "diamond-no-ace-act-ii-season-2-cour-2",
+    "nama": "Diamond no Ace Act II Season 2 Cour 2",
+    "judul": "Diamond no Ace Act II Season 2 Cour 2",
     "episode": 3,
-    "episode_slug": "mission-yozakura-family-season-2-part-2-episode-3",
-    "episode_source": "https://v2.samehadaku.how/mission-yozakura-family-season-2-part-2-episode-3/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Mission-Yozakura-Family-Season-2-Part-2-Episode-3-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/mission-yozakura-family-season-2-part-2/",
+    "episode_slug": "diamond-no-ace-act-ii-season-2-cour-2-episode-3",
+    "episode_source": "https://v2.samehadaku.how/diamond-no-ace-act-ii-season-2-cour-2-episode-3/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-4-4-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/diamond-no-ace-act-ii-season-2-cour-2/",
     "released_on": "",
-    "released_at": "2026-10-25T11:00:42.809Z",
+    "released_at": "2026-10-25T12:30:39.960Z",
     "feed_rank": 7,
     "is_new": true,
     "id": 18
@@ -285,16 +285,16 @@
     "id": 19
   },
   {
-    "anime_slug": "ao-ashi-s2",
-    "nama": "Ao Ashi S2",
-    "judul": "Ao Ashi S2",
-    "episode": 4,
-    "episode_slug": "ao-ashi-s2-episode-4",
-    "episode_source": "https://v2.samehadaku.how/ao-ashi-s2-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-2-5-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/ao-ashi-s2/",
+    "anime_slug": "mission-yozakura-family-season-2-part-2",
+    "nama": "Mission: Yozakura Family Season 2 Part 2",
+    "judul": "Mission: Yozakura Family Season 2 Part 2",
+    "episode": 3,
+    "episode_slug": "mission-yozakura-family-season-2-part-2-episode-3",
+    "episode_source": "https://v2.samehadaku.how/mission-yozakura-family-season-2-part-2-episode-3/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Mission-Yozakura-Family-Season-2-Part-2-Episode-3-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/mission-yozakura-family-season-2-part-2/",
     "released_on": "",
-    "released_at": "2026-10-25T10:30:40.482Z",
+    "released_at": "2026-10-25T11:00:42.809Z",
     "feed_rank": 8,
     "is_new": true,
     "id": 20
@@ -315,16 +315,16 @@
     "id": 21
   },
   {
-    "anime_slug": "ao-no-hako-season-2",
-    "nama": "Ao no Hako Season 2",
-    "judul": "Ao no Hako Season 2",
+    "anime_slug": "ao-ashi-s2",
+    "nama": "Ao Ashi S2",
+    "judul": "Ao Ashi S2",
     "episode": 4,
-    "episode_slug": "ao-no-hako-season-2-episode-4",
-    "episode_source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-4-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/ao-no-hako-season-2/",
+    "episode_slug": "ao-ashi-s2-episode-4",
+    "episode_source": "https://v2.samehadaku.how/ao-ashi-s2-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-2-5-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/ao-ashi-s2/",
     "released_on": "",
-    "released_at": "2026-10-25T10:00:41.097Z",
+    "released_at": "2026-10-25T10:30:40.482Z",
     "feed_rank": 9,
     "is_new": true,
     "id": 22
@@ -345,16 +345,16 @@
     "id": 23
   },
   {
-    "anime_slug": "kashita-maryoku",
-    "nama": "Kashita Maryoku",
-    "judul": "Kashita Maryoku",
+    "anime_slug": "ao-no-hako-season-2",
+    "nama": "Ao no Hako Season 2",
+    "judul": "Ao no Hako Season 2",
     "episode": 4,
-    "episode_slug": "kashita-maryoku-episode-4",
-    "episode_source": "https://v2.samehadaku.how/kashita-maryoku-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-Maryoku-wa-Revo-Barai-de-Kyousei-Choushuu-Episode-4-300x163.jpg",
-    "source": "https://v2.samehadaku.how/anime/kashita-maryoku/",
+    "episode_slug": "ao-no-hako-season-2-episode-4",
+    "episode_source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-4-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/ao-no-hako-season-2/",
     "released_on": "",
-    "released_at": "2026-10-24T19:30:48.729Z",
+    "released_at": "2026-10-25T10:00:41.097Z",
     "feed_rank": 10,
     "is_new": true,
     "id": 24
@@ -375,16 +375,16 @@
     "id": 25
   },
   {
-    "anime_slug": "magical%e2%98%85explorer",
-    "nama": "Magical★Explorer",
-    "judul": "Magical★Explorer",
-    "episode": 5,
-    "episode_slug": "magical%e2%98%85explorer-episode-5",
-    "episode_source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-5/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-21-300x170.jpg",
-    "source": "https://v2.samehadaku.how/anime/magical%e2%98%85explorer/",
+    "anime_slug": "kashita-maryoku",
+    "nama": "Kashita Maryoku",
+    "judul": "Kashita Maryoku",
+    "episode": 4,
+    "episode_slug": "kashita-maryoku-episode-4",
+    "episode_source": "https://v2.samehadaku.how/kashita-maryoku-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-Maryoku-wa-Revo-Barai-de-Kyousei-Choushuu-Episode-4-300x163.jpg",
+    "source": "https://v2.samehadaku.how/anime/kashita-maryoku/",
     "released_on": "",
-    "released_at": "2026-10-24T19:00:41.482Z",
+    "released_at": "2026-10-24T19:30:48.729Z",
     "feed_rank": 11,
     "is_new": true,
     "id": 26
@@ -420,16 +420,16 @@
     "id": 28
   },
   {
-    "anime_slug": "zombie-sagashitemasu",
-    "nama": "#Zombie Sagashitemasu",
-    "judul": "#Zombie Sagashitemasu",
-    "episode": 4,
-    "episode_slug": "zombie-sagashitemasu-episode-4",
-    "episode_source": "https://v2.samehadaku.how/zombie-sagashitemasu-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Zombie-Sagashitemasu-Episode-4-300x169.jpg",
-    "source": "https://v2.samehadaku.how/anime/zombie-sagashitemasu/",
+    "anime_slug": "magical%e2%98%85explorer",
+    "nama": "Magical★Explorer",
+    "judul": "Magical★Explorer",
+    "episode": 5,
+    "episode_slug": "magical%e2%98%85explorer-episode-5",
+    "episode_source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-5/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-21-300x170.jpg",
+    "source": "https://v2.samehadaku.how/anime/magical%e2%98%85explorer/",
     "released_on": "",
-    "released_at": "2026-10-24T17:30:39.713Z",
+    "released_at": "2026-10-24T19:00:41.482Z",
     "feed_rank": 12,
     "is_new": true,
     "id": 29
@@ -465,6 +465,21 @@
     "id": 31
   },
   {
+    "anime_slug": "zombie-sagashitemasu",
+    "nama": "#Zombie Sagashitemasu",
+    "judul": "#Zombie Sagashitemasu",
+    "episode": 4,
+    "episode_slug": "zombie-sagashitemasu-episode-4",
+    "episode_source": "https://v2.samehadaku.how/zombie-sagashitemasu-episode-4/",
+    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Zombie-Sagashitemasu-Episode-4-300x169.jpg",
+    "source": "https://v2.samehadaku.how/anime/zombie-sagashitemasu/",
+    "released_on": "",
+    "released_at": "2026-10-24T17:30:39.713Z",
+    "feed_rank": 13,
+    "is_new": true,
+    "id": 32
+  },
+  {
     "anime_slug": "black-clover-season-2",
     "nama": "Black Clover Season 2",
     "judul": "Black Clover Season 2",
@@ -477,7 +492,7 @@
     "released_at": "2026-10-24T16:30:39.332Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 32
+    "id": 33
   },
   {
     "anime_slug": "yasei-no-last-boss-ga-arawareta-s2",
@@ -492,7 +507,7 @@
     "released_at": "2026-10-24T16:00:42.233Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 33
+    "id": 34
   },
   {
     "anime_slug": "shuiro-no-kamen",
@@ -507,7 +522,7 @@
     "released_at": "2026-10-24T11:00:40.539Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 34
+    "id": 35
   },
   {
     "anime_slug": "tokyo-revengers-s4",
@@ -522,7 +537,7 @@
     "released_at": "2026-10-23T18:31:04.797Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 35
+    "id": 36
   },
   {
     "anime_slug": "tougen-anki-nikko-kegon-no-taki-hen",
@@ -537,7 +552,7 @@
     "released_at": "2026-10-23T18:01:41.682Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 36
+    "id": 37
   },
   {
     "anime_slug": "hotaru-no-yomeiri",
@@ -552,7 +567,7 @@
     "released_at": "2026-10-23T17:30:45.950Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 37
+    "id": 38
   },
   {
     "anime_slug": "kusuriya-no-hitorigoto-season-3",
@@ -567,7 +582,7 @@
     "released_at": "2026-10-23T17:08:15.843Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 38
+    "id": 39
   },
   {
     "anime_slug": "hyouken-no-majutsushi-ga-sekai-wo-suberu-s2",
@@ -582,7 +597,7 @@
     "released_at": "2026-10-22T19:30:42.500Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 39
+    "id": 40
   },
   {
     "anime_slug": "tsuihou-sareta-tensei-juukishi-wa-game",
@@ -597,7 +612,7 @@
     "released_at": "2026-10-22T18:30:52.275Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 40
+    "id": 41
   },
   {
     "anime_slug": "honzuki-no-gekokujou-season-4",
@@ -612,7 +627,7 @@
     "released_at": "2026-09-26T19:39:54.944Z",
     "feed_rank": 13,
     "is_new": true,
-    "id": 41
+    "id": 42
   },
   {
     "anime_slug": "fx-senshi-kurumi-chan",
@@ -627,7 +642,7 @@
     "released_at": "2026-10-22T14:00:51.753Z",
     "feed_rank": 14,
     "is_new": true,
-    "id": 42
+    "id": 43
   },
   {
     "anime_slug": "nige-jouzu-no-wakagimi-s2",
@@ -642,7 +657,7 @@
     "released_at": "2026-09-25T20:24:33.681Z",
     "feed_rank": 14,
     "is_new": true,
-    "id": 43
+    "id": 44
   },
   {
     "anime_slug": "kikansha-no-mahou-wa-tokubetsu-desu-season-2",
@@ -657,7 +672,7 @@
     "released_at": "2026-10-21T19:00:45.580Z",
     "feed_rank": 15,
     "is_new": true,
-    "id": 44
+    "id": 45
   },
   {
     "anime_slug": "hell-mode-yarikomizuki-no-gamer-season-2",
@@ -672,10 +687,10 @@
     "released_at": "2026-09-25T20:24:33.681Z",
     "feed_rank": 15,
     "is_new": true,
-    "id": 45
+    "id": 46
   },
   {
-    "id": 46,
+    "id": 47,
     "anime_slug": "otome-game-sekai-wa-mob-seasaon-2",
     "nama": "Otome Game Sekai wa Mob Seasaon 2",
     "judul": "Otome Game Sekai wa Mob Seasaon 2",
@@ -701,7 +716,7 @@
     "released_at": "2026-10-21T18:00:39.920Z",
     "feed_rank": 16,
     "is_new": true,
-    "id": 47
+    "id": 48
   },
   {
     "anime_slug": "tensei-shitara-slime-datta-ken-season-4",
@@ -716,7 +731,7 @@
     "released_at": "2026-09-25T20:24:33.681Z",
     "feed_rank": 16,
     "is_new": true,
-    "id": 48
+    "id": 49
   },
   {
     "anime_slug": "tensei-shitara-ken-deshita-s2",
@@ -731,7 +746,7 @@
     "released_at": "2026-10-21T17:30:54.511Z",
     "feed_rank": 17,
     "is_new": true,
-    "id": 49
+    "id": 50
   },
   {
     "anime_slug": "tsuihou-sareta-tensei-juukishi-wa-game",
@@ -746,7 +761,7 @@
     "released_at": "2026-09-24T20:25:21.890Z",
     "feed_rank": 17,
     "is_new": true,
-    "id": 50
+    "id": 51
   },
   {
     "anime_slug": "tantei-wa-mou-shindeiru-s2",
@@ -761,7 +776,7 @@
     "released_at": "2026-10-21T17:00:54.488Z",
     "feed_rank": 18,
     "is_new": true,
-    "id": 51
+    "id": 52
   },
   {
     "anime_slug": "mebius-dust",
@@ -776,7 +791,7 @@
     "released_at": "2026-09-24T20:25:21.890Z",
     "feed_rank": 18,
     "is_new": true,
-    "id": 52
+    "id": 53
   },
   {
     "anime_slug": "sasaki-to-pii-chan-season-2",
@@ -791,7 +806,7 @@
     "released_at": "2026-10-21T17:00:54.488Z",
     "feed_rank": 19,
     "is_new": true,
-    "id": 53
+    "id": 54
   },
   {
     "anime_slug": "otome-game-sekai-wa-mob-season-2",
@@ -806,7 +821,7 @@
     "released_at": "2026-09-23T20:07:12.386Z",
     "feed_rank": 19,
     "is_new": true,
-    "id": 54
+    "id": 55
   },
   {
     "anime_slug": "sekai-saikyou-no-majo",
@@ -821,7 +836,7 @@
     "released_at": "2026-10-21T17:00:54.488Z",
     "feed_rank": 20,
     "is_new": true,
-    "id": 55
+    "id": 56
   },
   {
     "anime_slug": "katainaka-no-ossan-kensei-ni-naru-season-2",
@@ -836,7 +851,7 @@
     "released_at": "2026-09-23T20:07:12.386Z",
     "feed_rank": 20,
     "is_new": true,
-    "id": 56
+    "id": 57
   },
   {
     "anime_slug": "chitose-kun-wa-ramune-bin-no-naka-cour-2",
@@ -851,7 +866,7 @@
     "released_at": "2026-10-20T20:30:41.217Z",
     "feed_rank": 21,
     "is_new": true,
-    "id": 57
+    "id": 58
   },
   {
     "anime_slug": "youjo-senki-ii",
@@ -866,7 +881,7 @@
     "released_at": "2026-09-23T20:07:12.386Z",
     "feed_rank": 21,
     "is_new": true,
-    "id": 58
+    "id": 59
   },
   {
     "anime_slug": "sora-wa-akai-kawa-no-hotori",
@@ -881,7 +896,7 @@
     "released_at": "2026-10-20T19:30:40.891Z",
     "feed_rank": 22,
     "is_new": true,
-    "id": 59
+    "id": 60
   },
   {
     "anime_slug": "rezero-kara-hajimeru-isekai-seikatsu-season-4",
@@ -896,7 +911,7 @@
     "released_at": "2026-09-23T20:07:12.386Z",
     "feed_rank": 22,
     "is_new": true,
-    "id": 60
+    "id": 61
   },
   {
     "anime_slug": "tsuihou-sareta-cheat-fuyo-majutsushi",
@@ -911,7 +926,7 @@
     "released_at": "2026-10-20T18:31:43.231Z",
     "feed_rank": 23,
     "is_new": true,
-    "id": 61
+    "id": 62
   },
   {
     "anime_slug": "clevatess-season-2",
@@ -926,7 +941,7 @@
     "released_at": "2026-09-23T20:07:12.386Z",
     "feed_rank": 23,
     "is_new": true,
-    "id": 62
+    "id": 63
   },
   {
     "anime_slug": "kyouran-reijou-nia-liston",
@@ -941,7 +956,7 @@
     "released_at": "2026-10-20T14:30:48.381Z",
     "feed_rank": 24,
     "is_new": true,
-    "id": 63
+    "id": 64
   },
   {
     "anime_slug": "sora-wa-akai-kawa-no-hotori",
@@ -956,7 +971,7 @@
     "released_at": "2026-09-22T20:07:41.782Z",
     "feed_rank": 24,
     "is_new": true,
-    "id": 64
+    "id": 65
   },
   {
     "anime_slug": "bleach-sennen-kessen-hen-kashin-tan-cour-4",
@@ -971,7 +986,7 @@
     "released_at": "2026-10-19T17:00:40.298Z",
     "feed_rank": 25,
     "is_new": true,
-    "id": 65
+    "id": 66
   },
   {
     "anime_slug": "liar-game",
@@ -986,7 +1001,7 @@
     "released_at": "2026-09-21T20:56:25.680Z",
     "feed_rank": 25,
     "is_new": true,
-    "id": 66
+    "id": 67
   },
   {
     "anime_slug": "psyren",
@@ -1001,7 +1016,7 @@
     "released_at": "2026-10-19T16:30:55.486Z",
     "feed_rank": 26,
     "is_new": true,
-    "id": 67
+    "id": 68
   },
   {
     "anime_slug": "grand-blue-season-3",
@@ -1016,7 +1031,7 @@
     "released_at": "2026-09-21T20:56:25.680Z",
     "feed_rank": 26,
     "is_new": true,
-    "id": 68
+    "id": 69
   },
   {
     "anime_slug": "tensei-goblin-dakedo-shitsumon-aru",
@@ -1031,7 +1046,7 @@
     "released_at": "2026-10-19T15:00:45.841Z",
     "feed_rank": 27,
     "is_new": true,
-    "id": 69
+    "id": 70
   },
   {
     "anime_slug": "buchigire-reijou-wa-houfuku",
@@ -1046,7 +1061,7 @@
     "released_at": "2026-09-21T20:56:25.680Z",
     "feed_rank": 27,
     "is_new": true,
-    "id": 70
+    "id": 71
   },
   {
     "anime_slug": "doumo-suki-na-hito-ni-horegusuri-wo-irai-sareta-majo-desu",
@@ -1061,7 +1076,7 @@
     "released_at": "2026-10-19T14:30:47.778Z",
     "feed_rank": 28,
     "is_new": true,
-    "id": 71
+    "id": 72
   },
   {
     "anime_slug": "toumei-na-yoru-ni-kakeru",
@@ -1076,7 +1091,7 @@
     "released_at": "2026-09-21T20:56:25.680Z",
     "feed_rank": 28,
     "is_new": true,
-    "id": 72
+    "id": 73
   },
   {
     "anime_slug": "kanata-kara",
@@ -1091,7 +1106,7 @@
     "released_at": "2026-10-18T20:00:42.488Z",
     "feed_rank": 29,
     "is_new": true,
-    "id": 73
+    "id": 74
   },
   {
     "anime_slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku",
@@ -1106,7 +1121,7 @@
     "released_at": "2026-10-18T18:30:55.297Z",
     "feed_rank": 30,
     "is_new": true,
-    "id": 74
+    "id": 75
   },
   {
     "anime_slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3",
@@ -1121,7 +1136,7 @@
     "released_at": "2026-10-18T18:00:39.035Z",
     "feed_rank": 31,
     "is_new": true,
-    "id": 75
+    "id": 76
   },
   {
     "anime_slug": "tank-chair",
@@ -1136,7 +1151,7 @@
     "released_at": "2026-10-18T17:30:43.682Z",
     "feed_rank": 32,
     "is_new": true,
-    "id": 76
+    "id": 77
   },
   {
     "anime_slug": "dragon-ball-super-beerus",
@@ -1151,7 +1166,7 @@
     "released_at": "2026-10-18T17:30:43.682Z",
     "feed_rank": 33,
     "is_new": true,
-    "id": 77
+    "id": 78
   },
   {
     "anime_slug": "yowaki-max",
@@ -1166,7 +1181,7 @@
     "released_at": "2026-10-18T17:00:40.644Z",
     "feed_rank": 34,
     "is_new": true,
-    "id": 78
+    "id": 79
   },
   {
     "anime_slug": "overgeared",
@@ -1180,21 +1195,6 @@
     "released_on": "",
     "released_at": "2026-10-18T16:30:47.683Z",
     "feed_rank": 35,
-    "is_new": true,
-    "id": 79
-  },
-  {
-    "anime_slug": "magical%e2%98%85explorer",
-    "nama": "Magical★Explorer",
-    "judul": "Magical★Explorer",
-    "episode": 4,
-    "episode_slug": "magical%e2%98%85explorer-episode-4",
-    "episode_source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-4/",
-    "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-13-300x170.jpg",
-    "source": "https://v2.samehadaku.how/anime/magical%e2%98%85explorer/",
-    "released_on": "",
-    "released_at": "2026-10-18T15:00:42.521Z",
-    "feed_rank": 36,
     "is_new": true,
     "id": 80
   }
