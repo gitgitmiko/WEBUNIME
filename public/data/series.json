@@ -2371,8 +2371,8 @@
     "tahun": "2020",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-your-home-my-business-aka-i-will-find-you-better-home-2020-lk21.jpg",
     "rating": "8.1",
-    "durasi": "24 eps · S.1",
-    "episodes_count": 24,
+    "durasi": "25 eps · S.1",
+    "episodes_count": 25,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -3101,6 +3101,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "title": "Your Home Is My Business aka I Will Find You a Better Home - Season 1 Episode 25 (2020)",
+        "slug": "your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-25-2020",
+        "source": "https://tv9.nontondrama.my/your-home-my-business-aka-i-will-find-you-better-home-season-1-episode-25-2020",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/4f33cXUxb_w1j8WwNwU9ew",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gY8Oz8AzFwIdhGU5CrHPcw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9iOIncgpEZ_GZMhmTwm5zg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -3108,21 +3138,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Tb93cTbMo0Vv1ofm_FKlXQ",
+        "url": "https://videonode.de/iframe3/p2p/4f33cXUxb_w1j8WwNwU9ew",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/VNTiSNoA8Yt3S2ljybjgiQ",
+        "url": "https://videonode.de/iframe3/cast/gY8Oz8AzFwIdhGU5CrHPcw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/LcJYz4v9yAh1NTYtla7Rxw",
+        "url": "https://videonode.de/iframe3/hydrax/9iOIncgpEZ_GZMhmTwm5zg",
         "default": false
       }
     ],
