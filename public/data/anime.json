@@ -4739,7 +4739,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shinja-Zero-no-Megami-sama-to-Hajimeru-Isekai-Kouryaku.jpg",
     "rating": "6.6",
     "votes": null,
-    "durasi": "3 eps",
+    "durasi": "23 Menit",
     "episodes_count": 3,
     "genre": [
       "Fantasy",
@@ -7256,7 +7256,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tank%20Chair.jpg",
     "rating": "6.4",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "24 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
@@ -7415,7 +7415,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Yowaki%20Max%20Reijou%20nanoni,%20Ratsuwan%20Konyakusha-sama%20no%20Kake%20ni%20Notte%20Shimatta.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Romance",
@@ -9756,8 +9756,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx212888-NhyvqPt5aIuJ.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Fantasy"
@@ -9942,26 +9942,90 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Overgeared Episode 5",
+        "slug": "overgeared-episode-5",
+        "source": "https://v2.samehadaku.how/overgeared-episode-5/",
+        "date": "",
+        "released_at": "2026-10-25T16:00:41.993Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzPfwrQ8QeoGkUfGgpPDdif5k-5KP5Ay9VJafNhhzrELDjcxeffcepb-5ttFI7EHdwG39XSzFDVbU6CVtYb5Zqn1P2JYuZHAIfjwWBjh0o-IBeWQR_2dqB9Rog37pz-HNb8TnY&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "54941",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/rwYWkDhQ#ooW0-lGcymNYi44GdW49SliqwrpElU0-QZTrFPdwhKg",
+            "default": false,
+            "post": "54941",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/i1ZXiTpY#g8vOxtJQiKgMzyb1BcX-o8rfABeakXKYqVWz81mxCsw",
+            "default": false,
+            "post": "54941",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/K94hwTAQ#9YtAoX2OEwM1eZY5C4W4ylxL5BGmDbPuOezqhLEC0Ak",
+            "default": false,
+            "post": "54941",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/rlRzDIZA#f-05xV7m54hyAgsGcXo1q4HAyeLmZcgUYw3ZVMBF8OU",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzPfwrQ8QeoGkUfGgpPDdif5k-5KP5Ay9VJafNhhzrELDjcxeffcepb-5ttFI7EHdwG39XSzFDVbU6CVtYb5Zqn1P2JYuZHAIfjwWBjh0o-IBeWQR_2dqB9Rog37pz-HNb8TnY&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54750",
-        "nume": "3"
+        "post": "54941",
+        "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/ulQXCJQL#NtVwkCVVc9iSRl4SSJc24CO5XXujr4HkUL-1Zx2fPB0",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/rwYWkDhQ#ooW0-lGcymNYi44GdW49SliqwrpElU0-QZTrFPdwhKg",
         "default": false,
-        "post": "54750",
+        "post": "54941",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/i1ZXiTpY#g8vOxtJQiKgMzyb1BcX-o8rfABeakXKYqVWz81mxCsw",
+        "default": false,
+        "post": "54941",
         "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/K94hwTAQ#9YtAoX2OEwM1eZY5C4W4ylxL5BGmDbPuOezqhLEC0Ak",
+        "default": false,
+        "post": "54941",
+        "nume": "5"
       }
     ],
     "id": 57
@@ -948347,7 +948411,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2024/04/139538l.jpg",
     "rating": "7.11",
     "votes": 16917,
-    "durasi": "12 eps",
+    "durasi": "23 Menit",
     "episodes_count": 12,
     "genre": [
       "Adventure",
@@ -948710,6 +948774,22 @@
             "default": false,
             "post": "32391",
             "nume": "10"
+          },
+          {
+            "no": 8,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwn1YKQ6OfJC4YNulyKYqU_M5y8xKG5Xs5VdE_krEKGDUWQxaOJvWqYt7Iws7sYTB7v9LWwoCw-cqOhu-tF95J-foHNQlex8rLe55GXuG8dxfhrlqFUkEEu3d-pbciMvbTCWxQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 9,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxEEPPucPSHb0D0MCawrii7YRCfb-BlSyYrKeqkIyl5_vjuMzqrGVaMTWg57xDuXAhwu-dIMcCHqa3JBan2PhwUaJ9Z-gEyEtY_QS8JtwmZLfJdyaPEHAuacnpL_UazaYSELTWc",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
@@ -949562,7 +949642,9 @@
         "nume": "16"
       }
     ],
-    "id": 991
+    "id": 991,
+    "studio": "studio MOTHER",
+    "sumber": "Light Novel"
   },
   {
     "type": "anime",
