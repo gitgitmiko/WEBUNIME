@@ -9689,8 +9689,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tempat%20Item%20no%20Chikara.jpg",
     "rating": "7.4",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Fantasy"
@@ -9796,6 +9796,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwItdk1fEnkleZ020JewyL8HBw16kzyXhRVe76kDALyoBxZMqAvWqvHIvvUV5V6oR1PNbDzsg8VcvL-8c-uzKigifVpWS-H1Aseyj5iUC2ldpgCsQeXlIYZ16JGyxz28zxgQbl2",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Tempal: Item no Chikara Episode 5",
+        "slug": "tempal-item-no-chikara-episode-5",
+        "source": "https://anoboy.quest/2026/10/tempal-item-no-chikara-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyQ4cfxbhFaEev4HS84JB6xpJ2m6uMnwaGwcxV5chvfSDQftS8ndby-8rw_ybzWOAPBmOeOSnJyfdeTZiCjM91ZF9TqqLPPdquVJzV-eDb4rE9_O-975iQoBKWmpdWyLhBDZM8",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw1Q327nPhRNh1CvlbjrSRyngHNOAr4BqEoxTbwKCJIn4Ki7hdsZlTvCNBa1fV_setoXElAaPMJisjh8e3fwxrWoQAcZVvcfQ6t2e2sEKmyOMUR3AgjcthWNF4uAwrPBGRuCm_J",
             "default": false,
             "source": "anoboy"
           }
