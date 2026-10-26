@@ -7191,8 +7191,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Tensei%20Goblin%20dakedo%20Shitsumon%20Aru.jpg",
     "rating": "6.8",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Fantasy",
       "Seinen"
@@ -7344,6 +7344,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwWLCidy_35YrNisvxETk7ARPSeZLmHhx5KzsV07JI0ur3k8iH1-_niunv_I8EnfrTuLjQJz4C8Q1fI0vX86HFVefw6MUu2UbzwQshmCj3ZlcoEgj91CKSt2R9iuIWqzdhvZJE",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Tensei Goblin dakedo Shitsumon Aru? Episode 5",
+        "slug": "tensei-goblin-dakedo-shitsumon-aru-episode-5",
+        "source": "https://anoboy.quest/2026/10/tensei-goblin-dakedo-shitsumon-aru-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwu6YuRV4_bISWXnyp7BAxbTBh-TE4LRJs5u9jKzfqtl1ciWdz1GwiBiW_BxWlmbbm3Zsh-VLkMi55EppzUg4c8UwiYHnZlMu41pBwbm5czkY59sRzBnqMfIYx4ftK3GcbekOaq",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx_dcp-EEKOfr1sdc6xv3Uu53ygTT3xe_38mDRtAYFVQ1da4LGJMout3n-4cRD_n0rUfd0mV4OKBdn0xzbpX5TFuT3HbpoZGO5VFfYQZd5rKQU51-c1iUkn3zJsteLlh87Gm-3m",
             "default": false,
             "source": "anoboy"
           }
