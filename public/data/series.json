@@ -812,13 +812,20 @@
         "players": [
           {
             "no": 1,
-            "server": "cast",
-            "label": "GANTI PLAYER CAST",
-            "url": "https://videonode.de/iframe3/cast/ROxOho6NfxBreGFVOPZkYg",
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0A5huZaPgViedE16g2zcGw",
             "default": true
           },
           {
             "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ROxOho6NfxBreGFVOPZkYg",
+            "default": false
+          },
+          {
+            "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/T11czv9UcKhlNhSQAES-EA",
@@ -830,13 +837,20 @@
     "players": [
       {
         "no": 1,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/ROxOho6NfxBreGFVOPZkYg",
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/0A5huZaPgViedE16g2zcGw",
         "default": true
       },
       {
         "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/ROxOho6NfxBreGFVOPZkYg",
+        "default": false
+      },
+      {
+        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/T11czv9UcKhlNhSQAES-EA",
