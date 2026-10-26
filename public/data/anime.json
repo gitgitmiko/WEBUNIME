@@ -6774,8 +6774,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Doumo,%20Suki%20na%20Hito%20ni%20Horegusuri%20wo%20Irai%20sareta%20Majo%20desu.jpg",
     "rating": "7.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Fantasy",
       "Romance",
@@ -6921,6 +6921,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzqZOh1mynuo8cQkSds3h5HiaXzhRRmbh8I3zJRlNDqHA6Knvl4v_FOuC6nk3kjN0PS_Fr_m9G7yBRpgGRynSWNU3E6byiCaIlDWySp_ilMly_RiBROfiuJOiwMWy017zj3vgs",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Doumo, Suki na Hito ni Horegusuri wo Irai sareta Majo desu. Episode 4",
+        "slug": "doumo-suki-na-hito-ni-horegusuri-wo-irai-sareta-majo-desu-episode-4",
+        "source": "https://anoboy.quest/2026/10/doumo-suki-na-hito-ni-horegusuri-wo-irai-sareta-majo-desu-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxLumFY0V5O0VBgBZVu9zZwjnAGwt0G7QDw7Rv1hCUgKQUzZoYxnP586HMR-802L_6vvmrM1TYTEhpTzjaK6vz_IRY3gM0IVWEQBnKidgKv9tWkRyRhG9EBPUyvyMB249LYTtw",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx1YvU_2bNm2xj4BLY0_bh6fWSrDv-OovSHYwmcYaMfKuR3BsDwD3NxP7NbpTYNI3nyfzQ8IlIVt2W1oDbYKU0BT0flXit6LnYSYxOPW0pLuXI1RresoIxAFCiCR9vPqI9JsPI",
             "default": false,
             "source": "anoboy"
           }
