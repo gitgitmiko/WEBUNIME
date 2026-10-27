@@ -5467,8 +5467,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Battle%20Spirits%20Re%20Zekkai%20no%20Kuu.jpeg",
     "rating": "5.6",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 2,
+    "durasi": "3 eps",
+    "episodes_count": 3,
     "genre": [
       "Fantasy",
       "Historical"
@@ -5509,6 +5509,31 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwxhHXSmyow4914AlpWfMNy6MJT5coJ4YGRmA3UIQT26wpB8dxZ4zE3p_uwqVrIzuM7Z80jGTPxlsdfmK-_k6gZVXSNGjPFde5UGZhtxOhTjctrsrdeXvLS5hJCZ-R_XpTLGmjI",
             "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Battle Spirits [Re]: Zekkai no Kuu Episode 4",
+        "slug": "battle-spirits-re-zekkai-no-kuu-episode-4",
+        "source": "https://anoboy.quest/2026/10/battle-spirits-re-zekkai-no-kuu-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw1yokUgrAYXDe3NIxAkdK57QsbAJHbtw5dsxpluiIJmvNc2pA6Q2KzfUoXvD8Yj0tUYFOMZ1zB3rBNmTsESYS_cV8k8m3uy3_5D1XkT53hlVh39pTiNYoB5YXoxTgYrW1qyiY",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxc4ElBefRD0pBXj-IXFaqOIvsEbN8NfO9dLUjVBhmFZzdiOuOd8yerd32ztf7WZvzV8RSkPFgcXGm0v65vauzfzGaD6wpQCLsZSUS7NulklWWs81Xg_yVUJD7Jwpg6vPa-MAU",
+            "default": false,
             "source": "anoboy"
           }
         ]
