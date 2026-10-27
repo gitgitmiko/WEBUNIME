@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Gaza mon amour",
+    "judul": "Gaza mon amour (2020)",
+    "tahun": "2020",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-gaza-mon-amour-2020-lk21.jpg",
+    "rating": "6.8",
+    "quality": "HD",
+    "durasi": "1j 27m",
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "sinopsis": "Gaza Mon Amour - Di Gaza, Issa yang berusia 60 tahun adalah seorang nelayan yang secara diam-diam jatuh cinta kepada Siham, seorang janda yang bekerja di pasar. Suatu hari, hidupnya berubah setelah ia menemukan sebuah patung kuno phallic Apollo di dalam jaring ikan miliknya. Penemuan tersebut memberikannya kepercayaan diri baru untuk mengungkapkan perasaannya.\nAwards: 9 wins & 12 nominations\nWorldwide Gross: USD 175,672\nSoundtrack: Que no se rompa la noche\n\nSubtitle: workkeerr\n\nSutradara: Arab Nasser, Tarzan Nasser\n\nBintang Film: Salim Daw, Hiam Abbass, Maisa Abd Elhadi, George Iskandar, Manal Awad\n\nNegara: France, Germany, Portugal, Egypt\n\nVotes: 1.400\n\nRelease: 04 Jun 2021\n\nUpdated: 27 Oct 2026 16:13:58",
+    "slug": "gaza-mon-amour-2020",
+    "source": "https://tv12.lk21official.cc/gaza-mon-amour-2020",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/uUgOdPDj-usaYfJCfqPaWw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/POHzWFnE03nvBj7pwqv9xQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/5C7zYUhOABgXqO-EOrRSww",
+        "default": false
+      }
+    ],
+    "id": 354,
+    "is_new": true
+  },
+  {
     "nama": "Variant",
     "judul": "Variant (2025)",
     "tahun": "2025",
@@ -37,8 +78,7 @@
         "default": false
       }
     ],
-    "id": 353,
-    "is_new": true
+    "id": 353
   },
   {
     "nama": "The Dog Stars",
