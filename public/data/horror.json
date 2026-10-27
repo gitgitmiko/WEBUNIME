@@ -1468,7 +1468,7 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-dog-stars-2026-lk21.jpg",
     "rating": "6.5",
-    "quality": "CAM",
+    "quality": "HD",
     "durasi": "1j 54m",
     "genre": [
       "Action",
@@ -1487,28 +1487,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/uL-W5Yivi5ohf-FuU5-6ow",
+        "url": "https://videonode.de/iframe3/p2p/RNmkG6YsxLOHsUwPGN8DmA",
         "default": true
       },
       {
         "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/mTm-FEmtZQ-K6ZuuirBdXg",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/zFzZlNajbTJ93NEQ2K44YQ",
         "default": false
       },
       {
         "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/UXRTY5NOZUGBkwxn--_p_A",
-        "default": false
-      },
-      {
-        "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/NWpk7NboQMIUgFrD81WqHA",
+        "url": "https://videonode.de/iframe3/hydrax/O4n1NDJ0nP88nNClHix5Uw",
         "default": false
       }
     ],
