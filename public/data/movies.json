@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Los pajaros no vuelan de noche",
+    "judul": "Los pajaros no vuelan de noche (2020)",
+    "tahun": "2020",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-los-pajaros-no-vuelan-de-noche-2020-lk21.jpg",
+    "rating": "51",
+    "quality": "HD",
+    "durasi": "1j 10m",
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "sinopsis": "Birds Don’t Fly at Night - Setelah terbangun dari koma, Marc berkumpul kembali dengan teman-teman masa lalunya di rumah mendiang ayahnya. Masalahnya, ia sama sekali tidak mengingat siapa mereka, sehingga ia harus menyatukan kembali kepingan ingatannya di tengah suasana rumah yang penuh misteri.\nBudget: EUR 15,000\n\nSubtitle: workkeerr\n\nSutradara: Albert Sansa Pac, Pau Sansa Pac\n\nBintang Film: Albert Salazar, Fabian Castro, Julia Ferre, Xavi Soler, Marta Canas\n\nNegara: Spain\n\nVotes: 70\n\nRelease: 28 Jun 2020\n\nUpdated: 27 Oct 2026 10:10:59",
+    "slug": "los-pajaros-no-vuelan-de-noche-2020",
+    "source": "https://tv12.lk21official.cc/los-pajaros-no-vuelan-de-noche-2020",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Xbkmt5Rrb2Xnnqx6aNcIhw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/AlXa7TUpOmpVCpITuuutcQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/XHWZ4ACtl3ZwNsAb_d03Vw",
+        "default": false
+      }
+    ],
+    "id": 350,
+    "is_new": true
+  },
+  {
     "nama": "Filipinana",
     "judul": "Filipinana (2026)",
     "tahun": "2026",
@@ -38,8 +79,7 @@
         "default": false
       }
     ],
-    "id": 349,
-    "is_new": true
+    "id": 349
   },
   {
     "nama": "Clerks III",
