@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Pirate Dad",
+    "judul": "Pirate Dad (2019)",
+    "tahun": "2019",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-pirate-dad-2019-lk21.jpg",
+    "rating": "4.6",
+    "quality": "HD",
+    "durasi": "1j 38m",
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "sinopsis": "Pirate Dad - Ian mendapati kenyataan bahwa André, seorang mantan bintang telenovela yang kini menjadi pecandu alkohol, adalah ayah kandungnya. Ian kemudian memutuskan untuk bekerja di bisnis maskot milik ayahnya yang hampir bangkrut. Di sana, ia menemukan tempat yang dihuni oleh orang-orang eksentrik dan menemukan makna hidup yang sesungguhnya.\nWorldwide Gross: USD 309,505\nSoundtrack: Golpes Bajos\n\nSubtitle: workkeerr\n\nSutradara: Humberto Hinojosa Ozcariz\n\nBintang Film: Dominika Paleta, Miguel Rodarte, Juan Pablo Medina, Ernesto Laguardia, Andres Almeida\n\nNegara: Mexico\n\nVotes: 219\n\nRelease: 25 Oct 2019\n\nUpdated: 28 Oct 2026 16:52:57",
+    "slug": "pirate-dad-2019",
+    "source": "https://tv12.lk21official.cc/pirate-dad-2019",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/haAE4kavTvCicwqjv3-79g",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/6nRDVSzL7UX4rbXBvqjDgw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/8yeYkhlMo9QlEiwGZ-sEVA",
+        "default": false
+      }
+    ],
+    "id": 363,
+    "is_new": true
+  },
+  {
     "nama": "Rejeito",
     "judul": "Rejeito (2023)",
     "tahun": "2023",
@@ -36,8 +77,7 @@
         "default": false
       }
     ],
-    "id": 362,
-    "is_new": true
+    "id": 362
   },
   {
     "nama": "Perfeitos Desconhecidos",
