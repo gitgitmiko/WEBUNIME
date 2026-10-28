@@ -867,8 +867,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kikansha-no-Mahou-wa-Tokubetsu-desu-Season-2-Episode-1-300x169.jpg",
     "rating": "6.8",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy",
@@ -1045,6 +1045,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dx7NCZuIdQW1K6lL24LlOu9iE4DSUlBlIXx1VpPfohA-wMrwv6fciHU0mPZcu_c7xU87OTkxhsOv8DOt4m6fTwozHxFYR4DVr8vHcuFfIZUWgu30Uv2OyWS7usvbPSxeAbjWatn",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Kikansha no Mahou wa Tokubetsu desu Season 2 Episode 4",
+        "slug": "kikansha-no-mahou-wa-tokubetsu-desu-season-2-episode-4",
+        "source": "https://anoboy.quest/2026/10/kikansha-no-mahou-wa-tokubetsu-desu-season-2-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwnJgudh9o3Vd5iBvqa00o0QmnBHTK6VFcWHglPNdf-LHR_vZp57c3pSv2gTLvIZozmpxaFzwdPDHXdR4-HwOQtEup36fTd033KUwd0zibaJanoXTxg6d6CFGcA-MaA7C3WhbYZ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy2yz04nfpQNRmXj4Aq0AaQIMT0rGxPJhPRZ6sSu0frYXXfDzba04djSMW5WwSQXRdaydTjEUwQPh91EQrAoyVrVdlYDG5a4slgwb0dovubIL93abYIys5DEImbxr46jX4m67Zt",
             "default": false,
             "source": "anoboy"
           }
@@ -6184,7 +6209,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Juuou%20Mujin%20Dandivine.jpg",
     "rating": "5.6",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Mecha"
