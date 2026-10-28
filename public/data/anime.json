@@ -6184,8 +6184,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Juuou%20Mujin%20Dandivine.jpg",
     "rating": "5.6",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Mecha"
     ],
@@ -6265,6 +6265,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxddXDuYepJZi3r2bjol0ElmFhkwdNQa6iRRwIBScmH9c3fo2acMBBS144BJaI6z0KJPdaNn-wzSYcaVKa6leGKMpq9PiX6SpPMo6gQJY_AT3-1xs0l1j3yldA-YOnGTZD69_Sa",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Juuou Mujin Dandivine Episode 4",
+        "slug": "juuou-mujin-dandivine-episode-4",
+        "source": "https://anoboy.quest/2026/10/juuou-mujin-dandivine-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxzM5ySh7IXY_i1XBx-8LMuzQlQant7QRzikMSQ2VVW2NVQYJxpGeMcH28tibMriWk-FQXPOWYVMbZGnNreyynFEjG-4WHrG6R5fTYZ6Kpm_NFzg_Xj6jW9QkoDeButeIOp_i91",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxrF6cASNnekYHag1JzPtuiBpXEecWYzNgNLr7gWv2xvh8NahN1sYMLZDXl4ok8gdY9--XW_nM3vyNtiNuFII0WgvHmmEXiW4mJHlMDFlp5mFDM9QMyzzF8Vkz6fOsW7nUdiRS5",
             "default": false,
             "source": "anoboy"
           }
@@ -9719,8 +9744,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shin-Tennis-no-Oujisama-Kesshou-Member-Ketteisen.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "School",
       "Shounen",
@@ -9915,6 +9940,43 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen Episode 5",
+        "slug": "shin-tennis-no-oujisama-u-17-world-cup-kesshou-member-ketteisen-episode-5",
+        "source": "https://v2.samehadaku.how/shin-tennis-no-oujisama-kesshou-member-ketteisen-episode-5/",
+        "date": "",
+        "released_at": "2026-10-28T18:00:39.789Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzjVcOQwKvI7b98MoxRTkzuzlUvVsAK-nNiu_xHxW1KXkI9boTgvaQIP-aKNkCRgLB8jRTtOod225genGDI9L5PpzfeAEQATMxEdhTImI-CkKlcht19eVHlSb7qaMDWf_Ry8hA",
+            "default": true,
+            "post": "55009",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/Cx5B0RZD#C5mn9Ns9L0H6zGQEDe3ut-RCT2xOSKNfLHpKmFfsR9k",
+            "default": false,
+            "post": "55009",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/C0YQzS5Q#_s2malmxXYnjVPqL3nltcvuHfpRtXui6Klkr-pXSDyI",
+            "default": false,
+            "post": "55009",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
@@ -9922,37 +9984,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxyFHUZcIgLaoZQUIEgoawHNkA6-g0QI8Kti6qOBbecgEFprF8FGXmA2Mi2Kqjh5AwduluLR3sOnW64RLQlJbWFUq6AI3MTEiAEtz9ayE08_Ll8bhZ43uBLv3w1Y0mcd-XxCNP_",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzjVcOQwKvI7b98MoxRTkzuzlUvVsAK-nNiu_xHxW1KXkI9boTgvaQIP-aKNkCRgLB8jRTtOod225genGDI9L5PpzfeAEQATMxEdhTImI-CkKlcht19eVHlSb7qaMDWf_Ry8hA",
         "default": true,
-        "post": "54817",
+        "post": "55009",
         "nume": "1"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/Wv4EBZjI#SCkWgKnHaIgjgL1GrelEog5N_RYKz2GHbVrBOhjbdAw",
+        "url": "https://mega.nz/embed/Cx5B0RZD#C5mn9Ns9L0H6zGQEDe3ut-RCT2xOSKNfLHpKmFfsR9k",
         "default": false,
-        "post": "54817",
+        "post": "55009",
         "nume": "3"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/OyBwwACR#ZMJYqMifT_itC0nbGwwjmqWP2diw-GL6uE32-qCUa-I",
+        "url": "https://mega.nz/embed/C0YQzS5Q#_s2malmxXYnjVPqL3nltcvuHfpRtXui6Klkr-pXSDyI",
         "default": false,
-        "post": "54817",
+        "post": "55009",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/7tAlyLjB#ngbRYe-9MWC--vlMsRbrjntitPFUl8W8UaN5_D5WLGE",
-        "default": false,
-        "post": "54817",
-        "nume": "5"
       }
     ],
     "id": 54
