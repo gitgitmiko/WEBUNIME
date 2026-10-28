@@ -149741,8 +149741,30 @@
         "episode": 26,
         "title": "The Vanishing Beauty - Season 1 Episode 26 (2026)",
         "slug": "vanishing-beauty-season-1-episode-26-2026",
-        "source": "https://tv5.nontondrama.my/vanishing-beauty-season-1-episode-26-2026",
-        "players": []
+        "source": "https://tv.nontondrama.vip/vanishing-beauty-season-1-episode-26-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/9pygq1rhaEVYMSpVYm131Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/w-GvbBg5Smh2zxznB_h7xw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/kUkAPeeajhqUPvxxIS9Pjw",
+            "default": false
+          }
+        ]
       },
       {
         "season": 1,
@@ -149766,21 +149788,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/mZcVbKHpGHvm6S_n_BR1Ag",
+        "url": "https://videonode.de/iframe3/p2p/9pygq1rhaEVYMSpVYm131Q",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/FnJTFuKSUnyxQFba8FTQbA",
+        "url": "https://videonode.de/iframe3/cast/w-GvbBg5Smh2zxznB_h7xw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Th4gtQ4d958jpvJvq_SvLw",
+        "url": "https://videonode.de/iframe3/hydrax/kUkAPeeajhqUPvxxIS9Pjw",
         "default": false
       }
     ],
