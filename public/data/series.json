@@ -364,8 +364,8 @@
     "tahun": "2017",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-lost-hearts-2017-lk21.jpg",
     "rating": "8.0",
-    "durasi": "32 eps · S.1",
-    "episodes_count": 32,
+    "durasi": "34 eps · S.1",
+    "episodes_count": 34,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -1338,6 +1338,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 33,
+        "title": "Lost Hearts - Season 1 Episode 33 (2017)",
+        "slug": "lost-hearts-season-1-episode-33-2017",
+        "source": "https://tv.nontondrama.vip/lost-hearts-season-1-episode-33-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nVJOg2gU7ylpnhvfs3fkpA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/PoIISBC-r_lTcQe1Ue7prQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/iYHwEGY_NfnvVawxI_By6g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 34,
+        "title": "Lost Hearts - Season 1 Episode 34 (2017)",
+        "slug": "lost-hearts-season-1-episode-34-2017",
+        "source": "https://tv.nontondrama.vip/lost-hearts-season-1-episode-34-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/w9agMXy_YXSXDaW1RGINCw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Bt_2r3Ta4m0pBdAOML1MpQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/-ti5BA9lDT4BB2_bReicxQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1345,21 +1405,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/zAb4nKmPZhedx2_gy1rHkw",
+        "url": "https://videonode.de/iframe3/p2p/w9agMXy_YXSXDaW1RGINCw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/YrXZ1J434uCZ0kSaLuWphQ",
+        "url": "https://videonode.de/iframe3/cast/Bt_2r3Ta4m0pBdAOML1MpQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/twKt88hKaWdr168yV60Low",
+        "url": "https://videonode.de/iframe3/hydrax/-ti5BA9lDT4BB2_bReicxQ",
         "default": false
       }
     ],
