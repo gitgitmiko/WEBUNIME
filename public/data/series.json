@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-rules-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Short"
@@ -46,6 +46,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The Rules - Season 1 Episode 2 (2026)",
+        "slug": "rules-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/rules-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/2ltq7A0pj9CtqSOt9cXX6A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fuFOGfysKC3cWTNF1Pt3RA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/x4BTL4DO7hvSMNi4ccCXYw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -53,26 +83,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/YrIOscOX_bXVImBJFW4yUw",
+        "url": "https://videonode.de/iframe3/p2p/2ltq7A0pj9CtqSOt9cXX6A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/6i-jSC6uhFPpqQvjDdaDeA",
+        "url": "https://videonode.de/iframe3/cast/fuFOGfysKC3cWTNF1Pt3RA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/OY1pnXT87ZpZNWSRzHAkBA",
+        "url": "https://videonode.de/iframe3/hydrax/x4BTL4DO7hvSMNi4ccCXYw",
         "default": false
       }
     ],
-    "id": 649,
-    "is_new": true
+    "id": 649
   },
   {
     "type": "series",
@@ -81,8 +110,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-you-alone-know-me-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -151,6 +180,156 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "You Alone Know Me - Season 1 Episode 3 (2026)",
+        "slug": "you-alone-know-me-season-1-episode-3-2026",
+        "source": "https://tv.nontondrama.vip/you-alone-know-me-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ZFbMQc73eIPf6iJN-La7hQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DQXUOCePDKfzUt6qpQtahQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/N-8mgEK5vhIZ4I2GKloILQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "You Alone Know Me - Season 1 Episode 4 (2026)",
+        "slug": "you-alone-know-me-season-1-episode-4-2026",
+        "source": "https://tv.nontondrama.vip/you-alone-know-me-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wCvldQ41JOZEp10K5JabyQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7SJRZ92oCCfBFpgosE_UHg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/xENgdIDcXgMXEEIfotKphw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "You Alone Know Me - Season 1 Episode 5 (2026)",
+        "slug": "you-alone-know-me-season-1-episode-5-2026",
+        "source": "https://tv.nontondrama.vip/you-alone-know-me-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lp9QsWIoJS30RkjlCvBTLw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/wuAtXLFY8Dw5C5i6IJvk7g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/n72MKaiF-o-IG7fAJ3az5g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "You Alone Know Me - Season 1 Episode 6 (2026)",
+        "slug": "you-alone-know-me-season-1-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/you-alone-know-me-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/tKn0DxQLXpjyAIT-A7eSyg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/FEeT4-tl5VLj_bTXhZRg5A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/HozlZ9XPcc8fbFEiB4e8rw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "You Alone Know Me - Season 1 Episode 7 (2026)",
+        "slug": "you-alone-know-me-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/you-alone-know-me-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/QoUMgrfr7x1eWk4mxfdeSw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/uilRks45D1AmyuUL980JqA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/rwFqoP5NsM2CfA-hi70OxQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -158,26 +337,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/H7RRxo9MdEPKahWf6c2Rmg",
+        "url": "https://videonode.de/iframe3/p2p/QoUMgrfr7x1eWk4mxfdeSw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/xmRfVn-Mpf9g__8cwa0vag",
+        "url": "https://videonode.de/iframe3/cast/uilRks45D1AmyuUL980JqA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/R1nBAomVWb_qjiD6GZd7bQ",
+        "url": "https://videonode.de/iframe3/hydrax/rwFqoP5NsM2CfA-hi70OxQ",
         "default": false
       }
     ],
-    "id": 648,
-    "is_new": true
+    "id": 648
   },
   {
     "type": "series",
@@ -47238,8 +47416,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-small-town-remedy-2026-lk21.jpg",
     "rating": "9.0",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -47494,8 +47672,60 @@
         "episode": 9,
         "title": "Small Town Remedy - Season 1 Episode 9 (2026",
         "slug": "small-town-remedy-season-1-episode-9-2026",
-        "source": "https://tv5.nontondrama.my/small-town-remedy-season-1-episode-9-2026",
-        "players": []
+        "source": "https://tv.nontondrama.vip/small-town-remedy-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dbhxo-3yX9duyuVdeMJeAA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/yTXxuNf4EbrFj-3Hgvef_g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/xFeiko9YUDG_BlyrwoOqog",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Small Town Remedy - Season 1 Episode 10 (2026",
+        "slug": "small-town-remedy-season-1-episode-10-2026",
+        "source": "https://tv.nontondrama.vip/small-town-remedy-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Q2VMwrPJGje6mCgHnXJAjw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/k19bVvKKxnCr3O4vXPzHfQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/-RD8S5JdSL6QveQF1JnPqA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -47503,21 +47733,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Ia07IBGZFJtxWHXGfpyGRQ",
+        "url": "https://videonode.de/iframe3/p2p/Q2VMwrPJGje6mCgHnXJAjw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/wqVOGHwx2WoGTr63O3-OWQ",
+        "url": "https://videonode.de/iframe3/cast/k19bVvKKxnCr3O4vXPzHfQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/TKXokwIiGHnaNNl7zuvLhg",
+        "url": "https://videonode.de/iframe3/hydrax/-RD8S5JdSL6QveQF1JnPqA",
         "default": false
       }
     ],
