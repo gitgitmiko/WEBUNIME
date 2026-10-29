@@ -10069,8 +10069,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/FX-Senshi-Kurumi-chan.jpg",
     "rating": "7.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Seinen"
     ],
@@ -10272,6 +10272,34 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "FX Senshi Kurumi-chan Episode 5",
+        "slug": "fx-senshi-kurumi-chan-episode-5",
+        "source": "https://v2.samehadaku.how/fx-senshi-kurumi-chan-episode-5/",
+        "date": "",
+        "released_at": "2026-10-29T14:01:42.961Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ywgFUagT#4tPNlt4UAgefzsDxsV5MeJalwel2U9p3dJVeN8v95p8",
+            "default": true,
+            "post": "55015",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/i1piQYZJ#S5UmqqttkbXfIf6U2GVNnZh8xY43vGAw8Wgc7IXURC4",
+            "default": false,
+            "post": "55015",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
@@ -10279,18 +10307,18 @@
         "no": 1,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/ni4QhYpS#IvuEakR6ssZGB0pkZ8Mg9XcbKJAqnr0kVMApJ9z9sRE",
+        "url": "https://mega.nz/embed/ywgFUagT#4tPNlt4UAgefzsDxsV5MeJalwel2U9p3dJVeN8v95p8",
         "default": true,
-        "post": "54827",
+        "post": "55015",
         "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/D2J0EI6C#4uc1e_WR_q-eKv3P7a0e2Ti50HT3l1EIlDBFhkCvVYA",
+        "url": "https://mega.nz/embed/i1piQYZJ#S5UmqqttkbXfIf6U2GVNnZh8xY43vGAw8Wgc7IXURC4",
         "default": false,
-        "post": "54827",
+        "post": "55015",
         "nume": "4"
       }
     ],
