@@ -6,7 +6,7 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-this-city-ours-crime-family-saga-2025-lk21.jpg",
     "rating": "7.8",
-    "durasi": "2 eps · S.1",
+    "durasi": "2 eps · S.2",
     "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
@@ -105914,7 +105914,7 @@
     "tahun": "2024",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/11/film-ncis-origins-2024-lk21.jpg",
     "rating": "7.4",
-    "durasi": "2 eps · S.3",
+    "durasi": "38 eps · S.3",
     "episodes_count": 38,
     "seasons_count": 3,
     "genre": [
@@ -158463,8 +158463,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "179 eps · S.8",
-    "episodes_count": 179,
+    "durasi": "180 eps · S.9",
+    "episodes_count": 180,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -163985,28 +163985,44 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 9,
+        "episode": 1,
+        "title": "CSI: Crime Scene Investigation - Season 9 Episode 1 (2000)",
+        "slug": "csi-crime-scene-investigation-season-9-episode-1-2000",
+        "source": "https://tv.nontondrama.vip/csi-crime-scene-investigation-season-9-episode-1-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/bBCwr5Fp4ZEtxsxULik6sw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/3Eo2PNPMAp7vcplIWg_Z3Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/s3x6u1iVaTgrRvbS96SA2g",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/bBCwr5Fp4ZEtxsxULik6sw",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/MRC_yiqMTjDYXSqzn9NB4g",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/tahbWH1Aqlgx32P3m-vk8A",
+        "url": "https://videonode.de/iframe3/hydrax/3Eo2PNPMAp7vcplIWg_Z3Q",
         "default": false
       }
     ],
@@ -164691,8 +164707,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-lament-autumn-2026-lk21.jpg",
     "rating": "9.8",
-    "durasi": "30 eps · S.1",
-    "episodes_count": 30,
+    "durasi": "31 eps · S.1",
+    "episodes_count": 31,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -165602,28 +165618,44 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 31,
+        "title": "The Lament of Autumn - Season 1 Episode 31 (2026)",
+        "slug": "lament-autumn-season-1-episode-31-2026",
+        "source": "https://tv.nontondrama.vip/lament-autumn-season-1-episode-31-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/LT1WEBy4MRqmbqESWN9qjw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/NbDW7HBWmOmcPYHSlx136g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/IV23jphtpT9C0VpEHmnKAA",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/LT1WEBy4MRqmbqESWN9qjw",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/GBPiM_yCNV4zqN3qT3o_6Q",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/mwRgea1_LFM_IgQXyQvznA",
+        "url": "https://videonode.de/iframe3/hydrax/NbDW7HBWmOmcPYHSlx136g",
         "default": false
       }
     ],
