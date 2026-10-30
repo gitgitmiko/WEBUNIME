@@ -44602,8 +44602,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-my-loong-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "16 eps · S.1",
-    "episodes_count": 16,
+    "durasi": "17 eps · S.1",
+    "episodes_count": 17,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -45085,6 +45085,29 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 17,
+        "title": "My Loong - Season 1 Episode 17 (2026)",
+        "slug": "my-loong-season-1-episode-17-2026",
+        "source": "https://tv.nontondrama.vip/my-loong-season-1-episode-17-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/QzHb-vs7i7Vp9uENJPGwZg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/aUvFtmtsdiGSyxsxapfIyQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -45092,14 +45115,14 @@
         "no": 1,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/U7kRWDG5SuKeWq8T3mMo0Q",
+        "url": "https://videonode.de/iframe3/cast/QzHb-vs7i7Vp9uENJPGwZg",
         "default": true
       },
       {
         "no": 2,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/TlFQQ5lXoOC8d3CZGyXS9g",
+        "url": "https://videonode.de/iframe3/hydrax/aUvFtmtsdiGSyxsxapfIyQ",
         "default": false
       }
     ],
@@ -61504,8 +61527,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-besties-coming-fortune-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "22 eps · S.1",
-    "episodes_count": 22,
+    "durasi": "23 eps · S.1",
+    "episodes_count": 23,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -62174,28 +62197,44 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "title": "Besties' Coming Fortune - Season 1 Episode 23 (2026)",
+        "slug": "besties-coming-fortune-season-1-episode-23-2026",
+        "source": "https://tv.nontondrama.vip/besties-coming-fortune-season-1-episode-23-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/CYfrLz5X4Ju6yK5aqpw-kA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/H36gI1p8RFj_8IWdSEaCEQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/3tro9EwB0cG8tqFDAZ3xjw",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/CYfrLz5X4Ju6yK5aqpw-kA",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/G96iHc6DXfKQxv_q_FlxeQ",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/3JHJpFyNxOQTqmVKv2XvBQ",
+        "url": "https://videonode.de/iframe3/hydrax/H36gI1p8RFj_8IWdSEaCEQ",
         "default": false
       }
     ],
