@@ -10237,8 +10237,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-slumbering-wolves-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "18 eps · S.1",
-    "episodes_count": 18,
+    "durasi": "19 eps · S.1",
+    "episodes_count": 19,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -10773,6 +10773,29 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "Slumbering with Wolves - Season 1 Episode 19 (2026)",
+        "slug": "slumbering-wolves-season-1-episode-19-2026",
+        "source": "https://tv.nontondrama.vip/slumbering-wolves-season-1-episode-19-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ijanLC4lyEkTtdIythvpfg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/puQ0rhNdEsuTyl6L483fsA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -10780,14 +10803,14 @@
         "no": 1,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/-jOVwsvojSaeTgsf_vUZfA",
+        "url": "https://videonode.de/iframe3/cast/ijanLC4lyEkTtdIythvpfg",
         "default": true
       },
       {
         "no": 2,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/BYDglEpRv04KEK-ABHi5zQ",
+        "url": "https://videonode.de/iframe3/hydrax/puQ0rhNdEsuTyl6L483fsA",
         "default": false
       }
     ],
@@ -144336,8 +144359,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-avatar-seven-havens-2026-lk21.jpg",
     "rating": "8.4",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Animation",
@@ -144531,28 +144554,67 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Avatar: Seven Havens - Season 1 Episode 7 (2026)",
+        "slug": "avatar-seven-havens-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/avatar-seven-havens-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DusWv-Vyvo6ipq4wDLMzHA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ykMMkI1Qaij6-_-6amsshA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "Avatar: Seven Havens - Season 1 Episode 8 (2026)",
+        "slug": "avatar-seven-havens-season-1-episode-8-2026",
+        "source": "https://tv.nontondrama.vip/avatar-seven-havens-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/4kbgP9ptumPMTxfYRD9XCQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/2dIRWwbCskqJ0RE6vXGO4w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/EjMB5Sk6FMCGhKlUwCUyvQ",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/4kbgP9ptumPMTxfYRD9XCQ",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/9D4FEOMyKzQPJk6OtmM5YA",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/IgbQo2o5_z0LomfZG0oiIg",
+        "url": "https://videonode.de/iframe3/hydrax/2dIRWwbCskqJ0RE6vXGO4w",
         "default": false
       }
     ],
@@ -169120,8 +169182,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-doctor-x-age-white-mafia-2026-lk21.jpg",
     "rating": "9.5",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -169312,28 +169374,44 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Doctor X: Age of the White Mafia - Season 1 Episode 7 (2026)",
+        "slug": "doctor-x-age-white-mafia-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/doctor-x-age-white-mafia-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Tt3KPJGfiPcnJIcHq8GG9w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/hSTXPLHtU2RmvjjOKFWM5g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Xe2VF-ur0C0BmVQmyDxEUw",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/Tt3KPJGfiPcnJIcHq8GG9w",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iBtccxj5ktmTEIQb-NRgIA",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/S1j2y0789x6rGdPl1IrFsQ",
+        "url": "https://videonode.de/iframe3/hydrax/hSTXPLHtU2RmvjjOKFWM5g",
         "default": false
       }
     ],
