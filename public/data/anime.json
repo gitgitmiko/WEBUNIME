@@ -1636,8 +1636,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "22 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Drama",
       "Mystery",
@@ -1803,6 +1803,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyZsiC4HsX929uAUfR5ZtOninamdn6TwYe3OZUDPBChm0QdNa8uy4GbEEWAosyv6IJTXw__ZdPAPqofqeTSh8Pd6NJKw8XyWQ9fL9kbA1iJj4mtiESZY1PP6egKKq-rI1kbAM8",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Kusuriya no Hitorigoto Season 3 Episode 5",
+        "slug": "kusuriya-no-hitorigoto-season-3-episode-5",
+        "source": "https://anoboy.quest/2026/10/kusuriya-no-hitorigoto-season-3-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy_Qpc0bW0-ZeL8ETS0WgzJJJ7wRqeVfk8Q0-iB4wMar1N1eVY-v63519mllF4eqHffhlc_aSMJz18O7mCj7-5Zua2lAJCHGgMtc65_S7ZY1iXyxsIg1S7f9Fk2O0GADOew9UY",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyRqTp_pZ53EzzSdizZRsMOcNSSxxjc8JtEDlEIn9iwst9YPhic4qdyHef_COEFpQYhUVC2PEILeMojfoeOxVc4NeAoLdZkmUM6hAm7lRdYuFGvlUWUGAGzLJF82ORy0qhSXNU",
             "default": false,
             "source": "anoboy"
           }
@@ -6546,7 +6571,7 @@
     "rating": "7.9",
     "votes": "",
     "durasi": "22 Menit",
-    "episodes_count": 3,
+    "episodes_count": 4,
     "genre": [
       "Romance",
       "Historical"
@@ -6651,44 +6676,70 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Hotaru no Yomeiri Episode 4",
+        "slug": "hotaru-no-yomeiri-episode-4",
+        "source": "https://v2.samehadaku.how/hotaru-no-yomeiri-episode-4/",
+        "date": "",
+        "released_at": "2026-10-30T16:30:38.814Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/tM1VEJhT#2rM7rk5goJUAnTu5_Ust1xvvAUHuxj26tUQD35HDJac",
+            "default": true,
+            "post": "55024",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/0YMzxAKY#3k-hPhjMaiAM-ET_h2ABZauc58OzmoIIvA1zoA5wSUo",
+            "default": false,
+            "post": "55024",
+            "nume": "4"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy0WKuSoKEQ9jDbH0N8wqeM2CqHNFkPuZFLIRzu5q5F-eB3ELyu0Ije2mMoxc8n2AIKT1Gp9DoHl6juITUKX9a3BCzvJuW2TEyBKeEYdTvcy04QvqxcrajhWcWO7JmDZNXJE27R",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzr3O7CFuAwrVQeNIsmzmkqWj2MU21fhMzRWdLhGV8CLySM03zgzkhccZQ57omC0LSalofKkr7bzmceSkdEeGxLS-rswAJsTIPmyKeYZReSpDSVg0itGMicHMmUYo2-7WDgM_49",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dw2rKJdyUE3-aqGoukcy_0JHo1-xUhVcTZVtSA6McF7cFXKxyF1XJCRQqleGY0YE-erSYkxGDzX6XClFa1FC2URqHVOH__uWTKhgR35d4D1_J1eWks-wjSuBotaMbEC1i6-6w",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/tM1VEJhT#2rM7rk5goJUAnTu5_Ust1xvvAUHuxj26tUQD35HDJac",
         "default": true,
-        "post": "54540",
-        "nume": "1"
+        "post": "55024",
+        "nume": "3"
       },
       {
         "no": 2,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/RipBhAYb#l1kia328gCaaVUF3KrD_Szj5RrECpSrJes-2WI3eSvs",
-        "default": false,
-        "post": "54540",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/8uBmQb7C#s31NxF7Tidw4ZkB5okNHpABA_v3iy9v-eaCZvVS5Cu0",
+        "url": "https://mega.nz/embed/0YMzxAKY#3k-hPhjMaiAM-ET_h2ABZauc58OzmoIIvA1zoA5wSUo",
         "default": false,
-        "post": "54540",
+        "post": "55024",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/czxABBKT#r5RzHUhUAD3NyfWqXQv5Iwdlxc133a-8P4MHDADYQx0",
-        "default": false,
-        "post": "54540",
-        "nume": "5"
       }
     ],
     "id": 35,
@@ -6704,8 +6755,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy",
@@ -6788,6 +6839,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzXO0Llc_eiifgZbgLvD4tcJJpdGYrrQsS35ayfw-Nv10chxv3WSnK-ylVoFHgX5_LiLvLJn1neOlmMFVeOsDzvs6MdRIgguEVNfKRoaxEbTHtnVE5vga8wVqSeZNNQgWBaDGoO",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Toaru Anbu no Item Episode 4",
+        "slug": "toaru-anbu-no-item-episode-4",
+        "source": "https://anoboy.quest/2026/10/toaru-anbu-no-item-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyL63Gw8WuhLHQUT8KpUAyE9I_TuiOWcm9JMabFwRxmuAb6rffJ22108OrxO-2VgAgqcn1h1C_RqDPeRJZbP8ffsm_gWZ0RQ4vEAqC9qJAJjTTSUNLZ3AEKsvsSZb-pDbRJcikw",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyevk7piuMXVbBbNDwQ40VzZfTKXlw20TCy5cpOSkgBoHxJUP3QFhJ11CQu1p4PMybMVt8fcA8UFK-okMQXbnbTVDu7A1wmpiAbMDVwbdkheOLnTv0_QweKmkFiKyiPaIM3tpI",
             "default": false,
             "source": "anoboy"
           }
