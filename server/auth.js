@@ -2,6 +2,7 @@ import { randomBytes } from "node:crypto";
 import bcrypt from "bcryptjs";
 import { Router } from "express";
 import { getPool } from "./db.js";
+import { kickRoomUser, roomActivity } from "./watch-party.js";
 
 const COOKIE = "webunime_sid";
 const SESSION_DAYS = 14;
@@ -9,6 +10,7 @@ const BCRYPT_ROUNDS = 12;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const USERNAME_RE = /^[a-z0-9_]{3,32}$/;
 const DASHBOARD_USERNAME = "dasbor";
+const DASHBOARD_USER_ID = 1;
 /** Hash valid untuk samakan timing login saat user tidak ada. */
 const DUMMY_PASSWORD_HASH =
   "$2b$12$hWkaAYtaJ20nTH/6dnuJguBI3qUcXrOMFw/WCHu/y/VHLbw4Fe2aK";
@@ -57,7 +59,52 @@ export async function ensureUsersSchema() {
       FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
     )
   `);
+  for (const column of ["last_login_at", "last_seen_at"]) {
+    try {
+      await pool.query(`ALTER TABLE users ADD COLUMN ${column} DATETIME NULL`);
+    } catch (err) {
+      if (err?.errno !== 1060 && err?.code !== "ER_DUP_FIELDNAME") throw err;
+    }
+  }
   usersSchemaReady = true;
+}
+
+/** Dianggap sedang login bila heartbeat terakhir masih dalam jendela ini. */
+const ONLINE_WINDOW_MS = 90_000;
+const LAST_SEEN_WRITE_MS = 60_000;
+const presence = new Map();
+
+function isOnline(userId) {
+  return Date.now() - (presence.get(Number(userId))?.at || 0) <= ONLINE_WINDOW_MS;
+}
+
+function onlineCount() {
+  for (const id of presence.keys()) {
+    if (!isOnline(id)) presence.delete(id);
+  }
+  return presence.size;
+}
+
+async function markOnline(user) {
+  const id = Number(user.id);
+  const prev = presence.get(id);
+  const now = Date.now();
+  presence.set(id, { at: now, wroteAt: prev?.wroteAt || 0 });
+  // Akun dasbor tidak punya baris di tabel users.
+  if (id === DASHBOARD_USER_ID || now - (prev?.wroteAt || 0) < LAST_SEEN_WRITE_MS) return;
+  presence.get(id).wroteAt = now;
+  await getPool().execute(`UPDATE users SET last_seen_at = NOW() WHERE id = :id`, { id });
+}
+
+/** Putuskan akun dari sistem: sesi, status online, dan koneksi ruang nonton. */
+async function forceLogoutUser(userId) {
+  await destroyUserSessions(userId);
+  presence.delete(Number(userId));
+  kickRoomUser(Number(userId));
+}
+
+async function markLogin(userId) {
+  await getPool().execute(`UPDATE users SET last_login_at = NOW() WHERE id = :id`, { id: userId });
 }
 
 async function destroyUserSessions(userId) {
@@ -359,6 +406,7 @@ export function createAuthRouter() {
         { id: userId }
       );
       const { sid } = await createSession(userId);
+      await markLogin(userId);
       setSessionCookie(res, sid, SESSION_DAYS * 24 * 60 * 60 * 1000);
       return res.status(201).json({ user: publicUser(rows[0]) });
     } catch (err) {
@@ -376,14 +424,66 @@ export function createAuthRouter() {
       if (!actor) return;
       const pool = getPool();
       const [rows] = await pool.execute(
-        `SELECT id, email, username, display_name, is_active, created_at
-         FROM users
-         ORDER BY id ASC`
+        `SELECT u.id, u.email, u.username, u.display_name, u.is_active, u.created_at,
+                u.last_login_at, u.last_seen_at,
+                (SELECT COUNT(*) FROM sessions s
+                 WHERE s.user_id = u.id AND s.expires_at > NOW()) AS active_sessions
+         FROM users u
+         ORDER BY u.id ASC`
       );
-      return res.json({ users: rows.map(publicUser) });
+      const activity = roomActivity();
+      const online = onlineCount();
+      return res.json({
+        users: rows.map((row) => ({
+          ...publicUser(row),
+          lastLoginAt: row.last_login_at,
+          lastSeenAt: row.last_seen_at,
+          activeSessions: Number(row.active_sessions) || 0,
+          online: isOnline(row.id),
+          watching: activity.get(Number(row.id)) || null,
+        })),
+        online,
+        dashboardOnline: isOnline(DASHBOARD_USER_ID),
+      });
     } catch (err) {
       console.error("[auth/users list]", err);
       return res.status(500).json({ error: "Gagal memuat pengguna." });
+    }
+  });
+
+  router.post("/heartbeat", async (req, res) => {
+    try {
+      const user = await loadUserFromSession(readSid(req));
+      if (!user) return res.status(401).json({ error: "Belum masuk." });
+      await markOnline(user);
+      return res.json({ online: onlineCount() });
+    } catch (err) {
+      console.error("[auth/heartbeat]", err);
+      return res.status(500).json({ error: "Gagal memperbarui status." });
+    }
+  });
+
+  router.post("/users/:id/logout", async (req, res) => {
+    try {
+      const actor = await requireAdmin(req, res);
+      if (!actor) return;
+      const id = Number(req.params.id);
+      if (!Number.isInteger(id) || id < 1) {
+        return res.status(400).json({ error: "ID tidak valid." });
+      }
+      if (id === Number(actor.id)) {
+        return res.status(400).json({ error: "Tidak bisa mengeluarkan akun sendiri." });
+      }
+      const [found] = await getPool().execute(`SELECT username FROM users WHERE id = :id LIMIT 1`, { id });
+      if (!found[0]) return res.status(404).json({ error: "Pengguna tidak ditemukan." });
+      if (isAdminUser(found[0].username)) {
+        return res.status(403).json({ error: "Akun admin lain tidak bisa dikeluarkan." });
+      }
+      await forceLogoutUser(id);
+      return res.json({ ok: true });
+    } catch (err) {
+      console.error("[auth/users logout]", err);
+      return res.status(500).json({ error: "Gagal mengeluarkan pengguna." });
     }
   });
 
@@ -527,7 +627,7 @@ export function createAuthRouter() {
         id,
         isActive: isActive ? 1 : 0,
       });
-      if (!isActive) await destroyUserSessions(id);
+      if (!isActive) await forceLogoutUser(id);
       return res.json({ ok: true, user: publicUser({ ...row, is_active: isActive ? 1 : 0 }) });
     } catch (err) {
       console.error("[auth/users active]", err);
@@ -566,6 +666,7 @@ export function createAuthRouter() {
       if (!result.affectedRows) {
         return res.status(403).json({ error: "Akun admin tidak bisa dihapus." });
       }
+      await forceLogoutUser(id);
       return res.json({ ok: true });
     } catch (err) {
       console.error("[auth/users delete]", err);
@@ -616,6 +717,7 @@ export function createAuthRouter() {
       }
       await pool.execute(`DELETE FROM sessions WHERE expires_at < NOW()`);
       const { sid } = await createSession(row.id);
+      await markLogin(row.id);
       setSessionCookie(res, sid, SESSION_DAYS * 24 * 60 * 60 * 1000);
       return res.json({ user: publicUser(row) });
     } catch (err) {
@@ -627,6 +729,8 @@ export function createAuthRouter() {
   router.post("/logout", async (req, res) => {
     try {
       const sid = readSid(req);
+      const user = await loadUserFromSession(sid);
+      if (user) presence.delete(Number(user.id));
       await destroySession(sid);
       clearSessionCookie(res);
       return res.json({ ok: true });

@@ -2665,6 +2665,8 @@ function closeUsersSheet() {
 }
 
 let usersConfirmResolver = null;
+const USERS_REFRESH_MS = 15000;
+let usersRefreshTimer = null;
 
 function isUsersConfirmOpen() {
   return Boolean($("#usersConfirm") && !$("#usersConfirm").classList.contains("hidden"));
@@ -2707,13 +2709,26 @@ function formatUserDate(value) {
   }
 }
 
+function formatUserDateTime(value) {
+  try {
+    return new Date(value).toLocaleString("id-ID", {
+      day: "numeric",
+      month: "short",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  } catch {
+    return String(value);
+  }
+}
+
 function renderUsersTable(users) {
   const body = $("#usersTableBody");
   if (!body) return;
   if (!users.length) {
     body.replaceChildren();
     const tr = document.createElement("tr");
-    tr.innerHTML = `<td colspan="3">Belum ada pengguna.</td>`;
+    tr.innerHTML = `<td colspan="6">Belum ada pengguna.</td>`;
     body.append(tr);
     return;
   }
@@ -2735,6 +2750,9 @@ function renderUsersTable(users) {
           <span class="users-handle"></span>
         </td>
         <td></td>
+        <td><span class="users-status"></span><span class="users-watching"></span></td>
+        <td></td>
+        <td></td>
         <td class="users-col-actions"><div class="users-row-actions"></div></td>
       `;
       $(".users-name", tr).textContent = user.displayName || user.username;
@@ -2752,6 +2770,19 @@ function renderUsersTable(users) {
       }
       $(".users-handle", tr).textContent = `@${user.username} · ${formatUserDate(user.createdAt)}`;
       tr.children[1].textContent = user.email || "";
+      const status = $(".users-status", tr);
+      status.classList.toggle("is-online", Boolean(user.online));
+      status.textContent = user.online
+        ? "Online"
+        : user.lastSeenAt
+          ? `Terakhir ${formatUserDateTime(user.lastSeenAt)}`
+          : "Belum aktif";
+      if (user.watching) {
+        const role = user.watching.role === "host" ? "Host" : "Nonton";
+        $(".users-watching", tr).textContent = `${role}: ${user.watching.title}`;
+      }
+      tr.children[3].textContent = user.lastLoginAt ? formatUserDateTime(user.lastLoginAt) : "—";
+      tr.children[4].textContent = String(user.activeSessions ?? 0);
       const actions = $(".users-row-actions", tr);
       const edit = document.createElement("button");
       edit.type = "button";
@@ -2759,6 +2790,15 @@ function renderUsersTable(users) {
       edit.dataset.userAction = "edit";
       edit.textContent = "Ubah";
       actions.append(edit);
+      if (!locked) {
+        const kick = document.createElement("button");
+        kick.type = "button";
+        kick.className = "btn-user";
+        kick.dataset.userAction = "force-logout";
+        kick.textContent = "Keluarkan";
+        kick.disabled = !user.activeSessions;
+        actions.append(kick);
+      }
       if (locked) {
         const toggleSlot = document.createElement("span");
         toggleSlot.className = "btn-user btn-user-slot";
@@ -2794,7 +2834,11 @@ async function loadAdminUsers() {
     setUsersError(data?.error || "Gagal memuat pengguna.");
     return;
   }
-  renderUsersTable(Array.isArray(data?.users) ? data.users : []);
+  const users = Array.isArray(data?.users) ? data.users : [];
+  renderUsersTable(users);
+  const dashboard = data?.dashboardOnline ? " (termasuk akun dasbor)" : "";
+  $("#usersSummary").textContent =
+    `${data?.online ?? 0} sedang login${dashboard} · ${users.length} akun terdaftar`;
 }
 
 async function openUsersModal() {
@@ -2805,6 +2849,10 @@ async function openUsersModal() {
   setUsersSuccess("");
   $("#usersModal")?.classList.remove("hidden");
   document.body.style.overflow = "hidden";
+  clearInterval(usersRefreshTimer);
+  usersRefreshTimer = setInterval(() => {
+    loadAdminUsers().catch((err) => console.error(err));
+  }, USERS_REFRESH_MS);
   try {
     await loadAdminUsers();
   } catch (err) {
@@ -2816,6 +2864,7 @@ async function openUsersModal() {
 function closeUsersModal() {
   const modal = $("#usersModal");
   if (!modal || modal.classList.contains("hidden")) return;
+  clearInterval(usersRefreshTimer);
   modal.classList.add("hidden");
   closeUsersConfirm(false);
   closeUsersSheet();
@@ -3018,6 +3067,48 @@ function closeAuthModal() {
   }
 }
 
+const HEARTBEAT_MS = 30000;
+const ONLINE_TOAST_MS = 6000;
+let heartbeatTimer = null;
+let onlineToastTimer = null;
+
+async function sendHeartbeat() {
+  const { res, data } = await authFetch("/heartbeat", { method: "POST", body: "{}" });
+  if (res.status === 401 && currentUser) {
+    // Sesi diakhiri admin atau kedaluwarsa.
+    stopPresence();
+    currentUser = null;
+    renderAuthChrome();
+    return null;
+  }
+  if (!res.ok) return null;
+  const chip = $("#onlineChip");
+  chip.textContent = `${data.online} login`;
+  chip.classList.remove("hidden");
+  return data.online;
+}
+
+function startPresence() {
+  clearInterval(heartbeatTimer);
+  heartbeatTimer = setInterval(() => {
+    sendHeartbeat().catch((err) => console.error(err));
+  }, HEARTBEAT_MS);
+  return sendHeartbeat();
+}
+
+function stopPresence() {
+  clearInterval(heartbeatTimer);
+  $("#onlineChip")?.classList.add("hidden");
+}
+
+function showOnlineToast(online) {
+  const toast = $("#onlineToast");
+  toast.textContent = `Login berhasil · ${online} user sedang login`;
+  toast.classList.remove("hidden");
+  clearTimeout(onlineToastTimer);
+  onlineToastTimer = setTimeout(() => toast.classList.add("hidden"), ONLINE_TOAST_MS);
+}
+
 async function refreshAuthSession() {
   try {
     const { res, data } = await authFetch("/me");
@@ -3056,6 +3147,8 @@ async function onAuthSuccess(user, bootMessage = "Menyiapkan beranda…") {
   $("#authModal")?.classList.add("hidden");
   try {
     await bootApp();
+    const online = await startPresence().catch(() => null);
+    if (online != null) showOnlineToast(online);
     const next = afterAuth;
     afterAuth = null;
     next?.();
@@ -3237,6 +3330,34 @@ function bindAuth() {
       }
       return;
     }
+    if (action === "force-logout") {
+      const handle = row.dataset.username || "";
+      const ok = await askUsersConfirm({
+        title: "Keluarkan pengguna",
+        body: `Akhiri semua sesi login @${handle}? Pengguna itu bisa login lagi.`,
+        confirmLabel: "Keluarkan",
+        tone: "off",
+      });
+      if (!ok) return;
+      setUsersError("");
+      setUsersSuccess("");
+      try {
+        const { res, data } = await authFetch(`/users/${encodeURIComponent(id)}/logout`, {
+          method: "POST",
+          body: "{}",
+        });
+        if (!res.ok) {
+          setUsersError(data?.error || "Gagal mengeluarkan pengguna.");
+          return;
+        }
+        setUsersSuccess(`Akun @${handle} dikeluarkan.`);
+        await loadAdminUsers();
+      } catch (err) {
+        console.error(err);
+        setUsersError("Gagal mengeluarkan pengguna.");
+      }
+      return;
+    }
     if (action === "toggle-active") {
       if (row.dataset.locked === "1") return;
       const handle = row.dataset.username || "";
@@ -3325,6 +3446,7 @@ function bindAuth() {
   });
 
   $("#authLogoutBtn")?.addEventListener("click", async () => {
+    stopPresence();
     await authFetch("/logout", { method: "POST", body: "{}" });
     currentUser = null;
     favorites = [];
@@ -3770,6 +3892,7 @@ async function init() {
     bindRooms();
     await refreshAuthSession();
     await bootApp();
+    if (currentUser) startPresence().catch((err) => console.error(err));
     joinRoomFromUrl();
   } catch (err) {
     console.error(err);

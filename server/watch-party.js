@@ -209,6 +209,30 @@ function requireHost(req, res) {
   return room;
 }
 
+/** userId → ruang yang sedang ditonton, untuk monitoring admin. */
+export function roomActivity() {
+  const activity = new Map();
+  for (const room of rooms.values()) {
+    for (const conn of room.connections) {
+      activity.set(conn.userId, {
+        code: room.code,
+        title: room.media.title,
+        role: conn.userId === room.hostId ? "host" : "viewer",
+      });
+    }
+  }
+  return activity;
+}
+
+/** Akun dikeluarkan admin: putuskan koneksi; tersambung ulang akan ditolak 401. */
+export function kickRoomUser(userId) {
+  for (const room of rooms.values()) {
+    for (const conn of [...room.connections]) {
+      if (conn.userId === userId) conn.res.end();
+    }
+  }
+}
+
 export function createWatchPartyRouter() {
   const router = Router();
 
