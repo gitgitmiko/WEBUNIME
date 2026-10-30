@@ -1636,7 +1636,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "5 eps",
+    "durasi": "22 Menit",
     "episodes_count": 5,
     "genre": [
       "Drama",
@@ -1886,7 +1886,7 @@
     "rating": "6.9",
     "votes": null,
     "durasi": "24 Menit",
-    "episodes_count": 4,
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Fantasy",
@@ -2031,44 +2031,52 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Tougen Anki: Nikko Kegon no Taki-hen Episode 5",
+        "slug": "tougen-anki-nikko-kegon-no-taki-hen-episode-5",
+        "source": "https://v2.samehadaku.how/tougen-anki-nikko-kegon-no-taki-hen-episode-5/",
+        "date": "",
+        "released_at": "2026-10-30T18:00:38.589Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/5UlQnJob#mN8EyNenHF3UTXzjzWL_WyeJt5T_qIl8IGzx56BYlHY",
+            "default": true,
+            "post": "55029",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwGWZqJpEg3xAy_GNMP1MAwmLR-q0MTrmexy9WtYTOHx14zbtgTPsQKbYNTGeC7l2FV4YwfEfSqSJ8tj67v5Vw1aooehlb10ZI6xi9wPWHgyzWJ9tMjVK9Wo6hrCliFjayP0k71",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy18MwFRoy5LVcX4UPXy7SfDJqpNSna-Jcqu5MGLVz7Qcj-fyZx--DUxDdG0cbJ6XaOplLQqh99ZsIuaFPbVFVNHyYIEBLuVafF9yxpsAzIdvw3kE7HpyH-IdRJkXnoGrNCKYc",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dy0nUehMo_3hDNjJHd-RcJAFq44rheUB9Z7aJkGRx4n6Xf1ELzHShdfI7buBg_DFDoKQIpZYlU3r90rS9xZspZYBtyz1bTDQWVEemS3MIYwDXDVvzt8vBXZvPkwViCN3m9pOzY",
-        "default": true,
-        "post": "54556",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/F350zSBb#j-WqiuJ7z-cF8gJDhE_WlCqb_DpRlrXNncr0z3ILeRI",
-        "default": false,
-        "post": "54556",
+        "url": "https://mega.nz/embed/5UlQnJob#mN8EyNenHF3UTXzjzWL_WyeJt5T_qIl8IGzx56BYlHY",
+        "default": true,
+        "post": "55029",
         "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/sywyyQoC#3Jdp0z_PBnRKxJei3tqksVs4l1n4tVeA91xbqjejfec",
-        "default": false,
-        "post": "54556",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/Jvp13K4Z#vtTuI2UNHnESXrFPcE25W7zP2puAtLg2aUdh36GjzY8",
-        "default": false,
-        "post": "54556",
-        "nume": "5"
       }
     ],
     "id": 9,
@@ -6755,7 +6763,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
@@ -15659,8 +15667,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Uchi%20no%20Otouto-domo%20ga%20Sumimasen.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 15,
+    "durasi": "16 eps",
+    "episodes_count": 16,
     "genre": [
       "Comedy",
       "Romance",
@@ -16042,6 +16050,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxY0kLK8NlEs5UQ-LEZwrzahmhhJ31sWYvW6o8IX-KUG7LesHOYJo2PUFRfzJhSGrHNhxqc0kR5v9ySjrzZ8FWXksOSzsRGoxkY1yZ_Qf9XsQS6JG-G8FA-uBLnUWb0bzmcsCE",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 17,
+        "title": "Uchi no Otouto-domo ga Sumimasen Episode 17",
+        "slug": "uchi-no-otouto-domo-ga-sumimasen-episode-17",
+        "source": "https://anoboy.quest/2026/10/uchi-no-otouto-domo-ga-sumimasen-episode-17/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzKaduZPLyO5tundV997CdRzttxVS_7ItMRmYnFbr2dO0RmHjxsuBwxM1HvoVPuAGy_zh7prAZnl8JPeD7ohXUJtxZd8Eptr7Deo5trma1xmlfrThQFKsBNQRYGVXRPohVSHgA",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzMzE-oi-rq5mEiTZzIDgK_0akCxHR8c7SDzLZ1mt4Dvd5US9nu47iUt3jc02bps9y964QBrm8aMzvx3Vnj52OeutlVAqjTZmLBinPH-LKns55K4CgqsGI0CHj9NVTZATKqogO7",
             "default": false,
             "source": "anoboy"
           }
