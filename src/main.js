@@ -1718,6 +1718,7 @@ async function showEmbed(url) {
 
 function selectServer(url) {
   currentServerUrl = url || null;
+  pushRoomMedia();
   if (!url) {
     clearEmbed();
     $("#playerHint").textContent = "Mode demo — preview poster cinematic";
@@ -1733,6 +1734,8 @@ function playerMatchText(player) {
 /** Pilih server awal: film→Hydrax; anime→Wibufile 1080p. */
 function pickPreferredPlayer(movie, players) {
   if (!players?.length) return null;
+  const forced = room?.media?.serverUrl && players.find((p) => p.url === room.media.serverUrl);
+  if (forced) return forced;
   const isAnimeType =
     movie?.type === "anime" || movie?.type === "anime-movie";
   const prefer = (preds) => {
@@ -1774,7 +1777,7 @@ function pickPreferredPlayer(movie, players) {
 
 function setupServers(movie) {
   const wrap = $("#playerServerDropdown");
-  const players = currentPlayers(movie);
+  const players = roomPlayers(currentPlayers(movie));
 
   if (!players.length) {
     wrap.classList.add("hidden");
@@ -1905,7 +1908,7 @@ function goToEpisode(slug, { auto = false } = {}) {
   syncEpisodeDropdown(ep.slug);
   updateEpisodeNavUi();
 
-  const players = currentPlayers(show);
+  const players = roomPlayers(currentPlayers(show));
   if (!players.length) {
     clearEmbed();
     $("#playerHint").textContent = auto
@@ -1936,6 +1939,7 @@ function goToEpisode(slug, { auto = false } = {}) {
 }
 
 function goAdjacentEpisode(delta, { auto = false } = {}) {
+  if (room?.role === "viewer") return false;
   const next = adjacentEpisode(delta);
   if (!next) return false;
   return goToEpisode(next.slug, { auto });
@@ -1951,6 +1955,7 @@ function armAutoNext() {
 }
 
 function tryAutoNextEpisode() {
+  if (room?.role === "viewer") return;
   if (!autoNextArmed || !isAutoNextEnabled()) return;
   if ($("#player")?.classList.contains("hidden")) return;
   if (Date.now() < (tryAutoNextEpisode._lockUntil || 0)) return;
@@ -2054,6 +2059,7 @@ async function openPlayer(movie) {
 }
 
 function closePlayer() {
+  leaveRoom();
   const player = $("#player");
   player.classList.add("hidden");
   player.classList.remove("is-playing", "is-embed");
@@ -2440,7 +2446,7 @@ function bindActions() {
       openPlayer(activeMovie);
     }
   });
-  $("#playerBack").addEventListener("click", closePlayer);
+  $("#playerBack").addEventListener("click", requestClosePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
   $("#playerEpPrev")?.addEventListener("click", () => {
     pinEpisodeNav();
@@ -2505,7 +2511,8 @@ function bindActions() {
       closeNavMenus();
       return;
     }
-    if (!$("#player").classList.contains("hidden")) closePlayer();
+    if (!$("#roomsModal")?.classList.contains("hidden")) closeRoomsModal();
+    else if (!$("#player").classList.contains("hidden")) requestClosePlayer();
     else closeModal();
   });
 }
@@ -2513,6 +2520,8 @@ function bindActions() {
 let currentUser = null;
 let appBooted = false;
 let authBindingsReady = false;
+/** Tindakan yang tertunda sampai login berhasil. */
+let afterAuth = null;
 
 async function authFetch(path, options = {}) {
   const res = await fetch(`/api/auth${path}`, {
@@ -2876,6 +2885,9 @@ function resetAuthForms() {
   const login = $("#authLoginForm");
   login?.reset();
   setAuthFormLoading(login, false, "Login");
+  const register = $("#authRegisterForm");
+  register?.reset();
+  setAuthFormLoading(register, false, "Daftar");
   resetUsersForm();
 }
 
@@ -2884,7 +2896,7 @@ function enterAuthGate(mode = "login") {
   closeModal();
   endAuthBoot();
   resetAuthForms();
-  showAuthPane(mode === "register" ? "login" : mode);
+  showAuthPane(mode);
   const modal = $("#authModal");
   modal.classList.remove("hidden");
   modal.classList.add("is-gate");
@@ -2916,13 +2928,15 @@ function renderAuthChrome() {
     name.textContent = currentUser.displayName || currentUser.username;
     avatar.textContent = (currentUser.displayName || currentUser.username || "?").slice(0, 1).toUpperCase();
     tabLogin?.classList.add("hidden");
+    $("#authTabRegister")?.classList.add("hidden");
     tabProfile.classList.remove("hidden");
     usersBtn?.classList.toggle("hidden", !canInviteUsers());
   } else {
-    openBtn.classList.add("hidden");
+    openBtn.classList.remove("hidden");
     chip.classList.add("hidden");
     usersBtn?.classList.add("hidden");
     tabLogin?.classList.remove("hidden");
+    $("#authTabRegister")?.classList.remove("hidden");
     tabProfile.classList.add("hidden");
     closeUsersModal();
   }
@@ -2930,24 +2944,27 @@ function renderAuthChrome() {
 }
 
 function showAuthPane(mode) {
-  let nextMode = mode === "register" ? (currentUser ? "profile" : "login") : mode;
+  const nextMode = mode === "register" && currentUser ? "profile" : mode;
 
   const login = $("#authLoginForm");
+  const register = $("#authRegisterForm");
   const profile = $("#authProfileForm");
   const title = $("#authModalTitle");
   const lead = $("#authLead");
   const tabs = {
     login: $("#authTabLogin"),
+    register: $("#authTabRegister"),
     profile: $("#authTabProfile"),
   };
 
   login.classList.toggle("hidden", nextMode !== "login");
+  register.classList.toggle("hidden", nextMode !== "register");
   profile.classList.toggle("hidden", nextMode !== "profile");
 
   Object.entries(tabs).forEach(([key, el]) => {
     if (!el) return;
     const visible =
-      (key === "login" && !currentUser) ||
+      ((key === "login" || key === "register") && !currentUser) ||
       (key === "profile" && Boolean(currentUser));
     el.classList.toggle("hidden", !visible);
     el.classList.toggle("is-active", key === nextMode);
@@ -2955,6 +2972,7 @@ function showAuthPane(mode) {
   });
 
   if (nextMode === "login") title.textContent = "Login ke WEBUNIME";
+  else if (nextMode === "register") title.textContent = "Daftar akun WEBUNIME";
   else title.textContent = "Profil saya";
 
   if (lead) {
@@ -3038,6 +3056,9 @@ async function onAuthSuccess(user, bootMessage = "Menyiapkan beranda…") {
   $("#authModal")?.classList.add("hidden");
   try {
     await bootApp();
+    const next = afterAuth;
+    afterAuth = null;
+    next?.();
   } catch (err) {
     console.error(err);
     setAuthError("Login berhasil, tetapi katalog gagal dimuat. Muat ulang halaman.");
@@ -3058,6 +3079,7 @@ function bindAuth() {
     })
   );
   $("#authTabLogin")?.addEventListener("click", () => showAuthPane("login"));
+  $("#authTabRegister")?.addEventListener("click", () => showAuthPane("register"));
   $("#authTabProfile")?.addEventListener("click", () => {
     if (currentUser) showAuthPane("profile");
   });
@@ -3255,6 +3277,36 @@ function bindAuth() {
     }
   });
 
+  $("#authRegisterForm")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    setAuthError("");
+    setAuthSuccess("");
+    setAuthFormLoading(form, true, "Daftar");
+    try {
+      const fd = new FormData(form);
+      const { res, data } = await authFetch("/register", {
+        method: "POST",
+        body: JSON.stringify({
+          displayName: String(fd.get("displayName") || ""),
+          username: String(fd.get("username") || ""),
+          email: String(fd.get("email") || ""),
+          password: String(fd.get("password") || ""),
+        }),
+      });
+      if (!res.ok) {
+        setAuthError(data?.error || "Gagal mendaftar.");
+        return;
+      }
+      await onAuthSuccess(data.user, "Akun dibuat, memuat katalog…");
+    } catch (err) {
+      console.error(err);
+      setAuthError("Gagal mendaftar. Coba lagi.");
+    } finally {
+      setAuthFormLoading(form, false, "Daftar");
+    }
+  });
+
   $("#authProfileForm")?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const fd = new FormData(e.target);
@@ -3284,11 +3336,441 @@ function bindAuth() {
   });
 }
 
+/* ---------- Nonton bareng ---------- */
+
+const ROOM_MSG = "webunime-room";
+const ROOM_PARAM = "nobar";
+const ROOM_TICK_MS = 1500;
+const ROOM_HEARTBEAT_MS = 5000;
+const ROOM_NO_SYNC_HINT_MS = 20000;
+/** Embed lintas-origin tidak bisa dikendalikan/dibaca dari luar. */
+const UNSYNCABLE_HOST_RE = /blogger\.com|mega\.(nz|io)|p2pplay\.|barplay\.|p2pstream\./i;
+
+/** { code, role, media, playback, playbackAt, source, tick, ... } */
+let room = null;
+
+function isSyncableServer(url) {
+  try {
+    return !UNSYNCABLE_HOST_RE.test(new URL(url).hostname);
+  } catch {
+    return false;
+  }
+}
+
+function roomPlayers(players) {
+  return room ? players.filter((p) => isSyncableServer(p.url)) : players;
+}
+
+async function roomFetch(path, options = {}) {
+  const res = await fetch(`/api/v1/rooms${path}`, {
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+    ...options,
+  });
+  let data = null;
+  try {
+    data = await res.json();
+  } catch {
+    data = null;
+  }
+  return { res, data };
+}
+
+function roomPosition() {
+  if (!room?.playback) return 0;
+  const { playing, time } = room.playback;
+  return playing ? time + (Date.now() - room.playbackAt) / 1000 : time;
+}
+
+function setRoomPlayback(playback) {
+  room.playback = playback;
+  room.playbackAt = Date.now();
+}
+
+function roomLink(code) {
+  return `${location.origin}/?${ROOM_PARAM}=${code}`;
+}
+
+function setRoomUrl(code) {
+  const url = new URL(location.href);
+  if (code) url.searchParams.set(ROOM_PARAM, code);
+  else url.searchParams.delete(ROOM_PARAM);
+  history.replaceState(null, "", url);
+}
+
+function postToPlayer(msg) {
+  $("#playerFrame")?.contentWindow?.postMessage({ source: ROOM_MSG, ...msg }, location.origin);
+}
+
+/** Kirim status ruang ke player; idempoten, agen di iframe yang menyesuaikan. */
+function syncPlayerFrame() {
+  if (!room) return;
+  const msg = { cmd: "sync", role: room.role };
+  if (room.role === "viewer") {
+    msg.playback = { playing: room.playback.playing, time: roomPosition() };
+  } else {
+    msg.resumeAt = room.resumeAt;
+    msg.resumeToken = room.resumeToken;
+  }
+  postToPlayer(msg);
+  renderRoomStatus();
+}
+
+function renderRoomStatus() {
+  if (!room) return;
+  const isHost = room.role === "host";
+  const count = room.viewers?.length || 0;
+  $("#roomBadgeRole").textContent = isHost ? "Host" : `Host: ${room.hostName}`;
+  $("#roomBadgeCount").textContent = `${count} penonton`;
+
+  const noPlayer = !room.frameReady && Date.now() - room.frameLoadedAt > ROOM_NO_SYNC_HINT_MS;
+  const hint = $("#roomHostHint");
+  hint.classList.toggle("hidden", !(isHost && noPlayer));
+  if (isHost && noPlayer) {
+    hint.textContent = "Video belum terdeteksi. Tekan play di pemutar, atau ganti server.";
+  }
+
+  if (isHost) return;
+  // Server seperti Cast minta klik verifikasi di dalam pemutar: kunci baru aktif setelah video ada.
+  $("#roomLock").classList.toggle("is-passthrough", !room.frameReady);
+  let text = "";
+  if (!room.frameReady) text = "Memuat video… tekan play di pemutar bila diminta";
+  else if (room.needsTap) text = "Ketuk untuk menyalakan suara";
+  else if (!room.hostOnline) text = "Host terputus, menunggu host kembali…";
+  else if (!room.playback.playing) text = "Dijeda oleh host";
+  const msgEl = $("#roomLockMsg");
+  msgEl.textContent = text;
+  msgEl.classList.toggle("hidden", !text);
+}
+
+function applyRoomChrome() {
+  const player = $("#player");
+  player.classList.toggle("in-room", Boolean(room));
+  player.classList.toggle("is-room-viewer", room?.role === "viewer");
+  $("#roomBadge").classList.toggle("hidden", !room);
+  $("#roomLock").classList.toggle("hidden", room?.role !== "viewer");
+  if (!room) $("#roomHostHint").classList.add("hidden");
+}
+
+/** Host mengganti server/episode → semua penonton ikut. */
+function pushRoomMedia() {
+  if (room?.role !== "host" || !currentServerUrl || !activeMovie) return;
+  const collection = resolveCollection(activeMovie);
+  const slug = activeMovie.anime_slug && collection === "anime" ? activeMovie.anime_slug : activeMovie.slug;
+  const episodeSlug = activeEpisode?.slug || null;
+  const prev = room.media;
+  const sameEpisode = prev.slug === slug && prev.episodeSlug === episodeSlug;
+  if (sameEpisode && prev.serverUrl === currentServerUrl) return;
+
+  room.media = { ...prev, collection, slug, episodeSlug, serverUrl: currentServerUrl };
+  room.frameReady = false;
+  room.frameLoadedAt = Date.now();
+  room.resumeAt = sameEpisode ? roomPosition() : 0;
+  room.resumeToken = Date.now();
+  if (!sameEpisode) setRoomPlayback({ playing: room.playback.playing, time: 0 });
+  roomFetch(`/${room.code}/media`, {
+    method: "POST",
+    body: JSON.stringify({ collection, slug, episodeSlug, serverUrl: currentServerUrl }),
+  })
+    .then(({ res, data }) => {
+      if (!res.ok) $("#playerHint").textContent = data?.error || "Gagal mengganti media ruang.";
+    })
+    .catch((err) => console.error(err));
+}
+
+function pushRoomPlayback(report) {
+  if (room?.role !== "host") return;
+  const flipped = report.playing !== room.playback.playing;
+  const jumped = Math.abs(report.time - roomPosition()) > 2;
+  const due = Date.now() - (room.lastPushAt || 0) >= ROOM_HEARTBEAT_MS;
+  if (!flipped && !jumped && !due) return;
+  room.lastPushAt = Date.now();
+  setRoomPlayback({ playing: report.playing, time: report.time });
+  roomFetch(`/${room.code}/playback`, {
+    method: "POST",
+    body: JSON.stringify({ playing: report.playing, time: report.time }),
+  }).catch((err) => console.error(err));
+}
+
+async function loadRoomMedia(media) {
+  const item = await hydrateItem({ slug: media.slug, nama: media.title }, media.collection);
+  if (!room) return;
+  activeEpisode = media.episodeSlug ? getEpisodeBySlug(item, media.episodeSlug) : null;
+  await openPlayer(item);
+  room.frameReady = false;
+  room.frameLoadedAt = Date.now();
+}
+
+function onRoomEvent(event) {
+  if (!room) return;
+  if (event.type === "state") {
+    room.hostName = event.room.hostName;
+    room.hostOnline = event.room.hostOnline;
+    room.viewers = event.room.viewers;
+    setRoomPlayback(event.room.playback);
+    // Tersambung ulang: media bisa berubah selama koneksi putus.
+    if (room.role === "viewer" && event.room.media.serverUrl !== room.media.serverUrl) {
+      room.media = event.room.media;
+      loadRoomMedia(room.media).catch((err) => console.error(err));
+    }
+  } else if (event.type === "presence") {
+    room.viewers = event.viewers;
+    room.hostOnline = event.hostOnline;
+  } else if (event.type === "playback") {
+    if (room.role === "viewer") setRoomPlayback(event.playback);
+  } else if (event.type === "media") {
+    if (room.role === "viewer") {
+      room.media = event.media;
+      setRoomPlayback(event.playback);
+      loadRoomMedia(event.media).catch((err) => console.error(err));
+    }
+  } else if (event.type === "closed") {
+    const ownEnd = room.role === "host";
+    closePlayer();
+    if (!ownEnd) alert("Nonton bareng sudah berakhir.");
+    return;
+  }
+  syncPlayerFrame();
+}
+
+function connectRoomEvents() {
+  const source = new EventSource(`/api/v1/rooms/${room.code}/events`);
+  room.source = source;
+  source.onmessage = (e) => {
+    try {
+      onRoomEvent(JSON.parse(e.data));
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  source.onerror = async () => {
+    // Putus biasa disambung ulang browser; CLOSED berarti ditolak server (mis. ruang habis).
+    if (!room || source !== room.source || source.readyState !== EventSource.CLOSED) return;
+    const { res } = await roomFetch(`/${room.code}`).catch(() => ({ res: null }));
+    if (!room || source !== room.source) return;
+    if (res?.status === 404) {
+      closePlayer();
+      alert("Nonton bareng sudah berakhir.");
+    } else {
+      setTimeout(() => {
+        if (room && source === room.source) connectRoomEvents();
+      }, 3000);
+    }
+  };
+}
+
+async function enterRoom(snapshot) {
+  leaveRoom();
+  room = {
+    code: snapshot.code,
+    role: snapshot.hostId === currentUser?.id ? "host" : "viewer",
+    hostName: snapshot.hostName,
+    hostOnline: snapshot.hostOnline,
+    media: snapshot.media,
+    viewers: snapshot.viewers,
+    resumeAt: snapshot.playback.time,
+    resumeToken: Date.now(),
+    frameReady: false,
+    frameLoadedAt: Date.now(),
+    needsTap: false,
+  };
+  setRoomPlayback(snapshot.playback);
+  setRoomUrl(room.code);
+  closeRoomsModal();
+  applyRoomChrome();
+  connectRoomEvents();
+  room.tick = setInterval(syncPlayerFrame, ROOM_TICK_MS);
+  await loadRoomMedia(room.media);
+  renderRoomStatus();
+}
+
+/** Lepas dari ruang di browser ini. Ruang tetap hidup untuk yang lain. */
+function leaveRoom() {
+  if (!room) return;
+  room.source?.close();
+  clearInterval(room.tick);
+  room = null;
+  setRoomUrl(null);
+  applyRoomChrome();
+}
+
+function requestClosePlayer() {
+  if (room?.role !== "host") return closePlayer();
+  if (!confirm("Akhiri nonton bareng untuk semua penonton?")) return;
+  const code = room.code;
+  closePlayer();
+  roomFetch(`/${code}`, { method: "DELETE" }).catch((err) => console.error(err));
+}
+
+function requireLoginThen(action) {
+  if (currentUser) return action();
+  afterAuth = action;
+  openAuthModal("login");
+}
+
+async function startRoomFromPlayer() {
+  const movie = activeMovie;
+  const episode = activeEpisode;
+  if (!currentUser) {
+    requireLoginThen(() => {
+      activeEpisode = episode;
+      openPlayer(movie);
+    });
+    return;
+  }
+  const players = currentPlayers(movie);
+  const pick = isSyncableServer(currentServerUrl)
+    ? currentServerUrl
+    : players.find((p) => isSyncableServer(p.url))?.url;
+  if (!pick) {
+    alert("Server judul ini tidak mendukung nonton bareng.");
+    return;
+  }
+  const collection = resolveCollection(movie);
+  const slug = movie.anime_slug && collection === "anime" ? movie.anime_slug : movie.slug;
+  const { res, data } = await roomFetch("", {
+    method: "POST",
+    body: JSON.stringify({ collection, slug, episodeSlug: episode?.slug || null, serverUrl: pick }),
+  });
+  if (!res.ok) {
+    alert(data?.error || "Gagal membuat ruang.");
+    return;
+  }
+  await enterRoom(data.room);
+}
+
+async function joinRoom(rawCode) {
+  const code = String(rawCode || "").trim().toUpperCase();
+  const { res, data } = await roomFetch(`/${encodeURIComponent(code)}`);
+  if (!res.ok) throw new Error(data?.error || "Gagal bergabung.");
+  await enterRoom(data.room);
+}
+
+function closeRoomsModal() {
+  $("#roomsModal")?.classList.add("hidden");
+}
+
+async function openRoomsModal() {
+  const modal = $("#roomsModal");
+  const list = $("#roomsList");
+  $("#roomsError").classList.add("hidden");
+  modal.classList.remove("hidden");
+  list.innerHTML = "";
+  const { res, data } = await roomFetch("");
+  const rooms = res.ok ? data?.rooms || [] : [];
+  if (!rooms.length) {
+    list.innerHTML = '<li class="rooms-list-empty">Belum ada ruang aktif.</li>';
+    return;
+  }
+  list.innerHTML = rooms
+    .map(
+      (r) => `<li><button type="button" class="rooms-item" data-room-code="${escapeHtml(r.code)}">
+        <span>${escapeHtml(r.media.title)}${r.media.episodeLabel ? ` · Ep ${escapeHtml(r.media.episodeLabel)}` : ""}</span>
+        <small>Host: ${escapeHtml(r.hostName)} · ${r.viewers.length} penonton</small>
+      </button></li>`
+    )
+    .join("");
+}
+
+function showRoomsError(err) {
+  const el = $("#roomsError");
+  el.textContent = err.message || "Gagal bergabung.";
+  el.classList.remove("hidden");
+}
+
+function bindRooms() {
+  $("#playerPartyBtn")?.addEventListener("click", () => {
+    startRoomFromPlayer().catch((err) => {
+      console.error(err);
+      alert("Gagal membuat ruang.");
+    });
+  });
+  $("#roomsOpenBtn")?.addEventListener("click", () => requireLoginThen(openRoomsModal));
+  $$("[data-rooms-close]").forEach((el) => el.addEventListener("click", closeRoomsModal));
+  $("#roomsJoinForm")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    joinRoom(new FormData(e.target).get("code")).catch(showRoomsError);
+  });
+  $("#roomsList")?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-room-code]");
+    if (btn) joinRoom(btn.dataset.roomCode).catch(showRoomsError);
+  });
+  $("#roomCopyBtn")?.addEventListener("click", async (e) => {
+    if (!room) return;
+    const link = roomLink(room.code);
+    try {
+      await navigator.clipboard.writeText(link);
+      e.target.textContent = "Tersalin";
+      setTimeout(() => {
+        e.target.textContent = "Salin tautan";
+      }, 1500);
+    } catch {
+      prompt("Salin tautan ini:", link);
+    }
+  });
+
+  const sendVolume = () => {
+    const volume = Number($("#roomVolume").value);
+    const muted = Boolean(room?.muted);
+    $("#roomMuteBtn").textContent = muted ? "Nyalakan suara" : "Bisukan";
+    postToPlayer({ cmd: "volume", muted, volume });
+  };
+  $("#roomMuteBtn")?.addEventListener("click", () => {
+    if (!room) return;
+    room.muted = !room.muted;
+    sendVolume();
+  });
+  $("#roomVolume")?.addEventListener("input", () => {
+    if (!room) return;
+    room.muted = false;
+    sendVolume();
+  });
+  $("#roomLockMsg")?.addEventListener("click", () => {
+    if (!room?.needsTap) return;
+    room.needsTap = false;
+    room.muted = false;
+    sendVolume();
+    syncPlayerFrame();
+  });
+  $("#roomFullscreenBtn")?.addEventListener("click", () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else $(".player-stage")?.requestFullscreen?.();
+  });
+
+  window.addEventListener("message", (e) => {
+    if (!room || e.origin !== location.origin) return;
+    if (e.source !== $("#playerFrame")?.contentWindow) return;
+    const d = e.data;
+    if (!d || d.source !== ROOM_MSG) return;
+    if (d.status === "ready") room.frameReady = true;
+    if (d.status === "muted" || d.status === "blocked") room.needsTap = true;
+    if (d.report) {
+      room.frameReady = true;
+      pushRoomPlayback(d.report);
+    }
+    renderRoomStatus();
+  });
+}
+
+/** Tautan undangan /?nobar=KODE. */
+function joinRoomFromUrl() {
+  const code = new URLSearchParams(location.search).get(ROOM_PARAM);
+  if (!code) return;
+  requireLoginThen(() => {
+    joinRoom(code).catch((err) => {
+      setRoomUrl(null);
+      alert(err.message || "Gagal bergabung.");
+    });
+  });
+}
+
 async function init() {
   try {
     bindAuth();
+    bindRooms();
     await refreshAuthSession();
     await bootApp();
+    joinRoomFromUrl();
   } catch (err) {
     console.error(err);
     endAuthBoot();

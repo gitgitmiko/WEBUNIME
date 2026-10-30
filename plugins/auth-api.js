@@ -2,6 +2,7 @@ import { createAuthRouter, createLoginGuard, ensureUsersSchema } from "../server
 import { createCatalogAdminRouter } from "../server/catalog-admin.js";
 import { createCatalogReadRouter } from "../server/catalog-api.js";
 import { createUserLibraryRouter } from "../server/user-library-api.js";
+import { createWatchPartyRouter, initWatchParty } from "../server/watch-party.js";
 import cookieParser from "cookie-parser";
 import express from "express";
 
@@ -29,6 +30,8 @@ function mountApi(middlewares) {
   const v1 = express.Router();
   v1.use(createCatalogReadRouter());
   v1.use(createUserLibraryRouter());
+  v1.use(createWatchPartyRouter());
+  initWatchParty();
   const guard = createLoginGuard();
 
   middlewares.use(async (req, res, next) => {

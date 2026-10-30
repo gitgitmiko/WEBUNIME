@@ -10,6 +10,8 @@
  * - Endpoint /api/resolve?url=... mengekstrak iframe dalam dari playeriframe (hindari iklan dobel)
  */
 
+import { WATCH_SYNC_AGENT_TAG } from "./watch-sync-agent.js";
+
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
@@ -1226,6 +1228,7 @@ function buildHtml5VideoPage(mediaUrl, title = "WEBUNIME Player", origin = "") {
       }, 25000);
     })();
   </script>
+  ${WATCH_SYNC_AGENT_TAG}
 </body>
 </html>`;
 }
@@ -1275,6 +1278,7 @@ function buildHlsPlayerPage(m3u8Url, title = "WEBUNIME Player", origin = "") {
       });
     })();
   </script>
+  ${WATCH_SYNC_AGENT_TAG}
 </body>
 </html>`;
 }
@@ -1603,9 +1607,9 @@ function sanitizeHtml(html, pageUrl, origin = "", { wasmB64 = "" } = {}) {
   const baseTag = `<base href="${baseHref}">`;
 
   if (/<head[^>]*>/i.test(out)) {
-    out = out.replace(/<head[^>]*>/i, (m) => `${m}\n${baseTag}\n${shim}`);
+    out = out.replace(/<head[^>]*>/i, (m) => `${m}\n${baseTag}\n${shim}\n${WATCH_SYNC_AGENT_TAG}`);
   } else {
-    out = `${baseTag}\n${shim}\n${out}`;
+    out = `${baseTag}\n${shim}\n${WATCH_SYNC_AGENT_TAG}\n${out}`;
   }
 
   out = rewriteHtmlUrls(out, pageUrl);
@@ -2225,6 +2229,7 @@ iframe#wuEmbed{
   }
 })();
 </script>
+  ${WATCH_SYNC_AGENT_TAG}
 </body></html>`;
 }
 

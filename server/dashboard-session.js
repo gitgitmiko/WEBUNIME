@@ -1,4 +1,4 @@
-import { createHmac, scrypt as scryptCb, timingSafeEqual } from "node:crypto";
+import { createHmac, randomBytes, scrypt as scryptCb, timingSafeEqual } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { promisify } from "node:util";
 
@@ -18,8 +18,11 @@ export function dashboardUser() {
   };
 }
 
+// Tanpa SESSION_SECRET: acak per proses (sesi dasbor hilang saat restart), jangan nilai tetap.
+const fallbackSecret = randomBytes(32).toString("hex");
+
 function sessionSecret() {
-  return process.env.SESSION_SECRET || "webunime-local";
+  return process.env.SESSION_SECRET || fallbackSecret;
 }
 
 export function signSession() {

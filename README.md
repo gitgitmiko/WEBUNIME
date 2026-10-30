@@ -62,3 +62,9 @@ wrapper iklan `playeriframe`). Film tanpa data player memakai mode demo poster.
 
 > Catatan: proxy embed aktif saat `npm run dev` dan `npm run preview`.
 > Beberapa server provider bisa bermasalah / maintenance — ganti server di dropdown.
+
+## Akun & nonton bareng
+
+- Daftar dan login memakai akun sendiri (tabel `users`/`sessions` dibuat otomatis saat server start). Akun dasbor lama tetap bisa masuk dengan username `dasbor`.
+- Host menekan **Nonton bareng** di pemutar; tautan `/?nobar=KODE` dibagikan ke penonton. Hanya host yang bisa play/pause/seek/ganti episode, ditegakkan di server (`server/watch-party.js`) dan di player (`plugins/watch-sync-agent.js`).
+- Server yang di-embed langsung (Blogger, Mega, p2pplay) tidak bisa dikendalikan dari luar, jadi tidak tersedia di ruang nonton bareng.

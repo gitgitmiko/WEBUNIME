@@ -13,6 +13,7 @@ import { createCatalogReadRouter } from "./catalog-api.js";
 import { catalogBackend } from "./catalog-source.js";
 import { createUserLibraryRouter } from "./user-library-api.js";
 import { ensureUserLibrarySchema } from "./user-library.js";
+import { createWatchPartyRouter, initWatchParty } from "./watch-party.js";
 import { securityHeadersMiddleware } from "./security-headers.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -57,6 +58,7 @@ app.use((req, res, next) => {
 app.use(createLoginGuard());
 app.use("/api/v1", createCatalogReadRouter());
 app.use("/api/v1", createUserLibraryRouter());
+app.use("/api/v1", createWatchPartyRouter());
 app.use(embedProxyMiddleware);
 
 app.use(
@@ -90,8 +92,8 @@ async function start() {
     await ensureUsersSchema();
     console.log("Users schema ready");
   } catch (err) {
+    // Katalog publik tetap jalan; login akun saja yang gagal sampai DB pulih.
     console.error("Users schema failed:", err.message);
-    process.exit(1);
   }
   try {
     await ensureUserLibrarySchema();
@@ -99,6 +101,7 @@ async function start() {
   } catch (err) {
     console.error("User library schema failed:", err.message);
   }
+  await initWatchParty();
   app.listen(port, host, () => {
     console.log(`WEBUNIME listening on http://${host}:${port} (katalog: ${catalogBackend})`);
   });

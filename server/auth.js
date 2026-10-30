@@ -8,6 +8,7 @@ const SESSION_DAYS = 14;
 const BCRYPT_ROUNDS = 12;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const USERNAME_RE = /^[a-z0-9_]{3,32}$/;
+const DASHBOARD_USERNAME = "dasbor";
 /** Hash valid untuk samakan timing login saat user tidak ada. */
 const DUMMY_PASSWORD_HASH =
   "$2b$12$hWkaAYtaJ20nTH/6dnuJguBI3qUcXrOMFw/WCHu/y/VHLbw4Fe2aK";
@@ -30,18 +31,32 @@ function isAdminUser(userOrUsername) {
 let usersSchemaReady = false;
 
 export async function ensureUsersSchema() {
-  return;
   if (usersSchemaReady) return;
   const pool = getPool();
-  try {
-    await pool.query(`
-      ALTER TABLE users
-      ADD COLUMN is_active TINYINT(1) NOT NULL DEFAULT 1
-      AFTER display_name
-    `);
-  } catch (err) {
-    if (err?.errno !== 1060 && err?.code !== "ER_DUP_FIELDNAME") throw err;
-  }
+  // AUTO_INCREMENT 1000: id 1 milik akun dasbor, jangan sampai bentrok.
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS users (
+      id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+      email VARCHAR(191) NOT NULL UNIQUE,
+      username VARCHAR(32) NOT NULL UNIQUE,
+      password_hash VARCHAR(255) NOT NULL,
+      display_name VARCHAR(64) NOT NULL,
+      is_active TINYINT(1) NOT NULL DEFAULT 1,
+      created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    ) AUTO_INCREMENT=1000
+  `);
+  await pool.query(`
+    CREATE TABLE IF NOT EXISTS sessions (
+      id CHAR(64) PRIMARY KEY,
+      user_id BIGINT UNSIGNED NOT NULL,
+      expires_at DATETIME NOT NULL,
+      created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+      INDEX (user_id),
+      INDEX (expires_at),
+      FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    )
+  `);
   usersSchemaReady = true;
 }
 
@@ -65,6 +80,9 @@ const rateBuckets = new Map();
 let lastRateCleanup = Date.now();
 
 export function clientIp(req) {
+  // Di belakang Cloudflare Tunnel; X-Forwarded-For paling kiri bisa dipalsukan klien.
+  const cf = String(req.headers["cf-connecting-ip"] || "").trim();
+  if (cf) return cf;
   const xf = String(req.headers["x-forwarded-for"] || "")
     .split(",")[0]
     .trim();
@@ -163,15 +181,28 @@ async function createSession(userId) {
 }
 
 async function destroySession(sid) {
-  if (!sid) return;
+  if (!sid || String(sid).startsWith("v1.")) return;
   const pool = getPool();
   await pool.execute(`DELETE FROM sessions WHERE id = :id`, { id: sid });
 }
 
 async function loadUserFromSession(sid) {
-  if (!sid || !String(sid).startsWith("v1.")) return null;
-  const { sessionUser } = await import("./dashboard-session.js");
-  return sessionUser(sid);
+  if (!sid) return null;
+  if (String(sid).startsWith("v1.")) {
+    const { sessionUser } = await import("./dashboard-session.js");
+    return sessionUser(sid);
+  }
+  await ensureUsersSchema();
+  const pool = getPool();
+  const [rows] = await pool.execute(
+    `SELECT u.id, u.email, u.username, u.display_name, u.is_active, u.created_at
+     FROM sessions s
+     JOIN users u ON u.id = s.user_id
+     WHERE s.id = :sid AND s.expires_at > NOW() AND u.is_active = 1
+     LIMIT 1`,
+    { sid }
+  );
+  return rows[0] ? publicUser(rows[0]) : null;
 }
 
 export async function getSessionUser(req) {
@@ -201,6 +232,8 @@ export function createLoginGuard() {
     try {
       const path = (req.url || "").split("?")[0] || "/";
       if (isPublicPath(path)) return next();
+      // Segmen media tidak butuh identitas; jangan query DB per segmen.
+      if (isProxyMediaPath(path)) return next();
 
       const user = await getSessionUser(req);
       if (user) req.user = user;
@@ -211,16 +244,14 @@ export function createLoginGuard() {
         path === "/api/resolve" ||
         path === "/api/embed"
       ) {
-        if (!isProxyMediaPath(path)) {
-          const ip = clientIp(req);
-          const bucket = user ? user.id + ":" + ip : ip;
-          if (!rateLimit(`proxy:${bucket}`, 400, 60_000)) {
-            res.statusCode = 429;
-            res.setHeader("Content-Type", "application/json; charset=utf-8");
-            res.setHeader("Cache-Control", "no-store");
-            res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
-            return;
-          }
+        const ip = clientIp(req);
+        const bucket = user ? user.id + ":" + ip : ip;
+        if (!rateLimit(`proxy:${bucket}`, 400, 60_000)) {
+          res.statusCode = 429;
+          res.setHeader("Content-Type", "application/json; charset=utf-8");
+          res.setHeader("Cache-Control", "no-store");
+          res.end(JSON.stringify({ error: "Terlalu banyak permintaan proxy." }));
+          return;
         }
       }
       return next();
@@ -302,18 +333,13 @@ export function createAuthRouter() {
     }
 
     try {
-      const actor = await requireAdmin(req, res);
-      if (!actor) return;
-      if (!rateLimit(`reg-admin:${actor.id}`, 20, 60 * 60_000)) {
-        return res.status(429).json({ error: "Batas undangan admin tercapai. Coba lagi nanti." });
-      }
-
       const parsed = validateRegister(parseBody(req));
       if (parsed.error) return res.status(400).json({ error: parsed.error });
-      if (isAdminUser(parsed.username)) {
-        return res.status(400).json({ error: "Username admin tidak bisa didaftarkan ulang." });
+      if (isAdminUser(parsed.username) || parsed.username === DASHBOARD_USERNAME) {
+        return res.status(400).json({ error: "Username ini tidak bisa dipakai." });
       }
 
+      await ensureUsersSchema();
       const pool = getPool();
       const passwordHash = await bcrypt.hash(parsed.password, BCRYPT_ROUNDS);
       const [result] = await pool.execute(
@@ -332,11 +358,9 @@ export function createAuthRouter() {
          FROM users WHERE id = :id LIMIT 1`,
         { id: userId }
       );
-      // Jangan ganti sesi admin — akun baru dibuat tanpa auto-login.
-      return res.status(201).json({
-        ok: true,
-        invited: publicUser(rows[0]),
-      });
+      const { sid } = await createSession(userId);
+      setSessionCookie(res, sid, SESSION_DAYS * 24 * 60 * 60 * 1000);
+      return res.status(201).json({ user: publicUser(rows[0]) });
     } catch (err) {
       if (err && err.code === "ER_DUP_ENTRY") {
         return res.status(409).json({ error: "Email atau username sudah terpakai." });
@@ -566,14 +590,34 @@ export function createAuthRouter() {
     }
 
     try {
-      const { dashboardPasswordOk, dashboardUser, signSession } = await import("./dashboard-session.js");
-      const ok = await dashboardPasswordOk(password);
-      if (!ok) {
-        return res.status(401).json({ error: "Kata sandi dasbor salah." });
+      if (login === DASHBOARD_USERNAME) {
+        const { dashboardPasswordOk, dashboardUser, signSession } = await import("./dashboard-session.js");
+        if (!(await dashboardPasswordOk(password))) {
+          return res.status(401).json({ error: "Username/email atau kata sandi salah." });
+        }
+        setSessionCookie(res, signSession(), SESSION_DAYS * 24 * 60 * 60 * 1000);
+        return res.json({ user: dashboardUser() });
       }
-      const sid = signSession();
-      setSessionCookie(res, sid, 14 * 24 * 60 * 60 * 1000);
-      return res.json({ user: dashboardUser() });
+
+      await ensureUsersSchema();
+      const pool = getPool();
+      const [rows] = await pool.execute(
+        `SELECT id, email, username, password_hash, display_name, is_active, created_at
+         FROM users WHERE username = :login OR email = :login LIMIT 1`,
+        { login }
+      );
+      const row = rows[0];
+      const ok = await bcrypt.compare(password, row?.password_hash || DUMMY_PASSWORD_HASH);
+      if (!row || !ok) {
+        return res.status(401).json({ error: "Username/email atau kata sandi salah." });
+      }
+      if (!isUserActive(row)) {
+        return res.status(403).json({ error: "Akun dinonaktifkan." });
+      }
+      await pool.execute(`DELETE FROM sessions WHERE expires_at < NOW()`);
+      const { sid } = await createSession(row.id);
+      setSessionCookie(res, sid, SESSION_DAYS * 24 * 60 * 60 * 1000);
+      return res.json({ user: publicUser(row) });
     } catch (err) {
       console.error("[auth/login]", err);
       return res.status(500).json({ error: "Gagal masuk." });
@@ -613,8 +657,14 @@ export function createAuthRouter() {
       if (!displayName) {
         return res.status(400).json({ error: "Nama tampilan wajib diisi." });
       }
+      // Akun dasbor tidak punya baris di tabel users.
+      if (String(sid).startsWith("v1.")) return res.json({ user });
 
-      return res.json({ user });
+      await getPool().execute(`UPDATE users SET display_name = :displayName WHERE id = :id`, {
+        displayName,
+        id: user.id,
+      });
+      return res.json({ user: { ...user, displayName } });
     } catch (err) {
       console.error("[auth/profile]", err);
       return res.status(500).json({ error: "Gagal memperbarui profil." });
