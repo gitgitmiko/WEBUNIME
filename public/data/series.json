@@ -2395,7 +2395,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/YxCODFseNDlhOYHzCYqTkA",
+            "url": "https://videonode.de/iframe3/hydrax/phU_H39R8NdBUsB-B7brtg",
             "default": false
           }
         ]
@@ -2425,7 +2425,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/wgWkgqOxSvdtzemQDXni6w",
+            "url": "https://videonode.de/iframe3/hydrax/kiJebkHQzD3CGmuHdPes0w",
             "default": false
           }
         ]
@@ -2455,7 +2455,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/2Q8M52mDgGKh1HPcF-Qh5Q",
+            "url": "https://videonode.de/iframe3/hydrax/cH3eMOsz0NVDZeQ02Jgv2Q",
             "default": false
           }
         ]
@@ -61860,7 +61860,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/n7hRMElWtniCjEUitl9LSg",
+            "url": "https://videonode.de/iframe3/hydrax/xEDHEms0dHSR4pP7PPZHJQ",
             "default": false
           }
         ]
@@ -66571,7 +66571,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/sojtOYSEi3AFK1Vx8mNY1w",
+            "url": "https://videonode.de/iframe3/hydrax/1VxOowEh0ZGkDRftm3U2Fg",
             "default": false
           }
         ]
@@ -66596,7 +66596,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/sojtOYSEi3AFK1Vx8mNY1w",
+        "url": "https://videonode.de/iframe3/hydrax/1VxOowEh0ZGkDRftm3U2Fg",
         "default": false
       }
     ],
@@ -106439,7 +106439,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/nw1kvry35Zx7z0TqMdoPGw",
+            "url": "https://videonode.de/iframe3/hydrax/qJmg2fhugNXyCDUVMRLtwQ",
             "default": false
           }
         ]
@@ -106469,7 +106469,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/sqpDOHdA5ekX4N1vWyFJgA",
+            "url": "https://videonode.de/iframe3/hydrax/8iEadcDcQGzecvnpXllY5A",
             "default": false
           }
         ]
@@ -106494,7 +106494,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/sqpDOHdA5ekX4N1vWyFJgA",
+        "url": "https://videonode.de/iframe3/hydrax/8iEadcDcQGzecvnpXllY5A",
         "default": false
       }
     ],
@@ -135697,8 +135697,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-4-blocks-zero-2026-lk21.jpg",
     "rating": "8.0",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -135865,28 +135865,44 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "4 Blocks Zero - Season 1 Episode 6 (2026)",
+        "slug": "4-blocks-zero-season-1-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/4-blocks-zero-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1IsHKQDYY60Amk8UZBC3ow",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/qxVgAfkgxaci9ZTDRPZJvQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/6rVDnuKuQAEoxouoqPe-lQ",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/1IsHKQDYY60Amk8UZBC3ow",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/7WDtaGy0w7ER3rv27V0JuQ",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5bnzolDglMkoTCQj1DwBlw",
+        "url": "https://videonode.de/iframe3/hydrax/qxVgAfkgxaci9ZTDRPZJvQ",
         "default": false
       }
     ],
@@ -168591,7 +168607,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/2LGQTKKqWMVzR4AXnvKD7g",
+            "url": "https://videonode.de/iframe3/hydrax/7Pry3AN5eSEBJo2RMuNDOw",
             "default": false
           }
         ]
