@@ -142,8 +142,8 @@
     "tahun": "2017",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-love-last-2017-lk21.jpg",
     "rating": "5.3",
-    "durasi": "26 eps · S.1",
-    "episodes_count": 26,
+    "durasi": "28 eps · S.1",
+    "episodes_count": 28,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -936,6 +936,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 27,
+        "title": "A Love to Last - Season 1 Episode 27 (2017)",
+        "slug": "love-last-season-1-episode-27-2017",
+        "source": "https://tv.nontondrama.vip/love-last-season-1-episode-27-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/f9nbJCQj73HEwNfKLanTRA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/HzjSocQmA4pRdoXaeJRIVw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/131af-yX-xgYCZ6itUy_uA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "title": "A Love to Last - Season 1 Episode 28 (2017)",
+        "slug": "love-last-season-1-episode-28-2017",
+        "source": "https://tv.nontondrama.vip/love-last-season-1-episode-28-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0LMnvKnam_kUzGviEj9lcA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Uz8Hf3vs2iVNv9yZRBVA3A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/sgf-mBUSF26wUAG9UAySnw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -943,21 +1003,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Eviw9IMrTwNj1R9aaZpjEA",
+        "url": "https://videonode.de/iframe3/p2p/0LMnvKnam_kUzGviEj9lcA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/oA_UjfrAk1hmJrq0GznSlg",
+        "url": "https://videonode.de/iframe3/cast/Uz8Hf3vs2iVNv9yZRBVA3A",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/POapvgMXEgs587t2bRxTBg",
+        "url": "https://videonode.de/iframe3/hydrax/sgf-mBUSF26wUAG9UAySnw",
         "default": false
       }
     ],
