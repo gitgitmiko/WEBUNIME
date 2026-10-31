@@ -8479,7 +8479,7 @@
     "rating": "6.9",
     "votes": "",
     "durasi": "23 Menit",
-    "episodes_count": 5,
+    "episodes_count": 6,
     "genre": [
       "Adventure",
       "Comedy",
@@ -8680,35 +8680,52 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Magical★Explorer Episode 6",
+        "slug": "magical%e2%98%85explorer-episode-6",
+        "source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-6/",
+        "date": "",
+        "released_at": "2026-10-31T19:00:43.012Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/MQhnATbb#f6u0dNd_uD2JvMx3W1wf96zBYbMkyuqqqJePF7xmD24",
+            "default": true,
+            "post": "55059",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwE7yoonY95WgFIyKuIWbklvb3Ssy7yoy-f7u4iUiRRuP_UTs36cChVM-CiTaFYLavIKYa1iLPoWsEgFKhS-YLBYC_maLEoQDyJ8pkzFuhMZhiUBe0X0Y9fdbxFJVS6-H_EazHS",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyrul7K3lG3Uv2Ex_exCmuX4aSQ8aNPzmpe4TBM9YdGERBQRq6SsaAK_8l8EuSupe_dSlcIk735IbPAL3RdEg0PfBxSWc18j1DonlMuZ-xt47r2GRG0RhD9c49qJrvKdVRbkvJp",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/RtFJykmt5x",
-        "default": true,
-        "post": "54918",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/hEJ1xAwa#V6k6qshGCAGoBQGzV1rPS87zoR6rJ9xmcqohlUD9oVE",
-        "default": false,
-        "post": "54918",
-        "nume": "2"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/AI5TBQ4b#gYv8mQdw1zncP_uPFjDYaPVRVmRsl5skCdxK9ANyZJA",
-        "default": false,
-        "post": "54918",
-        "nume": "3"
+        "url": "https://mega.nz/embed/MQhnATbb#f6u0dNd_uD2JvMx3W1wf96zBYbMkyuqqqJePF7xmD24",
+        "default": true,
+        "post": "55059",
+        "nume": "1"
       }
     ],
     "id": 45,
@@ -9329,7 +9346,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Kashita%20Maryoku%20wa%20Revo%20Barai%20de%20Kyousei%20Choushuu.jpg",
     "rating": "6.2",
     "votes": "",
-    "durasi": "5 eps",
+    "durasi": "22 Menit",
     "episodes_count": 5,
     "genre": [
       "Action",
