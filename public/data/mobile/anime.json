@@ -2156,7 +2156,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Black-Clover-Season-2-Episode-2-300x167.jpg",
     "rating": "8.8",
     "votes": null,
-    "durasi": "5 eps",
+    "durasi": "23 Menit",
     "episodes_count": 5,
     "genre": [
       "Action",
@@ -2383,8 +2383,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Zombie-Sagashitemasu-Episode-2-300x169.jpg",
     "rating": "6.7",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Adventure",
       "Shounen"
@@ -2620,6 +2620,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwbLqlMTDcfX7N5rZzX16BNpZSlxlX5pIqt7x5WtYYAvHTnnitgkAZYwHIYfHapk-jAQq6TvsvcPeAX0jEonKpB-8VglT466dfqoEWUJbJlt5sXbPdpP0KhMSOOz-Hylshf9A",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "#Zombie Sagashitemasu Episode 5",
+        "slug": "zombie-sagashitemasu-episode-5",
+        "source": "https://anoboy.quest/2026/10/zombie-sagashitemasu-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyneXmpojCwVKHknLRookttvEU_fTuna4r3RJYORb7vZuvPdBuGuA08jJaJAXx6IF40Jpfqz-geLo1IGSbqZCiJRDCOSo4anaCmvfOCYAYCikXGj3VccBinvXJPAzKuIM9H1TQ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyUU0dZH15XHlecHZgcqhqojT8BNWp-f_mM409SL3DYY2XGvnYa1fSssDvuxEaEIOP1iCWX82ahZMuZEv8CTIbylAOVG2s9ue-RL8n_PXJ9mA74paCr22zNQLcC12OAMtaA12-n",
             "default": false,
             "source": "anoboy"
           }
@@ -9043,7 +9068,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Marronnier%20Oukoku%20no%20Shichinin%20no%20Kishi.jpg",
     "rating": "6.4",
     "votes": "",
-    "durasi": "5 eps",
+    "durasi": "25 Menit",
     "episodes_count": 5,
     "genre": [
       "Comedy",
@@ -9214,8 +9239,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Vertex%20Force.jpg",
     "rating": "5.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Sci-Fi"
@@ -9297,6 +9322,23 @@
             "server": "anoboy",
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dylzwd5J0WSJUGxwsmm1Tg1NGVmX2cLMC9TPdqurET2SjOq2x-O7xiqBzU8NrSALIW_MtFM4jVpBxKF9jpGEacDQViOrZ-6euGKcijn_U9lQHAq2yPyn1BqlHkMGqpBzGE6og",
+            "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Vertex Force Episode 5",
+        "slug": "vertex-force-episode-5",
+        "source": "https://anoboy.quest/2026/10/vertex-force-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwhuTtSTmUIO89ckwqI0FyUSWzWjY_snWpDJHzPiwmsKWFLNoHEhEXT_dAgbsFsWvb_1JBggLZSpFamNWDCyBC7UypJJgUjJT3y06RqEw16x4xjL2DhoZZBljZxMqnAS8UA8mk",
             "default": true,
             "source": "anoboy"
           }
