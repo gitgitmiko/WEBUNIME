@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-dead-end-job-2026-lk21.jpg",
     "rating": "8.2",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -169,6 +169,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Dead-End Job - Season 1 Episode 6 (2026)",
+        "slug": "dead-end-job-season-1-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/dead-end-job-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kwModRQTlCdxARCRCOWTWQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Q66PYUM3FX-tLvjvXBXoqg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/tGq0IDox2dSJp8-mmKp5Qg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Dead-End Job - Season 1 Episode 7 (2026)",
+        "slug": "dead-end-job-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/dead-end-job-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/M-lL8OFGOPq14sMY1SmJIA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/mlG-WeZJ5AN0T-ja_xzKIQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/S4Y7RvsOK62VjjbTTCkQoA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -176,26 +236,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/tl_w1_tQr_LdXiszYIdhDg",
+        "url": "https://videonode.de/iframe3/p2p/M-lL8OFGOPq14sMY1SmJIA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/8eukNelycErg0ktD9MB_fA",
+        "url": "https://videonode.de/iframe3/cast/mlG-WeZJ5AN0T-ja_xzKIQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Skq48xLJZmMFMAe4ETzsXg",
+        "url": "https://videonode.de/iframe3/hydrax/S4Y7RvsOK62VjjbTTCkQoA",
         "default": false
       }
     ],
-    "id": 654,
-    "is_new": true
+    "id": 654
   },
   {
     "type": "series",
