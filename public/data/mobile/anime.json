@@ -4443,8 +4443,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [],
     "sinopsis": "Anime Kashita Maryoku.",
     "related": [],
@@ -4626,35 +4626,32 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Kashita Maryoku Episode 5",
+        "slug": "kashita-maryoku-episode-5",
+        "source": "https://v2.samehadaku.how/kashita-maryoku-episode-5/",
+        "date": "",
+        "released_at": "2026-10-31T20:01:02.051Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "default",
+            "label": "Default",
+            "url": "https://www.blogger.com/video.g?token=",
+            "default": true
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxy-H6CoEbL5JQi1GweiV8pVhLrvMi2h2e4Jj7X-EKGaR13dvDnsb2Lqjpw52QMCZra09sV6Qt3rXrv60RpScDL5UDwxf0GIa2M8ZlggQCXG_mDrv9dDN1VnRRkiQf6PwHBs83B",
-        "default": true,
-        "post": "54923",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/TtQAEApa#U4qreBn1hK7GMxmKCwAkJ1_OnrVQ1C5mTFdW5G8NVKg",
-        "default": false,
-        "post": "54923",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/3t5GEIqC#uKemALBVsPuS2U7AHivz5Z-L4l5zspNDlfXUPzDdd58",
-        "default": false,
-        "post": "54923",
-        "nume": "4"
+        "server": "default",
+        "label": "Default",
+        "url": "https://www.blogger.com/video.g?token=",
+        "default": true
       }
     ],
     "id": 20,
