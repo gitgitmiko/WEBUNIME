@@ -19,16 +19,23 @@
     "players": [
       {
         "no": 1,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/YpeoZCpZBVq1SqG7ccDd3A",
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/qQI2gALkhubGs_Yg5H_b7g",
         "default": true
       },
       {
         "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/YpeoZCpZBVq1SqG7ccDd3A",
+        "default": false
+      },
+      {
+        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Td72f_W5DbO1HnNNEzPZjA",
+        "url": "https://videonode.de/iframe3/hydrax/t6XL-7BIVhJEYrO-IXcwzQ",
         "default": false
       }
     ],
