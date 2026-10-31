@@ -7053,8 +7053,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Shuiro%20no%20Kamen111.jpg",
     "rating": "7.1",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Fantasy",
@@ -7241,6 +7241,52 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 4,
+        "title": "Shuiro no Kamen Episode 4",
+        "slug": "shuiro-no-kamen-episode-4",
+        "source": "https://v2.samehadaku.how/shuiro-no-kamen-episode-4/",
+        "date": "",
+        "released_at": "2026-10-31T13:01:08.897Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzuzjqU3Nxcfir1uuLB3WoISfEGmOpmFicpgpcTBJ55ddD5ADFD3Zbl4Hdp3JFydAfnS9BseZObKpi8Xwg_uUG2Lmj1IYxteu6fwUSBgbPL71scDfNv1QDPnxZaNZ7paobeseJa&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55038",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/sgUb1O0IHd",
+            "default": false,
+            "post": "55038",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/Cx4BSbSL#uLWho3eStHXTqNSezObE39axtCywIXVyffR1CGhU74k",
+            "default": false,
+            "post": "55038",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/P4Q02awC#aYyNvJppo4l2V_HaF6B9qycKnl9gUIUgyd4gUbcISOc",
+            "default": false,
+            "post": "55038",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -7248,28 +7294,37 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxUuH9EFlgfQLeKU7jZ2GWSiB7jMbb4GCa3pYLAfeABe8I1RpQQ7y0Sl2IAMfbjwANcULsmDWTGqRTTx3dF2_Rs3QS8ed2pZuTeXzzg25odKurmrgF0WH1mvJIN6VhhUh6aEFw",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzuzjqU3Nxcfir1uuLB3WoISfEGmOpmFicpgpcTBJ55ddD5ADFD3Zbl4Hdp3JFydAfnS9BseZObKpi8Xwg_uUG2Lmj1IYxteu6fwUSBgbPL71scDfNv1QDPnxZaNZ7paobeseJa&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54895",
+        "post": "55038",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/GxQzDJhZ#vh0djUqCRHViv3o1CAD2fA9THg9W1HYBOgxcTVBi4ic",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/sgUb1O0IHd",
         "default": false,
-        "post": "54895",
-        "nume": "3"
+        "post": "55038",
+        "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/q8JSUBKC#zlceads5-Pz_uyqsJgFpgGwhthq_7SBfYmqPZsqlaWw",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/Cx4BSbSL#uLWho3eStHXTqNSezObE39axtCywIXVyffR1CGhU74k",
         "default": false,
-        "post": "54895",
-        "nume": "4"
+        "post": "55038",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/P4Q02awC#aYyNvJppo4l2V_HaF6B9qycKnl9gUIUgyd4gUbcISOc",
+        "default": false,
+        "post": "55038",
+        "nume": "5"
       }
     ],
     "id": 38,
