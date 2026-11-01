@@ -5066,8 +5066,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Ojisan%20wa%20Kawaii%20Mono%20ga%20Osuki.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Comedy"
     ],
@@ -5172,6 +5172,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxTZt-oDQ1uYqDorHewNwU1D-JmG2M3hI5e4jOj__7pypnQ7b69CuUd9VbuL3P3TcJnDduSk7uh5x_ILz3mPHfCtgx6iAQu8AkEzCCP3gKX0RxtGqWpHtW6HB7M9-6UKjUEqzs",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Ojisan wa Kawaii Mono ga Osuki. Episode 5",
+        "slug": "ojisan-wa-kawaii-mono-ga-osuki-episode-5",
+        "source": "https://anoboy.quest/2026/11/ojisan-wa-kawaii-mono-ga-osuki-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy6P0pB7WuvXFMgL0bGIT4lZTB5AVHatxW9LAWHnF2soh0pVM9S8CBCzwKDuHX8VC0n2x6C6K6VFhP8OX1Sx3YPfCp-ipw43kYLv8vLqSnpQxx4gmhGX-4qcUC_O81NPNb-khmT",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxMzKq8PR0yqKAWhcfssxyT6yxTnr7vjO0qKPAYmjlBwrAbamuCSb-ves_KyadrzpJhCXp1IoVSUfBqOUsRUeoIQz95-NSimUqsiV6-gvCeyWzrYW8qBoAVFhjS3z9-zLEQ9NyQ",
             "default": false,
             "source": "anoboy"
           }
