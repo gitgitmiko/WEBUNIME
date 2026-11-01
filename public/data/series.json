@@ -140622,8 +140622,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-incomplete-summer-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Reality-TV"
@@ -140812,6 +140812,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Incomplete Summer - Season 1 Episode 7 (2026)",
+        "slug": "incomplete-summer-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/incomplete-summer-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/8w_KQOEqmnWxjRBL3baO9A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/F9DjyEohiNgE1dIbak-FtQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bjyOLk2xyjI3IMADpO-NvA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -140819,21 +140849,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Kh1dud01z3YTyMoEfXu9gQ",
+        "url": "https://videonode.de/iframe3/p2p/8w_KQOEqmnWxjRBL3baO9A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/cFu2c_cYPTulIehg_-MT-g",
+        "url": "https://videonode.de/iframe3/cast/F9DjyEohiNgE1dIbak-FtQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/OjbSSha3-fGmVFF5gguKDA",
+        "url": "https://videonode.de/iframe3/hydrax/bjyOLk2xyjI3IMADpO-NvA",
         "default": false
       }
     ],
