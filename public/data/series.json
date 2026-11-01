@@ -143982,8 +143982,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-dive-into-you-2026-lk21.jpg",
     "rating": "8.9",
-    "durasi": "11 eps · S.1",
-    "episodes_count": 11,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -144338,6 +144338,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "Dive Into You - Season 1 Episode 12 (2026)",
+        "slug": "dive-into-you-season-1-episode-12-2026",
+        "source": "https://tv.nontondrama.vip/dive-into-you-season-1-episode-12-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/AWizppWMerQv-IB3MJjQzg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kg_SJa9FGlBzKDiqScuxMg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/wVPI4M3aalDe6jaVEk70VA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -144345,21 +144375,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/8yTyoKrKfv_pshj12E_l4w",
+        "url": "https://videonode.de/iframe3/p2p/AWizppWMerQv-IB3MJjQzg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/H6tR9MFvirMnt5OUVtKr5g",
+        "url": "https://videonode.de/iframe3/cast/kg_SJa9FGlBzKDiqScuxMg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/THwIXRCnOkmB9SjbtStBww",
+        "url": "https://videonode.de/iframe3/hydrax/wVPI4M3aalDe6jaVEk70VA",
         "default": false
       }
     ],
