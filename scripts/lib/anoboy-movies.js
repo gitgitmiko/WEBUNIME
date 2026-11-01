@@ -14,7 +14,7 @@
  */
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { normalizeAnimeKey } from "./anoboy-sync.js";
+import { isYupLive, normalizeAnimeKey, yupEmbedsFromPath } from "./anoboy-sync.js";
 
 const BASE = "https://anoboy.quest";
 const LIST_URL = `${BASE}/anime-movie/`;
@@ -166,14 +166,7 @@ export function expandSources(sources) {
   const add = (kind, name, url, quality) => out.push({ kind, name, url, quality });
   for (const { label, url } of sources) {
     if (/^\/uploads\/yup\/data\.php/i.test(url)) {
-      const q = new URLSearchParams(url.split("?")[1] || "");
-      const map = { data: "240p", data2: "360p", data3: "480p", data4: "720p" };
-      for (const [key, quality] of Object.entries(map)) {
-        const id = q.get(key);
-        if (id && id !== "none") {
-          add("yourupload", "YUP", `https://www.yourupload.com/embed/${id}`, quality);
-        }
-      }
+      for (const e of yupEmbedsFromPath(url)) add("yourupload", "YUP", e.url, e.quality);
     } else if (/yourupload\.com\/embed\//i.test(url)) {
       add("yourupload", "YUP", url, qualityLabel(label));
     } else if (/mega\.nz\/embed\//i.test(url)) {
@@ -205,9 +198,9 @@ async function isLive(candidate) {
     });
     return status === 200 && /"s":\d+/.test(text);
   }
+  if (candidate.kind === "yourupload") return isYupLive(candidate.url);
   const { status, text } = await fetchText(candidate.url);
   if (status !== 200) return false;
-  if (candidate.kind === "yourupload") return /file:\s*'https?:/.test(text);
   if (candidate.kind === "blogger") return /googlevideo/.test(text) && !/Video is unavailable/.test(text);
   return true;
 }

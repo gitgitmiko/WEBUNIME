@@ -774,6 +774,48 @@ function playersFromMirrors(mirrors, episode, sourcePage) {
   return byEp;
 }
 
+/** /uploads/yup/data.php?data=..&data4=.. → embed YourUpload per kualitas. */
+export function yupEmbedsFromPath(videoPath) {
+  const path = String(videoPath || "");
+  if (!/\/uploads\/yup\/data\.php/i.test(path)) return [];
+  const q = new URLSearchParams(path.split("?")[1] || "");
+  const qualities = { data: "240p", data2: "360p", data3: "480p", data4: "720p" };
+  return Object.entries(qualities)
+    .map(([key, quality]) => ({ id: q.get(key), quality }))
+    .filter(({ id }) => id && id !== "none")
+    .map(({ id, quality }) => ({ url: `https://www.yourupload.com/embed/${id}`, quality }));
+}
+
+export async function isYupLive(url) {
+  try {
+    const res = await fetch(url, {
+      headers: { "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/131.0.0.0 Safari/537.36" },
+      signal: AbortSignal.timeout(25000),
+    });
+    return res.status === 200 && /file:\s*'https?:/.test(await res.text());
+  } catch {
+    return false;
+  }
+}
+
+/** Server YUP 1 episode: hanya link yang masih hidup, kualitas tertinggi dulu. */
+async function playersFromYup(mirrors, episode, sourcePage) {
+  const byEp = new Map();
+  if (!episode) return byEp;
+  const embeds = mirrors.flatMap((row) => yupEmbedsFromPath(row.video));
+  const live = await Promise.all(embeds.map((e) => isYupLive(e.url)));
+  const list = embeds
+    .filter((_, i) => live[i])
+    .reverse()
+    .map((e) => ({
+      url: e.url,
+      label: `Anoboy YUP ${e.quality}`,
+      source_page: sourcePage,
+    }));
+  if (list.length) byEp.set(episode, list);
+  return byEp;
+}
+
 async function scrapeEpisodePlayers(page, epUrl) {
   await page.goto(rewriteAnoboyHost(epUrl), {
     waitUntil: "domcontentloaded",
@@ -818,6 +860,10 @@ async function scrapeEpisodePlayers(page, epUrl) {
   }
   if (parsed.episode) {
     mergeMaps(byEp, playersFromMirrors(data.mirrors, parsed.episode, epUrl));
+    // Halaman batch: daftar mirror berisi banyak episode, YUP-nya tidak bisa dipetakan.
+    if (!data.batch.length) {
+      mergeMaps(byEp, await playersFromYup(data.mirrors, parsed.episode, epUrl));
+    }
   }
   if (!byEp.size && data.iframe && parsed.episode) {
     mergeMaps(byEp, playersFromIframe(data.iframe, parsed.episode, epUrl));
