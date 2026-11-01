@@ -142,8 +142,8 @@
     "tahun": "2017",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-love-last-2017-lk21.jpg",
     "rating": "5.3",
-    "durasi": "57 eps · S.1",
-    "episodes_count": 57,
+    "durasi": "58 eps · S.1",
+    "episodes_count": 58,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -1866,6 +1866,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 58,
+        "title": "A Love to Last - Season 1 Episode 58 (2017)",
+        "slug": "love-last-season-1-episode-58-2017",
+        "source": "https://tv.nontondrama.vip/love-last-season-1-episode-58-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/8ZjqI8A0pogJ21_0PRDUXg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/mWySJf6AlL5cZorYYZPEVQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/knzJ-Way-v53PPa63cHa6Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1873,21 +1903,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/0C4Y9yPXG2mM590j1pT5pw",
+        "url": "https://videonode.de/iframe3/p2p/8ZjqI8A0pogJ21_0PRDUXg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/wL1YgO70qMBsIoHFD-94Dw",
+        "url": "https://videonode.de/iframe3/cast/mWySJf6AlL5cZorYYZPEVQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/uO9ye_eZJz3qKjh01cAdKA",
+        "url": "https://videonode.de/iframe3/hydrax/knzJ-Way-v53PPa63cHa6Q",
         "default": false
       }
     ],
