@@ -1289,3 +1289,85 @@ export async function syncAnoboyLatest(dataDir, extraDirs = [], opts = {}) {
     await browser.close();
   }
 }
+
+/** Daftar post episode dari halaman kategori seri (/<slug>/page/N/). */
+async function scrapeSeriesCategoryPage(page, slug, n) {
+  const url = n <= 1 ? `${BASE}/${slug}/` : `${BASE}/${slug}/page/${n}/`;
+  await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90000 });
+  await page.waitForTimeout(1200);
+  return page.evaluate(() => {
+    const items = [];
+    const seen = new Set();
+    for (const a of document.querySelectorAll(".column-content a")) {
+      if (!a.querySelector("img")) continue;
+      if (!/anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\/.*-episode-\d+/i.test(a.href)) continue;
+      if (seen.has(a.href)) continue;
+      seen.add(a.href);
+      const img = a.querySelector("img");
+      items.push({
+        href: a.href,
+        title: a.getAttribute("title") || (a.textContent || "").replace(/\s+/g, " ").trim(),
+        thumbnail: img?.src || "",
+      });
+    }
+    const max = (document.body?.innerText || "").match(/Page\s+\d+\s+of\s+(\d+)/i);
+    return { items, maxPages: max ? Number(max[1]) : 1 };
+  });
+}
+
+/**
+ * Scrape manual 1 seri: semua episode dari kategori Anoboy, merge ke katalog.
+ *   node scripts/scrape-anoboy.js --series black-clover-season-2
+ */
+export async function syncAnoboySeries(dataDir, extraDirs = [], slug) {
+  const loaded = await loadBothCatalogs(dataDir, extraDirs);
+  const browser = await launchBrowser();
+  const page = await makePage(browser);
+  const totals = { slug, checked: 0, empty: [], failed: [], addedAnime: 0, addedEps: 0, addedPlayers: 0 };
+
+  try {
+    const first = await scrapeSeriesCategoryPage(page, slug, 1);
+    const jobs = [...first.items];
+    for (let n = 2; n <= first.maxPages; n++) {
+      jobs.push(...(await scrapeSeriesCategoryPage(page, slug, n)).items);
+    }
+    if (!jobs.length) throw new Error(`kategori ${slug} kosong / tidak ditemukan`);
+    totals.checked = jobs.length;
+    console.log(`[anoboy-series] ${slug}: ${jobs.length} episode (${first.maxPages} hlm)`);
+
+    const playersByEp = new Map();
+    for (const item of jobs) {
+      try {
+        const scraped = await scrapeEpisodePlayers(page, item.href);
+        if (!scraped.byEp.size) totals.empty.push(item.href);
+        mergeMaps(playersByEp, scraped.byEp);
+        console.log(`[anoboy-series] ${item.href}: ep ${[...scraped.byEp.keys()].join(",") || "-"}`);
+      } catch (err) {
+        totals.failed.push(item.href);
+        console.warn(`[anoboy-series] ${item.href}:`, err.message);
+      }
+      await sleep(DETAIL_DELAY_MS);
+    }
+
+    if (playersByEp.size) {
+      const hubUrl = resolveHubUrl(jobs[0].href);
+      const title = jobs[0].title.replace(/\s*Episode\s+\d+.*$/i, "").trim() || slug;
+      const stats = applyToAll(loaded, {
+        candidate: { slug, title },
+        playersByEp,
+        thumbnail: jobs[0].thumbnail,
+        hubUrl,
+        title,
+        meta: null,
+      });
+      totals.addedAnime = stats.addedAnime;
+      totals.addedEps = stats.addedEps;
+      totals.addedPlayers = stats.addedPlayers;
+      logMerge("series", stats, title);
+      await saveAll(loaded);
+    }
+    return totals;
+  } finally {
+    await browser.close();
+  }
+}

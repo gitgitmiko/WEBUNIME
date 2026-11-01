@@ -12,6 +12,9 @@
  *   node scripts/scrape-anoboy.js --meta --limit 1
  *   node scripts/scrape-anoboy.js --meta --hub https://anoboy.quest/2026/07/hanaori-san-wa-tensei-shitemo-kenka-ga-shitai/
  *
+ * Satu seri, semua episode (slug kategori Anoboy):
+ *   node scripts/scrape-anoboy.js --series black-clover-season-2
+ *
  * Terbaru (homepage, untuk uji GitHub Action):
  *   node scripts/scrape-anoboy.js --latest
  *   node scripts/scrape-anoboy.js --latest --pages 2
@@ -21,6 +24,7 @@ import { fileURLToPath } from "node:url";
 import {
   enrichAnoboyMeta,
   scrapeAnoboyFull,
+  syncAnoboySeries,
   syncAnoboyLatest,
 } from "./lib/anoboy-sync.js";
 
@@ -35,8 +39,13 @@ function argVal(name, fallback) {
 const latest = argv.includes("--latest");
 const meta = argv.includes("--meta");
 const pages = Number(argVal("--pages", latest ? "3" : "0")) || 0;
+const series = argVal("--series", "");
 
-if (meta) {
+if (series) {
+  const dataDir = join(ROOT, "public", "data");
+  const result = await syncAnoboySeries(dataDir, [join(dataDir, "mobile")], series);
+  console.log(JSON.stringify(result, null, 2));
+} else if (meta) {
   const result = await enrichAnoboyMeta(ROOT, {
     limit: Number(argVal("--limit", "0")) || 0,
     resume: argv.includes("--resume"),
