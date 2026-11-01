@@ -3848,8 +3848,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-2.jpg",
     "rating": "6.5",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Adventure",
       "Fantasy",
@@ -4068,6 +4068,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwF4NMFU8YYUxHRkstgrK_uTaOeRqFccn5OQOnB17uOZHc-VoX8ebOY9iCS340rCi5bPUiAAUnUu1svOVz2OKcj464nV96TZHmjl4uhnkYb5El_cdPn3-QM-v9uP1cxjwWdh2Le",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 5,
+        "title": "Kanata kara Episode 5",
+        "slug": "kanata-kara-episode-5",
+        "source": "https://anoboy.quest/2026/11/kanata-kara-episode-5/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwzVDZjsKwxxz33lRenu-PFQ-yzHA_To8iId08VSyWqL_eEv8Dw8FRhk_zKGuaOYdnG8ALCZI_NoGtMr--I38hUMehrxblVjOUxJ2VWzU4CmsUqDklxMXfaSNl_-AgOvuqLQL3Y",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxPzPagcRA7HjuOyOiFsOwO5Jzhq-LLNtALUOp0mLqU6wnZIii9ArCR4Z7c0DYNo4aZqSaOPuJacDmnAl6Pa2S2R0XuuKUO7a0yKoqpBbSeXnvnaHiD_MQwhMt0khKqZf206Do",
             "default": false,
             "source": "anoboy"
           }
@@ -5250,7 +5275,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "4 eps",
+    "durasi": "23 Menit",
     "episodes_count": 4,
     "genre": [
       "Action",
