@@ -101,8 +101,7 @@
         "default": false
       }
     ],
-    "id": 660,
-    "is_new": true
+    "id": 660
   },
   {
     "type": "series",
@@ -111,8 +110,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-stranger-things-tales-from-85-2026-lk21.jpg",
     "rating": "5.9",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Animation",
@@ -185,7 +184,97 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/jx7FftC_Aep2PO0VDiRKLg",
+            "url": "https://videonode.de/iframe3/hydrax/SiRuLRDiUEpYZoiRSsn5yQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Stranger Things: Tales from '85 - Season 1 Episode 3 (2026)",
+        "slug": "stranger-things-tales-from-85-season-1-episode-3-2026",
+        "source": "https://tv.nontondrama.vip/stranger-things-tales-from-85-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/CuI316w84jQUEFQq8eXtig",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/nTvsp4Pllbxm2epGftwe_A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/X4_IiPFfBd_KvlnxtU4pXw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Stranger Things: Tales from '85 - Season 1 Episode 4 (2026)",
+        "slug": "stranger-things-tales-from-85-season-1-episode-4-2026",
+        "source": "https://tv.nontondrama.vip/stranger-things-tales-from-85-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/O8obLAWiIqI9PdRS-gK3Kg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EvQ0H6AJj29EaYS2Mrrccw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/B8E_Ec4vUsguR1Xut9aPBw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Stranger Things: Tales from '85 - Season 1 Episode 5 (2026)",
+        "slug": "stranger-things-tales-from-85-season-1-episode-5-2026",
+        "source": "https://tv.nontondrama.vip/stranger-things-tales-from-85-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/kjNKjDRLRyM2mLOK-jBpxQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/yiihMBdvMEnOIzlWP-o7Gw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/AR3KLovKPkYxs9HXOM2viA",
             "default": false
           }
         ]
@@ -196,26 +285,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ppz1BfvLXiZTr7bZWpVTXQ",
+        "url": "https://videonode.de/iframe3/p2p/kjNKjDRLRyM2mLOK-jBpxQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/2HTthXCQFoQn_Fb9oeWZ6Q",
+        "url": "https://videonode.de/iframe3/cast/yiihMBdvMEnOIzlWP-o7Gw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/jx7FftC_Aep2PO0VDiRKLg",
+        "url": "https://videonode.de/iframe3/hydrax/AR3KLovKPkYxs9HXOM2viA",
         "default": false
       }
     ],
-    "id": 659,
-    "is_new": true
+    "id": 659
   },
   {
     "type": "series",
@@ -3458,8 +3546,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-when-lights-rise-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "12 eps · S.1",
-    "episodes_count": 12,
+    "durasi": "14 eps · S.1",
+    "episodes_count": 14,
     "seasons_count": 1,
     "genre": [
       "Mystery"
@@ -3786,6 +3874,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "When the Lights Rise - Season 1 Episode 13 (2026)",
+        "slug": "when-lights-rise-season-1-episode-13-2026",
+        "source": "https://tv.nontondrama.vip/when-lights-rise-season-1-episode-13-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/u6nZw7yM98F13EK15HL52A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/wTpuKkAsBOXw4Coog0-8Qw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/b6mWh1VK4r-NWL5EnaWQhQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "When the Lights Rise - Season 1 Episode 14 (2026)",
+        "slug": "when-lights-rise-season-1-episode-14-2026",
+        "source": "https://tv.nontondrama.vip/when-lights-rise-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-IaAeLBYd-RoZjycS8xQEw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ZKaqfVKVj840ACkts-uIVA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/WqVdC_Kv8NuK32ayoXhFQQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -3793,21 +3941,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/CDqRIGK-kLIorueX202N1Q",
+        "url": "https://videonode.de/iframe3/p2p/-IaAeLBYd-RoZjycS8xQEw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/4Xs5hxq1RV8vG8VGTd8Qpw",
+        "url": "https://videonode.de/iframe3/cast/ZKaqfVKVj840ACkts-uIVA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/xcKAForlJOP9HVw0WF76qA",
+        "url": "https://videonode.de/iframe3/hydrax/WqVdC_Kv8NuK32ayoXhFQQ",
         "default": false
       }
     ],
@@ -78776,8 +78924,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-where-mask-ends-2026-lk21.jpg",
     "rating": "9.3",
-    "durasi": "24 eps · S.1",
-    "episodes_count": 24,
+    "durasi": "25 eps · S.1",
+    "episodes_count": 25,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -79500,6 +79648,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "title": "Where the Mask Ends - Season 1 Episode 25 (2026)",
+        "slug": "where-mask-ends-season-1-episode-25-2026",
+        "source": "https://tv.nontondrama.vip/where-mask-ends-season-1-episode-25-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/uzHBobjqOa3DBW2oLaM07g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DjllTcLU5l-FM_cetRhjvA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/0yjU7AgwwLiBiryYFTBsZQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -79507,21 +79685,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/xdb2_JaDQu7Zxkj6Hij48A",
+        "url": "https://videonode.de/iframe3/p2p/uzHBobjqOa3DBW2oLaM07g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/8NSd9-Io-8TCN1S3u7KDag",
+        "url": "https://videonode.de/iframe3/cast/DjllTcLU5l-FM_cetRhjvA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Hoau1aIJuZ43eGQscvBUNg",
+        "url": "https://videonode.de/iframe3/hydrax/0yjU7AgwwLiBiryYFTBsZQ",
         "default": false
       }
     ],
@@ -142655,8 +142833,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-mission-mompossible-2026-lk21.jpg",
     "rating": "8.1",
-    "durasi": "19 eps · S.1",
-    "episodes_count": 19,
+    "durasi": "20 eps · S.1",
+    "episodes_count": 20,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -143230,6 +143408,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "Mission: Mompossible - Season 1 Episode 20 (2026)",
+        "slug": "mission-mompossible-season-1-episode-20-2026",
+        "source": "https://tv.nontondrama.vip/mission-mompossible-season-1-episode-20-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/_UKvtu7WLvgtWu03yPz9Vg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/qBIO5YKs5sobDV4AS47n1w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ehqDQXp82AAZ2kly9dKd8Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -143237,21 +143445,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/I4t3FgJfxG5Z6z86ggTbqQ",
+        "url": "https://videonode.de/iframe3/p2p/_UKvtu7WLvgtWu03yPz9Vg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/QZqyhEMwA6wW8Btj2tYfUQ",
+        "url": "https://videonode.de/iframe3/cast/qBIO5YKs5sobDV4AS47n1w",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/CV3ixvNSr5J5Gi9rx-op3g",
+        "url": "https://videonode.de/iframe3/hydrax/ehqDQXp82AAZ2kly9dKd8Q",
         "default": false
       }
     ],
