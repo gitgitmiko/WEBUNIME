@@ -3163,8 +3163,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Yowaki-M2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [],
     "sinopsis": "Anime Yowaki Max.",
     "related": [],
@@ -3310,17 +3310,32 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Yowaki Max Episode 5",
+        "slug": "yowaki-max-episode-5",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-5/",
+        "date": "",
+        "released_at": "2026-11-01T17:03:15.674Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "default",
+            "label": "Default",
+            "url": "https://www.blogger.com/video.g?token=",
+            "default": true
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/jlo2WBYQ#pgsG8n7aYPksGWkHBgWAMUVCR9qOWXFLgNTQSiSp-eU",
-        "default": true,
-        "post": "54944",
-        "nume": "4"
+        "server": "default",
+        "label": "Default",
+        "url": "https://www.blogger.com/video.g?token=",
+        "default": true
       }
     ],
     "id": 14,
@@ -5235,8 +5250,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 3,
+    "durasi": "4 eps",
+    "episodes_count": 4,
     "genre": [
       "Action",
       "Adventure",
@@ -5352,6 +5367,31 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dyPw5E6PXr4owBTw86ltjEV1SuvT3p2v0rP4_Y2a3GhUqV1HGNAe-kR4Aho0jsZ1p4OCXjYfRm5h-BzDcBftqWmtv9AWgl3Lux8LNb1mX5dPWLtMep3jD8fV-WKrHuF4XMSJJQ",
             "default": true,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 4,
+        "title": "Dragon Ball Super: Beerus Episode 4",
+        "slug": "dragon-ball-super-beerus-episode-4",
+        "source": "https://anoboy.quest/2026/11/dragon-ball-super-beerus-episode-4/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxQTjbznXfX3PNot93Wg1P2Tz1Hb-8AsCeh-9kq7G938sdfrcjwqZ2PwTqLRQquCS_8NbkAXr-E1EJQiXGJtdiOGw6hgot0dF8QUADi6jS1DcRyXtBi_buLNuGfu-HLoB3P5KW0",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzzCHl-KHv8y6G4iG2fFLeFceP1NI_tJRlT23to8VTt2nmzD5g7tQe64px-5g8fjcK9Tq4zX48DLiouQ711LpDk-yKIrzqhg2Oq-OefS82zkUIxkID7jUnOx93F4KQaLtnNUUzW",
+            "default": false,
             "source": "anoboy"
           }
         ]
@@ -6164,7 +6204,7 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Mezametara%20Saikyou%20Soubi%20to%20Uchuusenmochi%20Datta%20node.jpg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "5 eps",
+    "durasi": "23 Menit",
     "episodes_count": 5,
     "genre": [
       "Action",
@@ -6290,6 +6330,14 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxjubFxY1xdmT2clcUAr7Kq1kIK-GmTULbsJddloMRQVuYgS7dptzTmMGhb6GNhW826ZXsxxn06WqI8VEJylTMx1uGSYLiytwO-xBwdPmUTIGRsOg8RL1mnjbZxa2xyFH1PswJd",
             "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxzRKnHc8jPFoGY_yAa58vSWcF4pBCrqg5J2A-FLVoRfnc7Adn8OB3cQHnVhs5mlFvVhOnDwK699edZlN8wAGBfJwU9ftkHj3tPW4zQIQwb3Y272bRKpsPti1604A4jYTehPmo",
+            "default": false,
             "source": "anoboy"
           }
         ]
@@ -8563,6 +8611,14 @@
             "label": "Anoboy 360",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwV6v2oUUzPBdzxseQ_X7_B24JS_9yh34LmiFh7k0hYS58OR9suuBtXYi9SEhzpDoE044HdZNKNIyVERNpfcgafv1mTdfJwc3Y5GMf7Q4KyX5Wlu8L6v17jWEObhvngVmng0VlF",
             "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwhG5y2R9VjouEkIrzsAAzFGSaVy57-JbMBSjGoov2mWSUlhXXeVPY4GkPofurI6HTbp0rM9c6av6-vsCKD8PmVdwc9b4Fsx4Ozn6fN56dMHC79hWkp0FzqIr2tX1rHm_tgE3HE",
+            "default": false,
             "source": "anoboy"
           }
         ]
