@@ -29,6 +29,7 @@
     "build:marvel": "node scripts/build-marvel-catalog.js",
     "scrape:anoboy": "node scripts/scrape-anoboy.js",
     "sync:anoboy": "node scripts/scrape-anoboy.js --latest",
+    "scrape:anoboy-movies": "node scripts/scrape-anoboy-movies.js --all",
     "repair:episode": "node scripts/repair-reported-episode.js",
     "repair:queue": "node scripts/repair-reported-episode.js --queue"
   },

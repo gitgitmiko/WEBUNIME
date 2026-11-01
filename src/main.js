@@ -1584,13 +1584,13 @@ function toProxyPath(absoluteUrl) {
  * Resolve URL player iframe dalam (skip wrapper playeriframe + iklan dobel).
  * Hydrax/Abyss → wrapper /__hydrax__.
  * Anime:
- *   - Blogger (Anoboy) + Mega → embed langsung (proxy merusak playback)
+ *   - Blogger (Anoboy) + Mega + YourUpload → embed langsung (proxy merusak playback)
  *   - Wibufile MP4 / Pixeldrain → /__vid__ (auto-next OK)
  *   - Filedon/Pucuk + embed lain yang aman → /__px__/ (auto-next via shim)
  * Cast/Turbo → /__px__/...
  */
 /** Host yang WAJIB iframe langsung (jangan proxy). */
-const ANIME_DIRECT_EMBED_RE = /blogger\.com|mega\.(nz|io)/i;
+const ANIME_DIRECT_EMBED_RE = /blogger\.com|mega\.(nz|io)|yourupload\.com/i;
 /** Host anime yang aman di-proxy untuk deteksi video ended. */
 const ANIME_ENDED_PROXY_RE =
   /wibufile\.com|filedon\.co|file\.fm|gdriveplayer\.|krakenfiles\.com|dood\.(to|watch|so|la|ws|pm|wf|sh)|doodstream\.|stream\.coeg\.me|suzihaza\.com|wibuu\.info|pixeldrain\.com/i;

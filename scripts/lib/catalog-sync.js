@@ -2,7 +2,7 @@
  * Sync inkremental katalog:
  * - LK21: film / series / horor (halaman 1)
  * - Samehadaku: anime-terbaru (5 hlm) + anime-movie + jadwal
- * - Anoboy: homepage terbaru (merge server; judul baru jika belum ada)
+ * - Anoboy: homepage terbaru (merge server; judul baru jika belum ada) + anime-movie (2 hlm)
  *   ditulis ke public/data (TV) dan public/data/mobile (HP)
  */
 
@@ -11,6 +11,7 @@ import { join } from "node:path";
 import { chromium } from "playwright";
 import { syncSamehadakuCatalog, checkSamehadakuFirstPage } from "./samehadaku-sync.js";
 import { syncAnoboyLatest } from "./anoboy-sync.js";
+import { checkAnoboyMoviesFirstPage, syncAnoboyMovies } from "./anoboy-movies.js";
 import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
@@ -1596,6 +1597,16 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       };
     }
 
+    try {
+      results.anoboyMovies = await syncAnoboyMovies([dataDir, mobileDir], {
+        pages: 2,
+        markNew: true,
+      });
+    } catch (err) {
+      console.warn("[sync] anoboy movie:", err.message);
+      results.anoboyMovies = { checked: 0, matched: 0, added: 0, updated: 0, error: err.message };
+    }
+
     // Rewrite host player lama → baru di seluruh JSON (alias map).
     try {
       console.log("[catalog-sync] fix player host aliases…");
@@ -1647,7 +1658,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       (results.animeMobile?.added || 0) +
       (results.animeMovies?.added || 0) +
       (results.animeMoviesMobile?.added || 0) +
-      (results.anoboy?.added || 0);
+      (results.anoboy?.added || 0) +
+      (results.anoboyMovies?.added || 0);
     const updated =
       results.movies.updated +
       results.series.updated +
@@ -1658,7 +1670,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       (results.animeMobile?.updated || 0) +
       (results.animeMovies?.updated || 0) +
       (results.animeMoviesMobile?.updated || 0) +
-      (results.anoboy?.matched || 0);
+      (results.anoboy?.matched || 0) +
+      (results.anoboyMovies?.updated || 0);
     const payload = {
       ok: true,
       skipped: false,
@@ -1732,8 +1745,15 @@ export async function checkFirstPageForNew(rootDir) {
     report.errors.push(`samehadaku: ${err.message}`);
   }
 
+  try {
+    report.anoboyMovies = (await checkAnoboyMoviesFirstPage(dataDir)).fresh;
+  } catch (err) {
+    report.anoboyMovies = [];
+    report.errors.push(`anoboy-movie: ${err.message}`);
+  }
+
   report.hasNew = Boolean(
-    report.movies.length || report.series.length || report.anime.length
+    report.movies.length || report.series.length || report.anime.length || report.anoboyMovies.length
   );
   return report;
 }
