@@ -1,5 +1,45 @@
 [
   {
+    "nama": "Heartbeat",
+    "judul": "Heartbeat (2022)",
+    "tahun": "2022",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-heartbeat-2022-lk21.jpg",
+    "rating": "7.8",
+    "quality": "HD",
+    "durasi": "28m",
+    "genre": [
+      "Short"
+    ],
+    "sinopsis": "Heartbeat - Dilanda kecemasan yang luar biasa di sekolah, seorang anak berusia delapan tahun bernama Chul berbohong kepada gurunya bahwa ia ingin pergi ke kamar mandi, tetapi justru berlari pulang langsung ke rumah.\nAwards: 0 wins & 1 nominations\n\nSubtitle: retail\n\nSutradara: Lee Chang-dong\n\nBintang Film: Kim Geon-Woo, Park Bo-kyung, Jeon Do-yeon, Sul Kyung-gu, Park Ok-chool\n\nNegara: South Korea\n\nVotes: 22\n\nRelease: 30 Apr 2022\n\nUpdated: 02 Nov 2026 12:50:51",
+    "slug": "heartbeat-2022",
+    "source": "https://tv12.lk21official.cc/heartbeat-2022",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/d-72rhwd1BlTjwaU7NL1ZA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/kOPLOB48HqxHQXi5S1XJ7g",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/czulTO-Y73ia7JL2_Iltpw",
+        "default": false
+      }
+    ],
+    "id": 389,
+    "is_new": true
+  },
+  {
     "nama": "Truly Scary Stories: Autumn Special 26",
     "judul": "Truly Scary Stories: Autumn Special 26 (2026)",
     "tahun": "2026",
@@ -36,8 +76,7 @@
         "default": false
       }
     ],
-    "id": 388,
-    "is_new": true
+    "id": 388
   },
   {
     "nama": "Kira & El Gin",
