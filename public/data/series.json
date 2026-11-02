@@ -131,8 +131,7 @@
         "default": false
       }
     ],
-    "id": 661,
-    "is_new": true
+    "id": 661
   },
   {
     "type": "series",
@@ -56094,8 +56093,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-small-town-remedy-2026-lk21.jpg",
     "rating": "9.0",
-    "durasi": "24 eps · S.1",
-    "episodes_count": 24,
+    "durasi": "26 eps · S.1",
+    "episodes_count": 26,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -56824,6 +56823,44 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 25,
+        "title": "Small Town Remedy - Season 1 Episode 25 (2026",
+        "slug": "small-town-remedy-season-1-episode-25-2026",
+        "source": "https://tv5.nontondrama.my/small-town-remedy-season-1-episode-25-2026",
+        "players": []
+      },
+      {
+        "season": 1,
+        "episode": 26,
+        "title": "Small Town Remedy - Season 1 Episode 26 (2026",
+        "slug": "small-town-remedy-season-1-episode-26-2026",
+        "source": "https://tv.nontondrama.vip/small-town-remedy-season-1-episode-26-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/DX6W2Y2eAmRViah8ouXU1w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/KjXG21TymwLToqB1jjIUkA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KUwd9bnpdG2JgFwLQ2Pt9w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -56831,21 +56868,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/g-cYzHEzCmjrYwl-JP0YEw",
+        "url": "https://videonode.de/iframe3/p2p/DX6W2Y2eAmRViah8ouXU1w",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/RKogVnLoV2WDQfkClDFr9Q",
+        "url": "https://videonode.de/iframe3/cast/KjXG21TymwLToqB1jjIUkA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/07-q_cAkOz7IIWQIrsUYoA",
+        "url": "https://videonode.de/iframe3/hydrax/KUwd9bnpdG2JgFwLQ2Pt9w",
         "default": false
       }
     ],
