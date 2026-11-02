@@ -293,11 +293,43 @@
       },
       {
         "server": "anoboy",
+        "label": "Anoboy Mega 720p",
+        "url": "https://mega.nz/embed/LzwkWaLY#CeRo_qrczEPJl97r5mg9XNdWrkqVOaNjxc7F96e0aQM",
+        "default": false,
+        "source": "anoboy",
+        "no": 8
+      },
+      {
+        "server": "anoboy",
+        "label": "Anoboy Mega 480p",
+        "url": "https://mega.nz/embed/e74BxBqT#4pkjrlr-OTdisauVDplb1jvDDEcZnPYr75Fim-_NalU",
+        "default": false,
+        "source": "anoboy",
+        "no": 9
+      },
+      {
+        "server": "anoboy",
+        "label": "Anoboy Mega 360p",
+        "url": "https://mega.nz/embed/z2Yh2QQA#QMh3uNii-VPEBc0Yj9pTqwVLMlazqivzN6upPUWrG10",
+        "default": false,
+        "source": "anoboy",
+        "no": 10
+      },
+      {
+        "server": "anoboy",
+        "label": "Anoboy Mega 240p",
+        "url": "https://mega.nz/embed/D3Rg3BwQ#FzzuR_TeGxwQXBll5sMD69lgcr9wsfSlZxoyjKy9Pzo",
+        "default": false,
+        "source": "anoboy",
+        "no": 11
+      },
+      {
+        "server": "anoboy",
         "label": "Anoboy YUP 720p",
         "url": "https://www.yourupload.com/embed/D4o8U4FmN8sU",
         "default": false,
         "source": "anoboy",
-        "no": 8
+        "no": 12
       },
       {
         "server": "anoboy",
@@ -305,7 +337,7 @@
         "url": "https://www.yourupload.com/embed/IR61108f5bgI",
         "default": false,
         "source": "anoboy",
-        "no": 9
+        "no": 13
       },
       {
         "server": "anoboy",
@@ -313,7 +345,7 @@
         "url": "https://www.yourupload.com/embed/Wp31gs71W21u",
         "default": false,
         "source": "anoboy",
-        "no": 10
+        "no": 14
       },
       {
         "server": "anoboy",
@@ -321,7 +353,7 @@
         "url": "https://www.yourupload.com/embed/Y1c8J6172f08",
         "default": false,
         "source": "anoboy",
-        "no": 11
+        "no": 15
       }
     ],
     "id": 3,
@@ -773,27 +805,11 @@
       },
       {
         "server": "anoboy",
-        "label": "Anoboy Mega 480p",
-        "url": "https://mega.nz/embed/zrAAlQKQ#0Z62Y1M_MeIBdDPg_y2eWDpPPx6nQHf2wYV5EC8VYFQ",
-        "default": false,
-        "source": "anoboy",
-        "no": 5
-      },
-      {
-        "server": "anoboy",
-        "label": "Anoboy Mega 360p",
-        "url": "https://mega.nz/embed/7vQCwRxR#4hSCXBu-HBtrTsTtVAI6r9ij3LYhnn9j3znnwf7hVGY",
-        "default": false,
-        "source": "anoboy",
-        "no": 6
-      },
-      {
-        "server": "anoboy",
         "label": "Anoboy YUP 360p",
         "url": "https://www.yourupload.com/embed/1H4p514SxI3T",
         "default": false,
         "source": "anoboy",
-        "no": 7
+        "no": 5
       }
     ],
     "id": 5,
