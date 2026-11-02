@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-secret-unrequited-love-2019-lk21.jpg",
     "rating": "7.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Romance"
@@ -46,6 +46,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Secret Unrequited Love - Season 1 Episode 2 (2019)",
+        "slug": "secret-unrequited-love-season-1-episode-2-2019",
+        "source": "https://tv.nontondrama.vip/secret-unrequited-love-season-1-episode-2-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/3FllkSkmFAzWnmoNppqZmQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/zl-6awlvcoPH59Y9xBMKLg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4kXvyDWzEvtlR2iZ8sNFHA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Secret Unrequited Love - Season 1 Episode 3 (2019)",
+        "slug": "secret-unrequited-love-season-1-episode-3-2019",
+        "source": "https://tv.nontondrama.vip/secret-unrequited-love-season-1-episode-3-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/k9jI0seeLe1q4EfL4VWbSQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/rJtDOi6Lr4LIn98yFZKGSQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/EWRm8gPTXkaZAvK1lYQpYg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -53,26 +113,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/uZwF9oFnO2ytzr1ZaayLnQ",
+        "url": "https://videonode.de/iframe3/p2p/k9jI0seeLe1q4EfL4VWbSQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/EjLtk3lA8ZXyLompjZZsoA",
+        "url": "https://videonode.de/iframe3/cast/rJtDOi6Lr4LIn98yFZKGSQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/bZYKMeQSgIXN_mrjSNmv9Q",
+        "url": "https://videonode.de/iframe3/hydrax/EWRm8gPTXkaZAvK1lYQpYg",
         "default": false
       }
     ],
-    "id": 665,
-    "is_new": true
+    "id": 665
   },
   {
     "type": "series",
