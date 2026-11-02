@@ -700,9 +700,9 @@ function injectClientShim(pageUrl, { wasmB64 = "" } = {}) {
       });
     } catch (e) {}
 
-    // Blok popup iklan + document.write gate AdBlock/Sandbox
+    // Blok document.write gate AdBlock/Sandbox. window.open tetap fakeOpen (blockPopups):
+    // kalau null, bundle menghitung popup gagal lalu jwplayer().remove() → "Player has been destroyed".
     try {
-      window.open = function () { return null; };
       document.write = function () {};
       document.writeln = function () {};
     } catch (e) {}
@@ -1175,6 +1175,12 @@ function patchAbyssPlayerJs(text) {
   out = out.replace(/\['window'\]\s*>\s*0x1/g, "['window']>0x7f");
   out = out.replace(/track\.window\s*>=\s*2/g, "false");
   out = out.replace(/track\.window\s*>\s*1/g, "false");
+  // Bundle ter-obfuscate: kuncinya _0x..(0x321), jadi pola track.window di atas tidak kena.
+  // window.open dishim → null, tiap klik dihitung popup gagal; >= 2 = jwplayer().remove().
+  out = out.replace(
+    /[\w$]+(?:\[[^\]]*\]|\.\w+)\s*>=\s*(?:0x2|2)\s*\)\s*\{\s*try\s*\{\s*window\[['"]jwplayer['"]\]\s*&&\s*jwplayer\(\)/g,
+    "false){try{window['jwplayer']&&jwplayer()"
+  );
   out = out.replace(/jwplayer\s*\(\s*\)\s*\.\s*remove\s*\(\s*\)/gi, "void 0");
   out = out.replace(
     /Due to certain reasons\s*\(AdBlock\/Sandbox\)[\s\S]{0,400}?try again\./gi,
