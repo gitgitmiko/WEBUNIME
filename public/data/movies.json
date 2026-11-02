@@ -11655,7 +11655,7 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-resident-evil-2026-2-lk21.jpg",
     "rating": "7.8",
-    "quality": "CAM",
+    "quality": "HD",
     "durasi": "1j 26m",
     "genre": [
       "Action",
@@ -11670,28 +11670,14 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/LbsWlJDQgD1UW0fMYF297Q",
+        "url": "https://videonode.de/iframe3/p2p/wEiLFXMvEUnPsnlQ_OcsRg",
         "default": true
       },
       {
         "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe3/turbovip/E2-DnB0gYgQfv4b5IDeqfw",
-        "default": false
-      },
-      {
-        "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/RxemviNjzfm-no0X8GFBdg",
-        "default": false
-      },
-      {
-        "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/8i3u3YWzAvEn_uJbzqYfMQ",
+        "url": "https://videonode.de/iframe3/hydrax/dVdyIR__1BwqTutvmiJUCw",
         "default": false
       }
     ]
