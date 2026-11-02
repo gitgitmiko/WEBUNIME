@@ -6647,35 +6647,11 @@
     "players": [
       {
         "server": "anoboy",
-        "label": "Anoboy Mega 720p",
-        "url": "https://mega.nz/embed/C3JFnbLC#NyuYxFtf-ZFg6dV2zWQibQ-6VUIIiX3aHzxKS5ZaAGQ",
+        "label": "Anoboy YUP 360p",
+        "url": "https://www.yourupload.com/embed/YG54N1TvsBR5",
         "default": true,
         "source": "anoboy",
         "no": 1
-      },
-      {
-        "server": "anoboy",
-        "label": "Anoboy Mega 480p",
-        "url": "https://mega.nz/embed/ijIwCLoZ#tr-51AxXqHJDdPJxh_SC5aCP8_VRS9_tuxlVRU-7jbw",
-        "default": false,
-        "source": "anoboy",
-        "no": 2
-      },
-      {
-        "server": "anoboy",
-        "label": "Anoboy Mega 360p",
-        "url": "https://mega.nz/embed/ymgwjYQC#WiS_2fRyKcb3HLnCS5bbw1hwzXqpghSSidW6NValtvA",
-        "default": false,
-        "source": "anoboy",
-        "no": 3
-      },
-      {
-        "server": "anoboy",
-        "label": "Anoboy YUP 360p",
-        "url": "https://www.yourupload.com/embed/YG54N1TvsBR5",
-        "default": false,
-        "source": "anoboy",
-        "no": 4
       },
       {
         "server": "anoboy",
@@ -6683,7 +6659,7 @@
         "url": "https://www.yourupload.com/embed/8fmg72IN63a1",
         "default": false,
         "source": "anoboy",
-        "no": 5
+        "no": 2
       }
     ],
     "id": 39
