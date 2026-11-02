@@ -1,6 +1,141 @@
 [
   {
     "type": "series",
+    "nama": "Collision",
+    "judul": "Collision (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-collision-2026-lk21.jpg",
+    "rating": "3.7",
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
+    "seasons_count": 1,
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Collision - Belen dan Zoe berbagi ikatan ibu dan anak yang kini telah hancur dan tampak mustahil untuk dipulihkan. Mengikuti sebuah insiden keluarga yang mereka lalui, keduanya menjadi bagaikan air dan minyak—praktis seperti musuh. Mereka terus-menerus bentrok dan mencoba saling menjatuhkan karena masing-masing merasa benar dan meyakini bahwa hanya versinya tentang kebenaran yang harus menang. Namun, mereka harus berhati-hati; saat mereka mempermainkan api dan tenggelam dalam pertarungan mereka, rahasia besar dari masa lalu bisa muncul kembali dan membuat mereka lebih rentan dari sebelumnya.\n\nBintang Film: Macarena Achaga, Margarita Rosa de Francisco, Christian Vazquez, Juan Pablo Castaneda, Belen Aguilar\n\nNegara: Mexico\n\nVotes: 121",
+    "slug": "collision-2026",
+    "source": "https://tv.nontondrama.vip/collision-2026",
+    "list_source": "https://tv12.lk21official.cc/collision-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Collision - Season 1 Episode 1 (2026)",
+        "slug": "collision-season-1-episode-1-2026",
+        "source": "https://tv.nontondrama.vip/collision-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/AIP6AWIcXV0So9RWJGgBCg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gW_Ogsuafb_wUcLrEe94wA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/YpX7-X5N--oIwCVHHHpaZg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Collision - Season 1 Episode 2 (2026)",
+        "slug": "collision-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/collision-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/WEux86zSR7MMtEH9zqJYkg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jvx0AlbYgyQ4qUAAuHrsLQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QGO01_Ln729wIcdLvukh4A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Collision - Season 1 Episode 3 (2026)",
+        "slug": "collision-season-1-episode-3-2026",
+        "source": "https://tv.nontondrama.vip/collision-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/DM8TXjtAYiSRjUsRyZSrYw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/aN_jMqyTZHmDfbjUyZA8OQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/SjD588J_WVwk_JlcoNnF7w",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/DM8TXjtAYiSRjUsRyZSrYw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/aN_jMqyTZHmDfbjUyZA8OQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/SjD588J_WVwk_JlcoNnF7w",
+        "default": false
+      }
+    ],
+    "id": 661,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Hamish Blake: Unskilled Adult",
     "judul": "Hamish Blake: Unskilled Adult (2026)",
     "tahun": "2026",
@@ -552,8 +687,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-rinnan-traitor-within-2026-lk21.jpg",
     "rating": "7.8",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Biography",
@@ -654,6 +789,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Rinnan: The Traitor Within - Season 1 Episode 4 (2026)",
+        "slug": "rinnan-traitor-within-season-1-episode-4-2026",
+        "source": "https://tv.nontondrama.vip/rinnan-traitor-within-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/DeYnoXQMCIlwYMNy0Wqh8g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/lOxuiwrwDf5Y_lPYu2F0HQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/vRL3_rO-U8eFh7BS-e9wbg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -661,21 +826,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/CgPFgB1WSAM6mTSYBM4gZQ",
+        "url": "https://videonode.de/iframe3/p2p/DeYnoXQMCIlwYMNy0Wqh8g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/vqTA7scFgMlOEYtLbA4FDw",
+        "url": "https://videonode.de/iframe3/cast/lOxuiwrwDf5Y_lPYu2F0HQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/eTeAAywjb3goTx7LrR9DkQ",
+        "url": "https://videonode.de/iframe3/hydrax/vRL3_rO-U8eFh7BS-e9wbg",
         "default": false
       }
     ],
@@ -55929,8 +56094,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-small-town-remedy-2026-lk21.jpg",
     "rating": "9.0",
-    "durasi": "21 eps · S.1",
-    "episodes_count": 21,
+    "durasi": "24 eps · S.1",
+    "episodes_count": 24,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -56505,7 +56670,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/XymHgRWGJ_E0z8nKfh1xqg",
+            "url": "https://videonode.de/iframe3/hydrax/onr8FInjzvgdYuGyWePKRw",
             "default": false
           }
         ]
@@ -56535,7 +56700,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Fu5NdbgBplqGXa-UVrecig",
+            "url": "https://videonode.de/iframe3/hydrax/rRGQWpqSw-m4QJyeCPqW9A",
             "default": false
           }
         ]
@@ -56565,7 +56730,97 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/2-5f0xkUMGA41OI5YXlPIg",
+            "url": "https://videonode.de/iframe3/hydrax/v9OSjF-Mx3MfZ9L_rQdEmg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 22,
+        "title": "Small Town Remedy - Season 1 Episode 22 (2026",
+        "slug": "small-town-remedy-season-1-episode-22-2026",
+        "source": "https://tv.nontondrama.vip/small-town-remedy-season-1-episode-22-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/9LS3Ffs9tVqd2qgqUeJL8A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ejIlymdtCCVENJ-2Ufl_wQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/85cCcHvi3L9V-x-diU4M5w",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "title": "Small Town Remedy - Season 1 Episode 23 (2026",
+        "slug": "small-town-remedy-season-1-episode-23-2026",
+        "source": "https://tv.nontondrama.vip/small-town-remedy-season-1-episode-23-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/VezFNbqdl_cvSYdVNVawBQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/oR-FC8_O1vqrekGMH1906w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/8YdXrJsSi0AK7muENLFl-A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "Small Town Remedy - Season 1 Episode 24 (2026",
+        "slug": "small-town-remedy-season-1-episode-24-2026",
+        "source": "https://tv.nontondrama.vip/small-town-remedy-season-1-episode-24-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/g-cYzHEzCmjrYwl-JP0YEw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/RKogVnLoV2WDQfkClDFr9Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/07-q_cAkOz7IIWQIrsUYoA",
             "default": false
           }
         ]
@@ -56576,21 +56831,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/IeoJnhZU7KRLMq_pK1j1ow",
+        "url": "https://videonode.de/iframe3/p2p/g-cYzHEzCmjrYwl-JP0YEw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/EN76kemOZOWV2iMdRHWB3g",
+        "url": "https://videonode.de/iframe3/cast/RKogVnLoV2WDQfkClDFr9Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/2-5f0xkUMGA41OI5YXlPIg",
+        "url": "https://videonode.de/iframe3/hydrax/07-q_cAkOz7IIWQIrsUYoA",
         "default": false
       }
     ],
