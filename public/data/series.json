@@ -70741,8 +70741,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/11/film-maigret-2025-lk21.jpg",
     "rating": "7.0",
-    "durasi": "8 eps · S.2",
-    "episodes_count": 8,
+    "durasi": "9 eps · S.2",
+    "episodes_count": 9,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -71035,6 +71035,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 3,
+        "title": "Maigret - Season 2 Episode 3 (2025)",
+        "slug": "maigret-season-2-episode-3-2025",
+        "source": "https://tv.nontondrama.vip/maigret-season-2-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RlBrFVm-R7RKo9s4SmFx5g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Bc9FQaVOoWelvok4zwcO9w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/m1TsN9PeuPC46sWxpjBLgg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -71042,21 +71072,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ipqBUlcnDRJKpnA2W4ns9Q",
+        "url": "https://videonode.de/iframe3/p2p/RlBrFVm-R7RKo9s4SmFx5g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/4WV9Ql5vqh5haKVvKmNAhA",
+        "url": "https://videonode.de/iframe3/cast/Bc9FQaVOoWelvok4zwcO9w",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/wpAtioqvmerkZKxqqsYAkw",
+        "url": "https://videonode.de/iframe3/hydrax/m1TsN9PeuPC46sWxpjBLgg",
         "default": false
       }
     ],
