@@ -6250,8 +6250,8 @@
     "thumbnail": "https://anoboy.quest/img/upload/01as-Kyouran%20Reijou%20Nia%20Liston.jpg",
     "rating": "7.6",
     "votes": "",
-    "durasi": "25 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Fantasy"
     ],
@@ -6406,6 +6406,43 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Kyouran Reijou Nia Liston: Byoujaku Reijou ni Tensei shita Kamigoroshi no Bujin no Karei Naru Musouroku Episode 5",
+        "slug": "kyouran-reijou-nia-liston-episode-5",
+        "source": "https://v2.samehadaku.how/kyouran-reijou-nia-liston-episode-5/",
+        "date": "",
+        "released_at": "2026-11-03T14:30:55.581Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwVpUmYMDHHvnBJ1iuVYYIBUt_Wkd_18XKW-MmFZQfN042FmKggyxGKfcZHe5ZTWC7R_3AhCfyN_M--d_RrX7J9Dn9X1crbiNdL1tg_YOVrw8qNQWNGLgPa1MGzuqX77tXjIbw&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55113",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/npQVSA7K#taTDbsn-Qf-JlWl8ZA3VRdLvhoaHVGcX5pcpZPpN46w",
+            "default": false,
+            "post": "55113",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/Ls4yxAJK#jEhInOAyBQJkMGjIYFsVe7ALfoXhFw9rhWRWY2DwYLQ",
+            "default": false,
+            "post": "55113",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -6413,10 +6450,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxDsVuzgUjkh4m8S7vi9B-BgGumYBIg69LLOPE3tjoKLwGJAxEzXs5AD_--efRxEIXyBHYoBmRNQt23dJmjwKAVaKbubD0J8iSx_sM36l-0Akc_9YUXJmums5MB3s_H2B_LO9Zy&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwVpUmYMDHHvnBJ1iuVYYIBUt_Wkd_18XKW-MmFZQfN042FmKggyxGKfcZHe5ZTWC7R_3AhCfyN_M--d_RrX7J9Dn9X1crbiNdL1tg_YOVrw8qNQWNGLgPa1MGzuqX77tXjIbw&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54793",
+        "post": "55113",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/npQVSA7K#taTDbsn-Qf-JlWl8ZA3VRdLvhoaHVGcX5pcpZPpN46w",
+        "default": false,
+        "post": "55113",
+        "nume": "3"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/Ls4yxAJK#jEhInOAyBQJkMGjIYFsVe7ALfoXhFw9rhWRWY2DwYLQ",
+        "default": false,
+        "post": "55113",
+        "nume": "5"
       }
     ],
     "id": 26,
