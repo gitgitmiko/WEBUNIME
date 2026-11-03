@@ -241236,7 +241236,7 @@
     "film": "MobLand (2025)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/mobland-2025",
-    "scraped_at": "2026-11-03T02:37:13.444Z",
+    "scraped_at": "2026-11-03T03:44:05.228Z",
     "episodes": [
       {
         "season": 1,
@@ -261790,7 +261790,7 @@
     "film": "Tulsa King (2022)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/tulsa-king-2022",
-    "scraped_at": "2026-11-03T02:37:07.343Z",
+    "scraped_at": "2026-11-03T03:43:59.089Z",
     "episodes": [
       {
         "season": 1,
@@ -263544,7 +263544,7 @@
     "film": "9-1-1 (2018)",
     "type": "series",
     "source": "https://tv5.nontondrama.my/9-1-1-2018",
-    "scraped_at": "2026-11-03T02:37:05.428Z",
+    "scraped_at": "2026-11-03T03:43:57.151Z",
     "episodes": [
       {
         "season": 1,
@@ -297013,7 +297013,7 @@
     "film": "Fresh off the Sea (2024)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/fresh-off-the-sea-2024",
-    "scraped_at": "2026-11-03T02:38:37.403Z",
+    "scraped_at": "2026-11-03T03:45:29.062Z",
     "episodes": [
       {
         "season": 1,
@@ -305018,7 +305018,7 @@
     "film": "Family Register (2026)",
     "type": "series",
     "source": "https://tv6.nontondrama.my/family-register-2026",
-    "scraped_at": "2026-11-03T02:36:24.143Z",
+    "scraped_at": "2026-11-03T03:43:16.276Z",
     "episodes": [
       {
         "season": 1,
@@ -355008,7 +355008,7 @@
     "film": "Love on the Menu (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/love-menu-2026",
-    "scraped_at": "2026-11-03T02:33:32.157Z",
+    "scraped_at": "2026-11-03T03:40:24.483Z",
     "episodes": [
       {
         "season": 1,
@@ -378470,7 +378470,7 @@
     "film": "Street World Fighter: Directors’ War (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/street-world-fighter-directors-war-2026",
-    "scraped_at": "2026-09-04T07:02:42.029Z",
+    "scraped_at": "2026-11-03T03:38:58.415Z",
     "episodes": [
       {
         "season": 1,
@@ -378481,28 +378481,28 @@
             "no": 1,
             "server": "p2p",
             "label": "GANTI PLAYER P2P",
-            "url": "https://videonode.de/iframe/p2p/5yeN",
+            "url": "https://videonode.de/iframe3/p2p/u1MczX96btUVNtox4uBOEw",
             "default": true
           },
           {
             "no": 2,
-            "server": "turbovip",
-            "label": "GANTI PLAYER TURBOVIP",
-            "url": "https://videonode.de/iframe/turbovip/6a8791fbaeb10",
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3keBucn-B6lHsb2zdFJ4AQ",
             "default": false
           },
           {
             "no": 3,
-            "server": "cast",
-            "label": "GANTI PLAYER CAST",
-            "url": "https://videonode.de/iframe/cast/cglf8o0kqriu",
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/CFJrMLQqxW1QRgsifFGdFw",
             "default": false
           },
           {
             "no": 4,
-            "server": "hydrax",
-            "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe/hydrax/GqMDjaTIU",
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/9UaCngXb06Lfa5PspB9EJA",
             "default": false
           }
         ]
@@ -378573,6 +378573,153 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/mANzCvIcEstUx-U3MxkJfg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "slug": "street-world-fighter-directors-war-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zcRrZzwKskcDq3kSB9cclg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/MeSZFK3wfGOq6pXhuj3vGw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/D8ZmFIbmGOmyY076hTxmtQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/flCnjhqS5Vj_rkx783oHKA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "slug": "street-world-fighter-directors-war-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/HxLKzNCJNXiehzw4mET6-Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Xm4YD4S8nEasNIve4EFIAw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bpmiGx5Kn8nwX5ILGH0Whw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "slug": "street-world-fighter-directors-war-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/GFNBgFMAp6ESizvjGASvVQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/MYvxeGk6T-OVgBbunNYWTg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/shaMrMfpR_3Prroewl4m9Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "street-world-fighter-directors-war-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dXO5L5vIzR25q7HQDR5Skw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/q21NAycE2NEzNaKf9CzkJA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KYeWQwL6z_x8esLN_tFDCQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "slug": "street-world-fighter-directors-war-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/VexSE72MHWkmFs08p-Tp4Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/4_wrzVXWy888RDwst_sedg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/dUIzKiI91CnL3FCplo1HNg",
             "default": false
           }
         ]
@@ -384808,7 +384955,7 @@
     "film": "Labyrinth of Hortensia and the Minotaur (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/labyrinth-hortensia-minotaur-2026",
-    "scraped_at": "2026-11-03T02:35:10.592Z",
+    "scraped_at": "2026-11-03T03:42:03.169Z",
     "episodes": [
       {
         "season": 1,
@@ -402969,7 +403116,7 @@
     "film": "Fired Up! (2026)",
     "type": "series",
     "source": "https://tv7.nontondrama.my/fired-up-2026",
-    "scraped_at": "2026-11-03T02:32:15.105Z",
+    "scraped_at": "2026-11-03T03:39:08.119Z",
     "episodes": [
       {
         "season": 1,
@@ -403365,7 +403512,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/TtWZteEgEbTsFdWNCnnI1A",
+            "url": "https://videonode.de/iframe3/hydrax/FfHbTtZIQ-23P1iZfGUh9w",
             "default": false
           }
         ]
@@ -408998,7 +409145,7 @@
     "film": "Dark Matter (2024)",
     "type": "series",
     "source": "https://tv8.nontondrama.my/dark-matter-2024",
-    "scraped_at": "2026-11-03T02:37:16.665Z",
+    "scraped_at": "2026-11-03T03:44:08.465Z",
     "episodes": [
       {
         "season": 1,
@@ -452040,7 +452187,7 @@
     "film": "A Love Other Than Yours (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/love-other-than-yours-2026",
-    "scraped_at": "2026-11-03T02:35:38.485Z",
+    "scraped_at": "2026-11-03T03:42:31.127Z",
     "episodes": [
       {
         "season": 1,
@@ -458091,7 +458238,7 @@
     "film": "Doctor X: Age of the White Mafia (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/doctor-x-age-white-mafia-2026",
-    "scraped_at": "2026-11-03T02:36:37.607Z",
+    "scraped_at": "2026-11-03T03:43:29.774Z",
     "episodes": [
       {
         "season": 1,
@@ -458557,7 +458704,7 @@
     "film": "100 Days of Lies (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/100-days-lies-2026",
-    "scraped_at": "2026-11-03T02:35:48.387Z",
+    "scraped_at": "2026-11-03T03:42:41.127Z",
     "episodes": [
       {
         "season": 1,
@@ -458790,7 +458937,7 @@
     "film": "The Lament of Autumn (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/lament-autumn-2026",
-    "scraped_at": "2026-11-03T02:33:53.878Z",
+    "scraped_at": "2026-11-03T03:40:46.015Z",
     "episodes": [
       {
         "season": 1,
@@ -459772,7 +459919,7 @@
     "film": "Between Steps (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/between-steps-2026",
-    "scraped_at": "2026-11-03T02:32:48.332Z",
+    "scraped_at": "2026-11-03T03:39:40.580Z",
     "episodes": [
       {
         "season": 1,
@@ -460364,7 +460511,7 @@
     "film": "CSI: Crime Scene Investigation (2000)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/csi-crime-scene-investigation-2000",
-    "scraped_at": "2026-11-03T02:37:03.192Z",
+    "scraped_at": "2026-11-03T03:43:54.902Z",
     "episodes": [
       {
         "season": 1,
@@ -466043,7 +466190,7 @@
     "film": "Signora Volpe (2022)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/signora-volpe-2022",
-    "scraped_at": "2026-11-03T02:39:44.230Z",
+    "scraped_at": "2026-11-03T03:46:35.776Z",
     "episodes": [
       {
         "season": 1,
@@ -466304,7 +466451,7 @@
     "film": "Hell Barrister (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/hell-barrister-2026",
-    "scraped_at": "2026-11-03T02:32:26.446Z",
+    "scraped_at": "2026-11-03T03:39:18.471Z",
     "episodes": [
       {
         "season": 1,
@@ -466705,7 +466852,7 @@
     "film": "KiDnap GAME (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/kidnap-game-2026",
-    "scraped_at": "2026-11-03T02:38:56.038Z",
+    "scraped_at": "2026-11-03T03:45:47.651Z",
     "episodes": [
       {
         "season": 1,
@@ -467115,7 +467262,7 @@
     "film": "Quite the Girl (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/quite-girl-2026",
-    "scraped_at": "2026-11-03T02:35:19.893Z",
+    "scraped_at": "2026-11-03T03:42:12.485Z",
     "episodes": [
       {
         "season": 1,
@@ -467929,7 +468076,7 @@
     "film": "The Vanishing Beauty (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/vanishing-beauty-2026",
-    "scraped_at": "2026-11-03T02:37:53.329Z",
+    "scraped_at": "2026-11-03T03:44:45.077Z",
     "episodes": [
       {
         "season": 1,
@@ -470161,7 +470308,7 @@
     "film": "Law & Order Toronto: Criminal Intent (2024)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/law-order-toronto-criminal-intent-2024",
-    "scraped_at": "2026-11-03T02:36:42.736Z",
+    "scraped_at": "2026-11-03T03:43:34.926Z",
     "episodes": [
       {
         "season": 1,
@@ -474072,7 +474219,7 @@
     "film": "Tracker (2024)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/tracker-2024",
-    "scraped_at": "2026-11-03T02:39:07.914Z",
+    "scraped_at": "2026-11-03T03:45:59.614Z",
     "episodes": [
       {
         "season": 1,
@@ -476020,7 +476167,7 @@
     "film": "Marshals (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/marshals-2026",
-    "scraped_at": "2026-11-03T02:32:44.494Z",
+    "scraped_at": "2026-11-03T03:39:36.669Z",
     "episodes": [
       {
         "season": 1,
@@ -480720,7 +480867,7 @@
     "film": "Avatar: Seven Havens (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/avatar-seven-havens-2026",
-    "scraped_at": "2026-11-03T02:36:55.486Z",
+    "scraped_at": "2026-11-03T03:43:47.175Z",
     "episodes": [
       {
         "season": 1,
@@ -481550,7 +481697,7 @@
     "film": "Fire Country (2022)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/fire-country-2022",
-    "scraped_at": "2026-11-03T02:36:45.482Z",
+    "scraped_at": "2026-11-03T03:43:37.183Z",
     "episodes": [
       {
         "season": 1,
@@ -484184,7 +484331,7 @@
     "film": "Boston Blue (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/boston-blue-2025",
-    "scraped_at": "2026-11-03T02:36:25.436Z",
+    "scraped_at": "2026-11-03T03:43:17.566Z",
     "episodes": [
       {
         "season": 1,
@@ -484998,7 +485145,7 @@
     "film": "Cupertino (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/cupertino-2026",
-    "scraped_at": "2026-11-03T02:36:51.240Z",
+    "scraped_at": "2026-11-03T03:43:42.936Z",
     "episodes": [
       {
         "season": 1,
@@ -485119,7 +485266,7 @@
     "film": "Sheriff Country (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/sheriff-country-2025",
-    "scraped_at": "2026-11-03T02:35:57.675Z",
+    "scraped_at": "2026-11-03T03:42:50.519Z",
     "episodes": [
       {
         "season": 1,
@@ -485891,7 +486038,7 @@
     "film": "Treasure Island (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/treasure-island-2026",
-    "scraped_at": "2026-11-03T02:34:32.985Z",
+    "scraped_at": "2026-11-03T03:41:25.474Z",
     "episodes": [
       {
         "season": 1,
@@ -486005,7 +486152,7 @@
     "film": "Dive Into You (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/dive-into-you-2026",
-    "scraped_at": "2026-11-03T02:35:42.320Z",
+    "scraped_at": "2026-11-03T03:42:35.009Z",
     "episodes": [
       {
         "season": 1,
@@ -486364,7 +486511,7 @@
     "film": "Mission: Mompossible (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/mission-mompossible-2026",
-    "scraped_at": "2026-11-03T02:35:54.805Z",
+    "scraped_at": "2026-11-03T03:42:47.619Z",
     "episodes": [
       {
         "season": 1,
@@ -486926,7 +487073,7 @@
     "film": "American Hostage (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/american-hostage-2026",
-    "scraped_at": "2026-11-03T02:39:43.271Z",
+    "scraped_at": "2026-11-03T03:46:34.826Z",
     "episodes": [
       {
         "season": 1,
@@ -487623,7 +487770,7 @@
     "film": "Incomplete Summer (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/incomplete-summer-2026",
-    "scraped_at": "2026-11-03T02:36:27.682Z",
+    "scraped_at": "2026-11-03T03:43:19.824Z",
     "episodes": [
       {
         "season": 1,
@@ -487828,7 +487975,7 @@
     "film": "The D Dorm (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/d-dorm-2026",
-    "scraped_at": "2026-11-03T02:36:35.062Z",
+    "scraped_at": "2026-11-03T03:43:27.211Z",
     "episodes": [
       {
         "season": 1,
@@ -488047,7 +488194,7 @@
     "film": "A Parasite's Heart (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/parasites-heart-2026",
-    "scraped_at": "2026-11-03T02:32:59.019Z",
+    "scraped_at": "2026-11-03T03:39:51.237Z",
     "episodes": [
       {
         "season": 1,
@@ -488896,7 +489043,7 @@
     "film": "S.W.A.T. Exiles (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/swat-exiles-2026",
-    "scraped_at": "2026-11-03T02:35:59.582Z",
+    "scraped_at": "2026-11-03T03:42:52.440Z",
     "episodes": [
       {
         "season": 1,
@@ -489080,7 +489227,7 @@
     "film": "4 Blocks Zero (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/4-blocks-zero-2026",
-    "scraped_at": "2026-11-03T02:36:47.405Z",
+    "scraped_at": "2026-11-03T03:43:39.113Z",
     "episodes": [
       {
         "season": 1,
@@ -489511,7 +489658,7 @@
     "film": "VisionQuest (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/visionquest-2026",
-    "scraped_at": "2026-11-03T02:38:33.545Z",
+    "scraped_at": "2026-11-03T03:45:25.210Z",
     "episodes": [
       {
         "season": 1,
@@ -490817,7 +490964,7 @@
     "film": "Welcome back, First love. (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/welcome-back-first-love-2026",
-    "scraped_at": "2026-11-03T02:38:00.100Z",
+    "scraped_at": "2026-11-03T03:44:51.843Z",
     "episodes": [
       {
         "season": 1,
@@ -490968,7 +491115,7 @@
     "film": "The Lowdown (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/lowdown-2025",
-    "scraped_at": "2026-11-03T02:36:28.963Z",
+    "scraped_at": "2026-11-03T03:43:21.111Z",
     "episodes": [
       {
         "season": 1,
@@ -491369,7 +491516,7 @@
     "film": "NCIS (2003)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/ncis-2003",
-    "scraped_at": "2026-11-03T02:38:01.410Z",
+    "scraped_at": "2026-11-03T03:44:53.126Z",
     "episodes": [
       {
         "season": 1,
@@ -508878,7 +509025,7 @@
     "film": "Scrubs (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/scrubs-2026",
-    "scraped_at": "2026-11-03T02:38:12.666Z",
+    "scraped_at": "2026-11-03T03:45:04.366Z",
     "episodes": [
       {
         "season": 1,
@@ -509370,7 +509517,7 @@
     "film": "Helluva Boss (2019)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/helluva-boss-2019",
-    "scraped_at": "2026-11-03T02:38:10.738Z",
+    "scraped_at": "2026-11-03T03:45:02.441Z",
     "episodes": [
       {
         "season": 1,
@@ -511993,7 +512140,7 @@
     "film": "Line of Fire (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/line-fire-2026",
-    "scraped_at": "2026-11-03T02:38:04.619Z",
+    "scraped_at": "2026-11-03T03:44:56.311Z",
     "episodes": [
       {
         "season": 1,
@@ -513187,7 +513334,7 @@
     "film": "NCIS: New York (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/ncis-new-york-2026",
-    "scraped_at": "2026-11-03T02:38:02.690Z",
+    "scraped_at": "2026-11-03T03:44:54.395Z",
     "episodes": [
       {
         "season": 1,
@@ -513301,7 +513448,7 @@
     "film": "NCIS: Origins (2024)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/ncis-origins-2024",
-    "scraped_at": "2026-11-03T02:37:56.246Z",
+    "scraped_at": "2026-11-03T03:44:47.991Z",
     "episodes": [
       {
         "season": 1,
@@ -516170,7 +516317,7 @@
     "film": "Make Me Tingle (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/make-me-tingle-2026",
-    "scraped_at": "2026-11-03T02:38:07.184Z",
+    "scraped_at": "2026-11-03T03:44:58.924Z",
     "episodes": [
       {
         "season": 1,
@@ -517196,7 +517343,7 @@
     "film": "Outlander: Blood of My Blood (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/outlander-blood-of-my-blood-2025",
-    "scraped_at": "2026-11-03T02:36:01.818Z",
+    "scraped_at": "2026-11-03T03:42:54.698Z",
     "episodes": [
       {
         "season": 1,
@@ -518691,7 +518838,7 @@
     "film": "Chicago Med (2015)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/chicago-med-2015",
-    "scraped_at": "2026-11-03T02:37:08.628Z",
+    "scraped_at": "2026-11-03T03:44:00.398Z",
     "episodes": [
       {
         "season": 1,
@@ -526050,7 +526197,7 @@
     "film": "Chicago Fire (2012)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/chicago-fire-2012",
-    "scraped_at": "2026-11-03T02:37:09.901Z",
+    "scraped_at": "2026-11-03T03:44:01.688Z",
     "episodes": [
       {
         "season": 1,
@@ -536034,7 +536181,7 @@
     "film": "Chicago P.D. (2014)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/chicago-pd-2014",
-    "scraped_at": "2026-11-03T02:37:11.184Z",
+    "scraped_at": "2026-11-03T03:44:02.979Z",
     "episodes": [
       {
         "season": 1,
@@ -545318,7 +545465,7 @@
     "film": "War (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/war-2026",
-    "scraped_at": "2026-11-03T02:37:54.932Z",
+    "scraped_at": "2026-11-03T03:44:46.670Z",
     "episodes": [
       {
         "season": 1,
@@ -545460,7 +545607,7 @@
     "film": "Where the Mask Ends (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/where-mask-ends-2026",
-    "scraped_at": "2026-11-03T02:33:42.687Z",
+    "scraped_at": "2026-11-03T03:40:34.765Z",
     "episodes": [
       {
         "season": 1,
@@ -547384,7 +547531,7 @@
     "film": "9-1-1: Nashville (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/9-1-1-nashville-2025",
-    "scraped_at": "2026-11-03T02:36:44.206Z",
+    "scraped_at": "2026-11-03T03:43:35.888Z",
     "episodes": [
       {
         "season": 1,
@@ -553398,7 +553545,7 @@
     "film": "Merry Berry Love (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/merii-berii-rabu-2026",
-    "scraped_at": "2026-11-03T02:38:08.486Z",
+    "scraped_at": "2026-11-03T03:45:00.199Z",
     "episodes": [
       {
         "season": 1,
@@ -554648,7 +554795,7 @@
     "film": "SQUALL (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/squall-2026",
-    "scraped_at": "2026-11-03T02:35:43.279Z",
+    "scraped_at": "2026-11-03T03:42:35.972Z",
     "episodes": [
       {
         "season": 1,
@@ -554741,7 +554888,7 @@
     "film": "Hell Home (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/hell-home-2026",
-    "scraped_at": "2026-11-03T02:36:40.807Z",
+    "scraped_at": "2026-11-03T03:43:32.982Z",
     "episodes": [
       {
         "season": 1,
@@ -555319,7 +555466,7 @@
     "film": "Youth (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/youth-2026",
-    "scraped_at": "2026-11-03T02:39:21.431Z",
+    "scraped_at": "2026-11-03T03:46:13.090Z",
     "episodes": [
       {
         "season": 1,
@@ -556347,7 +556494,7 @@
     "film": "Dear Song (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/dear-song-2026",
-    "scraped_at": "2026-11-03T02:34:25.276Z",
+    "scraped_at": "2026-11-03T03:41:17.719Z",
     "episodes": [
       {
         "season": 1,
@@ -556993,7 +557140,7 @@
     "film": "Besties' Coming Fortune (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/besties-coming-fortune-2026",
-    "scraped_at": "2026-11-03T02:35:27.601Z",
+    "scraped_at": "2026-11-03T03:42:20.206Z",
     "episodes": [
       {
         "season": 1,
@@ -557667,7 +557814,7 @@
     "film": "Dream (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/dream-2026",
-    "scraped_at": "2026-11-03T02:32:21.390Z",
+    "scraped_at": "2026-11-03T03:39:13.958Z",
     "episodes": [
       {
         "season": 1,
@@ -558180,7 +558327,7 @@
     "film": "Extraordinary Attorney Minami (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/extraordinary-attorney-minami-2026",
-    "scraped_at": "2026-11-03T02:32:07.689Z",
+    "scraped_at": "2026-11-03T03:39:00.677Z",
     "episodes": [
       {
         "season": 1,
@@ -558233,7 +558380,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/o5WeHyrex6SqvuSFvhtUMw",
+            "url": "https://videonode.de/iframe3/hydrax/MlP09lO3t5mrp8j8LhwAIQ",
             "default": false
           }
         ]
@@ -558261,7 +558408,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/i4yyo8rF4MciLvt1ErLj6w",
+            "url": "https://videonode.de/iframe3/hydrax/_56drjlDa3JmvEsq0Su1aQ",
             "default": false
           }
         ]
@@ -558273,7 +558420,7 @@
     "film": "Love in Disguise (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/love-disguise-2026",
-    "scraped_at": "2026-11-03T02:33:00.610Z",
+    "scraped_at": "2026-11-03T03:39:52.859Z",
     "episodes": [
       {
         "season": 1,
@@ -561651,7 +561798,7 @@
     "film": "CIA (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/cia-2026",
-    "scraped_at": "2026-11-03T02:38:54.112Z",
+    "scraped_at": "2026-11-03T03:45:45.730Z",
     "episodes": [
       {
         "season": 1,
@@ -562185,7 +562332,7 @@
     "film": "Phony (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/phony-2026",
-    "scraped_at": "2026-11-03T02:39:02.800Z",
+    "scraped_at": "2026-11-03T03:45:54.488Z",
     "episodes": [
       {
         "season": 1,
@@ -562278,7 +562425,7 @@
     "film": "Animal Control (2023)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/animal-control-2023",
-    "scraped_at": "2026-11-03T02:32:30.308Z",
+    "scraped_at": "2026-11-03T03:39:22.345Z",
     "episodes": [
       {
         "season": 1,
@@ -563792,7 +563939,7 @@
     "film": "Maigret (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/maigret-2025",
-    "scraped_at": "2026-11-03T02:32:27.406Z",
+    "scraped_at": "2026-11-03T03:39:19.435Z",
     "episodes": [
       {
         "season": 1,
@@ -564083,7 +564230,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/1U4Umv444YnQu5ORL27iqA",
+            "url": "https://videonode.de/iframe3/hydrax/0PmncNeuyniZFovlxuX2BA",
             "default": false
           }
         ]
@@ -565408,7 +565555,7 @@
     "film": "In vitro (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/vitro-2026",
-    "scraped_at": "2026-11-03T02:38:57.319Z",
+    "scraped_at": "2026-11-03T03:45:49.051Z",
     "episodes": [
       {
         "season": 1,
@@ -565529,7 +565676,7 @@
     "film": "Iroha no Koi wa Jidai o Kakeru (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/iroha-no-koi-wa-jidai-o-kakeru-2026",
-    "scraped_at": "2026-11-03T02:38:54.751Z",
+    "scraped_at": "2026-11-03T03:45:46.372Z",
     "episodes": [
       {
         "season": 1,
@@ -566438,7 +566585,7 @@
     "film": "The Rainmaker (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/rainmaker-2025",
-    "scraped_at": "2026-11-03T02:35:56.398Z",
+    "scraped_at": "2026-11-03T03:42:49.232Z",
     "episodes": [
       {
         "season": 1,
@@ -567149,7 +567296,7 @@
     "film": "Furia (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/furia-2025",
-    "scraped_at": "2026-11-03T02:36:30.878Z",
+    "scraped_at": "2026-11-03T03:43:23.034Z",
     "episodes": [
       {
         "season": 1,
@@ -567494,7 +567641,7 @@
     "film": "Small Town Remedy (2026 (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/small-town-remedy-2026",
-    "scraped_at": "2026-11-03T02:33:16.684Z",
+    "scraped_at": "2026-11-03T03:40:08.982Z",
     "episodes": [
       {
         "season": 1,
@@ -570558,7 +570705,7 @@
     "film": "Where's Wanda? (2024)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/wheres-wanda-2024",
-    "scraped_at": "2026-11-03T02:37:03.834Z",
+    "scraped_at": "2026-11-03T03:43:55.549Z",
     "episodes": [
       {
         "season": 1,
@@ -572850,7 +572997,7 @@
     "film": "My Loong (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/my-loong-2026",
-    "scraped_at": "2026-11-03T02:34:31.701Z",
+    "scraped_at": "2026-11-03T03:41:24.177Z",
     "episodes": [
       {
         "season": 1,
@@ -573405,7 +573552,7 @@
     "film": "Overseas Security Guard (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/overseas-security-guard-2026",
-    "scraped_at": "2026-11-03T02:34:17.910Z",
+    "scraped_at": "2026-11-03T03:41:10.268Z",
     "episodes": [
       {
         "season": 1,
@@ -574156,7 +574303,7 @@
     "film": "The Torment (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/torment-2026",
-    "scraped_at": "2026-11-03T02:38:52.836Z",
+    "scraped_at": "2026-11-03T03:45:44.450Z",
     "episodes": [
       {
         "season": 1,
@@ -575516,7 +575663,7 @@
     "film": "The Simpsons (1989)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/the-simpsons-1989",
-    "scraped_at": "2026-11-03T02:39:12.753Z",
+    "scraped_at": "2026-11-03T03:46:04.401Z",
     "episodes": [
       {
         "season": 1,
@@ -601200,7 +601347,7 @@
     "film": "Your Home Is My Business aka I Will Find You a Better Home (2020)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/your-home-my-business-aka-i-will-find-you-better-home-2020",
-    "scraped_at": "2026-11-03T02:39:38.442Z",
+    "scraped_at": "2026-11-03T03:46:30.043Z",
     "episodes": [
       {
         "season": 1,
@@ -602693,7 +602840,7 @@
     "film": "Tigers Sniff the Rose (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/tigers-sniff-rose-2026",
-    "scraped_at": "2026-11-03T02:33:08.016Z",
+    "scraped_at": "2026-11-03T03:40:00.273Z",
     "episodes": [
       {
         "season": 1,
@@ -603332,7 +603479,7 @@
     "film": "Yaga (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/yaga-2026",
-    "scraped_at": "2026-11-03T02:37:06.385Z",
+    "scraped_at": "2026-11-03T03:43:58.119Z",
     "episodes": [
       {
         "season": 1,
@@ -605204,7 +605351,7 @@
     "film": "Slumbering with Wolves (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/slumbering-wolves-2026",
-    "scraped_at": "2026-11-03T02:35:33.992Z",
+    "scraped_at": "2026-11-03T03:42:26.637Z",
     "episodes": [
       {
         "season": 1,
@@ -605759,7 +605906,7 @@
     "film": "Final Table (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/final-table-2026",
-    "scraped_at": "2026-11-03T02:35:45.841Z",
+    "scraped_at": "2026-11-03T03:42:38.544Z",
     "episodes": [
       {
         "season": 1,
@@ -605880,7 +606027,7 @@
     "film": "Oh! My Guard (2026)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/oh-my-guard-2026",
-    "scraped_at": "2026-11-03T02:35:44.561Z",
+    "scraped_at": "2026-11-03T03:42:37.257Z",
     "episodes": [
       {
         "season": 1,
@@ -606001,7 +606148,7 @@
     "film": "Red Alert (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/red-alert-2025",
-    "scraped_at": "2026-11-03T02:39:45.510Z",
+    "scraped_at": "2026-11-03T03:46:37.048Z",
     "episodes": [
       {
         "season": 1,
@@ -606108,7 +606255,7 @@
     "film": "Revival (2025)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/revival-2025",
-    "scraped_at": "2026-11-03T02:39:19.175Z",
+    "scraped_at": "2026-11-03T03:46:10.817Z",
     "episodes": [
       {
         "season": 1,
@@ -606397,7 +606544,7 @@
     "film": "Lupin (2021)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/lupin-2021",
-    "scraped_at": "2026-11-03T02:39:41.013Z",
+    "scraped_at": "2026-11-03T03:46:32.599Z",
     "episodes": [
       {
         "season": 1,
@@ -606980,7 +607127,7 @@
     "film": "Second Time is a Charm (2019)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/second-time-charm-2019",
-    "scraped_at": "2026-11-03T02:38:31.620Z",
+    "scraped_at": "2026-11-03T03:45:23.301Z",
     "episodes": [
       {
         "season": 1,
@@ -608585,7 +608732,7 @@
     "film": "Nobody Wants This (2024)",
     "type": "series",
     "source": "https://tv9.nontondrama.my/nobody-wants-this-2024",
-    "scraped_at": "2026-11-03T02:39:15.970Z",
+    "scraped_at": "2026-11-03T03:46:07.604Z",
     "episodes": [
       {
         "season": 1,
@@ -609567,7 +609714,7 @@
     "film": "The New Stanford Prison Experiment (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/new-stanford-prison-experiment-2026",
-    "scraped_at": "2026-11-03T02:39:06.631Z",
+    "scraped_at": "2026-11-03T03:45:58.332Z",
     "episodes": [
       {
         "season": 1,
@@ -609737,7 +609884,7 @@
     "film": "Adultery (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/adultery-2026",
-    "scraped_at": "2026-11-03T02:39:04.718Z",
+    "scraped_at": "2026-11-03T03:45:56.418Z",
     "episodes": [
       {
         "season": 1,
@@ -609879,7 +610026,7 @@
     "film": "Summer Vacation (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/summer-vacation-2026",
-    "scraped_at": "2026-11-03T02:32:45.459Z",
+    "scraped_at": "2026-11-03T03:39:37.649Z",
     "episodes": [
       {
         "season": 1,
@@ -609972,7 +610119,7 @@
     "film": "The Mob (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/mob-2026",
-    "scraped_at": "2026-11-03T02:33:55.162Z",
+    "scraped_at": "2026-11-03T03:40:47.308Z",
     "episodes": [
       {
         "season": 1,
@@ -610093,7 +610240,7 @@
     "film": "Minimum Wage (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/minimum-wage-2026",
-    "scraped_at": "2026-11-03T02:39:01.834Z",
+    "scraped_at": "2026-11-03T03:45:53.525Z",
     "episodes": [
       {
         "season": 1,
@@ -610494,7 +610641,7 @@
     "film": "Sunset in Winter (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/sunset-winter-2026",
-    "scraped_at": "2026-11-03T02:38:43.897Z",
+    "scraped_at": "2026-11-03T03:45:35.496Z",
     "episodes": [
       {
         "season": 1,
@@ -611112,7 +611259,7 @@
     "film": "First Love Again (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/first-love-again-2026",
-    "scraped_at": "2026-11-03T02:38:51.560Z",
+    "scraped_at": "2026-11-03T03:45:43.178Z",
     "episodes": [
       {
         "season": 1,
@@ -611793,7 +611940,7 @@
     "film": "Lost Hearts (2017)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/lost-hearts-2017",
-    "scraped_at": "2026-11-03T02:37:44.378Z",
+    "scraped_at": "2026-11-03T03:44:36.111Z",
     "episodes": [
       {
         "season": 1,
@@ -613867,7 +614014,7 @@
     "film": "You Alone Know Me (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/you-alone-know-me-2026",
-    "scraped_at": "2026-11-03T02:34:09.240Z",
+    "scraped_at": "2026-11-03T03:41:01.524Z",
     "episodes": [
       {
         "season": 1,
@@ -614415,7 +614562,7 @@
     "film": "The Rules (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/rules-2026",
-    "scraped_at": "2026-11-03T02:38:13.305Z",
+    "scraped_at": "2026-11-03T03:45:05.006Z",
     "episodes": [
       {
         "season": 1,
@@ -614480,7 +614627,7 @@
     "film": "This City Is Ours: A Crime Family Saga (2025)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/this-city-ours-crime-family-saga-2025",
-    "scraped_at": "2026-11-03T02:37:58.799Z",
+    "scraped_at": "2026-11-03T03:44:50.563Z",
     "episodes": [
       {
         "season": 1,
@@ -614839,7 +614986,7 @@
     "film": "When the Lights Rise (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/when-lights-rise-2026",
-    "scraped_at": "2026-11-03T02:33:24.443Z",
+    "scraped_at": "2026-11-03T03:40:16.740Z",
     "episodes": [
       {
         "season": 1,
@@ -615282,7 +615429,7 @@
     "film": "Nocturne (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/nocturne-2026",
-    "scraped_at": "2026-11-03T02:37:04.476Z",
+    "scraped_at": "2026-11-03T03:43:56.192Z",
     "episodes": [
       {
         "season": 1,
@@ -615347,7 +615494,7 @@
     "film": "The Perfect Lie (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/perfect-lie-2026",
-    "scraped_at": "2026-11-03T02:36:29.598Z",
+    "scraped_at": "2026-11-03T03:43:21.748Z",
     "episodes": [
       {
         "season": 1,
@@ -615412,7 +615559,7 @@
     "film": "Dead-End Job (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/dead-end-job-2026",
-    "scraped_at": "2026-11-03T02:36:49.957Z",
+    "scraped_at": "2026-11-03T03:43:41.660Z",
     "episodes": [
       {
         "season": 1,
@@ -615645,7 +615792,7 @@
     "film": "Balaraw: Blood Island (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/balaraw-blood-island-2026",
-    "scraped_at": "2026-11-03T02:36:32.805Z",
+    "scraped_at": "2026-11-03T03:43:24.979Z",
     "episodes": [
       {
         "season": 1,
@@ -615822,7 +615969,7 @@
     "film": "Obsess (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/obsess-2026",
-    "scraped_at": "2026-11-03T02:36:38.886Z",
+    "scraped_at": "2026-11-03T03:43:31.065Z",
     "episodes": [
       {
         "season": 1,
@@ -615943,7 +616090,7 @@
     "film": "A Love to Last (2017)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/love-last-2017",
-    "scraped_at": "2026-11-03T02:35:07.398Z",
+    "scraped_at": "2026-11-03T03:41:59.970Z",
     "episodes": [
       {
         "season": 1,
@@ -618556,7 +618703,7 @@
     "film": "Rinnan: The Traitor Within (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/rinnan-traitor-within-2026",
-    "scraped_at": "2026-11-03T02:34:37.484Z",
+    "scraped_at": "2026-11-03T03:41:29.985Z",
     "episodes": [
       {
         "season": 1,
@@ -618677,7 +618824,7 @@
     "film": "Stranger Things: Tales from '85 (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/stranger-things-tales-from-85-2026",
-    "scraped_at": "2026-11-03T02:34:36.192Z",
+    "scraped_at": "2026-11-03T03:41:28.692Z",
     "episodes": [
       {
         "season": 1,
@@ -619190,7 +619337,7 @@
     "film": "Hamish Blake: Unskilled Adult (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/hamish-blake-unskilled-adult-2026",
-    "scraped_at": "2026-11-03T02:35:55.442Z",
+    "scraped_at": "2026-11-03T03:42:48.256Z",
     "episodes": [
       {
         "season": 1,
@@ -619255,7 +619402,7 @@
     "film": "Collision (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/collision-2026",
-    "scraped_at": "2026-11-03T02:32:42.885Z",
+    "scraped_at": "2026-11-03T03:39:35.047Z",
     "episodes": [
       {
         "season": 1,
@@ -620356,7 +620503,7 @@
     "film": "Whenever Possible (2024)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/whenever-possible-2024",
-    "scraped_at": "2026-11-03T02:34:02.842Z",
+    "scraped_at": "2026-11-03T03:40:55.066Z",
     "episodes": [
       {
         "season": 1,
@@ -622499,7 +622646,7 @@
     "film": "Miss Culinary (2019)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/miss-culinary-2019",
-    "scraped_at": "2026-11-03T02:33:59.320Z",
+    "scraped_at": "2026-11-03T03:40:51.507Z",
     "episodes": [
       {
         "season": 1,
@@ -622872,7 +623019,7 @@
     "film": "Triad Princess (2019)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/triad-princess-2019",
-    "scraped_at": "2026-11-03T02:33:34.356Z",
+    "scraped_at": "2026-11-03T03:40:26.442Z",
     "episodes": [
       {
         "season": 1,
@@ -623049,7 +623196,7 @@
     "film": "Secret Unrequited Love (2019)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/secret-unrequited-love-2019",
-    "scraped_at": "2026-11-03T02:33:18.933Z",
+    "scraped_at": "2026-11-03T03:40:11.243Z",
     "episodes": [
       {
         "season": 1,
@@ -623254,7 +623401,7 @@
     "film": "Ghosts (2021)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/ghosts-2021",
-    "scraped_at": "2026-11-03T02:32:48.974Z",
+    "scraped_at": "2026-11-03T03:39:41.239Z",
     "episodes": [
       {
         "season": 1,
@@ -626551,7 +626698,7 @@
     "film": "Georgie & Mandy's First Marriage (2024)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/georgie-and-mandys-first-marriage-2024",
-    "scraped_at": "2026-11-03T02:32:28.698Z",
+    "scraped_at": "2026-11-03T03:39:20.724Z",
     "episodes": [
       {
         "season": 1,
@@ -627988,7 +628135,7 @@
     "film": "Let's Go (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/lets-go-2026",
-    "scraped_at": "2026-11-03T02:32:10.665Z",
+    "scraped_at": "2026-11-03T03:39:04.119Z",
     "episodes": [
       {
         "season": 1,
@@ -628013,7 +628160,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/lNwN-eM0wkxP4iFwRrUZMw",
+            "url": "https://videonode.de/iframe3/hydrax/2jQIySOYfAdquMggoHejxg",
             "default": false
           }
         ]
@@ -628041,7 +628188,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/0dVw2AACj3vJ2AUK2OTUFg",
+            "url": "https://videonode.de/iframe3/hydrax/d7NVLJuS0kpkU8Tw4yyNyA",
             "default": false
           }
         ]
@@ -628069,7 +628216,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/b2tGHEXM4Okl-ZN-uFNrlg",
+            "url": "https://videonode.de/iframe3/hydrax/0C5ti1KXRq-QbYfppIZayA",
             "default": false
           }
         ]
@@ -628097,7 +628244,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/NwbZ-BLIIibQSvgsqeKdLg",
+            "url": "https://videonode.de/iframe3/hydrax/T2ipEMSqe7bfg1AdK1995A",
             "default": false
           }
         ]
@@ -628109,7 +628256,7 @@
     "film": "Political Lupin (2026)",
     "type": "series",
     "source": "https://tv.nontondrama.vip/political-lupin-2026",
-    "scraped_at": "2026-11-03T02:32:08.334Z",
+    "scraped_at": "2026-11-03T03:39:01.327Z",
     "episodes": [
       {
         "season": 1,
@@ -628134,7 +628281,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/zx7ZvK6wUXJKM9e7wULAlw",
+            "url": "https://videonode.de/iframe3/hydrax/bBxdBwX6dRQNxd5j1mJncQ",
             "default": false
           }
         ]
@@ -628162,7 +628309,142 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Nr5DC1cT-NasIEEOY-u6xQ",
+            "url": "https://videonode.de/iframe3/hydrax/WaY_E5I1LNsu9pBN8mOCUg",
+            "default": false
+          }
+        ]
+      }
+    ]
+  },
+  "sixth-sense-b-side-2026": {
+    "slug": "sixth-sense-b-side-2026",
+    "film": "Sixth Sense: B-Side (2026)",
+    "type": "series",
+    "source": "https://tv.nontondrama.vip/sixth-sense-b-side-2026",
+    "scraped_at": "2026-11-03T03:38:59.700Z",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "slug": "sixth-sense-b-side-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/bydlMsMOyPvOUW89YRfyoQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/_i9JGhD3Sl33YMDJMPdChQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4u_HRiMFmSmh04F-NP6Urg",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/LrytlBPE42ha8Z_1srDdVw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "slug": "sixth-sense-b-side-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hSfnhsQZAFTEyrp3dXe3QA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/UvbGzsqputHvvsKq2vshTw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/5tzD57WWgLW2x4UWByecWQ",
+            "default": false
+          },
+          {
+            "no": 4,
+            "server": "turbovip",
+            "label": "GANTI PLAYER TURBOVIP",
+            "url": "https://videonode.de/iframe3/turbovip/jgIc2qqEbpG-2S_xfBxmoQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "slug": "sixth-sense-b-side-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6aaE41DNFz-kHIEIg0pzXg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/f5ZveurYWKkplGP_NG1lXg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/tO1WdhLW5kZA83xPk6Etzg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "slug": "sixth-sense-b-side-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/u7oCZalPChrJLA1x_q61aw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EQm4KYt7PEhNY0IxcV9_EQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/UAudOJ0aEynfCHK3hDpRAA",
             "default": false
           }
         ]
