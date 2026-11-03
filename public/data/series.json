@@ -79053,8 +79053,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-dear-song-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "23 eps · S.1",
-    "episodes_count": 23,
+    "durasi": "24 eps · S.1",
+    "episodes_count": 24,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -79746,6 +79746,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "Dear Song - Season 1 Episode 24 (2026)",
+        "slug": "dear-song-season-1-episode-24-2026",
+        "source": "https://tv.nontondrama.vip/dear-song-season-1-episode-24-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zypMfXyrIcZaVr37vK3mfw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jSZNTNRWK3c50VgNweHoUA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/rzp_nDT_LYPW_n3I-UIZig",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -79753,21 +79783,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Tq-7YHay-N28yYQWFenAwQ",
+        "url": "https://videonode.de/iframe3/p2p/zypMfXyrIcZaVr37vK3mfw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/tlnhaR137ReegcQDvdsZww",
+        "url": "https://videonode.de/iframe3/cast/jSZNTNRWK3c50VgNweHoUA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/QEQw1lc01_H5ie-PpKhIwg",
+        "url": "https://videonode.de/iframe3/hydrax/rzp_nDT_LYPW_n3I-UIZig",
         "default": false
       }
     ],
