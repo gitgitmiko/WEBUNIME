@@ -501,7 +501,7 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-beware-boiuna-2026-lk21.jpg",
     "rating": "6.1",
-    "quality": "CAM",
+    "quality": "HD",
     "durasi": "1j 34m",
     "genre": [
       "Action",
@@ -517,21 +517,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/6cF-B2lV8zxRBOfVCTxUMw",
+        "url": "https://videonode.de/iframe3/p2p/O-LeMnXajQ85Y7ZQQ3ZCAA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Px4f7-z2Q6IpnnkNRzxQ6A",
+        "url": "https://videonode.de/iframe3/cast/2xeJyBzGqNEsZrAq_LHHpQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/VrtaZk3WeI4tzASd5N2Kfg",
+        "url": "https://videonode.de/iframe3/hydrax/4exB1TMZfnfSNyysOyyh9Q",
         "default": false
       }
     ],
