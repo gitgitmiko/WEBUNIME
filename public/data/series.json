@@ -6,8 +6,8 @@
     "tahun": "2018",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-story-yanxi-palace-2018-lk21.jpg",
     "rating": "8.3",
-    "durasi": "11 eps · S.1",
-    "episodes_count": 11,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -349,6 +349,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "Story of Yanxi Palace - Season 1 Episode 12 (2018)",
+        "slug": "story-yanxi-palace-season-1-episode-12-2018",
+        "source": "https://tv.nontondrama.vip/story-yanxi-palace-season-1-episode-12-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/maAL4iqsBHgxRU9sXvAyIw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/75_Z5gKPGZVGcJaKI33XTw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Hw_UHsxuZlK_lFbMs4nd6Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -356,21 +386,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BhjKM0Q4i21jgechAnqBkQ",
+        "url": "https://videonode.de/iframe3/p2p/maAL4iqsBHgxRU9sXvAyIw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/AoB9QJjQHiYdDTVemdXeqA",
+        "url": "https://videonode.de/iframe3/cast/75_Z5gKPGZVGcJaKI33XTw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/g9hn3gkLZwwvvIetXj3h0Q",
+        "url": "https://videonode.de/iframe3/hydrax/Hw_UHsxuZlK_lFbMs4nd6Q",
         "default": false
       }
     ],
