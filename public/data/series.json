@@ -1,6 +1,84 @@
 [
   {
     "type": "series",
+    "nama": "Story of Yanxi Palace",
+    "judul": "Story of Yanxi Palace (2018)",
+    "tahun": "2018",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-story-yanxi-palace-2018-lk21.jpg",
+    "rating": "8.3",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Drama",
+      "History",
+      "Romance"
+    ],
+    "sinopsis": "Seorang gadis muda berusaha mengungkap kebenaran di balik kematian kakak perempuannya dengan bekerja sebagai penjahit di harem Kaisar.\n\nAwards: 36 wins & 7 nominations\n\nBintang Film: Jinyan Wu, Yuan Nie, Enshang Liu, Charmaine Sheh, Anna Fang\n\nNegara: China\n\nVotes: 41",
+    "slug": "story-yanxi-palace-2018",
+    "source": "https://tv.nontondrama.vip/story-yanxi-palace-2018",
+    "list_source": "https://tv12.lk21official.cc/story-yanxi-palace-2018",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Story of Yanxi Palace - Season 1 Episode 1 (2018)",
+        "slug": "story-yanxi-palace-season-1-episode-1-2018",
+        "source": "https://tv.nontondrama.vip/story-yanxi-palace-season-1-episode-1-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/i4_k7VjLaP65Wj12j7y5RQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/pmMSn0MMpSkB1x0wyuVRsw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/J3Ij3woKyglNIZuiTM_T9g",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/i4_k7VjLaP65Wj12j7y5RQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/pmMSn0MMpSkB1x0wyuVRsw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/J3Ij3woKyglNIZuiTM_T9g",
+        "default": false
+      }
+    ],
+    "id": 671,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Sixth Sense: B-Side",
     "judul": "Sixth Sense: B-Side (2026)",
     "tahun": "2026",
@@ -15609,8 +15687,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-you-alone-know-me-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "20 eps · S.1",
-    "episodes_count": 20,
+    "durasi": "21 eps · S.1",
+    "episodes_count": 21,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -16198,6 +16276,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "You Alone Know Me - Season 1 Episode 21 (2026)",
+        "slug": "you-alone-know-me-season-1-episode-21-2026",
+        "source": "https://tv.nontondrama.vip/you-alone-know-me-season-1-episode-21-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/c0ny9wCdLFM-wq4XYm_ygg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/omfDGNbTNNdAvaJ4T4B7vg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KXWLbV2CbglanQ7oATW0Lw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -16205,21 +16313,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/FD5PJwcWGmWASuCAh4VaKw",
+        "url": "https://videonode.de/iframe3/p2p/c0ny9wCdLFM-wq4XYm_ygg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/2fPwuasqMN_4pwhYAnZaTA",
+        "url": "https://videonode.de/iframe3/cast/omfDGNbTNNdAvaJ4T4B7vg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Y9ijTrfLYMB_3MfREXh8LA",
+        "url": "https://videonode.de/iframe3/hydrax/KXWLbV2CbglanQ7oATW0Lw",
         "default": false
       }
     ],
@@ -60494,8 +60602,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-my-loong-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "20 eps · S.1",
-    "episodes_count": 20,
+    "durasi": "21 eps · S.1",
+    "episodes_count": 21,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -61090,6 +61198,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "My Loong - Season 1 Episode 21 (2026)",
+        "slug": "my-loong-season-1-episode-21-2026",
+        "source": "https://tv.nontondrama.vip/my-loong-season-1-episode-21-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/cPZKEBZ9LGZpTRthBlYZPw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/v6qPzoCni9dfLuvFmw45Cw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/vlSpi-nwxU83F8NSxvfEvQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -61097,21 +61235,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/b9wBFnUzmqjnc_aBXp0V6A",
+        "url": "https://videonode.de/iframe3/p2p/cPZKEBZ9LGZpTRthBlYZPw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Gbt6EeSV_chKfvHZCVvVsQ",
+        "url": "https://videonode.de/iframe3/cast/v6qPzoCni9dfLuvFmw45Cw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/q51QD_Fv9YDNvnmsdV7WUw",
+        "url": "https://videonode.de/iframe3/hydrax/vlSpi-nwxU83F8NSxvfEvQ",
         "default": false
       }
     ],
