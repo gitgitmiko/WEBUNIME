@@ -6,8 +6,8 @@
     "tahun": "2015",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-world-love-2015-lk21.jpg",
     "rating": "8.0",
-    "durasi": "17 eps · S.1",
-    "episodes_count": 17,
+    "durasi": "20 eps · S.1",
+    "episodes_count": 20,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -528,28 +528,104 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 18,
+        "title": "The World of Love - Season 1 Episode 18 (2015)",
+        "slug": "world-love-season-1-episode-18-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-18-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/x2bCmrOF37N0cCTmRMZyAw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xYlMjhPFe664BS7jV6C_9w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/tFc8C-NQpFWcYxe7FgCUOw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "The World of Love - Season 1 Episode 19 (2015)",
+        "slug": "world-love-season-1-episode-19-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-19-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wDR60JWb1JUt5qQWgJRfTw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/b0JIWgvRqkoz2Kftz-c-Sg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/3yRMksd0Y3nU22BqlZd1XA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "The World of Love - Season 1 Episode 20 (2015)",
+        "slug": "world-love-season-1-episode-20-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-20-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/UqDZ2Or7IscjMpWoLF-H-A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/mLdl65eURCVU68i4XPMUjg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/yM_ihCM96IZf9wNyMJRvGg",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/UqDZ2Or7IscjMpWoLF-H-A",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/7oNtFLEkr0G_kS_404YFkA",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/oSzqdNM1gcBr7auc-3-iyA",
+        "url": "https://videonode.de/iframe3/hydrax/mLdl65eURCVU68i4XPMUjg",
         "default": false
       }
     ],
