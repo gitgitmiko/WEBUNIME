@@ -11968,8 +11968,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shin-Tennis-no-Oujisama-Kesshou-Member-Ketteisen.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "5 eps",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "School",
       "Shounen",
@@ -12201,6 +12201,61 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen Episode 6",
+        "slug": "shin-tennis-no-oujisama-u-17-world-cup-kesshou-member-ketteisen-episode-6",
+        "source": "https://v2.samehadaku.how/shin-tennis-no-oujisama-kesshou-member-ketteisen-episode-6/",
+        "date": "",
+        "released_at": "2026-11-04T18:00:37.727Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw8BqWROVtnzGRo7vOuDNnGECTXoVP5vYHfjFNl25cNT9w8nVXRgGa3-qynGWvCx79fyRUFlKi_k9xyvrC9pHZ2VXIonEAlye_aVJ3ktKMzbAgVdgVmTVUiCncNcBrfKF8Fh6xx",
+            "default": true,
+            "post": "55141",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/PPRtzafs75",
+            "default": false,
+            "post": "55141",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/pItj0STZ#aOqRtBcAGldsprMpsCTPtWKUOqLkl0MZsVrMa5JQUBk",
+            "default": false,
+            "post": "55141",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/YEEAnIIY#0Ar74dT9ZBa7YsMVzJp5Wa-s3naAizUJszSp8QQGF0U",
+            "default": false,
+            "post": "55141",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/8ZVDEapZ#aTK5XoH-XK0cAsC3VlmM982zfWAcMxMBRD_Afc2RC8w",
+            "default": false,
+            "post": "55141",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -12208,28 +12263,46 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzjVcOQwKvI7b98MoxRTkzuzlUvVsAK-nNiu_xHxW1KXkI9boTgvaQIP-aKNkCRgLB8jRTtOod225genGDI9L5PpzfeAEQATMxEdhTImI-CkKlcht19eVHlSb7qaMDWf_Ry8hA",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw8BqWROVtnzGRo7vOuDNnGECTXoVP5vYHfjFNl25cNT9w8nVXRgGa3-qynGWvCx79fyRUFlKi_k9xyvrC9pHZ2VXIonEAlye_aVJ3ktKMzbAgVdgVmTVUiCncNcBrfKF8Fh6xx",
         "default": true,
-        "post": "55009",
+        "post": "55141",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/Cx5B0RZD#C5mn9Ns9L0H6zGQEDe3ut-RCT2xOSKNfLHpKmFfsR9k",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/PPRtzafs75",
         "default": false,
-        "post": "55009",
-        "nume": "3"
+        "post": "55141",
+        "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/C0YQzS5Q#_s2malmxXYnjVPqL3nltcvuHfpRtXui6Klkr-pXSDyI",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/pItj0STZ#aOqRtBcAGldsprMpsCTPtWKUOqLkl0MZsVrMa5JQUBk",
         "default": false,
-        "post": "55009",
+        "post": "55141",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/YEEAnIIY#0Ar74dT9ZBa7YsMVzJp5Wa-s3naAizUJszSp8QQGF0U",
+        "default": false,
+        "post": "55141",
         "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/8ZVDEapZ#aTK5XoH-XK0cAsC3VlmM982zfWAcMxMBRD_Afc2RC8w",
+        "default": false,
+        "post": "55141",
+        "nume": "5"
       }
     ],
     "id": 54,

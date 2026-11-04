@@ -6,8 +6,8 @@
     "tahun": "2015",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-world-love-2015-lk21.jpg",
     "rating": "8.0",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -168,6 +168,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "The World of Love - Season 1 Episode 6 (2015)",
+        "slug": "world-love-season-1-episode-6-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-6-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/eEnGl56q9IlwDHeXbSbzNw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kI10hN39yDG9PWl9iodpAw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jv__WazeFahvkJfRXMBPVg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "The World of Love - Season 1 Episode 7 (2015)",
+        "slug": "world-love-season-1-episode-7-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-7-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/4sUZZt2xbt43vDuo2_yNYQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3R79WY8tv2ScFHIlJSYUPQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/5gh7glb2YjlF3MCb0jJUhg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -175,21 +235,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/YUFVowGPTHMVthPS9xwqdQ",
+        "url": "https://videonode.de/iframe3/p2p/4sUZZt2xbt43vDuo2_yNYQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/J9nqxen1SlBrCcf6LuNiJg",
+        "url": "https://videonode.de/iframe3/cast/3R79WY8tv2ScFHIlJSYUPQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5YSzBaMgFvxKq-1rHjUlBQ",
+        "url": "https://videonode.de/iframe3/hydrax/5gh7glb2YjlF3MCb0jJUhg",
         "default": false
       }
     ],
