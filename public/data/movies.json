@@ -1,5 +1,45 @@
 [
   {
+    "nama": "Inpaintings",
+    "judul": "Inpaintings (2023)",
+    "tahun": "2023",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-inpaintings-2023-lk21.jpg",
+    "rating": "5.8",
+    "quality": "HD",
+    "durasi": "1j 32m",
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Inpaintings - Di tengah duka mendalam akibat kematian tak terduga sahabat terdekatnya di Paris serta penemuan sebuah lukisan Ottoman era sibillin yang rusak di Istanbul, seorang konservator seni muda berjuang untuk menavigasi pasang surut kehidupan di usia pertengahan dua puluhan.\nAwards: 3 wins & 8 nominations\nWorldwide Gross: USD 7,602\n\nSubtitle: workkeerr\n\nSutradara: Ozan Yoleri\n\nBintang Film: Ahsen Eroglu, Hazal Subasi, Ozlem Zeynep Dinsel, Osman Iskender Bayer, Ulas Akarsu\n\nNegara: Turkey\n\nVotes: 465\n\nRelease: 15 Nov 2023\n\nUpdated: 04 Nov 2026 12:40:48",
+    "slug": "inpaintings-2023",
+    "source": "https://tv12.lk21official.cc/inpaintings-2023",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/hkuCeqIAY-vPKUqIZSQwZg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/jbrROPOnzr-k-ZZ69NKrpw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/ZWta5V5XQYYvFT_NlMXsFQ",
+        "default": false
+      }
+    ],
+    "id": 396,
+    "is_new": true
+  },
+  {
     "nama": "Charlie Harper",
     "judul": "Charlie Harper (2025)",
     "tahun": "2025",
@@ -37,8 +77,7 @@
         "default": false
       }
     ],
-    "id": 395,
-    "is_new": true
+    "id": 395
   },
   {
     "nama": "The Stories",
