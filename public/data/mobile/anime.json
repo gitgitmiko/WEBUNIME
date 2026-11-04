@@ -973,8 +973,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kikansha-no-Mahou-wa-Tokubetsu-desu-Season-2-Episode-1-300x169.jpg",
     "rating": "6.8",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Action",
       "Fantasy",
@@ -1212,6 +1212,61 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Kikansha no Mahou wa Tokubetsu desu Season 2 Episode 5",
+        "slug": "kikansha-no-mahou-wa-tokubetsu-desu-season-2-episode-5",
+        "source": "https://v2.samehadaku.how/kikansha-no-mahou-wa-tokubetsu-desu-season-2-episode-5/",
+        "date": "",
+        "released_at": "2026-11-04T19:00:33.555Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxvClvWWxE3R3J8sz50n7ZeL8ekGayCQTnujG-XVTdwog1pgk590l37cpp5KwI1Yq-DsfS2qtDoeewEAIXMkWQfjzsgR1JSRYFgEPDwXx_hqgMBOADBljc_ooufflpSiFEj5xc",
+            "default": true,
+            "post": "55144",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/oG7QmfZtxX",
+            "default": false,
+            "post": "55144",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/1UVkkDqJ#d7ur4YOssKBqLJ0ecykkDZiM5qNfAAxW0xfvBrqWLOA",
+            "default": false,
+            "post": "55144",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/kFlVWRLT#nv6UJpNJYd949ANKnlp__oMKkBb_HXCzI40FSULo4fM",
+            "default": false,
+            "post": "55144",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/9RsR1LhD#E3AKfSo3JNxrveNegH1LAaOI9e4CIwItza6hRXuXNGo",
+            "default": false,
+            "post": "55144",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -1219,36 +1274,45 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxOZ2wQvUyXUwckONzsPYcLlmCUqW201Xs9S87RIlPD77IS1KTUcEV4ZgI4LQY6HUvOmRCjPSvCuy7qSOSLZVGCYxssXgfJaojkfuz8vR5TVTtSXBgPdMbIl37YYYHTjtwEeCam",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxvClvWWxE3R3J8sz50n7ZeL8ekGayCQTnujG-XVTdwog1pgk590l37cpp5KwI1Yq-DsfS2qtDoeewEAIXMkWQfjzsgR1JSRYFgEPDwXx_hqgMBOADBljc_ooufflpSiFEj5xc",
         "default": true,
-        "post": "54823",
+        "post": "55144",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/KyYHzAjR#1UKIPDQr0Iff-uUR94V-9fBE_zr-w4UVo-K-CFTCi5E",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/oG7QmfZtxX",
         "default": false,
-        "post": "54823",
-        "nume": "3"
+        "post": "55144",
+        "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/yzpBhChT#hSkjl8UsnR4xltmTmkYIB4tX9y7lczFRul0dYmv60tI",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/1UVkkDqJ#d7ur4YOssKBqLJ0ecykkDZiM5qNfAAxW0xfvBrqWLOA",
         "default": false,
-        "post": "54823",
-        "nume": "4"
+        "post": "55144",
+        "nume": "3"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/z0Q0URjD#OmMYmqUwVOzDFHdbpad8mZe92iQMnOcZtZ4frkIg7oA",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/kFlVWRLT#nv6UJpNJYd949ANKnlp__oMKkBb_HXCzI40FSULo4fM",
         "default": false,
-        "post": "54823",
+        "post": "55144",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/9RsR1LhD#E3AKfSo3JNxrveNegH1LAaOI9e4CIwItza6hRXuXNGo",
+        "default": false,
+        "post": "55144",
         "nume": "5"
       }
     ],
