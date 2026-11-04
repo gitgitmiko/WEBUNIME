@@ -6,8 +6,8 @@
     "tahun": "2015",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-world-love-2015-lk21.jpg",
     "rating": "8.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -48,6 +48,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The World of Love - Season 1 Episode 2 (2015)",
+        "slug": "world-love-season-1-episode-2-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-2-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/W1-R-fo0XNU58LZPnjLZ3g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/XaigA3J-AmmTorYJViMHsw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GyFZXxQMCwDPL_3fY95n4A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "The World of Love - Season 1 Episode 3 (2015)",
+        "slug": "world-love-season-1-episode-3-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-3-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/yYBtfGvILMUZkUbQ8HpSjw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/v4KK1WgoJ-hxqcS70d1vqw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/b-Mv-G7N4GNBjISsymRkMw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -55,26 +115,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/kPNWwiDFW9lvrsAapRwDzA",
+        "url": "https://videonode.de/iframe3/p2p/yYBtfGvILMUZkUbQ8HpSjw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/7K7OTIBWfxWZ-ZEMqzW2bg",
+        "url": "https://videonode.de/iframe3/cast/v4KK1WgoJ-hxqcS70d1vqw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/6AA-DzO2WuBQa-scv9Mscg",
+        "url": "https://videonode.de/iframe3/hydrax/b-Mv-G7N4GNBjISsymRkMw",
         "default": false
       }
     ],
-    "id": 673,
-    "is_new": true
+    "id": 673
   },
   {
     "type": "series",
@@ -2269,7 +2328,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/V3GrK0wOYQYW4HRAB9WLTQ",
+            "url": "https://videonode.de/iframe3/hydrax/htmV0SBqNw0euYd1p6gdog",
             "default": false
           }
         ]
@@ -2299,7 +2358,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/CJXEx06sRSohmhidKXpNew",
+            "url": "https://videonode.de/iframe3/hydrax/Kkpvuqzekc2cI9D4QFNL_w",
             "default": false
           }
         ]
@@ -2329,7 +2388,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/XXFIXM_QGjnkNIZRvi7Y3g",
+            "url": "https://videonode.de/iframe3/hydrax/rW7gPs1lPK-39ETJRm_BYw",
             "default": false
           }
         ]
@@ -2359,7 +2418,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/kX_wzqwY9bIxLoX1B_1fAg",
+            "url": "https://videonode.de/iframe3/hydrax/YwUqx5JindYGIwHa786xAw",
             "default": false
           }
         ]
@@ -2384,7 +2443,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/kX_wzqwY9bIxLoX1B_1fAg",
+        "url": "https://videonode.de/iframe3/hydrax/YwUqx5JindYGIwHa786xAw",
         "default": false
       }
     ],
@@ -77007,8 +77066,8 @@
     "tahun": "2021",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/05/film-abbott-elementary-2021-lk21.jpg",
     "rating": "7.4",
-    "durasi": "2 eps · S.6",
-    "episodes_count": 94,
+    "durasi": "95 eps · S.6",
+    "episodes_count": 95,
     "seasons_count": 6,
     "genre": [
       "Comedy"
@@ -80425,6 +80484,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 6,
+        "episode": 3,
+        "title": "Abbott Elementary - Season 6 Episode 3 (2021)",
+        "slug": "abbott-elementary-season-6-episode-3-2021",
+        "source": "https://tv.nontondrama.vip/abbott-elementary-season-6-episode-3-2021",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/HwhUDEA7UywYFNV7QRdCxw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EZ5ys7u_JxA6391gVLDVYQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/AowsP3ndZLLwB9pgiLR5bQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -80432,21 +80521,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Yk-Kx2UU_rOllR_8ypKo_A",
+        "url": "https://videonode.de/iframe3/p2p/HwhUDEA7UywYFNV7QRdCxw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/tGXb2TVwgY45cfLG6nHs4w",
+        "url": "https://videonode.de/iframe3/cast/EZ5ys7u_JxA6391gVLDVYQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/OMJOeLzQOTfnYjpfnumqgQ",
+        "url": "https://videonode.de/iframe3/hydrax/AowsP3ndZLLwB9pgiLR5bQ",
         "default": false
       }
     ],
@@ -131683,8 +131772,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/01/film-best-medicine-2026-lk21.jpg",
     "rating": "5.5",
-    "durasi": "15 eps · S.2",
-    "episodes_count": 15,
+    "durasi": "16 eps · S.2",
+    "episodes_count": 16,
     "seasons_count": 2,
     "genre": [
       "Comedy",
@@ -132207,6 +132296,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "title": "Best Medicine - Season 2 Episode 6 (2026)",
+        "slug": "best-medicine-season-2-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/best-medicine-season-2-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/bl_rGF_p9RLNWHZobMQenQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/m8gdfXr-zkKgO_moqjk8sw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jlwaLajmyP6ePR7OYXtwww",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -132214,21 +132333,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/tAlX_v7kRQDF_E1gzdrdSg",
+        "url": "https://videonode.de/iframe3/p2p/bl_rGF_p9RLNWHZobMQenQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/fLiPWDn1fPcRGtCOXdxU9g",
+        "url": "https://videonode.de/iframe3/cast/m8gdfXr-zkKgO_moqjk8sw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/aUP60AeKoC7_5UYEjFzVKA",
+        "url": "https://videonode.de/iframe3/hydrax/jlwaLajmyP6ePR7OYXtwww",
         "default": false
       }
     ],
