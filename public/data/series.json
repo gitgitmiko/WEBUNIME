@@ -1,6 +1,114 @@
 [
   {
     "type": "series",
+    "nama": "The Remarried Empress",
+    "judul": "The Remarried Empress (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-remarried-empress-2026-lk21.jpg",
+    "rating": "9.0",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Fantasy",
+      "History",
+      "Romance"
+    ],
+    "sinopsis": "Permaisuri Navier terkejut ketika suaminya mengajukan gugatan cerai untuk menikahi selingkuhannya. Tak mau menyerah, ia bersekutu dengan Pangeran Heinrey yang penuh teka-teki, mempertaruhkan segalanya untuk merebut kembali takhtanya dan mengungguli mantan suaminya di tengah intrik istana dan kisah asmara.\n\nSutradara: Jo Soo-won, Sim Na-yeon\n\nBintang Film: Shin Min-a, Lee Jong-suk, Ju Ji-hoon, Lee Se-yeong, Lee Bong-ryun\n\nNegara: South Korea\n\nVotes: 1",
+    "slug": "remarried-empress-2026",
+    "source": "https://tv.nontondrama.vip/remarried-empress-2026",
+    "list_source": "https://tv12.lk21official.cc/remarried-empress-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Remarried Empress - Season 1 Episode 1 (2026)",
+        "slug": "remarried-empress-season-1-episode-1-2026",
+        "source": "https://tv.nontondrama.vip/remarried-empress-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nS-fOkV-M9i4V27E85mQfg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/w4wshCxP_PglYC5FeTH15A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/vH_PYIoOLH0lfVSbUO00AA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The Remarried Empress - Season 1 Episode 2 (2026)",
+        "slug": "remarried-empress-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/remarried-empress-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/mJfzYpwuqNztSiRrcYKn-g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/2MzgqC2dETf5sJOy5689JA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/5wD7ZbnEOoLcWO-EXO-YGg",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/mJfzYpwuqNztSiRrcYKn-g",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/2MzgqC2dETf5sJOy5689JA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/5wD7ZbnEOoLcWO-EXO-YGg",
+        "default": false
+      }
+    ],
+    "id": 672,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Story of Yanxi Palace",
     "judul": "Story of Yanxi Palace (2018)",
     "tahun": "2018",
