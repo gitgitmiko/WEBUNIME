@@ -178,8 +178,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-2-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [],
     "sinopsis": "Anime Sekai Saikyou no Majo.",
     "related": [],
@@ -361,35 +361,32 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Sekai Saikyou no Majo Episode 5",
+        "slug": "sekai-saikyou-no-majo-episode-5",
+        "source": "https://v2.samehadaku.how/sekai-saikyou-no-majo-episode-5/",
+        "date": "",
+        "released_at": "2026-11-04T15:30:37.485Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "default",
+            "label": "Default",
+            "url": "https://www.blogger.com/video.g?token=",
+            "default": true
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dw3Bkzua9-MKunF2ElWvE3rF3mkBf9jdulUtipIWsNW1D-w6yPi4ZyerB_VtUghCRgCGS5AhcwFCeOFizafBSIHNqcECP67vrmErxNyQ8ca43gziBugN0wnNH2Oz8IGvbFlIX-a&origin=sameguru2.blogspot.com",
-        "default": true,
-        "post": "55000",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/L0AXjAxZ#Ocs9_OoO2k-HC4-UBM4kXUrchT_1SHxofkPKBjktyhw",
-        "default": false,
-        "post": "55000",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/q4JGSC6D#gfQADlXeaSlrh1rN31oj4oq2kuOdNfig5YP-8chTBuQ",
-        "default": false,
-        "post": "55000",
-        "nume": "5"
+        "server": "default",
+        "label": "Default",
+        "url": "https://www.blogger.com/video.g?token=",
+        "default": true
       }
     ],
     "id": 2
@@ -696,8 +693,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Sasaki-to-Pii-chan-Season-2-Episode-1-300x169.jpg",
     "rating": "7.3",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Adventure",
       "Comedy",
@@ -935,44 +932,36 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Sasaki to Pii-chan Season 2 Episode 5",
+        "slug": "sasaki-to-pii-chan-season-2-episode-5",
+        "source": "https://v2.samehadaku.how/sasaki-to-pii-chan-season-2-episode-5/",
+        "date": "",
+        "released_at": "2026-11-04T15:30:38.682Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/dAtkVCSR#n8QMuGOoYZcTCM-A_EvrlXJqF2UIfchcNRuQLtGcLmI",
+            "default": true,
+            "post": "55135",
+            "nume": "3"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwzgc7XgeblAM8jkAtjbSEIQ1-4aXOvWZu59sc-upbSjsO8QjmRaJ4j4PWgQJMDOr-iSlYMG3w8wnt0bZVLnzjr7Rx7rzmKHzONNtyNgRgpp2XVlBnDM3bWZ6pQDhxnlpVUZcHB",
-        "default": true,
-        "post": "54811",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/6rwnzAob#yCFEdJ-Zw_vJ_DVYHzxiSV26vp-LKOH5PgwkiWZ2qZQ",
-        "default": false,
-        "post": "54811",
+        "url": "https://mega.nz/embed/dAtkVCSR#n8QMuGOoYZcTCM-A_EvrlXJqF2UIfchcNRuQLtGcLmI",
+        "default": true,
+        "post": "55135",
         "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/Gr4RFI7A#O9o64MpDoyd795DvGsOjmtAV5iY9VCjFXE01Ui6cjts",
-        "default": false,
-        "post": "54811",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/6p4UlTzI#0ZsTKvaf2LzfcP49OYKk_NfQeMHvLYLik1kA9fcnjos",
-        "default": false,
-        "post": "54811",
-        "nume": "5"
       }
     ],
     "id": 4,
