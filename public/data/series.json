@@ -173,8 +173,8 @@
     "tahun": "2018",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-story-yanxi-palace-2018-lk21.jpg",
     "rating": "8.3",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "15 eps · S.1",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -576,6 +576,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "Story of Yanxi Palace - Season 1 Episode 14 (2018)",
+        "slug": "story-yanxi-palace-season-1-episode-14-2018",
+        "source": "https://tv.nontondrama.vip/story-yanxi-palace-season-1-episode-14-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zabPo7boD9by9zQgSoHwsQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Oai1CUNFUaAR2UsWsUh5Ug",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/xNNsGs0KyRMKeKBKI9Wa9A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "Story of Yanxi Palace - Season 1 Episode 15 (2018)",
+        "slug": "story-yanxi-palace-season-1-episode-15-2018",
+        "source": "https://tv.nontondrama.vip/story-yanxi-palace-season-1-episode-15-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/oFspo7geF3qWXhxb8ZaVVQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/vgZBLb9Dxy5cKTT8QPv5Bg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Bo2IWDnc9t_u56dTUfeefw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -583,21 +643,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Ir6rgXOCI-Zk5Xh-n4pfGw",
+        "url": "https://videonode.de/iframe3/p2p/oFspo7geF3qWXhxb8ZaVVQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/1IOh_hmSEJ5kBMa-oRJsAA",
+        "url": "https://videonode.de/iframe3/cast/vgZBLb9Dxy5cKTT8QPv5Bg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/yV1ty3Jf9XRVIv7cI2G_qQ",
+        "url": "https://videonode.de/iframe3/hydrax/Bo2IWDnc9t_u56dTUfeefw",
         "default": false
       }
     ],

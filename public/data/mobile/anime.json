@@ -107826,8 +107826,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158138.jpg",
     "rating": "6.57",
     "votes": 193,
-    "durasi": "16 eps",
-    "episodes_count": 16,
+    "durasi": "17 eps",
+    "episodes_count": 17,
     "genre": [
       "Action",
       "Adventure",
@@ -108826,53 +108826,36 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 18,
+        "title": "Sora wa Akai Kawa no Hotori Episode 18",
+        "slug": "sora-wa-akai-kawa-no-hotori-episode-18",
+        "source": "https://v2.samehadaku.how/sora-wa-akai-kawa-no-hotori-episode-18/",
+        "date": "",
+        "released_at": "2026-11-04T02:00:44.155Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/4YYzCI5C#xxDgS4ZYFrEANJFZApNp9ovFRGHOg83N7DN_e8TclWk",
+            "default": true,
+            "post": "55126",
+            "nume": "1"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyD111kt2nWDG89hZtZad6rYa6rZUJ5EzDHArs8iyyISrUEL4YYVuyxFZjCKL-JNR5TaG9d-LLpYdMofdbzLZslZcMMqqwdidefYeeth7OLcMLlvGOwxXSmPAldMDOxTnYlcEvK",
-        "default": true,
-        "post": "54992",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/vlJ5jT11un",
-        "default": false,
-        "post": "54992",
-        "nume": "2"
-      },
-      {
-        "no": 3,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/0N5gVbyT#HK7ZH7P1DQBSvlHFJOu_g4q6NNOuE2XFyYUrpar8P1o",
-        "default": false,
-        "post": "54992",
-        "nume": "3"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/AMJhQRbR#JH0SEkvPE11Oz_TVESlTAQFW7T5N8xtL4xXXdjFRS4g",
-        "default": false,
-        "post": "54992",
-        "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/4BI3HLRb#Ajhtmeg5vuwgUnBgtg7HbhtrRDUQ47xPzMyLU9kNCnM",
-        "default": false,
-        "post": "54992",
-        "nume": "5"
+        "url": "https://mega.nz/embed/4YYzCI5C#xxDgS4ZYFrEANJFZApNp9ovFRGHOg83N7DN_e8TclWk",
+        "default": true,
+        "post": "55126",
+        "nume": "1"
       }
     ],
     "id": 120
