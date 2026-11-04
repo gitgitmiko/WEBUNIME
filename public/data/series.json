@@ -6,8 +6,8 @@
     "tahun": "2015",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-world-love-2015-lk21.jpg",
     "rating": "8.0",
-    "durasi": "27 eps · S.1",
-    "episodes_count": 27,
+    "durasi": "28 eps · S.1",
+    "episodes_count": 28,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -808,16 +808,53 @@
         "players": [
           {
             "no": 1,
-            "server": "cast",
-            "label": "GANTI PLAYER CAST",
-            "url": "https://videonode.de/iframe3/cast/qlrFFAohh5cWbixGaX0WQw",
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Syd2M1tdCXQrwoKRpq_Pfg",
             "default": true
           },
           {
             "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/qlrFFAohh5cWbixGaX0WQw",
+            "default": false
+          },
+          {
+            "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/BQJO-zFIoeMudJ8UI6d8fA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 28,
+        "title": "The World of Love - Season 1 Episode 28 (2015)",
+        "slug": "world-love-season-1-episode-28-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-28-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zy0qRLdY3beGm90iwwsPwQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/hEuXBW4W_TcyEDueyBjZdw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9P5wqRFt6PCvBAs_z0Q9ng",
             "default": false
           }
         ]
@@ -826,16 +863,23 @@
     "players": [
       {
         "no": 1,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/qlrFFAohh5cWbixGaX0WQw",
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/zy0qRLdY3beGm90iwwsPwQ",
         "default": true
       },
       {
         "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/hEuXBW4W_TcyEDueyBjZdw",
+        "default": false
+      },
+      {
+        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/BQJO-zFIoeMudJ8UI6d8fA",
+        "url": "https://videonode.de/iframe3/hydrax/9P5wqRFt6PCvBAs_z0Q9ng",
         "default": false
       }
     ],
