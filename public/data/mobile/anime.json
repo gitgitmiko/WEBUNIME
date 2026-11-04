@@ -402,8 +402,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-4-1-300x169.jpg",
     "rating": "7.8",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [
       "Mystery",
       "Comedy",
@@ -642,44 +642,36 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Tantei wa Mou, Shindeiru S2 Episode 5",
+        "slug": "tantei-wa-mou-shindeiru-s2-episode-5",
+        "source": "https://v2.samehadaku.how/tantei-wa-mou-shindeiru-s2-episode-5/",
+        "date": "",
+        "released_at": "2026-11-04T16:00:42.771Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/ykpFhKTK#smmkSIGJqvJhz3ZC6GbdFiagk05W2JFlyaPXNT7Ee5I",
+            "default": true,
+            "post": "55132",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzhxX0rEVGRDIglzcIioYHgMhHqNYuVx4azXnL64OUIN8RfdwHGmIjRzxSMp6VVib-bhOSjXmKzuv7Z7KwmMJ6SR8z8KuXPiaSHKKC0FBkajG1Un_EbB7iPYivJ_sh3AUwcUS_a&origin=sameguru2.blogspot.com",
-        "default": true,
-        "post": "54807",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/ztQ0EbIS#y6MX-lsmhDKrZs2Dk9LzEt2oeVhD4Bnhsi13rjPnVEQ",
-        "default": false,
-        "post": "54807",
-        "nume": "3"
-      },
-      {
-        "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/eghBTKzS#HnrPsWHxp7wFvndhE0F50QxwAW2E4kAlkQ1e-RuTLN0",
-        "default": false,
-        "post": "54807",
+        "url": "https://mega.nz/embed/ykpFhKTK#smmkSIGJqvJhz3ZC6GbdFiagk05W2JFlyaPXNT7Ee5I",
+        "default": true,
+        "post": "55132",
         "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/HtYjkBoS#kKdF8rvrpnMCOtujnM1LmO5RWAxPl1ZwUi0gkgEgjzY",
-        "default": false,
-        "post": "54807",
-        "nume": "5"
       }
     ],
     "id": 3,
