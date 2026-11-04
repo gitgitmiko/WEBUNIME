@@ -11577,8 +11577,8 @@
     "thumbnail": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs6CwALNK9yVy-adpVIBQxQkAtIfQ2eng68grAT9SEMM_IsL_KjqVLV5kFqdwoF6MUXkwH906Knti9sqfCShYvuXjnBGUTAvc_kwJGWTNamK7bZeMQ4tzeeS_KdGx_jRHtrySOIMK5lCAoIWZd9OApjDMpLdPWPOs-nB5mAbFqgBVp2RQ0381ace9osaK1/s0/88778.gif",
     "rating": "7.52",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Adventure",
@@ -11791,6 +11791,61 @@
         ]
       },
       {
+        "episode": 6,
+        "title": "Tensei shitara Ken deshita S2 Episode 6",
+        "slug": "tensei-shitara-ken-deshita-s2-episode-6",
+        "source": "https://v2.samehadaku.how/tensei-shitara-ken-deshita-s2-episode-6/",
+        "date": "",
+        "released_at": "2026-11-04T17:30:44.162Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dySnz_o6azF3h9MYmtj71T13_YFN3WkuE2peHmTphZryguwZNHTjoeZas4mNf_Cv_t4qN1s8ct2sPhq1l02d_gtSSks8q5PvWomuBy-WTUZCLLVqXMO_9JvNK-2j6UshASrVig&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55138",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/gxHItv4ICg",
+            "default": false,
+            "post": "55138",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/akQUHRRC#WpP4B11ECNEk6eMfw4mYZ4NNeN4mxHDtWDGiOTcSwVA",
+            "default": false,
+            "post": "55138",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/a1QFTKBR#vLWU68y6ejqwmMTcqYAtSmyUg-kL0csK14HAui6QoDA",
+            "default": false,
+            "post": "55138",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/n1I3FIyJ#c8qvD9JRJSLuAO45HZMSU37H3thkwhwcIO8M6lSM75o",
+            "default": false,
+            "post": "55138",
+            "nume": "5"
+          }
+        ]
+      },
+      {
         "episode": 19,
         "title": "Tensei shitara Ken deshita S2 Episode 19",
         "slug": "tensei-shitara-ken-deshita-s2-episode-19",
@@ -11805,36 +11860,45 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzGqaeNsnpVCfJ_pEE1t7CrryUUmWsODnLej5zNmyCc9C9_VH-w4fqvYWcAB0gtmcAatBymv8RQsfGHiKW1oyEpn2CmBiP4RwyJBPcB4U1rUlOYysiC66-wGB2-ADyk96mmIGs-&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dySnz_o6azF3h9MYmtj71T13_YFN3WkuE2peHmTphZryguwZNHTjoeZas4mNf_Cv_t4qN1s8ct2sPhq1l02d_gtSSks8q5PvWomuBy-WTUZCLLVqXMO_9JvNK-2j6UshASrVig&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "54665",
+        "post": "55138",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/yxwi0CIS#gkoZK3CUPFRpB5c4GA3GfxVje3ueUqQHmUxd-bOoCA0",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/gxHItv4ICg",
         "default": false,
-        "post": "54665",
-        "nume": "3"
+        "post": "55138",
+        "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/W5wjjCwI#IiHjZmdcmThNKhwjy-s8_T1xd-lSnDujNT_S56zH5ZU",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/akQUHRRC#WpP4B11ECNEk6eMfw4mYZ4NNeN4mxHDtWDGiOTcSwVA",
         "default": false,
-        "post": "54665",
-        "nume": "4"
+        "post": "55138",
+        "nume": "3"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/n9Z0SDwK#0Yz5Bcooxp98eHouwdLOfRg4OA9U6N_Rdp43XCoiHLQ",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/a1QFTKBR#vLWU68y6ejqwmMTcqYAtSmyUg-kL0csK14HAui6QoDA",
         "default": false,
-        "post": "54665",
+        "post": "55138",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/n1I3FIyJ#c8qvD9JRJSLuAO45HZMSU37H3thkwhwcIO8M6lSM75o",
+        "default": false,
+        "post": "55138",
         "nume": "5"
       }
     ],
