@@ -13,6 +13,7 @@ import { syncSamehadakuCatalog, checkSamehadakuFirstPage } from "./samehadaku-sy
 import { syncAnoboyLatest } from "./anoboy-sync.js";
 import { checkAnoboyMoviesFirstPage, syncAnoboyMovies } from "./anoboy-movies.js";
 import { migrateAnoboyHosts, resolveAnoboyBase } from "./anoboy-domain.js";
+import { lk21Domain, nontondramaDomain } from "./source-domains.js";
 import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
@@ -25,16 +26,9 @@ import {
 import { writeCatalogIndexes } from "./catalog-indexes.js";
 import { writeMarvelCatalog } from "./marvel-catalog.js";
 
-const LIST_BASE_DEFAULT = "https://tv12.lk21official.cc";
-const LIST_BASE_CANDIDATES = [
-  process.env.LK21_BASE_URL,
-  LIST_BASE_DEFAULT,
-  "https://tv13.lk21official.cc",
-  "https://tv14.lk21official.cc",
-].filter(Boolean);
-
-let LIST_BASE = LIST_BASE_CANDIDATES[0] || LIST_BASE_DEFAULT;
-const DRAMA_BASE = "https://tv5.nontondrama.my";
+// Domain aktif ditentukan resolveLk21Base() (lihat source-domains.js).
+let LIST_BASE = lk21Domain.base();
+let DRAMA_BASE = nontondramaDomain.base();
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
 
@@ -91,17 +85,9 @@ function looksLikeLk21Catalog(html) {
   );
 }
 
+/** URL LK21/nontondrama domain lama → domain aktif. */
 function rewriteLk21Url(url) {
-  try {
-    const u = new URL(url);
-    if (/lk21official\.cc$/i.test(u.hostname)) {
-      u.hostname = new URL(LIST_BASE).hostname;
-      return u.toString();
-    }
-  } catch {
-    /* ignore */
-  }
-  return url;
+  return nontondramaDomain.rewrite(lk21Domain.rewrite(url, LIST_BASE), DRAMA_BASE);
 }
 
 function emptyLk21Result(error) {
@@ -301,30 +287,32 @@ async function fetchHtml(url, referer = `${LIST_BASE}/`) {
   }
 }
 
-/** Coba mirror LK21 sampai warmup Playwright (atau plain lokal) berhasil. */
+/**
+ * Cari domain LK21 + nontondrama aktif (mirror dikenal → redirect → tebakan/pencarian).
+ * Kandidat yang tertahan Cloudflare dipastikan lewat warmup Playwright.
+ */
 async function resolveLk21Base() {
-  const onCi = !preferPlainFetch();
-  for (const base of LIST_BASE_CANDIDATES) {
-    const root = String(base).replace(/\/$/, "");
-    if (!onCi) {
-      try {
-        const { html } = await fetchHtmlPlain(`${root}/latest`, `${root}/`);
-        if (looksLikeLk21Catalog(html)) {
-          LIST_BASE = root;
-          console.log(`[lk21-sync] base OK (plain): ${LIST_BASE}`);
-          return LIST_BASE;
-        }
-      } catch (err) {
-        console.warn(`[lk21-sync] probe plain ${root}: ${err.message}`);
-      }
-    }
-    // Reset browser antar mirror supaya cookie CF tidak campur.
-    await closeLk21Browser();
+  const root = await lk21Domain.resolve({
+    verify: async (candidate) => {
+      // Reset browser antar mirror supaya cookie CF tidak campur.
+      await closeLk21Browser();
+      lk21Blocked = false;
+      lk21BlockReason = "";
+      return warmLk21Session(candidate);
+    },
+  });
+  LIST_BASE = root;
+  if (lk21Domain.isResolved()) {
     lk21Blocked = false;
     lk21BlockReason = "";
-    if (await warmLk21Session(root)) return LIST_BASE;
+  } else if (!lk21Blocked) {
+    markLk21Blocked("tidak ada mirror LK21 yang bisa diakses");
   }
-  if (!lk21Blocked) markLk21Blocked("tidak ada mirror LK21 yang bisa diakses");
+  try {
+    DRAMA_BASE = await nontondramaDomain.resolve();
+  } catch (err) {
+    console.warn(`[lk21-sync] resolve nontondrama: ${err.message}`);
+  }
   return LIST_BASE;
 }
 
@@ -1500,6 +1488,9 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
 
     try {
       await resolveLk21Base();
+      // URL domain lama di katalog → domain aktif (source episode/film).
+      await lk21Domain.migrate([dataDir, mobileDir]);
+      await nontondramaDomain.migrate([dataDir, mobileDir]);
       if (lk21Blocked) {
         const blocked = emptyLk21Result(new Error(lk21BlockReason || "LK21 blocked"));
         results.movies = blocked;

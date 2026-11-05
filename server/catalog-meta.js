@@ -1,4 +1,4 @@
-import { ANOBOY_HOST_RE, anoboyBase } from "../scripts/lib/anoboy-domain.js";
+import { rewriteAnoboyHost } from "../scripts/lib/anoboy-domain.js";
 
 /** Koleksi array (satu item = satu baris). */
 export const ITEM_COLLECTIONS = [
@@ -57,9 +57,9 @@ export function itemSlug(item, collection) {
 /** Host poster mati (DNS) → mirror aktif. cover.showcdnx.com dibiarkan. */
 export function rewriteDeadPosterHost(url) {
   if (!url || typeof url !== "string") return url || "";
-  return url
-    .replace(/https?:\/\/(?:poster|image)\.showcdnx\.com/gi, "https://poster.assetsy.de")
-    .replace(ANOBOY_HOST_RE, anoboyBase());
+  return rewriteAnoboyHost(
+    url.replace(/https?:\/\/(?:poster|image)\.showcdnx\.com/gi, "https://poster.assetsy.de"),
+  );
 }
 
 export function rewriteItemPosters(item) {

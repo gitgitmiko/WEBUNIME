@@ -16,12 +16,14 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { rewritePlayerUrl } from "./lib/player-host-aliases.js";
+import { lk21Domain, nontondramaDomain } from "./lib/source-domains.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const DATA_DIR = join(ROOT, "public", "data");
-const LIST_BASE = "https://tv12.lk21official.cc";
-const DRAMA_BASE = "https://tv5.nontondrama.my";
+// Domain aktif ditentukan di main() (lihat source-domains.js).
+let LIST_BASE = lk21Domain.base();
+let DRAMA_BASE = nontondramaDomain.base();
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
@@ -174,6 +176,8 @@ function episodesForTarget(series, target) {
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
+  LIST_BASE = await lk21Domain.resolve();
+  DRAMA_BASE = await nontondramaDomain.resolve();
   console.log(
     `Refresh series players pages=${opts.pages} delay=${opts.delay}ms limit=${opts.limit || "none"}`
   );
@@ -208,7 +212,7 @@ async function main() {
     for (let e = 0; e < episodes.length; e += 1) {
       const ep = episodes[e];
       if (!ep?.slug) continue;
-      const source = ep.source || `${DRAMA_BASE}/${ep.slug}`;
+      const source = nontondramaDomain.rewrite(ep.source || `${DRAMA_BASE}/${ep.slug}`, DRAMA_BASE);
       try {
         const { html, finalUrl } = await fetchHtml(source);
         const players = extractPlayers(html);

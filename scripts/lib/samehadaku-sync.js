@@ -15,11 +15,13 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { chromium } from "playwright";
 import { extractSiteLandscape, plausibleReleaseYear } from "./landscape-utils.js";
+import { samehadakuDomain } from "./source-domains.js";
 
-const BASE = "https://v2.samehadaku.how";
-const TERBARU_URL = `${BASE}/anime-terbaru/`;
-const MOVIE_URL = `${BASE}/anime-movie/`;
-const SCHEDULE_URL = `${BASE}/jadwal-rilis/`;
+// Domain aktif ditentukan warmupSamehadaku() (lihat source-domains.js).
+let BASE = samehadakuDomain.base();
+const terbaruUrl = () => `${BASE}/anime-terbaru/`;
+const movieUrl = () => `${BASE}/anime-movie/`;
+const scheduleUrl = () => `${BASE}/jadwal-rilis/`;
 const TERBARU_PAGES = 5;
 const MOVIE_PAGES = 2;
 const DETAIL_DELAY_MS = 350;
@@ -135,6 +137,24 @@ async function gotoReady(page, url, label) {
   return false;
 }
 
+/**
+ * Tentukan domain Samehadaku aktif, lalu warmup Cloudflare di page ini.
+ * Kandidat domain (selalu tertahan CF untuk fetch biasa) dipastikan di browser:
+ * /anime-terbaru/ harus memuat daftar anime.
+ */
+async function warmupSamehadaku(page) {
+  BASE = await samehadakuDomain.resolve({
+    verify: async (origin) => {
+      await page.goto(`${origin}/anime-terbaru/`, { waitUntil: "domcontentloaded", timeout: 120000 });
+      return waitReady(page, 60000, { requireListing: true });
+    },
+  });
+  if (!page.url().startsWith(terbaruUrl())) {
+    await page.goto(terbaruUrl(), { waitUntil: "domcontentloaded", timeout: 120000 });
+  }
+  return waitReady(page);
+}
+
 async function launchBrowser() {
   const opts = {
     headless: true,
@@ -225,7 +245,7 @@ export async function completeFromWatchPage(page, anime) {
   const episodes = anime.episodes || [];
   const latest = [...episodes].sort((a, b) => Number(b.episode) - Number(a.episode))[0];
   if (!latest?.source) return 0;
-  await page.goto(latest.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+  await page.goto(samehadakuDomain.rewrite(latest.source, BASE), { waitUntil: "domcontentloaded", timeout: 45000 });
   if (!(await waitReady(page, 12000))) return 0;
   const html = await page.content();
   const poster = ogImageUrl(html);
@@ -651,7 +671,7 @@ async function scrapeEpisodePlayers(page, ep) {
     return ep;
   }
   if (!ep.inline) {
-    await page.goto(ep.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+    await page.goto(samehadakuDomain.rewrite(ep.source, BASE), { waitUntil: "domcontentloaded", timeout: 45000 });
     if (!(await waitReady(page, 15000))) throw new Error("Cloudflare timeout");
     await page.waitForTimeout(500);
   }
@@ -690,7 +710,7 @@ async function collectTerbaruListings(page) {
   const listings = [];
   const seenKey = new Set();
   for (let p = 1; p <= TERBARU_PAGES; p++) {
-    const url = p <= 1 ? TERBARU_URL : `${BASE}/anime-terbaru/page/${p}/`;
+    const url = p <= 1 ? terbaruUrl() : `${BASE}/anime-terbaru/page/${p}/`;
     process.stdout.write(`[samehadaku-sync] terbaru ${p}/${TERBARU_PAGES} ... `);
     const ready = await gotoReady(page, url, `terbaru ${p}/${TERBARU_PAGES}`);
     if (!ready) {
@@ -783,7 +803,7 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
         let detail = null;
         if (!samehadakuAnimePageBlocked) {
           try {
-            await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+            await page.goto(samehadakuDomain.rewrite(item.source, BASE), { waitUntil: "domcontentloaded", timeout: 45000 });
             if (await waitReady(page, 8000)) {
               await page.waitForTimeout(400);
               detail = extractAnimeDetailMeta(await page.content(), item);
@@ -960,7 +980,7 @@ async function syncAnimeTerbaru(page, dataDirs) {
 async function collectMovieListings(page) {
   const listings = [];
   for (let p = 1; p <= MOVIE_PAGES; p++) {
-    const url = p <= 1 ? MOVIE_URL : `${BASE}/anime-movie/page/${p}/`;
+    const url = p <= 1 ? movieUrl() : `${BASE}/anime-movie/page/${p}/`;
     process.stdout.write(`[samehadaku-sync] movie list ${p}/${MOVIE_PAGES} ... `);
     const ready = await gotoReady(page, url, `movie ${p}/${MOVIE_PAGES}`);
     if (!ready) {
@@ -998,7 +1018,7 @@ async function applyMoviesToCatalog(page, dataDir, listings) {
       let detail = null;
       if (!samehadakuAnimePageBlocked) {
         try {
-          await page.goto(item.source, { waitUntil: "domcontentloaded", timeout: 45000 });
+          await page.goto(samehadakuDomain.rewrite(item.source, BASE), { waitUntil: "domcontentloaded", timeout: 45000 });
           if (await waitReady(page, 8000)) {
             await page.waitForTimeout(400);
             detail = extractMovieDetail(await page.content(), item);
@@ -1170,7 +1190,7 @@ async function extractScheduleDayItems(page) {
 export async function syncAnimeSchedule(page, dataDirs) {
   const dirs = asDataDirs(dataDirs);
   process.stdout.write(`[samehadaku-sync] jadwal-rilis ... `);
-  await page.goto(SCHEDULE_URL, {
+  await page.goto(scheduleUrl(), {
     waitUntil: "domcontentloaded",
     timeout: 120000,
   });
@@ -1237,7 +1257,7 @@ export async function syncAnimeSchedule(page, dataDirs) {
   }
 
   const payload = {
-    source: SCHEDULE_URL,
+    source: scheduleUrl(),
     scraped_at: new Date().toISOString(),
     timezone: "Asia/Jakarta",
     days,
@@ -1276,6 +1296,7 @@ export async function scrapeAnimeScheduleOnly(dataDir) {
   });
   const page = await context.newPage();
   try {
+    await warmupSamehadaku(page);
     return await syncAnimeSchedule(page, dataDir);
   } finally {
     await browser.close();
@@ -1302,9 +1323,9 @@ export async function syncSamehadakuCatalog(dataDir, extraDirs = []) {
   const page = await context.newPage();
 
   try {
-    // Warmup CF
-    await page.goto(TERBARU_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
-    await waitReady(page);
+    await warmupSamehadaku(page);
+    // URL domain lama di katalog (source/thumbnail) → domain aktif.
+    await samehadakuDomain.migrate(dirs);
 
     const animeAll = await syncAnimeTerbaru(page, dirs);
     const moviesAll = await syncAnimeMovies(page, dirs);
@@ -1473,8 +1494,7 @@ async function withRepairBrowser(fn) {
   });
   const page = await context.newPage();
   try {
-    await page.goto(TERBARU_URL, { waitUntil: "domcontentloaded", timeout: 120000 });
-    await waitReady(page);
+    await warmupSamehadaku(page);
     return await fn(page);
   } finally {
     await browser.close();
@@ -1571,7 +1591,10 @@ export async function checkSamehadakuFirstPage(dataDir) {
   const browser = await launchBrowser();
   try {
     const page = await browser.newPage();
-    if (!(await gotoReady(page, TERBARU_URL, "cek terbaru"))) {
+    BASE = await samehadakuDomain.resolve({
+      verify: (origin) => gotoReady(page, `${origin}/anime-terbaru/`, `domain ${origin}`),
+    });
+    if (!(await gotoReady(page, terbaruUrl(), "cek terbaru"))) {
       throw new Error("Cloudflare timeout (anime-terbaru)");
     }
     await page.waitForTimeout(800);

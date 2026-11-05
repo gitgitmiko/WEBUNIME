@@ -14,11 +14,13 @@ import { existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { rewritePlayerUrl } from "./lib/player-host-aliases.js";
+import { lk21Domain } from "./lib/source-domains.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..");
 const DATA_DIR = join(ROOT, "public", "data");
-const BASE_URL = "https://tv12.lk21official.cc";
+// Domain LK21 aktif ditentukan di main() (lihat source-domains.js).
+let BASE_URL = lk21Domain.base();
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36";
 
@@ -163,6 +165,7 @@ async function collectSlugs(opts) {
 
 async function main() {
   const opts = parseArgs(process.argv.slice(2));
+  BASE_URL = await lk21Domain.resolve();
   console.log(
     `Refresh movie players pages=${opts.pages} delay=${opts.delay}ms limit=${opts.limit || "none"}`
   );
@@ -191,7 +194,7 @@ async function main() {
       continue;
     }
     const sample = hits[0].bySlug.get(slug);
-    const source = sample.source || `${BASE_URL}/${slug}`;
+    const source = lk21Domain.rewrite(sample.source || `${BASE_URL}/${slug}`, BASE_URL);
     try {
       const html = await fetchHtml(source);
       const players = extractPlayers(html);
