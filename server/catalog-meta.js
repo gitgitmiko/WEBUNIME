@@ -1,3 +1,5 @@
+import { ANOBOY_HOST_RE, anoboyBase } from "../scripts/lib/anoboy-domain.js";
+
 /** Koleksi array (satu item = satu baris). */
 export const ITEM_COLLECTIONS = [
   "movies",
@@ -57,7 +59,7 @@ export function rewriteDeadPosterHost(url) {
   if (!url || typeof url !== "string") return url || "";
   return url
     .replace(/https?:\/\/(?:poster|image)\.showcdnx\.com/gi, "https://poster.assetsy.de")
-    .replace(/https?:\/\/(?:www\.)?anoboy\.xyz/gi, "https://anoboy.quest");
+    .replace(ANOBOY_HOST_RE, anoboyBase());
 }
 
 export function rewriteItemPosters(item) {

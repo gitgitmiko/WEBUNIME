@@ -15,16 +15,21 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { isYupLive, normalizeAnimeKey, yupEmbedsFromPath } from "./anoboy-sync.js";
+import {
+  anoboyBase,
+  anoboyPathKey,
+  migrateAnoboyHosts,
+  resolveAnoboyBase,
+  rewriteAnoboyHost,
+} from "./anoboy-domain.js";
 
-const BASE = "https://anoboy.quest";
-const LIST_URL = `${BASE}/anime-movie/`;
+const listUrl = () => `${anoboyBase()}/anime-movie/`;
 const SKIP_FILE = "anoboy-movies-skipped.json";
 const CONCURRENCY = 6;
 const TIMEOUT_MS = 25000;
 const HEADERS = {
   "user-agent":
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-  referer: `${BASE}/`,
 };
 
 /**
@@ -61,7 +66,7 @@ function cleanTitle(text) {
 }
 
 function slugFromUrl(url) {
-  const raw = new URL(url, BASE).pathname.split("/").filter(Boolean).pop() || "";
+  const raw = new URL(url, anoboyBase()).pathname.split("/").filter(Boolean).pop() || "";
   return decodeURIComponent(raw).toLowerCase();
 }
 
@@ -69,7 +74,7 @@ function slugFromUrl(url) {
 async function fetchText(url, init = {}) {
   try {
     const res = await fetch(url, {
-      headers: HEADERS,
+      headers: { ...HEADERS, referer: `${anoboyBase()}/` },
       signal: AbortSignal.timeout(TIMEOUT_MS),
       ...init,
     });
@@ -106,15 +111,15 @@ export function parseListing(html) {
   const items = [];
   const seen = new Set();
   const re =
-    /<a href="(https:\/\/anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\/[^"]+)" rel="bookmark" title="([^"]*)">[\s\S]*?<img[^>]+src="([^"]*)"/g;
+    /<a href="(https:\/\/(?:www\.)?anoboy\.[a-z.]{2,15}\/\d{4}\/\d{2}\/[^"]+)" rel="bookmark" title="([^"]*)">[\s\S]*?<img[^>]+src="([^"]*)"/g;
   for (const m of body.matchAll(re)) {
-    const href = m[1].replace(/anoboy\.xyz/i, "anoboy.quest");
+    const href = rewriteAnoboyHost(m[1]);
     if (seen.has(href)) continue;
     seen.add(href);
     items.push({
       href,
       title: cleanTitle(m[2]),
-      thumbnail: m[3] ? encodeURI(decodeURI(new URL(m[3], BASE).href)) : "",
+      thumbnail: m[3] ? encodeURI(decodeURI(new URL(m[3], anoboyBase()).href)) : "",
     });
   }
   const max = html.match(/Page \d+ of (\d+)/i);
@@ -367,23 +372,31 @@ async function scrapeMovie(item) {
 
 /** Halaman pertama: ada post yang belum tercatat di katalog / daftar skip? */
 export async function checkAnoboyMoviesFirstPage(dataDir) {
-  const { items } = parseListing(await fetchPage(LIST_URL));
+  await resolveAnoboyBase();
+  const { items } = parseListing(await fetchPage(listUrl()));
   const rows = await readArray(join(dataDir, "anime-movies.json"));
-  const known = new Set([
-    ...rows.map((r) => r.anoboy_source).filter(Boolean),
-    ...(await readArray(join(dataDir, SKIP_FILE))).map((s) => s.href),
-  ]);
-  return { fresh: items.map((i) => i.href).filter((href) => !known.has(href)) };
+  // Bandingkan path saja: katalog bisa masih menyimpan domain lama.
+  const known = new Set(
+    [
+      ...rows.map((r) => r.anoboy_source).filter(Boolean),
+      ...(await readArray(join(dataDir, SKIP_FILE))).map((s) => s.href),
+    ].map(anoboyPathKey),
+  );
+  return {
+    fresh: items.map((i) => i.href).filter((href) => !known.has(anoboyPathKey(href))),
+  };
 }
 
 export async function syncAnoboyMovies(dirs, opts = {}) {
-  const first = parseListing(await fetchPage(LIST_URL));
+  await resolveAnoboyBase();
+  if (!opts.dryRun) await migrateAnoboyHosts(dirs);
+  const first = parseListing(await fetchPage(listUrl()));
   const maxPages = opts.all
     ? first.maxPages
     : Math.min(first.maxPages, Math.max(1, Number(opts.pages) || 2));
   const listed = [...first.items];
   for (let n = 2; n <= maxPages; n++) {
-    listed.push(...parseListing(await fetchPage(`${LIST_URL}page/${n}/`)).items);
+    listed.push(...parseListing(await fetchPage(`${listUrl()}page/${n}/`)).items);
   }
   const seen = new Set();
   let items = listed.filter((i) => !seen.has(i.href) && seen.add(i.href));

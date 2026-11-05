@@ -12,21 +12,16 @@
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
 import { chromium } from "playwright";
+import {
+  anoboyBase,
+  isAnoboyUrl,
+  resolveAnoboyBase,
+  rewriteAnoboyHost,
+} from "./anoboy-domain.js";
 
-const BASE = "https://anoboy.quest";
-const LIST_URL = `${BASE}/anime/`;
-const HOME_URL = `${BASE}/`;
 const DETAIL_DELAY_MS = 400;
 const ANOBOY_LABEL = "Anoboy B-Tube";
 const STATE_DIR = "scripts/_anoboy-scrape";
-
-/** Domain lama → baru (sertifikat anoboy.xyz sudah invalid). */
-function rewriteAnoboyHost(url) {
-  return String(url || "").replace(
-    /https?:\/\/(?:www\.)?anoboy\.xyz/gi,
-    BASE
-  );
-}
 
 const STOP = new Set([
   "no",
@@ -61,7 +56,7 @@ function sleep(ms) {
 
 function slugFromUrl(url) {
   try {
-    const path = new URL(url, BASE).pathname.replace(/\/+$/, "");
+    const path = new URL(url, anoboyBase()).pathname.replace(/\/+$/, "");
     return path.split("/").filter(Boolean).pop() || "";
   } catch {
     return "";
@@ -69,14 +64,14 @@ function slugFromUrl(url) {
 }
 
 function yearFromUrl(url) {
-  const m = String(url || "").match(/anoboy\.xyz\/(20\d{2})\//i);
+  const m = String(url || "").match(/anoboy\.[a-z.]{2,15}\/(20\d{2})\//i);
   return m ? m[1] : "";
 }
 
 /** Episode URL → halaman hub seri (tanpa -episode-N). */
 function resolveHubUrl(url) {
   try {
-    const u = new URL(url, BASE);
+    const u = new URL(url, anoboyBase());
     u.hash = "";
     u.search = "";
     let path = u.pathname.replace(/\/+$/, "");
@@ -92,7 +87,12 @@ function isAnoboyOnly(row) {
   return String(row?.source_site || "").toLowerCase() === "anoboy";
 }
 
-function absUrl(href, base = BASE) {
+/** URL anoboy yang masih memakai domain lama. */
+function isStaleAnoboyUrl(url) {
+  return isAnoboyUrl(url) && rewriteAnoboyHost(url) !== url;
+}
+
+function absUrl(href, base = anoboyBase()) {
   try {
     return rewriteAnoboyHost(new URL(href, base).href);
   } catch {
@@ -273,6 +273,7 @@ async function readJsonArray(filePath) {
 }
 
 async function launchBrowser() {
+  await resolveAnoboyBase();
   const opts = {
     headless: true,
     args: ["--disable-blink-features=AutomationControlled"],
@@ -423,14 +424,14 @@ function applyPlayersToCatalog(catalog, payload, existingRow = undefined) {
 }
 
 async function scrapeListingPage(page, n) {
-  const url = n <= 1 ? LIST_URL : `${BASE}/anime/page/${n}/`;
+  const url = n <= 1 ? `${anoboyBase()}/anime/` : `${anoboyBase()}/anime/page/${n}/`;
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90000 });
   await page.waitForTimeout(1800);
   return page.evaluate(() => {
     const cards = [...document.querySelectorAll(".column-content a")].filter(
       (a) =>
         a.querySelector("img") &&
-        /anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\//i.test(a.href),
+        /anoboy\.[a-z.]{2,15}\/\d{4}\/\d{2}\//i.test(a.href),
     );
     const seen = new Set();
     const items = [];
@@ -453,14 +454,14 @@ async function scrapeListingPage(page, n) {
 }
 
 async function scrapeLatestPage(page, n) {
-  const url = n <= 1 ? HOME_URL : `${BASE}/page/${n}/`;
+  const url = n <= 1 ? `${anoboyBase()}/` : `${anoboyBase()}/page/${n}/`;
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90000 });
   await page.waitForTimeout(1800);
   return page.evaluate(() => {
     const cards = [...document.querySelectorAll(".home_index a")].filter(
       (a) =>
         a.querySelector("img") &&
-        /anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\//i.test(a.href),
+        /anoboy\.[a-z.]{2,15}\/\d{4}\/\d{2}\//i.test(a.href),
     );
     const seen = new Set();
     const items = [];
@@ -525,7 +526,7 @@ async function scrapeHub(page, hubUrl) {
       ];
       for (const a of candidates) {
         const href = a.href || "";
-        if (!/anoboy\.xyz\/\d{4}\/\d{2}\//i.test(href)) continue;
+        if (!/anoboy\.[a-z.]{2,15}\/\d{4}\/\d{2}\//i.test(href)) continue;
         if (!/-episode-\d+/i.test(href)) continue;
         try {
           const path = decodeURIComponent(
@@ -699,18 +700,18 @@ function applyAnoboyMeta(row, meta) {
   }
   if (meta.thumb) {
     const thumb = rewriteAnoboyHost(meta.thumb);
-    if (!row.thumbnail || /anoboy\.xyz/i.test(row.thumbnail)) {
+    if (!row.thumbnail || isStaleAnoboyUrl(row.thumbnail)) {
       if (row.thumbnail !== thumb) {
         row.thumbnail = thumb;
         changed = true;
       }
     }
   }
-  if (row.thumbnail && /anoboy\.xyz/i.test(row.thumbnail)) {
+  if (row.thumbnail && isStaleAnoboyUrl(row.thumbnail)) {
     row.thumbnail = rewriteAnoboyHost(row.thumbnail);
     changed = true;
   }
-  if (row.source && /anoboy\.xyz/i.test(row.source)) {
+  if (row.source && isStaleAnoboyUrl(row.source)) {
     row.source = rewriteAnoboyHost(row.source);
     changed = true;
   }
@@ -949,7 +950,7 @@ function collectAnoboyMetaJobs(loaded) {
   const jobs = [];
   const seen = new Set();
   const add = (hubUrl, slug, title) => {
-    if (!/anoboy\.xyz\/\d{4}\/\d{2}\//i.test(hubUrl || "")) return;
+    if (!/anoboy\.[a-z.]{2,15}\/\d{4}\/\d{2}\//i.test(hubUrl || "")) return;
     const key = hubUrl.replace(/\/+$/, "").toLowerCase();
     if (seen.has(key)) return;
     seen.add(key);
@@ -1338,7 +1339,7 @@ export async function syncAnoboyLatest(dataDir, extraDirs = [], opts = {}) {
 
 /** Daftar post episode dari halaman kategori seri (/<slug>/page/N/). */
 async function scrapeSeriesCategoryPage(page, slug, n) {
-  const url = n <= 1 ? `${BASE}/${slug}/` : `${BASE}/${slug}/page/${n}/`;
+  const url = n <= 1 ? `${anoboyBase()}/${slug}/` : `${anoboyBase()}/${slug}/page/${n}/`;
   await page.goto(url, { waitUntil: "domcontentloaded", timeout: 90000 });
   await page.waitForTimeout(1200);
   return page.evaluate(() => {
@@ -1346,7 +1347,7 @@ async function scrapeSeriesCategoryPage(page, slug, n) {
     const seen = new Set();
     for (const a of document.querySelectorAll(".column-content a")) {
       if (!a.querySelector("img")) continue;
-      if (!/anoboy\.(?:quest|xyz)\/\d{4}\/\d{2}\/.*-episode-\d+/i.test(a.href)) continue;
+      if (!/anoboy\.[a-z.]{2,15}\/\d{4}\/\d{2}\/.*-episode-\d+/i.test(a.href)) continue;
       if (seen.has(a.href)) continue;
       seen.add(a.href);
       const img = a.querySelector("img");

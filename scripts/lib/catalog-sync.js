@@ -12,6 +12,7 @@ import { chromium } from "playwright";
 import { syncSamehadakuCatalog, checkSamehadakuFirstPage } from "./samehadaku-sync.js";
 import { syncAnoboyLatest } from "./anoboy-sync.js";
 import { checkAnoboyMoviesFirstPage, syncAnoboyMovies } from "./anoboy-movies.js";
+import { migrateAnoboyHosts, resolveAnoboyBase } from "./anoboy-domain.js";
 import {
   extractLk21Quality,
   shouldRefreshLk21Quality,
@@ -1581,6 +1582,14 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
         updated: 0,
         error: err.message,
       };
+    }
+
+    try {
+      // Domain Anoboy sering pindah: cari yang aktif + pindahkan URL lama di katalog.
+      await resolveAnoboyBase();
+      await migrateAnoboyHosts([dataDir, mobileDir]);
+    } catch (err) {
+      console.warn("[sync] anoboy domain:", err.message);
     }
 
     try {
