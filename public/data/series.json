@@ -6,8 +6,8 @@
     "tahun": "2015",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-world-love-2015-lk21.jpg",
     "rating": "8.0",
-    "durasi": "35 eps · S.1",
-    "episodes_count": 35,
+    "durasi": "36 eps · S.1",
+    "episodes_count": 36,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -1014,16 +1014,90 @@
         "episode": 34,
         "title": "The World of Love - Season 1 Episode 34 (2015)",
         "slug": "world-love-season-1-episode-34-2015",
-        "source": "https://tv5.nontondrama.my/world-love-season-1-episode-34-2015",
-        "players": []
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-34-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wIdvtQcZcDbpX9Jcwb8FQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/pIx5IC12ZhMN6A2pDurttw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/3MWFY8yA2aBHaGjmAST4vw",
+            "default": false
+          }
+        ]
       },
       {
         "season": 1,
         "episode": 35,
         "title": "The World of Love - Season 1 Episode 35 (2015)",
         "slug": "world-love-season-1-episode-35-2015",
-        "source": "https://tv5.nontondrama.my/world-love-season-1-episode-35-2015",
-        "players": []
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-35-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xnGLhS44sEqe5xuK8VCObA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0gVJS7rVAdXycL44kCJ_Fw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4jj9AEg6OYbn1ADakl4sNw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 36,
+        "title": "The World of Love - Season 1 Episode 36 (2015)",
+        "slug": "world-love-season-1-episode-36-2015",
+        "source": "https://tv.nontondrama.vip/world-love-season-1-episode-36-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/7i22oqWQpo2QXC8LXdq2hg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xRSi3lgYqlyun-QBZFi-Ig",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QXi8SHFmXrfwXkdfJaHkOQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1031,21 +1105,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/N6QtUXZOa5yMQBbUNSqdrA",
+        "url": "https://videonode.de/iframe3/p2p/7i22oqWQpo2QXC8LXdq2hg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/49nssMaXBRtd--g5UIPkXQ",
+        "url": "https://videonode.de/iframe3/cast/xRSi3lgYqlyun-QBZFi-Ig",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/x8Rf0E6krTSql45EA9MLrA",
+        "url": "https://videonode.de/iframe3/hydrax/QXi8SHFmXrfwXkdfJaHkOQ",
         "default": false
       }
     ],
