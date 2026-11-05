@@ -127796,8 +127796,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-make-me-tingle-2026-lk21.jpg",
     "rating": "9.5",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -128078,6 +128078,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Make Me Tingle - Season 1 Episode 10 (2026)",
+        "slug": "make-me-tingle-season-1-episode-10-2026",
+        "source": "https://tv.nontondrama.vip/make-me-tingle-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/aMLWUmhJ6y226_H40JXz1g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/V8pqYHipXGUOYpRFxM--zw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9T8qNGQrfbQ10WYzj8BRxQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -128085,21 +128115,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Xyimm44vHohnuLV1gnYm7A",
+        "url": "https://videonode.de/iframe3/p2p/aMLWUmhJ6y226_H40JXz1g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/HXTAhmRnoNuVFiTq4-jnUw",
+        "url": "https://videonode.de/iframe3/cast/V8pqYHipXGUOYpRFxM--zw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/NqIyIzV6A0DEfmvjKLtqJQ",
+        "url": "https://videonode.de/iframe3/hydrax/9T8qNGQrfbQ10WYzj8BRxQ",
         "default": false
       }
     ],
