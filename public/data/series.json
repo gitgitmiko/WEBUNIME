@@ -193209,8 +193209,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-doctor-x-age-white-mafia-2026-lk21.jpg",
     "rating": "9.5",
-    "durasi": "8 eps · S.1",
-    "episodes_count": 8,
+    "durasi": "9 eps · S.1",
+    "episodes_count": 9,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -193461,6 +193461,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "Doctor X: Age of the White Mafia - Season 1 Episode 9 (2026)",
+        "slug": "doctor-x-age-white-mafia-season-1-episode-9-2026",
+        "source": "https://tv.nontondrama.vip/doctor-x-age-white-mafia-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/syMXev36zCqVBBGib3n5Eg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/IYTJq1ra72NAHK3ylt1cGQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/nrIyKkbHroepa1iUvtr8KQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -193468,21 +193498,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/DdKmvjYMHnLG18CWJdJ-lA",
+        "url": "https://videonode.de/iframe3/p2p/syMXev36zCqVBBGib3n5Eg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/uay0_WXxeLsVGE7dk8VfLQ",
+        "url": "https://videonode.de/iframe3/cast/IYTJq1ra72NAHK3ylt1cGQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/gyRE-dPYTTvISOZHWGPPTQ",
+        "url": "https://videonode.de/iframe3/hydrax/nrIyKkbHroepa1iUvtr8KQ",
         "default": false
       }
     ],
