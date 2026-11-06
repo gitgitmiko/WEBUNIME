@@ -2500,7 +2500,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tougen-Anki-Nikko-Kegon-no-Taki-hen-Episode-2-300x169.jpg",
     "rating": "6.9",
     "votes": null,
-    "durasi": "6 eps",
+    "durasi": "24 Menit",
     "episodes_count": 6,
     "genre": [
       "Action",
@@ -2758,6 +2758,14 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/Lbo013RpCWtC",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxR1gw93PJucfx415lCopGbnOZi1xUykCwIojrd3yBF6bjwozk-MFzo8davZzfBn267nkGMBq1xXLU2AyBtMADP7XXktfMYuPEwLjzta0IQDCLmJOVKHrmO0dqTl5gH5t3S0w",
             "default": false,
             "source": "anoboy"
           }
@@ -8629,7 +8637,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Hotaru%20no%20Yomeiri.jpg",
     "rating": "7.9",
     "votes": "",
-    "durasi": "5 eps",
+    "durasi": "22 Menit",
     "episodes_count": 5,
     "genre": [
       "Romance",
@@ -18404,8 +18412,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Uchi%20no%20Otouto-domo%20ga%20Sumimasen.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 16,
+    "durasi": "17 eps",
+    "episodes_count": 17,
     "genre": [
       "Comedy",
       "Romance",
@@ -18844,6 +18852,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/kxtk84j1gjkf",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 18,
+        "title": "Uchi no Otouto-domo ga Sumimasen Episode 18",
+        "slug": "uchi-no-otouto-domo-ga-sumimasen-episode-18",
+        "source": "https://anoboy.at/2026/11/uchi-no-otouto-domo-ga-sumimasen-episode-18/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzBtxeeQY7oYwPG_n-zWsKGRMQXYaCgl6fwHcBuzspyMBDIBXu49cmRK8VShsATRPA1qXRpx25crtcrezqCnDws8KoeHygHhjJWdJs1nPDVwL1EOGXKYR_gMG1jH0bzbzNVBeQ",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyyykUlx-fymkrR9-wK_WFPjhll8AoDOnItNippsrKy2FRfHhLADgppEX6CBU8QoIeCqfj3zYU4mS-FGTFHu-XO9WayQYJpkV9ML8Sq16N04Ow7MD2iYPFkqcLgwzgDCWTPHz4",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/7IO3Pd6ffW7b",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/txVtn8O50s41",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/b57k1yIJ50eA",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/18667uACCMyF",
             "default": false,
             "source": "anoboy"
           }
