@@ -4176,19 +4176,11 @@
     "players": [
       {
         "server": "anoboy",
-        "label": "Anoboy Blogspot 720p",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwip-6PahUvR8PUR2favSewmIJfREn1wkKwyM-JocrqiOnktkcnHj435kiMyaKPBi9Dc7r2tLrWZhkgW6oGvUe98QM3PkfQFCzOrjfn31ljjmyqeoQSFXKps4u-Ai1KF3bkH6-p",
+        "label": "Anoboy Blogspot 360p",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwwGD-ag0FfcfqzEdAuUphjD8y81fvrnFy4-rDbnfoPLCk6hh534kT2HaT-Qpg9IY6BPCf_5UkV8QlpAFqn7FBJsDJ93JCqUpSUHV8Y4BAJ15pUL5X3iDNZ8wyHIoDlHJuYea2N",
         "default": true,
         "source": "anoboy",
         "no": 1
-      },
-      {
-        "server": "anoboy",
-        "label": "Anoboy Blogspot 360p",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwwGD-ag0FfcfqzEdAuUphjD8y81fvrnFy4-rDbnfoPLCk6hh534kT2HaT-Qpg9IY6BPCf_5UkV8QlpAFqn7FBJsDJ93JCqUpSUHV8Y4BAJ15pUL5X3iDNZ8wyHIoDlHJuYea2N",
-        "default": false,
-        "source": "anoboy",
-        "no": 2
       },
       {
         "server": "anoboy",
@@ -4196,7 +4188,7 @@
         "url": "https://www.yourupload.com/embed/47eVv36WI5UE",
         "default": false,
         "source": "anoboy",
-        "no": 3
+        "no": 2
       },
       {
         "server": "anoboy",
@@ -4204,7 +4196,7 @@
         "url": "https://www.yourupload.com/embed/1UGhlmrhfnyp",
         "default": false,
         "source": "anoboy",
-        "no": 4
+        "no": 3
       },
       {
         "server": "anoboy",
@@ -4212,7 +4204,7 @@
         "url": "https://www.yourupload.com/embed/M8iJxwGH0NT0",
         "default": false,
         "source": "anoboy",
-        "no": 5
+        "no": 4
       },
       {
         "server": "anoboy",
@@ -4220,7 +4212,7 @@
         "url": "https://www.yourupload.com/embed/VVy0FKXIbpRm",
         "default": false,
         "source": "anoboy",
-        "no": 6
+        "no": 5
       }
     ],
     "id": 41
