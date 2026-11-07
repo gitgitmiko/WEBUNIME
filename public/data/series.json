@@ -45,7 +45,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/-aL4lLzkqwCshSSbA7r_RQ",
+            "url": "https://videonode.de/iframe3/hydrax/PSbV_BsFLpJOkErLRLT30g",
             "default": false
           }
         ]
@@ -70,12 +70,11 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-aL4lLzkqwCshSSbA7r_RQ",
+        "url": "https://videonode.de/iframe3/hydrax/PSbV_BsFLpJOkErLRLT30g",
         "default": false
       }
     ],
-    "id": 679,
-    "is_new": true
+    "id": 679
   },
   {
     "type": "series",
@@ -84,8 +83,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-sunshine-through-rain-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -121,7 +120,37 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/BiyN2VwaIjqNEYvVhaopMQ",
+            "url": "https://videonode.de/iframe3/hydrax/J520HY05UUzV0bqPTUpjbQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Sunshine Through the Rain - Season 1 Episode 2 (2026)",
+        "slug": "sunshine-through-rain-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/sunshine-through-rain-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-1FFsMPMlahVlpeiQtGpQA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/dKl1okpTL0S_ThQwHCM3YQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/yVSQSQx7Pg_LR3qb5khVCg",
             "default": false
           }
         ]
@@ -132,26 +161,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BUsdunYbuK76B0aiOu4ByQ",
+        "url": "https://videonode.de/iframe3/p2p/-1FFsMPMlahVlpeiQtGpQA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/FALz4a5ez7foIzLIQJCD8A",
+        "url": "https://videonode.de/iframe3/cast/dKl1okpTL0S_ThQwHCM3YQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/BiyN2VwaIjqNEYvVhaopMQ",
+        "url": "https://videonode.de/iframe3/hydrax/yVSQSQx7Pg_LR3qb5khVCg",
         "default": false
       }
     ],
-    "id": 678,
-    "is_new": true
+    "id": 678
   },
   {
     "type": "series",
@@ -160,8 +188,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-setia-itu-mahal-2025-lk21.jpg",
     "rating": "0.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -201,6 +229,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Setia Itu Mahal - Season 1 Episode 2 (2025)",
+        "slug": "setia-itu-mahal-season-1-episode-2-2025",
+        "source": "https://tv.nontondrama.vip/setia-itu-mahal-season-1-episode-2-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/zyUkxdEK25Q36qF9HvEd2g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/417obwjc1mPbsJLgNAoPHw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/qlKebWv5tW-2nXKgHYExuA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -208,21 +266,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/H0sUR9o0VsJKQXL4TK6YUg",
+        "url": "https://videonode.de/iframe3/p2p/zyUkxdEK25Q36qF9HvEd2g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/w6DcT3qoDX5zeQw6KVj84g",
+        "url": "https://videonode.de/iframe3/cast/417obwjc1mPbsJLgNAoPHw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/rTkZgFN4l3oWr5dunsH9dA",
+        "url": "https://videonode.de/iframe3/hydrax/qlKebWv5tW-2nXKgHYExuA",
         "default": false
       }
     ],
@@ -271,7 +329,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/n5VPnmzIaXi47_-Xqwwx_w",
+            "url": "https://videonode.de/iframe3/hydrax/X2LNO-XDp7EntpP9Fm9q_w",
             "default": false
           }
         ]
@@ -296,7 +354,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/n5VPnmzIaXi47_-Xqwwx_w",
+        "url": "https://videonode.de/iframe3/hydrax/X2LNO-XDp7EntpP9Fm9q_w",
         "default": false
       }
     ],
@@ -345,7 +403,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/sYfKzGiQxTuJTGG454uTyg",
+            "url": "https://videonode.de/iframe3/hydrax/JFjksBqtXqdDrk6RuMcMZQ",
             "default": false
           }
         ]
@@ -370,7 +428,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/sYfKzGiQxTuJTGG454uTyg",
+        "url": "https://videonode.de/iframe3/hydrax/JFjksBqtXqdDrk6RuMcMZQ",
         "default": false
       }
     ],
@@ -32948,8 +33006,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-yaga-2026-lk21.jpg",
     "rating": "7.5",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -33052,6 +33110,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Yaga - Season 1 Episode 4 (2026)",
+        "slug": "yaga-season-1-episode-4-2026",
+        "source": "https://tv.nontondrama.vip/yaga-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/8A2d3p4SMKQQ0i4JdmRlBA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/pVbWlddwK9uasa7itNgAzQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/XpseuNyuW8DHmtSRRo_-6A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -33059,21 +33147,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/h-uNw2U2llQz06lnEG3mFw",
+        "url": "https://videonode.de/iframe3/p2p/8A2d3p4SMKQQ0i4JdmRlBA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/w8OC2D3fOITko7oM3AVAdg",
+        "url": "https://videonode.de/iframe3/cast/pVbWlddwK9uasa7itNgAzQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/VYox7w_HUFS8lpzym8F-Aw",
+        "url": "https://videonode.de/iframe3/hydrax/XpseuNyuW8DHmtSRRo_-6A",
         "default": false
       }
     ],
@@ -69668,8 +69756,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-private-eyes-west-coast-2026-lk21.jpg",
     "rating": "6.6",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -69830,6 +69918,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Private Eyes West Coast - Season 1 Episode 6 (2026)",
+        "slug": "private-eyes-west-coast-season-1-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/private-eyes-west-coast-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/PupWwIu1iOJUrJEuqUvXzg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kSWYpdAdhiG5_Dh37tsrvA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/-JzCSG3Fa7D30-dUrc9yzw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -69837,21 +69955,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ssSGn-YtXjqNIk0qRKGCMQ",
+        "url": "https://videonode.de/iframe3/p2p/PupWwIu1iOJUrJEuqUvXzg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iGEphIDOYuHoKECGuWuQPQ",
+        "url": "https://videonode.de/iframe3/cast/kSWYpdAdhiG5_Dh37tsrvA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/06xprMSh4IWtSOYJgGGr2Q",
+        "url": "https://videonode.de/iframe3/hydrax/-JzCSG3Fa7D30-dUrc9yzw",
         "default": false
       }
     ],
@@ -163518,8 +163636,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-cupertino-2026-lk21.jpg",
     "rating": "7.4",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -163648,6 +163766,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Cupertino - Season 1 Episode 5 (2026)",
+        "slug": "cupertino-season-1-episode-5-2026",
+        "source": "https://tv.nontondrama.vip/cupertino-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/TBNNigUQRtKNZ9K7aulZ-A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/LME4FzvHgVr4BLUl9-npBw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9AD6fcnPHYdoOVg9zvw2KQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -163655,21 +163803,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/XaP9nT2Oywu_Iz84C4w2YA",
+        "url": "https://videonode.de/iframe3/p2p/TBNNigUQRtKNZ9K7aulZ-A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/uwzo63qX9hnU4BIuIbU7Wg",
+        "url": "https://videonode.de/iframe3/cast/LME4FzvHgVr4BLUl9-npBw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-2l75AezGsf8twAPIHXqOA",
+        "url": "https://videonode.de/iframe3/hydrax/9AD6fcnPHYdoOVg9zvw2KQ",
         "default": false
       }
     ],
