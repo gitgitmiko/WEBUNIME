@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-tunnel-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -107,6 +107,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Tunnel - Season 1 Episode 4 (2019)",
+        "slug": "tunnel-season-1-episode-4-2019",
+        "source": "https://tv.nontondrama.vip/tunnel-season-1-episode-4-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/LQZYAO235ZOToYl9Qxb0BA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3mVecZcexlMXo-WHM17Eig",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/aYJ_HVA7a7ciTW53wEVrDw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -114,21 +144,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/LSeeHvlt1NAnPDL5bBZ83w",
+        "url": "https://videonode.de/iframe3/p2p/LQZYAO235ZOToYl9Qxb0BA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/jGQm-bQEfiaz6i3l0DO7Nw",
+        "url": "https://videonode.de/iframe3/cast/3mVecZcexlMXo-WHM17Eig",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ku8BBP2vnkrKCfBSsbaO9A",
+        "url": "https://videonode.de/iframe3/hydrax/aYJ_HVA7a7ciTW53wEVrDw",
         "default": false
       }
     ],
