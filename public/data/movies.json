@@ -1,5 +1,48 @@
 [
   {
+    "nama": "Candle in the Tomb: The Worm Valley",
+    "judul": "Candle in the Tomb: The Worm Valley (2023)",
+    "tahun": "2023",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-candle-tomb-worm-valley-2023-lk21.jpg",
+    "rating": "5.2",
+    "quality": "HD",
+    "durasi": "1j 32m",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Fantasy"
+    ],
+    "sinopsis": "Candle in the Tomb: The Worm Valley - Diadaptasi dari volume ke-3 dalam seri novel \"Candle in the Tomb\" karya Zhang Mu Ye. Terinfeksi oleh sebuah kutukan mematikan, Hu Bayi bersama dua sahabatnya, Wang Kaixuan dan Shiely Yang, memulai perjalanan berbahaya menuju makam Raja Xian untuk merebut Mutiara Haochen demi menyelamatkan nyawa mereka dari ancaman kutukan tersebut.\nBudget: USD 5,000,000\n\nSubtitle: workkeerr\n\nSutradara: Yilin Dai\n\nBintang Film: Yueming Pan, Vincent Zhang, Xue'er Hu, Liqun Luo\n\nNegara: China\n\nVotes: 137\n\nRelease: 23 Nov 2023\n\nUpdated: 07 Nov 2026 09:05:44",
+    "slug": "candle-tomb-worm-valley-2023",
+    "source": "https://tv12.lk21official.cc/candle-tomb-worm-valley-2023",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/JxRuup0E4rjAAnLixpToqg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/trEkLmDTJsvmi9pvbdWaPQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/5FkSsdDq72322dUiWU-fOg",
+        "default": false
+      }
+    ],
+    "id": 415,
+    "is_new": true
+  },
+  {
     "nama": "All Wishes Come True!",
     "judul": "All Wishes Come True! (2026)",
     "tahun": "2026",
@@ -39,8 +82,7 @@
         "default": false
       }
     ],
-    "id": 414,
-    "is_new": true
+    "id": 414
   },
   {
     "nama": "The Odyssey",
