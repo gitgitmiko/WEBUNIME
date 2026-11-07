@@ -88172,8 +88172,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-hell-home-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "7 eps · S.1",
-    "episodes_count": 7,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -88393,6 +88393,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "Hell Home - Season 1 Episode 8 (2026)",
+        "slug": "hell-home-season-1-episode-8-2026",
+        "source": "https://tv.nontondrama.vip/hell-home-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/IFiUqhBbH23iNOgwantbGQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/KfMP0RRTzWPSxfu1eTUB4Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/59z4Ff1aPuwceFg9AuVUAA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -88400,21 +88430,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BJun2QtZ_BhLfqV-FpbBQw",
+        "url": "https://videonode.de/iframe3/p2p/IFiUqhBbH23iNOgwantbGQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/2W43omsHTlUKUe-WDO_4mQ",
+        "url": "https://videonode.de/iframe3/cast/KfMP0RRTzWPSxfu1eTUB4Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/24yO7wDSqBN61BfA3dUj-g",
+        "url": "https://videonode.de/iframe3/hydrax/59z4Ff1aPuwceFg9AuVUAA",
         "default": false
       }
     ],
