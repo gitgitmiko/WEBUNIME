@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-tunnel-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -197,6 +197,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Tunnel - Season 1 Episode 7 (2019)",
+        "slug": "tunnel-season-1-episode-7-2019",
+        "source": "https://tv.nontondrama.vip/tunnel-season-1-episode-7-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/gaX30WKqTfd3QwzjLtpPzg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/akNCykQYiGBa05h4OhiutQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Blcb9q4N_lU7Q1qEIhVXSQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "Tunnel - Season 1 Episode 8 (2019)",
+        "slug": "tunnel-season-1-episode-8-2019",
+        "source": "https://tv.nontondrama.vip/tunnel-season-1-episode-8-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/tk4qiRq9ExBbEzPW8bR_KQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/8mb3sUxS3QMwm8qePRNeAw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/RTyfX5huPmH_UiSDLWWBWA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -204,21 +264,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Qo--uLyGcfgvkZogeye5-g",
+        "url": "https://videonode.de/iframe3/p2p/tk4qiRq9ExBbEzPW8bR_KQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/ZMJeTNR1py31zG65WHLf9w",
+        "url": "https://videonode.de/iframe3/cast/8mb3sUxS3QMwm8qePRNeAw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ZrMip6DQmcMqrNkGu8UGoQ",
+        "url": "https://videonode.de/iframe3/hydrax/RTyfX5huPmH_UiSDLWWBWA",
         "default": false
       }
     ],
