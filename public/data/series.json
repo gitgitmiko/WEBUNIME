@@ -1,13 +1,90 @@
 [
   {
     "type": "series",
+    "nama": "Stick",
+    "judul": "Stick (2025)",
+    "tahun": "2025",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-stick-2025-lk21.jpg",
+    "rating": "7.3",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Sport"
+    ],
+    "sinopsis": "Stick - Pryce Cahill dulunya berada di jalur emas menuju kesuksesan besar dalam dunia golf sebelum sebuah kegagalan mental di tengah lapangan menghancurkan kariernya. Kini, di tengah perjuangannya untuk bertahan hidup secara finansial, ia mempertaruhkan segalanya untuk menjadi mentor bagi Santi—seorang remaja fenomena dengan potensi luar biasa—dalam sebuah kesempatan terakhir untuk menyelamatkan karier sang remaja sekaligus menyelamatkan dirinya sendiri.\nAwards: 0 wins & 3 nominations\n\nBintang Film: Owen Wilson, Peter Dager, Lilli Kay, Mariana Trevino, Marc Maron\n\nNegara: United States\n\nVotes: 21.000",
+    "slug": "stick-2025",
+    "source": "https://tv.nontondrama.vip/stick-2025",
+    "list_source": "https://tv12.lk21official.cc/stick-2025",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Stick - Season 1 Episode 1 (2025)",
+        "slug": "stick-season-1-episode-1-2025",
+        "source": "https://tv.nontondrama.vip/stick-season-1-episode-1-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/WysXvy8s0mh8vUbK7JMh4Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/05v-vovtKNhpMz6Wc3oRTw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/R91OmvCiX5VV_ql2b-yT7A",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/WysXvy8s0mh8vUbK7JMh4Q",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/05v-vovtKNhpMz6Wc3oRTw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/R91OmvCiX5VV_ql2b-yT7A",
+        "default": false
+      }
+    ],
+    "id": 682,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "All's Fair",
     "judul": "All's Fair (2025)",
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/11/film-alls-fair-2025-lk21.jpg",
     "rating": "3.5",
-    "durasi": "1 eps · S.2",
-    "episodes_count": 10,
+    "durasi": "12 eps · S.2",
+    "episodes_count": 12,
     "seasons_count": 2,
     "genre": [
       "Drama"
@@ -375,7 +452,67 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/8hKvTyWmdMpm-9qPnKBn0Q",
+            "url": "https://videonode.de/iframe3/hydrax/KOJSWk8rAkBv1cAWcacseA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 2,
+        "title": "All's Fair - Season 2 Episode 2 (2025)",
+        "slug": "alls-fair-season-2-episode-2-2025",
+        "source": "https://tv.nontondrama.vip/alls-fair-season-2-episode-2-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/pEwrrAbDyACPYa3GYz6lwg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/cl4QAz1xYy3b25ZMcANhmg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/0m-NywYvlmvzM27efPROBg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
+        "episode": 3,
+        "title": "All's Fair - Season 2 Episode 3 (2025)",
+        "slug": "alls-fair-season-2-episode-3-2025",
+        "source": "https://tv.nontondrama.vip/alls-fair-season-2-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/eu_uF6LGKLnMf-9Vj3htOw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/CdPPhb7lpfT0AFCctnbG4g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/z6DMws6LvptvkGfIUve9kA",
             "default": false
           }
         ]
@@ -386,26 +523,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Wd4yldNCB1WY1NjMeN5iDw",
+        "url": "https://videonode.de/iframe3/p2p/eu_uF6LGKLnMf-9Vj3htOw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/QICC3YnhOzEsTVgSzhw6Pg",
+        "url": "https://videonode.de/iframe3/cast/CdPPhb7lpfT0AFCctnbG4g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/8hKvTyWmdMpm-9qPnKBn0Q",
+        "url": "https://videonode.de/iframe3/hydrax/z6DMws6LvptvkGfIUve9kA",
         "default": false
       }
     ],
-    "id": 681,
-    "is_new": true
+    "id": 681
   },
   {
     "type": "series",
@@ -32469,7 +32605,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/ml-S8o8vRd1peJ9ZXLJXiQ",
+            "url": "https://videonode.de/iframe3/hydrax/jQUHlxiLNkM06hO9MuiWRg",
             "default": false
           }
         ]
@@ -32494,7 +32630,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ml-S8o8vRd1peJ9ZXLJXiQ",
+        "url": "https://videonode.de/iframe3/hydrax/jQUHlxiLNkM06hO9MuiWRg",
         "default": false
       }
     ],
@@ -76325,7 +76461,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/QNnbRYVLEGOuxLmYouU-TQ",
+            "url": "https://videonode.de/iframe3/hydrax/DDBe8xK31GbCnDsv7L5xag",
             "default": false
           }
         ]
@@ -76350,7 +76486,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/QNnbRYVLEGOuxLmYouU-TQ",
+        "url": "https://videonode.de/iframe3/hydrax/DDBe8xK31GbCnDsv7L5xag",
         "default": false
       }
     ],
@@ -89951,7 +90087,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/FI4Nh9v7eqHdzd-1n0P3iQ",
+            "url": "https://videonode.de/iframe3/hydrax/l3i7yUo2gMTG1pkPBbOnTg",
             "default": false
           }
         ]
@@ -89976,7 +90112,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/FI4Nh9v7eqHdzd-1n0P3iQ",
+        "url": "https://videonode.de/iframe3/hydrax/l3i7yUo2gMTG1pkPBbOnTg",
         "default": false
       }
     ],
@@ -166331,7 +166467,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/BwoJyGiR_TXqmD3dAIFTXQ",
+            "url": "https://videonode.de/iframe3/hydrax/eHwaDDaLclChmOg2iqiBmg",
             "default": false
           }
         ]
@@ -166356,7 +166492,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/BwoJyGiR_TXqmD3dAIFTXQ",
+        "url": "https://videonode.de/iframe3/hydrax/eHwaDDaLclChmOg2iqiBmg",
         "default": false
       }
     ],
@@ -194425,7 +194561,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/WDCQEzr6WfrnEoDfpOrZ3Q",
+            "url": "https://videonode.de/iframe3/hydrax/wL3XU87TIlsmC9HEgm2cXg",
             "default": false
           }
         ]
@@ -194455,7 +194591,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/Mrb_tpOZiIK4mkSEVkdzjA",
+            "url": "https://videonode.de/iframe3/hydrax/H_ga4Hzk7m3vr1ewWwlitQ",
             "default": false
           }
         ]
@@ -194485,7 +194621,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/gLD6wZ8tehtHkrMhaGCAYA",
+            "url": "https://videonode.de/iframe3/hydrax/-b9m3ZNhfdhBNUPt0pWIIw",
             "default": false
           }
         ]
@@ -194510,7 +194646,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/gLD6wZ8tehtHkrMhaGCAYA",
+        "url": "https://videonode.de/iframe3/hydrax/-b9m3ZNhfdhBNUPt0pWIIw",
         "default": false
       }
     ],
@@ -196804,7 +196940,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/fufiQ3E3dpfkaxYFV_AQag",
+            "url": "https://videonode.de/iframe3/hydrax/J3kTDdqUDlsENPeW-chbYw",
             "default": false
           }
         ]
@@ -196829,7 +196965,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/fufiQ3E3dpfkaxYFV_AQag",
+        "url": "https://videonode.de/iframe3/hydrax/J3kTDdqUDlsENPeW-chbYw",
         "default": false
       }
     ],
