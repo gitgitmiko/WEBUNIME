@@ -15047,8 +15047,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Tempat%20Item%20no%20Chikara.jpg",
     "rating": "7.4",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Fantasy"
@@ -15228,6 +15228,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/0i30r21447M8",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Tempal: Item no Chikara Episode 7",
+        "slug": "tempal-item-no-chikara-episode-7",
+        "source": "https://anoboy.at/2026/11/tempal-item-no-chikara-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxDZ9NO_LjaqNeuHuyrhr6T8UMpZOj6p0yqzizt3gDJ8F90wQk1ids5MRKjr38mFw24pxWONTKcyRFzNKslg0gMx3PI3P7nx_aLzKXcj6QJ4LZ7Bz4Y6PXWC67QVVizz9PtvzM",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwdUc6jtUztC1hJ_9GLEOz27CsKoUy7wPrvqGEnYNbgQ83LciJXRwHiAcKHQutaKKwwQx-KlCDsbKdb33ykwex4XAL-NrHtfuhgvq7XdQMWQJNrmmKfYs99CUsJ6PmJP01XnRs",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/VH2p6WDgnpLU",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/4v3oyM6fo45C",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/45lMCvs2p02C",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/k6273B0EbHm6",
             "default": false,
             "source": "anoboy"
           }
