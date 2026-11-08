@@ -195095,8 +195095,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-100-days-lies-2026-lk21.jpg",
     "rating": "9.3",
-    "durasi": "8 eps · S.1",
-    "episodes_count": 8,
+    "durasi": "9 eps · S.1",
+    "episodes_count": 9,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -195350,6 +195350,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "100 Days of Lies - Season 1 Episode 9 (2026)",
+        "slug": "100-days-lies-season-1-episode-9-2026",
+        "source": "https://tv.nontondrama.vip/100-days-lies-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/HXNVQlffSRYTZg3vRxhKSQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jXqPyWaQGhqKtcKiK5v0eA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/o3jqmd2HK4dmfiTrvfyDDA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -195357,21 +195387,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/4WDHt3wPsFzg2s9Iw4PcFw",
+        "url": "https://videonode.de/iframe3/p2p/HXNVQlffSRYTZg3vRxhKSQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/i1D7mbTJgvnuIyAoTcZhYw",
+        "url": "https://videonode.de/iframe3/cast/jXqPyWaQGhqKtcKiK5v0eA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ygrlyY2AJBZkerb5Hhs4yA",
+        "url": "https://videonode.de/iframe3/hydrax/o3jqmd2HK4dmfiTrvfyDDA",
         "default": false
       }
     ],
