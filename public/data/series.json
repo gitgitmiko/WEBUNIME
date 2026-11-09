@@ -166573,8 +166573,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-treasure-island-2026-lk21.jpg",
     "rating": "8.5",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Adventure",
@@ -166697,6 +166697,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Treasure Island - Season 1 Episode 5 (2026)",
+        "slug": "treasure-island-season-1-episode-5-2026",
+        "source": "https://tv.nontondrama.vip/treasure-island-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/L4jVhqcbeavPULE_6ZA2HA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/2Ewa5p4OA-BzQy18PGE-4g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/nhEmoOl5DOUtj7RMrk6CKw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -166704,21 +166734,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/eBYt42CVmJqryVwpkmLz5g",
+        "url": "https://videonode.de/iframe3/p2p/L4jVhqcbeavPULE_6ZA2HA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/jfGUUfP_S94SDXIq6jt0Nw",
+        "url": "https://videonode.de/iframe3/cast/2Ewa5p4OA-BzQy18PGE-4g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Cs4edkJoZVubfPjd-bA6DA",
+        "url": "https://videonode.de/iframe3/hydrax/nhEmoOl5DOUtj7RMrk6CKw",
         "default": false
       }
     ],
