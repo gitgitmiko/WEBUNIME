@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-greatest-2026-lk21.jpg",
     "rating": "7.5",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Biography",
@@ -198,6 +198,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "The Greatest - Season 1 Episode 7 (2026)",
+        "slug": "greatest-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/greatest-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wT3y0WvpxOAvQeVUtTUpYw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/2YxUEsyHGdI2zWhnUOCsgQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/A5eWDjtaflsDtw9obKjRUQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "The Greatest - Season 1 Episode 8 (2026)",
+        "slug": "greatest-season-1-episode-8-2026",
+        "source": "https://tv.nontondrama.vip/greatest-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-7mXGXrH1Mo-hUUtJdvkXA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/pqoZo8EwSNQFRjP64Mg7yg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/fM229wv65AKWi7u_1H9BUA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -205,21 +265,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/oVZoaerlyfue-xYXsdnOJA",
+        "url": "https://videonode.de/iframe3/p2p/-7mXGXrH1Mo-hUUtJdvkXA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/46WMU9obIx-lKTd1fFon1A",
+        "url": "https://videonode.de/iframe3/cast/pqoZo8EwSNQFRjP64Mg7yg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/rdmet2fRxEJqo6hizrEUIA",
+        "url": "https://videonode.de/iframe3/hydrax/fM229wv65AKWi7u_1H9BUA",
         "default": false
       }
     ],
