@@ -3560,8 +3560,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-10-300x170.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "5 eps",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [],
     "sinopsis": "Anime Tsuihou sareta Cheat Fuyo Majutsushi.",
     "related": [],
@@ -3771,17 +3771,72 @@
             "nume": "1"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Tsuihou sareta Cheat Fuyo Majutsushi Episode 6",
+        "slug": "tsuihou-sareta-cheat-fuyo-majutsushi-episode-6",
+        "source": "https://v2.samehadaku.how/tsuihou-sareta-cheat-fuyo-majutsushi-episode-6/",
+        "date": "",
+        "released_at": "2026-11-10T18:01:58.661Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/IccH0I5Xfo",
+            "default": true,
+            "post": "55244",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/4dIGURwB#crTQRPvOBNYlY4myXiZ-t-CW54DgC5e08oEaMwonLxI",
+            "default": false,
+            "post": "55244",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/1ZQ1GBBB#W-yvqJIrxzroaz6kQT9F84A0VUDshfLzAy3-YsDOmzs",
+            "default": false,
+            "post": "55244",
+            "nume": "3"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/IccH0I5Xfo",
+        "default": true,
+        "post": "55244",
+        "nume": "1"
+      },
+      {
+        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/REhmkYKL#h4SE31c5vzdpLpJKmvZFScltB9Jfe3eAjSeWTAkEvLU",
-        "default": true,
-        "post": "55119",
-        "nume": "1"
+        "url": "https://mega.nz/embed/4dIGURwB#crTQRPvOBNYlY4myXiZ-t-CW54DgC5e08oEaMwonLxI",
+        "default": false,
+        "post": "55244",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/1ZQ1GBBB#W-yvqJIrxzroaz6kQT9F84A0VUDshfLzAy3-YsDOmzs",
+        "default": false,
+        "post": "55244",
+        "nume": "3"
       }
     ],
     "id": 12
