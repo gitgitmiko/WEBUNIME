@@ -80872,8 +80872,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-iroha-no-koi-wa-jidai-o-kakeru-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -80972,6 +80972,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Iroha no Koi wa Jidai o Kakeru - Season 1 Episode 4 (2026)",
+        "slug": "iroha-no-koi-wa-jidai-o-kakeru-season-1-episode-4-2026",
+        "source": "https://tv.nontondrama.vip/iroha-no-koi-wa-jidai-o-kakeru-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/72T3NSW2MFkWNwS1q1jWyQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/m0IJU-IZY4y2RxGrE8F-Vw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/yCpm3uxU-qX0N-gxc4N5Xw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -80979,21 +81009,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/luuJtvZwUf9Ye72YIwdvHQ",
+        "url": "https://videonode.de/iframe3/p2p/72T3NSW2MFkWNwS1q1jWyQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/eZ5Tz3K0BRP_GU_qUjDHpA",
+        "url": "https://videonode.de/iframe3/cast/m0IJU-IZY4y2RxGrE8F-Vw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/SwEdtiV-clrcu8gDo-HLtA",
+        "url": "https://videonode.de/iframe3/hydrax/yCpm3uxU-qX0N-gxc4N5Xw",
         "default": false
       }
     ],
