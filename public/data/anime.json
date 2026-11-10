@@ -3850,8 +3850,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Chitose-C2-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "4 eps",
-    "episodes_count": 4,
+    "durasi": "5 eps",
+    "episodes_count": 5,
     "genre": [],
     "sinopsis": "Anime Chitose-kun wa Ramune Bin no Naka Cour 2.",
     "related": [],
@@ -4022,15 +4022,108 @@
             "default": true
           }
         ]
+      },
+      {
+        "episode": 5,
+        "title": "Chitose-kun wa Ramune Bin no Naka Cour 2 Episode 5",
+        "slug": "chitose-kun-wa-ramune-bin-no-naka-cour-2-episode-5",
+        "source": "https://v2.samehadaku.how/chitose-kun-wa-ramune-bin-no-naka-cour-2-episode-5/",
+        "date": "",
+        "released_at": "2026-11-10T20:31:59.157Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dynHiqsYb49v2JpfObxNBmslPOHuFyE02IGFRw6FKjaPJOiGafYUqP79d8JyomFsxsRmDC3TxHtvse9AXnCwCavDtjw7KKKf6VbqAVvanHbzETDCGz3G2tL7UbYq91b-cJZ_4gS&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55251",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/hJMhR8vo1m",
+            "default": false,
+            "post": "55251",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/3hBwGDxQ#dJo4Aja95ldt0pDJfv9vh6JG7nFrlOsaMNmguMe2Ng0",
+            "default": false,
+            "post": "55251",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/CwomgDQY#y2fhp0jui4gqr8zAy2ts-IArZYyXMXgUlMtTVdVnZkw",
+            "default": false,
+            "post": "55251",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/TxgzDJCC#bGdIWquBkCWz9VYdcD_mAyC_0TXt4NRJKDSQSDhyMPc",
+            "default": false,
+            "post": "55251",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "default",
-        "label": "Default",
-        "url": "https://www.blogger.com/video.g?token=",
-        "default": true
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dynHiqsYb49v2JpfObxNBmslPOHuFyE02IGFRw6FKjaPJOiGafYUqP79d8JyomFsxsRmDC3TxHtvse9AXnCwCavDtjw7KKKf6VbqAVvanHbzETDCGz3G2tL7UbYq91b-cJZ_4gS&origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "55251",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/hJMhR8vo1m",
+        "default": false,
+        "post": "55251",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/3hBwGDxQ#dJo4Aja95ldt0pDJfv9vh6JG7nFrlOsaMNmguMe2Ng0",
+        "default": false,
+        "post": "55251",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/CwomgDQY#y2fhp0jui4gqr8zAy2ts-IArZYyXMXgUlMtTVdVnZkw",
+        "default": false,
+        "post": "55251",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/TxgzDJCC#bGdIWquBkCWz9VYdcD_mAyC_0TXt4NRJKDSQSDhyMPc",
+        "default": false,
+        "post": "55251",
+        "nume": "5"
       }
     ],
     "id": 13
