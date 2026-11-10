@@ -34030,8 +34030,8 @@
     "tahun": "2021",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2021/11/film-lupin-2021-lk21-d21.jpg",
     "rating": "7.5",
-    "durasi": "22 eps · S.4",
-    "episodes_count": 22,
+    "durasi": "24 eps · S.4",
+    "episodes_count": 24,
     "seasons_count": 3,
     "genre": [
       "Drama",
@@ -34772,6 +34772,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 4,
+        "episode": 5,
+        "title": "Lupin - Season 4 Episode 5 (2021)",
+        "slug": "lupin-season-4-episode-5-2021",
+        "source": "https://tv.nontondrama.vip/lupin-season-4-episode-5-2021",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/DOwC6p55PAoYwFZQ4j8LYA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/p3CUvCTCyJxJPwBxLgG6Qw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/DDmfGji6uX1-HebHXfcsrQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 4,
+        "episode": 6,
+        "title": "Lupin - Season 4 Episode 6 (2021)",
+        "slug": "lupin-season-4-episode-6-2021",
+        "source": "https://tv.nontondrama.vip/lupin-season-4-episode-6-2021",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nFizD_0YmE_XRfdKNQhltA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/NIzQrLI1FcRE052DwypP4A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/uid7W0bdIeBxQqvZ2KfE2g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -34779,21 +34839,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/HCsESuG6PM8VNJsX78cPAQ",
+        "url": "https://videonode.de/iframe3/p2p/nFizD_0YmE_XRfdKNQhltA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/w1DNLnpUw84xqWuvmHq4rg",
+        "url": "https://videonode.de/iframe3/cast/NIzQrLI1FcRE052DwypP4A",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/W53jncQ_0Wix0ryjo_NH7w",
+        "url": "https://videonode.de/iframe3/hydrax/uid7W0bdIeBxQqvZ2KfE2g",
         "default": false
       }
     ],
