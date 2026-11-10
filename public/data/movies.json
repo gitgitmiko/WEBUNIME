@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Magical Secret Tour",
+    "judul": "Magical Secret Tour (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-magical-secret-tour-2026-lk21.jpg",
+    "rating": "6.5",
+    "quality": "HD",
+    "durasi": "1j 56m",
+    "genre": [
+      "Drama",
+      "Crime"
+    ],
+    "sinopsis": "Magical Secret Tour - Tiga wanita yang tampak tidak memiliki keterkaitan dengan dunia kejahatan tiba-tiba saling bersilangan jalurnya: seorang ibu beranak dua yang mendadak mengetahui penggelapan dana dan lilitan utang besar suaminya; seorang peneliti yang terlilit utang; serta seorang wanita hamil tanpa tabungan yang belum menikah. Bersama-sama, mereka terseret ke dalam petualangan kriminal yang tak terduga.\n\nSubtitle: workkeerr\n\nSutradara: Chihiro Amano\n\nBintang Film: Stefanie Akashi, Yuzu Aoki, Kasumi Arimura, Haru Kuroki, Sara Minami\n\nNegara: Japan\n\nVotes: 27\n\nRelease: 19 Jun 2026\n\nUpdated: 10 Nov 2026 05:59:41",
+    "slug": "magical-secret-tour-2026",
+    "source": "https://tv12.lk21official.cc/magical-secret-tour-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/DhG0iauUkg5BhzInGLsU7g",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/2rzg8Gdg56uhceynvIVprQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/HlKuoIMpZR7rOUEhm6Ms0g",
+        "default": false
+      }
+    ],
+    "id": 424,
+    "is_new": true
+  },
+  {
     "nama": "Don't Let the Sun",
     "judul": "Don't Let the Sun (2025)",
     "tahun": "2025",
@@ -37,8 +78,7 @@
         "default": false
       }
     ],
-    "id": 422,
-    "is_new": true
+    "id": 422
   },
   {
     "nama": "The Good Lawyer",
@@ -77,8 +117,7 @@
         "default": false
       }
     ],
-    "id": 423,
-    "is_new": true
+    "id": 423
   },
   {
     "nama": "Anti Drug Operations",
