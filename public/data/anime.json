@@ -9420,7 +9420,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Magic%20Knight%20Rayearth%20(2026).jpg",
     "rating": "7.3",
     "votes": "",
-    "durasi": "6 eps",
+    "durasi": "23 Menit",
     "episodes_count": 6,
     "genre": [
       "Adventure",
@@ -9668,6 +9668,14 @@
             "url": "https://www.yourupload.com/embed/RId2j8LcN5rw",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwmGe_0UUVGiihPwUG-bINl1wxZKLgncWVV-9XA1wfFA_CcqqhpGzLaT-Gv9oVF6bqM5AvFTQ9Rbl47zmJspHHb6WvY-Tdq_zhMTMU2E_WleOh_TekImmEm4v556bFKm5bZkmg",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -9703,8 +9711,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Juuou%20Mujin%20Dandivine.jpg",
     "rating": "5.6",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Mecha"
     ],
@@ -9898,6 +9906,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/QCTOJh32x83i",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 6,
+        "title": "Juuou Mujin Dandivine Episode 6",
+        "slug": "juuou-mujin-dandivine-episode-6",
+        "source": "https://anoboy.at/2026/11/juuou-mujin-dandivine-episode-6/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwBc7YiV-HUtjFXZ328QPFxPyXw4JZYV3MzrSTyZT37_kP70K6POCrAtTzN5-EroTG5pi9UZTdSdKHTpIyBEW1lyTs2duEZMFwWioRl2k0enFhMb3a4dk31gowOdMk5Baa_BA",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzAM3VmaIlDy4UzRUyeQQTLbm-BMc8GIyVJvqLFja8IKYV4BrMlu337-vEcoKrBpBXBLif2whqva7mB0zvPmhUW7wYSrZE3tyUD7_iGFO58dtiif-PQSRRIEfQ7iDO2pXq1hYxg",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/xx8coT6saMVE",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/gRbPC0UlNcC3",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/YIX7H6iWY3s1",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/yWv4yCT3M1MI",
             "default": false,
             "source": "anoboy"
           }
@@ -15194,7 +15259,7 @@
     "thumbnail": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhs6CwALNK9yVy-adpVIBQxQkAtIfQ2eng68grAT9SEMM_IsL_KjqVLV5kFqdwoF6MUXkwH906Knti9sqfCShYvuXjnBGUTAvc_kwJGWTNamK7bZeMQ4tzeeS_KdGx_jRHtrySOIMK5lCAoIWZd9OApjDMpLdPWPOs-nB5mAbFqgBVp2RQ0381ace9osaK1/s0/88778.gif",
     "rating": "7.52",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "24 Menit",
     "episodes_count": 8,
     "genre": [
       "Action",
@@ -15629,8 +15694,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shin-Tennis-no-Oujisama-Kesshou-Member-Ketteisen.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "School",
       "Shounen",
@@ -15917,53 +15982,54 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Shin Tennis no Oujisama: U-17 World Cup – Kesshou Member Ketteisen Episode 7",
+        "slug": "shin-tennis-no-oujisama-u-17-world-cup-kesshou-member-ketteisen-episode-7",
+        "source": "https://v2.samehadaku.how/shin-tennis-no-oujisama-kesshou-member-ketteisen-episode-7/",
+        "date": "",
+        "released_at": "2026-11-11T18:00:22.626Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/FdNjQJgS#jGdQd2-byOJY2-xkUKSnC3BoXnbOzXHAGaQOOqSPnKc",
+            "default": true,
+            "post": "55266",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/dUEiDYDC#wyM2zJ_9kYzyvb2FYsEgXKc3gQfealjZQTVWupeAyRY",
+            "default": false,
+            "post": "55266",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dw8BqWROVtnzGRo7vOuDNnGECTXoVP5vYHfjFNl25cNT9w8nVXRgGa3-qynGWvCx79fyRUFlKi_k9xyvrC9pHZ2VXIonEAlye_aVJ3ktKMzbAgVdgVmTVUiCncNcBrfKF8Fh6xx",
-        "default": true,
-        "post": "55141",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/PPRtzafs75",
-        "default": false,
-        "post": "55141",
-        "nume": "2"
-      },
-      {
-        "no": 3,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/pItj0STZ#aOqRtBcAGldsprMpsCTPtWKUOqLkl0MZsVrMa5JQUBk",
-        "default": false,
-        "post": "55141",
+        "url": "https://mega.nz/embed/FdNjQJgS#jGdQd2-byOJY2-xkUKSnC3BoXnbOzXHAGaQOOqSPnKc",
+        "default": true,
+        "post": "55266",
         "nume": "3"
       },
       {
-        "no": 4,
+        "no": 2,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/YEEAnIIY#0Ar74dT9ZBa7YsMVzJp5Wa-s3naAizUJszSp8QQGF0U",
+        "url": "https://mega.nz/embed/dUEiDYDC#wyM2zJ_9kYzyvb2FYsEgXKc3gQfealjZQTVWupeAyRY",
         "default": false,
-        "post": "55141",
+        "post": "55266",
         "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/8ZVDEapZ#aTK5XoH-XK0cAsC3VlmM982zfWAcMxMBRD_Afc2RC8w",
-        "default": false,
-        "post": "55141",
-        "nume": "5"
       }
     ],
     "id": 54
