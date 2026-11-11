@@ -458,7 +458,7 @@
     "rating": "7.8",
     "votes": null,
     "durasi": "24 Menit",
-    "episodes_count": 5,
+    "episodes_count": 6,
     "genre": [
       "Mystery",
       "Comedy",
@@ -764,17 +764,80 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Tantei wa Mou, Shindeiru S2 Episode 6",
+        "slug": "tantei-wa-mou-shindeiru-s2-episode-6",
+        "source": "https://v2.samehadaku.how/tantei-wa-mou-shindeiru-s2-episode-6/",
+        "date": "",
+        "released_at": "2026-11-11T15:00:25.795Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "default",
+            "label": "Default",
+            "url": "https://www.blogger.com/video.g?token=",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxaBi-j9InH-vvHRJ7OPrGKJHYbTCmH378nRf1gtisjiNOvPlw9Cve32U833MSQPrsG1e7mDprEdcrCf-29BMrJ1N_X3D9tnr0SyEj8c9-zGeTSRqajeKw_AaGiCNXwXBoFwVTQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxnqoOM-N34iF-opJpsJJxXEvSGVwbXY02rC9mM94IgA2c2bk4KixBzPswnpdtF2yDloTYzMyaL5ZZMBXsaR86iJJImtsBxxvJErC3tDYKSh4Qts49NkmvIViocvBTlBdYFyMw",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/0fXEqpWuWOFn",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/mX517g7HGyq6",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/F3yQDL55265t",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/nU8h530ckTEs",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/ykpFhKTK#smmkSIGJqvJhz3ZC6GbdFiagk05W2JFlyaPXNT7Ee5I",
-        "default": true,
-        "post": "55132",
-        "nume": "4"
+        "server": "default",
+        "label": "Default",
+        "url": "https://www.blogger.com/video.g?token=",
+        "default": true
       }
     ],
     "id": 3,
@@ -790,7 +853,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Sasaki-to-Pii-chan-Season-2-Episode-1-300x169.jpg",
     "rating": "7.3",
     "votes": null,
-    "durasi": "6 eps",
+    "durasi": "24 Menit",
     "episodes_count": 6,
     "genre": [
       "Adventure",
@@ -8973,7 +9036,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Sekai%20Saikyou%20no%20Majo,%20Hajimemashita.jpg",
     "rating": "6.8",
     "votes": "",
-    "durasi": "6 eps",
+    "durasi": "23 Menit",
     "episodes_count": 6,
     "genre": [
       "Adventure",
