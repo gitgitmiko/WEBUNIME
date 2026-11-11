@@ -1,6 +1,83 @@
 [
   {
     "type": "series",
+    "nama": "Under Siege",
+    "judul": "Under Siege (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-under-siege-2026-lk21.jpg",
+    "rating": "6.3",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "History",
+      "Thriller"
+    ],
+    "sinopsis": "Under Siege - Berlatar pada November 1985, kelompok bersenjata M-19 menyerbu Istana Keadilan di Bogota, memicu gelombang kekerasan yang mengubah sejarah Kolombia selamanya. Di tengah terjangan peluru, para sandera yang putus asa, tentara yang tak kenal ampun, serta gerakan gerilya yang siap mempertaruhkan segalanya, nasib bangsa berada di ujung tanduk.\n\nBintang Film: Juan Esteban Quintero, Juan Carlos Ortega, Nicole Santamaria, Natalia Reyes, Carlos-Manuel Vesga\n\nNegara: Colombia\n\nVotes: 132",
+    "slug": "under-siege-2026",
+    "source": "https://tv.nontondrama.vip/under-siege-2026",
+    "list_source": "https://tv12.lk21official.cc/under-siege-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Under Siege - Season 1 Episode 1 (2026)",
+        "slug": "under-siege-season-1-episode-1-2026",
+        "source": "https://tv.nontondrama.vip/under-siege-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Al_kkPBfINPEoAZe3lU6EQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/kSC345CUvtUrZaYHsL5G4Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/JB_sbWr-Lol6o721e4TbDg",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Al_kkPBfINPEoAZe3lU6EQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/kSC345CUvtUrZaYHsL5G4Q",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/JB_sbWr-Lol6o721e4TbDg",
+        "default": false
+      }
+    ],
+    "id": 690,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "The Institute",
     "judul": "The Institute (2025)",
     "tahun": "2025",
@@ -333,7 +410,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/RAETd-_8oY9bCa9dfr2gSA",
+            "url": "https://videonode.de/iframe3/hydrax/wMHpfusNX4wylJiK9U1fMA",
             "default": false
           }
         ]
@@ -358,12 +435,11 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/RAETd-_8oY9bCa9dfr2gSA",
+        "url": "https://videonode.de/iframe3/hydrax/wMHpfusNX4wylJiK9U1fMA",
         "default": false
       }
     ],
-    "id": 689,
-    "is_new": true
+    "id": 689
   },
   {
     "type": "series",
@@ -408,7 +484,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/gp7as0wFdzfoXSuvoUPrpQ",
+            "url": "https://videonode.de/iframe3/hydrax/K_9Bcc9SahfwK3PtDhEyGA",
             "default": false
           }
         ]
@@ -433,7 +509,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/gp7as0wFdzfoXSuvoUPrpQ",
+        "url": "https://videonode.de/iframe3/hydrax/K_9Bcc9SahfwK3PtDhEyGA",
         "default": false
       }
     ],
@@ -5286,7 +5362,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/AYTEyEMYTWx_8JarhMTEyw",
+            "url": "https://videonode.de/iframe3/hydrax/dJD8SWRAhA5llVLje1W-Uw",
             "default": false
           }
         ]
@@ -5311,7 +5387,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/AYTEyEMYTWx_8JarhMTEyw",
+        "url": "https://videonode.de/iframe3/hydrax/dJD8SWRAhA5llVLje1W-Uw",
         "default": false
       }
     ],
@@ -10298,7 +10374,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/BtCamYSbXCMsTjjyqwU-FA",
+            "url": "https://videonode.de/iframe3/hydrax/WJjc-tzsJGXEyiZXr8GyMg",
             "default": false
           }
         ]
@@ -10323,7 +10399,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/BtCamYSbXCMsTjjyqwU-FA",
+        "url": "https://videonode.de/iframe3/hydrax/WJjc-tzsJGXEyiZXr8GyMg",
         "default": false
       }
     ],
@@ -25350,7 +25426,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/ZRv8dPrBq9KKIYsnQsWQ-A",
+            "url": "https://videonode.de/iframe3/hydrax/ctOtKPZ-P-ZX22MOl-9XmQ",
             "default": false
           }
         ]
@@ -25375,7 +25451,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ZRv8dPrBq9KKIYsnQsWQ-A",
+        "url": "https://videonode.de/iframe3/hydrax/ctOtKPZ-P-ZX22MOl-9XmQ",
         "default": false
       }
     ],
@@ -31446,7 +31522,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/lR04jte1cMc4qOQiy-Pu8A",
+            "url": "https://videonode.de/iframe3/hydrax/GgjfyfsNHXpNG3TgslOffA",
             "default": false
           }
         ]
@@ -31471,7 +31547,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/lR04jte1cMc4qOQiy-Pu8A",
+        "url": "https://videonode.de/iframe3/hydrax/GgjfyfsNHXpNG3TgslOffA",
         "default": false
       }
     ],
@@ -75549,7 +75625,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/5xtUakU0swjxQ5YJX1FU8Q",
+            "url": "https://videonode.de/iframe3/hydrax/c6h4Xo4hSQ5Hhwrb2tI4BA",
             "default": false
           }
         ]
@@ -75574,7 +75650,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5xtUakU0swjxQ5YJX1FU8Q",
+        "url": "https://videonode.de/iframe3/hydrax/c6h4Xo4hSQ5Hhwrb2tI4BA",
         "default": false
       }
     ],
@@ -86111,7 +86187,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/n24O22UZZijbdNHJ5bC20A",
+            "url": "https://videonode.de/iframe3/hydrax/MqfA7PRrvmZ-JDwtte-JSQ",
             "default": false
           }
         ]
@@ -86141,7 +86217,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/dZAevAV2D3JwOpYCoaiYlA",
+            "url": "https://videonode.de/iframe3/hydrax/IOZ1WjFdWY08M94YfRZ-QA",
             "default": false
           }
         ]
@@ -86166,7 +86242,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/dZAevAV2D3JwOpYCoaiYlA",
+        "url": "https://videonode.de/iframe3/hydrax/IOZ1WjFdWY08M94YfRZ-QA",
         "default": false
       }
     ],
@@ -165319,7 +165395,7 @@
             "no": 3,
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
-            "url": "https://videonode.de/iframe3/hydrax/ZIG7LCpsNJFFGk9DLHSRYg",
+            "url": "https://videonode.de/iframe3/hydrax/hChoeJt2JdaA6702BfAlXg",
             "default": false
           }
         ]
@@ -165344,7 +165420,7 @@
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ZIG7LCpsNJFFGk9DLHSRYg",
+        "url": "https://videonode.de/iframe3/hydrax/hChoeJt2JdaA6702BfAlXg",
         "default": false
       }
     ],
