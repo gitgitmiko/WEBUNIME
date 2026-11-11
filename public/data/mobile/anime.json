@@ -236,8 +236,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-2-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "5 eps",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [],
     "sinopsis": "Anime Sekai Saikyou no Majo.",
     "related": [],
@@ -436,15 +436,108 @@
             "default": true
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Sekai Saikyou no Majo Episode 6",
+        "slug": "sekai-saikyou-no-majo-episode-6",
+        "source": "https://v2.samehadaku.how/sekai-saikyou-no-majo-episode-6/",
+        "date": "",
+        "released_at": "2026-11-11T15:30:35.871Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy4tkR4Fqp-4CrEKNTLhbpvtZO-EgHVQX6dFH4wQMPhkT51DqGbwu6FZn2lSWimmltwPhK_FsiqCUu2wiSKrrg_NyenklpcEiXDiOaL0GrN2gL0sYdhULcdD8FlxP74ZuA7gSwC&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55254",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/Xn1sUU2g0Z",
+            "default": false,
+            "post": "55254",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/zhZQlQQS#15zlHu2KBUVU53qXP7ii2tswDTwx9qpeRC6FBhq2xXU",
+            "default": false,
+            "post": "55254",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/flgyDQBT#Fc1l90tzmTe0Ro17o1cKkwLav1yOYF3tNxjq4nuuSao",
+            "default": false,
+            "post": "55254",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/uxpGHTrC#w4fyIsFnzG06OzzBqrp8FqHDQ37QYzPSmUjY9lE2z2U",
+            "default": false,
+            "post": "55254",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "default",
-        "label": "Default",
-        "url": "https://www.blogger.com/video.g?token=",
-        "default": true
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dy4tkR4Fqp-4CrEKNTLhbpvtZO-EgHVQX6dFH4wQMPhkT51DqGbwu6FZn2lSWimmltwPhK_FsiqCUu2wiSKrrg_NyenklpcEiXDiOaL0GrN2gL0sYdhULcdD8FlxP74ZuA7gSwC&origin=sameguru2.blogspot.com",
+        "default": true,
+        "post": "55254",
+        "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/Xn1sUU2g0Z",
+        "default": false,
+        "post": "55254",
+        "nume": "2"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/zhZQlQQS#15zlHu2KBUVU53qXP7ii2tswDTwx9qpeRC6FBhq2xXU",
+        "default": false,
+        "post": "55254",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/flgyDQBT#Fc1l90tzmTe0Ro17o1cKkwLav1yOYF3tNxjq4nuuSao",
+        "default": false,
+        "post": "55254",
+        "nume": "4"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/uxpGHTrC#w4fyIsFnzG06OzzBqrp8FqHDQ37QYzPSmUjY9lE2z2U",
+        "default": false,
+        "post": "55254",
+        "nume": "5"
       }
     ],
     "id": 2,
