@@ -85027,8 +85027,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/05/film-cia-2026-lk21-1.jpg",
     "rating": "8.1",
-    "durasi": "17 eps · S.2",
-    "episodes_count": 17,
+    "durasi": "18 eps · S.2",
+    "episodes_count": 18,
     "seasons_count": 2,
     "genre": [
       "Action",
@@ -85629,6 +85629,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "title": "CIA - Season 2 Episode 6 (2026)",
+        "slug": "cia-season-2-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/cia-season-2-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Grn3MQkCR_Ub7GVgJwCDYA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/WLGNiecEL3fG04Ecj0-zMw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/TZz43kOEbT9AonQfnNJtOQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -85636,21 +85666,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/v7xc9KsZOTp3yb9uEKwxSA",
+        "url": "https://videonode.de/iframe3/p2p/Grn3MQkCR_Ub7GVgJwCDYA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/nNj-GCnmAavyTMepofCutQ",
+        "url": "https://videonode.de/iframe3/cast/WLGNiecEL3fG04Ecj0-zMw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/V3zp1KQCs7mlVZWStBgpMw",
+        "url": "https://videonode.de/iframe3/hydrax/TZz43kOEbT9AonQfnNJtOQ",
         "default": false
       }
     ],
