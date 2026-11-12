@@ -6,8 +6,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-kiss-series-2016-lk21.jpg",
     "rating": "5.0",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Romance"
@@ -286,6 +286,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Kiss: The Series - Season 1 Episode 10 (2016)",
+        "slug": "kiss-series-season-1-episode-10-2016",
+        "source": "https://tv.nontondrama.vip/kiss-series-season-1-episode-10-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/256KG4-ewOqPOX35MXvk6w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1XesscgOZO1B_Cq2BlmkQA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/lBHHwz5Jgx4mLhNjf0wSbQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -293,21 +323,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/bupgIEZ_mtCHxQx8phTQ4g",
+        "url": "https://videonode.de/iframe3/p2p/256KG4-ewOqPOX35MXvk6w",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/OREIlDu0BaPpThBdLDwHBw",
+        "url": "https://videonode.de/iframe3/cast/1XesscgOZO1B_Cq2BlmkQA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/suI_vqV6K39GM-GPLeZ8tw",
+        "url": "https://videonode.de/iframe3/hydrax/lBHHwz5Jgx4mLhNjf0wSbQ",
         "default": false
       }
     ],
