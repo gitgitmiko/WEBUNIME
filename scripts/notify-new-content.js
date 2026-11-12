@@ -4,6 +4,9 @@
  * Bandingkan slug katalog sekarang dengan daftar yang sudah pernah diumumkan
  * (data/notify-state.json). Run pertama hanya mencatat patokan, tanpa push.
  *
+ * Juga: episode baru anime/series (dari feed *-latest.json) dikirim ke topic
+ * fav-{collection}-{slug}; app berlangganan topic itu untuk judul favorit akunnya.
+ *
  *   node scripts/notify-new-content.js            # kirim
  *   node scripts/notify-new-content.js --dry-run  # tampilkan saja
  *
@@ -30,6 +33,17 @@ const KINDS = [
   { kind: "anime", label: "Anime", topic: "konten-baru-anime", files: [["anime-index.json", "anime"], ["anime-movies.json", "anime"]] },
 ];
 const MAX_REMEMBERED = 20000;
+
+/** Feed episode terbaru per koleksi berepisode (sama dengan favorit di app). */
+const EPISODE_FEEDS = [
+  { collection: "anime", file: "anime-latest.json", slugOf: (it) => it.anime_slug },
+  { collection: "series", file: "series-latest.json", slugOf: (it) => it.series_slug },
+];
+
+/** Harus sama dengan NewContentPush.favoriteTopic() di app. */
+function favoriteTopic(collection, slug) {
+  return `fav-${collection}-${slug}`.replace(/[^a-zA-Z0-9\-_.~%]/g, "_").slice(0, 900);
+}
 
 const log = (...a) => console.log("[notify]", ...a);
 
@@ -156,6 +170,58 @@ for (const spec of KINDS) {
   }
   next[spec.kind] = [...fresh.map((f) => f.slug), ...known].slice(0, MAX_REMEMBERED);
 }
+
+// ---- Episode baru untuk judul favorit ----
+// Patokan per judul: season*10000+episode tertinggi yang sudah diumumkan.
+const episodesKnown = state.episodes && typeof state.episodes === "object" ? state.episodes : null;
+const episodesNext = { ...(episodesKnown || {}) };
+for (const feed of EPISODE_FEEDS) {
+  const arr = readJson(join(DATA, feed.file), null);
+  if (!Array.isArray(arr)) continue;
+  const latest = new Map();
+  for (const it of arr) {
+    const slug = String(feed.slugOf(it) || "").trim().toLowerCase();
+    const ep = Number(it.episode);
+    if (!slug || !Number.isFinite(ep)) continue;
+    const rank = (Number(it.season) || 0) * 10000 + ep;
+    const prev = latest.get(slug);
+    if (!prev || rank > prev.rank) latest.set(slug, { slug, ep, rank, season: it.season_label || "", title: titleOf(it), thumbnail: it.thumbnail || "" });
+  }
+  for (const e of latest.values()) {
+    const key = `${feed.collection}:${e.slug}`;
+    const known = episodesKnown?.[key];
+    if (!episodesKnown || (known != null && e.rank <= known)) {
+      if (known == null || e.rank > known) episodesNext[key] = e.rank;
+      continue;
+    }
+    const label = `${e.season ? `${e.season} ` : ""}Episode ${e.ep}`;
+    log(`favorit ${key}: ${label}`);
+    if (DRY) continue;
+    if (!sa) {
+      log(`favorit ${key}: kunci service account tidak ada, push ditunda`);
+      continue;
+    }
+    const data = {
+      type: "fav_episode",
+      collection: feed.collection,
+      slug: e.slug,
+      episode: String(e.ep),
+      label,
+      title: e.title,
+    };
+    if (e.thumbnail) data.image = e.thumbnail;
+    try {
+      token ??= await accessToken(sa);
+      await send(sa, token, { topic: favoriteTopic(feed.collection, e.slug), data, android: { priority: "high", ttl: "86400s" } });
+      episodesNext[key] = e.rank;
+    } catch (err) {
+      log(`favorit ${key}: gagal kirim: ${err.message}`);
+      failed = true;
+    }
+  }
+}
+if (!episodesKnown) log(`favorit: patokan awal ${Object.keys(episodesNext).length} judul (tanpa push)`);
+next.episodes = episodesNext;
 
 if (!DRY) {
   mkdirSync(dirname(STATE), { recursive: true });
