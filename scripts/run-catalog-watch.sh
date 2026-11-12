@@ -59,11 +59,16 @@ run npm run scrape:refresh-series-players || { log "refresh player series gagal"
 
 log "publish"
 run bash scripts/publish-catalog.sh || { log "publish gagal"; exit 1; }
-log "push notifikasi konten baru"
-run node scripts/notify-new-content.js || log "push notifikasi gagal"
+published=1
 if grep -qE '^DB_USER=.+' .env 2>/dev/null; then
   log "import katalog ke MySQL"
-  run node server/import-catalog.js || { log "import MySQL gagal"; fail=1; }
+  run node server/import-catalog.js || { log "import MySQL gagal"; fail=1; published=0; }
+fi
+# Push setelah katalog terbit di API (MySQL), supaya tap notifikasi tidak "judul tidak ditemukan".
+# Bila import gagal, push ditunda: judulnya tetap dianggap baru di run berikutnya.
+if [ "$published" -eq 1 ]; then
+  log "push notifikasi konten baru"
+  run node scripts/notify-new-content.js || log "push notifikasi gagal"
 fi
 log "selesai (fail=$fail)"
 exit "$fail"
