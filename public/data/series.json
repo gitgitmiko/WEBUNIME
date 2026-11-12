@@ -367,8 +367,7 @@
         "default": false
       }
     ],
-    "id": 698,
-    "is_new": true
+    "id": 698
   },
   {
     "type": "series",
@@ -1743,8 +1742,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-what-boss-wants-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -1784,6 +1783,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "What a Boss Wants - Season 1 Episode 2 (2026)",
+        "slug": "what-boss-wants-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/what-boss-wants-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/K0pGjU3h94ER6P51u2w_WA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/W0UpN2KE03ahjDzX3rT3gQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jCVUUpnTFBl3P1-bMqzhmA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1791,21 +1820,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/4GJGSx5WZ0Mr6FIYd7ysbg",
+        "url": "https://videonode.de/iframe3/p2p/K0pGjU3h94ER6P51u2w_WA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/pMc5VrrePNGyUO_xYkoDWA",
+        "url": "https://videonode.de/iframe3/cast/W0UpN2KE03ahjDzX3rT3gQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/vJT1dAOA5mPxPcy9vL8xpQ",
+        "url": "https://videonode.de/iframe3/hydrax/jCVUUpnTFBl3P1-bMqzhmA",
         "default": false
       }
     ],
