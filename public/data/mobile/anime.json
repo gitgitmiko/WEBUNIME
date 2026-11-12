@@ -1858,7 +1858,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-6-1-300x169.jpg",
     "rating": "6.6",
     "votes": null,
-    "durasi": "6 eps",
+    "durasi": "24 Menit",
     "episodes_count": 6,
     "genre": [
       "Action",
@@ -2132,6 +2132,54 @@
             "label": "Default",
             "url": "https://www.blogger.com/video.g?token=",
             "default": true
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw_7rBmG1uicFzz4EMIfmJxb2ahzptZ_1k9sIyVQo0xaaEt6BLBHWIG2F3GrLZkcgGVBXWDLeJuuiDHUwKU2gcqHp_HZgF_6OtC7VC3wqWU0jH0vuA7PQi3q52aCLUldOadPwNr",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dylQ8CIENUi_DRT6iecISHRG3RXnchUEO4xR-fBsLGA2drPOiBZ7hbCEYHS6Ne_BQmo060rjL9vWPTb2C0UPFm37MO3IJCQxAhzO0F7C2OUluMviQqj2ad9vu4AjGJYuHQ0VCU",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/BvNp5W37WmDR",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/34XGjf0HiSxq",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/J16CCpon6oOs",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/77n76YgCq0rJ",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -10135,8 +10183,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Tetsuryou!%20Meet%20with%20Tetsudou%20Musume.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Slice of Life"
     ],
@@ -10305,6 +10353,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/41unPb5703U8",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 6,
+        "title": "Tetsuryou! Meet with Tetsudou Musume Episode 6",
+        "slug": "tetsuryou-meet-with-tetsudou-musume-episode-6",
+        "source": "https://anoboy.at/2026/11/tetsuryou-meet-with-tetsudou-musume-episode-6/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzQO5EBYTz1jQLn9QhwEtQGlSlJEjZ091AJM6I5WSxvut2ARUuH6nY1IAeFVn0kyc40L35iQOLwa39o7GaoZ9FrcOHuNeHjxhkPvOZvantWfTwZT7AVhrKGmf7GWmsbOf8Hqr8",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dymUMBo72virwJPD2F_-y30c3dgLXyunrn8OpbE_Zijiqc2mmdQBAjFLrh-qQ5oXJK9RM0Lh0GKTPsiltzHewSdXKlK6_Wpnui4bG-Ks025AJO_6HAi-yiR4i9ECbMgI1h17uM",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/Y2we7y16bipe",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/ety1k2RB0NXG",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/t7w8UEou7KX5",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/mx3tO04wQbSw",
             "default": false,
             "source": "anoboy"
           }
@@ -1117994,6 +1118099,38 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dzwwooaYdcw5Vr0d0EHRRWBi39zfujWWjaWMkmZ4Aeb6C8QQfrlBbBbOIi-nKG7b9xiZmHLW-Vc-lGAH2TAYT434R_aiITSWOp8Wjnr-1DgZwGz096x0zk0TYY-GmcYsao-tJU6",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/U3QWfIX3vG4q",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/1ww832rFqii6",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/T332fPH2002K",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/Nxpha222Bq2o",
             "default": false,
             "source": "anoboy"
           }
