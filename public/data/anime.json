@@ -1853,8 +1853,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-6-1-300x169.jpg",
     "rating": "6.6",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Action",
       "Fantasy",
@@ -2112,44 +2112,32 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Hyouken no Majutsushi ga Sekai wo Suberu S2 Episode 6",
+        "slug": "hyouken-no-majutsushi-ga-sekai-wo-suberu-s2-episode-6",
+        "source": "https://v2.samehadaku.how/hyouken-no-majutsushi-ga-sekai-wo-suberu-s2-episode-6/",
+        "date": "",
+        "released_at": "2026-11-12T18:30:21.008Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "default",
+            "label": "Default",
+            "url": "https://www.blogger.com/video.g?token=",
+            "default": true
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzKUAiAFMxQ8h-39wPtU2bQkz0meuscoDB3MQYd-kov1nH1F7QfGh6yKrnG607OoOe-U8IOxcDyhSO5aaQ5gZMUsTg8p6ZrwHpOyFiyQH26dpjfkXuOXmxm1lK-RQcs_hvfUp8N&origin=sameguru2.blogspot.com",
-        "default": true,
-        "post": "54683",
-        "nume": "1"
-      },
-      {
-        "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/y8YARAxS#Scz7K0hY_aQy-mAXJnPgMZdoxwNM275TxQjO3Ry7HIc",
-        "default": false,
-        "post": "54683",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/ih3k9f1zz0y9m7l/Hyouken-S2-02-MP4HD-SAMEHADAKU.CARE.rar/file",
-        "default": false,
-        "post": "54683",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/28ZyXZqL#zE4iw4l8dN1k9rqeAqye6PaBZoFR37JDN3HEhZQSfiA",
-        "default": false,
-        "post": "54683",
-        "nume": "5"
+        "server": "default",
+        "label": "Default",
+        "url": "https://www.blogger.com/video.g?token=",
+        "default": true
       }
     ],
     "id": 6,
