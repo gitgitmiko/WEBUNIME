@@ -9,6 +9,8 @@
  *
  *   node scripts/notify-new-content.js            # kirim
  *   node scripts/notify-new-content.js --dry-run  # tampilkan saja
+ *   node scripts/notify-new-content.js --test-favorite anime black-clover-season-2
+ *     # push tes episode terbaru judul itu ke pelanggan favoritnya (app tetap menampilkan)
  *
  * Kunci service account Firebase (project myproject-fbbb9): path di env
  * FIREBASE_SERVICE_ACCOUNT, default data/firebase-service-account.json.
@@ -127,6 +129,29 @@ async function send(sa, token, message) {
     body: JSON.stringify({ message }),
   });
   if (!res.ok) throw new Error(`fcm ${res.status}: ${await res.text()}`);
+}
+
+const testIdx = process.argv.indexOf("--test-favorite");
+if (testIdx > 0) {
+  const [collection, slug] = process.argv.slice(testIdx + 1, testIdx + 3);
+  const feed = EPISODE_FEEDS.find((f) => f.collection === collection);
+  const sa = readJson(KEY, null);
+  if (!feed || !slug || !sa) {
+    log("pakai: --test-favorite <anime|series> <slug> (dan kunci service account harus ada)");
+    process.exit(2);
+  }
+  const rows = (readJson(join(DATA, feed.file), []) || []).filter((it) => feed.slugOf(it) === slug);
+  const top = rows.sort((a, b) => ((b.season || 0) * 10000 + b.episode) - ((a.season || 0) * 10000 + a.episode))[0];
+  if (!top) {
+    log(`${slug} tidak ada di ${feed.file}`);
+    process.exit(2);
+  }
+  const label = `${top.season_label ? `${top.season_label} ` : ""}Episode ${top.episode}`;
+  const data = { type: "fav_episode", test: "1", collection, slug, episode: String(top.episode), label, title: titleOf(top) };
+  if (top.thumbnail) data.image = top.thumbnail;
+  await send(sa, await accessToken(sa), { topic: favoriteTopic(collection, slug), data, android: { priority: "high", ttl: "3600s" } });
+  log(`tes terkirim ke ${favoriteTopic(collection, slug)}: ${data.title} · ${label}`);
+  process.exit(0);
 }
 
 const state = readJson(STATE, {});
