@@ -1,5 +1,49 @@
 [
   {
+    "nama": "Jailer 2",
+    "judul": "Jailer 2 (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-jailer-2-2026-lk21.jpg",
+    "rating": "8",
+    "quality": "HD",
+    "durasi": "2j 44m",
+    "genre": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "sinopsis": "Jailer 2 - Ketika sebuah sindikat berbahaya memperluas jaringannya dan mengancam kedamaian keluarganya, mantan jailer Tiger Muthuvel Pandian menyamar sebagai seorang sopir. Beroperasi secara diam-diam dari bayang-bayang, ia menghadapi musuh-musuh baru yang kejam demi melindungi rumah dan orang-orang yang dicintainya.\nWorldwide Gross: USD 74,700,000\nSoundtrack: Hukum Reloaded (Tamil)\n\nSubtitle: workkeerr\n\nSutradara: Nelson Dilipkumar\n\nBintang Film: Rajinikanth, Mohanlal, Shivarajkumar, Jackie Shroff, Hrithik Roshan\n\nNegara: India\n\nVotes: 18.000\n\nRelease: 14 Oct 2026\n\nUpdated: 12 Nov 2026 10:06:38",
+    "slug": "jailer-2-2026",
+    "source": "https://tv12.lk21official.cc/jailer-2-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/-zQ0kdZqQTGNGbuhovOMqQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/1-L_4H2BaBInWJeLO1w5eg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/in6Zj_QmyVaTeNXjOLQRDQ",
+        "default": false
+      }
+    ],
+    "id": 453,
+    "is_new": true
+  },
+  {
     "nama": "The Siren",
     "judul": "The Siren (2023)",
     "tahun": "2023",
@@ -38,8 +82,7 @@
         "default": false
       }
     ],
-    "id": 452,
-    "is_new": true
+    "id": 452
   },
   {
     "nama": "Door Slasher",

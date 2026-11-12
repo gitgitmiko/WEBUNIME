@@ -6,8 +6,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-kiss-series-2016-lk21.jpg",
     "rating": "5.0",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Romance"
@@ -136,6 +136,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Kiss: The Series - Season 1 Episode 5 (2016)",
+        "slug": "kiss-series-season-1-episode-5-2016",
+        "source": "https://tv.nontondrama.vip/kiss-series-season-1-episode-5-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/JvIB1bX-H6b3jDBM2YyvUQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ry_fHZ_iACynr5ifHuzWWg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/aNVbiM_v-NJvCAGQ2FtkJw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Kiss: The Series - Season 1 Episode 6 (2016)",
+        "slug": "kiss-series-season-1-episode-6-2016",
+        "source": "https://tv.nontondrama.vip/kiss-series-season-1-episode-6-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ePsf7xGp7283EflIJH--Wg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/cAwRq2GTsuBePk80tgZIOw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/hbIO1J9BXRY20Jkw5FW4vA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -143,21 +203,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/vP8DmHcI31kbSJEZISsMkw",
+        "url": "https://videonode.de/iframe3/p2p/ePsf7xGp7283EflIJH--Wg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/8Wf8HTuuY7Dje-JhNQoxnQ",
+        "url": "https://videonode.de/iframe3/cast/cAwRq2GTsuBePk80tgZIOw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/PsscMMi5w80jMnlV38NoDg",
+        "url": "https://videonode.de/iframe3/hydrax/hbIO1J9BXRY20Jkw5FW4vA",
         "default": false
       }
     ],
