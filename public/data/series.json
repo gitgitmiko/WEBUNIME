@@ -6,8 +6,8 @@
     "tahun": "2023",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2023/09/film-the-devils-plan-2023-lk21-d21.jpg",
     "rating": "9.5",
-    "durasi": "19 eps · S.2",
-    "episodes_count": 19,
+    "durasi": "20 eps · S.2",
+    "episodes_count": 20,
     "seasons_count": 2,
     "genre": [
       "Reality-TV",
@@ -664,6 +664,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 8,
+        "title": "The Devil's Plan - Season 2 Episode 8 (2023)",
+        "slug": "devils-plan-season-2-episode-8-2023",
+        "source": "https://tv.nontondrama.vip/devils-plan-season-2-episode-8-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/2pb0LIwoEdS-ccyEVroH4A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ffNDRs-09WarqYahCawxww",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MVqef7IiLA4R-lDg8uGfvg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -671,21 +701,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/yaagaOfSXXvnreFCOenqhg",
+        "url": "https://videonode.de/iframe3/p2p/2pb0LIwoEdS-ccyEVroH4A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/9uR2imhyURD76BZepWnMQQ",
+        "url": "https://videonode.de/iframe3/cast/ffNDRs-09WarqYahCawxww",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/lgwWvq6qeAkl8qCGTxaBUA",
+        "url": "https://videonode.de/iframe3/hydrax/MVqef7IiLA4R-lDg8uGfvg",
         "default": false
       }
     ],
