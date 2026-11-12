@@ -59,6 +59,8 @@ run npm run scrape:refresh-series-players || { log "refresh player series gagal"
 
 log "publish"
 run bash scripts/publish-catalog.sh || { log "publish gagal"; exit 1; }
+log "push notifikasi konten baru"
+run node scripts/notify-new-content.js || log "push notifikasi gagal"
 if grep -qE '^DB_USER=.+' .env 2>/dev/null; then
   log "import katalog ke MySQL"
   run node server/import-catalog.js || { log "import MySQL gagal"; fail=1; }
