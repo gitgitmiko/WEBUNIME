@@ -2201,8 +2201,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-8-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [],
     "sinopsis": "Anime Tokyo Revengers S4.",
     "related": [],
@@ -2474,15 +2474,36 @@
             "default": true
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Tokyo Revengers S4 Episode 7",
+        "slug": "tokyo-revengers-s4-episode-7",
+        "source": "https://v2.samehadaku.how/tokyo-revengers-s4-episode-7/",
+        "date": "",
+        "released_at": "2026-11-13T18:30:22.229Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ZBUTxYbI#HWrBjb1QPmmdXgKZAtEltu9bnUtZ-gWYThKPubZq9HM",
+            "default": true,
+            "post": "55291",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "default",
-        "label": "Default",
-        "url": "https://www.blogger.com/video.g?token=",
-        "default": true
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/ZBUTxYbI#HWrBjb1QPmmdXgKZAtEltu9bnUtZ-gWYThKPubZq9HM",
+        "default": true,
+        "post": "55291",
+        "nume": "4"
       }
     ],
     "id": 7
@@ -2496,7 +2517,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "7 eps",
+    "durasi": "22 Menit",
     "episodes_count": 7,
     "genre": [
       "Drama",
@@ -2891,7 +2912,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Tougen-Anki-Nikko-Kegon-no-Taki-hen-Episode-2-300x169.jpg",
     "rating": "6.9",
     "votes": null,
-    "durasi": "7 eps",
+    "durasi": "24 Menit",
     "episodes_count": 7,
     "genre": [
       "Action",
@@ -10921,7 +10942,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "6 eps",
+    "durasi": "23 Menit",
     "episodes_count": 6,
     "genre": [
       "Action",
@@ -15471,8 +15492,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Tokyo%20Revengers%20Season%204.jpg",
     "rating": "7.8",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Drama",
@@ -15694,6 +15715,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/UXyP3kchqj78",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Tokyo Revengers Season 4 Episode 7",
+        "slug": "tokyo-revengers-season-4-episode-7",
+        "source": "https://anoboy.at/2026/11/tokyo-revengers-season-4-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy5AtxBinGP66Sy-WH3c1S9HlZzvKo9yhwTYKlyAyo9C9lNp0YQMBahPFKrHi7buNFReHhuI0zezp7yHahetLUa7s3ImqX9E_3DwoKQzR66ROQZ3stwvU05D30OacY7JC02K8w",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwSv7Sphm20GNMJ004AdLLr2sxreZIpsEVbqfccNIKQkhypC-Z21KS8w_b91x7jphVFHrAT_IeAN0HS1HBQ-gEz_JizqisMiIiI-Dpk67HggFYYNTaeBda1EGrwCYPqpxt_yao",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/8BN1BHiC6cxt",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/7TJ4aDaM7EK5",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/R6FI58vufWuh",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/yQ60PlrIBUD5",
             "default": false,
             "source": "anoboy"
           }
@@ -18499,7 +18577,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Steel%20Ball%20Run%20JoJo%20no%20Kimyou%20na%20Bouken.jpg",
     "rating": "9.1",
     "votes": "",
-    "durasi": "8 eps",
+    "durasi": "24 Menit",
     "episodes_count": 8,
     "genre": [
       "Action",
@@ -22792,7 +22870,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Uchi%20no%20Otouto-domo%20ga%20Sumimasen.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "18 eps",
+    "durasi": "23 Menit",
     "episodes_count": 18,
     "genre": [
       "Comedy",
