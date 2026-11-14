@@ -3275,7 +3275,7 @@
     "rating": "8.8",
     "votes": null,
     "durasi": "23 Menit",
-    "episodes_count": 6,
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Fantasy",
@@ -3663,52 +3663,83 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Black Clover Season 2 Episode 7",
+        "slug": "black-clover-season-2-episode-7",
+        "source": "https://v2.samehadaku.how/black-clover-season-2-episode-7/",
+        "date": "",
+        "released_at": "2026-11-14T16:00:25.968Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/cYsCRYIZ#jlhvJkIqwQE9srt4ELURUwKYTz4hrMZJGW0F5pqFgY8",
+            "default": true,
+            "post": "55320",
+            "nume": "6"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy1-2V0Dv0kShazOpbYm0mRLzMPKkLv5WcxTdohxmv19-Qii7MPZaGeiNhkIGRQtP-a30WBjOZckcKgOOAVDjZz5zC-1dptIGcZ4DHJnH7AmSKe4OfFQmX5L-uy1tAyae-YbME",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxZEpUoD1jvJIZq4QS2mfbhbDJyF-3jdHZGwWONTCxwxYzY2TfzgC8S_VZAOOAabRtUdtXosRHwKlhM9zaPNfgsXYXwxPrdaYeoQkgcFHc_KFDbySfP7ESmKvF9Fh1RMvjfxrQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/h2bB4X3XArp5",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/6an3g6o52BmA",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/qCn3WqX3C142",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/1gRk1lSeRq27",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyre7cmwJZjvBHXFvCBFtNAYu8K_iVMjdXRcmnrnZOKdRIdj01v9uUQ-s5-uUQV2NkI0CYGXC5sfU08oUXXjIVwHtUynMjiDndWZ69V3iNtWxfg2FUfgR5hMO-ihg6n20Juc4I",
-        "default": true,
-        "post": "54565",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/Uyo1gRwK#EYLepW1hE4VTsEkWLkvpI1yio6oGbOg1T025qvTfZPM",
-        "default": false,
-        "post": "54565",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/QjZ0WLpQ#H3uT_9uMLgXJeORksyQYzAKwyS3-7EvMwDv02XE5Sz0",
-        "default": false,
-        "post": "54565",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/hiQwxIhY#vCMmQV76nNapaV9EqjgMvlmsZ_a350bR52_GNkqhYZE",
-        "default": false,
-        "post": "54565",
-        "nume": "5"
-      },
-      {
-        "no": 5,
-        "server": "mega-4k",
-        "label": "Mega 4K",
-        "url": "https://mega.nz/embed/QiRSVBST#QomtJ0nF5zhxHSzKk5NFxIlZguGMcT5yYpeRcVbvE9w",
-        "default": false,
-        "post": "54565",
+        "url": "https://mega.nz/embed/cYsCRYIZ#jlhvJkIqwQE9srt4ELURUwKYTz4hrMZJGW0F5pqFgY8",
+        "default": true,
+        "post": "55320",
         "nume": "6"
       }
     ],
@@ -14442,8 +14473,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Marronnier%20Oukoku%20no%20Shichinin%20no%20Kishi.jpg",
     "rating": "6.4",
     "votes": "",
-    "durasi": "25 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Comedy",
       "Historical",
@@ -14664,6 +14695,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/3VWBy255Qql4",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Marronnier Oukoku no Shichinin no Kishi Episode 7",
+        "slug": "marronnier-oukoku-no-shichinin-no-kishi-episode-7",
+        "source": "https://anoboy.at/2026/11/marronnier-oukoku-no-shichinin-no-kishi-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwQmh_acoQGV0T71rXCsYGRlv5iFU1Lzt3InT-LeNpXL4F8GQJuZAQl-P_RpDZHG7R3Ad8-Irn6Y5HwIFjdgVw4_8paYdXwQEhKPKRxGvfgEhHjmLBN1ncltxduHbCXTur9Pg0",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dztV7v_2oaiw_MKH0Aqjs109mZl8YpS_6IOZNFbRZt_7X3wh8qOvjYtsNvVIloh0R7mEJUbAI7U5rDTo7B5h6augu-f1QpVdp03zwol7fi1-y8vjvQWVXj7xVg2MPCT2jBRK8I",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/p00Ivc1jnkKq",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/561r3pR7tG3v",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/3DYn1MByMOP0",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/O10XPCqf4L5s",
             "default": false,
             "source": "anoboy"
           }
@@ -15424,7 +15512,7 @@
     "thumbnail": "https://anoboy.at/",
     "rating": "7.3",
     "votes": "",
-    "durasi": "7 eps",
+    "durasi": "23 Menit",
     "episodes_count": 7,
     "genre": [
       "Action",
@@ -18446,7 +18534,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx204389-jCoFCeTthDMy.jpg",
     "rating": "7.09",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "23 Menit",
     "episodes_count": 8,
     "genre": [
       "Action",
