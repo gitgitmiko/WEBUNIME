@@ -3747,8 +3747,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Zombie-Sagashitemasu-Episode-2-300x169.jpg",
     "rating": "6.7",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Adventure",
       "Shounen"
@@ -4045,6 +4045,43 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "#Zombie Sagashitemasu Episode 6",
+        "slug": "zombie-sagashitemasu-episode-6",
+        "source": "https://v2.samehadaku.how/zombie-sagashitemasu-episode-6/",
+        "date": "",
+        "released_at": "2026-11-14T17:30:23.602Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx4ThgF5iCR792s0Fs3ZYDwWi2YpYVakQKM8GBQLxHu8aRWKEwQQ0VyTBtUw0WhOczc9Flpx3BVYOFRjaKIkmStWy0Y2bPqLAjsJj_H1aOdxa6D_xQXcRhC5XrIyiEup_Oot3hf",
+            "default": true,
+            "post": "55323",
+            "nume": "4"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/lU8CVbba#V-rcxEZBTrWKsoniVE19TXvfHHljXROxM-JDEwCC-18",
+            "default": false,
+            "post": "55323",
+            "nume": "6"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/1U0RFJSL#norA4a2-zHHlVRt01c2XylMJTk-jc6XD7zh6u23rjw0",
+            "default": false,
+            "post": "55323",
+            "nume": "7"
+          }
+        ]
       }
     ],
     "players": [
@@ -4052,28 +4089,28 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyOHSqmLEl-SEiYGjTUfuYywx06Jr9EaAPj_dnhwGrxsueCWBPd-BO4rN5osoL3XVunj1H_uJDnT3klVJJAAHoT9ZObchB532zO5lr6tRUFJ9d8h7MwnvJ7nyAQDjqNzZ--2Po",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dx4ThgF5iCR792s0Fs3ZYDwWi2YpYVakQKM8GBQLxHu8aRWKEwQQ0VyTBtUw0WhOczc9Flpx3BVYOFRjaKIkmStWy0Y2bPqLAjsJj_H1aOdxa6D_xQXcRhC5XrIyiEup_Oot3hf",
         "default": true,
-        "post": "54915",
-        "nume": "1"
+        "post": "55323",
+        "nume": "4"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/O94V1QgJ#WemQXfGBK6Sk-IlT0FqKdZ0gdE_T_tmN4mr0azLTe6k",
+        "url": "https://mega.nz/embed/lU8CVbba#V-rcxEZBTrWKsoniVE19TXvfHHljXROxM-JDEwCC-18",
         "default": false,
-        "post": "54915",
-        "nume": "3"
+        "post": "55323",
+        "nume": "6"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/2sxGhJyQ#_6Pn38MuSufeIL8jRpNHdAtOUGIn8xKieWoFGWlMOs8",
+        "url": "https://mega.nz/embed/1U0RFJSL#norA4a2-zHHlVRt01c2XylMJTk-jc6XD7zh6u23rjw0",
         "default": false,
-        "post": "54915",
-        "nume": "4"
+        "post": "55323",
+        "nume": "7"
       }
     ],
     "id": 11,
