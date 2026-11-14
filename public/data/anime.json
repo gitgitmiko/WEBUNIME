@@ -13961,7 +13961,7 @@
     "rating": "6.9",
     "votes": "",
     "durasi": "23 Menit",
-    "episodes_count": 7,
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Adventure",
@@ -14303,35 +14303,84 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Tensei shita Daiseijo wa, Seijo de Aru Koto wo Hitakakusu Episode 8",
+        "slug": "tensei-shita-daiseijo-wa-seijo-de-aru-koto-wo-hitakakusu-episode-8",
+        "source": "https://v2.samehadaku.how/tensei-shita-daiseijo-wa-episode-8/",
+        "date": "",
+        "released_at": "2026-11-14T15:00:23.960Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/sE9D1AIC#PN3SA-lMdogfkMSL_-5Q0w_ugqye0rizfEpNd4OCzo0",
+            "default": true,
+            "post": "55316",
+            "nume": "6"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzdjee902v9eAi84q2AVgCpSX3Ccle-CjF-fEr_zJpfhLRIRhEaXz18mApVCSf7uwnlZjevOHJWE7U55smLCFVdc8LEi2LONGb3Ss2TIEsd_thqZWEfIsUeROPetzuY5yaYS44",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dy8meIZgjxoummiAM0e-Js3j-cSHofgMTyA_APKSmKoWDijEJ0NCqSD0XNEqFNT4HJcekRUESG92z8-GXswb3kBEwuOjG3Sc7YEeLdBWNVhwr-uG8xAm6f4O0o_7gbbCaubhoU",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/oQl5SCUuP2jn",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/2jX1Vwki0EB3",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/R51RR5WXNa7U",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/022u74DdUDfb",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxNkTsLeIzjvcUwVMLNOfoeNOs7jet_UZkU1I_Qe0VP2q_RN2CLW67GOj0683JghCLcnO6SDuT67uR3T7Kl2uAm2XrMNf4NPLonBZ6PLmOhNSv0kel_0V6uh10mTO0idDjXoByu",
-        "default": true,
-        "post": "55042",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/VBVXRQTQ#6N0gHXVtnAIu9hDUlR68rnXTzTU8Ek89qOsVsoKcbGE",
-        "default": false,
-        "post": "55042",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/ld9DAaQJ#xW4xGDb-TWXrkOFY_VvUKgl4H-wUGn9ZFCLCsZAQVQc",
-        "default": false,
-        "post": "55042",
-        "nume": "4"
+        "url": "https://mega.nz/embed/sE9D1AIC#PN3SA-lMdogfkMSL_-5Q0w_ugqye0rizfEpNd4OCzo0",
+        "default": true,
+        "post": "55316",
+        "nume": "6"
       }
     ],
     "id": 46,
@@ -15325,8 +15374,8 @@
     "thumbnail": "https://anoboy.at/",
     "rating": "7.3",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Fantasy",
@@ -15583,6 +15632,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/N54jsw66kSfr",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Romelia Senki Episode 7",
+        "slug": "romelia-senki-episode-7",
+        "source": "https://anoboy.at/2026/11/romelia-senki-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyl_sRXEQ224GHQxf6603vImZQDW5WG2qQLHNuw_DrBSgm5HLDpF27yZ4SXvwdX9AFbjZwPRfJWmlae9_YBWJcTNf-K9cMVA8aCiPe23Ypmb5vwBDVmw7_rcBDuyMKKu3-L1P0s",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwgA7QyY-Q_Eq2THHVn19rLxS4pAv3HFuqvSnCgoEy4A5I8pfp7Xfnd-MFx4D1yz-OGJ_SnIon_xqf95W57GebPLBJkb0JM5UzYDLa8dnmqTmqofEzT3vSrHZDwRhygHuJIbo_s",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/58MxaVp8gIev",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/HkRKiKO2VYj8",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/VVTgx6ts82xS",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/bOf5OR1y8hH5",
             "default": false,
             "source": "anoboy"
           }
@@ -18282,8 +18388,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx204389-jCoFCeTthDMy.jpg",
     "rating": "7.09",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Adventure",
@@ -18612,6 +18718,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/85207AfbjdRm",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Yasei no Last Boss ga Arawareta! S2 Episode 8",
+        "slug": "yasei-no-last-boss-ga-arawareta-s2-episode-8",
+        "source": "https://anoboy.at/2026/11/yasei-no-last-boss-ga-arawareta-season-2-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwNx_nJ0mnzD9Hyo3xkSX4aP19hYeD5omUTJYK5_D7W7AqYGokUnwx_IgTL2tlG-P1utO_InqJmMly8S136Em-wsG89WdWkZuZ_yDlC68KQDoJ1E_SCGfo2nWGaNmSmLdT6zhPg",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dz81-JbIcjHJFLF3Hh1OhxayFcr6nZWV4VZ3MN1SmXZh81pN1LbccC-FXROP59WasYqdtZjunqBqka_1SY0rXnzGKaTTVwDRr68IMLcqTRfeZNfL4KwhTbNTRztWgL24f-6YOX2",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/304xDBB2U8S6",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/6577bcMJm8gg",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/bw1E785rEDyD",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/vQIq6b2TE0nV",
             "default": false,
             "source": "anoboy"
           }
