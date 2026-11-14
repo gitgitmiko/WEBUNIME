@@ -11362,7 +11362,7 @@
     "rating": "7.1",
     "votes": "",
     "durasi": "23 Menit",
-    "episodes_count": 5,
+    "episodes_count": 6,
     "genre": [
       "Action",
       "Fantasy",
@@ -11700,44 +11700,192 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Shuiro no Kamen Episode 6",
+        "slug": "shuiro-no-kamen-episode-6",
+        "source": "https://v2.samehadaku.how/shuiro-no-kamen-episode-6/",
+        "date": "",
+        "released_at": "2026-11-14T13:00:52.239Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-mkv",
+            "label": "VIP MKV",
+            "url": "https://beta.icefile.my.id/embed/MTlJZ2FyUFh5R0RFRERIeVNhaFJNM283NjRSUmFKdUEt",
+            "default": true,
+            "post": "55306",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-mp4",
+            "label": "VIP MP4",
+            "url": "https://beta.icefile.my.id/embed/MXlrNUdVTEpoYlFLV3RRazg2TWNIUGVDMGJzV0hEYktu",
+            "default": false,
+            "post": "55306",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzpO3PcJMeHpwia77r2Tah6Z1ehZcCcMqelTyiP7m_9tmRA_bEJZP47UFxGAiZRIlRiEs7rhoe6co0mU9tKryk9bfy8fJCA3eYwIsVYe4FunG4Be3eszS8c5wYhx-6g_vWiNLL8&origin=sameguru2.blogspot.com",
+            "default": false,
+            "post": "55306",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/p7qqIf56vI",
+            "default": false,
+            "post": "55306",
+            "nume": "5"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/f1w0jZhY#vLRu2HoAKw1LlEunZ_9klU1abyEE5TG1qP4RdSBZOz4",
+            "default": false,
+            "post": "55306",
+            "nume": "6"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/cUUgnIYS#BDxEL5Bs5ih0K8S35Q9b77YD-rxM7xukr8Dy7ijkM60",
+            "default": false,
+            "post": "55306",
+            "nume": "7"
+          },
+          {
+            "no": 7,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/ywgDHLqR#uZK0gHPdW-MPapOo-T1nZa_S_ZeQTIHvKMM9t4ltj_E",
+            "default": false,
+            "post": "55306",
+            "nume": "8"
+          },
+          {
+            "no": 8,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw2SM0C7MIFtiZK-awb4quexdiaUu7ymLBDqClgR4dcpNMSW00JrH1sUAOapeYM780SePafEreDGFGIvcnsKreCePkcFKcf8DHAQvcB6zYrGDR6kjfPONh29zbdGBTeQtp3ooW3",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 9,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyOTbmUOE8joQJZ5-thHUqvL7SjwjRibiYwMu0P1rpiWegYZe9srvRX1RPBEaNaZIG24jF4GWLN0cB6RlWzVQPFPNPQwazHHlui2o9FfhGFnl0QcIF6MVCRNyCbmLf407jSW0nn",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 10,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/0j8Ay4h5A6Jc",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 11,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/fM4VIG8lESy4",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 12,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/07PRY825B4Ax",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 13,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/H0GhLMb2dQQo",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 1,
+        "no": 3,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzuzjqU3Nxcfir1uuLB3WoISfEGmOpmFicpgpcTBJ55ddD5ADFD3Zbl4Hdp3JFydAfnS9BseZObKpi8Xwg_uUG2Lmj1IYxteu6fwUSBgbPL71scDfNv1QDPnxZaNZ7paobeseJa&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzpO3PcJMeHpwia77r2Tah6Z1ehZcCcMqelTyiP7m_9tmRA_bEJZP47UFxGAiZRIlRiEs7rhoe6co0mU9tKryk9bfy8fJCA3eYwIsVYe4FunG4Be3eszS8c5wYhx-6g_vWiNLL8&origin=sameguru2.blogspot.com",
+        "default": false,
+        "post": "55306",
+        "nume": "4"
+      },
+      {
+        "no": 1,
+        "server": "vip-mkv",
+        "label": "VIP MKV",
+        "url": "https://beta.icefile.my.id/embed/MTlJZ2FyUFh5R0RFRERIeVNhaFJNM283NjRSUmFKdUEt",
         "default": true,
-        "post": "55038",
+        "post": "55306",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/sgUb1O0IHd",
+        "server": "vip-mp4",
+        "label": "VIP MP4",
+        "url": "https://beta.icefile.my.id/embed/MXlrNUdVTEpoYlFLV3RRazg2TWNIUGVDMGJzV0hEYktu",
         "default": false,
-        "post": "55038",
+        "post": "55306",
         "nume": "2"
       },
       {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/Cx4BSbSL#uLWho3eStHXTqNSezObE39axtCywIXVyffR1CGhU74k",
+        "no": 4,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/p7qqIf56vI",
         "default": false,
-        "post": "55038",
-        "nume": "3"
+        "post": "55306",
+        "nume": "5"
       },
       {
-        "no": 4,
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/f1w0jZhY#vLRu2HoAKw1LlEunZ_9klU1abyEE5TG1qP4RdSBZOz4",
+        "default": false,
+        "post": "55306",
+        "nume": "6"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/cUUgnIYS#BDxEL5Bs5ih0K8S35Q9b77YD-rxM7xukr8Dy7ijkM60",
+        "default": false,
+        "post": "55306",
+        "nume": "7"
+      },
+      {
+        "no": 7,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/P4Q02awC#aYyNvJppo4l2V_HaF6B9qycKnl9gUIUgyd4gUbcISOc",
+        "url": "https://mega.nz/embed/ywgDHLqR#uZK0gHPdW-MPapOo-T1nZa_S_ZeQTIHvKMM9t4ltj_E",
         "default": false,
-        "post": "55038",
-        "nume": "5"
+        "post": "55306",
+        "nume": "8"
       }
     ],
     "id": 38,
