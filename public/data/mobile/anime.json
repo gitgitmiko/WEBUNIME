@@ -5044,7 +5044,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-2.jpg",
     "rating": "8.2",
     "votes": null,
-    "durasi": "6 eps",
+    "durasi": "23 Menit",
     "episodes_count": 6,
     "genre": [
       "Romance",
@@ -5363,6 +5363,22 @@
             "default": false,
             "post": "55343",
             "nume": "6"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzMv5tve70nA-nX4hMn5RDH-8v8ps6YF4AFwch0D26cfSbj2E1K7uw8s0Ql7AjIdXIYV3RaDkaad47Qd7iGFsNARvtYGom8McVn1NxCTG2ScForiHwIbYgkQJpFnwzUvlhfFjU",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwDx9i31cGGkTnIvJX_CvZQlIdRdjHDup2Tt6X99tc1BSzdW50CrTXT6sA1RH8v69hfgY8mBWY2QdQzm4h07nYy6L41m50o5P1fIaSqS3olBD-Ci4weDyTs2Dqpr_b7P_0Gg_w",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -7087,8 +7103,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Yozakura-san%20Chi%20no%20Daisakusen%20Season%202%20Part%202.jpg",
     "rating": "7.6",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Action",
       "Comedy",
@@ -7288,6 +7304,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Yozakura-san Chi no Daisakusen Season 2 Part 2 Episode 6",
+        "slug": "yozakura-san-chi-no-daisakusen-season-2-part-2-episode-6",
+        "source": "https://anoboy.at/2026/11/yozakura-san-chi-no-daisakusen-season-2-part-2-episode-6/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxkthBPCkDBuxUu3FjPdWbHdQsneZLvdBMJ6Zse4nYTKfTfykTpOVMR7KY8s-qQqSF-154eGi96E4ejkT-b1XHHyz0xYotx6qv4ot3TK3outOW4eQ5PibAKmQ8bgol9iMQV5Z4",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzI2Vd4r0YFJivcVU3nroRmKmAw0XSRnEJciMI09hI-gwqP00UOGtwVHmj7HAFr9vIL8X8BryLriY4MUsRE7a6zi0Iu_D4i6DsmQ-Z5ZGtvBG38eVVfjJYBZ82zfOWydEG1fvk",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -7322,8 +7363,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Aoashi%20Season%202.jpg",
     "rating": "8.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Sports",
       "Seinen"
@@ -7547,6 +7588,31 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Aoashi Season 2 Episode 7",
+        "slug": "aoashi-season-2-episode-7",
+        "source": "https://anoboy.at/2026/11/aoashi-season-2-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzwTluXVOmvwcQrnrvVzng0KGEWdVU7AZ8Tp7hX5gS77Iba98bgVDfo__nwBjjk9a5u1OVcznUbHhM57YjdItN1dvWy3dU--exFTIXlQM2FGdXsCjQLJLB_d1PMyhrtWwK1IcVI",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxELstRdtXrkdWgER2-6sDeQSlPfjskIGJjPpZu-Ni0sDPfn42xR2ozjfcHm3bHg_X9qTJMAn5_V9BPMeG15IfO9oBOLSt1ycJHe_KAXcUH-rN18o-8aWx7gfHENGOnq1b395U",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -7581,8 +7647,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Ojisan%20wa%20Kawaii%20Mono%20ga%20Osuki.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Comedy"
     ],
@@ -7801,6 +7867,31 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/dVsBaro53Mqb",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Ojisan wa Kawaii Mono ga Osuki. Episode 7",
+        "slug": "ojisan-wa-kawaii-mono-ga-osuki-episode-7",
+        "source": "https://anoboy.at/2026/11/ojisan-wa-kawaii-mono-ga-osuki-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzzEwz4sBNQyZC1s3eGi1Zdv_i6u9saDJrQcfVM8v6fjcC1Yspp9SNV9zZmmpQ7FUwXEQLkYgpT4ydjyGm2G2moAQWUUOK_bN2J3rNnxrhIXB0zNrSXoQxwNYcYQCm2LWtMi-jn",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzFZTcsOT66bpHh8ZyTPU6Lelfajt22B8BBNU6xscdmjzhwj8vLwd-ly7czGXJSH12zqvye6GzFmT2LWU8h4KtwcXa7Sd10PxFVumb4AfONU_9PzJa8nZjGawA5d5oDwUyKCY8",
             "default": false,
             "source": "anoboy"
           }
@@ -18198,8 +18289,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/bx212888-NhyvqPt5aIuJ.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Fantasy"
@@ -18531,53 +18622,126 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Overgeared Episode 8",
+        "slug": "overgeared-episode-8",
+        "source": "https://v2.samehadaku.how/overgeared-episode-8/",
+        "date": "",
+        "released_at": "2026-11-15T16:00:37.645Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-hd",
+            "label": "VIP HD",
+            "url": "https://beta.icefile.my.id/embed/MUxSTzhDWmdEV3lPbTZOWl8tRXQyM2psdGVqYXo5YVFO",
+            "default": true,
+            "post": "55355",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxiqEr6xNilt5fQrEPz6xwKc-z_-ZwxLleZe2pu_j18jFh90zyIatFj0IkoJy6bMIhvMp7Ssf1TZuTd1z8_bNfk063iH4R3DaDYq9qGHHwPvKpLZGDWBpWAm6zfcwgoSbv4&origin=sameguru2.blogspot.com",
+            "default": false,
+            "post": "55355",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/4BXzNpn9Hy",
+            "default": false,
+            "post": "55355",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/D5Iw0SQL#Wgsiw239Xp9LJcWrtZwi3cXDCAZSCQXTkPhmrVbcJxM",
+            "default": false,
+            "post": "55355",
+            "nume": "5"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/y84TAQDC#1c7OA_z2cqKQRG2hi6GXNej6VWI92PmT1WaYKfVm9wo",
+            "default": false,
+            "post": "55355",
+            "nume": "6"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/S940CJKZ#qKvbVQ1C-Yc3Hjl6VRtcmas5p37mZfukXAYXkICqxyo",
+            "default": false,
+            "post": "55355",
+            "nume": "7"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 1,
+        "no": 2,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwEhX8rF_08Y8ExnqRKV4BRIkdE39B3bXYBDhQYdhvu290PhJ1v92K8e6lV4b-tM5ZM1FYfIilhgTxV6dBotEHHgF_LuWy8gUB2Go5bkz8SsgY8-LDFCcRZ9002yg5jKErTbf4&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxiqEr6xNilt5fQrEPz6xwKc-z_-ZwxLleZe2pu_j18jFh90zyIatFj0IkoJy6bMIhvMp7Ssf1TZuTd1z8_bNfk063iH4R3DaDYq9qGHHwPvKpLZGDWBpWAm6zfcwgoSbv4&origin=sameguru2.blogspot.com",
+        "default": false,
+        "post": "55355",
+        "nume": "3"
+      },
+      {
+        "no": 1,
+        "server": "vip-hd",
+        "label": "VIP HD",
+        "url": "https://beta.icefile.my.id/embed/MUxSTzhDWmdEV3lPbTZOWl8tRXQyM2psdGVqYXo5YVFO",
         "default": true,
-        "post": "55209",
+        "post": "55355",
         "nume": "1"
       },
       {
-        "no": 2,
+        "no": 3,
         "server": "vip-streaming",
         "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/YdF7AgG3Ub",
+        "url": "https://filedon.co/embed/4BXzNpn9Hy",
         "default": false,
-        "post": "55209",
-        "nume": "2"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/nwhHCJwB#FUf6rWVsLdUuFVSWJjuifmLj278b7FAJH7iPY6eaNvA",
-        "default": false,
-        "post": "55209",
-        "nume": "3"
+        "post": "55355",
+        "nume": "4"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/y4QgVYJJ#cL2hZdN_cewlsaf7a-x1DvSZZBclp9dCXRZZCUN0pYs",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/D5Iw0SQL#Wgsiw239Xp9LJcWrtZwi3cXDCAZSCQXTkPhmrVbcJxM",
         "default": false,
-        "post": "55209",
-        "nume": "4"
+        "post": "55355",
+        "nume": "5"
       },
       {
         "no": 5,
         "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/OkJTXBbT#NgmfjNUIJy8k2Y6gO-HNb9kzymEgus2a7cQ126PemWM",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/y84TAQDC#1c7OA_z2cqKQRG2hi6GXNej6VWI92PmT1WaYKfVm9wo",
         "default": false,
-        "post": "55209",
-        "nume": "5"
+        "post": "55355",
+        "nume": "6"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/S940CJKZ#qKvbVQ1C-Yc3Hjl6VRtcmas5p37mZfukXAYXkICqxyo",
+        "default": false,
+        "post": "55355",
+        "nume": "7"
       }
     ],
     "id": 57,
@@ -18592,8 +18756,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/159859.jpg",
     "rating": "7.1",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Adventure",
       "Fantasy"
@@ -18906,6 +19070,31 @@
             "server": "anoboy",
             "label": "Anoboy YUP 360p",
             "url": "https://www.yourupload.com/embed/MW4N1YckSMkR",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Tensei Kizoku Kantei Skill de Nariagaru Season 3 Episode 8",
+        "slug": "tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-8",
+        "source": "https://anoboy.at/2026/11/tensei-kizoku-kantei-skill-de-nariagaru-season-3-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwNfTeZQ-cLH21Y2dNiepuofZ-hdPiM3ZezJr9kVymYj5siNV-fukc-jvP_AOd9IUONghiIMzdulwjKxGdKd-9rDGSD2IrkDD0SOg5MFUP-dYWWsi8uWRkY1p8mnpP4pJeDt9i3",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyVnKradIz7h5mx1E24DU7sBmSn6chHG5JCeBEZ6ZIHAb_-zV-gQnoFO6urNWX564lTW2cefme1YE0P8hW96zRKmi0m4HT9XTfJb2CBzKVhLb1zls2FkXaDOF97jR0DEEgRNSxv",
             "default": false,
             "source": "anoboy"
           }
@@ -147769,6 +147958,22 @@
             "default": false,
             "post": "50119",
             "nume": "11"
+          },
+          {
+            "no": 12,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwRtmMXPE99RxK-tgm2x7A-0qaKC-e9whoj7_GZL-YH3KOdfyZxKVHFvaVN8RdA0yk0FIOR0CkdAB6RzXxuuHsL--6CZ6dK5Nwae2u_el-0RILJNvPxyiy8qwqgykvTux5Vq1OI",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 13,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxS3jL79ATaZH_utiXy3f8NOixMYoFpPRKxZxqk0yJaLdbbbDy7NUZ66KjDRcPECGUjTHLC-qNBZ-ZVhJ9Gu_D9ON3LWkyju8PQl2RXC-HLFjw-Aqrp6ktQNwdO3E424D64MuRi",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
