@@ -5741,7 +5741,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-2.jpg",
     "rating": "6.5",
     "votes": null,
-    "durasi": "7 eps",
+    "durasi": "23 Menit",
     "episodes_count": 7,
     "genre": [
       "Adventure",
@@ -8020,6 +8020,14 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/55lawLCJ1VEu",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/btTf0PXu3QeP",
             "default": false,
             "source": "anoboy"
           }
