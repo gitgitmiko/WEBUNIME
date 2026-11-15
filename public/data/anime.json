@@ -4751,8 +4751,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Yowaki-M2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [],
     "sinopsis": "Anime Yowaki Max.",
     "related": [],
@@ -4970,53 +4970,36 @@
             "nume": "5"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Yowaki Max Episode 7",
+        "slug": "yowaki-max-episode-7",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-7/",
+        "date": "",
+        "released_at": "2026-11-15T17:00:23.447Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/KkK4aO7Db5",
+            "default": true,
+            "post": "55357",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyEiYR6HsSjyawIw7ivKfLeBpkR-qj9kpxC1bPK5Den9G1KJ0ok41IIk7C2OWiAbuOiu8Umg3eYU0mWUNOkOMa-o_4jlPm0BAPoOu2nfLgyVrDfcQg_xt81ATK404RSYxOeHeBv&origin=sameguru2.blogspot.com",
-        "default": true,
-        "post": "55211",
-        "nume": "1"
-      },
-      {
-        "no": 2,
         "server": "vip-streaming",
         "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/rlWMO4HDug",
-        "default": false,
-        "post": "55211",
-        "nume": "2"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/Tkw00RDS#QZVhD-ZBIZjx_KJMShJGQWys164mJn1USdsRfwex9Rk",
-        "default": false,
-        "post": "55211",
-        "nume": "3"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/Do5n0KQD#9HhDN2BfTXRwXEpv8XtHVRK7PHqF3OpC3eZRsM9GPiU",
-        "default": false,
-        "post": "55211",
+        "url": "https://filedon.co/embed/KkK4aO7Db5",
+        "default": true,
+        "post": "55357",
         "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/SwIyBSTT#HA6iy2Bjc5cPSn-W3it8gIye26OSQaEAamr8rAzC-Vo",
-        "default": false,
-        "post": "55211",
-        "nume": "5"
       }
     ],
     "id": 14
@@ -5363,6 +5346,30 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwDx9i31cGGkTnIvJX_CvZQlIdRdjHDup2Tt6X99tc1BSzdW50CrTXT6sA1RH8v69hfgY8mBWY2QdQzm4h07nYy6L41m50o5P1fIaSqS3olBD-Ci4weDyTs2Dqpr_b7P_0Gg_w",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/aUILaE0r33no",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/iNvP1rtOF7Kh",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 8,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/BsS6pu0wEk50",
             "default": false,
             "source": "anoboy"
           }
@@ -7083,7 +7090,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Yozakura-san%20Chi%20no%20Daisakusen%20Season%202%20Part%202.jpg",
     "rating": "7.6",
     "votes": "",
-    "durasi": "6 eps",
+    "durasi": "24 Menit",
     "episodes_count": 6,
     "genre": [
       "Action",
@@ -7342,7 +7349,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Aoashi%20Season%202.jpg",
     "rating": "8.1",
     "votes": "",
-    "durasi": "7 eps",
+    "durasi": "24 Menit",
     "episodes_count": 7,
     "genre": [
       "Sports",
@@ -7590,6 +7597,14 @@
             "url": "https://www.blogger.com/video.g?token=AD6v5dxELstRdtXrkdWgER2-6sDeQSlPfjskIGJjPpZu-Ni0sDPfn42xR2ozjfcHm3bHg_X9qTJMAn5_V9BPMeG15IfO9oBOLSt1ycJHe_KAXcUH-rN18o-8aWx7gfHENGOnq1b395U",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/EpgiB462jbUK",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -7625,7 +7640,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Ojisan%20wa%20Kawaii%20Mono%20ga%20Osuki.jpg",
     "rating": "6.6",
     "votes": "",
-    "durasi": "7 eps",
+    "durasi": "23 Menit",
     "episodes_count": 7,
     "genre": [
       "Comedy"
@@ -7907,8 +7922,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Action",
       "Adventure",
@@ -8133,6 +8148,23 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 6,
+        "title": "Dragon Ball Super: Beerus Episode 6",
+        "slug": "dragon-ball-super-beerus-episode-6",
+        "source": "https://anoboy.at/2026/11/dragon-ball-super-beerus-episode-6/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyrZmOfJj-hVF5Z1LDOoUFSLGYO7AxmhD8IObCjHX2L8Ti2EoYcwB6rm4gKIYPaQd9OjUSRGD9LsPdG-Fi0lUv9KeNpibY_sjQKa0-VPPS-xEL5aOAs7A39QxZAVqg6mApVC_mY",
+            "default": true,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -8168,8 +8200,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Shinja-Zero-no-Megami-sama-to-Hajimeru-Isekai-Kouryaku.jpg",
     "rating": "6.6",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 5,
+    "durasi": "6 eps",
+    "episodes_count": 6,
     "genre": [
       "Fantasy",
       "Isekai",
@@ -8402,6 +8434,31 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/SjEYGYWDm3ya",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 6,
+        "title": "Shinja Zero no Megami-sama to Hajimeru Isekai Kouryaku Episode 6",
+        "slug": "shinja-zero-no-megami-sama-to-hajimeru-isekai-kouryaku-episode-6",
+        "source": "https://anoboy.at/2026/11/shinja-zero-no-megami-sama-episode-6/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dytN5XOBkOp305I3bd5Q3LCfVsy9c-2oCngCsiKMR1Io30fVOHzel5rN2gNTI2CXQZ0tQEbLcFiLcyeF5vImoKLi1r1Z58QcFevSQE0u_YSYxqk-eIOVIkF4OB_NCw2A2Y0g7c7",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyq6SXorTGDxQoC2eRMrAx47jG_JGa18w3pdLWMX3MFYJqJc15_Q6F_yil_zygNFXp5fwXes-pxnly16KjNfuhgs8RbrVz88Oai4p_utlZ3JHYctN6Mdt1NcAUadAKI0LB2yCNn",
             "default": false,
             "source": "anoboy"
           }
@@ -13437,7 +13494,7 @@
     "rating": "6.4",
     "votes": "",
     "durasi": "24 Menit",
-    "episodes_count": 6,
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Gore",
@@ -13676,6 +13733,33 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Tank Chair Episode 7",
+        "slug": "tank-chair-episode-7",
+        "source": "https://v2.samehadaku.how/tank-chair-episode-7/",
+        "date": "",
+        "released_at": "2026-11-15T17:00:21.711Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/ENhxxIJS#CxhN735KA9NQymGp0TG2hWQWQFA8sx6bHEXsGo3jXNE",
+            "default": true,
+            "post": "55361",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyAm4-29Z9HWrDS0bHujFIwKb90dU9MsEHv_bw2I0NW8LKYcZzN5Ac643XpGlMQDp233BjDJs0dnHBtlKGe47BQdbwKPi-vQCMl5oZUz8noWARKITxVKCCYkd2FOQxlrlTl6ls",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -13683,9 +13767,9 @@
         "no": 1,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/TgxzmSiB#0rdS0UYLAU1lOujEKoJyYSdREaN67NnFn6TJXru2EQs",
+        "url": "https://mega.nz/embed/ENhxxIJS#CxhN735KA9NQymGp0TG2hWQWQFA8sx6bHEXsGo3jXNE",
         "default": true,
-        "post": "54757",
+        "post": "55361",
         "nume": "1"
       }
     ],
@@ -13702,8 +13786,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Yowaki%20Max%20Reijou%20nanoni,%20Ratsuwan%20Konyakusha-sama%20no%20Kake%20ni%20Notte%20Shimatta.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Romance",
       "Shoujo"
@@ -13923,6 +14007,31 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dwIhZ6OICnCfdaPiZwhN8MI0vi-ZSTphrevaxYUaL3zM3BheGjdFmogNoKznYDqs25G0oE6IYVqy4DqLr_2YVRuOKgMTLlDOdkWCR5-pDj-OeVH1wpk_pstPMR_dVEf6DbW-E0g",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Yowaki Max Reijou Episode 7",
+        "slug": "yowaki-max-reijou-episode-7",
+        "source": "https://anoboy.at/2026/11/yowaki-max-reijou-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dww0xLffUnUwgdVE-EvgPp124O5EqTo2f2ZGyrR38PdxEG89d-UXzuBg0Irsiz_6dGJkhosoEkiTCRQYBxD6tlef5OqGWJx15J1ps1oxaxt-nJCMTYT-m3i5ZNSwvhcdBmWE2FT",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyb0H7sLvFMGE5CWP6hKNJ2QIy-cabfWdmxp_FyE72mV56cgZa7aveHqzsIDhifuRMnrhTYoDiFbc39mNI5RPFeReVWRIzxnvJtAUyT3e7WL1pdUTiezkP8mo-EwsK0gV6RFQ",
             "default": false,
             "source": "anoboy"
           }
@@ -17958,8 +18067,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Tempat%20Item%20no%20Chikara.jpg",
     "rating": "7.4",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Fantasy"
@@ -18197,6 +18306,23 @@
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/k6273B0EbHm6",
             "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Tempal: Item no Chikara Episode 8",
+        "slug": "tempal-item-no-chikara-episode-8",
+        "source": "https://anoboy.at/2026/11/tempal-item-no-chikara-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx0RV3GJi-9csB12YT2pHbF2rn-mBLjThE4SbbZjxqPNp0naFsci-siXFpSt91CPIJe3xyTM7d8Ph12YxBt8HzDNOeWoqsRUfeHcEwXsfKS3JeEWPvBwJpLIjiSqMiIKvC7-7A",
+            "default": true,
             "source": "anoboy"
           }
         ]
@@ -18699,7 +18825,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/09/159859.jpg",
     "rating": "7.1",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "23 Menit",
     "episodes_count": 8,
     "genre": [
       "Adventure",
