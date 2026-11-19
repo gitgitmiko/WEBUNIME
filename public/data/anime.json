@@ -19476,8 +19476,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/FX-Senshi-Kurumi-chan.jpg",
     "rating": "7.3",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Seinen"
     ],
@@ -19952,43 +19952,35 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "FX Senshi Kurumi-chan Episode 8",
+        "slug": "fx-senshi-kurumi-chan-episode-8",
+        "source": "https://v2.samehadaku.how/fx-senshi-kurumi-chan-episode-8/",
+        "date": "",
+        "released_at": "2026-11-19T14:00:28.050Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/B6IVGABZ#W1kx7XZ4NKa_HtCJfJcCDByvDaSSA8uR7IVVo6HJFKs",
+            "default": true,
+            "post": "55431",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/gOHy0T0dhM",
-        "default": true,
-        "post": "55274",
-        "nume": "2"
-      },
-      {
-        "no": 2,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/xQ9BGSAY#uH4tNqQA6Ls9Shc4Hw6XjSHfDiTgo19V7VWF0WR6_7E",
-        "default": false,
-        "post": "55274",
-        "nume": "3"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/NB1XTDaa#pcZbqzY8q9lr91RdwRozTqnJ1N22hRwRU03WuBqo-sg",
-        "default": false,
-        "post": "55274",
-        "nume": "4"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/Ad9BXADY#P21zfMIeugsA6zyWVXaRenjuvNvUcevzCRWGif-lpS8",
-        "default": false,
-        "post": "55274",
+        "url": "https://mega.nz/embed/B6IVGABZ#W1kx7XZ4NKa_HtCJfJcCDByvDaSSA8uR7IVVo6HJFKs",
+        "default": true,
+        "post": "55431",
         "nume": "5"
       }
     ],
