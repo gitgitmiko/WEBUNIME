@@ -1,6 +1,82 @@
 [
   {
     "type": "series",
+    "nama": "He Who Can't Marry",
+    "judul": "He Who Can't Marry (2006)",
+    "tahun": "2006",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-he-who-cant-marry-2006-lk21.jpg",
+    "rating": "8.0",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "sinopsis": "Seorang arsitek berbakat berusia 40 tahun senang hidup sendiri dan kurang pandai bergaul dengan orang lain. Ia memiliki tiga teman perempuan. Apakah ia akan menikah suatu hari nanti?\n\nSutradara: Hisashi Ueda, Yoshige Miyake, Takashi Komatsu\n\nBintang Film: Hiroshi Abe, Takashi Tsukamoto, Toshinori Omi, Rieko Miura, Mitsuko Kusabue\n\nNegara: Japan\n\nVotes: 31",
+    "slug": "he-who-cant-marry-2006",
+    "source": "https://tv.nontondrama.vip/he-who-cant-marry-2006",
+    "list_source": "https://lk21official.fun/he-who-cant-marry-2006",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "He Who Can't Marry - Season 1 Episode 1 (2006)",
+        "slug": "he-who-cant-marry-season-1-episode-1-2006",
+        "source": "https://tv.nontondrama.vip/he-who-cant-marry-season-1-episode-1-2006",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/FZl1K2KlPh6x-nDGtHsE3w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/MwBDH92XRUm3cghRC67FWA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9dQUKyhfFuXW2PsSswqC3g",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/FZl1K2KlPh6x-nDGtHsE3w",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/MwBDH92XRUm3cghRC67FWA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/9dQUKyhfFuXW2PsSswqC3g",
+        "default": false
+      }
+    ],
+    "id": 711,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Miracles of the ER",
     "judul": "Miracles of the ER (2026)",
     "tahun": "2026",
