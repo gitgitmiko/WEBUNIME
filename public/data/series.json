@@ -1,13 +1,148 @@
 [
   {
     "type": "series",
+    "nama": "Sweet Enemy",
+    "judul": "Sweet Enemy (2017)",
+    "tahun": "2017",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-sweet-enemy-2017-lk21.jpg",
+    "rating": "2.0",
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
+    "seasons_count": 1,
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Oh Dal Nim dituduh secara tidak adil atas kasus pembunuhan. Ia memutuskan untuk membalas dendam kepada mereka yang bertanggung jawab atas penderitaannya\n\nBintang Film: Park Eun-hye, Lee Jae-woo, Park Young-rin, Kim Hee-Jung, Park Ji-yeon\n\nNegara: South Korea\n\nVotes: 1",
+    "slug": "sweet-enemy-2017",
+    "source": "https://tv.nontondrama.vip/sweet-enemy-2017",
+    "list_source": "https://tv12.lk21official.cc/sweet-enemy-2017",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Sweet Enemy - Season 1 Episode 1 (2017)",
+        "slug": "sweet-enemy-season-1-episode-1-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-1-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-kUs4ElBuwASAoumgjRXMw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/GOcAWSsgIzg6iC9W3qd2VA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/puh5GKZVIbDNciLd14Dg0w",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Sweet Enemy - Season 1 Episode 2 (2017)",
+        "slug": "sweet-enemy-season-1-episode-2-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-2-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/mep_rchPMt3hzojGjlYFLw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gXNh6uwwqHikmL71Oeun6g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/LqukDD2I-mi_lFKrvU1XZQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Sweet Enemy - Season 1 Episode 3 (2017)",
+        "slug": "sweet-enemy-season-1-episode-3-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-3-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/9kJ6sKoVRKs5W1Q9mANZUQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/wssrMh4vYpDQBTDG-u18zA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bqGstJbg07Y7FxXX0Ur90w",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/9kJ6sKoVRKs5W1Q9mANZUQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/wssrMh4vYpDQBTDG-u18zA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/bqGstJbg07Y7FxXX0Ur90w",
+        "default": false
+      }
+    ],
+    "id": 715,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "The Countess of Monte Cristo",
     "judul": "The Countess of Monte Cristo (2026)",
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-countess-monte-cristo-2026-lk21.jpg",
     "rating": "4.4",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -50,6 +185,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The Countess of Monte Cristo - Season 1 Episode 2 (2026)",
+        "slug": "countess-monte-cristo-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/countess-monte-cristo-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ZZ2j-4cXxvAbq1HcKV0Twg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/uT2cg82DXEp3VwP94u8shw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/zC-liqbZDRaYsubPiMKcxw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -57,26 +222,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/4qZmThNHtiwsJrxrkaJtlg",
+        "url": "https://videonode.de/iframe3/p2p/ZZ2j-4cXxvAbq1HcKV0Twg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/lSkOMvzLPDrNo_ljeiJicA",
+        "url": "https://videonode.de/iframe3/cast/uT2cg82DXEp3VwP94u8shw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/TdF1jSN_7OYgyr-aMr5uUQ",
+        "url": "https://videonode.de/iframe3/hydrax/zC-liqbZDRaYsubPiMKcxw",
         "default": false
       }
     ],
-    "id": 714,
-    "is_new": true
+    "id": 714
   },
   {
     "type": "series",
@@ -755,8 +919,8 @@
     "tahun": "2006",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-he-who-cant-marry-2006-lk21.jpg",
     "rating": "8.0",
-    "durasi": "21 eps · S.2",
-    "episodes_count": 21,
+    "durasi": "22 eps · S.2",
+    "episodes_count": 22,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -1396,6 +1560,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 10,
+        "title": "He Who Can't Marry - Season 2 Episode 10 (2006)",
+        "slug": "he-who-cant-marry-season-2-episode-10-2006",
+        "source": "https://tv.nontondrama.vip/he-who-cant-marry-season-2-episode-10-2006",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/iRPBgWrvn37h7x-FRLJFwQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/CND4316iuQwHicH2LpMAOA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/OGc6jKRceFJuKeVW0cB_Tg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1403,21 +1597,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/l6bZphx5l1XVAAySyuJi3Q",
+        "url": "https://videonode.de/iframe3/p2p/iRPBgWrvn37h7x-FRLJFwQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/KmrY--wMSwWAkY5qL6MqSQ",
+        "url": "https://videonode.de/iframe3/cast/CND4316iuQwHicH2LpMAOA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/p97YabuTm0_dWihOPMgbMA",
+        "url": "https://videonode.de/iframe3/hydrax/OGc6jKRceFJuKeVW0cB_Tg",
         "default": false
       }
     ],
