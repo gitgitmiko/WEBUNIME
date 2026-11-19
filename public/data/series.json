@@ -135718,8 +135718,8 @@
     "tahun": "2012",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/06/film-chicago-fire-2012-lk21-d21.jpg",
     "rating": "8.0",
-    "durasi": "301 eps · S.15",
-    "episodes_count": 301,
+    "durasi": "302 eps · S.15",
+    "episodes_count": 302,
     "seasons_count": 15,
     "genre": [
       "Drama",
@@ -146362,6 +146362,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 15,
+        "episode": 7,
+        "title": "Chicago Fire - Season 15 Episode 7 (2012)",
+        "slug": "chicago-fire-season-15-episode-7-2012",
+        "source": "https://tv.nontondrama.vip/chicago-fire-season-15-episode-7-2012",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/AF-u_yxy1OFtEaPyrVd85A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3Q9pwicO_ZtC0Qn-aXDP6g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/SCkoOIts4HehUuw60F_HoA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -146369,21 +146399,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/V7DTFwZcB4e5n5CePSYxoA",
+        "url": "https://videonode.de/iframe3/p2p/AF-u_yxy1OFtEaPyrVd85A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/4AwQFS3ryiemddjl4B6oyQ",
+        "url": "https://videonode.de/iframe3/cast/3Q9pwicO_ZtC0Qn-aXDP6g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-7cVu_byD_YvIEhBhHcB7A",
+        "url": "https://videonode.de/iframe3/hydrax/SCkoOIts4HehUuw60F_HoA",
         "default": false
       }
     ],
