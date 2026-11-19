@@ -1,5 +1,48 @@
 [
   {
+    "nama": "Madden",
+    "judul": "Madden (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-madden-2026-lk21.jpg",
+    "rating": "6.7",
+    "quality": "HD",
+    "durasi": "1j 52m",
+    "genre": [
+      "Biography",
+      "Comedy",
+      "Drama",
+      "Sport"
+    ],
+    "sinopsis": "Perjalanan luar biasa John Madden—mulai dari kemitraannya bersama Al Davis dan Raiders yang berhasil menjuarai Super Bowl, hingga menciptakan Madden NFL, dan menjadi salah satu sosok paling ikonik dalam sejarah sepak bola Amerika.\n\nBudget: USD 75,000,000\nSoundtrack: Time Has Come Today\n\nSubtitle: retail\n\nSutradara: David O. Russell\n\nBintang Film: Nicolas Cage, Christian Bale, Kathryn Hahn, Sienna Miller, John Mulaney\n\nNegara: United States\n\nVotes: 1.400\n\nRelease: 18 Nov 2026\n\nUpdated: 19 Nov 2026 21:05:03",
+    "slug": "madden-2026",
+    "source": "https://tv12.lk21official.cc/madden-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/PxkyH-b7mefLOAwzQuGFaA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/MZTFJuFBMKixSJzeD4AseQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/vLEDnj1t6lo7ihMKRLBlqw",
+        "default": false
+      }
+    ],
+    "id": 485,
+    "is_new": true
+  },
+  {
     "nama": "Guarding Stars",
     "judul": "Guarding Stars (2026)",
     "tahun": "2026",
@@ -38,8 +81,7 @@
         "default": false
       }
     ],
-    "id": 484,
-    "is_new": true
+    "id": 484
   },
   {
     "nama": "Always Lalisa",
