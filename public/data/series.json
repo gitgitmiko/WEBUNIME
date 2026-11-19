@@ -6,8 +6,8 @@
     "tahun": "2017",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-sweet-enemy-2017-lk21.jpg",
     "rating": "2.0",
-    "durasi": "41 eps · S.1",
-    "episodes_count": 41,
+    "durasi": "42 eps · S.1",
+    "episodes_count": 42,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1246,6 +1246,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 42,
+        "title": "Sweet Enemy - Season 1 Episode 42 (2017)",
+        "slug": "sweet-enemy-season-1-episode-42-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-42-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ZGdcU8eICjnAiLuWLI87tQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/G6eHFfEJBNNjiF9Dqu77eQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/X93VkHSHuXvGxPC5pTVC9Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1253,21 +1283,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/jpJlDGBtXl4QJJXYcg0Arw",
+        "url": "https://videonode.de/iframe3/p2p/ZGdcU8eICjnAiLuWLI87tQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/SRxpzvbBEjBb9Rtz89RodQ",
+        "url": "https://videonode.de/iframe3/cast/G6eHFfEJBNNjiF9Dqu77eQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/eXsJchtArLYUL8FJxmdltA",
+        "url": "https://videonode.de/iframe3/hydrax/X93VkHSHuXvGxPC5pTVC9Q",
         "default": false
       }
     ],
@@ -582043,8 +582073,8 @@
     "tahun": "2022",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2022/09/film-the-lord-of-the-rings-the-rings-of-power-2022-lk21-d21.jpg",
     "rating": "0.0",
-    "durasi": "8 eps · S.2",
-    "episodes_count": 8,
+    "durasi": "20 eps · S.3",
+    "episodes_count": 20,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -582626,6 +582656,126 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 3,
+        "episode": 1,
+        "title": "The Lord of the Rings: The Rings of Power - Season 3 Episode 1 (2022)",
+        "slug": "lord-rings-rings-power-season-3-episode-1-2022",
+        "source": "https://tv.nontondrama.vip/lord-rings-rings-power-season-3-episode-1-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/YAFpLgchWtkbqEMcnLuuiA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/g-LXUMNwlCNl6i3GGs-5Iw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/vAjrWOf6eKglX14CujVJPw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 2,
+        "title": "The Lord of the Rings: The Rings of Power - Season 3 Episode 2 (2022)",
+        "slug": "lord-rings-rings-power-season-3-episode-2-2022",
+        "source": "https://tv.nontondrama.vip/lord-rings-rings-power-season-3-episode-2-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/BGpenABio-vAWfIxaOoooQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Kc1gjkric9L2JyQ3Gy3ccA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ySqY6j-Y5uszlitQ7QN83A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 3,
+        "title": "The Lord of the Rings: The Rings of Power - Season 3 Episode 3 (2022)",
+        "slug": "lord-rings-rings-power-season-3-episode-3-2022",
+        "source": "https://tv.nontondrama.vip/lord-rings-rings-power-season-3-episode-3-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nXG8DHXMi_LnFUejNllA-w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Duy2LwxC_TBxqO1ZHK1ZGA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/7WxoX-2o8_n3VyvkjeCbXg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 3,
+        "episode": 5,
+        "title": "The Lord of the Rings: The Rings of Power - Season 3 Episode 5 (2022)",
+        "slug": "lord-rings-rings-power-season-3-episode-5-2022",
+        "source": "https://tv.nontondrama.vip/lord-rings-rings-power-season-3-episode-5-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/vRekaDSK7Et8Qohf-7qIIg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1Z7xuR8IDz59BxtKZr-pkg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/wNRGD4eoifkSNd-3UHK2qg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -582633,28 +582783,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe/p2p/f852759f6ccf572b164becf32334fac0",
+        "url": "https://videonode.de/iframe3/p2p/vRekaDSK7Et8Qohf-7qIIg",
         "default": true
       },
       {
         "no": 2,
-        "server": "turbovip",
-        "label": "GANTI PLAYER TURBOVIP",
-        "url": "https://videonode.de/iframe/turbovip/66ff60692ea0c",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/1Z7xuR8IDz59BxtKZr-pkg",
         "default": false
       },
       {
         "no": 3,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe/cast/dv1eezp3hcmu",
-        "default": false
-      },
-      {
-        "no": 4,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe/hydrax/ruhj1gi90",
+        "url": "https://videonode.de/iframe3/hydrax/wNRGD4eoifkSNd-3UHK2qg",
         "default": false
       }
     ]
