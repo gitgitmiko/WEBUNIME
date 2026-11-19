@@ -185004,8 +185004,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-welcome-back-first-love-2026-lk21.jpg",
     "rating": "9.2",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -185187,6 +185187,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Welcome back, First love. - Season 1 Episode 7 (2026)",
+        "slug": "welcome-back-first-love-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/welcome-back-first-love-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/VGXwMKrUG8c0aYPlsn45jg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Twwsb8Ol-Vtt1IT_8eKktQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/NmKnUUSQw178CgGNOFKoXA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -185194,21 +185224,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/2XL7m2p9bzez9581cPJGxw",
+        "url": "https://videonode.de/iframe3/p2p/VGXwMKrUG8c0aYPlsn45jg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/pN9GM2sVMtb1GJT3AJXC4w",
+        "url": "https://videonode.de/iframe3/cast/Twwsb8Ol-Vtt1IT_8eKktQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/1vS3AZUXkcclgkU8_ZtGEA",
+        "url": "https://videonode.de/iframe3/hydrax/NmKnUUSQw178CgGNOFKoXA",
         "default": false
       }
     ],

@@ -1,5 +1,90 @@
 [
   {
+    "nama": "Anbil Avan",
+    "judul": "Anbil Avan (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-anbil-avan-2026-lk21.jpg",
+    "rating": "9.6",
+    "quality": "HD",
+    "durasi": "2j 28m",
+    "genre": [
+      "Action",
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "sinopsis": "Sepasang suami istri berusaha memulai kehidupan yang bahagia bersama, namun masalah tak terduga menjebak mereka dalam situasi yang mencekam, yang memaksa mereka untuk berjuang demi kelangsungan hidup mereka.\n\nWorldwide Gross: USD 16,844\n\nSubtitle: workkeerr\n\nSutradara: Karthikeyan Ramakrishnan\n\nBintang Film: Ashok Selvan, Preity Mukhundhan, Revathi, Sabumon Abdusamad, S. Danushan\n\nNegara: India\n\nVotes: 2.500\n\nRelease: 02 Oct 2026\n\nUpdated: 19 Nov 2026 21:47:02",
+    "slug": "anbil-avan-2026",
+    "source": "https://tv12.lk21official.cc/anbil-avan-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/YE3wf69d7FKEjiwcZvTdDg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/Rk6UhFFxSIzYwLo9kXzMRQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/SStPErm7rF37V1KUNgGSuw",
+        "default": false
+      }
+    ],
+    "id": 486,
+    "is_new": true
+  },
+  {
+    "nama": "Ark Exitus",
+    "judul": "Ark Exitus (2020)",
+    "tahun": "2020",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-ark-exitus-2020-lk21.jpg",
+    "rating": "7.6",
+    "quality": "HD",
+    "durasi": "39m",
+    "genre": [
+      "Short",
+      "Action",
+      "Sci-fi"
+    ],
+    "sinopsis": "Doppelganger dari alam semesta paralel telah menyamar sebagai lawan mereka. Untuk menghentikan ancaman invasi besar-besaran oleh para doppelganger tersebut, Structure—sebuah badan rahasia yang bertugas mengawasi perjalanan antar dimensi—telah mengirimkan pembunuh bayarannya yang terbaik.\n\nAwards: 7 wins & 6 nominations\nBudget: USD 30,000\n\nSubtitle: workkeerr\n\nSutradara: Johnny Yong Bosch\n\nBintang Film: Johnny Yong Bosch, Jason Narvy, Soji Arai, Jennifer Almaguer, Thomas Barron Sampson\n\nNegara: United States\n\nVotes: 36\n\nRelease: 31 Oct 2020\n\nUpdated: 19 Nov 2026 21:40:02",
+    "slug": "ark-exitus-2020",
+    "source": "https://tv12.lk21official.cc/ark-exitus-2020",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/hoxBVT8FNiuaoSp5XrkKAA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/VwXuKp3jf3yyEwlai7jNcQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/OUvJs-CjRLS93SZg7decpg",
+        "default": false
+      }
+    ],
+    "id": 487,
+    "is_new": true
+  },
+  {
     "nama": "Madden",
     "judul": "Madden (2026)",
     "tahun": "2026",
@@ -39,8 +124,7 @@
         "default": false
       }
     ],
-    "id": 485,
-    "is_new": true
+    "id": 485
   },
   {
     "nama": "Guarding Stars",
