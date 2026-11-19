@@ -6,8 +6,8 @@
     "tahun": "2006",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-he-who-cant-marry-2006-lk21.jpg",
     "rating": "8.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -47,6 +47,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "He Who Can't Marry - Season 1 Episode 2 (2006)",
+        "slug": "he-who-cant-marry-season-1-episode-2-2006",
+        "source": "https://tv.nontondrama.vip/he-who-cant-marry-season-1-episode-2-2006",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hUkPvW5oz4RahgRtnWvWqg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/mrHU1D84_eI1KDYS_n-BHg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/oCNU7HAmAUcxa3oHkVEl7Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -54,26 +84,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/FZl1K2KlPh6x-nDGtHsE3w",
+        "url": "https://videonode.de/iframe3/p2p/hUkPvW5oz4RahgRtnWvWqg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/MwBDH92XRUm3cghRC67FWA",
+        "url": "https://videonode.de/iframe3/cast/mrHU1D84_eI1KDYS_n-BHg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/9dQUKyhfFuXW2PsSswqC3g",
+        "url": "https://videonode.de/iframe3/hydrax/oCNU7HAmAUcxa3oHkVEl7Q",
         "default": false
       }
     ],
-    "id": 711,
-    "is_new": true
+    "id": 711
   },
   {
     "type": "series",
