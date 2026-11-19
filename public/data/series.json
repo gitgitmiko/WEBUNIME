@@ -160473,8 +160473,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-ncis-new-york-2026-lk21.jpg",
     "rating": "7.5",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -160598,21 +160598,58 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "NCIS: New York - Season 1 Episode 5 (2026)",
+        "slug": "ncis-new-york-season-1-episode-5-2026",
+        "source": "https://tv.nontondrama.vip/ncis-new-york-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/weg8Tx15hoiOVAIhnpX3rQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/oQ28Bz4RaVcbGDXRrCj2zA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/p7jqN2HKsFNH1qrEsryZGw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/0hSKxpQHBarMzQDzf0P-YA",
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/weg8Tx15hoiOVAIhnpX3rQ",
         "default": true
       },
       {
         "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/oQ28Bz4RaVcbGDXRrCj2zA",
+        "default": false
+      },
+      {
+        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/sAZx1haNXeTsYADZaEqhYA",
+        "url": "https://videonode.de/iframe3/hydrax/p7jqN2HKsFNH1qrEsryZGw",
         "default": false
       }
     ],
