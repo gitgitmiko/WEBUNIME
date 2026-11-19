@@ -6,8 +6,8 @@
     "tahun": "2017",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-sweet-enemy-2017-lk21.jpg",
     "rating": "2.0",
-    "durasi": "48 eps · S.1",
-    "episodes_count": 48,
+    "durasi": "50 eps · S.1",
+    "episodes_count": 50,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -1456,6 +1456,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 49,
+        "title": "Sweet Enemy - Season 1 Episode 49 (2017)",
+        "slug": "sweet-enemy-season-1-episode-49-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-49-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wQFd4Gjj9ajMt_rw0UyjjQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/n2MWq5-Ke2Pbxd1f8vW7sw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/IpKdTafH3HslZL3MhTAM9w",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 50,
+        "title": "Sweet Enemy - Season 1 Episode 50 (2017)",
+        "slug": "sweet-enemy-season-1-episode-50-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-50-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/c9iWcqFyLk0mkK3MmxWY6A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0B6r29_pneJFBJGAYFb4Vw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/X1rUrduqeFnIoIgQDqf7uQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1463,21 +1523,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Ni-FL65PGyxcBi8A_sVKsw",
+        "url": "https://videonode.de/iframe3/p2p/c9iWcqFyLk0mkK3MmxWY6A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/_rmskl4PMauen5gsR_Na2g",
+        "url": "https://videonode.de/iframe3/cast/0B6r29_pneJFBJGAYFb4Vw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/eAwmt25e8xN8wU8u7A88OA",
+        "url": "https://videonode.de/iframe3/hydrax/X1rUrduqeFnIoIgQDqf7uQ",
         "default": false
       }
     ],
