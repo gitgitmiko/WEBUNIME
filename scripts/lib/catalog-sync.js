@@ -1387,16 +1387,33 @@ async function ensureSeriesFromLatestListings(dataDir, listings) {
   };
 }
 
+/**
+ * Halaman "Series Terbaru" kini ada di domain nontondrama (lk21 → 404).
+ * Coba nontondrama dulu, lalu LK21 sebagai cadangan.
+ */
+async function fetchSeriesLatestHtml(page = 1) {
+  const suffix = page === 1 ? "/latest-series" : `/latest-series/page/${page}`;
+  const bases = [...new Set([DRAMA_BASE, LIST_BASE].filter(Boolean))];
+  let lastErr;
+  for (const base of bases) {
+    const root = String(base).replace(/\/$/, "");
+    try {
+      const res = await fetchHtml(`${root}${suffix}`, `${root}/`);
+      if (extractListings(res.html, { seriesMode: true }).length) return res;
+      lastErr = new Error(`tanpa kartu series ${root}${suffix}`);
+    } catch (err) {
+      lastErr = err;
+    }
+  }
+  throw lastErr || new Error("domain series tidak tersedia");
+}
+
 export async function syncSeriesLatestCatalog(dataDir) {
   const allListings = [];
   for (let page = 1; page <= SERIES_LATEST_PAGES; page++) {
-    const url =
-      page === 1
-        ? `${LIST_BASE}/latest-series`
-        : `${LIST_BASE}/latest-series/page/${page}`;
-    process.stdout.write(`[lk21-sync] series-latest ${url} ... `);
+    process.stdout.write(`[lk21-sync] series-latest page ${page} ... `);
     try {
-      const { html } = await fetchHtml(url);
+      const { html } = await fetchSeriesLatestHtml(page);
       const pageItems = extractListings(html, { seriesMode: true });
       console.log(`${pageItems.length} kartu`);
       allListings.push(...pageItems);
@@ -1728,11 +1745,16 @@ export async function checkFirstPageForNew(rootDir) {
         known.add(`${s.slug}#${Number(ep.season) || 1}#${Number(ep.episode)}`);
       }
     }
-    const { html: seriesHtml } = await fetchHtml(`${LIST_BASE}/latest-series`);
-    report.series = extractListings(seriesHtml, { seriesMode: true })
-      .filter((l) => l.slug && l.episodes_count)
-      .map((l) => `${l.slug}#${parseSeasonNumber(l.season_label)}#${Number(l.episodes_count)}`)
-      .filter((key) => !known.has(key));
+    try {
+      const { html: seriesHtml } = await fetchSeriesLatestHtml(1);
+      report.series = extractListings(seriesHtml, { seriesMode: true })
+        .filter((l) => l.slug && l.episodes_count)
+        .map((l) => `${l.slug}#${parseSeasonNumber(l.season_label)}#${Number(l.episodes_count)}`)
+        .filter((key) => !known.has(key));
+    } catch (err) {
+      // Series gagal jangan sampai membuang hasil cek film.
+      report.errors.push(`lk21-series: ${err.message}`);
+    }
   } catch (err) {
     report.errors.push(`lk21: ${err.message}`);
   } finally {

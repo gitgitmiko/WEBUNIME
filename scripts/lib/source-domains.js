@@ -62,6 +62,9 @@ export const samehadakuDomain = createSiteDomain({
   envVar: "SAMEHADAKU_BASE_URL",
   knownBases: ["https://v2.samehadaku.how"],
   host: "(?:v\\d+\\.)?samehadaku\\.[a-z]{2,10}(?:\\.[a-z]{2,4})?",
+  // Probe langsung halaman daftar: domain landing/portal (mis. samehadaku.site)
+  // punya judul "Samehadaku" + link anime-terbaru di beranda, tapi /anime-terbaru/ 404.
+  probePath: "/anime-terbaru/",
   // Hampir selalu tertahan Cloudflare → kepastian lewat verify (Playwright).
   looksLikeSite: (html) => /samehadaku/i.test(pageTitle(html)) && /anime-terbaru/i.test(html),
   guesses: () => [

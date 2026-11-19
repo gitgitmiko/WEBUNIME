@@ -88,8 +88,9 @@ function playersChanged(a, b) {
 }
 
 function listingUrl(page) {
-  if (page <= 1) return `${LIST_BASE}/latest-series`;
-  return `${LIST_BASE}/latest-series/page/${page}`;
+  // Series terbaru pindah ke domain nontondrama (lk21 /latest-series → 404).
+  if (page <= 1) return `${DRAMA_BASE}/latest-series`;
+  return `${DRAMA_BASE}/latest-series/page/${page}`;
 }
 
 function parseSeason(label) {
