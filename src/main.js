@@ -1058,18 +1058,78 @@ function prefersReducedMotion() {
   return Boolean(window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches);
 }
 
+/** Info ukuran gambar (w/h) per URL — dipakai untuk memilih mode hero ambient vs lebar. */
+const artInfoCache = new Map();
+const artProbePending = new Map();
+let heroRenderToken = 0;
+
+function cssUrl(url) {
+  return url ? `url("${String(url).replace(/"/g, "%22")}")` : "";
+}
+
+/** Backdrop TMDB: minta versi lebih besar untuk tampilan layar penuh. */
+function hdArtUrl(url) {
+  return String(url || "").replace(/(image\.tmdb\.org\/t\/p\/)w\d+\//, "$1w1280/");
+}
+
+function probeArt(url) {
+  if (!url) return Promise.resolve(null);
+  if (artInfoCache.has(url)) return Promise.resolve(artInfoCache.get(url));
+  if (artProbePending.has(url)) return artProbePending.get(url);
+  const job = new Promise((resolve) => {
+    const img = new Image();
+    img.decoding = "async";
+    const done = (info) => {
+      artInfoCache.set(url, info);
+      artProbePending.delete(url);
+      resolve(info);
+    };
+    img.onload = () => done({ w: img.naturalWidth, h: img.naturalHeight });
+    img.onerror = () => done(null);
+    img.src = url;
+  });
+  artProbePending.set(url, job);
+  return job;
+}
+
+/** Gambar landscape cukup besar untuk ditampilkan tajam selebar layar. */
+function isWideArt(info) {
+  return Boolean(info && info.w >= 1000 && info.h > 0 && info.w / info.h >= 1.4);
+}
+
+function heroArtFor(movie) {
+  const poster = movie?.thumbnail || movie?.thumbnail_landscape || "";
+  const landscape = movie?.thumbnail_landscape ? hdArtUrl(movie.thumbnail_landscape) : "";
+  return { poster, landscape };
+}
+
+function preloadHeroArt(movie) {
+  if (!movie) return;
+  const { poster, landscape } = heroArtFor(movie);
+  probeArt(poster);
+  probeArt(landscape);
+}
+
+function applyHeroLayer(layer, { poster, landscape }, wide) {
+  if (!layer) return;
+  layer.style.backgroundImage = cssUrl(wide ? landscape : poster);
+  layer.classList.toggle("is-ambient", !wide);
+}
+
 function setHero(movie, { animate = false, direction = 1 } = {}) {
   if (!movie) return;
   heroMovie = movie;
+  const token = ++heroRenderToken;
   const hero = $("#hero");
   const layerA = $("#heroBgA");
   const layerB = $("#heroBgB");
   const content = $(".hero-content");
-  const art = movie.thumbnail_landscape || movie.thumbnail;
-  const url = art ? `url("${String(art).replace(/"/g, "%22")}")` : "";
+  const art = heroArtFor(movie);
+  const knownWide = art.landscape ? isWideArt(artInfoCache.get(art.landscape)) : false;
 
   hero?.classList.toggle("is-dir-next", direction >= 0);
   hero?.classList.toggle("is-dir-prev", direction < 0);
+  hero?.classList.toggle("is-wide", knownWide);
 
   const current = heroBgActive === "a" ? layerA : layerB;
   const incoming = heroBgActive === "a" ? layerB : layerA;
@@ -1079,8 +1139,9 @@ function setHero(movie, { animate = false, direction = 1 } = {}) {
     current?.classList.contains("is-show") &&
     incoming;
 
+  let shown = layerA;
   if (canAnimate) {
-    incoming.style.backgroundImage = url;
+    applyHeroLayer(incoming, art, knownWide);
     incoming.classList.remove("is-show", "is-leave");
     incoming.style.transition = "none";
     void incoming.offsetWidth;
@@ -1089,13 +1150,37 @@ function setHero(movie, { animate = false, direction = 1 } = {}) {
     current.classList.add("is-leave");
     current.classList.remove("is-show");
     heroBgActive = heroBgActive === "a" ? "b" : "a";
+    shown = incoming;
   } else if (layerA) {
-    layerA.style.backgroundImage = url;
+    applyHeroLayer(layerA, art, knownWide);
     layerA.classList.add("is-show");
     layerA.classList.remove("is-leave");
     layerB?.classList.remove("is-show", "is-leave");
     if (layerB) layerB.style.backgroundImage = "";
     heroBgActive = "a";
+  }
+
+  // Landscape belum pernah dicek: tampil ambient dulu, naikkan ke mode lebar bila gambarnya besar.
+  if (art.landscape && !artInfoCache.has(art.landscape)) {
+    probeArt(art.landscape).then((info) => {
+      if (token !== heroRenderToken || !isWideArt(info)) return;
+      applyHeroLayer(shown, art, true);
+      hero?.classList.add("is-wide");
+    });
+  }
+
+  const posterWrap = $("#heroPosterWrap");
+  const posterImg = $("#heroPoster");
+  if (posterWrap && posterImg) {
+    posterWrap.style.setProperty("--poster", cssUrl(art.poster));
+    posterWrap.setAttribute("aria-label", `Lihat detail ${movie.nama || ""}`.trim());
+    if (art.poster) posterImg.src = art.poster;
+    else posterImg.removeAttribute("src");
+    if (!prefersReducedMotion()) {
+      posterWrap.classList.remove("is-swap");
+      void posterWrap.offsetWidth;
+      posterWrap.classList.add("is-swap");
+    }
   }
 
   $("#heroTitle").textContent = movie.nama;
@@ -1160,10 +1245,12 @@ function showHeroSlide(index, userTriggered = false) {
     direction,
   });
   renderHeroDots();
+  if (heroSlides.length > 1) preloadHeroArt(heroSlides[(heroSlideIndex + 1) % heroSlides.length]);
   if (userTriggered) startHeroCarousel();
 }
 
 function stopHeroCarousel() {
+  $("#hero")?.classList.add("is-paused");
   if (heroTimer) {
     clearInterval(heroTimer);
     heroTimer = null;
@@ -1173,6 +1260,15 @@ function stopHeroCarousel() {
 function startHeroCarousel() {
   stopHeroCarousel();
   if (heroSlides.length < 2) return;
+  const hero = $("#hero");
+  hero?.classList.remove("is-paused");
+  // Mulai ulang animasi progress di dot aktif agar sinkron dengan timer.
+  const activeDot = $("#heroDots .hero-dot.is-active");
+  if (activeDot) {
+    activeDot.classList.remove("is-active");
+    void activeDot.offsetWidth;
+    activeDot.classList.add("is-active");
+  }
   heroTimer = setInterval(() => {
     showHeroSlide(heroSlideIndex + 1);
   }, 7000);
@@ -1483,7 +1579,19 @@ async function openModal(movie, opts = {}) {
   const modal = $("#modal");
   const { story, facts } = parseSinopsisDetail(movie.sinopsis);
 
-  $("#modalBanner").style.backgroundImage = `url("${movie.thumbnail}")`;
+  {
+    const art = heroArtFor(movie);
+    const wide = art.landscape ? isWideArt(artInfoCache.get(art.landscape)) : false;
+    const banner = $("#modalBanner");
+    banner.style.backgroundImage = cssUrl(wide ? art.landscape : art.poster);
+    banner.classList.toggle("is-ambient", !wide);
+    $(".modal-hero")?.classList.toggle("is-wide", wide);
+    const modalPoster = $("#modalPoster");
+    if (modalPoster) {
+      if (art.poster) modalPoster.src = art.poster;
+      else modalPoster.removeAttribute("src");
+    }
+  }
   $("#modalTitle").textContent = movie.nama;
   $("#modalMatch").textContent = `${movie.rating ?? "—"} Cocok untukmu`;
   $("#modalYear").textContent = movie.tahun || "";
@@ -2391,6 +2499,7 @@ function bindSearch() {
 function bindActions() {
   $("#heroPlay").addEventListener("click", () => heroMovie && openPlayer(heroMovie));
   $("#heroInfo").addEventListener("click", () => heroMovie && openModal(heroMovie));
+  $("#heroPosterWrap")?.addEventListener("click", () => heroMovie && openModal(heroMovie));
   $("#modalPlay").addEventListener("click", () => {
     if (!activeMovie) return;
     if (isSeries(activeMovie)) {

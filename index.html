@@ -99,8 +99,13 @@
           <div class="hero-bg" id="heroBgB"></div>
         </div>
         <div class="hero-shade"></div>
-        <button type="button" class="hero-nav prev" id="heroPrev" aria-label="Slide sebelumnya">‹</button>
-        <button type="button" class="hero-nav next" id="heroNext" aria-label="Slide berikutnya">›</button>
+        <button type="button" class="hero-nav prev" id="heroPrev" aria-label="Slide sebelumnya">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="button" class="hero-nav next" id="heroNext" aria-label="Slide berikutnya">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </button>
+        <div class="hero-inner">
         <div class="hero-content">
           <h1 class="hero-title" id="heroTitle">—</h1>
           <div class="hero-meta" id="heroMeta"></div>
@@ -110,8 +115,15 @@
               <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>
               Putar
             </button>
-            <button type="button" class="btn btn-info" id="heroInfo">Info Selengkapnya</button>
+            <button type="button" class="btn btn-info" id="heroInfo">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 11v5M12 8h.01"/></svg>
+              Info Selengkapnya
+            </button>
           </div>
+        </div>
+        <button type="button" class="hero-poster" id="heroPosterWrap" aria-label="Lihat detail">
+          <img id="heroPoster" alt="" decoding="async" />
+        </button>
         </div>
         <div class="hero-dots" id="heroDots" role="tablist" aria-label="Carousel unggulan"></div>
       </section>
@@ -268,6 +280,7 @@
         <button class="modal-close" data-close aria-label="Tutup">×</button>
         <div class="modal-hero">
           <div class="modal-banner" id="modalBanner"></div>
+          <img class="modal-poster" id="modalPoster" alt="" decoding="async" />
           <div class="modal-hero-content">
             <h2 class="modal-title" id="modalTitle"></h2>
             <div class="modal-actions">
