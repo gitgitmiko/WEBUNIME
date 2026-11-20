@@ -4153,8 +4153,15 @@ body.is-searching .search-results {
     padding: 0;
   }
 
+  /* Panel setinggi isinya (min. satu layar) agar wadah modal bisa di-scroll */
+  .modal {
+    display: block;
+  }
+
   .modal-panel {
     margin: 0;
+    height: auto;
+    min-height: 100%;
     border-radius: 0;
     animation: fadeIn 0.25s ease;
   }
