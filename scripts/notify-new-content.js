@@ -61,6 +61,16 @@ function titleOf(item) {
   return String(item.judul || item.nama || item.slug || "").trim();
 }
 
+/** Kualitas rilis (HD/SD/CAM...) — saat ini hanya ada di katalog film. */
+function qualityOf(item) {
+  return String(item.quality || item.kualitas || "").trim().toUpperCase();
+}
+
+/** "Judul [HD]" bila kualitas diketahui. */
+function labelOf(f) {
+  return f.quality ? `${f.title} [${f.quality}]` : f.title;
+}
+
 /** Item katalog per jenis, urut sesuai file (terbaru di depan), unik per slug. */
 function catalogItems(spec) {
   const seen = new Set();
@@ -72,7 +82,7 @@ function catalogItems(spec) {
       const slug = String(it?.slug || "").trim().toLowerCase();
       if (!slug || seen.has(slug)) continue;
       seen.add(slug);
-      items.push({ slug, collection, title: titleOf(it), thumbnail: it.thumbnail || "" });
+      items.push({ slug, collection, title: titleOf(it), quality: qualityOf(it), thumbnail: it.thumbnail || "" });
     }
   }
   return items;
@@ -109,15 +119,16 @@ function buildMessage(spec, fresh) {
   const first = fresh[0];
   const single = fresh.length === 1;
   const title = single ? `${spec.label} baru` : `${fresh.length} ${spec.label.toLowerCase()} baru`;
-  const names = fresh.slice(0, 3).map((f) => f.title);
+  const names = fresh.slice(0, 3).map(labelOf);
   const body = single
-    ? first.title
+    ? labelOf(first)
     : names.join(", ") + (fresh.length > names.length ? `, dan ${fresh.length - names.length} lainnya` : "");
   const data = { type: "new_content", kind: spec.kind, title, body, count: String(fresh.length) };
   if (first.thumbnail) data.image = first.thumbnail;
   if (single) {
     data.collection = first.collection;
     data.slug = first.slug;
+    if (first.quality) data.quality = first.quality;
   }
   return { topic: spec.topic, data, android: { priority: "high", ttl: "86400s" } };
 }
