@@ -517,8 +517,8 @@
     "tahun": "2017",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-sweet-enemy-2017-lk21.jpg",
     "rating": "2.0",
-    "durasi": "123 eps · S.1",
-    "episodes_count": 123,
+    "durasi": "124 eps · S.1",
+    "episodes_count": 124,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -4217,6 +4217,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 124,
+        "title": "Sweet Enemy - Season 1 Episode 124 (2017)",
+        "slug": "sweet-enemy-season-1-episode-124-2017",
+        "source": "https://tv.nontondrama.vip/sweet-enemy-season-1-episode-124-2017",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/o9vXEpE2WwGBWjhYJXZgNw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/3V9oWPQu94syYn6pB-bs-A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/C-M7n_OGbSX_o7MQGfrXeg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -4224,21 +4254,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/K_Vg6J4M4hjeZIRrYnB9Kg",
+        "url": "https://videonode.de/iframe3/p2p/o9vXEpE2WwGBWjhYJXZgNw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iX0uX-QCflnsBt3RbctAxg",
+        "url": "https://videonode.de/iframe3/cast/3V9oWPQu94syYn6pB-bs-A",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/gKJGulQmxSzRujEaVOaqkA",
+        "url": "https://videonode.de/iframe3/hydrax/C-M7n_OGbSX_o7MQGfrXeg",
         "default": false
       }
     ],
