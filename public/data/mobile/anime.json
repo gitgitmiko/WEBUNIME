@@ -3002,7 +3002,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "22 Menit",
     "episodes_count": 8,
     "genre": [
       "Drama",
@@ -12971,8 +12971,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Fantasy",
@@ -13227,6 +13227,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/804q41gmI6g8",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Toaru Anbu no Item Episode 7",
+        "slug": "toaru-anbu-no-item-episode-7",
+        "source": "https://anoboy.at/2026/11/toaru-anbu-no-item-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxCcMptRAkNh6uggjDiUjgWB9TTG4PvnT-FILbVaN_oItmBecxDIquqkuQJ8PM010I1MeYluctWTInY8cOYnGGNYD6eRVMJecxxP0gKKmszXZFu4HeEg2GmOB8ZFmcZtOmaKwYw",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwvmay4zdQ40gJRJTYohf6ft09ZPu6Q7ckMkJbr4f1CyXzsrUWVcjUM7nesxnzgZfEPUZieJqJ9KDpoyW5I5ZIATgR--Iu8Yi4Mc-1nMTha95UyJT6Tj1x3vY-ueEmMeMSyGOE",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/NJtltKG6YP43",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/n6d2y1mkF52B",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/A8h5S73UP3F1",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/2kDrXgoyT2pb",
             "default": false,
             "source": "anoboy"
           }
