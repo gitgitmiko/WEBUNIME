@@ -12602,8 +12602,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Hotaru%20no%20Yomeiri.jpg",
     "rating": "7.9",
     "votes": "",
-    "durasi": "22 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Romance",
       "Historical"
@@ -12926,6 +12926,55 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Hotaru no Yomeiri Episode 7",
+        "slug": "hotaru-no-yomeiri-episode-7",
+        "source": "https://anoboy.at/2026/11/hotaru-no-yomeiri-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxZJsOc1t8AH0cov98MtQJ5w1Gb43iIcU2Rs45s21YjPlnypXFBd3GvNCZrTKaP8WuBftam30Kk2vVXEtqWYpbgT9PHS41nsIt4R0IgiRCZwBn2Xj3AVt6VRlIMDc3hW_4y8w",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/hj1Xc1B7oKDA",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/brWA0o2O1P4p",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/5u4cfgyrsp2S",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/8c06pT0145Lq",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -12971,7 +13020,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "7 eps",
+    "durasi": "23 Menit",
     "episodes_count": 7,
     "genre": [
       "Action",
