@@ -1579,6 +1579,31 @@ function bindNfDropdown(root) {
   });
 }
 
+/*
+ * Di HP, detail tampil sebagai "halaman" biasa yang di-scroll oleh dokumen (bukan
+ * lapisan fixed yang punya scroll sendiri) — paling andal untuk gestur sentuh di
+ * semua browser HP. Posisi scroll beranda disimpan lalu dikembalikan saat ditutup.
+ */
+const mobileDetailQuery = window.matchMedia("(max-width: 720px)");
+let modalReturnScroll = null;
+
+function enterModalPage() {
+  if (!mobileDetailQuery.matches) return false;
+  if (!document.body.classList.contains("is-modal-page")) {
+    modalReturnScroll = window.scrollY;
+    document.body.classList.add("is-modal-page");
+  }
+  window.scrollTo(0, 0);
+  return true;
+}
+
+function leaveModalPage() {
+  if (!document.body.classList.contains("is-modal-page")) return;
+  document.body.classList.remove("is-modal-page");
+  if (modalReturnScroll != null) window.scrollTo(0, modalReturnScroll);
+  modalReturnScroll = null;
+}
+
 async function openModal(movie, opts = {}) {
   movie = (await hydrateItem(movie)) || movie;
   activeMovie = movie;
@@ -1651,6 +1676,7 @@ async function openModal(movie, opts = {}) {
   });
 
   modal.classList.remove("hidden");
+  enterModalPage();
   modal.scrollTop = 0;
   const panel = $(".modal-panel", modal);
   if (panel) panel.scrollTop = 0;
@@ -1659,6 +1685,7 @@ async function openModal(movie, opts = {}) {
 
 function closeModal() {
   $("#modal").classList.add("hidden");
+  leaveModalPage();
   if ($("#player").classList.contains("hidden")) {
     document.body.style.overflow = "";
   }

@@ -4440,6 +4440,37 @@ body.is-searching .search-results {
   }
 }
 
+/* ---------- MOBILE: detail sebagai halaman yang di-scroll dokumen ---------- */
+@media (max-width: 720px) {
+  body.is-modal-page {
+    overflow: visible !important;
+  }
+
+  body.is-modal-page #nav,
+  body.is-modal-page main,
+  body.is-modal-page .footer {
+    display: none;
+  }
+
+  body.is-modal-page .modal {
+    position: relative;
+    inset: auto;
+    z-index: 1;
+    overflow: visible;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  body.is-modal-page .modal-backdrop {
+    display: none;
+  }
+
+  body.is-modal-page .modal-panel {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+}
+
 /* Layar sentuh: efek hover tidak "nyangkut" setelah disentuh */
 @media (hover: none) {
   .poster:hover,
