@@ -6,8 +6,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/07/film-dexter-resurrection-2025-lk21-d21.jpg",
     "rating": "8.4",
-    "durasi": "1 eps · S.2",
-    "episodes_count": 11,
+    "durasi": "12 eps · S.2",
+    "episodes_count": 12,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -333,6 +333,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 2,
+        "title": "Dexter: Resurrection - Season 2 Episode 2 (2025)",
+        "slug": "dexter-resurrection-season-2-episode-2-2025",
+        "source": "https://tv.nontondrama.vip/dexter-resurrection-season-2-episode-2-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/TAQnC-Cmv9IVySCw5vcTrw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/RFr1ldINmm_wmkha8Jrdtg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/z56oUreGiwVa0KN4kr4HXw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -340,27 +370,26 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/_lTyn41H6OnP1hIO9ugQVA",
+        "url": "https://videonode.de/iframe3/p2p/TAQnC-Cmv9IVySCw5vcTrw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/yYjT5t1FocXAYyuF1B4rpg",
+        "url": "https://videonode.de/iframe3/cast/RFr1ldINmm_wmkha8Jrdtg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/IdK2s26i2GfRpUQ3ZMHeAw",
+        "url": "https://videonode.de/iframe3/hydrax/z56oUreGiwVa0KN4kr4HXw",
         "default": false
       }
     ],
     "thumbnail_landscape": "https://poster.assetsy.de/wp-content/uploads/2024/12/film-dexter-original-sin-2024-lk21-d21.jpg",
-    "id": 719,
-    "is_new": true
+    "id": 719
   },
   {
     "type": "series",
