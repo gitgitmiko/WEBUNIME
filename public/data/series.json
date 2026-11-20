@@ -27752,8 +27752,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-silent-killer-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -27912,6 +27912,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "The Silent Killer - Season 1 Episode 6 (2026)",
+        "slug": "silent-killer-season-1-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/silent-killer-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/5WT0rDgw4snjKI62MpOHqg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/5N-PpS64i8g3eo23MS9T2w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GtHjN6B2aJ_qGsfwN5xbyQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -27919,21 +27949,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/b0PQv2jraCrRCs9Z8maGfg",
+        "url": "https://videonode.de/iframe3/p2p/5WT0rDgw4snjKI62MpOHqg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/nVpYABDo5VnNNVc_anftmQ",
+        "url": "https://videonode.de/iframe3/cast/5N-PpS64i8g3eo23MS9T2w",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/5LtNkcp1tSE1CVcMYIZDPA",
+        "url": "https://videonode.de/iframe3/hydrax/GtHjN6B2aJ_qGsfwN5xbyQ",
         "default": false
       }
     ],

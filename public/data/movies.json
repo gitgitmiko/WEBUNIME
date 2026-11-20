@@ -1,5 +1,45 @@
 [
   {
+    "nama": "Rescue on One's Own",
+    "judul": "Rescue on One's Own (2024)",
+    "tahun": "2024",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-rescue-ones-own-2024-lk21.jpg",
+    "rating": "7",
+    "quality": "HD",
+    "durasi": "1j 26m",
+    "genre": [
+      "Crime"
+    ],
+    "sinopsis": "Rescue on One's Own - Mengisahkan Zhou Dongyang, seorang mantan anggota polisi bersenjata yang terpuruk dan hidup penuh penyesalan setelah sebuah kesalahan di masa lalu merenggut nyawa kaptennya. Demi menepati janji kepada rekannya, ia nekat melakukan perjalanan lintas negara ke Asia Tenggara seorang diri untuk menyelamatkan anak sang kawan yang hilang di tengah ancaman jaringan kejahatan berbahaya, sekaligus menemukan kembali keberanian serta makna hidupnya.\n\nSubtitle: retail\n\nNegara: China\n\nVotes: 1\n\nRelease: 31 Mar 2024\n\nUpdated: 20 Nov 2026 19:27:03",
+    "slug": "rescue-ones-own-2024",
+    "source": "https://tv12.lk21official.cc/rescue-ones-own-2024",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/nQv_NJ4D6DsmzmYQ_ORrMw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/1RZrkB5A4avVq6H2M-PrLA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/5mGegmdV3pwOjTh6apGytw",
+        "default": false
+      }
+    ],
+    "id": 495,
+    "is_new": true
+  },
+  {
     "nama": "418",
     "judul": "418 (2026)",
     "tahun": "2026",
@@ -37,8 +77,7 @@
         "default": false
       }
     ],
-    "id": 494,
-    "is_new": true
+    "id": 494
   },
   {
     "nama": "God, You're Such a Prick",
