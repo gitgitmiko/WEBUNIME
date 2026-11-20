@@ -257,8 +257,15 @@
       </section>
 
       <section class="search-results hidden" id="searchResults" aria-live="polite">
-        <div class="row-head"><h2>Hasil pencarian</h2></div>
+        <div class="row-head search-head">
+          <h2>Hasil pencarian</h2>
+          <p class="search-meta" id="searchMeta"></p>
+        </div>
         <div class="grid" id="searchGrid"></div>
+        <div class="search-empty" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="44" height="44"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          <p>Coba kata kunci lain, misalnya judul asli atau tahun rilis.</p>
+        </div>
       </section>
     </main>
 
@@ -363,7 +370,10 @@
 
     <div class="player hidden" id="player" role="dialog" aria-modal="true" aria-label="Pemutar film">
       <div class="player-top">
-        <button type="button" class="btn btn-ghost" id="playerBack">← Kembali</button>
+        <button type="button" class="btn btn-ghost" id="playerBack" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg>
+          <span class="player-back-label">Kembali</span>
+        </button>
         <p class="player-title" id="playerTitle"></p>
         <div class="room-badge hidden" id="roomBadge">
           <span class="room-badge-role" id="roomBadgeRole"></span>

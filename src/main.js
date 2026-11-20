@@ -2146,7 +2146,7 @@ async function openPlayer(movie) {
   closeModal();
   const player = $("#player");
   $("#playerTitle").textContent = `${movie.nama}${playerEpisodeSuffix(activeEpisode, movie)}`;
-  $("#playerPoster").style.backgroundImage = `url("${movie.thumbnail}")`;
+  $("#playerPoster").style.backgroundImage = cssUrl(movie.thumbnail);
   $("#playerPoster").classList.remove("hidden");
   $(".player-overlay", player).classList.remove("hidden");
   $("#playerProgress").classList.remove("hidden");
@@ -2264,6 +2264,13 @@ function bindNav() {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Tinggi navbar nyata (di mobile bisa terlipat 2–3 baris) untuk offset konten.
+  const syncNavHeight = () =>
+    document.documentElement.style.setProperty("--nav-real", `${Math.round(nav.offsetHeight)}px`);
+  syncNavHeight();
+  if ("ResizeObserver" in window) new ResizeObserver(syncNavHeight).observe(nav);
+  else window.addEventListener("resize", syncNavHeight);
+
   toggle?.addEventListener("click", (e) => {
     e.stopPropagation();
     const open = !nav.classList.contains("is-menu-open");
@@ -2308,6 +2315,11 @@ function bindNav() {
       if (!href.startsWith("#")) return;
       e.preventDefault();
       closeNavMenus();
+      const search = $("#searchInput");
+      if (search?.value) {
+        search.value = "";
+        search.dispatchEvent(new Event("input", { bubbles: true }));
+      }
       scrollToNavTarget(href);
       history.replaceState(null, "", href === "#hero" ? location.pathname : href);
     });
@@ -2462,12 +2474,42 @@ function bindSearch() {
   let timer = 0;
   let seq = 0;
 
+  const meta = $("#searchMeta");
+
+  const showResults = (q, hits, failed = false) => {
+    grid.replaceChildren(...hits.map((m, i) => createPoster(m, i)));
+    if (meta) {
+      meta.textContent = failed
+        ? "Pencarian gagal. Coba lagi sebentar."
+        : hits.length
+          ? `${hits.length} judul untuk “${q}”`
+          : `Tidak ada judul yang cocok dengan “${q}”.`;
+    }
+    section.classList.toggle("is-empty", !hits.length);
+    section.classList.remove("hidden");
+    rows.classList.add("hidden");
+    if (!document.body.classList.contains("is-searching")) {
+      document.body.classList.add("is-searching");
+      stopHeroCarousel();
+      window.scrollTo({ top: 0 });
+    }
+  };
+
+  const clearResults = () => {
+    section.classList.add("hidden");
+    rows.classList.remove("hidden");
+    if (document.body.classList.contains("is-searching")) {
+      document.body.classList.remove("is-searching");
+      startHeroCarousel();
+    }
+  };
+
   input.addEventListener("input", () => {
     const q = input.value.trim();
     clearTimeout(timer);
     if (!q) {
-      section.classList.add("hidden");
-      rows.classList.remove("hidden");
+      seq += 1;
+      clearResults();
       return;
     }
     timer = setTimeout(async () => {
@@ -2476,23 +2518,27 @@ function bindSearch() {
         const res = await fetch(`/api/v1/search?q=${encodeURIComponent(q)}&limit=40`, {
           credentials: "include",
         });
-        if (!res.ok || n !== seq) return;
+        if (n !== seq) return;
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         const hits = Array.isArray(data?.items) ? data.items : [];
         for (const item of hits) {
           rememberItems(item.catalog || resolveCollection(item), [item]);
         }
         if (n !== seq) return;
-    grid.replaceChildren(...hits.map((m, i) => createPoster(m, i)));
-    section.classList.remove("hidden");
-    rows.classList.add("hidden");
+        showResults(q, hits);
       } catch {
         if (n !== seq) return;
-        grid.replaceChildren();
-        section.classList.remove("hidden");
-        rows.classList.add("hidden");
+        showResults(q, [], true);
       }
     }, 250);
+  });
+
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && input.value) {
+      input.value = "";
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    }
   });
 }
 
