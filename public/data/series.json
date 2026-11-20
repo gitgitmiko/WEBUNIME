@@ -6,8 +6,8 @@
     "tahun": "2023",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2023/12/film-percy-jackson-and-the-olympians-2023-lk21-d21.jpg",
     "rating": "8.6",
-    "durasi": "1 eps · S.3",
-    "episodes_count": 17,
+    "durasi": "18 eps · S.3",
+    "episodes_count": 18,
     "seasons_count": 3,
     "genre": [
       "Family",
@@ -521,6 +521,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 3,
+        "episode": 2,
+        "title": "Percy Jackson and the Olympians - Season 3 Episode 2 (2023)",
+        "slug": "percy-jackson-olympians-season-3-episode-2-2023",
+        "source": "https://tv.nontondrama.vip/percy-jackson-olympians-season-3-episode-2-2023",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/BiuOfSEbdU0r-4rNPlgtqw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/6rNcz4Ng7gE2HBKHmYp3GA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/RVRAUWaGonS0DX1KVfyzbA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -528,26 +558,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/kM1xiM3Ry9oxGfL2tEkVvA",
+        "url": "https://videonode.de/iframe3/p2p/BiuOfSEbdU0r-4rNPlgtqw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/KR8dx-ArjxOBfm9vi8aG3w",
+        "url": "https://videonode.de/iframe3/cast/6rNcz4Ng7gE2HBKHmYp3GA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-z2Kn8uzMQ-dbXxDyT_LxQ",
+        "url": "https://videonode.de/iframe3/hydrax/RVRAUWaGonS0DX1KVfyzbA",
         "default": false
       }
     ],
-    "id": 718,
-    "is_new": true
+    "id": 718
   },
   {
     "type": "series",
