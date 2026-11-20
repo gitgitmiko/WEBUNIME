@@ -361,6 +361,19 @@
               <h3>Episode</h3>
               <span id="modalEpisodeCount"></span>
             </div>
+            <div class="episode-tools hidden" id="episodeTools">
+              <div class="episode-tools-row">
+                <form class="episode-jump" id="episodeJump" autocomplete="off">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                  <input id="episodeJumpInput" type="number" inputmode="numeric" min="1" enterkeyhint="go" placeholder="Lompat ke episode…" aria-label="Lompat ke nomor episode" />
+                </form>
+                <button type="button" class="episode-sort" id="episodeSort" aria-label="Ubah urutan episode">
+                  <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 4v16M3 16l4 4 4-4M17 20V4M13 8l4-4 4 4"/></svg>
+                  <span id="episodeSortLabel">Terlama</span>
+                </button>
+              </div>
+              <div class="episode-ranges" id="episodeRanges" role="tablist" aria-label="Rentang episode"></div>
+            </div>
             <div class="modal-episode-list" id="modalEpisodeList" role="listbox" aria-label="Daftar episode"></div>
             <select id="modalEpisodeSelect" hidden aria-hidden="true" tabindex="-1"></select>
           </div>

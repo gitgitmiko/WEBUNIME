@@ -4510,3 +4510,258 @@ body.is-searching .search-results {
     animation: none;
   }
 }
+
+
+/* ---------- EPISODE BANYAK: rentang, lompat, grid nomor ---------- */
+.episode-tools {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.episode-tools.hidden {
+  display: none;
+}
+
+.episode-tools-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.episode-jump {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--surface-line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.episode-jump:focus-within {
+  border-color: rgba(229, 9, 20, 0.7);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: var(--ring);
+  color: var(--text);
+}
+
+.episode-jump input {
+  flex: 1;
+  min-width: 0;
+  height: 2.6rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.episode-jump input::-webkit-outer-spin-button,
+.episode-jump input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.episode-jump input::placeholder {
+  color: var(--muted);
+}
+
+.episode-jump input.is-error {
+  animation: epShake 0.35s ease;
+  color: #fca5a5;
+}
+
+.episode-sort {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--surface-line);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.episode-sort:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.episode-ranges {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 2px 0;
+  mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 24px), transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14px, #000 calc(100% - 24px), transparent 100%);
+  padding-inline: 2px 24px;
+}
+
+.episode-ranges::-webkit-scrollbar {
+  display: none;
+}
+
+.episode-range {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--surface-line);
+  background: var(--surface-raised);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.episode-range:hover {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.episode-range.is-active {
+  background: #fff;
+  border-color: #fff;
+  color: #0b0b0f;
+}
+
+/* Titik merah: rentang yang memuat episode terpilih */
+.episode-range.has-selected::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 6px rgba(229, 9, 20, 0.8);
+}
+
+.modal-episode-list.is-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(62px, 1fr));
+  gap: 0.5rem;
+  max-height: none;
+  overflow: visible;
+  padding-right: 0;
+}
+
+.episode-tile {
+  position: relative;
+  height: 3rem;
+  padding: 0;
+  border-radius: 12px;
+  border: 1px solid var(--surface-line);
+  background: var(--surface-raised);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s var(--ease-out), color 0.18s ease;
+}
+
+.episode-tile:hover,
+.episode-tile:focus-visible {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.episode-tile.is-watched {
+  color: rgba(244, 244, 245, 0.55);
+  background: rgba(34, 197, 94, 0.07);
+  border-color: rgba(34, 197, 94, 0.28);
+}
+
+.episode-tile.is-watched::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.episode-tile.is-last-watched {
+  color: #fff;
+  border-color: rgba(252, 165, 165, 0.75);
+}
+
+.episode-tile.is-active {
+  background: var(--accent);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 8px 20px -6px rgba(229, 9, 20, 0.75);
+}
+
+.episode-tile.is-active::after {
+  background: #fff;
+}
+
+.episode-tile.is-flash {
+  animation: epFlash 1.2s ease;
+}
+
+@keyframes epFlash {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+  25%, 60% { box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9); }
+}
+
+@keyframes epShake {
+  0%, 100% { transform: none; }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@media (max-width: 720px) {
+  .modal-episode-list.is-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  .episode-tile {
+    height: 2.85rem;
+    font-size: 0.9rem;
+  }
+
+  .episode-sort {
+    padding: 0 0.85rem;
+  }
+}
+
+@media (hover: none) {
+  .episode-tile:hover {
+    transform: none;
+  }
+
+  .episode-tile:active {
+    transform: scale(0.95);
+  }
+}

@@ -1400,19 +1400,158 @@ function episodeListCopy(ep) {
 }
 
 function syncEpisodeListActive(slug) {
-  $$("#modalEpisodeList .episode-row").forEach((row) => {
+  $$("#modalEpisodeList .episode-row, #modalEpisodeList .episode-tile").forEach((row) => {
     const on = row.dataset.slug === slug;
     row.classList.toggle("is-active", on);
     row.setAttribute("aria-selected", on ? "true" : "false");
   });
 }
 
+/* Judul dengan banyak episode (mis. One Piece) memakai grid nomor + rentang + lompat. */
+const EP_COMPACT_MIN = 25;
+const EP_PAGE_SIZE = 50;
+let episodeUi = { key: "", page: 0, desc: false };
+
+function episodeNumberLabel(ep, fallback) {
+  const n = Number(ep?.episode);
+  return Number.isFinite(n) && n > 0 ? String(n) : String(fallback);
+}
+
+function orderedEpisodes(item) {
+  const eps = episodeOptions(item);
+  return episodeUi.desc ? [...eps].reverse() : eps;
+}
+
+function drawEpisodeGrid(item, selectedSlug) {
+  const list = $("#modalEpisodeList");
+  const ranges = $("#episodeRanges");
+  if (!list || !ranges) return;
+  const eps = orderedEpisodes(item);
+  const pages = Math.max(1, Math.ceil(eps.length / EP_PAGE_SIZE));
+  episodeUi.page = Math.min(Math.max(episodeUi.page, 0), pages - 1);
+  const selectedIdx = eps.findIndex((ep) => ep.slug === selectedSlug);
+  const selectedPage = selectedIdx >= 0 ? Math.floor(selectedIdx / EP_PAGE_SIZE) : -1;
+
+  ranges.replaceChildren(
+    ...Array.from({ length: pages }, (_, i) => {
+      const first = eps[i * EP_PAGE_SIZE];
+      const lastIdx = Math.min((i + 1) * EP_PAGE_SIZE, eps.length) - 1;
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "episode-range";
+      btn.dataset.page = String(i);
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-selected", i === episodeUi.page ? "true" : "false");
+      if (i === episodeUi.page) btn.classList.add("is-active");
+      if (i === selectedPage) btn.classList.add("has-selected");
+      btn.textContent = `${episodeNumberLabel(first, i * EP_PAGE_SIZE + 1)}–${episodeNumberLabel(
+        eps[lastIdx],
+        lastIdx + 1
+      )}`;
+      return btn;
+    })
+  );
+  // Geser chip aktif ke tengah — hanya scroll horizontal milik baris chip.
+  const activeChip = ranges.querySelector(".episode-range.is-active");
+  if (activeChip) {
+    ranges.scrollLeft = activeChip.offsetLeft - (ranges.clientWidth - activeChip.offsetWidth) / 2;
+  }
+
+  const collection = resolveCollection(item);
+  const watched = watchedSetForTitle(collection, item?.slug);
+  const last = historyForTitle(collection, item?.slug)?.episodeSlug || "";
+  const start = episodeUi.page * EP_PAGE_SIZE;
+  list.replaceChildren(
+    ...eps.slice(start, start + EP_PAGE_SIZE).map((ep, i) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "episode-tile";
+      btn.dataset.slug = ep.slug;
+      btn.setAttribute("role", "option");
+      const on = ep.slug === selectedSlug;
+      btn.setAttribute("aria-selected", on ? "true" : "false");
+      if (on) btn.classList.add("is-active");
+      if (watched.has(ep.slug)) btn.classList.add("is-watched");
+      if (last && ep.slug === last) btn.classList.add("is-last-watched");
+      const label = episodeNumberLabel(ep, start + i + 1);
+      btn.textContent = label;
+      btn.title = `Putar episode ${label}`;
+      btn.setAttribute("aria-label", `Episode ${label}`);
+      return btn;
+    })
+  );
+  const sortLabel = $("#episodeSortLabel");
+  if (sortLabel) sortLabel.textContent = episodeUi.desc ? "Terbaru" : "Terlama";
+}
+
+function currentEpisodeSlug() {
+  return $("#modalEpisodeSelect")?.value || activeEpisode?.slug || null;
+}
+
+function bindEpisodeTools() {
+  $("#episodeRanges")?.addEventListener("click", (e) => {
+    const chip = e.target.closest(".episode-range");
+    if (!chip || !activeMovie) return;
+    episodeUi.page = Number(chip.dataset.page) || 0;
+    drawEpisodeGrid(activeMovie, currentEpisodeSlug());
+  });
+  $("#episodeSort")?.addEventListener("click", () => {
+    if (!activeMovie) return;
+    episodeUi.desc = !episodeUi.desc;
+    episodeUi.page = 0;
+    drawEpisodeGrid(activeMovie, currentEpisodeSlug());
+  });
+  $("#episodeJump")?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const input = $("#episodeJumpInput");
+    const n = Number(input?.value);
+    if (!activeMovie || !input || !Number.isFinite(n)) return;
+    const eps = orderedEpisodes(activeMovie);
+    const idx = eps.findIndex((ep) => Number(ep.episode) === n);
+    if (idx < 0) {
+      input.classList.remove("is-error");
+      void input.offsetWidth;
+      input.classList.add("is-error");
+      return;
+    }
+    input.classList.remove("is-error");
+    episodeUi.page = Math.floor(idx / EP_PAGE_SIZE);
+    drawEpisodeGrid(activeMovie, currentEpisodeSlug());
+    const tile = [...$$("#modalEpisodeList .episode-tile")].find(
+      (el) => el.dataset.slug === eps[idx].slug
+    );
+    if (tile) {
+      tile.classList.add("is-flash");
+      input.blur();
+      tile.focus({ preventScroll: true });
+    }
+  });
+}
+
 function renderEpisodeList(item, selectedSlug) {
   const list = $("#modalEpisodeList");
   const count = $("#modalEpisodeCount");
+  const tools = $("#episodeTools");
   const eps = episodeOptions(item);
   if (count) count.textContent = `${eps.length} Episode`;
   if (!list) return;
+  const compact = eps.length >= EP_COMPACT_MIN;
+  tools?.classList.toggle("hidden", !compact);
+  list.classList.toggle("is-grid", compact);
+  if (compact) {
+    const key = `${resolveCollection(item)}:${item?.slug || ""}`;
+    if (episodeUi.key !== key) episodeUi = { key, page: 0, desc: false };
+    // Buka rentang yang memuat episode terpilih (lanjut tonton / terbaru).
+    const idx = orderedEpisodes(item).findIndex((ep) => ep.slug === selectedSlug);
+    if (idx >= 0) episodeUi.page = Math.floor(idx / EP_PAGE_SIZE);
+    const input = $("#episodeJumpInput");
+    if (input) {
+      input.value = "";
+      input.classList.remove("is-error");
+    }
+    drawEpisodeGrid(item, selectedSlug);
+    return;
+  }
   const collection = resolveCollection(item);
   const watched = watchedSetForTitle(collection, item?.slug);
   const last = historyForTitle(collection, item?.slug)?.episodeSlug || "";
@@ -2627,6 +2766,16 @@ function bindActions() {
     syncEpisodeListActive(e.target.value);
   });
   $("#modalEpisodeList")?.addEventListener("click", (e) => {
+    const tile = e.target.closest(".episode-tile");
+    if (tile && activeMovie) {
+      const select = $("#modalEpisodeSelect");
+      if (select) {
+        select.value = tile.dataset.slug || "";
+        select.dispatchEvent(new Event("change"));
+      }
+      openPlayer(activeMovie);
+      return;
+    }
     const row = e.target.closest(".episode-row");
     if (!row || !activeMovie) return;
     const select = $("#modalEpisodeSelect");
@@ -2637,6 +2786,7 @@ function bindActions() {
       openPlayer(activeMovie);
     }
   });
+  bindEpisodeTools();
   $("#playerBack").addEventListener("click", requestClosePlayer);
   $("#playerToggle").addEventListener("click", togglePlay);
   $("#playerEpPrev")?.addEventListener("click", () => {
