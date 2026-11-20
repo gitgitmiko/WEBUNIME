@@ -3002,8 +3002,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-8-300x170.jpg",
     "rating": "8.7",
     "votes": null,
-    "durasi": "22 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Drama",
       "Mystery",
@@ -3340,6 +3340,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/n0Vm7J01pxq6",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Kusuriya no Hitorigoto Season 3 Episode 8",
+        "slug": "kusuriya-no-hitorigoto-season-3-episode-8",
+        "source": "https://anoboy.at/2026/11/kusuriya-no-hitorigoto-season-3-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyJHek64HMkSS8VC8nIh0aDP_wb7mN_K9mdrXi6naB-D88PIFEl9nTOwq0baLd5AytRykJmpe_1WOKWmTj3juPvllnziWlBT6bRhSFAlczFJdeQtyuYxe5hXEQuAWDGRryPB4k8",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzDNFotSd3Dq9WXxZrXvBT15ljC3E0pTqz9g_7xlTFm2aNpxxuVEN5o9ZK1P9cFyhMLvMsuPycU_jB6GMaoNM17UM9HR4QTHrdyzWgt6T6P92MQ4TNiLbZWylpFLlHHkzfEzv9w",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/172q63oxU340",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/SnXB6p73IXYJ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/qGWOnM5mxpST",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/1TE6oX18Khox",
             "default": false,
             "source": "anoboy"
           }
