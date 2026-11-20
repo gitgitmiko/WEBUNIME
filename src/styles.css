@@ -3495,6 +3495,8 @@ body.is-searching .search-results {
 
 .modal-panel {
   width: min(960px, 100%);
+  /* clip: memotong tanpa menjadi area scroll, agar tidak bisa "tergeser" tersembunyi */
+  overflow: clip;
   background: var(--surface-solid);
   box-shadow: var(--shadow-lg);
   animation: modalIn 0.42s var(--ease-out);

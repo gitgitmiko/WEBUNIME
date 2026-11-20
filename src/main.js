@@ -1453,7 +1453,14 @@ function renderEpisodeList(item, selectedSlug) {
   const active = [...list.querySelectorAll(".episode-row")].find(
     (row) => row.dataset.slug === selectedSlug
   );
-  active?.scrollIntoView({ block: "nearest" });
+  // Hanya geser daftar episode itu sendiri (bila punya scroll), jangan panel modal/halaman.
+  if (active && list.scrollHeight > list.clientHeight + 1) {
+    const listBox = list.getBoundingClientRect();
+    const rowBox = active.getBoundingClientRect();
+    if (rowBox.top < listBox.top || rowBox.bottom > listBox.bottom) {
+      list.scrollTop += rowBox.top - listBox.top - (list.clientHeight - rowBox.height) / 2;
+    }
+  }
 }
 
 function fillEpisodeSelect(selectEl, item, selectedSlug = null) {
@@ -1645,6 +1652,8 @@ async function openModal(movie, opts = {}) {
 
   modal.classList.remove("hidden");
   modal.scrollTop = 0;
+  const panel = $(".modal-panel", modal);
+  if (panel) panel.scrollTop = 0;
   document.body.style.overflow = "hidden";
 }
 
