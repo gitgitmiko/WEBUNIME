@@ -15352,8 +15352,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Seitokai%20ni%20mo%20Ana%20wa%20Aru!.jpeg",
     "rating": "7.63",
     "votes": "",
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Shounen",
       "Comedy",
@@ -15521,13 +15521,31 @@
             "no": 1
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Seitokai ni mo Ana wa Aru! Episode 8",
+        "slug": "seitokai-ni-mo-ana-wa-aru-episode-8",
+        "source": "https://oploverz.diy/series/seitokai-ni-mo-ana-wa-aru/episode/8",
+        "date": "",
+        "released_at": "2026-11-21T17:00:00.000Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/5UryEroZ1",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss",
-        "url": "https://player.abyssplayer.com/7JFgNbm4E",
+        "url": "https://player.abyssplayer.com/5UryEroZ1",
         "default": true,
         "source": "oploverz",
         "no": 1
@@ -20511,6 +20529,14 @@
             "url": "https://www.yourupload.com/embed/6yKKwRr641tK",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/bSw9GK-fn",
+            "default": false,
+            "source": "oploverz",
+            "no": 7
           }
         ]
       }
@@ -20520,7 +20546,7 @@
         "no": 1,
         "server": "anoboy",
         "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyafxAeSMCogvmS1ykLSj4vic4P6DXvVyke9UP5Rv0tSGMX7kwleouQZ9PsCXS2LYS6j-9FEZnYV9dF6Fgm92kEVnc07mutghbXn_joqSqVyQubCcpMSJ47XHAMJL8eoorjGXM",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxySMXpTFWR7tAT9IAqe3zWqvt78KJ-n_eUMK5IOmQqrRY9tiMTzxNapg8htG5P1oEY5_-NYrWWEQQ-UGJIM2U1sVlvnjj0h-hJlUqjVpH3TLPcLdwywRysHOB18kar5tCj8Rk",
         "default": true,
         "source": "anoboy"
       },
@@ -20528,7 +20554,7 @@
         "no": 2,
         "server": "anoboy",
         "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzb80ZG0CfnQ4wbShMgB5SquzZ9B3nPvb6uv1qmOi-6WEP-6X_DckhUo7M6dDfrtYiV4GWuLBfT1n41yKH34Bd1mMSNjH2YJqPPIj_72rv6gCU0z7Rqt90YKR3jA10NzlqDJfA",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzJ8CnrWMrAYpm-injO9BenFasN8k8iHg5i06bDYXIwR1NYZ9gYEZ2jXp-giMJ7-fub2RfVAw1pM-ogvR5Xke_bmYwaeisl9J2c-JPgc_2Dw7o9nYkrGr_9IPHKZl00o-dGo_fZ",
         "default": false,
         "source": "anoboy"
       },
@@ -20536,7 +20562,7 @@
         "no": 3,
         "server": "anoboy",
         "label": "Anoboy YUP 720p",
-        "url": "https://www.yourupload.com/embed/w24470FapoCv",
+        "url": "https://www.yourupload.com/embed/7kVa0rT84jvW",
         "default": false,
         "source": "anoboy"
       },
@@ -20544,7 +20570,7 @@
         "no": 4,
         "server": "anoboy",
         "label": "Anoboy YUP 480p",
-        "url": "https://www.yourupload.com/embed/l5PNlUY3r186",
+        "url": "https://www.yourupload.com/embed/1yxsD11or8vm",
         "default": false,
         "source": "anoboy"
       },
@@ -20552,7 +20578,7 @@
         "no": 5,
         "server": "anoboy",
         "label": "Anoboy YUP 360p",
-        "url": "https://www.yourupload.com/embed/8A5S6qo0y2oG",
+        "url": "https://www.yourupload.com/embed/7824WEBwo5Ds",
         "default": false,
         "source": "anoboy"
       },
@@ -20560,14 +20586,14 @@
         "no": 6,
         "server": "anoboy",
         "label": "Anoboy YUP 240p",
-        "url": "https://www.yourupload.com/embed/m7Y4CHD17JA5",
+        "url": "https://www.yourupload.com/embed/6yKKwRr641tK",
         "default": false,
         "source": "anoboy"
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss",
-        "url": "https://player.abyssplayer.com/3H09tFl4j",
+        "url": "https://player.abyssplayer.com/bSw9GK-fn",
         "default": false,
         "source": "oploverz",
         "no": 7
@@ -25201,6 +25227,14 @@
             "url": "https://www.yourupload.com/embed/vRKI5I16FkuT",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/XbYw6PiMmm",
+            "default": false,
+            "source": "oploverz",
+            "no": 7
           }
         ]
       }
@@ -25253,6 +25287,14 @@
         "url": "https://www.yourupload.com/embed/vRKI5I16FkuT",
         "default": false,
         "source": "anoboy"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss",
+        "url": "https://player.abyssplayer.com/XbYw6PiMmm",
+        "default": false,
+        "source": "oploverz",
+        "no": 7
       }
     ],
     "id": 59,
