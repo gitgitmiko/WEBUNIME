@@ -373,9 +373,37 @@
         "default": false,
         "post": "51065",
         "nume": "7"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Upbolt 720p",
+        "url": "https://upbolt.to/e/8qjavep8rjct",
+        "default": false,
+        "source": "oploverz",
+        "no": 8
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Upbolt 1080p",
+        "url": "https://upbolt.to/e/w8ahrsrrl7sy",
+        "default": false,
+        "source": "oploverz",
+        "no": 9
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Upbolt 480p",
+        "url": "https://upbolt.to/e/78tan50tzrps",
+        "default": false,
+        "source": "oploverz",
+        "no": 10
       }
     ],
-    "id": 4
+    "id": 4,
+    "oploverz_source": "https://oploverz.diy/series/tensei-shitara-slime-datta-ken-movie-2-soukai-no-namida-hen",
+    "oploverz_slugs": [
+      "tensei-shitara-slime-datta-ken-movie-2-soukai-no-namida-hen"
+    ]
   },
   {
     "type": "anime-movie",
@@ -1249,9 +1277,29 @@
         "default": false,
         "post": "38264",
         "nume": "15"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon 720p",
+        "url": "https://filedon.co/embed/RVTuRmk3uV",
+        "default": false,
+        "source": "oploverz",
+        "no": 12
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles 720p",
+        "url": "https://krakenfiles.com/embed-video/zqdVFMKsDO",
+        "default": false,
+        "source": "oploverz",
+        "no": 13
       }
     ],
-    "id": 11
+    "id": 11,
+    "oploverz_source": "https://oploverz.diy/series/blue-lock-movie-episode-nagi",
+    "oploverz_slugs": [
+      "blue-lock-movie-episode-nagi"
+    ]
   },
   {
     "type": "anime-movie",
@@ -1355,9 +1403,29 @@
         "default": false,
         "post": "36211",
         "nume": "12"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon",
+        "url": "https://filedon.co/embed/MCz5dXh9dU",
+        "default": false,
+        "source": "oploverz",
+        "no": 10
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles",
+        "url": "https://krakenfiles.com/embed-video/0bvERlciOj",
+        "default": false,
+        "source": "oploverz",
+        "no": 11
       }
     ],
-    "id": 12
+    "id": 12,
+    "oploverz_source": "https://oploverz.diy/series/spy-x-family-movie-code-white",
+    "oploverz_slugs": [
+      "spy-x-family-movie-code-white"
+    ]
   },
   {
     "type": "anime-movie",
@@ -1815,9 +1883,29 @@
         "default": false,
         "post": "33320",
         "nume": "12"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon 720p",
+        "url": "https://filedon.co/embed/ePpMwfta2K",
+        "default": false,
+        "source": "oploverz",
+        "no": 10
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles 720p",
+        "url": "https://krakenfiles.com/embed-video/jHPIj4Ivzn",
+        "default": false,
+        "source": "oploverz",
+        "no": 11
       }
     ],
-    "id": 15
+    "id": 15,
+    "oploverz_source": "https://oploverz.diy/series/digimon-adventure-02-movie-the-beginning",
+    "oploverz_slugs": [
+      "digimon-adventure-02-movie-the-beginning"
+    ]
   },
   {
     "type": "anime-movie",
@@ -3910,9 +3998,21 @@
         "default": false,
         "post": "1157",
         "nume": "2"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon",
+        "url": "https://filedon.co/embed/GkAC7A38LF",
+        "default": false,
+        "source": "oploverz",
+        "no": 3
       }
     ],
-    "id": 35
+    "id": 35,
+    "oploverz_source": "https://oploverz.diy/series/boku-no-hero-academia-movie-1-futari-no-hero",
+    "oploverz_slugs": [
+      "boku-no-hero-academia-movie-1-futari-no-hero"
+    ]
   },
   {
     "type": "anime-movie",
@@ -4276,9 +4376,37 @@
         "default": false,
         "source": "anoboy",
         "no": 6
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon 720p",
+        "url": "https://filedon.co/embed/RPktANrzdb",
+        "default": false,
+        "source": "oploverz",
+        "no": 7
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles 720p",
+        "url": "https://krakenfiles.com/embed-video/diElyYcifr",
+        "default": false,
+        "source": "oploverz",
+        "no": 8
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles 720p 2",
+        "url": "https://krakenfiles.com/embed-video/5k5LQCMIV3",
+        "default": false,
+        "source": "oploverz",
+        "no": 9
       }
     ],
-    "id": 40
+    "id": 40,
+    "oploverz_source": "https://oploverz.diy/series/look-back",
+    "oploverz_slugs": [
+      "look-back"
+    ]
   },
   {
     "type": "anime-movie",
@@ -15930,20 +16058,28 @@
     "related": [],
     "slug": "violet-evergarden-eternity-and-the-auto-memory-doll",
     "source": "https://oploverz.diy/series/violet-evergarden-eternity-and-the-auto-memory-doll",
-    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-eternity-and-the-auto-memory-doll",
+    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-movie-sub-indonesia",
     "oploverz_slugs": [
-      "violet-evergarden-eternity-and-the-auto-memory-doll"
+      "violet-evergarden-movie-sub-indonesia"
     ],
     "season_label": "",
     "episodes": [],
     "players": [
       {
         "server": "oploverz",
-        "label": "Oploverz Filedon",
-        "url": "https://filedon.co/embed/g8PhPk7BcW",
+        "label": "Oploverz dood",
+        "url": "https://dood.ws/e/fhe86rbnrns3quihkabtlf6bo4x99jak",
         "default": true,
         "source": "oploverz",
         "no": 1
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz acefile",
+        "url": "https://acefile.co/player/57469507",
+        "default": false,
+        "source": "oploverz",
+        "no": 2
       }
     ],
     "id": 265
@@ -20960,5 +21096,101 @@
       }
     ],
     "id": 381
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "oploverz",
+    "nama": "Haikyu!! Movie: The Dumpster Battle",
+    "judul": "Haikyu!! Movie: The Dumpster Battle",
+    "tahun": "2024",
+    "thumbnail": "https://backapi.oploverz.ac/uploads/posters/78b8a9b5-6809-4288-9e27-3525a32c4c43.jpg",
+    "rating": "8.65",
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 0,
+    "genre": [
+      "Shounen",
+      "School",
+      "Sports"
+    ],
+    "sinopsis": "Melanjutkan perjalanan Tim Karasuno di Kejuaraan Nasional dan kali ini lawan mereka adalah Nekoma. Musuh Bebuyutan lama mereka yang sudah lama tak bertemu. Pertandingan antar kedua tim sudah lama dinanti dan dikenal sebagai Pertandingan di Tempat Sampah. Mampukah Tim Karasuno mengatasi perlawan dari tim Nekoma yang dikenal memiliki pertahanan ulet.",
+    "studio": "Production I.G",
+    "sumber": "",
+    "related": [],
+    "slug": "haikyu-movie-the-dumpster-battle",
+    "source": "https://oploverz.diy/series/haikyu-movie-the-dumpster-battle",
+    "oploverz_source": "https://oploverz.diy/series/haikyu-movie-the-dumpster-battle",
+    "oploverz_slugs": [
+      "haikyu-movie-the-dumpster-battle"
+    ],
+    "season_label": "",
+    "episodes": [],
+    "players": [
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon",
+        "url": "https://filedon.co/embed/mzLejJarZS",
+        "default": true,
+        "source": "oploverz",
+        "no": 1
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles",
+        "url": "https://krakenfiles.com/embed-video/FeAhMI0Qd6",
+        "default": false,
+        "source": "oploverz",
+        "no": 2
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz krakenfiles 2",
+        "url": "https://krakenfiles.com/embed-video/5LcANmRpHY",
+        "default": false,
+        "source": "oploverz",
+        "no": 3
+      }
+    ],
+    "id": 382
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "oploverz",
+    "nama": "Detective Conan Movie 25: Halloween no Hanayome",
+    "judul": "Detective Conan Movie 25: Halloween no Hanayome",
+    "tahun": "2022",
+    "thumbnail": "https://backapi.oploverz.ac/uploads/posters/1aec430d-e9d6-4e13-b985-febd2ae992df.jpg",
+    "rating": "7.94",
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 0,
+    "genre": [
+      "Mystery",
+      "Shounen",
+      "Police"
+    ],
+    "sinopsis": "Detective Conan Movie 25: Halloween no Hanayome. Shibuya, Tokyo, ramai disaaat Halloween. Sebuah pernikahan sedang diadakan di Shibuya Hikarie, di mana Detektif Miwako Sato dari Departemen Kepolisian Metropolitan mengenakan gaun pengantin. Sementara Conan dan tamu undangan lainnya sedang menghadiri, seorang penyerang tiba-tiba masuk, dan Detektif Wataru Takagi, yang berusaha melindungi Sato, terluka. Takagi selamat dan situasinya tenang, tetapi di mata Sato, bayangan malaikat maut yang dia lihat ketika Detektif Matsuda, pria yang dia cintai, terbunuh dalam serangkaian pemboman tiga tahun lalu, bersinggungan dengan Takagi. Detective Conan Movie 25: Halloween no Hanayome",
+    "studio": "TMS Entertainment",
+    "sumber": "",
+    "related": [],
+    "slug": "detective-conan-movie-25-halloween-no-hanayome",
+    "source": "https://oploverz.diy/series/detective-conan-movie-25-halloween-no-hanayome",
+    "oploverz_source": "https://oploverz.diy/series/detective-conan-movie-25-halloween-no-hanayome",
+    "oploverz_slugs": [
+      "detective-conan-movie-25-halloween-no-hanayome"
+    ],
+    "season_label": "",
+    "episodes": [],
+    "players": [
+      {
+        "server": "oploverz",
+        "label": "Oploverz Filedon",
+        "url": "https://filedon.co/embed/iJ5zqmgwS9",
+        "default": true,
+        "source": "oploverz",
+        "no": 1
+      }
+    ],
+    "id": 383
   }
 ]
