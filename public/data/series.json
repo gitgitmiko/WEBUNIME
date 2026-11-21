@@ -103,8 +103,7 @@
         "default": false
       }
     ],
-    "id": 723,
-    "is_new": true
+    "id": 723
   },
   {
     "type": "series",
@@ -634,8 +633,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-blue-road-2026-lk21.jpg",
     "rating": "7.7",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -797,6 +796,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "The Blue Road - Season 1 Episode 6 (2026)",
+        "slug": "blue-road-season-1-episode-6-2026",
+        "source": "https://tv.nontondrama.vip/blue-road-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Iz752q3tEEdImZrZFRu-ZA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/PEjmAM_W5I9zjrdXXP_DmQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QRi_JdwJxS9xOVTN48pMjg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "The Blue Road - Season 1 Episode 7 (2026)",
+        "slug": "blue-road-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/blue-road-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/6vt6SCm9WY03TZf4YFV2mg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/FGZXS3u2ydK3d-nqmjt2Ug",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Mv61Fd-yTSkV7KhGMJqrgA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -804,21 +863,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/EjxkAt42C8bcyf8Zk_y1xQ",
+        "url": "https://videonode.de/iframe3/p2p/6vt6SCm9WY03TZf4YFV2mg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iKyyIQJRa-rOHTdq7qe1KQ",
+        "url": "https://videonode.de/iframe3/cast/FGZXS3u2ydK3d-nqmjt2Ug",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/3LN9GS_wfobwx_0JLH_mJw",
+        "url": "https://videonode.de/iframe3/hydrax/Mv61Fd-yTSkV7KhGMJqrgA",
         "default": false
       }
     ],
