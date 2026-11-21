@@ -411,8 +411,8 @@
     "tahun": "2018",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-bangkok-love-stories-innocence-2018-lk21.jpg",
     "rating": "5.8",
-    "durasi": "11 eps · S.1",
-    "episodes_count": 11,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -752,6 +752,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "Bangkok Love Stories: Innocence - Season 1 Episode 12 (2018)",
+        "slug": "bangkok-love-stories-innocence-season-1-episode-12-2018",
+        "source": "https://tv.nontondrama.vip/bangkok-love-stories-innocence-season-1-episode-12-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/h5c_r1ZBFMVidhffESafyQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/aLt7rUMXfq1ESb409pL3zQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/llGHafxgUwqgHqDrvO-kRA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "Bangkok Love Stories: Innocence - Season 1 Episode 13 (2018)",
+        "slug": "bangkok-love-stories-innocence-season-1-episode-13-2018",
+        "source": "https://tv.nontondrama.vip/bangkok-love-stories-innocence-season-1-episode-13-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/iQu1WCcSorF50YeRmkDicA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/VbjWPxYYDeO3eJdgkRty9Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/vYBHE2G9IaAoW_uw5-CMCg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -759,21 +819,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/zePbZ4X-noagBXImlQNqTA",
+        "url": "https://videonode.de/iframe3/p2p/iQu1WCcSorF50YeRmkDicA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/C-Wl3btMtWzbURlEY2_6XA",
+        "url": "https://videonode.de/iframe3/cast/VbjWPxYYDeO3eJdgkRty9Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/h49oMQIl26h-CJVORmuu8w",
+        "url": "https://videonode.de/iframe3/hydrax/vYBHE2G9IaAoW_uw5-CMCg",
         "default": false
       }
     ],
