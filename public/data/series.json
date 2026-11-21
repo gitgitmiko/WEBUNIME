@@ -6,8 +6,8 @@
     "tahun": "2024",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2024/05/film-begins-youth-2024-lk21-d21.jpg",
     "rating": "10.0",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -167,6 +167,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Begins Youth - Season 1 Episode 6 (2024)",
+        "slug": "begins-youth-season-1-episode-6-2024",
+        "source": "https://tv.nontondrama.vip/begins-youth-season-1-episode-6-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/wMBOLZ_AgRczYIb7ZqdAJQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Ijx1vRohVR6GPrRCcfNW5A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/iaaMGLorz339hJvMB95xRA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -174,26 +204,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/CPGABTfRtPxPuCZS7d6RLA",
+        "url": "https://videonode.de/iframe3/p2p/wMBOLZ_AgRczYIb7ZqdAJQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/1UlCZJSMVa1vnFO58FP2SQ",
+        "url": "https://videonode.de/iframe3/cast/Ijx1vRohVR6GPrRCcfNW5A",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/p1oW7Uz3htyrNmkcwiSI-w",
+        "url": "https://videonode.de/iframe3/hydrax/iaaMGLorz339hJvMB95xRA",
         "default": false
       }
     ],
-    "id": 727,
-    "is_new": true
+    "id": 727
   },
   {
     "type": "series",
