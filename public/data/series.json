@@ -6,8 +6,8 @@
     "tahun": "2008",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-beethoven-virus-2008-lk21.jpg",
     "rating": "6.5",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -48,6 +48,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Beethoven Virus - Season 1 Episode 2 (2008)",
+        "slug": "beethoven-virus-season-1-episode-2-2008",
+        "source": "https://tv.nontondrama.vip/beethoven-virus-season-1-episode-2-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/XzCT7ZLLaG9flgpnUwkffg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/hNqI9mQUL4gFSsVGhFL8cg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/XAFfBVQRxKr7ow2KeMp8Zw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -55,26 +85,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/XPsM1QtpAHtWcv9gL_-qAg",
+        "url": "https://videonode.de/iframe3/p2p/XzCT7ZLLaG9flgpnUwkffg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/bgcveelobuuZF-RYCNq7cg",
+        "url": "https://videonode.de/iframe3/cast/hNqI9mQUL4gFSsVGhFL8cg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/rMaoZEn0Ue4B3VGpw2c--Q",
+        "url": "https://videonode.de/iframe3/hydrax/XAFfBVQRxKr7ow2KeMp8Zw",
         "default": false
       }
     ],
-    "id": 728,
-    "is_new": true
+    "id": 728
   },
   {
     "type": "series",
@@ -14563,8 +14592,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-still-family-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -14844,6 +14873,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Still a Family - Season 1 Episode 10 (2026)",
+        "slug": "still-family-season-1-episode-10-2026",
+        "source": "https://tv.nontondrama.vip/still-family-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/mMF4DpeAG33tDwh6tsfcBQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/tt373_McUln5ovRCdUDGjQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/8haI2HTqYwCia09ggrd21A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -14851,21 +14910,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/yMYPzEiz_VND_YouwDnTMw",
+        "url": "https://videonode.de/iframe3/p2p/mMF4DpeAG33tDwh6tsfcBQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/TovQNhCXhseih1WvmD598Q",
+        "url": "https://videonode.de/iframe3/cast/tt373_McUln5ovRCdUDGjQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/N1J1-FSZ1ODawFtlaaT__A",
+        "url": "https://videonode.de/iframe3/hydrax/8haI2HTqYwCia09ggrd21A",
         "default": false
       }
     ],
