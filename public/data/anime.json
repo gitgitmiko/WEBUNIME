@@ -9403,8 +9403,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kashita-2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [],
     "sinopsis": "Anime Kashita Maryoku.",
     "related": [],
@@ -9675,15 +9675,108 @@
             "default": true
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Kashita Maryoku Episode 8",
+        "slug": "kashita-maryoku-episode-8",
+        "source": "https://v2.samehadaku.how/kashita-maryoku-episode-8/",
+        "date": "",
+        "released_at": "2026-11-21T21:00:32.227Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-hd",
+            "label": "VIP HD",
+            "url": "https://icefile.web.id/embed/f90d65c1cd3758e6090780d3021a235f",
+            "default": true,
+            "post": "55486",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwbFCCQ46CdWCIgutIgBZSWMbGRDZSG9XY22xFib3dkKB6jjCHdC4ZbqVTbMl_UA5eaB7wCdljf7Vz18bCpYN5GWC9yzjPQlboc1t1-92BWmKu-ntAJMoKNdof3vv_-Rc5kFhA&origin=sameguru2.blogspot.com",
+            "default": false,
+            "post": "55486",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/atZQ1KoL#5_Y6_7Xttyc38PKQ9Xa5aB0XhKAgj8AGC1cO18B6ExU",
+            "default": false,
+            "post": "55486",
+            "nume": "5"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/u4I3RKAD#YoGbPt6HayL4eg4vPEeHIMNnjJ1Jp_OsLv9O7nOle50",
+            "default": false,
+            "post": "55486",
+            "nume": "6"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/6og32BZS#k8Fomdk1zQ_kvmO_FhD5-MDy0rrS8Cc7nlX7E44WGuY",
+            "default": false,
+            "post": "55486",
+            "nume": "7"
+          }
+        ]
       }
     ],
     "players": [
       {
+        "no": 2,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dwbFCCQ46CdWCIgutIgBZSWMbGRDZSG9XY22xFib3dkKB6jjCHdC4ZbqVTbMl_UA5eaB7wCdljf7Vz18bCpYN5GWC9yzjPQlboc1t1-92BWmKu-ntAJMoKNdof3vv_-Rc5kFhA&origin=sameguru2.blogspot.com",
+        "default": false,
+        "post": "55486",
+        "nume": "3"
+      },
+      {
         "no": 1,
-        "server": "default",
-        "label": "Default",
-        "url": "https://beta.icefile.my.id/embed/",
-        "default": true
+        "server": "vip-hd",
+        "label": "VIP HD",
+        "url": "https://icefile.web.id/embed/f90d65c1cd3758e6090780d3021a235f",
+        "default": true,
+        "post": "55486",
+        "nume": "1"
+      },
+      {
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/atZQ1KoL#5_Y6_7Xttyc38PKQ9Xa5aB0XhKAgj8AGC1cO18B6ExU",
+        "default": false,
+        "post": "55486",
+        "nume": "5"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/u4I3RKAD#YoGbPt6HayL4eg4vPEeHIMNnjJ1Jp_OsLv9O7nOle50",
+        "default": false,
+        "post": "55486",
+        "nume": "6"
+      },
+      {
+        "no": 5,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/6og32BZS#k8Fomdk1zQ_kvmO_FhD5-MDy0rrS8Cc7nlX7E44WGuY",
+        "default": false,
+        "post": "55486",
+        "nume": "7"
       }
     ],
     "id": 20
