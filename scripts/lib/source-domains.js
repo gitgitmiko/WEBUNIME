@@ -74,3 +74,15 @@ export const samehadakuDomain = createSiteDomain({
   ],
   searchQuery: "samehadaku nonton anime subtitle indonesia",
 });
+
+export const oploverzDomain = createSiteDomain({
+  name: "oploverz",
+  envVar: "OPLOVERZ_BASE",
+  // page.oploverz.ac (canonical di SEO) redirect ke domain aktif → ikut ter-resolve.
+  knownBases: ["https://oploverz.diy", "https://oploverz.mov", "https://page.oploverz.ac"],
+  host: "(?:www\\.|page\\.)?oploverz\\.[a-z]{2,10}(?:\\.[a-z]{2,4})?",
+  // Situs SvelteKit: data diambil dari <path>/__data.json, bukan HTML.
+  looksLikeSite: (html) => /oploverz/i.test(pageTitle(html)) && /_app\/immutable/i.test(html),
+  guesses: () => tldGuesses("oploverz"),
+  searchQuery: "oploverz nonton anime subtitle indonesia",
+});

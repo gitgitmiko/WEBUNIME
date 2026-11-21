@@ -3,6 +3,7 @@
  * - LK21: film / series / horor (halaman 1)
  * - Samehadaku: anime-terbaru (5 hlm) + anime-movie + jadwal
  * - Anoboy: homepage terbaru (merge server; judul baru jika belum ada) + anime-movie (2 hlm)
+ * - Oploverz: episode terbaru beranda (merge server; judul baru jika belum ada)
  *   ditulis ke public/data (TV) dan public/data/mobile (HP)
  */
 
@@ -13,6 +14,7 @@ import { syncSamehadakuCatalog, checkSamehadakuFirstPage } from "./samehadaku-sy
 import { syncAnoboyLatest } from "./anoboy-sync.js";
 import { checkAnoboyMoviesFirstPage, syncAnoboyMovies } from "./anoboy-movies.js";
 import { migrateAnoboyHosts, resolveAnoboyBase } from "./anoboy-domain.js";
+import { checkOploverzFirstPage, syncOploverzLatest } from "./oploverz-sync.js";
 import { lk21Domain, nontondramaDomain } from "./source-domains.js";
 import {
   extractLk21Quality,
@@ -1624,6 +1626,16 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       results.anoboyMovies = { checked: 0, matched: 0, added: 0, updated: 0, error: err.message };
     }
 
+    try {
+      results.oploverz = await syncOploverzLatest([dataDir, mobileDir], { pages: 2 });
+      console.log(
+        `[catalog-sync] oploverz: ${results.oploverz.fetched} seri, +${results.oploverz.added} judul, ${results.oploverz.matched} cocok`,
+      );
+    } catch (err) {
+      console.warn("[sync] oploverz:", err.message);
+      results.oploverz = { fetched: 0, matched: 0, added: 0, error: err.message };
+    }
+
     // Rewrite host player lama → baru di seluruh JSON (alias map).
     try {
       console.log("[catalog-sync] fix player host aliases…");
@@ -1676,7 +1688,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       (results.animeMovies?.added || 0) +
       (results.animeMoviesMobile?.added || 0) +
       (results.anoboy?.added || 0) +
-      (results.anoboyMovies?.added || 0);
+      (results.anoboyMovies?.added || 0) +
+      (results.oploverz?.added || 0);
     const updated =
       results.movies.updated +
       results.series.updated +
@@ -1688,7 +1701,8 @@ export async function syncCatalogIncremental(rootDir, opts = {}) {
       (results.animeMovies?.updated || 0) +
       (results.animeMoviesMobile?.updated || 0) +
       (results.anoboy?.matched || 0) +
-      (results.anoboyMovies?.updated || 0);
+      (results.anoboyMovies?.updated || 0) +
+      (results.oploverz?.matched || 0);
     const payload = {
       ok: true,
       skipped: false,
@@ -1774,8 +1788,19 @@ export async function checkFirstPageForNew(rootDir) {
     report.errors.push(`anoboy-movie: ${err.message}`);
   }
 
+  try {
+    report.oploverz = (await checkOploverzFirstPage(dataDir)).fresh;
+  } catch (err) {
+    report.oploverz = [];
+    report.errors.push(`oploverz: ${err.message}`);
+  }
+
   report.hasNew = Boolean(
-    report.movies.length || report.series.length || report.anime.length || report.anoboyMovies.length
+    report.movies.length ||
+      report.series.length ||
+      report.anime.length ||
+      report.anoboyMovies.length ||
+      report.oploverz.length
   );
   return report;
 }

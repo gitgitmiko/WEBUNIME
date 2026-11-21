@@ -27,6 +27,8 @@
     "sync:catalog": "node scripts/sync-catalog.js --force",
     "build:indexes": "node scripts/build-catalog-indexes.js",
     "build:marvel": "node scripts/build-marvel-catalog.js",
+    "scrape:oploverz": "node scripts/scrape-oploverz.js",
+    "sync:oploverz": "node scripts/scrape-oploverz.js --latest",
     "scrape:anoboy": "node scripts/scrape-anoboy.js",
     "sync:anoboy": "node scripts/scrape-anoboy.js --latest",
     "scrape:anoboy-movies": "node scripts/scrape-anoboy-movies.js --all",
