@@ -10834,7 +10834,7 @@
     "film": "Resident Evil (2026)",
     "source": "https://tv12.lk21official.cc/resident-evil-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:47.046Z",
+    "scraped_at": "2026-11-21T17:05:49.979Z",
     "players": [
       {
         "no": 1,
@@ -10931,7 +10931,7 @@
     "film": "Beware Boiuna (2026)",
     "source": "https://tv12.lk21official.cc/beware-boiuna-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:48.361Z",
+    "scraped_at": "2026-11-21T17:05:51.338Z",
     "players": [
       {
         "no": 1,
@@ -11321,7 +11321,7 @@
     "film": "The Ghost Marriage (2026)",
     "source": "https://tv12.lk21official.cc/ghost-marriage-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:38.168Z",
+    "scraped_at": "2026-11-21T17:05:40.747Z",
     "players": [
       {
         "no": 1,
@@ -11351,7 +11351,7 @@
     "film": "Other Mommy (2026)",
     "source": "https://tv12.lk21official.cc/other-mommy-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:33.217Z",
+    "scraped_at": "2026-11-21T17:05:35.626Z",
     "players": [
       {
         "no": 1,
@@ -11381,7 +11381,7 @@
     "film": "Kijsada Paradise (2026)",
     "source": "https://tv12.lk21official.cc/kijsada-paradise-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:27.970Z",
+    "scraped_at": "2026-11-21T17:05:30.193Z",
     "players": [
       {
         "no": 1,
@@ -11411,7 +11411,7 @@
     "film": "Door Slasher (2026)",
     "source": "https://tv12.lk21official.cc/door-slasher-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:27.304Z",
+    "scraped_at": "2026-11-21T17:05:29.513Z",
     "players": [
       {
         "no": 1,
@@ -11441,7 +11441,7 @@
     "film": "Godzilla Minus Zero (2026)",
     "source": "https://tv12.lk21official.cc/godzilla-minus-zero-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:15.831Z",
+    "scraped_at": "2026-11-21T17:05:17.642Z",
     "players": [
       {
         "no": 1,
@@ -11471,7 +11471,7 @@
     "film": "418 (2026)",
     "source": "https://tv12.lk21official.cc/418-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-21T16:35:14.205Z",
+    "scraped_at": "2026-11-21T17:05:15.830Z",
     "players": [
       {
         "no": 1,
@@ -11492,6 +11492,36 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/MYuzBlZW_CW54zfPzVjO0g",
+        "default": false
+      }
+    ]
+  },
+  "soul-snatcher-2026": {
+    "slug": "soul-snatcher-2026",
+    "film": "Soul Snatcher (2026)",
+    "source": "https://tv12.lk21official.cc/soul-snatcher-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-11-21T17:05:13.745Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/f_NN1gISVxO-8qzeg4Jugg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/0jnpuWdY2x4oShpIB5LMYw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/KrmOYeAK5GDsBqEis_gzJw",
         "default": false
       }
     ]

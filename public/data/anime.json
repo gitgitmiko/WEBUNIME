@@ -4967,7 +4967,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Black-Clover-Season-2-Episode-2-300x167.jpg",
     "rating": "8.8",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "23 Menit",
     "episodes_count": 8,
     "genre": [
       "Action",
@@ -5485,6 +5485,46 @@
             "default": false,
             "post": "55468",
             "nume": "7"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyghbgE0qItlgarnXkoc3iU_vdo6MGPEdmqagfQTOw5UK7A4vP8mOqwP1qc2qUmVlZNNRTbdPnCOWM7rJNNXZYaENaPwn1VniJRfHfnWg32ik6rBHrGdpZeBc1M29T63W-KBMcs",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 8,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/3la8vfdjbCWI",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 9,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/R50CHoeT0X6x",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 10,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/Tu3VGyOvssie",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 11,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/o7yWsRXe8Oih",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -19565,8 +19605,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Vertex%20Force.jpg",
     "rating": "5.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Sci-Fi"
@@ -19795,6 +19835,55 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/CG73811l34JR",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Vertex Force Episode 8",
+        "slug": "vertex-force-episode-8",
+        "source": "https://anoboy.at/2026/11/vertex-force-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzjsegk-N23uP0WI9OL0BKjN46tQ4IkEy8HwNXxv5cC66vN8JFilMWB9q7WJYsAMXCxxE49Abm-ByO7S2tNtvauav6-tQ1bl_Lu89v0w6LMYgtV7j7HjG2dEaJL--6xL8UYPZ0",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/kLAaiUW4Ak4h",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/PcrnuG2RyhKi",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/peAyo07qO7R7",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/CN0fM2bo28is",
             "default": false,
             "source": "anoboy"
           }
@@ -626752,8 +626841,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2020/04/88336.jpg",
     "rating": "7.17",
     "votes": 196673,
-    "durasi": "177 eps",
-    "episodes_count": 177,
+    "durasi": "178 eps",
+    "episodes_count": 178,
     "genre": [
       "Action",
       "Comedy",
@@ -632276,13 +632365,47 @@
             "no": 3
           }
         ]
+      },
+      {
+        "episode": 178,
+        "title": "Black Clover Episode 178",
+        "slug": "black-clover-episode-178",
+        "source": "https://oploverz.diy/series/black-clover/episode/178",
+        "date": "",
+        "released_at": "2026-11-21T15:00:00.000Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/lmJF2UTeG",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/KGeLRLvyCo",
+            "default": false,
+            "source": "oploverz",
+            "no": 2
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/gXA3mLJo1",
+            "default": false,
+            "source": "oploverz",
+            "no": 3
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/y1GwDX5Dh",
+        "url": "https://player.abyssplayer.com/lmJF2UTeG",
         "default": true,
         "source": "oploverz",
         "no": 1
@@ -632290,7 +632413,7 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/KOvv8Ed9f",
+        "url": "https://player.abyssplayer.com/KGeLRLvyCo",
         "default": false,
         "source": "oploverz",
         "no": 2
@@ -632298,7 +632421,7 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/dnAjsBc539",
+        "url": "https://player.abyssplayer.com/gXA3mLJo1",
         "default": false,
         "source": "oploverz",
         "no": 3
