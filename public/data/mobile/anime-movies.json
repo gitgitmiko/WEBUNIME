@@ -4852,24 +4852,12 @@
         "default": false,
         "source": "anoboy",
         "no": 9
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Filedon",
-        "url": "https://filedon.co/embed/JTVme8ZFYt",
-        "default": false,
-        "source": "oploverz",
-        "no": 10
       }
     ],
     "id": 23,
     "anoboy_source": "https://anoboy.at/2022/11/one-piece-film-red/",
     "studio": "",
-    "sumber": "",
-    "oploverz_source": "https://oploverz.diy/series/one-piece-movie",
-    "oploverz_slugs": [
-      "one-piece-movie"
-    ]
+    "sumber": ""
   },
   {
     "type": "anime-movie",
@@ -11360,9 +11348,29 @@
         "default": false,
         "source": "anoboy",
         "no": 4
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz dood",
+        "url": "https://dood.ws/e/fhe86rbnrns3quihkabtlf6bo4x99jak",
+        "default": false,
+        "source": "oploverz",
+        "no": 5
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz acefile",
+        "url": "https://acefile.co/player/57469507",
+        "default": false,
+        "source": "oploverz",
+        "no": 6
       }
     ],
-    "id": 115
+    "id": 115,
+    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-movie-sub-indonesia",
+    "oploverz_slugs": [
+      "violet-evergarden-movie-sub-indonesia"
+    ]
   },
   {
     "type": "anime-movie",
@@ -12434,29 +12442,9 @@
         "default": false,
         "source": "anoboy",
         "no": 2
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz dood",
-        "url": "https://dood.ws/e/fhe86rbnrns3quihkabtlf6bo4x99jak",
-        "default": false,
-        "source": "oploverz",
-        "no": 3
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz acefile",
-        "url": "https://acefile.co/player/57469507",
-        "default": false,
-        "source": "oploverz",
-        "no": 4
       }
     ],
-    "id": 135,
-    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-movie-sub-indonesia",
-    "oploverz_slugs": [
-      "violet-evergarden-movie-sub-indonesia"
-    ]
+    "id": 135
   },
   {
     "type": "anime-movie",
@@ -22084,49 +22072,6 @@
   {
     "type": "anime-movie",
     "source_site": "oploverz",
-    "nama": "Shin Evangelion Movie",
-    "judul": "Shin Evangelion Movie",
-    "tahun": "2007",
-    "thumbnail": "https://backapi.oploverz.ac/uploads/posters/49189e40-e4f9-4bae-b0b3-907d5db595c3.jpg",
-    "rating": "8.58",
-    "votes": null,
-    "durasi": "Movie",
-    "episodes_count": 0,
-    "genre": [
-      "Action",
-      "Drama",
-      "Fantasy",
-      "Psychological",
-      "Sci-Fi",
-      "Mecha"
-    ],
-    "sinopsis": "Neon Genesis Evangelion adalah anime mecha yang kompleks tentang remaja Shinji Ikari yang dipaksa mengendarai robot raksasa (Evangelion/Eva) untuk melawan monster misterius bernama Angels di kota futuristik Tokyo-3. Namun, di balik aksi robot, anime ini mendalami psikologi karakter yang traumatis, kecemasan eksistensial, kesepian, dan konflik batin, serta memasukkan banyak simbolisme dari agama Yahudi-Kristen dan psikoanalisis Freudian dan Jungian. Intinya, ini adalah cerita tentang perjuangan emosional dan filosofis di balik pertempuran mecha, bukan sekadar robot vs monster.",
-    "studio": "Khara",
-    "sumber": "",
-    "related": [],
-    "slug": "shin-evangelion-movie",
-    "source": "https://oploverz.diy/series/shin-evangelion-movie",
-    "oploverz_source": "https://oploverz.diy/series/shin-evangelion-movie",
-    "oploverz_slugs": [
-      "shin-evangelion-movie"
-    ],
-    "season_label": "",
-    "episodes": [],
-    "players": [
-      {
-        "server": "oploverz",
-        "label": "Oploverz Filedon",
-        "url": "https://filedon.co/embed/zEFisSNyCc",
-        "default": true,
-        "source": "oploverz",
-        "no": 1
-      }
-    ],
-    "id": 342
-  },
-  {
-    "type": "anime-movie",
-    "source_site": "oploverz",
     "nama": "Inazuma Eleven Movie: Saikyou Gundan Ogre Shuurai",
     "judul": "Inazuma Eleven Movie: Saikyou Gundan Ogre Shuurai",
     "tahun": "2010",
@@ -22162,7 +22107,7 @@
         "no": 1
       }
     ],
-    "id": 343
+    "id": 342
   },
   {
     "type": "anime-movie",
@@ -22206,7 +22151,7 @@
         "no": 1
       }
     ],
-    "id": 344
+    "id": 343
   },
   {
     "type": "anime-movie",
@@ -22250,7 +22195,7 @@
         "no": 1
       }
     ],
-    "id": 345
+    "id": 344
   },
   {
     "type": "anime-movie",
@@ -22294,7 +22239,7 @@
         "no": 1
       }
     ],
-    "id": 346
+    "id": 345
   },
   {
     "type": "anime-movie",
@@ -22338,7 +22283,7 @@
         "no": 1
       }
     ],
-    "id": 347
+    "id": 346
   },
   {
     "type": "anime-movie",
@@ -22379,7 +22324,7 @@
         "no": 1
       }
     ],
-    "id": 348
+    "id": 347
   },
   {
     "type": "anime-movie",
@@ -22420,7 +22365,7 @@
         "no": 1
       }
     ],
-    "id": 349
+    "id": 348
   },
   {
     "type": "anime-movie",
@@ -22479,7 +22424,7 @@
         "no": 3
       }
     ],
-    "id": 350
+    "id": 349
   },
   {
     "type": "anime-movie",
@@ -22536,7 +22481,7 @@
         "no": 3
       }
     ],
-    "id": 351
+    "id": 350
   },
   {
     "type": "anime-movie",
@@ -22577,7 +22522,7 @@
         "no": 1
       }
     ],
-    "id": 352
+    "id": 351
   },
   {
     "type": "anime-movie",
@@ -22618,7 +22563,7 @@
         "no": 1
       }
     ],
-    "id": 353
+    "id": 352
   },
   {
     "type": "anime-movie",
@@ -22659,7 +22604,7 @@
         "no": 1
       }
     ],
-    "id": 354
+    "id": 353
   },
   {
     "type": "anime-movie",
@@ -22700,7 +22645,7 @@
         "no": 1
       }
     ],
-    "id": 355
+    "id": 354
   },
   {
     "type": "anime-movie",
@@ -22741,7 +22686,7 @@
         "no": 1
       }
     ],
-    "id": 356
+    "id": 355
   },
   {
     "type": "anime-movie",
@@ -22782,7 +22727,7 @@
         "no": 1
       }
     ],
-    "id": 357
+    "id": 356
   },
   {
     "type": "anime-movie",
@@ -22823,7 +22768,7 @@
         "no": 1
       }
     ],
-    "id": 358
+    "id": 357
   },
   {
     "type": "anime-movie",
@@ -22864,7 +22809,7 @@
         "no": 1
       }
     ],
-    "id": 359
+    "id": 358
   },
   {
     "type": "anime-movie",
@@ -22905,7 +22850,7 @@
         "no": 1
       }
     ],
-    "id": 360
+    "id": 359
   },
   {
     "type": "anime-movie",
@@ -22946,7 +22891,7 @@
         "no": 1
       }
     ],
-    "id": 361
+    "id": 360
   },
   {
     "type": "anime-movie",
@@ -22987,7 +22932,7 @@
         "no": 1
       }
     ],
-    "id": 362
+    "id": 361
   },
   {
     "type": "anime-movie",
@@ -23028,7 +22973,7 @@
         "no": 1
       }
     ],
-    "id": 363
+    "id": 362
   },
   {
     "type": "anime-movie",
@@ -23069,7 +23014,7 @@
         "no": 1
       }
     ],
-    "id": 364
+    "id": 363
   },
   {
     "type": "anime-movie",
@@ -23110,7 +23055,7 @@
         "no": 1
       }
     ],
-    "id": 365
+    "id": 364
   },
   {
     "type": "anime-movie",
@@ -23151,7 +23096,7 @@
         "no": 1
       }
     ],
-    "id": 366
+    "id": 365
   },
   {
     "type": "anime-movie",
@@ -23192,7 +23137,7 @@
         "no": 1
       }
     ],
-    "id": 367
+    "id": 366
   },
   {
     "type": "anime-movie",
@@ -23233,7 +23178,7 @@
         "no": 1
       }
     ],
-    "id": 368
+    "id": 367
   },
   {
     "type": "anime-movie",
@@ -23274,7 +23219,7 @@
         "no": 1
       }
     ],
-    "id": 369
+    "id": 368
   },
   {
     "type": "anime-movie",
@@ -23315,7 +23260,7 @@
         "no": 1
       }
     ],
-    "id": 370
+    "id": 369
   },
   {
     "type": "anime-movie",
@@ -23356,7 +23301,7 @@
         "no": 1
       }
     ],
-    "id": 371
+    "id": 370
   },
   {
     "type": "anime-movie",
@@ -23397,7 +23342,7 @@
         "no": 1
       }
     ],
-    "id": 372
+    "id": 371
   },
   {
     "type": "anime-movie",
@@ -23438,7 +23383,7 @@
         "no": 1
       }
     ],
-    "id": 373
+    "id": 372
   },
   {
     "type": "anime-movie",
@@ -23479,7 +23424,7 @@
         "no": 1
       }
     ],
-    "id": 374
+    "id": 373
   },
   {
     "type": "anime-movie",
@@ -23520,7 +23465,7 @@
         "no": 1
       }
     ],
-    "id": 375
+    "id": 374
   },
   {
     "type": "anime-movie",
@@ -23579,7 +23524,7 @@
         "no": 3
       }
     ],
-    "id": 376
+    "id": 375
   },
   {
     "type": "anime-movie",
@@ -23623,7 +23568,7 @@
         "no": 1
       }
     ],
-    "id": 377
+    "id": 376
   },
   {
     "type": "anime-movie",
@@ -23679,7 +23624,7 @@
         "no": 3
       }
     ],
-    "id": 378
+    "id": 377
   },
   {
     "type": "anime-movie",
@@ -23737,7 +23682,7 @@
         "no": 3
       }
     ],
-    "id": 379
+    "id": 378
   },
   {
     "type": "anime-movie",
@@ -23778,7 +23723,7 @@
         "no": 1
       }
     ],
-    "id": 380
+    "id": 379
   },
   {
     "type": "anime-movie",
@@ -23820,7 +23765,7 @@
         "no": 1
       }
     ],
-    "id": 381
+    "id": 380
   },
   {
     "type": "anime-movie",
@@ -23876,7 +23821,7 @@
         "no": 3
       }
     ],
-    "id": 382
+    "id": 381
   },
   {
     "type": "anime-movie",
@@ -23916,7 +23861,7 @@
         "no": 1
       }
     ],
-    "id": 383
+    "id": 382
   },
   {
     "type": "anime-movie",
@@ -23956,7 +23901,7 @@
         "no": 1
       }
     ],
-    "id": 384
+    "id": 383
   },
   {
     "type": "anime-movie",
@@ -23999,6 +23944,6 @@
         "no": 1
       }
     ],
-    "id": 385
+    "id": 384
   }
 ]
