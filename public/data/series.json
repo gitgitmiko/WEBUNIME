@@ -1,6 +1,83 @@
 [
   {
     "type": "series",
+    "nama": "Beethoven Virus",
+    "judul": "Beethoven Virus (2008)",
+    "tahun": "2008",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-beethoven-virus-2008-lk21.jpg",
+    "rating": "6.5",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "sinopsis": "Kang Gun Woo, seorang konduktor orkestra perfeksionis yang terkenal di seluruh dunia, bertemu dengan pemain biola Du Ru Mi dan Kang—seorang jenius musik yang tidak pernah belajar musik secara formal, sekaligus seorang polisi muda yang memiliki nama yang sama dengannya. Ketiganya pun terjebak dalam segitiga cinta.\n\nAwards: 3 wins & 9 nominations\nSoundtrack: Can You Hear Me?\n\nSutradara: JQ Lee\n\nBintang Film: Kim Myung-min, Lee Ji-ah, Jang Keun-suk, Kim Young-min, Jung Suk-yong\n\nNegara: South Korea\n\nVotes: 9",
+    "slug": "beethoven-virus-2008",
+    "source": "https://tv.nontondrama.vip/beethoven-virus-2008",
+    "list_source": "https://tv12.lk21official.cc/beethoven-virus-2008",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Beethoven Virus - Season 1 Episode 1 (2008)",
+        "slug": "beethoven-virus-season-1-episode-1-2008",
+        "source": "https://tv.nontondrama.vip/beethoven-virus-season-1-episode-1-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/XPsM1QtpAHtWcv9gL_-qAg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/bgcveelobuuZF-RYCNq7cg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/rMaoZEn0Ue4B3VGpw2c--Q",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/XPsM1QtpAHtWcv9gL_-qAg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/bgcveelobuuZF-RYCNq7cg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/rMaoZEn0Ue4B3VGpw2c--Q",
+        "default": false
+      }
+    ],
+    "id": 728,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Begins Youth",
     "judul": "Begins Youth (2024)",
     "tahun": "2024",
