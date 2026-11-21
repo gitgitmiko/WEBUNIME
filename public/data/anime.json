@@ -13580,8 +13580,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Shuiro%20no%20Kamen111.jpg",
     "rating": "7.1",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Fantasy",
@@ -14036,6 +14036,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/H0GhLMb2dQQo",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 7,
+        "title": "Shuiro no Kamen Episode 7",
+        "slug": "shuiro-no-kamen-episode-7",
+        "source": "https://anoboy.at/2026/11/shuiro-no-kamen-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dz_KZXrK21TBXuMYQ9WXLYZUlTV7VzFEu8OCOvCMoTmGkei8RwiJARf3nwJnDiOs3nqnKX5q3HKzAZwKSaXF2kx4pva6toLco8KYWfBenXSU53xmJB9S-pl7CasJRP-rDRQDg",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwzgdbwa2dMzGgwSlQmUqqOxHLotelGVqV4t3KuPx_rgPxtI0NimqpkNQNRb4Nm9HkSPJ-KbOk2odX6kjsncvAnVJ5PMUJeXcpNq_6U_Z2P0VAc64xBSKTSSSdooRWNGgxSBA",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/54ucjjasx6J5",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/1EF4gLkLRn25",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/Hf5PJucA452h",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/1W253pM2o3Pk",
             "default": false,
             "source": "anoboy"
           }
