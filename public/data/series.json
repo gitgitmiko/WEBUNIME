@@ -6,8 +6,8 @@
     "tahun": "2008",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-beethoven-virus-2008-lk21.jpg",
     "rating": "6.5",
-    "durasi": "10 eps · S.1",
-    "episodes_count": 10,
+    "durasi": "12 eps · S.1",
+    "episodes_count": 12,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -318,6 +318,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "Beethoven Virus - Season 1 Episode 11 (2008)",
+        "slug": "beethoven-virus-season-1-episode-11-2008",
+        "source": "https://tv.nontondrama.vip/beethoven-virus-season-1-episode-11-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/2oLY5BNaGJk3oCMQKdBRLg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/KqFKKUUdoLr29qo8H3SKZQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/J6SDIL53tZn0nTS2bUc0YQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 12,
+        "title": "Beethoven Virus - Season 1 Episode 12 (2008)",
+        "slug": "beethoven-virus-season-1-episode-12-2008",
+        "source": "https://tv.nontondrama.vip/beethoven-virus-season-1-episode-12-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hyCZ_LleNeTiAJP6PUpMsg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/d0hRh0V_e_C5cyHkOGNlvQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/AQiyH5XaB1r6ijv4w9zUkA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -325,21 +385,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/xWpEPiqtgr6hMlz_-3HyIw",
+        "url": "https://videonode.de/iframe3/p2p/hyCZ_LleNeTiAJP6PUpMsg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/ZjGgc75_RVcfq1-3HdNtmQ",
+        "url": "https://videonode.de/iframe3/cast/d0hRh0V_e_C5cyHkOGNlvQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GG2L-nXMgpXr76lIjeW8eQ",
+        "url": "https://videonode.de/iframe3/hydrax/AQiyH5XaB1r6ijv4w9zUkA",
         "default": false
       }
     ],

@@ -1,5 +1,47 @@
 [
   {
+    "nama": "Red Code Blue",
+    "judul": "Red Code Blue (2025)",
+    "tahun": "2025",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-red-code-blue-2025-lk21.jpg",
+    "rating": "8.5",
+    "quality": "HD",
+    "durasi": "2j 29m",
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "sinopsis": "Seorang detektif polisi muda mulai bertugas di Riga pada tahun 90-an. Tak lama kemudian, antusiasmenya berhadapan dengan kenyataan pahit di jalanan, dan ia menyadari bahwa untuk membersihkan kota dari kejahatan, beberapa batas—baik etis maupun hukum—harus dilanggar.\n\nAwards: 5 wins & 2 nominations\nBudget: EUR 18,000\n\nSubtitle: workkeerr\n\nSutradara: Oskars Rupenheits\n\nBintang Film: Raitis Sturmanis, Viesturs Berkmanis, Armands Gulans, Indulis Miglavs, Alvis Vinters\n\nNegara: Finland\n\nVotes: 574\n\nRelease: 10 Oct 2025\n\nUpdated: 21 Nov 2026 19:24:03",
+    "slug": "red-code-blue-2025",
+    "source": "https://tv12.lk21official.cc/red-code-blue-2025",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/1Z4SBYEbv_2DlR1tJym0SA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/EX53-xCbz6ZEYYoUlL6c_A",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/dixRVDm7FdY86eQP4v0MDw",
+        "default": false
+      }
+    ],
+    "id": 506,
+    "is_new": true
+  },
+  {
     "nama": "Unbearable Christmas",
     "judul": "Unbearable Christmas (2026)",
     "tahun": "2026",
@@ -37,8 +79,7 @@
         "default": false
       }
     ],
-    "id": 505,
-    "is_new": true
+    "id": 505
   },
   {
     "nama": "The Fatal Dealz",
