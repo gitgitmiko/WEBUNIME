@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-sleepless-society-nyctophobia-2019-lk21.jpg",
     "rating": "6.2",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Mystery",
@@ -77,6 +77,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Sleepless Society: Nyctophobia - Season 1 Episode 6 (2019)",
+        "slug": "sleepless-society-nyctophobia-season-1-episode-6-2019",
+        "source": "https://tv.nontondrama.vip/sleepless-society-nyctophobia-season-1-episode-6-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/S9QWOWTcoFQzYlsKfuX_cA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xIBZebzG-nohHJ0Y04mK2w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/1-YvCdyIHMB0N-t1zvEknA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Sleepless Society: Nyctophobia - Season 1 Episode 7 (2019)",
+        "slug": "sleepless-society-nyctophobia-season-1-episode-7-2019",
+        "source": "https://tv.nontondrama.vip/sleepless-society-nyctophobia-season-1-episode-7-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/gpCwjGUoTLdXftZ3Tfl0bQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/AsV02Qyx0iXWFdwOdMA6fg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/cEhzhR3wZHvi8kUHccHS0w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -84,21 +144,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/LuJiex_2r4-ZwFEgpkAkMA",
+        "url": "https://videonode.de/iframe3/p2p/gpCwjGUoTLdXftZ3Tfl0bQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/20-uOqz4OnTVwAKo2RuKyA",
+        "url": "https://videonode.de/iframe3/cast/AsV02Qyx0iXWFdwOdMA6fg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/k0t146DNz1P9KLDMgSvi-Q",
+        "url": "https://videonode.de/iframe3/hydrax/cEhzhR3wZHvi8kUHccHS0w",
         "default": false
       }
     ],
