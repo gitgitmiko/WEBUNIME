@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-answer-heaven-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "8 eps · S.1",
-    "episodes_count": 8,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -256,6 +256,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "Answer for Heaven - Season 1 Episode 9 (2019)",
+        "slug": "answer-heaven-season-1-episode-9-2019",
+        "source": "https://tv.nontondrama.vip/answer-heaven-season-1-episode-9-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/LPd4bNhMlVyHydiDhZoXCA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/zLru0ybJvI_hYh-bYG3FkA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/2BktAvfh3-LnyIRHRrF_0A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Answer for Heaven - Season 1 Episode 10 (2019)",
+        "slug": "answer-heaven-season-1-episode-10-2019",
+        "source": "https://tv.nontondrama.vip/answer-heaven-season-1-episode-10-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/eGE3sdFjMF3IfOv1ISn4gg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/6QmwOgrbTqk4ZzcACKwJDQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/uao25_x9wB9MMNtbTyo-KA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -263,21 +323,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ui-7LNniWTK_SmBpNS32mw",
+        "url": "https://videonode.de/iframe3/p2p/eGE3sdFjMF3IfOv1ISn4gg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/l_bAJMcUyc1VjmYAY-Rg6g",
+        "url": "https://videonode.de/iframe3/cast/6QmwOgrbTqk4ZzcACKwJDQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/rQxxqo_MAxHqBCBqec9i-A",
+        "url": "https://videonode.de/iframe3/hydrax/uao25_x9wB9MMNtbTyo-KA",
         "default": false
       }
     ],
