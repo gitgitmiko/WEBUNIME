@@ -104,8 +104,7 @@
       }
     ],
     "thumbnail_landscape": "https://poster.assetsy.de/wp-content/uploads/2025/11/film-udt-heroes-next-door-2025-lk21.jpg",
-    "id": 720,
-    "is_new": true
+    "id": 720
   },
   {
     "type": "series",
@@ -121194,8 +121193,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-merii-berii-rabu-2026-lk21.jpg",
     "rating": "9.4",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "7 eps · S.1",
+    "episodes_count": 7,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -121385,6 +121384,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Merry Berry Love - Season 1 Episode 7 (2026)",
+        "slug": "merry-berry-love-season-1-episode-7-2026",
+        "source": "https://tv.nontondrama.vip/merry-berry-love-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/LpL4YosBZn2T0RUKUFRjJw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Mhqj_k5cy9QI4YKv2O4Idw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/5k4Bp7p3aX62iaA_iZ_biw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -121392,21 +121421,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ONIhUf_1klkXo9XkCdpTGQ",
+        "url": "https://videonode.de/iframe3/p2p/LpL4YosBZn2T0RUKUFRjJw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/rtufQa9fgX9P_S5oeQtl5Q",
+        "url": "https://videonode.de/iframe3/cast/Mhqj_k5cy9QI4YKv2O4Idw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/yfwYEAkaUomyAmt1HkcE6g",
+        "url": "https://videonode.de/iframe3/hydrax/5k4Bp7p3aX62iaA_iZ_biw",
         "default": false
       }
     ],
