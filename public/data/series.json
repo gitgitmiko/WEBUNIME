@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-answer-heaven-2019-lk21.jpg",
     "rating": "6.7",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -46,6 +46,96 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Answer for Heaven - Season 1 Episode 2 (2019)",
+        "slug": "answer-heaven-season-1-episode-2-2019",
+        "source": "https://tv.nontondrama.vip/answer-heaven-season-1-episode-2-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/C4L8iPYmg_teFuU3CQnOVw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/VXtg-aF5OjpCJDw-4cG29A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ltcpMLsslzMMY7My0mwYiA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Answer for Heaven - Season 1 Episode 3 (2019)",
+        "slug": "answer-heaven-season-1-episode-3-2019",
+        "source": "https://tv.nontondrama.vip/answer-heaven-season-1-episode-3-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/bGl3WXrydaFSvYCm5L2nRw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/I_HZIQ06B5k8FUcX_yYeWA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pDMyu1YMxELeHyAFh9CC7w",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Answer for Heaven - Season 1 Episode 4 (2019)",
+        "slug": "answer-heaven-season-1-episode-4-2019",
+        "source": "https://tv.nontondrama.vip/answer-heaven-season-1-episode-4-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/EkJgwQJAPJCZYHs4RQys3w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/06MkI5d_3iKQhKf-ogVLHA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GgGg6xHF_E8ZejZ8HvqCIA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -53,26 +143,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Y1jbfI-Wsh5rqVxdzxvAqw",
+        "url": "https://videonode.de/iframe3/p2p/EkJgwQJAPJCZYHs4RQys3w",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/JFVafOz0CGWxnWPosnDY4A",
+        "url": "https://videonode.de/iframe3/cast/06MkI5d_3iKQhKf-ogVLHA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/kFHAjrrOSbbbXIwmgz7Vfg",
+        "url": "https://videonode.de/iframe3/hydrax/GgGg6xHF_E8ZejZ8HvqCIA",
         "default": false
       }
     ],
-    "id": 724,
-    "is_new": true
+    "id": 724
   },
   {
     "type": "series",
