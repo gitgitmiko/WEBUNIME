@@ -574,11 +574,28 @@ function mergeMoviesIntoCatalogs(packs, movies, bulk) {
       slug: p.series.meta.slug,
       title: p.series.meta.title,
       href: p.series.href,
+      year: p.series.meta.tahun,
     }));
     // Baris yang sudah milik movie Oploverz lain tidak boleh dipasangkan ulang
     // (kalau tidak, server & slug-nya tertimpa movie yang mirip judulnya).
     const free = pack.items.filter((r) => !r.oploverz_slugs?.length);
-    const pairs = pairMovies(free, keys.filter((k) => !pack.items.some((r) => r.oploverz_slugs?.includes(k.slug))));
+    const open = keys.filter((k) => !pack.items.some((r) => r.oploverz_slugs?.includes(k.slug)));
+    // Tahap 1: judul + tahun, hanya yang cocok persis ("Violet Evergarden Movie 2020"
+    // → violet-evergarden-movie-2020, bukan Gaiden yang cocok sebagian).
+    const pairs = new Map();
+    const withYear = open
+      .filter((k) => k.year)
+      .map((k) => ({ ...k, title: `${k.title} ${k.year}` }));
+    for (const [slug, hit] of pairMovies(free, withYear)) {
+      if (hit && hit.score >= 100) pairs.set(slug, hit);
+    }
+    // Tahap 2: sisanya dengan pencocokan biasa (Anoboy).
+    const taken = new Set([...pairs.values()].map((h) => h.row));
+    const rest = pairMovies(
+      free.filter((r) => !taken.has(r)),
+      open.filter((k) => !pairs.has(k.slug)),
+    );
+    for (const [slug, hit] of rest) if (hit) pairs.set(slug, hit);
     for (const { series, players } of playable) {
       const slug = series.meta.slug;
       const pair =
@@ -644,7 +661,8 @@ export async function syncOploverz(dirs, opts = {}) {
   });
 
   const ok = fetched.filter((s) => s && s.episodes.size);
-  const isMovie = (s) => /^movie$/i.test(s.meta.releaseType);
+  // "Movie" berisi banyak episode (mis. one-piece-movie = kumpulan 15 movie) → seri.
+  const isMovie = (s) => /^movie$/i.test(s.meta.releaseType) && s.episodes.size <= 1;
   const series = ok.filter((s) => !isMovie(s));
   const movies = opts.movies === false ? [] : ok.filter(isMovie);
 
