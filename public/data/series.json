@@ -518,8 +518,7 @@
         "default": false
       }
     ],
-    "id": 722,
-    "is_new": true
+    "id": 722
   },
   {
     "type": "series",
@@ -528,8 +527,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-blue-road-2026-lk21.jpg",
     "rating": "7.7",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -601,6 +600,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "The Blue Road - Season 1 Episode 3 (2026)",
+        "slug": "blue-road-season-1-episode-3-2026",
+        "source": "https://tv.nontondrama.vip/blue-road-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Nw3e28KrUnCQZeF4Ok_vCA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/LbfpJzDTX1dGH-YYU8tPlA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PaJwN-EDhX8fCGqNdXWtCA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -608,26 +637,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/rt_gcIppZ3yLHIx4pgRqYg",
+        "url": "https://videonode.de/iframe3/p2p/Nw3e28KrUnCQZeF4Ok_vCA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/AB1_zzXBrPQqT5PMuSRYjw",
+        "url": "https://videonode.de/iframe3/cast/LbfpJzDTX1dGH-YYU8tPlA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/v4i84dtOivsT7YHf0yb6wQ",
+        "url": "https://videonode.de/iframe3/hydrax/PaJwN-EDhX8fCGqNdXWtCA",
         "default": false
       }
     ],
-    "id": 721,
-    "is_new": true
+    "id": 721
   },
   {
     "type": "series",
