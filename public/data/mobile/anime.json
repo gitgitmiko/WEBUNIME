@@ -18486,8 +18486,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Magical%E2%98%85Explorer.jpg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 8,
+    "durasi": "9 eps",
+    "episodes_count": 9,
     "genre": [
       "Adventure",
       "Comedy",
@@ -18879,6 +18879,25 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Magical★Explorer Episode 9",
+        "slug": "magical%e2%98%85explorer-episode-9",
+        "source": "https://v2.samehadaku.how/magical%e2%98%85explorer-episode-9/",
+        "date": "",
+        "released_at": "2026-11-21T18:30:30.897Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/VcYFEKRS#SbuLDO8ldCOCRnwwQZXi11Fhn84H7WXPPIhIHXPyJLk",
+            "default": true,
+            "post": "55478",
+            "nume": "1"
+          }
+        ]
       }
     ],
     "players": [
@@ -18886,9 +18905,9 @@
         "no": 1,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/NQ5D0Q7S#fLhH5V2FMk0iFpaAfZnMuAt-FRgPHvRj8T_BikBKvKQ",
+        "url": "https://mega.nz/embed/VcYFEKRS#SbuLDO8ldCOCRnwwQZXi11Fhn84H7WXPPIhIHXPyJLk",
         "default": true,
-        "post": "55327",
+        "post": "55478",
         "nume": "1"
       }
     ],
