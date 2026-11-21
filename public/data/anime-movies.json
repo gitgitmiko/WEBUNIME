@@ -3532,9 +3532,21 @@
         "default": false,
         "post": "8055",
         "nume": "4"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz OK.ru",
+        "url": "https://ok.ru/videoembed/3739551795799",
+        "default": false,
+        "source": "oploverz",
+        "no": 5
       }
     ],
-    "id": 31
+    "id": 31,
+    "oploverz_source": "https://oploverz.diy/series/digimon-adventure-last-evolution-kizuna",
+    "oploverz_slugs": [
+      "digimon-adventure-last-evolution-kizuna"
+    ]
   },
   {
     "type": "anime-movie",
@@ -9721,9 +9733,29 @@
         "default": false,
         "source": "anoboy",
         "no": 2
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz dood",
+        "url": "https://dood.ws/e/fhe86rbnrns3quihkabtlf6bo4x99jak",
+        "default": false,
+        "source": "oploverz",
+        "no": 3
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz acefile",
+        "url": "https://acefile.co/player/57469507",
+        "default": false,
+        "source": "oploverz",
+        "no": 4
       }
     ],
-    "id": 135
+    "id": 135,
+    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-movie-sub-indonesia",
+    "oploverz_slugs": [
+      "violet-evergarden-movie-sub-indonesia"
+    ]
   },
   {
     "type": "anime-movie",
@@ -16058,28 +16090,20 @@
     "related": [],
     "slug": "violet-evergarden-eternity-and-the-auto-memory-doll",
     "source": "https://oploverz.diy/series/violet-evergarden-eternity-and-the-auto-memory-doll",
-    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-movie-sub-indonesia",
+    "oploverz_source": "https://oploverz.diy/series/violet-evergarden-eternity-and-the-auto-memory-doll",
     "oploverz_slugs": [
-      "violet-evergarden-movie-sub-indonesia"
+      "violet-evergarden-eternity-and-the-auto-memory-doll"
     ],
     "season_label": "",
     "episodes": [],
     "players": [
       {
         "server": "oploverz",
-        "label": "Oploverz dood",
-        "url": "https://dood.ws/e/fhe86rbnrns3quihkabtlf6bo4x99jak",
+        "label": "Oploverz Filedon",
+        "url": "https://filedon.co/embed/g8PhPk7BcW",
         "default": true,
         "source": "oploverz",
         "no": 1
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz acefile",
-        "url": "https://acefile.co/player/57469507",
-        "default": false,
-        "source": "oploverz",
-        "no": 2
       }
     ],
     "id": 265
@@ -21192,5 +21216,88 @@
       }
     ],
     "id": 383
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "oploverz",
+    "nama": "Kuroko no Basket Movie: Last Game",
+    "judul": "Kuroko no Basket Movie: Last Game",
+    "tahun": "2017",
+    "thumbnail": "https://backapi.oploverz.ac/uploads/posters/768c31bd-4422-4bfb-af78-f4e322abd18e.jpg",
+    "rating": "8.08",
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 0,
+    "genre": [
+      "Shounen",
+      "School",
+      "Sports"
+    ],
+    "sinopsis": "Tim basket jalanan Amerika yang dikenal dengan nama Jabberwock datang ke Jepang, dan mereka menghina pemain basket Jepang hanya karena mereka bisa menang dengan mudah melawan pebasket Jepang. Pelatih Kagetora pun geram dan ia mengumpulkan para pemain yang bisa mengalahkan Jabberwock dalam pertandingan balas dendam. Dan para pemain yang dikumpulkan itu tak lain adalah para anggota Generasi Keajaiban dan Kagami Taiga. Kuroko no Basket Movie: Last Game",
+    "studio": "Production I.G",
+    "sumber": "",
+    "related": [],
+    "slug": "kuroko-no-basket-movie-last-game",
+    "source": "https://oploverz.diy/series/kuroko-no-basket-movie-last-game",
+    "oploverz_source": "https://oploverz.diy/series/kuroko-no-basket-movie-last-game",
+    "oploverz_slugs": [
+      "kuroko-no-basket-movie-last-game"
+    ],
+    "season_label": "",
+    "episodes": [],
+    "players": [
+      {
+        "server": "oploverz",
+        "label": "Oploverz OK.ru",
+        "url": "https://ok.ru/videoembed/3840010488407",
+        "default": true,
+        "source": "oploverz",
+        "no": 1
+      }
+    ],
+    "id": 384
+  },
+  {
+    "type": "anime-movie",
+    "source_site": "oploverz",
+    "nama": "Fairy Tail Movie 2: Dragon Cry",
+    "judul": "Fairy Tail Movie 2: Dragon Cry",
+    "tahun": "2017",
+    "thumbnail": "https://backapi.oploverz.ac/uploads/posters/363de794-69ce-43eb-84c1-bbdf3f9d0a92.jpg",
+    "rating": "7.53",
+    "votes": null,
+    "durasi": "Movie",
+    "episodes_count": 0,
+    "genre": [
+      "Action",
+      "Fantasy",
+      "Shounen",
+      "Comedy",
+      "Adventure",
+      "Magic"
+    ],
+    "sinopsis": "Dragon Cry adalah sebuah artefak sihir yang memiliki kekuatan mematikan, yang dibentuk menjadi sebuah tongkat sihir yang berisikan kemarahan dan keputus-asaan dari para naga yang telah mati. Saat ini, Dragon Cry dicuri dari Kerajaan Fiore oleh seorang pengkhianat keji bernama Zash Caine yang mengasingkan diri ke sebuah pulau kecil di Kerajaan Stella. Karena takut Dragon Cry jatuh ke tangan yang salah, Raja Fiore mengutus Fairy Tail untuk merebut kembali tongkat sihir itu. Misi ini juga mengungkap sesuatu yang mengerikan di jantung Kerajaan Stella. Dragon Cry menceritakan penyatuan kekuatan para peri untuk merebut kembali tongkat sihir dan menyelamatkan kedua kerajaan dari malapetaka.\nFairy Tail Movie 2: Dragon Cry",
+    "studio": "A-1 Pictures",
+    "sumber": "",
+    "related": [],
+    "slug": "fairy-tail-movie-2-dragon-cry",
+    "source": "https://oploverz.diy/series/fairy-tail-movie-2-dragon-cry",
+    "oploverz_source": "https://oploverz.diy/series/fairy-tail-movie-2-dragon-cry",
+    "oploverz_slugs": [
+      "fairy-tail-movie-2-dragon-cry"
+    ],
+    "season_label": "",
+    "episodes": [],
+    "players": [
+      {
+        "server": "oploverz",
+        "label": "Oploverz YourUpload",
+        "url": "https://www.yourupload.com/embed/52BsVw75iUaV",
+        "default": true,
+        "source": "oploverz",
+        "no": 1
+      }
+    ],
+    "id": 385
   }
 ]

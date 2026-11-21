@@ -958744,7 +958744,7 @@
     "source_site": "samehadaku",
     "nama": "Mahouka Koukou no Rettousei: Tsuioku-hen",
     "judul": "Mahouka Koukou no Rettousei: Tsuioku-hen",
-    "tahun": "",
+    "tahun": "2022",
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2022/01/118034.jpg",
     "rating": "7.75",
     "votes": 2122,
@@ -958794,6 +958794,14 @@
             "default": false,
             "post": "16473",
             "nume": "3"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz YourUpload",
+            "url": "https://www.yourupload.com/embed/tXu34j5RcuO5",
+            "default": false,
+            "source": "oploverz",
+            "no": 4
           }
         ]
       }
@@ -958825,9 +958833,22 @@
         "default": false,
         "post": "16473",
         "nume": "3"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz YourUpload",
+        "url": "https://www.yourupload.com/embed/tXu34j5RcuO5",
+        "default": false,
+        "source": "oploverz",
+        "no": 4
       }
     ],
-    "id": 748
+    "id": 748,
+    "oploverz_source": "https://oploverz.diy/series/mahouka-koukou-no-rettousei-tsuioku-hen",
+    "oploverz_slugs": [
+      "mahouka-koukou-no-rettousei-tsuioku-hen"
+    ],
+    "studio": "8bit"
   },
   {
     "type": "anime",
