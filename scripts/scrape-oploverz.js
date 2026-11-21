@@ -9,6 +9,8 @@
  * Seri tertentu (slug Oploverz, pisahkan koma):
  *   node scripts/scrape-oploverz.js --series one-piece,black-clover
  *
+ * Tambah --bulk agar judul baru ditaruh di akhir & tanpa tanda baru (impor susulan).
+ *
  * Terbaru (episode terbaru di beranda):
  *   node scripts/scrape-oploverz.js --latest --pages 2
  *
@@ -32,6 +34,8 @@ const opts = {
   pages: Number(argVal("--pages", "2")) || 2,
   dryRun: argv.includes("--dry-run"),
   movies: !argv.includes("--no-movies"),
+  // --bulk: judul baru di akhir katalog & tanpa is_new (default untuk impor penuh).
+  ...(argv.includes("--bulk") ? { bulk: true } : {}),
   slugs: argVal("--series", "")
     .split(",")
     .map((s) => s.trim())

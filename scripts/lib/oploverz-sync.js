@@ -195,9 +195,10 @@ export async function fetchSeries(slug) {
   if (!data?.series) throw new Error(`series kosong: ${slug}`);
   const meta = metaFromSeries(data.series);
   const episodes = new Map();
-  for (const e of data.episodes || []) {
-    const n = episodeNumber(e.episodeNumber);
-    if (n == null) continue;
+  // Movie/OVA/special sering tanpa episodeNumber (null) → nomori urut dari 1.
+  let unnumbered = 0;
+  for (const e of [...(data.episodes || [])].reverse()) {
+    const n = episodeNumber(e.episodeNumber) ?? ++unnumbered;
     const players = playersFromStreams(e.streamUrl);
     if (!players.length) continue;
     const prev = episodes.get(n);
@@ -596,7 +597,7 @@ export async function syncOploverz(dirs, opts = {}) {
   await oploverzDomain.resolve();
   console.log(`[oploverz] domain: ${base()}`);
 
-  const bulk = !opts.slugs?.length;
+  const bulk = opts.bulk ?? !opts.slugs?.length;
   let targets;
   if (opts.slugs?.length) {
     targets = opts.slugs.map((slug) => ({ slug, releaseType: "" }));
