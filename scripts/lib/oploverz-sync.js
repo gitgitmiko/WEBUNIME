@@ -107,10 +107,25 @@ const HOSTS = [
   // [regex host, nama server, prioritas (kecil = lebih dulu)]
   [/blogger\.com$/i, "Blogger", 0],
   [/abyssplayer\.com$|abyss\.to$/i, "Abyss", 1],
+  [/yourupload\.com$/i, "YourUpload", 1],
   [/filedon\.co$/i, "Filedon", 2],
   [/4meplayer\./i, "4Me", 3],
   [/upbolt\./i, "Upbolt", 4],
+  [/(^|\.)ok\.ru$/i, "OK.ru", 5],
 ];
+
+/** Sebagian movie lama hanya menyimpan ID mentah + nama host di "source". */
+const BARE_ID_EMBED = {
+  yourupload: (id) => `https://www.yourupload.com/embed/${id}`,
+  okru: (id) => `https://ok.ru/videoembed/${id}`,
+};
+
+function streamUrlOf(s) {
+  const raw = String(s?.url || "").trim();
+  if (/^https?:\/\//i.test(raw)) return raw;
+  const make = BARE_ID_EMBED[String(s?.source || "").toLowerCase().replace(/[^a-z]/g, "")];
+  return make && /^[\w-]{6,}$/.test(raw) ? make(raw) : "";
+}
 const QUALITY_ORDER = { "720p": 0, "1080p": 1, "480p": 2, "360p": 3, "": 4 };
 
 function hostInfo(host) {
@@ -130,7 +145,7 @@ export function playersFromStreams(streams) {
   for (const s of streams || []) {
     let u;
     try {
-      u = new URL(String(s?.url || "").trim());
+      u = new URL(streamUrlOf(s));
     } catch {
       continue;
     }
@@ -560,12 +575,16 @@ function mergeMoviesIntoCatalogs(packs, movies, bulk) {
       title: p.series.meta.title,
       href: p.series.href,
     }));
-    const pairs = pairMovies(pack.items, keys);
+    // Baris yang sudah milik movie Oploverz lain tidak boleh dipasangkan ulang
+    // (kalau tidak, server & slug-nya tertimpa movie yang mirip judulnya).
+    const free = pack.items.filter((r) => !r.oploverz_slugs?.length);
+    const pairs = pairMovies(free, keys.filter((k) => !pack.items.some((r) => r.oploverz_slugs?.includes(k.slug))));
     for (const { series, players } of playable) {
+      const slug = series.meta.slug;
       const pair =
-        pack.items.find((r) => r.oploverz_slugs?.includes(series.meta.slug)) ||
-        pack.items.find((r) => r.oploverz_source === series.href) ||
-        pairs.get(series.meta.slug)?.row;
+        pack.items.find((r) => r.oploverz_slugs?.includes(slug)) ||
+        free.find((r) => r.slug === slug) ||
+        pairs.get(slug)?.row;
       if (pair) {
         const merged = withOploverzPlayers(pair.players, players);
         const changed = !samePlayers(merged, pair.players);
