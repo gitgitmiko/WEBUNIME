@@ -6,8 +6,8 @@
     "tahun": "2008",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-beethoven-virus-2008-lk21.jpg",
     "rating": "6.5",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -288,6 +288,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Beethoven Virus - Season 1 Episode 10 (2008)",
+        "slug": "beethoven-virus-season-1-episode-10-2008",
+        "source": "https://tv.nontondrama.vip/beethoven-virus-season-1-episode-10-2008",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xWpEPiqtgr6hMlz_-3HyIw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ZjGgc75_RVcfq1-3HdNtmQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GG2L-nXMgpXr76lIjeW8eQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -295,21 +325,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/MFtYLcdV3NVbTa4_2pYhZA",
+        "url": "https://videonode.de/iframe3/p2p/xWpEPiqtgr6hMlz_-3HyIw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/8GsFbZke_cPm7KCfJ0_gKQ",
+        "url": "https://videonode.de/iframe3/cast/ZjGgc75_RVcfq1-3HdNtmQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/AJeNWAf2z9rFCbWNB8Qpsg",
+        "url": "https://videonode.de/iframe3/hydrax/GG2L-nXMgpXr76lIjeW8eQ",
         "default": false
       }
     ],
