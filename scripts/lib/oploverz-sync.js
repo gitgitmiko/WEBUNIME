@@ -16,6 +16,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { normalizeAnimeKey } from "./anoboy-sync.js";
 import { pairMovies } from "./anoboy-movies.js";
+import { isBrokenThumb } from "./samehadaku-sync.js";
 import { oploverzDomain } from "./source-domains.js";
 
 const CONCURRENCY = 4;
@@ -301,7 +302,8 @@ function applyMeta(row, meta, href, isNew) {
   if (meta.rating && !row.rating) row.rating = meta.rating;
   if (meta.tahun && !row.tahun) row.tahun = meta.tahun;
   if (meta.studio && !row.studio) row.studio = meta.studio;
-  if (meta.thumb && !row.thumbnail) row.thumbnail = meta.thumb;
+  // Poster kosong / banner iklan GIF dari sumber lain → pakai poster Oploverz.
+  if (meta.thumb && isBrokenThumb(row.thumbnail)) row.thumbnail = meta.thumb;
 }
 
 function newSeriesRow(meta, href, markNew) {

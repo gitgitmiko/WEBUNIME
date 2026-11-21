@@ -193,9 +193,14 @@ function listingImageUrl(block) {
   return cut.match(/\ssrc\s*=\s*["']([^"']+)["']/i)?.[1] || "";
 }
 
+/** Banner iklan (judi dll.) di situs sumber berupa GIF, poster asli tidak pernah GIF. */
+export function isAdThumb(url) {
+  return /\.gif(?:[?#]|$)/i.test(String(url || "").trim());
+}
+
 export function isBrokenThumb(url) {
   const value = String(url || "").trim().replace(/\/+$/, "");
-  return !value || /\/wp-content\/uploads$/i.test(value);
+  return !value || /\/wp-content\/uploads$/i.test(value) || isAdThumb(value);
 }
 
 export function ogImageUrl(html) {
@@ -249,7 +254,9 @@ export async function completeFromWatchPage(page, anime) {
   if (!(await waitReady(page, 12000))) return 0;
   const html = await page.content();
   const poster = ogImageUrl(html);
-  if (poster && isBrokenThumb(anime.thumbnail)) anime.thumbnail = absUrl(poster);
+  if (poster && !isAdThumb(poster) && isBrokenThumb(anime.thumbnail)) {
+    anime.thumbnail = absUrl(poster);
+  }
   const known = new Set(episodes.map((ep) => Number(ep.episode)));
   let added = 0;
   for (const link of watchEpisodeLinks(html, anime.slug)) {
@@ -336,7 +343,7 @@ async function mergeAnimeLatestFeed(dataDir, listings) {
       byKey.set(key, {
         ...prev,
         nama: item.title || prev.nama,
-        thumbnail: item.thumbnail || prev.thumbnail,
+        thumbnail: !isBrokenThumb(item.thumbnail) ? item.thumbnail : prev.thumbnail,
         released_on: item.released_on || prev.released_on,
         episode_source: item.episode_source || prev.episode_source,
         source: item.source || prev.source,
@@ -418,11 +425,13 @@ export function extractMovieListings(html) {
 
 function extractAnimeDetailMeta(html, fallback = {}) {
   const h1 = cleanTitle(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] || "");
+  // Gambar pertama di .thumb kadang banner iklan GIF → ambil kandidat pertama yang wajar.
   const thumb =
-    html.match(/class=["']thumb["'][\s\S]*?<img[^>]+src=["']([^"']+)["']/i)?.[1] ||
-    html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1] ||
-    fallback.thumbnail ||
-    "";
+    [
+      html.match(/class=["']thumb["'][\s\S]*?<img[^>]+src=["']([^"']+)["']/i)?.[1],
+      html.match(/property=["']og:image["'][^>]*content=["']([^"']+)["']/i)?.[1],
+      fallback.thumbnail,
+    ].find((u) => u && !isBrokenThumb(u)) || "";
   const thumbAbs = absUrl(thumb);
   const rating =
     html.match(/itemprop=["']ratingValue["'][^>]*>([^<]+)/i)?.[1]?.trim() || null;
@@ -937,7 +946,9 @@ async function applyTerbaruToCatalog(page, dataDir, listings) {
         current.episodes_count = current.episodes.length;
         current.durasi = `${current.episodes.length} eps`;
         current.players = preferPlayers(current.episodes);
-        if (item.thumbnail && !current.thumbnail) current.thumbnail = item.thumbnail;
+        if (!isBrokenThumb(item.thumbnail) && isBrokenThumb(current.thumbnail)) {
+          current.thumbnail = item.thumbnail;
+        }
         updatedAnime += 1;
         addedEps += 1;
         touched.push(item.slug);
