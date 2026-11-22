@@ -1,13 +1,93 @@
 [
   {
     "type": "series",
+    "nama": "Heart of Stone",
+    "judul": "Heart of Stone (2019)",
+    "tahun": "2019",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-heart-stone-2019-lk21.jpg",
+    "rating": "7.7",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "sinopsis": "Setelah bertahun-tahun mengalami perlakuan kejam, Tor kembali sebagai Sila yang kaya raya untuk membalas dendam atas kematian ibunya. Mingta, teman masa kecilnya, mengenalinya, sehingga rencana Tor pun menjadi rumit.\n\nSutradara: Thanawat Panyarin\n\nBintang Film: Tor Thanapob Leeratanakachorn, Ferny Nopjira Lerkkajornnamkul, Siriam Pakdeedumrongrit, Kanokchat Manyaton, Nicky Na Chat Juntapun\n\nNegara: Thailand\n\nVotes: 9",
+    "slug": "heart-stone-2019",
+    "source": "https://tv.nontondrama.vip/heart-stone-2019",
+    "list_source": "https://tv12.lk21official.cc/heart-stone-2019",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Heart of Stone - Season 1 Episode 1 (2019)",
+        "slug": "heart-stone-season-1-episode-1-2019",
+        "source": "https://tv.nontondrama.vip/heart-stone-season-1-episode-1-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/7ZAdGrlYTjjnEVotj4HrPw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7L8hYqBjybw62qIpQ3SMwQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/U8P5YozvIDTiYuBFpAb4gw",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/7ZAdGrlYTjjnEVotj4HrPw",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/7L8hYqBjybw62qIpQ3SMwQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/U8P5YozvIDTiYuBFpAb4gw",
+        "default": false
+      }
+    ],
+    "id": 731,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "The Judgement",
     "judul": "The Judgement (2018)",
     "tahun": "2018",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-judgement-2018-lk21.jpg",
     "rating": "6.5",
-    "durasi": "12 eps · S.1",
-    "episodes_count": 12,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -377,6 +457,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "The Judgement - Season 1 Episode 13 (2018)",
+        "slug": "judgement-season-1-episode-13-2018",
+        "source": "https://tv.nontondrama.vip/judgement-season-1-episode-13-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/F_1nq_nbcdPYUTjLN-CO6A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fAiifHFCq2mMa-a4F5IlPg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/HuUlEyzA1B1G7XOmnlqI9A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -384,21 +494,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/mXP8OJeOnDnueF9OI_5QcA",
+        "url": "https://videonode.de/iframe3/p2p/F_1nq_nbcdPYUTjLN-CO6A",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/2aCepc_rjrwRJvhqDr_PxQ",
+        "url": "https://videonode.de/iframe3/cast/fAiifHFCq2mMa-a4F5IlPg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/1fDJCgijQ59ovzkhY_KXWQ",
+        "url": "https://videonode.de/iframe3/hydrax/HuUlEyzA1B1G7XOmnlqI9A",
         "default": false
       }
     ],
