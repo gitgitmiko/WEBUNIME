@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-heart-stone-2019-lk21.jpg",
     "rating": "7.7",
-    "durasi": "15 eps · S.1",
-    "episodes_count": 15,
+    "durasi": "16 eps · S.1",
+    "episodes_count": 16,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -471,6 +471,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "Heart of Stone - Season 1 Episode 16 (2019)",
+        "slug": "heart-stone-season-1-episode-16-2019",
+        "source": "https://tv.nontondrama.vip/heart-stone-season-1-episode-16-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/AEqCyjGGNZn0Q5n4PkaGKA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/lyerx6v8buNeJ8McrEqqFQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/YJMOXy1cvQHAjGZY9wNrbA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -478,21 +508,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ZFPPQmyyeL82iYuACpiHJA",
+        "url": "https://videonode.de/iframe3/p2p/AEqCyjGGNZn0Q5n4PkaGKA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/iC36_kUAbz5Cp2q-5vS1hw",
+        "url": "https://videonode.de/iframe3/cast/lyerx6v8buNeJ8McrEqqFQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Nkx0EUT4x63gWI3FjHqhIQ",
+        "url": "https://videonode.de/iframe3/hydrax/YJMOXy1cvQHAjGZY9wNrbA",
         "default": false
       }
     ],
