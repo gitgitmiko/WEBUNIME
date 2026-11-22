@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-heart-stone-2019-lk21.jpg",
     "rating": "7.7",
-    "durasi": "18 eps · S.1",
-    "episodes_count": 18,
+    "durasi": "20 eps · S.1",
+    "episodes_count": 20,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -561,6 +561,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 19,
+        "title": "Heart of Stone - Season 1 Episode 19 (2019)",
+        "slug": "heart-stone-season-1-episode-19-2019",
+        "source": "https://tv.nontondrama.vip/heart-stone-season-1-episode-19-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lyK77QnwffbravZEds226A",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/WI1xXsf-jQ2JlQTDwjn8Yw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/F9kooBn0uGwgeIREqVghdg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 20,
+        "title": "Heart of Stone - Season 1 Episode 20 (2019)",
+        "slug": "heart-stone-season-1-episode-20-2019",
+        "source": "https://tv.nontondrama.vip/heart-stone-season-1-episode-20-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/GLfp1IUGAbQ_atma6fFQoQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/SrWCyeqMXVe2obnj9Kkpmg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KUvWU-8yc-IOq5Hus3SYRg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -568,21 +628,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/FOEAxgjfVFC49nzCdeyDig",
+        "url": "https://videonode.de/iframe3/p2p/GLfp1IUGAbQ_atma6fFQoQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/5EIyaV4iZ7UjYEwUv1jMBA",
+        "url": "https://videonode.de/iframe3/cast/SrWCyeqMXVe2obnj9Kkpmg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ooGXyx0Mwwg46gpHzqFU9g",
+        "url": "https://videonode.de/iframe3/hydrax/KUvWU-8yc-IOq5Hus3SYRg",
         "default": false
       }
     ],
