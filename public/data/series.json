@@ -6,8 +6,8 @@
     "tahun": "2018",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-judgement-2018-lk21.jpg",
     "rating": "6.5",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -47,6 +47,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The Judgement - Season 1 Episode 2 (2018)",
+        "slug": "judgement-season-1-episode-2-2018",
+        "source": "https://tv.nontondrama.vip/judgement-season-1-episode-2-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/m8vHtcuEwgy0WOluveZgaQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1JSUVaWDijOt15mUuW6zfg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ewOogMSOaoCMT0WBIT1HZQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "The Judgement - Season 1 Episode 3 (2018)",
+        "slug": "judgement-season-1-episode-3-2018",
+        "source": "https://tv.nontondrama.vip/judgement-season-1-episode-3-2018",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/4bAg6V4rz7rDCPv4aL-z2w",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/M-fDtI6CBWNM28EsW3vRHw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/-ZNnOl1rjUgaoTacCa6-qA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -54,26 +114,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/d7-IpWPE8gVDWDEQlDtWBg",
+        "url": "https://videonode.de/iframe3/p2p/4bAg6V4rz7rDCPv4aL-z2w",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/_8h1PCDDaoShq1xdQGT-LQ",
+        "url": "https://videonode.de/iframe3/cast/M-fDtI6CBWNM28EsW3vRHw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Iiwum9iQhSuGV-b3j2q3Kw",
+        "url": "https://videonode.de/iframe3/hydrax/-ZNnOl1rjUgaoTacCa6-qA",
         "default": false
       }
     ],
-    "id": 730,
-    "is_new": true
+    "id": 730
   },
   {
     "type": "series",
