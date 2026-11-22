@@ -227137,8 +227137,8 @@
     "tahun": "2000",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/10/film-csi-crime-scene-investigation-2000-lk21.jpg",
     "rating": "7.7",
-    "durasi": "254 eps · S.12",
-    "episodes_count": 254,
+    "durasi": "257 eps · S.12",
+    "episodes_count": 257,
     "seasons_count": 3,
     "genre": [
       "Crime",
@@ -234755,28 +234755,104 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 12,
+        "episode": 5,
+        "title": "CSI: Crime Scene Investigation - Season 12 Episode 5 (2000)",
+        "slug": "csi-crime-scene-investigation-season-12-episode-5-2000",
+        "source": "https://tv.nontondrama.vip/csi-crime-scene-investigation-season-12-episode-5-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/fDOznuoIAu4SOmincUL-Kw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/U4TNVs7Dh9gOnXt294rwzQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/0wVmSkaHuBYjXQV8RSutZQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 12,
+        "episode": 6,
+        "title": "CSI: Crime Scene Investigation - Season 12 Episode 6 (2000)",
+        "slug": "csi-crime-scene-investigation-season-12-episode-6-2000",
+        "source": "https://tv.nontondrama.vip/csi-crime-scene-investigation-season-12-episode-6-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lj2VI_P0lPH-sU0hGJH2pw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/NQG_F8ppRFLqWdV76dpkBg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/8xC6GitqyVa6r_82-f-5KA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 12,
+        "episode": 7,
+        "title": "CSI: Crime Scene Investigation - Season 12 Episode 7 (2000)",
+        "slug": "csi-crime-scene-investigation-season-12-episode-7-2000",
+        "source": "https://tv.nontondrama.vip/csi-crime-scene-investigation-season-12-episode-7-2000",
+        "players": [
+          {
+            "no": 1,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/EOUpYq3OjYITSQ1qtyKJfA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/WkMal8epQ3TodUIWRXL7Bw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "p2p",
-        "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Ua4Hn7ZoTuiy3v9-ZeXtLQ",
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/EOUpYq3OjYITSQ1qtyKJfA",
         "default": true
       },
       {
         "no": 2,
-        "server": "cast",
-        "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/MTDqiM8-BIkGwkiXU6kyTg",
-        "default": false
-      },
-      {
-        "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/ejcgfxvgnuErfEED0A1oSQ",
+        "url": "https://videonode.de/iframe3/hydrax/WkMal8epQ3TodUIWRXL7Bw",
         "default": false
       }
     ],
