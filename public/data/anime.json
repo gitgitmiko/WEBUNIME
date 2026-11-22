@@ -8589,8 +8589,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-Ashi-2.jpg",
     "rating": "7.8",
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Shounen",
       "School",
@@ -9062,86 +9062,108 @@
             "no": 9
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Ao Ashi S2 Episode 8",
+        "slug": "ao-ashi-s2-episode-8",
+        "source": "https://v2.samehadaku.how/ao-ashi-s2-episode-8/",
+        "date": "",
+        "released_at": "2026-11-22T10:30:29.371Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-hd",
+            "label": "VIP HD",
+            "url": "https://icefile.web.id/embed/fa89ca01b44aaa372d0b1fd192c2d035",
+            "default": true,
+            "post": "55492",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw5osc_IaGAna-CjOtTbhvJJza3wATydc3jvP4KMRzZdCRSRO3G2yPjdexSuvNjySSPaH1zfoj_l_3fvgV3QKDh6Q6a9J3jvflSmmq9crEvyH5f4yDSJM1ivkKxPZsgIjZY1Q&origin=sameguru2.blogspot.com",
+            "default": false,
+            "post": "55492",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/S5w2TTbQ#q3uxTsASUtva9lKVEiH2_X-wqS4RS9sGmyZdRIm0Vxw",
+            "default": false,
+            "post": "55492",
+            "nume": "5"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/m45ljaZa#e3WrhCEp1nuHAwkp06X2WCTil-GHQiYEnv9gm58AcHY",
+            "default": false,
+            "post": "55492",
+            "nume": "6"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/70RDzJoR#hw0T-N5HMasHFCmdOi_M0Bm4hAbmUNpQV489JcpGias",
+            "default": false,
+            "post": "55492",
+            "nume": "7"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 1,
-        "server": "vip-hd",
-        "label": "VIP HD",
-        "url": "https://beta.icefile.my.id/embed/MXdsVnhvNGlyMFFVVzV4dEd5aWgtR1pmSUI4OW5SOXgy",
-        "default": true,
-        "post": "55346",
-        "nume": "1"
-      },
-      {
         "no": 2,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyKfd8H0MMG-0jjMxcVgD8jlB_0sB7rFiNtnuAereAyKbnY3xSVggSz3KahFavBMrq8SfQv6i_lORsZxSbK6aVlqO4_NZIhCuG2z1mj2pAQlQPADMhYMBg0oom2nbYAsQ5xERMa&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw5osc_IaGAna-CjOtTbhvJJza3wATydc3jvP4KMRzZdCRSRO3G2yPjdexSuvNjySSPaH1zfoj_l_3fvgV3QKDh6Q6a9J3jvflSmmq9crEvyH5f4yDSJM1ivkKxPZsgIjZY1Q&origin=sameguru2.blogspot.com",
         "default": false,
-        "post": "55346",
+        "post": "55492",
         "nume": "3"
       },
       {
+        "no": 1,
+        "server": "vip-hd",
+        "label": "VIP HD",
+        "url": "https://icefile.web.id/embed/fa89ca01b44aaa372d0b1fd192c2d035",
+        "default": true,
+        "post": "55492",
+        "nume": "1"
+      },
+      {
         "no": 3,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/Fir9VF0ZyN",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/S5w2TTbQ#q3uxTsASUtva9lKVEiH2_X-wqS4RS9sGmyZdRIm0Vxw",
         "default": false,
-        "post": "55346",
-        "nume": "4"
+        "post": "55492",
+        "nume": "5"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/2l5TnDSJ#6a1oEo6iDLYSPxrbwTJkc6vRt-Xy9f5HpvpzGR6NaI0",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/m45ljaZa#e3WrhCEp1nuHAwkp06X2WCTil-GHQiYEnv9gm58AcHY",
         "default": false,
-        "post": "55346",
-        "nume": "5"
+        "post": "55492",
+        "nume": "6"
       },
       {
         "no": 5,
         "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/rtJ1VZZJ#UD9uRm5PvsTvgsX6WdhcxgsbQyzJQAnSmZ1Vr6uWBhQ",
-        "default": false,
-        "post": "55346",
-        "nume": "6"
-      },
-      {
-        "no": 6,
-        "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/jpgEjSAL#10N9wO7f6-fR0ZGKQx8SRDG-nOC4d-NetuCPx02l2dY",
+        "url": "https://mega.nz/embed/70RDzJoR#hw0T-N5HMasHFCmdOi_M0Bm4hAbmUNpQV489JcpGias",
         "default": false,
-        "post": "55346",
+        "post": "55492",
         "nume": "7"
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/c5_SGIbSl",
-        "default": false,
-        "source": "oploverz",
-        "no": 7
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/rxoyZc0wj",
-        "default": false,
-        "source": "oploverz",
-        "no": 8
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/IC25Zz8yi",
-        "default": false,
-        "source": "oploverz",
-        "no": 9
       }
     ],
     "id": 18,
@@ -1215995,8 +1216017,8 @@
     "thumbnail": "https://backapi.oploverz.ac/uploads/posters/1523aab1-5d08-44b6-b4b8-8a74a9786257.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Drama",
       "School",
@@ -1216230,13 +1216252,47 @@
             "no": 3
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Blue Box S2 Episode 7",
+        "slug": "blue-box-s2-episode-7",
+        "source": "https://oploverz.diy/series/blue-box-s2/episode/7",
+        "date": "",
+        "released_at": "2026-11-22T08:00:00.000Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/VOMw67TeI",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/ET6HEXHXo",
+            "default": false,
+            "source": "oploverz",
+            "no": 2
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/PYLooA_2H",
+            "default": false,
+            "source": "oploverz",
+            "no": 3
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/XcQHRAtiV",
+        "url": "https://player.abyssplayer.com/VOMw67TeI",
         "default": true,
         "source": "oploverz",
         "no": 1
@@ -1216244,7 +1216300,7 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/Yzoo0goU6",
+        "url": "https://player.abyssplayer.com/ET6HEXHXo",
         "default": false,
         "source": "oploverz",
         "no": 2
@@ -1216252,7 +1216308,7 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/8wOA7sPCJ",
+        "url": "https://player.abyssplayer.com/PYLooA_2H",
         "default": false,
         "source": "oploverz",
         "no": 3
