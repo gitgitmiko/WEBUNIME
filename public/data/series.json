@@ -901,8 +901,7 @@
         "default": false
       }
     ],
-    "id": 733,
-    "is_new": true
+    "id": 733
   },
   {
     "type": "series",
@@ -911,8 +910,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-gordon-2026-lk21.jpg",
     "rating": "6.6",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -956,6 +955,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Gordon - Season 1 Episode 2 (2026)",
+        "slug": "gordon-season-1-episode-2-2026",
+        "source": "https://tv.nontondrama.vip/gordon-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/rU3SkmbbeE_stEbnNtaRhQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jFSjvZK-QDMRtMEZKDDyRQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/UtkQ8lJCE0djIwZ93y3rAw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Gordon - Season 1 Episode 3 (2026)",
+        "slug": "gordon-season-1-episode-3-2026",
+        "source": "https://tv.nontondrama.vip/gordon-season-1-episode-3-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/h2LyWEb-EttLJpoxH33khg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/TE4q7P6Y3kuL99koyKp6cw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ZDKPZKQQ5YVRSmdSyyvReg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -963,21 +1022,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/nLJehoP1m4ZVYTf-lXBD6Q",
+        "url": "https://videonode.de/iframe3/p2p/h2LyWEb-EttLJpoxH33khg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/9epGHkopKo6jbPZbNkbFkQ",
+        "url": "https://videonode.de/iframe3/cast/TE4q7P6Y3kuL99koyKp6cw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/6HEAh-n3ioshqDr8GYsCbQ",
+        "url": "https://videonode.de/iframe3/hydrax/ZDKPZKQQ5YVRSmdSyyvReg",
         "default": false
       }
     ],
