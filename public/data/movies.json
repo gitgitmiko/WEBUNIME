@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Deviant",
+    "judul": "Deviant (2024)",
+    "tahun": "2024",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-deviant-2024-lk21.jpg",
+    "rating": "4.9",
+    "quality": "HD",
+    "durasi": "1j 23m",
+    "genre": [
+      "Comedy",
+      "Horror"
+    ],
+    "sinopsis": "Javier melewatkan makan malam keluarga pada malam Natal demi kencan yang diatur melalui aplikasi kencan yang agak aneh. Alih-alih bersenang-senang dengan seorang wanita muda yang menarik, ia malah disandera oleh seorang pria paruh baya yang bejat dan ibunya yang kejam serta sangat doyan kue.\n\nAwards: 1 wins & 2 nominations\n\nSubtitle: workkeerr\n\nSutradara: Daniel M. Caneiro\n\nBintang Film: Alain Hernandez, Fernando Albizu, Itziar Aizpuru, Patxi Santamaria, Gorka Aguinagalde\n\nNegara: Spain\n\nVotes: 133\n\nRelease: 02 Feb 2024\n\nUpdated: 22 Nov 2026 10:43:02",
+    "slug": "deviant-2024",
+    "source": "https://tv12.lk21official.cc/deviant-2024",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/wf9HkRlJ6-v79Ko4WSDNrA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/aQLUMKcKh7islyrj_xNI1w",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/byGiJqC4Q7HFjKFOyob3yA",
+        "default": false
+      }
+    ],
+    "id": 509,
+    "is_new": true
+  },
+  {
     "nama": "The Last Temptation of Becky",
     "judul": "The Last Temptation of Becky (2026)",
     "tahun": "2026",
@@ -39,8 +80,7 @@
         "default": false
       }
     ],
-    "id": 508,
-    "is_new": true
+    "id": 508
   },
   {
     "nama": "Brothers",

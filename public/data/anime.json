@@ -7338,7 +7338,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-2.jpg",
     "rating": "8.2",
     "votes": null,
-    "durasi": "7 eps",
+    "durasi": "23 Menit",
     "episodes_count": 7,
     "genre": [
       "Romance",
@@ -7769,6 +7769,54 @@
             "default": false,
             "post": "55489",
             "nume": "7"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyK5LlWavs0TZ-Nem_aUw5LXXC_dd2L_IGg2R_pipxc4mAv1L9g3xzgeHFk9vmCxXwtsdqGyO0-GpoZ8SLbPTWZc94HtKY_zsdhWOddtwh6Dt-0R8eOqJHWUzx-0WbaLsoz6F0",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 8,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwBtPlza3U8x2dK-PQF_z8-1Et6K10Gw1id4fgvGCBmcPCGlQUpBfRMsPhpuLHlJ-vYYWRYOnFvacR86x7rj3GDAiqJhCV-6uKM1Ei3hPv2BB6WfsnEL1JpLSz0bVyj80Y9oRo",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 9,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/7x7hvS1Jxh2w",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 10,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/xKhyycvr25T6",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 11,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/qWh86VOdA2TW",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 12,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/GKnx17r55v64",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -7842,8 +7890,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Mission-Yozakura-Family-Season-2-Part-2-Episode-1.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [],
     "sinopsis": "Anime Mission: Yozakura Family Season 2 Part 2.",
     "related": [],
@@ -8108,6 +8156,34 @@
             "nume": "6"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Mission: Yozakura Family Season 2 Part 2 Episode 7",
+        "slug": "mission-yozakura-family-season-2-part-2-episode-7",
+        "source": "https://v2.samehadaku.how/mission-yozakura-family-season-2-part-2-episode-7/",
+        "date": "",
+        "released_at": "2026-11-22T11:00:27.506Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/dngAkSAa#hWvkF5lQO10192YU_Y-UbuBZAFus9Z1F_Bf7JMJXUzM",
+            "default": true,
+            "post": "55496",
+            "nume": "5"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/AuhyUaRT#eGi1WglJqBMz_kLWr0IbbFtEM9P-CFUfeZlsVx8m510",
+            "default": false,
+            "post": "55496",
+            "nume": "6"
+          }
+        ]
       }
     ],
     "players": [
@@ -8115,18 +8191,18 @@
         "no": 1,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/lZc0WaTZ#YZ-wy5i0zstUn_53fL0YuHOKJaPSDJfOThej7NXd30E",
+        "url": "https://mega.nz/embed/dngAkSAa#hWvkF5lQO10192YU_Y-UbuBZAFus9Z1F_Bf7JMJXUzM",
         "default": true,
-        "post": "55348",
+        "post": "55496",
         "nume": "5"
       },
       {
         "no": 2,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/EE8hXKwC#zgTwYfmfnMCRUNzkW5YoDjhhVozssex5B4X26MR1xcs",
+        "url": "https://mega.nz/embed/AuhyUaRT#eGi1WglJqBMz_kLWr0IbbFtEM9P-CFUfeZlsVx8m510",
         "default": false,
-        "post": "55348",
+        "post": "55496",
         "nume": "6"
       }
     ],
@@ -9903,8 +9979,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Yozakura-san%20Chi%20no%20Daisakusen%20Season%202%20Part%202.jpg",
     "rating": "7.6",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Action",
       "Comedy",
@@ -10161,6 +10237,63 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Yozakura-san Chi no Daisakusen Season 2 Part 2 Episode 7",
+        "slug": "yozakura-san-chi-no-daisakusen-season-2-part-2-episode-7",
+        "source": "https://anoboy.at/2026/11/yozakura-san-chi-no-daisakusen-season-2-part-2-episode-7/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxBu5h0sLOFu8UzzCtEmAf2_yVRg-awW-g09x89vPpG7fafqmYLjzLUnezp5ZcJInCWYHrWkKxjNYvF9rfSjhUzUtZXELuFI9VvqcRjdGdHYdsp0fS-scJ0P51vOcU8apqz0Os",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxkHJSx_IaM6KedlMfaYvPOmIz6iwmng5Arv5QBpoxgcQ7TmdUyFL32YFFitNwmg_g_Xw2nmKyqLfnyoLrX1Ivi0dvgvBQwiM9uipWGSpyVrejwq92sCzCWVsl9tlyBcYU-3ZIQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/6h8K74O8eqav",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/1lQwH3V1x38I",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/w0hTI2o0w0sl",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/7dJ8fS3bS4Bb",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -10194,8 +10327,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Aoashi%20Season%202.jpg",
     "rating": "8.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Sports",
       "Seinen"
@@ -10472,6 +10605,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 360p",
             "url": "https://www.yourupload.com/embed/1iP3mTi2GF7J",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Aoashi Season 2 Episode 8",
+        "slug": "aoashi-season-2-episode-8",
+        "source": "https://anoboy.at/2026/11/aoashi-season-2-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw2MU1MeAn9-0ETsfh9JmBXf3kHDT2a-erRe2vhqtwIgrr2z20Rx0e_RKB80_v6ebJ4FMga6PzPOr6daaDWXZBfLnJ-dzpnK-OPpdCQpvddxrGgjHz5gTvM4xSc_ZNzCN3W2t8",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwlXZqQByzdWXqFsReJFO1oRRI_f0W8WBcetPTTfyT4vKV96-ADsx1A_nyDEo9zlt6hrTwQTz2U9RMaJKHxNpm-jj1oTuEGG3LfPqHtyJaLgbfUQQj1_dMY8yOv22rKNJ4JJP0",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/38Wt22k1KK7n",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/MDEBCqRiYgDi",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/c45k3pW6E61b",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/pUaXDwpY7g7e",
             "default": false,
             "source": "anoboy"
           }
@@ -170831,6 +171021,54 @@
             "default": false,
             "post": "50242",
             "nume": "11"
+          },
+          {
+            "no": 12,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dySQKh2TKPTrEsRz_6pPtsTsymKV-4yfYmiH3hP09mfn7TbN9I6JlglRT0NB6OUmoTOdb3iyH3IhwH8NnEHzL_87HcNiMVrqKN2dg6dBc2jxqr_fJ5ZPSDp8yVOzf5amqa5hubR",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 13,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzKaKrNNGgOl8txzOoL17XfozefuGYp-NyzYlgCUMR3tQlfCyNi-Ht1qft2x8DI8LLEK_-AWF8lMeZE1CWmin9qvyiQZPju0RFPauXFotZTzN7cLZsx1LlGHybIX_GJhv2_5Plv",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 14,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/L0F0646LT7hI",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 15,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/7JCpBXXc06MQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 16,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/mK7FF7WcwN4m",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 17,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/I4IqMIrWor3K",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       },
