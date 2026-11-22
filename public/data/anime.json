@@ -7338,8 +7338,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Ao-no-Hako-Season-2-Episode-2.jpg",
     "rating": "8.2",
     "votes": null,
-    "durasi": "23 Menit",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [
       "Romance",
       "Sports",
@@ -7707,35 +7707,126 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Ao no Hako Season 2 Episode 7",
+        "slug": "ao-no-hako-season-2-episode-7",
+        "source": "https://v2.samehadaku.how/ao-no-hako-season-2-episode-7/",
+        "date": "",
+        "released_at": "2026-11-22T10:00:35.352Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-hd",
+            "label": "VIP HD",
+            "url": "https://icefile.web.id/embed/a288d8b85b1b6c1caf6b0bee4bfe3e29",
+            "default": true,
+            "post": "55489",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzN0rqi5AmpFJ8kyu7mjEwXjleuvStNo9WPW_Z4Vj5W1eA-G7sssgJ2XKKbCjlVT3jPFdmvXi06jtiPnv_1jd7moB08zpNpJt8ZFAYPvIzZGb2pRmTU3J0uasHFd8uGUDqVmvig",
+            "default": false,
+            "post": "55489",
+            "nume": "3"
+          },
+          {
+            "no": 3,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/pl2r5VgjcJ",
+            "default": false,
+            "post": "55489",
+            "nume": "4"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/FnIkSBDa#Qj4cF9CdkQa_OWEJi_MymWpTZt9dzGOfoD0OL7e5qxs",
+            "default": false,
+            "post": "55489",
+            "nume": "5"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/k3ZzBALT#sVl-3gU5F4FlN2nRwiyiGVIPpBpf3uo-Dn8FRD6kYJs",
+            "default": false,
+            "post": "55489",
+            "nume": "6"
+          },
+          {
+            "no": 6,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/YjZAXYpL#GsF_arQJqwDMA4r3-eGevO703WhoSdkKe9iGbD0iAR4",
+            "default": false,
+            "post": "55489",
+            "nume": "7"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 1,
+        "no": 2,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxna84nQXI0_mmoykyxcYMYRbSuqBEGBpHvUCofF1u1Ogg1EPcL0DHOefj-mke4cnKtydLJ__Fs5qQzov4WmDtWno6aRi3Uub6naM6RmW2A1_DwEb2kR_Aw_9a5Pwo6Jq0aQMBw",
-        "default": true,
-        "post": "55343",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzN0rqi5AmpFJ8kyu7mjEwXjleuvStNo9WPW_Z4Vj5W1eA-G7sssgJ2XKKbCjlVT3jPFdmvXi06jtiPnv_1jd7moB08zpNpJt8ZFAYPvIzZGb2pRmTU3J0uasHFd8uGUDqVmvig",
+        "default": false,
+        "post": "55489",
         "nume": "3"
       },
       {
-        "no": 2,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/UAdxySaK#FklphiU6AwZWHUpsvtktw20mD91yL_B9zTzac_ipfds",
-        "default": false,
-        "post": "55343",
-        "nume": "5"
+        "no": 1,
+        "server": "vip-hd",
+        "label": "VIP HD",
+        "url": "https://icefile.web.id/embed/a288d8b85b1b6c1caf6b0bee4bfe3e29",
+        "default": true,
+        "post": "55489",
+        "nume": "1"
       },
       {
         "no": 3,
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/pl2r5VgjcJ",
+        "default": false,
+        "post": "55489",
+        "nume": "4"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/FnIkSBDa#Qj4cF9CdkQa_OWEJi_MymWpTZt9dzGOfoD0OL7e5qxs",
+        "default": false,
+        "post": "55489",
+        "nume": "5"
+      },
+      {
+        "no": 5,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/MRFzATAL#4zd29-uzR3WelG6K72yK3coyjTjc9QUc0Mv-072ADls",
+        "url": "https://mega.nz/embed/k3ZzBALT#sVl-3gU5F4FlN2nRwiyiGVIPpBpf3uo-Dn8FRD6kYJs",
         "default": false,
-        "post": "55343",
+        "post": "55489",
         "nume": "6"
+      },
+      {
+        "no": 6,
+        "server": "mega",
+        "label": "Mega 1080p",
+        "url": "https://mega.nz/embed/YjZAXYpL#GsF_arQJqwDMA4r3-eGevO703WhoSdkKe9iGbD0iAR4",
+        "default": false,
+        "post": "55489",
+        "nume": "7"
       }
     ],
     "id": 15,
