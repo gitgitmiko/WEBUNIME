@@ -4977,7 +4977,7 @@
     "rating": "8.8",
     "votes": null,
     "durasi": "23 Menit",
-    "episodes_count": 8,
+    "episodes_count": 9,
     "genre": [
       "Action",
       "Fantasy",
@@ -5544,62 +5544,36 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Black Clover Season 2 Episode 9",
+        "slug": "black-clover-season-2-episode-9",
+        "source": "https://v2.samehadaku.how/black-clover-season-2-episode-9/",
+        "date": "",
+        "released_at": "2026-11-22T13:00:28.005Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/k2A1WbAA#tjWz_kcD6AXc89mEnDHnHnhHhTRtNOqIurbFtcXumKs",
+            "default": true,
+            "post": "55503",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 2,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dweFUt1KN9MLHu_p5pF_SZA37vBawtpB_8s3ym3K6mbKr1xSFFjXwRaXt9CuMfCQ5dChDIeCItPXojIuUrqCnLbEdC07eiO3AjkUedyOlbrgqJZAfdwl5CXhToQO8ilr_bZMbNd",
-        "default": false,
-        "post": "55468",
-        "nume": "3"
-      },
-      {
         "no": 1,
-        "server": "vip-hd",
-        "label": "VIP HD",
-        "url": "https://icefile.web.id/embed/3c29cb5775e7409db22ba1cb2336316e",
-        "default": true,
-        "post": "55468",
-        "nume": "1"
-      },
-      {
-        "no": 3,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/HKgZ6xIFRG",
-        "default": false,
-        "post": "55468",
-        "nume": "4"
-      },
-      {
-        "no": 4,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/MrYCHQJR#hIuwOKakHrEb38c8uQ114LeygZt6hs3IBlueTp7GDnA",
-        "default": false,
-        "post": "55468",
+        "url": "https://mega.nz/embed/k2A1WbAA#tjWz_kcD6AXc89mEnDHnHnhHhTRtNOqIurbFtcXumKs",
+        "default": true,
+        "post": "55503",
         "nume": "5"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/UvRigRLK#FOeZxd6lq95iJynfIxzEJD59nD2kRPLof6D0n9uJ76I",
-        "default": false,
-        "post": "55468",
-        "nume": "6"
-      },
-      {
-        "no": 6,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/o24UEYZY#H1a9cFf0NevMYJINFz8LNsbXnnNinPaj06z9X7anJOc",
-        "default": false,
-        "post": "55468",
-        "nume": "7"
       }
     ],
     "id": 10,
@@ -9208,20 +9182,35 @@
             "default": false,
             "post": "55492",
             "nume": "7"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/CMlCxeYUJ",
+            "default": false,
+            "source": "oploverz",
+            "no": 6
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/jQquu5_Y8",
+            "default": false,
+            "source": "oploverz",
+            "no": 7
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/9z2yFWUaN",
+            "default": false,
+            "source": "oploverz",
+            "no": 8
           }
         ]
       }
     ],
     "players": [
-      {
-        "no": 2,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dw5osc_IaGAna-CjOtTbhvJJza3wATydc3jvP4KMRzZdCRSRO3G2yPjdexSuvNjySSPaH1zfoj_l_3fvgV3QKDh6Q6a9J3jvflSmmq9crEvyH5f4yDSJM1ivkKxPZsgIjZY1Q&origin=sameguru2.blogspot.com",
-        "default": false,
-        "post": "55492",
-        "nume": "3"
-      },
       {
         "no": 1,
         "server": "vip-hd",
@@ -9230,6 +9219,15 @@
         "default": true,
         "post": "55492",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dw5osc_IaGAna-CjOtTbhvJJza3wATydc3jvP4KMRzZdCRSRO3G2yPjdexSuvNjySSPaH1zfoj_l_3fvgV3QKDh6Q6a9J3jvflSmmq9crEvyH5f4yDSJM1ivkKxPZsgIjZY1Q&origin=sameguru2.blogspot.com",
+        "default": false,
+        "post": "55492",
+        "nume": "3"
       },
       {
         "no": 3,
@@ -9257,6 +9255,30 @@
         "default": false,
         "post": "55492",
         "nume": "7"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss 720p",
+        "url": "https://player.abyssplayer.com/CMlCxeYUJ",
+        "default": false,
+        "source": "oploverz",
+        "no": 6
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss 1080p",
+        "url": "https://player.abyssplayer.com/jQquu5_Y8",
+        "default": false,
+        "source": "oploverz",
+        "no": 7
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss 480p",
+        "url": "https://player.abyssplayer.com/9z2yFWUaN",
+        "default": false,
+        "source": "oploverz",
+        "no": 8
       }
     ],
     "id": 18,
