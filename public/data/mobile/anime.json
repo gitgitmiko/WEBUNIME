@@ -7063,8 +7063,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Yowaki-M2.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [],
     "sinopsis": "Anime Yowaki Max.",
     "related": [],
@@ -7301,17 +7301,32 @@
             "nume": "4"
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Yowaki Max Episode 8",
+        "slug": "yowaki-max-episode-8",
+        "source": "https://v2.samehadaku.how/yowaki-max-episode-8/",
+        "date": "",
+        "released_at": "2026-11-22T17:00:32.831Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "default",
+            "label": "Default",
+            "url": "https://filedon.co/embed/",
+            "default": true
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/KkK4aO7Db5",
-        "default": true,
-        "post": "55357",
-        "nume": "4"
+        "server": "default",
+        "label": "Default",
+        "url": "https://filedon.co/embed/",
+        "default": true
       }
     ],
     "id": 14,
@@ -8207,7 +8222,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Kanata-kara-Episode-2.jpg",
     "rating": "6.5",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "23 Menit",
     "episodes_count": 8,
     "genre": [
       "Adventure",
@@ -11237,7 +11252,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Dragon-Ball-Super-Beerus.jpg",
     "rating": "8.3",
     "votes": null,
-    "durasi": "7 eps",
+    "durasi": "23 Menit",
     "episodes_count": 7,
     "genre": [
       "Action",
@@ -13605,7 +13620,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Mezametara%20Saikyou%20Soubi%20to%20Uchuusenmochi%20Datta%20node.jpg",
     "rating": "6.9",
     "votes": "",
-    "durasi": "8 eps",
+    "durasi": "23 Menit",
     "episodes_count": 8,
     "genre": [
       "Action",
@@ -1289645,8 +1289660,8 @@
     "thumbnail": "https://backapi.oploverz.ac/uploads/posters/0ae76453-5d9b-4abe-9c41-9b013e199629.jpg",
     "rating": "",
     "votes": "",
-    "durasi": "19 eps",
-    "episodes_count": 19,
+    "durasi": "20 eps",
+    "episodes_count": 20,
     "genre": [
       "Drama",
       "Shounen",
@@ -1290419,13 +1290434,47 @@
             "no": 3
           }
         ]
+      },
+      {
+        "episode": 20,
+        "title": "Diamond no Ace Season 4: Act II Part 2 Episode 20",
+        "slug": "diamond-no-ace-season-4-act-ii-part-2-episode-20",
+        "source": "https://oploverz.diy/series/diamond-no-ace-season-4-act-ii-part-2/episode/20",
+        "date": "",
+        "released_at": "2026-11-22T10:00:00.000Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/gIogp0nuz",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/V-X9FL_5D",
+            "default": false,
+            "source": "oploverz",
+            "no": 2
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/y8hi5yt9Z",
+            "default": false,
+            "source": "oploverz",
+            "no": 3
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/_z21Vtyl3",
+        "url": "https://player.abyssplayer.com/gIogp0nuz",
         "default": true,
         "source": "oploverz",
         "no": 1
@@ -1290433,7 +1290482,7 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/1590Q64SV",
+        "url": "https://player.abyssplayer.com/V-X9FL_5D",
         "default": false,
         "source": "oploverz",
         "no": 2
@@ -1290441,7 +1290490,7 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/EcZOaWaiI",
+        "url": "https://player.abyssplayer.com/y8hi5yt9Z",
         "default": false,
         "source": "oploverz",
         "no": 3
