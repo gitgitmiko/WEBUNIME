@@ -1,6 +1,113 @@
 [
   {
     "type": "series",
+    "nama": "Infamia",
+    "judul": "Infamia (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-infamia-2026-lk21.jpg",
+    "rating": "7.3",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "sinopsis": "Pengacara Emma Cruz menjadi terobsesi dengan dua gadis yang menghilang dua puluh tahun lalu. Dihantui rasa bersalah atas kematian adiknya saat masih kecil, ia mengungkap rahasia-rahasia kelam di sebuah kota yang mencekam, sambil berhadapan dengan orang-orang yang rela melakukan apa saja demi menyembunyikan kebenaran.\n\nSoundtrack: Memoria\n\nBintang Film: Susana Abaitua, Jorge Bosch, Jon Olivares, Ane Gabarain, Eva Llorach\n\nNegara: Spain\n\nVotes: 41",
+    "slug": "infamia-2026",
+    "source": "https://tv1.nontondrama.vip/infamia-2026",
+    "list_source": "https://tv13.lk21official.cc/infamia-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Infamia - Season 1 Episode 1 (2026)",
+        "slug": "infamia-season-1-episode-1-2026",
+        "source": "https://tv1.nontondrama.vip/infamia-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/GwmuZ1nVfU7XkGU8cc2JzQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/pBaRQqVf53Hpw6ZcYfQQ3w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/OIa4FZRzo4DFVcqQIWPotA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Infamia - Season 1 Episode 2 (2026)",
+        "slug": "infamia-season-1-episode-2-2026",
+        "source": "https://tv1.nontondrama.vip/infamia-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Chu6ke1u4j_xdkPnx88shg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/VQdSfaaZM7YvaqelC8kHzQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/EuMCjsIf-eFfRAzDC9Wi2w",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Chu6ke1u4j_xdkPnx88shg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/VQdSfaaZM7YvaqelC8kHzQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/EuMCjsIf-eFfRAzDC9Wi2w",
+        "default": false
+      }
+    ],
+    "id": 738,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Korean Hostel in Spain",
     "judul": "Korean Hostel in Spain (2019)",
     "tahun": "2019",
