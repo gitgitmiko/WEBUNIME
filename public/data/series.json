@@ -20889,8 +20889,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-still-family-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "14 eps · S.1",
+    "episodes_count": 14,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -21290,6 +21290,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "Still a Family - Season 1 Episode 14 (2026)",
+        "slug": "still-family-season-1-episode-14-2026",
+        "source": "https://tv1.nontondrama.vip/still-family-season-1-episode-14-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/qixUmcvi5R0oIzTrxz_Oow",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/b0YWAJjLeicDfLQ4qp2CkQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/a7hsXRVPZ_fOBcusAeWyuw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -21297,21 +21327,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Z9u5OwziCoP8RRKMouy7fQ",
+        "url": "https://videonode.de/iframe3/p2p/qixUmcvi5R0oIzTrxz_Oow",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/9OH6EYpoxvdFxf0lDtx8YA",
+        "url": "https://videonode.de/iframe3/cast/b0YWAJjLeicDfLQ4qp2CkQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/FK2zIuNXlODZRD1JlExvYA",
+        "url": "https://videonode.de/iframe3/hydrax/a7hsXRVPZ_fOBcusAeWyuw",
         "default": false
       }
     ],
