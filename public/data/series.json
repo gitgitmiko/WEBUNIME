@@ -1,6 +1,83 @@
 [
   {
     "type": "series",
+    "nama": "The Legend of White Snake",
+    "judul": "The Legend of White Snake (2019)",
+    "tahun": "2019",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-legend-white-snake-2019-lk21.jpg",
+    "rating": "7.5",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "sinopsis": "Seorang roh ular berubah wujud menjadi manusia untuk membongkar tipu daya seorang pria. Persaingan di antara dirinya dan Xu Xuan tak disangka-sangka berkembang menjadi cinta, namun hubungan mereka terus-menerus dihadapkan pada berbagai tantangan.\n\nAwards: 5 wins & 1 nominations\n\nSutradara: Zhi Lei\n\nBintang Film: Jingyi Ju, Menglong Yu, Yan Xiao, Tim Pei, Lang Yu\n\nNegara: China\n\nVotes: 13",
+    "slug": "legend-white-snake-2019",
+    "source": "https://tv.nontondrama.vip/legend-white-snake-2019",
+    "list_source": "https://tv12.lk21official.cc/legend-white-snake-2019",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "The Legend of White Snake - Season 1 Episode 1 (2019)",
+        "slug": "legend-white-snake-season-1-episode-1-2019",
+        "source": "https://tv.nontondrama.vip/legend-white-snake-season-1-episode-1-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Tev8xRh2EYxymxwh70qtgA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/vM47ZwjCC-YnmboQ0sNx9g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/t8KqwUpwEXdVRhIGPjhQWg",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Tev8xRh2EYxymxwh70qtgA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/vM47ZwjCC-YnmboQ0sNx9g",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/t8KqwUpwEXdVRhIGPjhQWg",
+        "default": false
+      }
+    ],
+    "id": 735,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "A Couple of Lies",
     "judul": "A Couple of Lies (2026)",
     "tahun": "2026",
@@ -18189,8 +18266,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-still-family-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "12 eps · S.1",
-    "episodes_count": 12,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -18560,6 +18637,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "Still a Family - Season 1 Episode 13 (2026)",
+        "slug": "still-family-season-1-episode-13-2026",
+        "source": "https://tv.nontondrama.vip/still-family-season-1-episode-13-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Z9u5OwziCoP8RRKMouy7fQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/9OH6EYpoxvdFxf0lDtx8YA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/FK2zIuNXlODZRD1JlExvYA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -18567,21 +18674,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/Un7CIDEBL3m0oMfy5dmA-A",
+        "url": "https://videonode.de/iframe3/p2p/Z9u5OwziCoP8RRKMouy7fQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/elQgyuGPDv45zRW6L3IpVw",
+        "url": "https://videonode.de/iframe3/cast/9OH6EYpoxvdFxf0lDtx8YA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pocn7xnOTTaUBj1Y4gB3GQ",
+        "url": "https://videonode.de/iframe3/hydrax/FK2zIuNXlODZRD1JlExvYA",
         "default": false
       }
     ],
