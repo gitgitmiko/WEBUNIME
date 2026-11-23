@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-legend-white-snake-2019-lk21.jpg",
     "rating": "7.5",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "15 eps · S.1",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -408,6 +408,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "The Legend of White Snake - Season 1 Episode 14 (2019)",
+        "slug": "legend-white-snake-season-1-episode-14-2019",
+        "source": "https://tv.nontondrama.vip/legend-white-snake-season-1-episode-14-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/KOkZKz5irL_RK69vcTIaiw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/akxHR0-VhyMlO_8ShHl1bw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/bLdTnOTErF0q2cI0u42L0Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "The Legend of White Snake - Season 1 Episode 15 (2019)",
+        "slug": "legend-white-snake-season-1-episode-15-2019",
+        "source": "https://tv.nontondrama.vip/legend-white-snake-season-1-episode-15-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/n8mw3kOeh5P3u4yFlEhKoA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Vfa1Jz2UYNyJmyHIY4pypg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/BmZxnUM_NvvzwIPLLvE4Sg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -415,21 +475,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/VqYjSaFxFe_egwv8xVER7g",
+        "url": "https://videonode.de/iframe3/p2p/n8mw3kOeh5P3u4yFlEhKoA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/AiDxuCL9npX_S3OxwKmkkQ",
+        "url": "https://videonode.de/iframe3/cast/Vfa1Jz2UYNyJmyHIY4pypg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/cCU1qH00Lzh4XSqwvhHL2w",
+        "url": "https://videonode.de/iframe3/hydrax/BmZxnUM_NvvzwIPLLvE4Sg",
         "default": false
       }
     ],
