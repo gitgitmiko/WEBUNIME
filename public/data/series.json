@@ -103,8 +103,7 @@
         "default": false
       }
     ],
-    "id": 738,
-    "is_new": true
+    "id": 738
   },
   {
     "type": "series",
@@ -113,8 +112,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-korean-hostel-spain-2019-lk21.jpg",
     "rating": "0.0",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Reality-TV"
@@ -243,6 +242,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Korean Hostel in Spain - Season 1 Episode 5 (2019)",
+        "slug": "korean-hostel-spain-season-1-episode-5-2019",
+        "source": "https://tv1.nontondrama.vip/korean-hostel-spain-season-1-episode-5-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/LgRKfKhhOYSwdppYbAOp_g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/BsvVMIPGmU2A-elproKv-Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/7pspsf4ZSOEhRyb_HlviEw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -250,21 +279,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/genluk0MHVchnBMcUsS_OA",
+        "url": "https://videonode.de/iframe3/p2p/LgRKfKhhOYSwdppYbAOp_g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/b-RVy8GMR3VrCPZ6CTJEtw",
+        "url": "https://videonode.de/iframe3/cast/BsvVMIPGmU2A-elproKv-Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pGOU5hu2WutF-_mmtJdoMw",
+        "url": "https://videonode.de/iframe3/hydrax/7pspsf4ZSOEhRyb_HlviEw",
         "default": false
       }
     ],
@@ -77620,8 +77649,8 @@
     "tahun": "1989",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/03/film-the-simpsons-1989-lk21-d21.jpg",
     "rating": "8.7",
-    "durasi": "800 eps · S.38",
-    "episodes_count": 800,
+    "durasi": "801 eps · S.38",
+    "episodes_count": 801,
     "seasons_count": 35,
     "genre": [
       "Comedy",
@@ -104990,6 +105019,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 38,
+        "episode": 4,
+        "title": "The Simpsons - Season 38 Episode 4 (1989)",
+        "slug": "simpsons-season-38-episode-4-1989",
+        "source": "https://tv1.nontondrama.vip/simpsons-season-38-episode-4-1989",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Z9mPSy7h2nr-iM9_onIY8Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/qUZa3PMaRZylvl-i-gmp0Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/JbjDNxu7GNcu0epgV4U6HQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -104997,21 +105056,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/E9LZtoSX0Mll8KffFui6xA",
+        "url": "https://videonode.de/iframe3/p2p/Z9mPSy7h2nr-iM9_onIY8Q",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Vmgt4GNG67BxsuI0V-HArA",
+        "url": "https://videonode.de/iframe3/cast/qUZa3PMaRZylvl-i-gmp0Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/pzrYk5sRGOiaAyqsKmQK9w",
+        "url": "https://videonode.de/iframe3/hydrax/JbjDNxu7GNcu0epgV4U6HQ",
         "default": false
       }
     ],
