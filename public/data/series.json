@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-big-issue-2019-lk21.jpg",
     "rating": "4.8",
-    "durasi": "14 eps · S.1",
-    "episodes_count": 14,
+    "durasi": "16 eps · S.1",
+    "episodes_count": 16,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -436,6 +436,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "Big Issue - Season 1 Episode 15 (2019)",
+        "slug": "big-issue-season-1-episode-15-2019",
+        "source": "https://tv.nontondrama.vip/big-issue-season-1-episode-15-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/cVTMED3zOPAi3KxSxQ596Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/trVZTSHlxNruzaYoHDyGqQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pEnSWGkmF2Q7tYKjyg1i3g",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 16,
+        "title": "Big Issue - Season 1 Episode 16 (2019)",
+        "slug": "big-issue-season-1-episode-16-2019",
+        "source": "https://tv.nontondrama.vip/big-issue-season-1-episode-16-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/CzhSTnv_-S9pvp2zXCkv3g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/91l-vPKhPNNQezfxLFkynQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/00gd1eQCkynDUg5MU2XxHg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -443,21 +503,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/kjrbL3buietcVhehN25aFw",
+        "url": "https://videonode.de/iframe3/p2p/CzhSTnv_-S9pvp2zXCkv3g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/TtmrwVgEDNY0RCeHI01MBg",
+        "url": "https://videonode.de/iframe3/cast/91l-vPKhPNNQezfxLFkynQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/XUTivGmCxhh--neJzrNRpQ",
+        "url": "https://videonode.de/iframe3/hydrax/00gd1eQCkynDUg5MU2XxHg",
         "default": false
       }
     ],
