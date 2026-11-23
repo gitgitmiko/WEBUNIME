@@ -112,8 +112,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-korean-hostel-spain-2019-lk21.jpg",
     "rating": "0.0",
-    "durasi": "10 eps · S.1",
-    "episodes_count": 10,
+    "durasi": "11 eps · S.1",
+    "episodes_count": 11,
     "seasons_count": 1,
     "genre": [
       "Reality-TV"
@@ -422,6 +422,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "Korean Hostel in Spain - Season 1 Episode 11 (2019)",
+        "slug": "korean-hostel-spain-season-1-episode-11-2019",
+        "source": "https://tv1.nontondrama.vip/korean-hostel-spain-season-1-episode-11-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/V0dNy5KQJZA9l4zn3kSUNg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7AT9vyfDaRh7Pggj4Uin2g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/IEMpfCV8AvumEipbvwTnpw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -429,21 +459,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/dVCGmXkUzoVpP9TOCTynRg",
+        "url": "https://videonode.de/iframe3/p2p/V0dNy5KQJZA9l4zn3kSUNg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/pKxC9mkQaLuhtHqUn0Nu1A",
+        "url": "https://videonode.de/iframe3/cast/7AT9vyfDaRh7Pggj4Uin2g",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/on2exIEuVb9l88QOEGKwCA",
+        "url": "https://videonode.de/iframe3/hydrax/IEMpfCV8AvumEipbvwTnpw",
         "default": false
       }
     ],
