@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-big-issue-2019-lk21.jpg",
     "rating": "4.8",
-    "durasi": "31 eps · S.1",
-    "episodes_count": 31,
+    "durasi": "32 eps · S.1",
+    "episodes_count": 32,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -946,6 +946,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 32,
+        "title": "Big Issue - Season 1 Episode 32 (2019)",
+        "slug": "big-issue-season-1-episode-32-2019",
+        "source": "https://tv1.nontondrama.vip/big-issue-season-1-episode-32-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dVHPtv65hhUQrv1x9JPiHQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/09E4Cp_Ooyp9YPs3L72h3Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/wJym5IqDygbDWUaatpbF8A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -953,21 +983,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/J0KYwdLrCkCPGKrLzCcBQQ",
+        "url": "https://videonode.de/iframe3/p2p/dVHPtv65hhUQrv1x9JPiHQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/cDQ2wnE_7AuRoXJYsSaS0A",
+        "url": "https://videonode.de/iframe3/cast/09E4Cp_Ooyp9YPs3L72h3Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/TE1AtTKVqUDK5X5lojRkqA",
+        "url": "https://videonode.de/iframe3/hydrax/wJym5IqDygbDWUaatpbF8A",
         "default": false
       }
     ],
