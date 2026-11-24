@@ -134757,8 +134757,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/07/158138.jpg",
     "rating": "6.57",
     "votes": 193,
-    "durasi": "19 eps",
-    "episodes_count": 19,
+    "durasi": "20 eps",
+    "episodes_count": 20,
     "genre": [
       "Action",
       "Adventure",
@@ -135886,71 +135886,90 @@
             "nume": "7"
           }
         ]
+      },
+      {
+        "episode": 21,
+        "title": "Sora wa Akai Kawa no Hotori Episode 21",
+        "slug": "sora-wa-akai-kawa-no-hotori-episode-21",
+        "source": "https://v2.samehadaku.how/sora-wa-akai-kawa-no-hotori-episode-21/",
+        "date": "",
+        "released_at": "2026-11-24T20:00:39.235Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzCgTdnlBAh-94VmN_u_TOYzyEywIv_CjRJcRImCaKSWlCBYKHs-7ZqADbRjuGGoCFH0hb28YKoTPijsUB-QTvSh7AhvE62V1jhGXwWuNbdtII0KISewmepRgMWw7aOACTl9Ow",
+            "default": true,
+            "post": "55553",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/b4G8quYItE",
+            "default": false,
+            "post": "55553",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/QZggjD6Q#bnsQjD0fiHS9quCe6KxD-W0hP8HN8GhzBNZ9J6zv4Rw",
+            "default": false,
+            "post": "55553",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/AdhgVb7K#xy-Le80phr1LaPtbxfh2JVHjH9bYGlYIiKFJGh2gOBg",
+            "default": false,
+            "post": "55553",
+            "nume": "4"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 3,
+        "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyTn2lkJhBaRQI2xpsPokocthyKb_nX43QLVkXpzlEnxRdzvXoxXYjDR7l0iATDp1Rc2I8Oz8RJUfaMR-i0pkHQ7I6AZjm561PvgrDAylhJMlgWQF9jSkRyyh959MqbSEwRrfrA",
-        "default": false,
-        "post": "55405",
-        "nume": "3"
-      },
-      {
-        "no": 1,
-        "server": "vip-hd",
-        "label": "VIP HD",
-        "url": "https://beta.icefile.my.id/embed/MWJXbUVwSU1GaHV3TXcxbnlzUGcxU2E0RnN2dDJNRWVh",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzCgTdnlBAh-94VmN_u_TOYzyEywIv_CjRJcRImCaKSWlCBYKHs-7ZqADbRjuGGoCFH0hb28YKoTPijsUB-QTvSh7AhvE62V1jhGXwWuNbdtII0KISewmepRgMWw7aOACTl9Ow",
         "default": true,
-        "post": "55405",
+        "post": "55553",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-x265",
-        "label": "VIP x265",
-        "url": "https://beta.icefile.my.id/embed/MXpFX3RkZFZXMVVuUEZwa05WY3JHN2t4R2xDSjVwdlhV",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/b4G8quYItE",
         "default": false,
-        "post": "55405",
+        "post": "55553",
         "nume": "2"
       },
       {
-        "no": 4,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/EvecqgvW7f",
-        "default": false,
-        "post": "55405",
-        "nume": "4"
-      },
-      {
-        "no": 5,
+        "no": 3,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/pABxnCrJ#I8V__myhjyiYMr1TltZ8J7WHTNCn2Yx-RTcEvaFW9Xk",
+        "url": "https://mega.nz/embed/QZggjD6Q#bnsQjD0fiHS9quCe6KxD-W0hP8HN8GhzBNZ9J6zv4Rw",
         "default": false,
-        "post": "55405",
-        "nume": "5"
+        "post": "55553",
+        "nume": "3"
       },
       {
-        "no": 6,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/1UAFiJRC#4HeerRCNFLwJwzAQ5DhXtLq0LaCvhM9zu3xo7LOZf_Q",
-        "default": false,
-        "post": "55405",
-        "nume": "6"
-      },
-      {
-        "no": 7,
+        "no": 4,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/UJRVRRiJ#Lvndw4XSIqAH735uOdvSDk_H85DvlD64K5iq70fhEh8",
+        "url": "https://mega.nz/embed/AdhgVb7K#xy-Le80phr1LaPtbxfh2JVHjH9bYGlYIiKFJGh2gOBg",
         "default": false,
-        "post": "55405",
-        "nume": "7"
+        "post": "55553",
+        "nume": "4"
       }
     ],
     "id": 120
