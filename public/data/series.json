@@ -103,8 +103,7 @@
         "default": false
       }
     ],
-    "id": 739,
-    "is_new": true
+    "id": 739
   },
   {
     "type": "series",
@@ -43779,8 +43778,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/09/film-sixth-sense-b-side-2026-lk21.jpg",
     "rating": "9.6",
-    "durasi": "8 eps · S.1",
-    "episodes_count": 8,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Reality-TV"
@@ -44029,6 +44028,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 9,
+        "title": "Sixth Sense: B-Side - Season 1 Episode 9 (2026)",
+        "slug": "sixth-sense-b-side-season-1-episode-9-2026",
+        "source": "https://tv1.nontondrama.vip/sixth-sense-b-side-season-1-episode-9-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dR1NB2M5C5d52_zUA8wwJA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/gPM9N1ydXl2VTngWv-N81A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MKZCWD6dgW0u7CPHGZKvWQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Sixth Sense: B-Side - Season 1 Episode 10 (2026)",
+        "slug": "sixth-sense-b-side-season-1-episode-10-2026",
+        "source": "https://tv1.nontondrama.vip/sixth-sense-b-side-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/MUy_xPVGd5XSTfC9S4YnBw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/RdtVvVGV6mPcifCZQA79lg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/U8yJxDIoJhLefH5lLkgOsw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -44036,21 +44095,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/tAn6ggs_GAHGpo3vsDqxfQ",
+        "url": "https://videonode.de/iframe3/p2p/MUy_xPVGd5XSTfC9S4YnBw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/DN_sc-RaLBblREhkBmWbZw",
+        "url": "https://videonode.de/iframe3/cast/RdtVvVGV6mPcifCZQA79lg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/V9ed_3HWn5ePXtsgpVtTZw",
+        "url": "https://videonode.de/iframe3/hydrax/U8yJxDIoJhLefH5lLkgOsw",
         "default": false
       }
     ],
