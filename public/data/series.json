@@ -44256,8 +44256,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-lets-go-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "37 eps · S.1",
-    "episodes_count": 37,
+    "durasi": "38 eps · S.1",
+    "episodes_count": 38,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -45377,6 +45377,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 38,
+        "title": "Let's Go - Season 1 Episode 38 (2026)",
+        "slug": "lets-go-season-1-episode-38-2026",
+        "source": "https://tv1.nontondrama.vip/lets-go-season-1-episode-38-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/MFxLC8vJ7ikNAcXpyu8ygA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/LqZkQ765qysSuWZ6Z8nQLw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/7lzs2clRTaurmMDt8yziFQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -45384,21 +45414,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/fPWpKYkrwmkWIrpV-JAdBg",
+        "url": "https://videonode.de/iframe3/p2p/MFxLC8vJ7ikNAcXpyu8ygA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/q1RySKKmY9jsJ-Ur6MG6CA",
+        "url": "https://videonode.de/iframe3/cast/LqZkQ765qysSuWZ6Z8nQLw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HlKJ9czbIzc7eSyt8EMVrQ",
+        "url": "https://videonode.de/iframe3/hydrax/7lzs2clRTaurmMDt8yziFQ",
         "default": false
       }
     ],
