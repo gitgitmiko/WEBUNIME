@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-defected-2019-lk21.jpg",
     "rating": "0.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -49,6 +49,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "The Defected - Season 1 Episode 2 (2019)",
+        "slug": "defected-season-1-episode-2-2019",
+        "source": "https://tv1.nontondrama.vip/defected-season-1-episode-2-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Q4HJcaCUGgjZf-JmnMKyRQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/BAK5jwY6H2LvSvyRWh5wlA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/u9SBWT9Or_qe2V-tFhNYZA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -56,26 +86,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/3S-0W-avDdToUQKYhi5pDg",
+        "url": "https://videonode.de/iframe3/p2p/Q4HJcaCUGgjZf-JmnMKyRQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Ocg8bqRKUBNWNUZmXO6MKw",
+        "url": "https://videonode.de/iframe3/cast/BAK5jwY6H2LvSvyRWh5wlA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/1AOq1A29WmkGwB-DF8CWwA",
+        "url": "https://videonode.de/iframe3/hydrax/u9SBWT9Or_qe2V-tFhNYZA",
         "default": false
       }
     ],
-    "id": 740,
-    "is_new": true
+    "id": 740
   },
   {
     "type": "series",
