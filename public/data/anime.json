@@ -13122,8 +13122,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Chii%20Fuyo.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Comedy",
@@ -13401,6 +13401,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/Y4fpvn211DOD",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Chii Fuyo Episode 8",
+        "slug": "chii-fuyo-episode-8",
+        "source": "https://anoboy.at/2026/11/chii-fuyo-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyL62L9karYYyKPCuk21nwDPCr6Yh2H2426hvwl_2shQzAlIP0254qUW5qt12LTfGGt35UdFzgSSGsLujFcnLjueq4s8m4W0gjiNh9Thz7AcSUL4a24VYaIdwGJnus0ZNRl3nC0",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxsW7M1-BEot9FVoL8y8wLjJ6fqqkfA9tMi27BTrswr_NNZCw6qaeuiZ3Zm8oy5mICURyuguEEjBrEb1CPgaxdCibN0-hLrSZZGaCqdJnDbkIUEnYKgd9AqOuXyilhxIqLByqX1",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/5N8B1fOq2IoO",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/JVVtPltT05SI",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/2aq172FmN03W",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/cQ54aSo4QtY6",
             "default": false,
             "source": "anoboy"
           }
