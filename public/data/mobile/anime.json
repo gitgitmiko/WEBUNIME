@@ -6075,8 +6075,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/web-1-10-300x170.jpg",
     "rating": "6.92",
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Fantasy",
@@ -6576,95 +6576,138 @@
             "no": 10
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Tsuihou sareta Cheat Fuyo Majutsushi Episode 8",
+        "slug": "tsuihou-sareta-cheat-fuyo-majutsushi-episode-8",
+        "source": "https://v2.samehadaku.how/tsuihou-sareta-cheat-fuyo-majutsushi-episode-8/",
+        "date": "",
+        "released_at": "2026-11-24T18:00:26.555Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/tg6gKqvSCM",
+            "default": true,
+            "post": "55549",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/dIxV1ZAY#npZ5_17fPJelTNqRxd06CTiycztssL8L0XM-L1vn9XA",
+            "default": false,
+            "post": "55549",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/oRRUARRC#YYzoJ_NcS4R26rbn8ub_O_1DTAHQGOmAVhMwBIgSmSw",
+            "default": false,
+            "post": "55549",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/8N4QAIra#EdV3sw4Nf1L-DAZUiugoxRBiADcaUwphJYm3s5kbwic",
+            "default": false,
+            "post": "55549",
+            "nume": "4"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/pbf8UxN3t",
+            "default": false,
+            "source": "oploverz",
+            "no": 5
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/rxiteooSe",
+            "default": false,
+            "source": "oploverz",
+            "no": 6
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/gEVqQUhqk",
+            "default": false,
+            "source": "oploverz",
+            "no": 7
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "vip-hd",
-        "label": "VIP HD",
-        "url": "https://beta.icefile.my.id/embed/MUw2UU5tVnNsTUdpdGxDUHRzWXhielcyRmoySW9sdGJU",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/tg6gKqvSCM",
         "default": true,
-        "post": "55395",
+        "post": "55549",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-x265",
-        "label": "VIP x265",
-        "url": "https://beta.icefile.my.id/embed/MUR2d01jejdKcDFOZmFsWERlODZnaTFkc0NQYUE2ZWEw",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/dIxV1ZAY#npZ5_17fPJelTNqRxd06CTiycztssL8L0XM-L1vn9XA",
         "default": false,
-        "post": "55395",
+        "post": "55549",
         "nume": "2"
       },
       {
         "no": 3,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxsScDUjNoFZPSyETrkdAMNGcwcObRIBab28QlQUCVifX9zW2Lt1eK_kP7zd6LzeeAhyl7Ki2FKCV7sskKgAUTnAGbpHXI2Y-Sngk5XZGG3qQefUhgr94cmVACMPOo5jZMimAY",
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/oRRUARRC#YYzoJ_NcS4R26rbn8ub_O_1DTAHQGOmAVhMwBIgSmSw",
         "default": false,
-        "post": "55395",
+        "post": "55549",
         "nume": "3"
       },
       {
         "no": 4,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/vHxygERIZk",
-        "default": false,
-        "post": "55395",
-        "nume": "4"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/UcIhBLoZ#odB9rLcBnTiNWdNx9ioRNYdwFD8o6l5eJ9LG4L8UtCE",
-        "default": false,
-        "post": "55395",
-        "nume": "5"
-      },
-      {
-        "no": 6,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/pAgxwRrY#rqr9BBKi6A7hyQ5SegyqbI2-WxvMO5Z_s0dfpIpjJvE",
-        "default": false,
-        "post": "55395",
-        "nume": "6"
-      },
-      {
-        "no": 7,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/IJAFwLSQ#LMnunLSC8xli6Qx964s_vnBa-l95qeGUcQ7qoFqU9uA",
+        "url": "https://mega.nz/embed/8N4QAIra#EdV3sw4Nf1L-DAZUiugoxRBiADcaUwphJYm3s5kbwic",
         "default": false,
-        "post": "55395",
-        "nume": "7"
+        "post": "55549",
+        "nume": "4"
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/987r8ng81",
+        "url": "https://player.abyssplayer.com/pbf8UxN3t",
         "default": false,
         "source": "oploverz",
-        "no": 8
+        "no": 5
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/OSdQuUeuSl",
+        "url": "https://player.abyssplayer.com/rxiteooSe",
         "default": false,
         "source": "oploverz",
-        "no": 9
+        "no": 6
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/MbrC8bOiu",
+        "url": "https://player.abyssplayer.com/gEVqQUhqk",
         "default": false,
         "source": "oploverz",
-        "no": 10
+        "no": 7
       }
     ],
     "id": 12,
@@ -13580,7 +13623,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Battle%20Spirits%20Re%20Zekkai%20no%20Kuu.jpeg",
     "rating": "5.6",
     "votes": "",
-    "durasi": "7 eps",
+    "durasi": "24 Menit",
     "episodes_count": 7,
     "genre": [
       "Fantasy",
@@ -209474,7 +209517,7 @@
     "rating": "7.41",
     "votes": 15243,
     "durasi": "25 Menit",
-    "episodes_count": 19,
+    "episodes_count": 20,
     "genre": [
       "Comedy",
       "Romance",
@@ -210624,15 +210667,7 @@
             "source": "anoboy"
           },
           {
-            "server": "oploverz",
-            "label": "Oploverz Filedon",
-            "url": "https://filedon.co/embed/HOIauD0ycM",
-            "default": false,
-            "source": "oploverz",
-            "no": 16
-          },
-          {
-            "no": 17,
+            "no": 16,
             "server": "anoboy",
             "label": "Anoboy YUP 720p",
             "url": "https://www.yourupload.com/embed/FBAgj0oOLtAo",
@@ -210640,7 +210675,7 @@
             "source": "anoboy"
           },
           {
-            "no": 18,
+            "no": 17,
             "server": "anoboy",
             "label": "Anoboy YUP 480p",
             "url": "https://www.yourupload.com/embed/W73YA4L5hL0p",
@@ -210648,7 +210683,7 @@
             "source": "anoboy"
           },
           {
-            "no": 19,
+            "no": 18,
             "server": "anoboy",
             "label": "Anoboy YUP 360p",
             "url": "https://www.yourupload.com/embed/3ks15If8kMWU",
@@ -210656,12 +210691,20 @@
             "source": "anoboy"
           },
           {
-            "no": 20,
+            "no": 19,
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/7CDnP47231T5",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Filedon",
+            "url": "https://filedon.co/embed/HOIauD0ycM",
+            "default": false,
+            "source": "oploverz",
+            "no": 20
           }
         ]
       },
@@ -211498,13 +211541,31 @@
             "no": 1
           }
         ]
+      },
+      {
+        "episode": 20,
+        "title": "Chitose-kun wa Ramune Bin no Naka Episode 20",
+        "slug": "chitose-kun-wa-ramune-bin-no-naka-episode-20",
+        "source": "https://oploverz.diy/series/chitose-kun-wa-ramune-bin-no-naka/episode/20",
+        "date": "",
+        "released_at": "2026-11-24T17:29:00.000Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/iB9D9g-oL",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss",
-        "url": "https://player.abyssplayer.com/IgRDstpGI",
+        "url": "https://player.abyssplayer.com/iB9D9g-oL",
         "default": true,
         "source": "oploverz",
         "no": 1
