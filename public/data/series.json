@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-defected-2019-lk21.jpg",
     "rating": "0.0",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -139,6 +139,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "The Defected - Season 1 Episode 5 (2019)",
+        "slug": "defected-season-1-episode-5-2019",
+        "source": "https://tv1.nontondrama.vip/defected-season-1-episode-5-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/JJTr6Dnr_durfcKkByGrRg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Md2_HaGSQ7gvUwBJxm4pFA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GOgEZmDFbFveXg59W4jppw",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "The Defected - Season 1 Episode 6 (2019)",
+        "slug": "defected-season-1-episode-6-2019",
+        "source": "https://tv1.nontondrama.vip/defected-season-1-episode-6-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/nUeA0C1OMLUgFgJ1KWV6jg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/9UKrwUKG4nSzSqpLH48Edg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/BIgcEgN9itwMuIDB60XvOg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -146,21 +206,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/qwEb6-MESEQwXyagMnCiKw",
+        "url": "https://videonode.de/iframe3/p2p/nUeA0C1OMLUgFgJ1KWV6jg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/gUbWeFeHCyQjZteSChldkw",
+        "url": "https://videonode.de/iframe3/cast/9UKrwUKG4nSzSqpLH48Edg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GxZ0ytkh7x5jqiTv-zNOlA",
+        "url": "https://videonode.de/iframe3/hydrax/BIgcEgN9itwMuIDB60XvOg",
         "default": false
       }
     ],
