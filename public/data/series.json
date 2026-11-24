@@ -67448,8 +67448,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-summer-vacation-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "10 eps · S.1",
+    "episodes_count": 10,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -67730,6 +67730,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "Summer Vacation - Season 1 Episode 10 (2026)",
+        "slug": "summer-vacation-season-1-episode-10-2026",
+        "source": "https://tv1.nontondrama.vip/summer-vacation-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/1tJlhn6nGGhrncF5nYxKLQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/m0QhlFPvI6e-NoG3Vl3xvg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9NvjeYC4v1MEqxu3viUGpw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -67737,21 +67767,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/wmyzcocjCDsGJ-GuhNqJpQ",
+        "url": "https://videonode.de/iframe3/p2p/1tJlhn6nGGhrncF5nYxKLQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/mcw7paKsQveiH7Dspb3WSw",
+        "url": "https://videonode.de/iframe3/cast/m0QhlFPvI6e-NoG3Vl3xvg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HmAjQoDfOL1IYL49ULzCAg",
+        "url": "https://videonode.de/iframe3/hydrax/9NvjeYC4v1MEqxu3viUGpw",
         "default": false
       }
     ],
