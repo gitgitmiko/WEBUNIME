@@ -20351,8 +20351,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-rise-underdog-2026-lk21.jpg",
     "rating": "8.4",
-    "durasi": "20 eps · S.1",
-    "episodes_count": 20,
+    "durasi": "21 eps · S.1",
+    "episodes_count": 21,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -20961,6 +20961,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 21,
+        "title": "Rise of the Underdog - Season 1 Episode 21 (2026)",
+        "slug": "rise-underdog-season-1-episode-21-2026",
+        "source": "https://tv1.nontondrama.vip/rise-underdog-season-1-episode-21-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/7j3cYeBg2RpHWEIoBeIfbQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/BiEXKzfgr02Ob5RPznP79Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/9uT-nXbimA2UFVmFOdCYOg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -20968,21 +20998,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/56QINwitHQsEfvz7TMsfpw",
+        "url": "https://videonode.de/iframe3/p2p/7j3cYeBg2RpHWEIoBeIfbQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/MNQWkeK7Rd0GPm2NaYiAyA",
+        "url": "https://videonode.de/iframe3/cast/BiEXKzfgr02Ob5RPznP79Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/iP7zwLgGDNdTV-APxOg5Ug",
+        "url": "https://videonode.de/iframe3/hydrax/9uT-nXbimA2UFVmFOdCYOg",
         "default": false
       }
     ],
