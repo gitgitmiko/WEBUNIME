@@ -6727,8 +6727,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Chitose-C2-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "6 eps",
-    "episodes_count": 6,
+    "durasi": "7 eps",
+    "episodes_count": 7,
     "genre": [],
     "sinopsis": "Anime Chitose-kun wa Ramune Bin no Naka Cour 2.",
     "related": [],
@@ -7027,71 +7027,108 @@
             "nume": "7"
           }
         ]
+      },
+      {
+        "episode": 7,
+        "title": "Chitose-kun wa Ramune Bin no Naka Cour 2 Episode 7",
+        "slug": "chitose-kun-wa-ramune-bin-no-naka-cour-2-episode-7",
+        "source": "https://v2.samehadaku.how/chitose-kun-wa-ramune-bin-no-naka-cour-2-episode-7/",
+        "date": "",
+        "released_at": "2026-11-24T21:00:29.206Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyDIZexIanXPBnZuIjGhVSnPOfYrGH3l1HEap4S7zTQ-33kT6C0x6ls7Kw_WLZRHC6ZZIR3UiokubtWMifHYv5Iv93sqb7AQMyWBUDI4Hc48Wghg5g3F_IcYAM9GQDgzjyNSnNe&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55561",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/IbSVdqUFzP",
+            "default": false,
+            "post": "55561",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/flg3TZJJ#jW17HnCEbfnOfxCnH4As_FZCtetxgyCzKkW-sSFowd0",
+            "default": false,
+            "post": "55561",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/OwoxCKoC#I-9qHk4P6ix8Q_1Www4AmIPQykrUOKmCNJ_dmWCVZZg",
+            "default": false,
+            "post": "55561",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/K5QFTQzR#6U5BKuX_asQbQVX19HyFvDJmE7aTmmk68U2sr4jGd5I",
+            "default": false,
+            "post": "55561",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 3,
+        "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwgT4wG1ySkXaDNyzx72fzv4izThz4h4K-iV0Afy3wL_mRYfTmLh44tNpRHjv-1eoJoiOheMceOnm_lmHCfKN2mxa2QkhIvsNnN7s-ttDTdmE2wbRhhgeFL7Lgynlra3ZNUcNg&origin=sameguru2.blogspot.com",
-        "default": false,
-        "post": "55402",
-        "nume": "3"
-      },
-      {
-        "no": 1,
-        "server": "vip-hd",
-        "label": "VIP HD",
-        "url": "https://beta.icefile.my.id/embed/MUU3S2FyVG5EWWlwcnF5NzIydmw0OV9PaHJLaXVTVTgy",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyDIZexIanXPBnZuIjGhVSnPOfYrGH3l1HEap4S7zTQ-33kT6C0x6ls7Kw_WLZRHC6ZZIR3UiokubtWMifHYv5Iv93sqb7AQMyWBUDI4Hc48Wghg5g3F_IcYAM9GQDgzjyNSnNe&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "55402",
+        "post": "55561",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "vip-x265",
-        "label": "VIP x265",
-        "url": "https://beta.icefile.my.id/embed/MVlpMDRkdUFQLW5JdXI4UlBHbHFUZG9sLTlVX0RSYnhS",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/IbSVdqUFzP",
         "default": false,
-        "post": "55402",
+        "post": "55561",
         "nume": "2"
       },
       {
-        "no": 4,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/aPlvjdvko4",
+        "no": 3,
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/flg3TZJJ#jW17HnCEbfnOfxCnH4As_FZCtetxgyCzKkW-sSFowd0",
         "default": false,
-        "post": "55402",
+        "post": "55561",
+        "nume": "3"
+      },
+      {
+        "no": 4,
+        "server": "mega",
+        "label": "Mega 720p",
+        "url": "https://mega.nz/embed/OwoxCKoC#I-9qHk4P6ix8Q_1Www4AmIPQykrUOKmCNJ_dmWCVZZg",
+        "default": false,
+        "post": "55561",
         "nume": "4"
       },
       {
         "no": 5,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/L1RVBSZQ#150_UIi2f3M1hBVkv9vEw8p76HIxAob80-Gra8aCq_4",
-        "default": false,
-        "post": "55402",
-        "nume": "5"
-      },
-      {
-        "no": 6,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/38xgiCJI#ckm2AjwfaMWfPPJ03cMyAlCiPfYQpQcCbCPanyj0sRs",
-        "default": false,
-        "post": "55402",
-        "nume": "6"
-      },
-      {
-        "no": 7,
-        "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/HhpRnCpI#kV1FciwXogxLVrMtR-M5TaLu4twkVhCjW0Qz-PWSvI0",
+        "url": "https://mega.nz/embed/K5QFTQzR#6U5BKuX_asQbQVX19HyFvDJmE7aTmmk68U2sr4jGd5I",
         "default": false,
-        "post": "55402",
-        "nume": "7"
+        "post": "55561",
+        "nume": "5"
       }
     ],
     "id": 13,
