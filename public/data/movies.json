@@ -1,5 +1,48 @@
 [
   {
+    "nama": "Wicker",
+    "judul": "Wicker (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-wicker-2026-lk21.jpg",
+    "rating": "7.5",
+    "quality": "HD",
+    "durasi": "1j 46m",
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Fantasy",
+      "Romance"
+    ],
+    "sinopsis": "Seorang nelayan perempuan yang dikucilkan memesan kepada pengrajin anyaman setempat untuk membuatkan seorang suami baginya, tetapi ketika hasil anyaman itu ternyata luar biasa, kehadirannya memicu kecemburuan dan kekacauan yang mengancam kedamaian desa mereka.\n\nAwards: 2 wins & 2 nominations\nBudget: USD 10,500,000\nWorldwide Gross: USD 40,427,704\nSoundtrack: Big White Cloud\n\nSubtitle: workkeerr\n\nSutradara: Alex Huston Fischer, Eleanor Wilson\n\nBintang Film: Olivia Colman, Alexander Skarsgard, Elizabeth Debicki, Peter Dinklage, Gustav Lindh\n\nNegara: United Kingdom, United States, Australia\n\nVotes: 10.000\n\nRelease: 21 Oct 2026\n\nUpdated: 25 Nov 2026 08:29:03",
+    "slug": "wicker-2026",
+    "source": "https://tv13.lk21official.cc/wicker-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/4_I6FHUBfaRcJ-w6yxVp7A",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/T50v19K8DgvGohg3kYGKWA",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/pPQUB8ZjC4WnvzCZQViSqg",
+        "default": false
+      }
+    ],
+    "id": 513,
+    "is_new": true
+  },
+  {
     "nama": "Clashing Through the Snow",
     "judul": "Clashing Through the Snow (2026)",
     "tahun": "2026",
@@ -37,8 +80,7 @@
         "default": false
       }
     ],
-    "id": 512,
-    "is_new": true
+    "id": 512
   },
   {
     "nama": "The Social Reckoning",
