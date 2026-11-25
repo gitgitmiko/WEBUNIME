@@ -36984,8 +36984,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/11/film-alls-fair-2025-lk21.jpg",
     "rating": "3.5",
-    "durasi": "14 eps · S.2",
-    "episodes_count": 14,
+    "durasi": "15 eps · S.2",
+    "episodes_count": 15,
     "seasons_count": 2,
     "genre": [
       "Drama"
@@ -37477,6 +37477,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "title": "All's Fair - Season 2 Episode 6 (2025)",
+        "slug": "alls-fair-season-2-episode-6-2025",
+        "source": "https://tv1.nontondrama.vip/alls-fair-season-2-episode-6-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/eAqrA3u_JI7Dl5eaE6e3TQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/89HlnTlzfuwRcwSQ-bZzfg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/p2LP4nfQlMHH_i6xbQFgyw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -37484,21 +37514,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/rJy8l0v3W8W7bbEVkGZ6XA",
+        "url": "https://videonode.de/iframe3/p2p/eAqrA3u_JI7Dl5eaE6e3TQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/HFhWeHVhPTX8M42Uj6BM4w",
+        "url": "https://videonode.de/iframe3/cast/89HlnTlzfuwRcwSQ-bZzfg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/67Qq6ZXOMVARcv24UxTd-Q",
+        "url": "https://videonode.de/iframe3/hydrax/p2LP4nfQlMHH_i6xbQFgyw",
         "default": false
       }
     ],
