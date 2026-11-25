@@ -35363,8 +35363,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-awkwafina-unlikely-cook-2026-lk21.jpg",
     "rating": "7.4",
-    "durasi": "4 eps · S.1",
-    "episodes_count": 4,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Documentary",
@@ -35494,6 +35494,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Awkwafina: The Unlikely Cook - Season 1 Episode 5 (2026)",
+        "slug": "awkwafina-unlikely-cook-season-1-episode-5-2026",
+        "source": "https://tv1.nontondrama.vip/awkwafina-unlikely-cook-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/80kMlnx18XBfwDawuoQlYg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/xslU24_tsQ_Nq5Ll5Erc9Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/6iFAKmELS2-I-2UoSLsnVQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -35501,21 +35531,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/xwJ5CrNbgt_2DwzP5akC3A",
+        "url": "https://videonode.de/iframe3/p2p/80kMlnx18XBfwDawuoQlYg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/cEkWZb92_QrnuujwoYa0BQ",
+        "url": "https://videonode.de/iframe3/cast/xslU24_tsQ_Nq5Ll5Erc9Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/RhHdLTDyp52Pgu9b9DFT1w",
+        "url": "https://videonode.de/iframe3/hydrax/6iFAKmELS2-I-2UoSLsnVQ",
         "default": false
       }
     ],
