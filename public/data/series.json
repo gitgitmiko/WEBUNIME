@@ -60509,8 +60509,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/10/film-nocturne-2026-lk21.jpg",
     "rating": "6.1",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Crime",
@@ -60672,6 +60672,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "Nocturne - Season 1 Episode 6 (2026)",
+        "slug": "nocturne-season-1-episode-6-2026",
+        "source": "https://tv1.nontondrama.vip/nocturne-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/UrKW9n5--Z2XpX8_S4xByw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/F3dSDBEnGd6paltaGcfIGw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Da37usMQUfpMtdfv8VU18w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -60679,21 +60709,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/6KUcp_BqpXcxKSIHw0ku_w",
+        "url": "https://videonode.de/iframe3/p2p/UrKW9n5--Z2XpX8_S4xByw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/vgHlbm7culOvh0OvIIltsA",
+        "url": "https://videonode.de/iframe3/cast/F3dSDBEnGd6paltaGcfIGw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Ly5K-I0wdRhkD3iLwWdkNQ",
+        "url": "https://videonode.de/iframe3/hydrax/Da37usMQUfpMtdfv8VU18w",
         "default": false
       }
     ],
