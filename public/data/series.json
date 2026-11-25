@@ -32048,8 +32048,8 @@
     "tahun": "2024",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/05/film-st-denis-medical-2024-lk21-d21.jpg",
     "rating": "9.5",
-    "durasi": "35 eps · S.3",
-    "episodes_count": 35,
+    "durasi": "36 eps · S.3",
+    "episodes_count": 36,
     "seasons_count": 3,
     "genre": [
       "Comedy"
@@ -33269,6 +33269,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 3,
+        "episode": 4,
+        "title": "St. Denis Medical - Season 3 Episode 4 (2024)",
+        "slug": "st-denis-medical-season-3-episode-4-2024",
+        "source": "https://tv1.nontondrama.vip/st-denis-medical-season-3-episode-4-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lG_5TowwbPEipe8ZfMcs-g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/fNOT3VZe4zoykzByJmJTWA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/KXBudVx9sMpuzM3Qqn1LxQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -33276,21 +33306,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/2-_eTHg8ipygAl_ywPh1PQ",
+        "url": "https://videonode.de/iframe3/p2p/lG_5TowwbPEipe8ZfMcs-g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/sfLIr5qNbcGVfoP_NqnmOg",
+        "url": "https://videonode.de/iframe3/cast/fNOT3VZe4zoykzByJmJTWA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GUO-vnSerrQ6_2kGwJO8ag",
+        "url": "https://videonode.de/iframe3/hydrax/KXBudVx9sMpuzM3Qqn1LxQ",
         "default": false
       }
     ],

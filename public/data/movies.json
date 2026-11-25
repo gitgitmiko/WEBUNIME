@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Fjord",
+    "judul": "Fjord (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-fjord-2026-lk21.jpg",
+    "rating": "7.6",
+    "quality": "HD",
+    "durasi": "2j 27m",
+    "genre": [
+      "Drama",
+      "Thriller"
+    ],
+    "sinopsis": "Sebuah keluarga imigran asal Rumania yang tinggal di Norwegia sedang menjadi sasaran penyelidikan dan menghadapi pemeriksaan dari sistem peradilan setempat.\n\nAwards: 3 wins & 7 nominations\nBudget: EUR 4,749,000\nWorldwide Gross: USD 3,195,942\nSoundtrack: En Siste Gang\n\nSubtitle: workkeerr\n\nSutradara: Cristian Mungiu\n\nBintang Film: Sebastian Stan, Renate Reinsve, Lisa Carlehed, Ellen Dorrit Petersen, Lisa Loven Kongsli\n\nNegara: Romania, France, Norway, Denmark, Finland, Sweden\n\nVotes: 8.800\n\nRelease: 13 Jun 2026\n\nUpdated: 25 Nov 2026 12:41:03",
+    "slug": "fjord-2026",
+    "source": "https://tv13.lk21official.cc/fjord-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/_l_inOaz7eeDIVhBqHZWgQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/OnPT1UyJgF1ZzXQt28glLw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/iSIRSgGa6qXZy9TudwZBOw",
+        "default": false
+      }
+    ],
+    "id": 515,
+    "is_new": true
+  },
+  {
     "nama": "Rob Lowe: The Outsider",
     "judul": "Rob Lowe: The Outsider (2026)",
     "tahun": "2026",
@@ -37,8 +78,7 @@
         "default": false
       }
     ],
-    "id": 514,
-    "is_new": true
+    "id": 514
   },
   {
     "nama": "Wicker",
