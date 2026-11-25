@@ -35844,8 +35844,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-stick-2025-lk21.jpg",
     "rating": "7.3",
-    "durasi": "13 eps · S.2",
-    "episodes_count": 13,
+    "durasi": "15 eps · S.2",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -36219,6 +36219,36 @@
       },
       {
         "season": 2,
+        "episode": 3,
+        "title": "Stick - Season 2 Episode 3 (2025)",
+        "slug": "stick-season-2-episode-3-2025",
+        "source": "https://tv1.nontondrama.vip/stick-season-2-episode-3-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/oVYC_amVb-cJgpR8103czg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ARuiSuW4QmFfyn-UR0UZOQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Ye7cEoBiLTro-uGHwSLxaA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 2,
         "episode": 4,
         "title": "Stick - Season 2 Episode 4 (2025)",
         "slug": "stick-season-2-episode-4-2025",
@@ -36246,6 +36276,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 5,
+        "title": "Stick - Season 2 Episode 5 (2025)",
+        "slug": "stick-season-2-episode-5-2025",
+        "source": "https://tv1.nontondrama.vip/stick-season-2-episode-5-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/5gz3ok1KqV66gXj_Hamw6g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/evOQuWcU2eswIgbIyDRARQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/yGay3ykqOd8CAVCewI4zrw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -36253,21 +36313,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/L8oZpePe3ZruiZagzexnJg",
+        "url": "https://videonode.de/iframe3/p2p/5gz3ok1KqV66gXj_Hamw6g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/XdNWa50q5Bm-MB7QT9gRWw",
+        "url": "https://videonode.de/iframe3/cast/evOQuWcU2eswIgbIyDRARQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/EmEf9G_YMuf2o5n9ypttag",
+        "url": "https://videonode.de/iframe3/hydrax/yGay3ykqOd8CAVCewI4zrw",
         "default": false
       }
     ],
