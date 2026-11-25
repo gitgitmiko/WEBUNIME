@@ -896,8 +896,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-4-1-300x169.jpg",
     "rating": "7.8",
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Mystery",
       "Comedy",
@@ -1379,61 +1379,34 @@
             "no": 6
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Tantei wa Mou, Shindeiru S2 Episode 8",
+        "slug": "tantei-wa-mou-shindeiru-s2-episode-8",
+        "source": "https://oploverz.diy/series/tantei-wa-mou-shindeiru-s2/episode/8",
+        "date": "",
+        "released_at": "2026-11-25T13:00:00.000Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/EBt0Ba16A",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwVVeLOQ58sAYY0PrOLosg4F9YPv1UGMYt18HqzsND-PvX3CWyM0lVjhDR3tt3nJfOrmsmEJ0wZ5wPTYy9HuN38RVyoBbXMTGJYVsbDnvCu9OsL1Gn_YtMBSDyTcmIo53B5gB4&origin=sameguru2.blogspot.com",
-        "default": true,
-        "post": "55411",
-        "nume": "3"
-      },
-      {
-        "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/iXAakAwG88",
-        "default": false,
-        "post": "55411",
-        "nume": "4"
-      },
-      {
-        "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/DxBA3RaJ#hu_Aa1Ft8MhxY8fgTy5JtXS37nA-GAlwsZzDskpVNEA",
-        "default": false,
-        "post": "55411",
-        "nume": "5"
-      },
-      {
-        "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/GlwAgQhb#GDoxFWAgBTRthGrTq0YtQxqf6yCusGBY2vjlnScyK94",
-        "default": false,
-        "post": "55411",
-        "nume": "6"
-      },
-      {
-        "no": 5,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/C4QkyJqR#4zEG00WUEj7ZKno1WA4hj4tU_EFA4lF2TynaAUAD-Ng",
-        "default": false,
-        "post": "55411",
-        "nume": "7"
-      },
-      {
         "server": "oploverz",
         "label": "Oploverz Abyss",
-        "url": "https://player.abyssplayer.com/QCmHyhYSY",
-        "default": false,
+        "url": "https://player.abyssplayer.com/EBt0Ba16A",
+        "default": true,
         "source": "oploverz",
-        "no": 6
+        "no": 1
       }
     ],
     "id": 4,
