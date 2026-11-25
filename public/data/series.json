@@ -20017,8 +20017,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-12-12-12-2026-lk21.jpg",
     "rating": "6.8",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -20120,6 +20120,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "12 12 12 - Season 1 Episode 4 (2026)",
+        "slug": "12-12-12-season-1-episode-4-2026",
+        "source": "https://tv1.nontondrama.vip/12-12-12-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/OkkXJb44b5Qw-DEt9YFSEg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/y5oPYHUeM8MZxOx8WWFxWg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Y93Iw2YkYFnR8fHi__zFhw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -20127,21 +20157,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/E6drfqFWfSBRuKPjXA8qAA",
+        "url": "https://videonode.de/iframe3/p2p/OkkXJb44b5Qw-DEt9YFSEg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/nR1m8iNcYOW3FORbELMohQ",
+        "url": "https://videonode.de/iframe3/cast/y5oPYHUeM8MZxOx8WWFxWg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/DbY4CTRCOWwLAksxmVzNfA",
+        "url": "https://videonode.de/iframe3/hydrax/Y93Iw2YkYFnR8fHi__zFhw",
         "default": false
       }
     ],
