@@ -2327,6 +2327,30 @@
             "url": "https://www.yourupload.com/embed/Ci32n12eqM75",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/604ziz3nY",
+            "default": false,
+            "source": "oploverz",
+            "no": 7
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/-07Me3H0l",
+            "default": false,
+            "source": "oploverz",
+            "no": 8
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/azJscNcSH",
+            "default": false,
+            "source": "oploverz",
+            "no": 9
           }
         ]
       }
@@ -2334,120 +2358,75 @@
     "players": [
       {
         "no": 1,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dx-O6eRBe1DhXrwOed-lhCDREmE2dxzbzxCIQ2zSfOFDCLY9k3HzmReivA77Fnt6ch8Ji7nkzJ96c7F6_diHixGSPSs-HdObPrUYYwXzslEt0InQ83pLolVwuJNvDL7YAdWWBU",
+        "server": "anoboy",
+        "label": "Anoboy 360",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzuy_ObWZUUJpj67OeRA0w-ePalD0veo_ldqikDmA3m_i38BTwG8L7wNsoRGHXceaU3OUFGywu_O_26oOxQz1t4Fp_6yAmZ8YnS3jIbJ9h2rwiYMInM_bJ9sEVft1UCUkA8JPOo",
         "default": true,
-        "post": "55414",
-        "nume": "3"
+        "source": "anoboy"
       },
       {
         "no": 2,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/WHsaXTerRv",
+        "server": "anoboy",
+        "label": "Anoboy PC 720",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dyqSWLPm7mGcP01-fddAh1WTWoNjQN1ZDZ00lyzIHrtJfIk_YABaOwaTymvKMjsgfywd-UHe2TXNDmhNUco7Zn4nHbRjovG8YqEXt4bWS7MHBKC4k7bKq2XyT-e6N1y0YbMS-Q",
         "default": false,
-        "post": "55414",
-        "nume": "4"
+        "source": "anoboy"
       },
       {
         "no": 3,
-        "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/8volyQrI#T5UB60eqGEVCjVnNM8dW96_YFmVeVVaC7ttk3Cc7OE0",
+        "server": "anoboy",
+        "label": "Anoboy YUP 720p",
+        "url": "https://www.yourupload.com/embed/tl3wI02d8qlW",
         "default": false,
-        "post": "55414",
-        "nume": "5"
+        "source": "anoboy"
       },
       {
         "no": 4,
-        "server": "mega",
-        "label": "Mega 720p",
-        "url": "https://mega.nz/embed/9i5EjDYD#72g_d0My92P_NHHSBP1JL6LcDiqz2DCgUjdWFZqFKWs",
+        "server": "anoboy",
+        "label": "Anoboy YUP 480p",
+        "url": "https://www.yourupload.com/embed/qvT2l3D4U44M",
         "default": false,
-        "post": "55414",
-        "nume": "6"
+        "source": "anoboy"
       },
       {
         "no": 5,
-        "server": "mega",
-        "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/4j4CSDRA#xsQQI36lhcc8oJW3p2MvcXb88gRmNOIbW20vz4NDPPU",
+        "server": "anoboy",
+        "label": "Anoboy YUP 360p",
+        "url": "https://www.yourupload.com/embed/LNowrg4LpqGr",
         "default": false,
-        "post": "55414",
-        "nume": "7"
+        "source": "anoboy"
       },
       {
         "no": 6,
         "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyDAb7uZ03cKgk9_ziIdttgewRDskIDgG6C1QHceZvMDDE9cPE6HmM_WeuxwIwHB4BBIJlUzMJ4OAObtvIUavxObfDUo6jpOxYxTC61Ee4h9weebSAlzex2EkhRZlKsu7ngtoiK",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 7,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwErlww9yieARB0--F1IkSi8hYbFI5nQidrh8daypLor20yDMTwrCHrjAnXNqWmQLfdBTj_Kcf7-aT4W0r1s9tQaX94hhN3smPiKd4GWFfPlbq4Sbh1V3bsEHp_epho3q8FgtE",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 8,
-        "server": "anoboy",
-        "label": "Anoboy YUP 720p",
-        "url": "https://www.yourupload.com/embed/kxNaT4Fv5x8Q",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 9,
-        "server": "anoboy",
-        "label": "Anoboy YUP 480p",
-        "url": "https://www.yourupload.com/embed/J8Or8sc1Ywq6",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 10,
-        "server": "anoboy",
-        "label": "Anoboy YUP 360p",
-        "url": "https://www.yourupload.com/embed/COagUt2rW3bI",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 11,
-        "server": "anoboy",
         "label": "Anoboy YUP 240p",
-        "url": "https://www.yourupload.com/embed/1aB5S4GImc5C",
+        "url": "https://www.yourupload.com/embed/Ci32n12eqM75",
         "default": false,
         "source": "anoboy"
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/B0AdxVeiV5",
+        "url": "https://player.abyssplayer.com/604ziz3nY",
         "default": false,
         "source": "oploverz",
-        "no": 12
+        "no": 7
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/2StLuSIQD",
+        "url": "https://player.abyssplayer.com/-07Me3H0l",
         "default": false,
         "source": "oploverz",
-        "no": 13
+        "no": 8
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/2feZoSOHw",
+        "url": "https://player.abyssplayer.com/azJscNcSH",
         "default": false,
         "source": "oploverz",
-        "no": 14
+        "no": 9
       }
     ],
     "id": 5,
