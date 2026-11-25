@@ -1,5 +1,46 @@
 [
   {
+    "nama": "Breeder",
+    "judul": "Breeder (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-breeder-2026-lk21.jpg",
+    "rating": "6.3",
+    "quality": "HD",
+    "durasi": "1j 38m",
+    "genre": [
+      "Horror",
+      "Thriller"
+    ],
+    "sinopsis": "Seorang peternak pudel yang eksentrik memikat seorang mahasiswa yang sedang kehabisan uang ke peternakannya yang terpencil dengan janji dana penelitian. Namun, seperti yang segera ia ketahui, ada syarat tersembunyi di baliknya.\n\nAwards: 2 wins & 1 nominations\nWorldwide Gross: USD 808,283\n\nSubtitle: workkeerr\n\nSutradara: Alex Goyette\n\nBintang Film: Daniel Doheny, Dot-Marie Jones, Maddie Phillips, Tanaya Beatty, Lillian Doucet-Roche\n\nNegara: Canada, United States\n\nVotes: 1.300\n\nRelease: 28 Oct 2026\n\nUpdated: 25 Nov 2026 17:41:02",
+    "slug": "breeder-2026",
+    "source": "https://tv13.lk21official.cc/breeder-2026",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Tj5O_XekF0lgkb5kfcMwMQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/dMqB_7i63K7CyZsOl_sGpw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/AgVcqi-fYS_AMizYhnovWA",
+        "default": false
+      }
+    ],
+    "id": 520,
+    "is_new": true
+  },
+  {
     "nama": "Miroirs No. 3",
     "judul": "Miroirs No. 3 (2025)",
     "tahun": "2025",
@@ -39,8 +80,7 @@
         "default": false
       }
     ],
-    "id": 519,
-    "is_new": true
+    "id": 519
   },
   {
     "nama": "Seppuku: The Sun Goes Down",

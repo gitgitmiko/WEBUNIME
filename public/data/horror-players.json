@@ -11321,7 +11321,7 @@
     "film": "The Ghost Marriage (2026)",
     "source": "https://tv13.lk21official.cc/ghost-marriage-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:25.979Z",
+    "scraped_at": "2026-11-25T18:05:34.995Z",
     "players": [
       {
         "no": 1,
@@ -11351,7 +11351,7 @@
     "film": "Other Mommy (2026)",
     "source": "https://tv13.lk21official.cc/other-mommy-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:21.225Z",
+    "scraped_at": "2026-11-25T18:05:30.224Z",
     "players": [
       {
         "no": 1,
@@ -11381,7 +11381,7 @@
     "film": "Kijsada Paradise (2026)",
     "source": "https://tv13.lk21official.cc/kijsada-paradise-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:16.148Z",
+    "scraped_at": "2026-11-25T18:05:25.110Z",
     "players": [
       {
         "no": 1,
@@ -11411,7 +11411,7 @@
     "film": "Door Slasher (2026)",
     "source": "https://tv13.lk21official.cc/door-slasher-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:15.517Z",
+    "scraped_at": "2026-11-25T18:05:24.467Z",
     "players": [
       {
         "no": 1,
@@ -11441,7 +11441,7 @@
     "film": "Godzilla Minus Zero (2026)",
     "source": "https://tv13.lk21official.cc/godzilla-minus-zero-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:04.407Z",
+    "scraped_at": "2026-11-25T18:05:13.349Z",
     "players": [
       {
         "no": 1,
@@ -11471,7 +11471,7 @@
     "film": "418 (2026)",
     "source": "https://tv13.lk21official.cc/418-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:02.820Z",
+    "scraped_at": "2026-11-25T18:05:11.758Z",
     "players": [
       {
         "no": 1,
@@ -11501,7 +11501,7 @@
     "film": "Soul Snatcher (2026)",
     "source": "https://tv13.lk21official.cc/soul-snatcher-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:35:01.243Z",
+    "scraped_at": "2026-11-25T18:05:10.156Z",
     "players": [
       {
         "no": 1,
@@ -11531,7 +11531,7 @@
     "film": "The Last Temptation of Becky (2026)",
     "source": "https://tv13.lk21official.cc/last-temptation-becky-2026",
     "catalog": "horror",
-    "scraped_at": "2026-11-25T17:34:58.703Z",
+    "scraped_at": "2026-11-25T18:05:07.598Z",
     "players": [
       {
         "no": 1,
@@ -11552,6 +11552,36 @@
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
         "url": "https://videonode.de/iframe3/hydrax/5Cs5qNBo4yiFC3O2Juu3kw",
+        "default": false
+      }
+    ]
+  },
+  "breeder-2026": {
+    "slug": "breeder-2026",
+    "film": "Breeder (2026)",
+    "source": "https://tv13.lk21official.cc/breeder-2026",
+    "catalog": "horror",
+    "scraped_at": "2026-11-25T18:05:03.449Z",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/Tj5O_XekF0lgkb5kfcMwMQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/dMqB_7i63K7CyZsOl_sGpw",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/AgVcqi-fYS_AMizYhnovWA",
         "default": false
       }
     ]
