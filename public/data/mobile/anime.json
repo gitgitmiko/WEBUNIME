@@ -528,8 +528,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-2-1-300x169.jpg",
     "rating": null,
     "votes": null,
-    "durasi": "7 eps",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [],
     "sinopsis": "Anime Sekai Saikyou no Majo.",
     "related": [],
@@ -838,6 +838,61 @@
             "nume": "7"
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Sekai Saikyou no Majo Episode 8",
+        "slug": "sekai-saikyou-no-majo-episode-8",
+        "source": "https://v2.samehadaku.how/sekai-saikyou-no-majo-episode-8/",
+        "date": "",
+        "released_at": "2026-11-25T15:30:27.254Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxeizvcry4PwbEH-9pPlYbyj_PkGAf9qVILbAd3OT9zA0z_S6KmxVHkU41Y6gMleCWMNLr092cdMNdp8r3XbonQfLXViy0Wr8kkSeDtRgu08jttWRAiAhdshnqMkQNUTHRwo5E&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55565",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/BUx7Xawdid",
+            "default": false,
+            "post": "55565",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/jsZRxC4I#jeJS0ac_HLV6tvAZ-Uxnd7bj-9saB13OHmBTgOEKvdM",
+            "default": false,
+            "post": "55565",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 720p",
+            "url": "https://mega.nz/embed/tME0UToT#SXk0Kd0mvf6xStB4HNQUwDYE_Ed1P-8_8ZynwrvBhsE",
+            "default": false,
+            "post": "55565",
+            "nume": "4"
+          },
+          {
+            "no": 5,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/KlRgkZjQ#Apxx27Yq0ULl9f4yeyR1ULmmox03aZiskzwij-yUHTk",
+            "default": false,
+            "post": "55565",
+            "nume": "5"
+          }
+        ]
       }
     ],
     "players": [
@@ -845,46 +900,46 @@
         "no": 1,
         "server": "blogspot",
         "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dxo4wy0x2i_nvqB1cEsg7GCZDsYbRTBQnh2TMlrTkn4fivBh2H-l_uVBzf2g3RwyvM5L7BVjVLeYTayXQspX-4ERhhxcf6KSaaJyKuL-W_FqrvfN0hicsQM_yPUCwEV0YakPeM&origin=sameguru2.blogspot.com",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxeizvcry4PwbEH-9pPlYbyj_PkGAf9qVILbAd3OT9zA0z_S6KmxVHkU41Y6gMleCWMNLr092cdMNdp8r3XbonQfLXViy0Wr8kkSeDtRgu08jttWRAiAhdshnqMkQNUTHRwo5E&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "55408",
-        "nume": "3"
+        "post": "55565",
+        "nume": "1"
       },
       {
         "no": 2,
         "server": "vip-streaming",
         "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/4mMK9wkzUZ",
+        "url": "https://filedon.co/embed/BUx7Xawdid",
         "default": false,
-        "post": "55408",
-        "nume": "4"
+        "post": "55565",
+        "nume": "2"
       },
       {
         "no": 3,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/espFmTDZ#_RVenLN1Q0zZ1i2Tk28xB8WdHwKawCZSwUC14aoPa9s",
+        "url": "https://mega.nz/embed/jsZRxC4I#jeJS0ac_HLV6tvAZ-Uxnd7bj-9saB13OHmBTgOEKvdM",
         "default": false,
-        "post": "55408",
-        "nume": "5"
+        "post": "55565",
+        "nume": "3"
       },
       {
         "no": 4,
         "server": "mega",
         "label": "Mega 720p",
-        "url": "https://mega.nz/embed/60JzCLAZ#c-wJvO23DUJGLezKEBSha6EoeHj19CZYq5Qpu09cfV0",
+        "url": "https://mega.nz/embed/tME0UToT#SXk0Kd0mvf6xStB4HNQUwDYE_Ed1P-8_8ZynwrvBhsE",
         "default": false,
-        "post": "55408",
-        "nume": "6"
+        "post": "55565",
+        "nume": "4"
       },
       {
         "no": 5,
         "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/jo5ljDrJ#s9aLmFW6HAphhVtsLv9y-4ba3Rqs-fq3E5xOl379tQk",
+        "url": "https://mega.nz/embed/KlRgkZjQ#Apxx27Yq0ULl9f4yeyR1ULmmox03aZiskzwij-yUHTk",
         "default": false,
-        "post": "55408",
-        "nume": "7"
+        "post": "55565",
+        "nume": "5"
       }
     ],
     "id": 3,
@@ -899,7 +954,7 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-4-1-300x169.jpg",
     "rating": "7.8",
     "votes": null,
-    "durasi": "8 eps",
+    "durasi": "24 Menit",
     "episodes_count": 8,
     "genre": [
       "Mystery",
@@ -1392,24 +1447,120 @@
         "released_at": "2026-11-25T13:00:00.000Z",
         "players": [
           {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzkLHp_137qOrZpOxRTe_VLiDswdES0cTuu2HHGEiWbWIjOyjamfzVl8LpmgSY2JA-foko0ONgPaDWvdV0oIw0L5PqL0WstUYm2YuFmGO4pa9l-fVGDQKu5mAV_Y3CTKJ8ca9PC",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dx37loXX2V8u4EIhQd6JCPIbrs8Fzo2eEdAG2pzqZHU-Wxd0jYTI_J-uFwJHRnRa3xLtnZcnjwq7dFdY1jXle6cjX_yJGLhST32esAw-3pykZsidt6KnbijCmQcExJ4-X90umw",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/7QX2g3RrS5oi",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/pe6u8VW62wUE",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/Xw6SFibcTO68",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/1enIfX43Nb43",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
             "server": "oploverz",
             "label": "Oploverz Abyss",
             "url": "https://player.abyssplayer.com/EBt0Ba16A",
-            "default": true,
+            "default": false,
             "source": "oploverz",
-            "no": 1
+            "no": 7
           }
         ]
       }
     ],
     "players": [
       {
+        "no": 1,
+        "server": "anoboy",
+        "label": "Anoboy 360",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzkLHp_137qOrZpOxRTe_VLiDswdES0cTuu2HHGEiWbWIjOyjamfzVl8LpmgSY2JA-foko0ONgPaDWvdV0oIw0L5PqL0WstUYm2YuFmGO4pa9l-fVGDQKu5mAV_Y3CTKJ8ca9PC",
+        "default": true,
+        "source": "anoboy"
+      },
+      {
+        "no": 2,
+        "server": "anoboy",
+        "label": "Anoboy PC 720",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dx37loXX2V8u4EIhQd6JCPIbrs8Fzo2eEdAG2pzqZHU-Wxd0jYTI_J-uFwJHRnRa3xLtnZcnjwq7dFdY1jXle6cjX_yJGLhST32esAw-3pykZsidt6KnbijCmQcExJ4-X90umw",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 3,
+        "server": "anoboy",
+        "label": "Anoboy YUP 720p",
+        "url": "https://www.yourupload.com/embed/7QX2g3RrS5oi",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 4,
+        "server": "anoboy",
+        "label": "Anoboy YUP 480p",
+        "url": "https://www.yourupload.com/embed/pe6u8VW62wUE",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 5,
+        "server": "anoboy",
+        "label": "Anoboy YUP 360p",
+        "url": "https://www.yourupload.com/embed/Xw6SFibcTO68",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 6,
+        "server": "anoboy",
+        "label": "Anoboy YUP 240p",
+        "url": "https://www.yourupload.com/embed/1enIfX43Nb43",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
         "server": "oploverz",
         "label": "Oploverz Abyss",
         "url": "https://player.abyssplayer.com/EBt0Ba16A",
-        "default": true,
+        "default": false,
         "source": "oploverz",
-        "no": 1
+        "no": 7
       }
     ],
     "id": 4,
@@ -1430,8 +1581,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/Sasaki-to-Pii-chan-Season-2-Episode-1-300x169.jpg",
     "rating": "7.3",
     "votes": null,
-    "durasi": "24 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Adventure",
       "Comedy",
@@ -2062,6 +2213,63 @@
             "default": false,
             "source": "oploverz",
             "no": 14
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Sasaki to Pii-chan Season 2 Episode 8",
+        "slug": "sasaki-to-pii-chan-season-2-episode-8",
+        "source": "https://anoboy.at/2026/11/sasaki-to-pii-chan-season-2-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzuy_ObWZUUJpj67OeRA0w-ePalD0veo_ldqikDmA3m_i38BTwG8L7wNsoRGHXceaU3OUFGywu_O_26oOxQz1t4Fp_6yAmZ8YnS3jIbJ9h2rwiYMInM_bJ9sEVft1UCUkA8JPOo",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyqSWLPm7mGcP01-fddAh1WTWoNjQN1ZDZ00lyzIHrtJfIk_YABaOwaTymvKMjsgfywd-UHe2TXNDmhNUco7Zn4nHbRjovG8YqEXt4bWS7MHBKC4k7bKq2XyT-e6N1y0YbMS-Q",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/tl3wI02d8qlW",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/qvT2l3D4U44M",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/LNowrg4LpqGr",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/Ci32n12eqM75",
+            "default": false,
+            "source": "anoboy"
           }
         ]
       }
@@ -14509,8 +14717,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Sekai%20Saikyou%20no%20Majo,%20Hajimemashita.jpg",
     "rating": "6.8",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Adventure",
       "Comedy",
@@ -14820,6 +15028,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/iDuUEhG1rk2M",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Sekai Saikyou no Majo, Hajimemashita Episode 8",
+        "slug": "sekai-saikyou-no-majo-hajimemashita-episode-8",
+        "source": "https://anoboy.at/2026/11/sekai-saikyou-no-majo-hajimemashita-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyz5-fZeDwiLG8pvr1KTs6XEMqV0snO7lZ_yZR6WBohkckBMTeE8WKM3edVA6gosTpFBMhk_Dyo9WN9zn4feDCbsspPeJkrl933Hl6kpTQx93xP9EDGzFB09SOfV9bTvVn8YZjj",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzr3OPDcE_blNPLJyqOszB7CnAkkApXmXUUwNrxC1gFbcqhy83Sq8a4TnXsht8TaLjPopLIuaWvlriB3mBchG4401cfnGS_hQOVdHocUUFwKDIn6W36sso28hG0xPcSueCQTTc",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/k7RUy8rE8D55",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/D75CENj5De5F",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/8H6h5l4nFR3a",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/O7W54Io1BTP2",
             "default": false,
             "source": "anoboy"
           }
