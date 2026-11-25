@@ -112230,8 +112230,8 @@
     "tahun": "2024",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2024/10/film-wheres-wanda-2024-lk21-d21.jpg",
     "rating": "9.0",
-    "durasi": "13 eps · S.2",
-    "episodes_count": 13,
+    "durasi": "14 eps · S.2",
+    "episodes_count": 14,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -112673,6 +112673,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 6,
+        "title": "Where's Wanda? - Season 2 Episode 6 (2024)",
+        "slug": "wheres-wanda-season-2-episode-6-2024",
+        "source": "https://tv1.nontondrama.vip/wheres-wanda-season-2-episode-6-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/dhaYo9Y_FOPVhNlKg-qRmQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/IMTwbOJqmNmdolUgdiB1Zw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/SrLjtS3M5200aJeFT_Ro8Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -112680,21 +112710,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/yf31Xjei8pR5znVxla-rrw",
+        "url": "https://videonode.de/iframe3/p2p/dhaYo9Y_FOPVhNlKg-qRmQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/Is1R6H0f_YeL9SrBXhiIig",
+        "url": "https://videonode.de/iframe3/cast/IMTwbOJqmNmdolUgdiB1Zw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/JhsAlWYwzUSt-htnPgsojA",
+        "url": "https://videonode.de/iframe3/hydrax/SrLjtS3M5200aJeFT_Ro8Q",
         "default": false
       }
     ],
