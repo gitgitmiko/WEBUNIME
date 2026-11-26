@@ -6,8 +6,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-princess-weiyoung-2016-lk21.jpg",
     "rating": "7.6",
-    "durasi": "2 eps · S.1",
-    "episodes_count": 2,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -78,6 +78,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "The Princess Weiyoung - Season 1 Episode 3 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-3-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-3-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/SafTZun9_XVYN_hIItt_fg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/wGzzot2Nw0ulvdwVsyE8gw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/f0WXCFrYT9PNyc8SY8H79Q",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -85,26 +115,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/CjdUf-yBqhzZwulSOzkweQ",
+        "url": "https://videonode.de/iframe3/p2p/SafTZun9_XVYN_hIItt_fg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/VSIVKwRC7iz5YtmyuAwXsw",
+        "url": "https://videonode.de/iframe3/cast/wGzzot2Nw0ulvdwVsyE8gw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/mJyiXRGuX_1Q0yZfUzNDig",
+        "url": "https://videonode.de/iframe3/hydrax/f0WXCFrYT9PNyc8SY8H79Q",
         "default": false
       }
     ],
-    "id": 743,
-    "is_new": true
+    "id": 743
   },
   {
     "type": "series",
@@ -46436,8 +46465,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-political-lupin-2026-lk21.jpg",
     "rating": "7.0",
-    "durasi": "3 eps · S.1",
-    "episodes_count": 3,
+    "durasi": "5 eps · S.1",
+    "episodes_count": 5,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -46536,6 +46565,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Political Lupin - Season 1 Episode 4 (2026)",
+        "slug": "political-lupin-season-1-episode-4-2026",
+        "source": "https://tv1.nontondrama.vip/political-lupin-season-1-episode-4-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/Nb2F3Q57xX7DxlYIFzivPA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/HcKjlgeT43W5Je5tsxYuMQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/ljqR-I9yGQr9uilSvWAh-Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 5,
+        "title": "Political Lupin - Season 1 Episode 5 (2026)",
+        "slug": "political-lupin-season-1-episode-5-2026",
+        "source": "https://tv1.nontondrama.vip/political-lupin-season-1-episode-5-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lGZtmGBWkeg8vMEDwwnnIg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/dny9AEPzeV1NFOhg2rHYJA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/7Qdh3n3rJDtk_gtlabXYPQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -46543,21 +46632,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/G3ExbCovORbTlmdAZ0xGTw",
+        "url": "https://videonode.de/iframe3/p2p/lGZtmGBWkeg8vMEDwwnnIg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/92aa8SvED5i5YKxHUSlmSw",
+        "url": "https://videonode.de/iframe3/cast/dny9AEPzeV1NFOhg2rHYJA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/LXrhNoJRv0pjo2dFu0JMtg",
+        "url": "https://videonode.de/iframe3/hydrax/7Qdh3n3rJDtk_gtlabXYPQ",
         "default": false
       }
     ],
