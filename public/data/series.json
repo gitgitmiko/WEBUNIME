@@ -82,8 +82,8 @@
     "tahun": "2013",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-that-winter-wind-blows-2013-lk21.jpg",
     "rating": "7.1",
-    "durasi": "13 eps · S.1",
-    "episodes_count": 13,
+    "durasi": "15 eps · S.1",
+    "episodes_count": 15,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -482,6 +482,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 14,
+        "title": "That Winter, the Wind Blows - Season 1 Episode 14 (2013)",
+        "slug": "that-winter-wind-blows-season-1-episode-14-2013",
+        "source": "https://tv1.nontondrama.vip/that-winter-wind-blows-season-1-episode-14-2013",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/EkZ7GNLbip4A191Lx7fmIw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/XTNXYx1THssr5VO84sK7LQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/tGKyOCUwyVNqK5J2HpEsfQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 15,
+        "title": "That Winter, the Wind Blows - Season 1 Episode 15 (2013)",
+        "slug": "that-winter-wind-blows-season-1-episode-15-2013",
+        "source": "https://tv1.nontondrama.vip/that-winter-wind-blows-season-1-episode-15-2013",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/K5nDxs-12KRVnue2Ss6xJw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0BuYFHW5OR6vu_fahSFJjw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MtE5PhzINFwPjQTaujua4g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -489,21 +549,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/w4VMv64Ir8fsUM_hdjJ91g",
+        "url": "https://videonode.de/iframe3/p2p/K5nDxs-12KRVnue2Ss6xJw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/P2ibD8KW0C-vuIzK8WhB2w",
+        "url": "https://videonode.de/iframe3/cast/0BuYFHW5OR6vu_fahSFJjw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/GNyRd_Dl3yMN_TT1YMwYeA",
+        "url": "https://videonode.de/iframe3/hydrax/MtE5PhzINFwPjQTaujua4g",
         "default": false
       }
     ],
