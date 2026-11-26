@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-blade-runner-2099-2026-lk21.jpg",
     "rating": "5.5",
-    "durasi": "6 eps · S.1",
-    "episodes_count": 6,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Action",
@@ -200,6 +200,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 7,
+        "title": "Blade Runner 2099 - Season 1 Episode 7 (2026)",
+        "slug": "blade-runner-2099-season-1-episode-7-2026",
+        "source": "https://tv1.nontondrama.vip/blade-runner-2099-season-1-episode-7-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/CbFbUYK9F5yR_7e4umHJQw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/q9qoxx5B7zjmj6ntwk3_Vg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/jZ_O6jcObV_ohR1ZVvBVVQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "Blade Runner 2099 - Season 1 Episode 8 (2026)",
+        "slug": "blade-runner-2099-season-1-episode-8-2026",
+        "source": "https://tv1.nontondrama.vip/blade-runner-2099-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/lmPslQjUFkT1Q9YfsCdo2Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/haneD5BrPDhZan2az8--FQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/5W8bweu4dDimp7McWp8iSQ",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -207,21 +267,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/xHbecw38aeaLojrb62gg0w",
+        "url": "https://videonode.de/iframe3/p2p/lmPslQjUFkT1Q9YfsCdo2Q",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/-oK1I098Q-hZQQyM9u-RVQ",
+        "url": "https://videonode.de/iframe3/cast/haneD5BrPDhZan2az8--FQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/y0a4JnJSmrlN7LZK-Ja-_g",
+        "url": "https://videonode.de/iframe3/hydrax/5W8bweu4dDimp7McWp8iSQ",
         "default": false
       }
     ],
