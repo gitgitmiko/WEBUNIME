@@ -6,8 +6,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-princess-weiyoung-2016-lk21.jpg",
     "rating": "7.6",
-    "durasi": "22 eps · S.1",
-    "episodes_count": 22,
+    "durasi": "24 eps · S.1",
+    "episodes_count": 24,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -678,6 +678,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 23,
+        "title": "The Princess Weiyoung - Season 1 Episode 23 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-23-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-23-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/chZzwulMyrLwgfRv7Z0iNg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/u8OYBc_1ot1VOC0YIhPyPw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pX6MIpAinN3Fbz9BHkRCZA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "The Princess Weiyoung - Season 1 Episode 24 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-24-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-24-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/q-ydfRScG3kjMcjIn2nVdQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/jcFqEZn_DTlOnuneCtSYUA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/3KRsghhopcmX1Ggdy172bw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -685,21 +745,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/MQm6EfmgndisIpENw7lfpw",
+        "url": "https://videonode.de/iframe3/p2p/q-ydfRScG3kjMcjIn2nVdQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/aFzTasdK8NHPfTOK-eT9kA",
+        "url": "https://videonode.de/iframe3/cast/jcFqEZn_DTlOnuneCtSYUA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/x6ixzn0kdYwVRw5ZmplMZA",
+        "url": "https://videonode.de/iframe3/hydrax/3KRsghhopcmX1Ggdy172bw",
         "default": false
       }
     ],
