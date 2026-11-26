@@ -604583,8 +604583,8 @@
     "tahun": "2022",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2022/09/film-the-lord-of-the-rings-the-rings-of-power-2022-lk21-d21.jpg",
     "rating": "0.0",
-    "durasi": "23 eps · S.3",
-    "episodes_count": 23,
+    "durasi": "24 eps · S.3",
+    "episodes_count": 24,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -605376,6 +605376,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 3,
+        "episode": 8,
+        "title": "The Lord of the Rings: The Rings of Power - Season 3 Episode 8 (2022)",
+        "slug": "lord-rings-rings-power-season-3-episode-8-2022",
+        "source": "https://tv1.nontondrama.vip/lord-rings-rings-power-season-3-episode-8-2022",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RCkRlpkBaZFIfwoGhqLzXw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/1Qdv4wvyYTRIeWlgPjoUig",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/aeCwKDHpopTzZxXFv2eFBw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -605383,21 +605413,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/16tykrVO9rTzSqJUxG5NBg",
+        "url": "https://videonode.de/iframe3/p2p/RCkRlpkBaZFIfwoGhqLzXw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/aFIGHRjrBEu9yUFEOfqDMQ",
+        "url": "https://videonode.de/iframe3/cast/1Qdv4wvyYTRIeWlgPjoUig",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/savkn4gVd9aC7SuimxOP_A",
+        "url": "https://videonode.de/iframe3/hydrax/aeCwKDHpopTzZxXFv2eFBw",
         "default": false
       }
     ]
