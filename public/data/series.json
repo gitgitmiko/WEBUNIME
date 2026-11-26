@@ -1,6 +1,85 @@
 [
   {
     "type": "series",
+    "nama": "Blade Runner 2099",
+    "judul": "Blade Runner 2099 (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-blade-runner-2099-2026-lk21.jpg",
+    "rating": "5.5",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Sci-fi",
+      "Thriller"
+    ],
+    "sinopsis": "Blade Runner 2099 - Lima puluh tahun setelah peristiwa Blade Runner 2049, Los Angeles kembali berubah, tetapi bukan lagi di bawah kendali manusia karena para Replicant telah memegang kekuasaan. Cora, seorang buronan yang berusaha mengakhiri pelariannya, mengambil satu identitas terakhir sebagai Blade Runner dan terpaksa bekerja sama dengan Olwen, seorang Replicant Blade Runner yang mendekati akhir hayatnya, untuk memburu buronan yang menyimpan kebenaran berbahaya bagi kota mereka.\n\nBintang Film: Michelle Yeoh, Hunter Schafer, Sheila Atim, Dimitri Abold, Lewis Gribben\n\nNegara: United States, Czech Republic, United Kingdom\n\nVotes: 2.100",
+    "slug": "blade-runner-2099-2026",
+    "source": "https://tv1.nontondrama.vip/blade-runner-2099-2026",
+    "list_source": "https://tv13.lk21official.cc/blade-runner-2099-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Blade Runner 2099 - Season 1 Episode 1 (2026)",
+        "slug": "blade-runner-2099-season-1-episode-1-2026",
+        "source": "https://tv1.nontondrama.vip/blade-runner-2099-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/ZNrOKssoY2H80YYmeco0UQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/vW_BdjD_0QI3btCee7gqeg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/c22NerWP1TSTY6tlyib0og",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/ZNrOKssoY2H80YYmeco0UQ",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/vW_BdjD_0QI3btCee7gqeg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/c22NerWP1TSTY6tlyib0og",
+        "default": false
+      }
+    ],
+    "id": 744,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "The Princess Weiyoung",
     "judul": "The Princess Weiyoung (2016)",
     "tahun": "2016",
@@ -26847,8 +26926,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-what-boss-wants-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "5 eps · S.1",
-    "episodes_count": 5,
+    "durasi": "6 eps · S.1",
+    "episodes_count": 6,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -27008,6 +27087,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 6,
+        "title": "What a Boss Wants - Season 1 Episode 6 (2026)",
+        "slug": "what-boss-wants-season-1-episode-6-2026",
+        "source": "https://tv1.nontondrama.vip/what-boss-wants-season-1-episode-6-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hXzK7qiFI5Gml_Ty-fU6ww",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/JxCz2EkW7KOLdAPdhnkZBQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/QN7-5GocIAssS99dkx9HcA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -27015,21 +27124,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/OC4gq-3EcBMs7AWDMhSUWA",
+        "url": "https://videonode.de/iframe3/p2p/hXzK7qiFI5Gml_Ty-fU6ww",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/HHzSLJeEuKuxS0LW2yRlcg",
+        "url": "https://videonode.de/iframe3/cast/JxCz2EkW7KOLdAPdhnkZBQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/EirivBIsiVmE4VKSRnPC_Q",
+        "url": "https://videonode.de/iframe3/hydrax/QN7-5GocIAssS99dkx9HcA",
         "default": false
       }
     ],
@@ -39688,8 +39797,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-scarlet-heart-ullavee-2026-lk21.jpg",
     "rating": "0.0",
-    "durasi": "7 eps · S.1",
-    "episodes_count": 7,
+    "durasi": "8 eps · S.1",
+    "episodes_count": 8,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -39911,6 +40020,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 8,
+        "title": "Scarlet Heart Ullavee - Season 1 Episode 8 (2026)",
+        "slug": "scarlet-heart-ullavee-season-1-episode-8-2026",
+        "source": "https://tv1.nontondrama.vip/scarlet-heart-ullavee-season-1-episode-8-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/xw9GEwiqfHhfbvfTLj1GwA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/9xP5s1jWL3CFr75Rvp__MQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/cc-67wRN0OjBYC5kpgmx-A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -39918,21 +40057,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/BkfjSxxvw6e2yeFxf7AHsQ",
+        "url": "https://videonode.de/iframe3/p2p/xw9GEwiqfHhfbvfTLj1GwA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/B5aFEFrO8F3iW1W5yT8Rtg",
+        "url": "https://videonode.de/iframe3/cast/9xP5s1jWL3CFr75Rvp__MQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/8UQ34cnQ88RIs6XXtGWAyg",
+        "url": "https://videonode.de/iframe3/hydrax/cc-67wRN0OjBYC5kpgmx-A",
         "default": false
       }
     ],
