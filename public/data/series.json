@@ -82,8 +82,8 @@
     "tahun": "2013",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-that-winter-wind-blows-2013-lk21.jpg",
     "rating": "7.1",
-    "durasi": "12 eps · S.1",
-    "episodes_count": 12,
+    "durasi": "13 eps · S.1",
+    "episodes_count": 13,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -452,6 +452,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 13,
+        "title": "That Winter, the Wind Blows - Season 1 Episode 13 (2013)",
+        "slug": "that-winter-wind-blows-season-1-episode-13-2013",
+        "source": "https://tv1.nontondrama.vip/that-winter-wind-blows-season-1-episode-13-2013",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/w4VMv64Ir8fsUM_hdjJ91g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/P2ibD8KW0C-vuIzK8WhB2w",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GNyRd_Dl3yMN_TT1YMwYeA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -459,21 +489,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/PEfLpwj_mM6BE7BTuot6kw",
+        "url": "https://videonode.de/iframe3/p2p/w4VMv64Ir8fsUM_hdjJ91g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/GFdvi1DxJRpWokzJpEZS5g",
+        "url": "https://videonode.de/iframe3/cast/P2ibD8KW0C-vuIzK8WhB2w",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/HdEV0Z0xqhlX9y-8t8Hxhg",
+        "url": "https://videonode.de/iframe3/hydrax/GNyRd_Dl3yMN_TT1YMwYeA",
         "default": false
       }
     ],
