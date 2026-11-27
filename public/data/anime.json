@@ -4354,7 +4354,7 @@
     "rating": "8.7",
     "votes": null,
     "durasi": "22 Menit",
-    "episodes_count": 8,
+    "episodes_count": 9,
     "genre": [
       "Drama",
       "Mystery",
@@ -4960,80 +4960,84 @@
             "no": 9
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Kusuriya no Hitorigoto Season 3 Episode 9",
+        "slug": "kusuriya-no-hitorigoto-season-3-episode-9",
+        "source": "https://v2.samehadaku.how/kusuriya-no-hitorigoto-season-3-episode-9/",
+        "date": "",
+        "released_at": "2026-11-27T17:30:34.771Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/wRwQ1Yjb#Az0vxnQtRF_Yw2FJZq5Q8Iiwx7XrMmaiaEajVTMLF08",
+            "default": true,
+            "post": "55597",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzEsoJxOLnnuy5b0gWLzOvbv6ANl53nL7GJ-LlEhPtxiHx0WBuz2UBqe_hmYQ2h8JqAeCVjkh0jDLepXaIEBFQbSPlC3dv0INqaiomgxkf4uqO_wY-aEEKUcsEOKZiVZq5WgVP4",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzk7jFg9ocXXKVRwBnw24eNx8nlR00po_k_yQT13MnwkjC-TK9zWbkuYW1yDSqXLRKxL8akdRcdwy9NbZZl16Ubo-Eat6i4tEt7Kvc-cNKKvs8ebKi_jaK9s5UtCNXYyyA-8Xw",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/PcdsijGA0m2A",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/wD4Dh7xbMo36",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/BgcM7nA825S5",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/5KsNMqRAGNH7",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyJHek64HMkSS8VC8nIh0aDP_wb7mN_K9mdrXi6naB-D88PIFEl9nTOwq0baLd5AytRykJmpe_1WOKWmTj3juPvllnziWlBT6bRhSFAlczFJdeQtyuYxe5hXEQuAWDGRryPB4k8",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/wRwQ1Yjb#Az0vxnQtRF_Yw2FJZq5Q8Iiwx7XrMmaiaEajVTMLF08",
         "default": true,
-        "source": "anoboy"
-      },
-      {
-        "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dzDNFotSd3Dq9WXxZrXvBT15ljC3E0pTqz9g_7xlTFm2aNpxxuVEN5o9ZK1P9cFyhMLvMsuPycU_jB6GMaoNM17UM9HR4QTHrdyzWgt6T6P92MQ4TNiLbZWylpFLlHHkzfEzv9w",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 3,
-        "server": "anoboy",
-        "label": "Anoboy YUP 720p",
-        "url": "https://www.yourupload.com/embed/172q63oxU340",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 4,
-        "server": "anoboy",
-        "label": "Anoboy YUP 480p",
-        "url": "https://www.yourupload.com/embed/SnXB6p73IXYJ",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 5,
-        "server": "anoboy",
-        "label": "Anoboy YUP 360p",
-        "url": "https://www.yourupload.com/embed/qGWOnM5mxpST",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 6,
-        "server": "anoboy",
-        "label": "Anoboy YUP 240p",
-        "url": "https://www.yourupload.com/embed/1TE6oX18Khox",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/QU7Cla9Zx",
-        "default": false,
-        "source": "oploverz",
-        "no": 7
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/LhywErSij",
-        "default": false,
-        "source": "oploverz",
-        "no": 8
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/KFQaie1qP",
-        "default": false,
-        "source": "oploverz",
-        "no": 9
+        "post": "55597",
+        "nume": "1"
       }
     ],
     "id": 9,
@@ -27848,8 +27852,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Steel%20Ball%20Run%20JoJo%20no%20Kimyou%20na%20Bouken.jpg",
     "rating": "9.1",
     "votes": "",
-    "durasi": "24 Menit",
-    "episodes_count": 9,
+    "durasi": "10 eps",
+    "episodes_count": 10,
     "genre": [
       "Action",
       "Adventure",
@@ -28161,6 +28165,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/033cKFp5RIP6",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 11,
+        "title": "JoJo no Kimyou na Bouken (TV) Season 7 Episode 11",
+        "slug": "jojo-no-kimyou-na-bouken-tv-season-7-episode-11",
+        "source": "https://anoboy.at/2026/11/jojo-no-kimyou-na-bouken-tv-season-7-episode-11/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxocFrg7GzMiJtnYmeHIvRSVE9u3wblfRVsSBmsLuMg7NdfY_7JuSxrxwwZaRCenDtuIA4JwXOM99FO3NapqYIRKKpne8Rp62mpWUyqy4IZx_tK8aYzImDWRUopUDKAKmWlvMI",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwfFbkcXT0XCqEXRxc0svp_u1TQJoo8w_9gUGp4DfBt3mI9P568Kbsk1e8UyGkbvhZddD-b1lCb_h-bc3I2HwdxPw80dutVBLJF-VhqxGrPLUcZBHDFZzbKT6d9ZxLYBBVvOQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/G5ESE4Hy6Jw7",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/YQe0No451RqX",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/CQp56REhBmw3",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/EV8INM13012m",
             "default": false,
             "source": "anoboy"
           }
@@ -1219184,8 +1219245,8 @@
     "thumbnail": "https://backapi.oploverz.ac/uploads/posters/5cde3a04-c611-4a33-a444-e049b5cb7fe2.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "8 eps",
-    "episodes_count": 8,
+    "durasi": "9 eps",
+    "episodes_count": 9,
     "genre": [
       "Action",
       "Fantasy",
@@ -1219342,13 +1219403,31 @@
             "no": 1
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Tougen Anki S2: Nikko Kegon no Taki-hen Episode 9",
+        "slug": "tougen-anki-s2-nikko-kegon-no-taki-hen-episode-9",
+        "source": "https://oploverz.diy/series/tougen-anki-s2-nikko-kegon-no-taki-hen/episode/9",
+        "date": "",
+        "released_at": "2026-11-27T17:00:34.148Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/m6kG0-3ZDA",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss",
-        "url": "https://player.abyssplayer.com/-45KBF1Vt",
+        "url": "https://player.abyssplayer.com/m6kG0-3ZDA",
         "default": true,
         "source": "oploverz",
         "no": 1
