@@ -1,5 +1,45 @@
 [
   {
+    "nama": "Long Day",
+    "judul": "Long Day (2021)",
+    "tahun": "2021",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-long-day-2021-lk21.jpg",
+    "rating": "5.6",
+    "quality": "HD",
+    "durasi": "1j 36m",
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Satu hari di mana para pria dan wanita bertemu, saling berkirim pesan, putus hubungan sambil merencanakan sebuah film, merindukan satu sama lain, dan bertemu kembali.\n\nSubtitle: workkeerr\n\nSutradara: Cho Sung-kyu\n\nBintang Film: Nam Bo-ra, Kim Dong-wan, Kim Han-na, Kim Ji-chul, Seo Jun-yeong\n\nNegara: South Korea\n\nVotes: 7\n\nRelease: 30 Dec 2021\n\nUpdated: 27 Nov 2026 10:59:03",
+    "slug": "long-day-2021",
+    "source": "https://tv13.lk21official.cc/long-day-2021",
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/1rDHngH84YIAysoEpUTp0g",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/9dxd42l0W_8wxSZW1qCUqg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/-bJmmbDtFO658F-N53dnxw",
+        "default": false
+      }
+    ],
+    "id": 534,
+    "is_new": true
+  },
+  {
     "nama": "Death Stranding",
     "judul": "Death Stranding (2023)",
     "tahun": "2023",
@@ -37,8 +77,7 @@
         "default": false
       }
     ],
-    "id": 533,
-    "is_new": true
+    "id": 533
   },
   {
     "nama": "The Slightest Touch",
