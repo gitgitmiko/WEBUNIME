@@ -5086,6 +5086,22 @@
             "url": "https://www.yourupload.com/embed/5KsNMqRAGNH7",
             "default": false,
             "source": "anoboy"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/51CpVAaqL",
+            "default": false,
+            "source": "oploverz",
+            "no": 8
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/A9y98uFTF",
+            "default": false,
+            "source": "oploverz",
+            "no": 9
           }
         ]
       }
@@ -5099,6 +5115,70 @@
         "default": true,
         "post": "55597",
         "nume": "1"
+      },
+      {
+        "no": 2,
+        "server": "anoboy",
+        "label": "Anoboy 360",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzEsoJxOLnnuy5b0gWLzOvbv6ANl53nL7GJ-LlEhPtxiHx0WBuz2UBqe_hmYQ2h8JqAeCVjkh0jDLepXaIEBFQbSPlC3dv0INqaiomgxkf4uqO_wY-aEEKUcsEOKZiVZq5WgVP4",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 3,
+        "server": "anoboy",
+        "label": "Anoboy PC 720",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dzk7jFg9ocXXKVRwBnw24eNx8nlR00po_k_yQT13MnwkjC-TK9zWbkuYW1yDSqXLRKxL8akdRcdwy9NbZZl16Ubo-Eat6i4tEt7Kvc-cNKKvs8ebKi_jaK9s5UtCNXYyyA-8Xw",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 4,
+        "server": "anoboy",
+        "label": "Anoboy YUP 720p",
+        "url": "https://www.yourupload.com/embed/PcdsijGA0m2A",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 5,
+        "server": "anoboy",
+        "label": "Anoboy YUP 480p",
+        "url": "https://www.yourupload.com/embed/wD4Dh7xbMo36",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 6,
+        "server": "anoboy",
+        "label": "Anoboy YUP 360p",
+        "url": "https://www.yourupload.com/embed/BgcM7nA825S5",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "no": 7,
+        "server": "anoboy",
+        "label": "Anoboy YUP 240p",
+        "url": "https://www.yourupload.com/embed/5KsNMqRAGNH7",
+        "default": false,
+        "source": "anoboy"
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss 720p",
+        "url": "https://player.abyssplayer.com/51CpVAaqL",
+        "default": false,
+        "source": "oploverz",
+        "no": 8
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss 480p",
+        "url": "https://player.abyssplayer.com/A9y98uFTF",
+        "default": false,
+        "source": "oploverz",
+        "no": 9
       }
     ],
     "id": 9,
@@ -23779,8 +23859,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Tokyo%20Revengers%20Season%204.jpg",
     "rating": "7.8",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 8,
+    "durasi": "9 eps",
+    "episodes_count": 9,
     "genre": [
       "Action",
       "Drama",
@@ -24116,6 +24196,63 @@
             "server": "anoboy",
             "label": "Anoboy PC 720",
             "url": "https://www.blogger.com/video.g?token=AD6v5dxhevFnKQ90VRDXZgSIXry6ixQCyoDBnYGGJQEsdOCdqoOk14le6VF08vm7nL6jiduUwfEV-rEtMrN8JuSn26qk1xamHpjVKxfA3dAq96hLzLO-fMfvj8xjIa_cyqyS-mx0pf4",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 9,
+        "title": "Tokyo Revengers Season 4 Episode 9",
+        "slug": "tokyo-revengers-season-4-episode-9",
+        "source": "https://anoboy.at/2026/11/tokyo-revengers-season-4-episode-9/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyrphb1ZbMawH16fV4exkMeazZLYtDGs9_VJ9blJxvAHH42uqqwoFpz191m56cLmRmehBhht2KGpeR_eq7O_0kh4XKffTUs4R5DhkHJ1RCF0Sl-e2nxDxve2XyL9tFhO5BrDdg",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dz5EZEcnCopgtxdCxZN55wx1KsB51OI0aH1_4DJauOPIJmjSdpI9T6xR32hcKvAy4GGEknLpJU_OofpsLQvpgedzlzy_mEQT5-avvPcExig6lRA9khioMTw-rp4HPFzzHjjLA",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/nC0fJ1c5746x",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/8dS5T1chYIdj",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/288d0oPTHR2K",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/10D18tLYqn40",
             "default": false,
             "source": "anoboy"
           }
@@ -32802,7 +32939,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Uchi%20no%20Otouto-domo%20ga%20Sumimasen.jpg",
     "rating": "7",
     "votes": "",
-    "durasi": "20 eps",
+    "durasi": "23 Menit",
     "episodes_count": 20,
     "genre": [
       "Comedy",
