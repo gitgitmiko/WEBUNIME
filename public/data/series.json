@@ -13930,8 +13930,8 @@
     "tahun": "2025",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2025/07/film-dexter-resurrection-2025-lk21-d21.jpg",
     "rating": "8.4",
-    "durasi": "14 eps · S.2",
-    "episodes_count": 14,
+    "durasi": "15 eps · S.2",
+    "episodes_count": 15,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -14347,6 +14347,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 5,
+        "title": "Dexter: Resurrection - Season 2 Episode 5 (2025)",
+        "slug": "dexter-resurrection-season-2-episode-5-2025",
+        "source": "https://tv1.nontondrama.vip/dexter-resurrection-season-2-episode-5-2025",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/yysEphIq4nxwccJa9_7vDQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/l7mVl1Z5F-53tBABWYNzjA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/2YH-g3Q6ty3D_2q6E7pK0w",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -14354,21 +14384,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/ur-CUOXMBP05bQrxcLjNew",
+        "url": "https://videonode.de/iframe3/p2p/yysEphIq4nxwccJa9_7vDQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/2Zg6_62TQkEUibYsypEluw",
+        "url": "https://videonode.de/iframe3/cast/l7mVl1Z5F-53tBABWYNzjA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/-Z2-IvZv4dyjLuHlrxUzcw",
+        "url": "https://videonode.de/iframe3/hydrax/2YH-g3Q6ty3D_2q6E7pK0w",
         "default": false
       }
     ],
