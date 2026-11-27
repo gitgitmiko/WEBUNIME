@@ -12985,8 +12985,8 @@
     "tahun": "2024",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2024/07/film-good-partner-gutpateuneo-2024-lk21-d21.jpg",
     "rating": "8.5",
-    "durasi": "18 eps · S.2",
-    "episodes_count": 18,
+    "durasi": "19 eps · S.2",
+    "episodes_count": 19,
     "seasons_count": 2,
     "genre": [
       "Drama",
@@ -13502,6 +13502,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 2,
+        "episode": 3,
+        "title": "Good Partner (Gutpateuneo) - Season 2 Episode 3 (2024)",
+        "slug": "good-partner-gutpateuneo-season-2-episode-3-2024",
+        "source": "https://tv1.nontondrama.vip/good-partner-gutpateuneo-season-2-episode-3-2024",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/-rdL6CD-BuyYLiGg9Jet8g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ww_-CoqT0Hr0SVwnU1kJ1Q",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/T1CuxFkCm496AKX63-JOfw",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -13509,21 +13539,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/c1N0lwCdLpFn-lrbQEb0uA",
+        "url": "https://videonode.de/iframe3/p2p/-rdL6CD-BuyYLiGg9Jet8g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/z3TXP7UkWR1i9I6oC9u7ew",
+        "url": "https://videonode.de/iframe3/cast/ww_-CoqT0Hr0SVwnU1kJ1Q",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/JEoqhF0Yf6Ogibm1Qtzs6A",
+        "url": "https://videonode.de/iframe3/hydrax/T1CuxFkCm496AKX63-JOfw",
         "default": false
       }
     ],
