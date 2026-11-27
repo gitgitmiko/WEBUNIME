@@ -6,8 +6,8 @@
     "tahun": "2019",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-green-door-2019-lk21.jpg",
     "rating": "6.8",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "3 eps · S.1",
+    "episodes_count": 3,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -50,6 +50,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Green Door - Season 1 Episode 2 (2019)",
+        "slug": "green-door-season-1-episode-2-2019",
+        "source": "https://tv1.nontondrama.vip/green-door-season-1-episode-2-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/0LgFmUbHJzOiiA4agHvRHQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Ma8Y_ov2uzLIaCWw0FcK4g",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/pIyi6mWUSEH6WOzXBPPoag",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Green Door - Season 1 Episode 3 (2019)",
+        "slug": "green-door-season-1-episode-3-2019",
+        "source": "https://tv1.nontondrama.vip/green-door-season-1-episode-3-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/j4Zk1BAFZrcLNObpeRsOIQ",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/Fi6Q9QDkbimJCg7_EWkrxg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/UhVcpi4PYaNZSBBgtvIJdg",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -57,26 +117,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/yl4YignkfZt-E19Sjaz5KA",
+        "url": "https://videonode.de/iframe3/p2p/j4Zk1BAFZrcLNObpeRsOIQ",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/RQaCHOJBMwqUy__HBG79EQ",
+        "url": "https://videonode.de/iframe3/cast/Fi6Q9QDkbimJCg7_EWkrxg",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/DqTHWOFW81V-eV819vFLMw",
+        "url": "https://videonode.de/iframe3/hydrax/UhVcpi4PYaNZSBBgtvIJdg",
         "default": false
       }
     ],
-    "id": 746,
-    "is_new": true
+    "id": 746
   },
   {
     "type": "series",
