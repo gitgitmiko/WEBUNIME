@@ -418083,8 +418083,8 @@
     "tahun": "2026",
     "thumbnail": "https://cover.showcdnx.com/wp-content/uploads/2026/07/film-family-register-2026-lk21.jpg",
     "rating": "8.4",
-    "durasi": "82 eps · S.1",
-    "episodes_count": 82,
+    "durasi": "83 eps · S.1",
+    "episodes_count": 83,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -420533,6 +420533,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 83,
+        "title": "Family Register - Season 1 Episode 83 (2026)",
+        "slug": "family-register-season-1-episode-83-2026",
+        "source": "https://tv1.nontondrama.vip/family-register-season-1-episode-83-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/snSkqxvcVIee8RXBfZDsPg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/JU8pnPKH2d6EP3KcPFIpCQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/_w8A4YlNebF9VmmdgjeDiA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -420540,21 +420570,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/n2MsRTmvERPjQNPoVYLKmQ",
+        "url": "https://videonode.de/iframe3/p2p/snSkqxvcVIee8RXBfZDsPg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/DHlZ_7xdwCx5aP_aW8XmUA",
+        "url": "https://videonode.de/iframe3/cast/JU8pnPKH2d6EP3KcPFIpCQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/XdNYo7I_iPj5yWfMENDcxg",
+        "url": "https://videonode.de/iframe3/hydrax/_w8A4YlNebF9VmmdgjeDiA",
         "default": false
       }
     ],
