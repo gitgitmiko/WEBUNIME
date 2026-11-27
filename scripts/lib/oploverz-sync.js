@@ -205,15 +205,32 @@ function metaFromSeries(s) {
   };
 }
 
-/** Satu seri lengkap: meta + Map<episode, {players, released_at}>. */
-export async function fetchSeries(slug) {
+/**
+ * Satu seri lengkap: meta + Map<episode, {players, released_at}>.
+ * Sejak Nov 2026 daftar episode di halaman seri tidak lagi membawa streamUrl; server diambil dari halaman
+ * tiap episode. opts.recent: hanya N episode terbaru yang diambil begitu (sync rutin; episode lama sudah
+ * punya server di katalog), tanpa opts.recent semua episode (sync penuh manual).
+ */
+export async function fetchSeries(slug, opts = {}) {
   const data = await fetchPageData(`/series/${slug}`);
   if (!data?.series) throw new Error(`series kosong: ${slug}`);
   const meta = metaFromSeries(data.series);
+  const list = [...(data.episodes || [])];
+  const byNewest = [...list].sort((a, b) => (episodeNumber(b.episodeNumber) ?? 0) - (episodeNumber(a.episodeNumber) ?? 0));
+  const wanted = new Set(opts.recent ? byNewest.slice(0, opts.recent) : list);
+  for (const e of list) {
+    if (e.streamUrl || !wanted.has(e) || e.episodeNumber == null) continue;
+    try {
+      const page = await fetchPageData(`/series/${slug}/episode/${e.episodeNumber}`);
+      e.streamUrl = page?.episode?.streamUrl;
+    } catch (err) {
+      console.warn(`[oploverz] gagal ${slug} episode ${e.episodeNumber}: ${err.message}`);
+    }
+  }
   const episodes = new Map();
   // Movie/OVA/special sering tanpa episodeNumber (null) → nomori urut dari 1.
   let unnumbered = 0;
-  for (const e of [...(data.episodes || [])].reverse()) {
+  for (const e of [...list].reverse()) {
     const n = episodeNumber(e.episodeNumber) ?? ++unnumbered;
     const players = playersFromStreams(e.streamUrl);
     if (!players.length) continue;
@@ -649,7 +666,7 @@ export async function syncOploverz(dirs, opts = {}) {
   let done = 0;
   const fetched = await mapPool(targets, CONCURRENCY, async (t) => {
     try {
-      const s = await fetchSeries(t.slug);
+      const s = await fetchSeries(t.slug, { recent: opts.recentEpisodes });
       done += 1;
       if (done % 25 === 0 || done === targets.length) {
         console.log(`[oploverz] ${done}/${targets.length} seri terambil`);
@@ -720,7 +737,7 @@ export async function syncOploverzLatest(dirs, opts = {}) {
   await oploverzDomain.resolve();
   const slugs = await listLatestSeriesSlugs(Number(opts.pages) || 2);
   if (!slugs.length) throw new Error("episode terbaru kosong");
-  return syncOploverz(dirs, { ...opts, slugs });
+  return syncOploverz(dirs, { recentEpisodes: 3, ...opts, slugs });
 }
 
 /**
