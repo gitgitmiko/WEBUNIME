@@ -1,13 +1,92 @@
 [
   {
     "type": "series",
+    "nama": "Green Door",
+    "judul": "Green Door (2019)",
+    "tahun": "2019",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-green-door-2019-lk21.jpg",
+    "rating": "6.8",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "sinopsis": "Seorang psikolog yang dilanda masalah kembali dari Amerika Serikat dan mendirikan sebuah klinik di Taiwan, di mana pasien-pasien misterius dan kejadian-kejadian aneh mengungkap masa lalunya yang kelam.\n\nAwards: 0 wins & 3 nominations\n\nSutradara: Lingo Hsieh\n\nBintang Film: Jam Hsiao, Bea Hayden Kuo, Enno Cheng, Wan-Ru Zhan, Ying-Hsuan Hsieh\n\nNegara: Taiwan\n\nVotes: 4",
+    "slug": "green-door-2019",
+    "source": "https://tv1.nontondrama.vip/green-door-2019",
+    "list_source": "https://tv13.lk21official.cc/green-door-2019",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Green Door - Season 1 Episode 1 (2019)",
+        "slug": "green-door-season-1-episode-1-2019",
+        "source": "https://tv1.nontondrama.vip/green-door-season-1-episode-1-2019",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/yl4YignkfZt-E19Sjaz5KA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/RQaCHOJBMwqUy__HBG79EQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/DqTHWOFW81V-eV819vFLMw",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/yl4YignkfZt-E19Sjaz5KA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/RQaCHOJBMwqUy__HBG79EQ",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/DqTHWOFW81V-eV819vFLMw",
+        "default": false
+      }
+    ],
+    "id": 746,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Ramen Daisuki Koizumi San",
     "judul": "Ramen Daisuki Koizumi San (2015)",
     "tahun": "2015",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-ramen-daisuki-koizumi-san-2015-lk21.jpg",
     "rating": "7.0",
-    "durasi": "1 eps · S.1",
-    "episodes_count": 1,
+    "durasi": "4 eps · S.1",
+    "episodes_count": 4,
     "seasons_count": 1,
     "genre": [
       "Comedy",
@@ -47,6 +126,96 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "Ramen Daisuki Koizumi San - Season 1 Episode 2 (2015)",
+        "slug": "ramen-daisuki-koizumi-san-season-1-episode-2-2015",
+        "source": "https://tv1.nontondrama.vip/ramen-daisuki-koizumi-san-season-1-episode-2-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/bZqrt8D7yv0dvurQVFwyCw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/yh-47-LlHhN1QEUIzpiKmA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/eNQBuyRf4gvaZoqWDTMLeA",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 3,
+        "title": "Ramen Daisuki Koizumi San - Season 1 Episode 3 (2015)",
+        "slug": "ramen-daisuki-koizumi-san-season-1-episode-3-2015",
+        "source": "https://tv1.nontondrama.vip/ramen-daisuki-koizumi-san-season-1-episode-3-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RFvlqZI-yVB0PYRpVDV7Dg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/nxMKPDN1hqyARMNLyyazJQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/CMpr2PR2X4JhGKdD3jGu5Q",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 4,
+        "title": "Ramen Daisuki Koizumi San - Season 1 Episode 4 (2015)",
+        "slug": "ramen-daisuki-koizumi-san-season-1-episode-4-2015",
+        "source": "https://tv1.nontondrama.vip/ramen-daisuki-koizumi-san-season-1-episode-4-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/gsv9xFl8-B79-CNU5SYULw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7zGJrKrL7MRnBVThlthvag",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/GEBpPuesPGHO0hBmsLSpHA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -54,26 +223,25 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/etSUTjlVxYamhrXWrFQIjA",
+        "url": "https://videonode.de/iframe3/p2p/gsv9xFl8-B79-CNU5SYULw",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/4wT6HVFwPk009xmb9HuuQg",
+        "url": "https://videonode.de/iframe3/cast/7zGJrKrL7MRnBVThlthvag",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/Vm8OK48ieE0jsLa4gxW1_Q",
+        "url": "https://videonode.de/iframe3/hydrax/GEBpPuesPGHO0hBmsLSpHA",
         "default": false
       }
     ],
-    "id": 745,
-    "is_new": true
+    "id": 745
   },
   {
     "type": "series",
