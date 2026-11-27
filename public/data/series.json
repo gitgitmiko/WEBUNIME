@@ -294,8 +294,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-princess-weiyoung-2016-lk21.jpg",
     "rating": "7.6",
-    "durasi": "38 eps · S.1",
-    "episodes_count": 38,
+    "durasi": "40 eps · S.1",
+    "episodes_count": 40,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -1413,6 +1413,66 @@
             "server": "hydrax",
             "label": "GANTI PLAYER HYDRAX",
             "url": "https://videonode.de/iframe3/hydrax/eOO6UgJFtCz6WY_0IJG3fg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 38,
+        "title": "The Princess Weiyoung - Season 1 Episode 38 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-38-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-38-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/F0Gt_fkEOEMx6303_sfxgw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/DWOccQEk-wj-8xjjxCizVQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/PlyLCBeks0i2T9-99uzyXg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 39,
+        "title": "The Princess Weiyoung - Season 1 Episode 39 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-39-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-39-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/QHdySTJokhwmHffD4lxM-Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/7cakr43HVxjR3QkgohFVgg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/yKcISoFR035W9ultpWyoeQ",
             "default": false
           }
         ]
