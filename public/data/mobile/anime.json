@@ -3719,8 +3719,8 @@
     "thumbnail": "https://v2.samehadaku.how/wp-content/uploads/2026/10/image-8-1-300x169.jpg",
     "rating": "7.5",
     "votes": null,
-    "durasi": "8 eps",
-    "episodes_count": 8,
+    "durasi": "9 eps",
+    "episodes_count": 9,
     "genre": [
       "Action",
       "Drama",
@@ -4271,77 +4271,138 @@
             "no": 8
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Tokyo Revengers S4 Episode 9",
+        "slug": "tokyo-revengers-s4-episode-9",
+        "source": "https://v2.samehadaku.how/tokyo-revengers-s4-episode-9/",
+        "date": "",
+        "released_at": "2026-11-27T18:30:27.981Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "blogspot",
+            "label": "Blogspot",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxK613jRY0O3-jBuurFNsIff2EAYw-DWycYJRkI_Kx61rGDauFfE75wusDchlyx8edi2OpxGxU01vtKkrkz0C9JP5duWcYIMAC4qMoJ2goSm6nF22-MZCQ8t9nSzEo42wLmsag&origin=sameguru2.blogspot.com",
+            "default": true,
+            "post": "55600",
+            "nume": "1"
+          },
+          {
+            "no": 2,
+            "server": "vip-streaming",
+            "label": "VIP STREAMING",
+            "url": "https://filedon.co/embed/Zhz0ElxWaQ",
+            "default": false,
+            "post": "55600",
+            "nume": "2"
+          },
+          {
+            "no": 3,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/qpQiCAYS#3X9pmUKcCiWD_99P79VK-ZmNG-reJBVIiwOTZA2r3rE",
+            "default": false,
+            "post": "55600",
+            "nume": "3"
+          },
+          {
+            "no": 4,
+            "server": "mega",
+            "label": "Mega 1080p",
+            "url": "https://mega.nz/embed/uhwHQKgL#-cAB2iiS82RFbCZvAhFTIpC_amhJO9t1zVs61N7gack",
+            "default": false,
+            "post": "55600",
+            "nume": "5"
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/SRYWQalBy",
+            "default": false,
+            "source": "oploverz",
+            "no": 5
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/KKEuBSuXk",
+            "default": false,
+            "source": "oploverz",
+            "no": 6
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 480p",
+            "url": "https://player.abyssplayer.com/XTXHfcRGM",
+            "default": false,
+            "source": "oploverz",
+            "no": 7
+          }
+        ]
       }
     ],
     "players": [
       {
         "no": 1,
-        "server": "vip-hd",
-        "label": "VIP HD",
-        "url": "https://icefile.web.id/embed/934f067435cc8daaf1f5c01070ec9014",
+        "server": "blogspot",
+        "label": "Blogspot",
+        "url": "https://www.blogger.com/video.g?token=AD6v5dxK613jRY0O3-jBuurFNsIff2EAYw-DWycYJRkI_Kx61rGDauFfE75wusDchlyx8edi2OpxGxU01vtKkrkz0C9JP5duWcYIMAC4qMoJ2goSm6nF22-MZCQ8t9nSzEo42wLmsag&origin=sameguru2.blogspot.com",
         "default": true,
-        "post": "55444",
+        "post": "55600",
         "nume": "1"
       },
       {
         "no": 2,
-        "server": "blogspot",
-        "label": "Blogspot",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dyRPZWgX4kkvlfaUg6muAAi2-KgVUm3FV1VplOD_M6MWcRmqwGjo-cp4sL2MydgcrQ0DtmTH1BaHVgzc6vK9XkAKtfnBmlLzjQImCCz7BrCga9RkP-RHnnr2Pgn3BdsvGYyvzs&origin=sameguru2.blogspot.com",
+        "server": "vip-streaming",
+        "label": "VIP STREAMING",
+        "url": "https://filedon.co/embed/Zhz0ElxWaQ",
         "default": false,
-        "post": "55444",
-        "nume": "3"
+        "post": "55600",
+        "nume": "2"
       },
       {
         "no": 3,
-        "server": "vip-streaming",
-        "label": "VIP STREAMING",
-        "url": "https://filedon.co/embed/jBjnk8MO9c",
+        "server": "mega",
+        "label": "Mega 480p",
+        "url": "https://mega.nz/embed/qpQiCAYS#3X9pmUKcCiWD_99P79VK-ZmNG-reJBVIiwOTZA2r3rE",
         "default": false,
-        "post": "55444",
-        "nume": "4"
+        "post": "55600",
+        "nume": "3"
       },
       {
         "no": 4,
         "server": "mega",
-        "label": "Mega 480p",
-        "url": "https://mega.nz/embed/Cx533IxY#rH6gWnznstWsynxyn9drsllsQRuxWcBuv049Lj2zz8s",
-        "default": false,
-        "post": "55444",
-        "nume": "5"
-      },
-      {
-        "no": 5,
-        "server": "mega",
         "label": "Mega 1080p",
-        "url": "https://mega.nz/embed/XxwUWLxY#ajYR9V0omxR1_kcd-Yf4-Ug7cOtaWsBTWg7V-aumsVQ",
+        "url": "https://mega.nz/embed/uhwHQKgL#-cAB2iiS82RFbCZvAhFTIpC_amhJO9t1zVs61N7gack",
         "default": false,
-        "post": "55444",
-        "nume": "7"
+        "post": "55600",
+        "nume": "5"
       },
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/xekdUTHDZ",
+        "url": "https://player.abyssplayer.com/SRYWQalBy",
+        "default": false,
+        "source": "oploverz",
+        "no": 5
+      },
+      {
+        "server": "oploverz",
+        "label": "Oploverz Abyss 1080p",
+        "url": "https://player.abyssplayer.com/KKEuBSuXk",
         "default": false,
         "source": "oploverz",
         "no": 6
       },
       {
         "server": "oploverz",
-        "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/11egaDvxN",
+        "label": "Oploverz Abyss 480p",
+        "url": "https://player.abyssplayer.com/XTXHfcRGM",
         "default": false,
         "source": "oploverz",
         "no": 7
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/yXapYd69x",
-        "default": false,
-        "source": "oploverz",
-        "no": 8
       }
     ],
     "id": 8,
@@ -5067,7 +5128,7 @@
     "rating": "6.9",
     "votes": null,
     "durasi": "24 Menit",
-    "episodes_count": 8,
+    "episodes_count": 9,
     "genre": [
       "Action",
       "Fantasy",
@@ -5450,6 +5511,73 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 9,
+        "title": "Tougen Anki: Nikko Kegon no Taki-hen Episode 9",
+        "slug": "tougen-anki-nikko-kegon-no-taki-hen-episode-9",
+        "source": "https://v2.samehadaku.how/tougen-anki-nikko-kegon-no-taki-hen-episode-9/",
+        "date": "",
+        "released_at": "2026-11-27T18:30:27.630Z",
+        "players": [
+          {
+            "no": 1,
+            "server": "mega",
+            "label": "Mega 480p",
+            "url": "https://mega.nz/embed/puZTXCBS#QEAQz8faT5xDNmoh6S_bCIz3D8NXLsKpG6W_iccVBhA",
+            "default": true,
+            "post": "55605",
+            "nume": "3"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dw8HWuot6YentNi_oWb2BYW5pHfG0eLlNiplK8kI46Novoq1VGk6T81OYthyQpyh_ts02kbLDOVIEziayE20aYseJ9HeHinJBD6Recl9CulGKulGWXOHAnWXQ2mtB-LgyEQQe8",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyRpvYeVPhOHmfP-rZ4FN17s8jT2jR3XLBJpEa_HoPOjsp7lXfflEMLeMaeBju8N0UwpPA9ZxhgY2pJCuUrjUVl3JUT6rD05dNIm4Nb3-HWicNRLhHfvhqsis6Zmr5c6Chy0AA",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/6ILN4kP3v77M",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/RDC142VcDKKh",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/J1jF5DcO25Rp",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 7,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/7Ui0Nx0SI55v",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -5457,9 +5585,9 @@
         "no": 1,
         "server": "mega",
         "label": "Mega 480p",
-        "url": "https://mega.nz/embed/5UlQnJob#mN8EyNenHF3UTXzjzWL_WyeJt5T_qIl8IGzx56BYlHY",
+        "url": "https://mega.nz/embed/puZTXCBS#QEAQz8faT5xDNmoh6S_bCIz3D8NXLsKpG6W_iccVBhA",
         "default": true,
-        "post": "55029",
+        "post": "55605",
         "nume": "3"
       }
     ],
@@ -16463,8 +16591,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Hotaru%20no%20Yomeiri.jpg",
     "rating": "7.9",
     "votes": "",
-    "durasi": "22 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Romance",
       "Historical"
@@ -16844,6 +16972,63 @@
             "source": "anoboy"
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Hotaru no Yomeiri Episode 8",
+        "slug": "hotaru-no-yomeiri-episode-8",
+        "source": "https://anoboy.at/2026/11/hotaru-no-yomeiri-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dzTniujB7qIwIgDS9Ysimjrgw0tLDJTwLrwHduEcIUG2RgkOjnG7idLKJfovmO-G4uu4-Z8petww_CfGUFENlnLYyC0p15eJHnK-F3ZrAB4jhtjb1XOCsK5ZLL_LRQOWexK9AVc",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dxQm5ebPtHKpp9Uo_uNSfvpH2Rm8xsutwwKcfHsng-YfZue6A_leCnJJ6EP3TYJexs531wMANHlp8jNqQ5xqisi-RvYv0JTgI6SQvpXICfC0-sFZshiffZ7BwRiGtmTmeKzaJYQ",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/4k12T3JP8jDr",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/55Y4Bo4tf6ii",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/3Vqyi2U4sHpy",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/BQM36h6yILVC",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
       }
     ],
     "players": [
@@ -16889,8 +17074,8 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Toaru%20Anbu%20no%20Item.jpg",
     "rating": "7.5",
     "votes": "",
-    "durasi": "23 Menit",
-    "episodes_count": 7,
+    "durasi": "8 eps",
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Fantasy",
@@ -17202,6 +17387,63 @@
             "server": "anoboy",
             "label": "Anoboy YUP 240p",
             "url": "https://www.yourupload.com/embed/2kDrXgoyT2pb",
+            "default": false,
+            "source": "anoboy"
+          }
+        ]
+      },
+      {
+        "episode": 8,
+        "title": "Toaru Anbu no Item Episode 8",
+        "slug": "toaru-anbu-no-item-episode-8",
+        "source": "https://anoboy.at/2026/11/toaru-anbu-no-item-episode-8/",
+        "date": "",
+        "players": [
+          {
+            "no": 1,
+            "server": "anoboy",
+            "label": "Anoboy 360",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dwxg62Oiodi4hr1JfUpWxk6Cfp6G4PeiCOV9aa3b26s1b5fqmFtho-_Ve0S43LPuUws4-i3oMq8TEasLZS3dCkjZ7Uu4G1ODY-JgWn2_sR_rkDaVsnpWYiHoDNuVSY9UoKeaCU",
+            "default": true,
+            "source": "anoboy"
+          },
+          {
+            "no": 2,
+            "server": "anoboy",
+            "label": "Anoboy PC 720",
+            "url": "https://www.blogger.com/video.g?token=AD6v5dyjDSZetrsTOeucHI2LlrW5NU5yI1VNAGjf3pzM2y_Tv7nk05cplIx4oeJcxTVYW2TdUh-L22b1p1FYFfWBRz7subljjC9I1S-mtfjfSJNwzVeZMDLS1B0zj0v1DRXQfjm3_6A",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 3,
+            "server": "anoboy",
+            "label": "Anoboy YUP 720p",
+            "url": "https://www.yourupload.com/embed/Et0132Hx4Cu5",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 4,
+            "server": "anoboy",
+            "label": "Anoboy YUP 480p",
+            "url": "https://www.yourupload.com/embed/bOUFO2v1NScf",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 5,
+            "server": "anoboy",
+            "label": "Anoboy YUP 360p",
+            "url": "https://www.yourupload.com/embed/6P5ueqUECT4t",
+            "default": false,
+            "source": "anoboy"
+          },
+          {
+            "no": 6,
+            "server": "anoboy",
+            "label": "Anoboy YUP 240p",
+            "url": "https://www.yourupload.com/embed/7eT05g1sl1PB",
             "default": false,
             "source": "anoboy"
           }
@@ -27913,7 +28155,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Steel%20Ball%20Run%20JoJo%20no%20Kimyou%20na%20Bouken.jpg",
     "rating": "9.1",
     "votes": "",
-    "durasi": "10 eps",
+    "durasi": "24 Menit",
     "episodes_count": 10,
     "genre": [
       "Action",
