@@ -1294449,8 +1294449,8 @@
     "thumbnail": "https://backapi.oploverz.ac/uploads/posters/52c18a35-3399-4cfa-a28f-8020ceeabd6e.jpg",
     "rating": "9.35",
     "votes": "",
-    "durasi": "10 eps",
-    "episodes_count": 10,
+    "durasi": "11 eps",
+    "episodes_count": 11,
     "genre": [
       "Action",
       "Mystery",
@@ -1294806,13 +1294806,39 @@
             "no": 3
           }
         ]
+      },
+      {
+        "episode": 11,
+        "title": "JoJo's Bizarre Adventure 6 : Steel Ball Run Episode 11",
+        "slug": "jojos-bizarre-adventure-6-steel-ball-run-episode-11",
+        "source": "https://oploverz.diy/series/jojos-bizarre-adventure-6-steel-ball-run/episode/11",
+        "date": "",
+        "released_at": "2026-11-27T09:00:02.083Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 720p",
+            "url": "https://player.abyssplayer.com/ZF6RBTLk7",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          },
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/6LamqDkh6",
+            "default": false,
+            "source": "oploverz",
+            "no": 2
+          }
+        ]
       }
     ],
     "players": [
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 720p",
-        "url": "https://player.abyssplayer.com/zfMznbIHA",
+        "url": "https://player.abyssplayer.com/ZF6RBTLk7",
         "default": true,
         "source": "oploverz",
         "no": 1
@@ -1294820,18 +1294846,10 @@
       {
         "server": "oploverz",
         "label": "Oploverz Abyss 1080p",
-        "url": "https://player.abyssplayer.com/euMF8HUSq",
+        "url": "https://player.abyssplayer.com/6LamqDkh6",
         "default": false,
         "source": "oploverz",
         "no": 2
-      },
-      {
-        "server": "oploverz",
-        "label": "Oploverz Abyss 480p",
-        "url": "https://player.abyssplayer.com/BqIm94de8",
-        "default": false,
-        "source": "oploverz",
-        "no": 3
       }
     ],
     "oploverz_slugs": [
