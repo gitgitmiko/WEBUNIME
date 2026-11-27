@@ -1,6 +1,82 @@
 [
   {
     "type": "series",
+    "nama": "Ramen Daisuki Koizumi San",
+    "judul": "Ramen Daisuki Koizumi San (2015)",
+    "tahun": "2015",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-ramen-daisuki-koizumi-san-2015-lk21.jpg",
+    "rating": "7.0",
+    "durasi": "1 eps · S.1",
+    "episodes_count": 1,
+    "seasons_count": 1,
+    "genre": [
+      "Comedy",
+      "Drama"
+    ],
+    "sinopsis": "Koizumi, seorang mahasiswi yang cantik, tenang, dan pendiam, sebenarnya adalah seorang ahli ramen yang setiap hari dengan antusias mencari dan mencicipi ramen lezat.\n\nSutradara: Tsukuru Matsuki\n\nBintang Film: Akari Hayami, Karen Miyama, Seika Furuhata, Yutaka Ono, Hideki Tanaka\n\nNegara: Japan\n\nVotes: 4",
+    "slug": "ramen-daisuki-koizumi-san-2015",
+    "source": "https://tv1.nontondrama.vip/ramen-daisuki-koizumi-san-2015",
+    "list_source": "https://tv13.lk21official.cc/ramen-daisuki-koizumi-san-2015",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "Ramen Daisuki Koizumi San - Season 1 Episode 1 (2015)",
+        "slug": "ramen-daisuki-koizumi-san-season-1-episode-1-2015",
+        "source": "https://tv1.nontondrama.vip/ramen-daisuki-koizumi-san-season-1-episode-1-2015",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/etSUTjlVxYamhrXWrFQIjA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/4wT6HVFwPk009xmb9HuuQg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/Vm8OK48ieE0jsLa4gxW1_Q",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/etSUTjlVxYamhrXWrFQIjA",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/4wT6HVFwPk009xmb9HuuQg",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/Vm8OK48ieE0jsLa4gxW1_Q",
+        "default": false
+      }
+    ],
+    "id": 745,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "Blade Runner 2099",
     "judul": "Blade Runner 2099 (2026)",
     "tahun": "2026",
@@ -294,8 +370,8 @@
     "tahun": "2016",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-princess-weiyoung-2016-lk21.jpg",
     "rating": "7.6",
-    "durasi": "52 eps · S.1",
-    "episodes_count": 52,
+    "durasi": "54 eps · S.1",
+    "episodes_count": 54,
     "seasons_count": 1,
     "genre": [
       "Drama",
@@ -1866,6 +1942,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 53,
+        "title": "The Princess Weiyoung - Season 1 Episode 53 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-53-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-53-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/s3WiGddFhNaa24_aLjBa3Q",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/TazTp8os1yAbTlV1E4kjhQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/1pwUkuAxjeAbZA98GMRSUQ",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 54,
+        "title": "The Princess Weiyoung - Season 1 Episode 54 (2016)",
+        "slug": "princess-weiyoung-season-1-episode-54-2016",
+        "source": "https://tv1.nontondrama.vip/princess-weiyoung-season-1-episode-54-2016",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/RQYgH0chioppPkuWDfmCGA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/vgAXBjd-zOxoOAk4mzitQQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/DN16WnfmqoapdYJQHukpAA",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -1873,21 +2009,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/8XcRVNWgRw02Cejc5Y-3vw",
+        "url": "https://videonode.de/iframe3/p2p/RQYgH0chioppPkuWDfmCGA",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/tgcB8hLy2WuhcA_LO4gqwA",
+        "url": "https://videonode.de/iframe3/cast/vgAXBjd-zOxoOAk4mzitQQ",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/F34ZrcQIEeXkLHtu743htQ",
+        "url": "https://videonode.de/iframe3/hydrax/DN16WnfmqoapdYJQHukpAA",
         "default": false
       }
     ],
