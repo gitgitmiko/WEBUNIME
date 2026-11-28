@@ -5105,11 +5105,19 @@
           },
           {
             "server": "oploverz",
+            "label": "Oploverz Abyss 1080p",
+            "url": "https://player.abyssplayer.com/mWKotNxtC",
+            "default": false,
+            "source": "oploverz",
+            "no": 9
+          },
+          {
+            "server": "oploverz",
             "label": "Oploverz Abyss 480p",
             "url": "https://player.abyssplayer.com/A9y98uFTF",
             "default": false,
             "source": "oploverz",
-            "no": 9
+            "no": 10
           }
         ]
       }
@@ -5182,11 +5190,19 @@
       },
       {
         "server": "oploverz",
+        "label": "Oploverz Abyss 1080p",
+        "url": "https://player.abyssplayer.com/mWKotNxtC",
+        "default": false,
+        "source": "oploverz",
+        "no": 9
+      },
+      {
+        "server": "oploverz",
         "label": "Oploverz Abyss 480p",
         "url": "https://player.abyssplayer.com/A9y98uFTF",
         "default": false,
         "source": "oploverz",
-        "no": 9
+        "no": 10
       }
     ],
     "id": 9,
@@ -23911,7 +23927,7 @@
     "thumbnail": "https://anoboy.at/img/upload/01as-Tokyo%20Revengers%20Season%204.jpg",
     "rating": "7.8",
     "votes": "",
-    "durasi": "9 eps",
+    "durasi": "23 Menit",
     "episodes_count": 9,
     "genre": [
       "Action",

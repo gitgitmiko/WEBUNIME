@@ -1,6 +1,111 @@
 [
   {
     "type": "series",
+    "nama": "River of No Return",
+    "judul": "River of No Return (2026)",
+    "tahun": "2026",
+    "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-river-no-return-2026-lk21.jpg",
+    "rating": "8.1",
+    "durasi": "2 eps · S.1",
+    "episodes_count": 2,
+    "seasons_count": 1,
+    "genre": [
+      "Drama"
+    ],
+    "sinopsis": "Kisah legendaris ini, yang berlatar di Kanal Besar, menceritakan perjalanan penuh perjuangan seorang putra mahkota, seorang polisi berpangkat rendah, seorang dokter wanita, dan seorang pejabat rendahan—sebuah takdir yang tak seorang pun dapat menghindarinya. Petugas keamanan Wu Dingyuan, dokter wanita Su Jingxi, dan pejabat rendahan Yu Qian harus mengawal Pangeran Mahkota Zhu Zhanji dari Nanjing kembali ke Beijing dalam waktu 15 hari. Masing-masing dengan tujuan tersendiri, mereka memulai perjalanan sambil menghindari penyergapan dan para pengejar. Dengan menghindari bahaya dan mengatasi rintangan di sepanjang perjalanan, mereka pada akhirnya menemukan kembali jati diri mereka, satu sama lain, dan dunia.\n\nSutradara: Zhang Li, An Wei\n\nBintang Film: Yi Cheng, Kenny Lin, Peiyao Jiang, Xingjian Wu, He Wang\n\nNegara: China\n\nVotes: 7",
+    "slug": "river-no-return-2026",
+    "source": "https://tv1.nontondrama.vip/river-no-return-2026",
+    "list_source": "https://tv13.lk21official.cc/river-no-return-2026",
+    "episodes": [
+      {
+        "season": 1,
+        "episode": 1,
+        "title": "River of No Return - Season 1 Episode 1 (2026)",
+        "slug": "river-no-return-season-1-episode-1-2026",
+        "source": "https://tv1.nontondrama.vip/river-no-return-season-1-episode-1-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/VtmmbkGYA-1hNJ5Z3eoMXA",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/_xdH1GXpL-q26kCXchGUXg",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/X_nG2SPOzf5Sihl46Ek17A",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 2,
+        "title": "River of No Return - Season 1 Episode 2 (2026)",
+        "slug": "river-no-return-season-1-episode-2-2026",
+        "source": "https://tv1.nontondrama.vip/river-no-return-season-1-episode-2-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/H7u_FMXq4OEp9dPtEzWMLg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/SC5930LSpKONLJIhSKuP9A",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/4jtdDaHTmDvyzYPpIE4ZTw",
+            "default": false
+          }
+        ]
+      }
+    ],
+    "players": [
+      {
+        "no": 1,
+        "server": "p2p",
+        "label": "GANTI PLAYER P2P",
+        "url": "https://videonode.de/iframe3/p2p/H7u_FMXq4OEp9dPtEzWMLg",
+        "default": true
+      },
+      {
+        "no": 2,
+        "server": "cast",
+        "label": "GANTI PLAYER CAST",
+        "url": "https://videonode.de/iframe3/cast/SC5930LSpKONLJIhSKuP9A",
+        "default": false
+      },
+      {
+        "no": 3,
+        "server": "hydrax",
+        "label": "GANTI PLAYER HYDRAX",
+        "url": "https://videonode.de/iframe3/hydrax/4jtdDaHTmDvyzYPpIE4ZTw",
+        "default": false
+      }
+    ],
+    "id": 748,
+    "is_new": true
+  },
+  {
+    "type": "series",
     "nama": "I Kill the Bear",
     "judul": "I Kill the Bear (2026)",
     "tahun": "2026",
