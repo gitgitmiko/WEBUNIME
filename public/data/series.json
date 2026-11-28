@@ -24589,8 +24589,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-blossom-darkness-2026-lk21.jpg",
     "rating": "8.9",
-    "durasi": "23 eps · S.1",
-    "episodes_count": 23,
+    "durasi": "24 eps · S.1",
+    "episodes_count": 24,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -25289,6 +25289,36 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 24,
+        "title": "Blossom in Darkness - Season 1 Episode 24 (2026)",
+        "slug": "blossom-darkness-season-1-episode-24-2026",
+        "source": "https://tv1.nontondrama.vip/blossom-darkness-season-1-episode-24-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/hBt9YBkuMNbG3b7lG_Ym9g",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/0HjO4D_16xptFVCpf1duQw",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/L4X9GvSfpHrAcSihR9nN8g",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -25296,21 +25326,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/dPqDrVveIYmgrPGPO2Wd4w",
+        "url": "https://videonode.de/iframe3/p2p/hBt9YBkuMNbG3b7lG_Ym9g",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/mwBdix5oZC3ixkDTHJVtyg",
+        "url": "https://videonode.de/iframe3/cast/0HjO4D_16xptFVCpf1duQw",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/52AFZ6mBqKn7C0PNrK9u9w",
+        "url": "https://videonode.de/iframe3/hydrax/L4X9GvSfpHrAcSihR9nN8g",
         "default": false
       }
     ],
