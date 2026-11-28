@@ -6,8 +6,8 @@
     "tahun": "2026",
     "thumbnail": "https://poster.assetsy.de/wp-content/uploads/2026/11/film-river-no-return-2026-lk21.jpg",
     "rating": "8.1",
-    "durasi": "9 eps · S.1",
-    "episodes_count": 9,
+    "durasi": "11 eps · S.1",
+    "episodes_count": 11,
     "seasons_count": 1,
     "genre": [
       "Drama"
@@ -286,6 +286,66 @@
             "default": false
           }
         ]
+      },
+      {
+        "season": 1,
+        "episode": 10,
+        "title": "River of No Return - Season 1 Episode 10 (2026)",
+        "slug": "river-no-return-season-1-episode-10-2026",
+        "source": "https://tv1.nontondrama.vip/river-no-return-season-1-episode-10-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/fEpjboyksm5E-EgnXkNvyw",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/avDJ_Lijzo94TlMfL_o_pQ",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/DxT3UPytyoAKqdKEtQo9fg",
+            "default": false
+          }
+        ]
+      },
+      {
+        "season": 1,
+        "episode": 11,
+        "title": "River of No Return - Season 1 Episode 11 (2026)",
+        "slug": "river-no-return-season-1-episode-11-2026",
+        "source": "https://tv1.nontondrama.vip/river-no-return-season-1-episode-11-2026",
+        "players": [
+          {
+            "no": 1,
+            "server": "p2p",
+            "label": "GANTI PLAYER P2P",
+            "url": "https://videonode.de/iframe3/p2p/TLXeo1aDingOsuzECNh-Eg",
+            "default": true
+          },
+          {
+            "no": 2,
+            "server": "cast",
+            "label": "GANTI PLAYER CAST",
+            "url": "https://videonode.de/iframe3/cast/ra-mBfN1BrIK3iBBq9hFYA",
+            "default": false
+          },
+          {
+            "no": 3,
+            "server": "hydrax",
+            "label": "GANTI PLAYER HYDRAX",
+            "url": "https://videonode.de/iframe3/hydrax/MfN3Oca8vtrqHYv88jTL_A",
+            "default": false
+          }
+        ]
       }
     ],
     "players": [
@@ -293,21 +353,21 @@
         "no": 1,
         "server": "p2p",
         "label": "GANTI PLAYER P2P",
-        "url": "https://videonode.de/iframe3/p2p/H1lvcXEmpguWJHeJBHZT0w",
+        "url": "https://videonode.de/iframe3/p2p/TLXeo1aDingOsuzECNh-Eg",
         "default": true
       },
       {
         "no": 2,
         "server": "cast",
         "label": "GANTI PLAYER CAST",
-        "url": "https://videonode.de/iframe3/cast/m7JF5R2RnxIOIHr1LOrCwQ",
+        "url": "https://videonode.de/iframe3/cast/ra-mBfN1BrIK3iBBq9hFYA",
         "default": false
       },
       {
         "no": 3,
         "server": "hydrax",
         "label": "GANTI PLAYER HYDRAX",
-        "url": "https://videonode.de/iframe3/hydrax/bMeQJQqxI7TGXumfnodeoQ",
+        "url": "https://videonode.de/iframe3/hydrax/MfN3Oca8vtrqHYv88jTL_A",
         "default": false
       }
     ],
