@@ -17757,7 +17757,7 @@
     "rating": "7.1",
     "votes": "",
     "durasi": "23 Menit",
-    "episodes_count": 7,
+    "episodes_count": 8,
     "genre": [
       "Action",
       "Fantasy",
@@ -18329,64 +18329,34 @@
             "no": 7
           }
         ]
+      },
+      {
+        "episode": 8,
+        "title": "Shuiro no Kamen Episode 8",
+        "slug": "shuiro-no-kamen-episode-8",
+        "source": "https://oploverz.diy/series/the-vermilion-mask-shuiro-no-kamen/episode/8",
+        "date": "",
+        "released_at": "2026-11-28T10:51:23.357Z",
+        "players": [
+          {
+            "server": "oploverz",
+            "label": "Oploverz Abyss",
+            "url": "https://player.abyssplayer.com/xDx1l3Xky",
+            "default": true,
+            "source": "oploverz",
+            "no": 1
+          }
+        ]
       }
     ],
     "players": [
       {
-        "no": 1,
-        "server": "anoboy",
-        "label": "Anoboy 360",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dz_KZXrK21TBXuMYQ9WXLYZUlTV7VzFEu8OCOvCMoTmGkei8RwiJARf3nwJnDiOs3nqnKX5q3HKzAZwKSaXF2kx4pva6toLco8KYWfBenXSU53xmJB9S-pl7CasJRP-rDRQDg",
-        "default": true,
-        "source": "anoboy"
-      },
-      {
-        "no": 2,
-        "server": "anoboy",
-        "label": "Anoboy PC 720",
-        "url": "https://www.blogger.com/video.g?token=AD6v5dwzgdbwa2dMzGgwSlQmUqqOxHLotelGVqV4t3KuPx_rgPxtI0NimqpkNQNRb4Nm9HkSPJ-KbOk2odX6kjsncvAnVJ5PMUJeXcpNq_6U_Z2P0VAc64xBSKTSSSdooRWNGgxSBA",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 3,
-        "server": "anoboy",
-        "label": "Anoboy YUP 720p",
-        "url": "https://www.yourupload.com/embed/54ucjjasx6J5",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 4,
-        "server": "anoboy",
-        "label": "Anoboy YUP 480p",
-        "url": "https://www.yourupload.com/embed/1EF4gLkLRn25",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 5,
-        "server": "anoboy",
-        "label": "Anoboy YUP 360p",
-        "url": "https://www.yourupload.com/embed/Hf5PJucA452h",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
-        "no": 6,
-        "server": "anoboy",
-        "label": "Anoboy YUP 240p",
-        "url": "https://www.yourupload.com/embed/1W253pM2o3Pk",
-        "default": false,
-        "source": "anoboy"
-      },
-      {
         "server": "oploverz",
         "label": "Oploverz Abyss",
-        "url": "https://player.abyssplayer.com/sE1tzGcNh",
-        "default": false,
+        "url": "https://player.abyssplayer.com/xDx1l3Xky",
+        "default": true,
         "source": "oploverz",
-        "no": 7
+        "no": 1
       }
     ],
     "id": 39,
